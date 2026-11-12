@@ -1,0 +1,6312 @@
+{
+"vectors": [
+{
+"id": "sin(0)",
+"expr": "sin(0)",
+"angle": "DEG",
+"complex": false,
+"re": 0.0,
+"im": 0.0
+},
+{
+"id": "cos(0)",
+"expr": "cos(0)",
+"angle": "DEG",
+"complex": false,
+"re": 1.0,
+"im": 0.0
+},
+{
+"id": "tan(0)",
+"expr": "tan(0)",
+"angle": "DEG",
+"complex": false,
+"re": 0.0,
+"im": 0.0
+},
+{
+"id": "sin(15)",
+"expr": "sin(15)",
+"angle": "DEG",
+"complex": false,
+"re": 0.25881904510252074,
+"im": 0.0
+},
+{
+"id": "cos(15)",
+"expr": "cos(15)",
+"angle": "DEG",
+"complex": false,
+"re": 0.9659258262890683,
+"im": 0.0
+},
+{
+"id": "tan(15)",
+"expr": "tan(15)",
+"angle": "DEG",
+"complex": false,
+"re": 0.2679491924311227,
+"im": 0.0
+},
+{
+"id": "sin(30)",
+"expr": "sin(30)",
+"angle": "DEG",
+"complex": false,
+"re": 0.49999999999999994,
+"im": 0.0
+},
+{
+"id": "cos(30)",
+"expr": "cos(30)",
+"angle": "DEG",
+"complex": false,
+"re": 0.8660254037844387,
+"im": 0.0
+},
+{
+"id": "tan(30)",
+"expr": "tan(30)",
+"angle": "DEG",
+"complex": false,
+"re": 0.5773502691896257,
+"im": 0.0
+},
+{
+"id": "sin(45)",
+"expr": "sin(45)",
+"angle": "DEG",
+"complex": false,
+"re": 0.7071067811865475,
+"im": 0.0
+},
+{
+"id": "cos(45)",
+"expr": "cos(45)",
+"angle": "DEG",
+"complex": false,
+"re": 0.7071067811865476,
+"im": 0.0
+},
+{
+"id": "tan(45)",
+"expr": "tan(45)",
+"angle": "DEG",
+"complex": false,
+"re": 0.9999999999999999,
+"im": 0.0
+},
+{
+"id": "sin(60)",
+"expr": "sin(60)",
+"angle": "DEG",
+"complex": false,
+"re": 0.8660254037844386,
+"im": 0.0
+},
+{
+"id": "cos(60)",
+"expr": "cos(60)",
+"angle": "DEG",
+"complex": false,
+"re": 0.5000000000000001,
+"im": 0.0
+},
+{
+"id": "tan(60)",
+"expr": "tan(60)",
+"angle": "DEG",
+"complex": false,
+"re": 1.7320508075688767,
+"im": 0.0
+},
+{
+"id": "sin(75)",
+"expr": "sin(75)",
+"angle": "DEG",
+"complex": false,
+"re": 0.9659258262890683,
+"im": 0.0
+},
+{
+"id": "cos(75)",
+"expr": "cos(75)",
+"angle": "DEG",
+"complex": false,
+"re": 0.25881904510252074,
+"im": 0.0
+},
+{
+"id": "tan(75)",
+"expr": "tan(75)",
+"angle": "DEG",
+"complex": false,
+"re": 3.7320508075688776,
+"im": 0.0
+},
+{
+"id": "sin(90)",
+"expr": "sin(90)",
+"angle": "DEG",
+"complex": false,
+"re": 1.0,
+"im": 0.0
+},
+{
+"id": "cos(90)",
+"expr": "cos(90)",
+"angle": "DEG",
+"complex": false,
+"re": 6.123233995736766e-17,
+"im": 0.0
+},
+{
+"id": "sin(120)",
+"expr": "sin(120)",
+"angle": "DEG",
+"complex": false,
+"re": 0.8660254037844387,
+"im": 0.0
+},
+{
+"id": "cos(120)",
+"expr": "cos(120)",
+"angle": "DEG",
+"complex": false,
+"re": -0.4999999999999998,
+"im": 0.0
+},
+{
+"id": "tan(120)",
+"expr": "tan(120)",
+"angle": "DEG",
+"complex": false,
+"re": -1.7320508075688783,
+"im": 0.0
+},
+{
+"id": "sin(135)",
+"expr": "sin(135)",
+"angle": "DEG",
+"complex": false,
+"re": 0.7071067811865476,
+"im": 0.0
+},
+{
+"id": "cos(135)",
+"expr": "cos(135)",
+"angle": "DEG",
+"complex": false,
+"re": -0.7071067811865475,
+"im": 0.0
+},
+{
+"id": "tan(135)",
+"expr": "tan(135)",
+"angle": "DEG",
+"complex": false,
+"re": -1.0000000000000002,
+"im": 0.0
+},
+{
+"id": "sin(150)",
+"expr": "sin(150)",
+"angle": "DEG",
+"complex": false,
+"re": 0.49999999999999994,
+"im": 0.0
+},
+{
+"id": "cos(150)",
+"expr": "cos(150)",
+"angle": "DEG",
+"complex": false,
+"re": -0.8660254037844387,
+"im": 0.0
+},
+{
+"id": "tan(150)",
+"expr": "tan(150)",
+"angle": "DEG",
+"complex": false,
+"re": -0.5773502691896257,
+"im": 0.0
+},
+{
+"id": "sin(180)",
+"expr": "sin(180)",
+"angle": "DEG",
+"complex": false,
+"re": 1.2246467991473532e-16,
+"im": 0.0
+},
+{
+"id": "cos(180)",
+"expr": "cos(180)",
+"angle": "DEG",
+"complex": false,
+"re": -1.0,
+"im": 0.0
+},
+{
+"id": "tan(180)",
+"expr": "tan(180)",
+"angle": "DEG",
+"complex": false,
+"re": -1.2246467991473532e-16,
+"im": 0.0
+},
+{
+"id": "sin(210)",
+"expr": "sin(210)",
+"angle": "DEG",
+"complex": false,
+"re": -0.5000000000000001,
+"im": 0.0
+},
+{
+"id": "cos(210)",
+"expr": "cos(210)",
+"angle": "DEG",
+"complex": false,
+"re": -0.8660254037844386,
+"im": 0.0
+},
+{
+"id": "tan(210)",
+"expr": "tan(210)",
+"angle": "DEG",
+"complex": false,
+"re": 0.577350269189626,
+"im": 0.0
+},
+{
+"id": "sin(225)",
+"expr": "sin(225)",
+"angle": "DEG",
+"complex": false,
+"re": -0.7071067811865475,
+"im": 0.0
+},
+{
+"id": "cos(225)",
+"expr": "cos(225)",
+"angle": "DEG",
+"complex": false,
+"re": -0.7071067811865477,
+"im": 0.0
+},
+{
+"id": "tan(225)",
+"expr": "tan(225)",
+"angle": "DEG",
+"complex": false,
+"re": 0.9999999999999997,
+"im": 0.0
+},
+{
+"id": "sin(240)",
+"expr": "sin(240)",
+"angle": "DEG",
+"complex": false,
+"re": -0.8660254037844384,
+"im": 0.0
+},
+{
+"id": "cos(240)",
+"expr": "cos(240)",
+"angle": "DEG",
+"complex": false,
+"re": -0.5000000000000004,
+"im": 0.0
+},
+{
+"id": "tan(240)",
+"expr": "tan(240)",
+"angle": "DEG",
+"complex": false,
+"re": 1.7320508075688754,
+"im": 0.0
+},
+{
+"id": "sin(270)",
+"expr": "sin(270)",
+"angle": "DEG",
+"complex": false,
+"re": -1.0,
+"im": 0.0
+},
+{
+"id": "cos(270)",
+"expr": "cos(270)",
+"angle": "DEG",
+"complex": false,
+"re": -1.8369701987210297e-16,
+"im": 0.0
+},
+{
+"id": "sin(300)",
+"expr": "sin(300)",
+"angle": "DEG",
+"complex": false,
+"re": -0.8660254037844386,
+"im": 0.0
+},
+{
+"id": "cos(300)",
+"expr": "cos(300)",
+"angle": "DEG",
+"complex": false,
+"re": 0.5000000000000001,
+"im": 0.0
+},
+{
+"id": "tan(300)",
+"expr": "tan(300)",
+"angle": "DEG",
+"complex": false,
+"re": -1.732050807568877,
+"im": 0.0
+},
+{
+"id": "sin(315)",
+"expr": "sin(315)",
+"angle": "DEG",
+"complex": false,
+"re": -0.7071067811865477,
+"im": 0.0
+},
+{
+"id": "cos(315)",
+"expr": "cos(315)",
+"angle": "DEG",
+"complex": false,
+"re": 0.7071067811865474,
+"im": 0.0
+},
+{
+"id": "tan(315)",
+"expr": "tan(315)",
+"angle": "DEG",
+"complex": false,
+"re": -1.0000000000000004,
+"im": 0.0
+},
+{
+"id": "sin(330)",
+"expr": "sin(330)",
+"angle": "DEG",
+"complex": false,
+"re": -0.5000000000000004,
+"im": 0.0
+},
+{
+"id": "cos(330)",
+"expr": "cos(330)",
+"angle": "DEG",
+"complex": false,
+"re": 0.8660254037844384,
+"im": 0.0
+},
+{
+"id": "tan(330)",
+"expr": "tan(330)",
+"angle": "DEG",
+"complex": false,
+"re": -0.5773502691896265,
+"im": 0.0
+},
+{
+"id": "sin(360)",
+"expr": "sin(360)",
+"angle": "DEG",
+"complex": false,
+"re": -2.4492935982947064e-16,
+"im": 0.0
+},
+{
+"id": "cos(360)",
+"expr": "cos(360)",
+"angle": "DEG",
+"complex": false,
+"re": 1.0,
+"im": 0.0
+},
+{
+"id": "tan(360)",
+"expr": "tan(360)",
+"angle": "DEG",
+"complex": false,
+"re": -2.4492935982947064e-16,
+"im": 0.0
+},
+{
+"id": "sin(390)",
+"expr": "sin(390)",
+"angle": "DEG",
+"complex": false,
+"re": 0.5,
+"im": 0.0
+},
+{
+"id": "cos(390)",
+"expr": "cos(390)",
+"angle": "DEG",
+"complex": false,
+"re": 0.8660254037844386,
+"im": 0.0
+},
+{
+"id": "tan(390)",
+"expr": "tan(390)",
+"angle": "DEG",
+"complex": false,
+"re": 0.5773502691896258,
+"im": 0.0
+},
+{
+"id": "sin(720)",
+"expr": "sin(720)",
+"angle": "DEG",
+"complex": false,
+"re": -4.898587196589413e-16,
+"im": 0.0
+},
+{
+"id": "cos(720)",
+"expr": "cos(720)",
+"angle": "DEG",
+"complex": false,
+"re": 1.0,
+"im": 0.0
+},
+{
+"id": "tan(720)",
+"expr": "tan(720)",
+"angle": "DEG",
+"complex": false,
+"re": -4.898587196589413e-16,
+"im": 0.0
+},
+{
+"id": "sin(-30)",
+"expr": "sin(-30)",
+"angle": "DEG",
+"complex": false,
+"re": -0.49999999999999994,
+"im": 0.0
+},
+{
+"id": "cos(-30)",
+"expr": "cos(-30)",
+"angle": "DEG",
+"complex": false,
+"re": 0.8660254037844387,
+"im": 0.0
+},
+{
+"id": "tan(-30)",
+"expr": "tan(-30)",
+"angle": "DEG",
+"complex": false,
+"re": -0.5773502691896257,
+"im": 0.0
+},
+{
+"id": "sin(-45)",
+"expr": "sin(-45)",
+"angle": "DEG",
+"complex": false,
+"re": -0.7071067811865475,
+"im": 0.0
+},
+{
+"id": "cos(-45)",
+"expr": "cos(-45)",
+"angle": "DEG",
+"complex": false,
+"re": 0.7071067811865476,
+"im": 0.0
+},
+{
+"id": "tan(-45)",
+"expr": "tan(-45)",
+"angle": "DEG",
+"complex": false,
+"re": -0.9999999999999999,
+"im": 0.0
+},
+{
+"id": "sin(-90)",
+"expr": "sin(-90)",
+"angle": "DEG",
+"complex": false,
+"re": -1.0,
+"im": 0.0
+},
+{
+"id": "cos(-90)",
+"expr": "cos(-90)",
+"angle": "DEG",
+"complex": false,
+"re": 6.123233995736766e-17,
+"im": 0.0
+},
+{
+"id": "sin(10.5)",
+"expr": "sin(10.5)",
+"angle": "DEG",
+"complex": false,
+"re": 0.18223552549214747,
+"im": 0.0
+},
+{
+"id": "cos(10.5)",
+"expr": "cos(10.5)",
+"angle": "DEG",
+"complex": false,
+"re": 0.9832549075639546,
+"im": 0.0
+},
+{
+"id": "tan(10.5)",
+"expr": "tan(10.5)",
+"angle": "DEG",
+"complex": false,
+"re": 0.18533904493153439,
+"im": 0.0
+},
+{
+"id": "sin(22.5)",
+"expr": "sin(22.5)",
+"angle": "DEG",
+"complex": false,
+"re": 0.3826834323650898,
+"im": 0.0
+},
+{
+"id": "cos(22.5)",
+"expr": "cos(22.5)",
+"angle": "DEG",
+"complex": false,
+"re": 0.9238795325112867,
+"im": 0.0
+},
+{
+"id": "tan(22.5)",
+"expr": "tan(22.5)",
+"angle": "DEG",
+"complex": false,
+"re": 0.41421356237309503,
+"im": 0.0
+},
+{
+"id": "sin(89)",
+"expr": "sin(89)",
+"angle": "DEG",
+"complex": false,
+"re": 0.9998476951563913,
+"im": 0.0
+},
+{
+"id": "cos(89)",
+"expr": "cos(89)",
+"angle": "DEG",
+"complex": false,
+"re": 0.0174524064372836,
+"im": 0.0
+},
+{
+"id": "tan(89)",
+"expr": "tan(89)",
+"angle": "DEG",
+"complex": false,
+"re": 57.289961630759144,
+"im": 0.0
+},
+{
+"id": "sin(179)",
+"expr": "sin(179)",
+"angle": "DEG",
+"complex": false,
+"re": 0.01745240643728344,
+"im": 0.0
+},
+{
+"id": "cos(179)",
+"expr": "cos(179)",
+"angle": "DEG",
+"complex": false,
+"re": -0.9998476951563913,
+"im": 0.0
+},
+{
+"id": "tan(179)",
+"expr": "tan(179)",
+"angle": "DEG",
+"complex": false,
+"re": -0.01745506492821751,
+"im": 0.0
+},
+{
+"id": "error:tan(90)",
+"expr": "tan(90)",
+"angle": "DEG",
+"complex": false,
+"error": true
+},
+{
+"id": "error:tan(270)",
+"expr": "tan(270)",
+"angle": "DEG",
+"complex": false,
+"error": true
+},
+{
+"id": "error:tan(450)",
+"expr": "tan(450)",
+"angle": "DEG",
+"complex": false,
+"error": true
+},
+{
+"id": "error:tan(-90)",
+"expr": "tan(-90)",
+"angle": "DEG",
+"complex": false,
+"error": true
+},
+{
+"id": "sin(0)",
+"expr": "sin(0)",
+"angle": "RAD",
+"complex": false,
+"re": 0.0,
+"im": 0.0
+},
+{
+"id": "cos(0)",
+"expr": "cos(0)",
+"angle": "RAD",
+"complex": false,
+"re": 1.0,
+"im": 0.0
+},
+{
+"id": "sin(0.5)",
+"expr": "sin(0.5)",
+"angle": "RAD",
+"complex": false,
+"re": 0.479425538604203,
+"im": 0.0
+},
+{
+"id": "cos(0.5)",
+"expr": "cos(0.5)",
+"angle": "RAD",
+"complex": false,
+"re": 0.8775825618903728,
+"im": 0.0
+},
+{
+"id": "sin(1)",
+"expr": "sin(1)",
+"angle": "RAD",
+"complex": false,
+"re": 0.8414709848078965,
+"im": 0.0
+},
+{
+"id": "cos(1)",
+"expr": "cos(1)",
+"angle": "RAD",
+"complex": false,
+"re": 0.5403023058681398,
+"im": 0.0
+},
+{
+"id": "sin(2)",
+"expr": "sin(2)",
+"angle": "RAD",
+"complex": false,
+"re": 0.9092974268256817,
+"im": 0.0
+},
+{
+"id": "cos(2)",
+"expr": "cos(2)",
+"angle": "RAD",
+"complex": false,
+"re": -0.4161468365471424,
+"im": 0.0
+},
+{
+"id": "sin(3)",
+"expr": "sin(3)",
+"angle": "RAD",
+"complex": false,
+"re": 0.1411200080598672,
+"im": 0.0
+},
+{
+"id": "cos(3)",
+"expr": "cos(3)",
+"angle": "RAD",
+"complex": false,
+"re": -0.9899924966004454,
+"im": 0.0
+},
+{
+"id": "sin(10)",
+"expr": "sin(10)",
+"angle": "RAD",
+"complex": false,
+"re": -0.5440211108893698,
+"im": 0.0
+},
+{
+"id": "cos(10)",
+"expr": "cos(10)",
+"angle": "RAD",
+"complex": false,
+"re": -0.8390715290764524,
+"im": 0.0
+},
+{
+"id": "sin(-1)",
+"expr": "sin(-1)",
+"angle": "RAD",
+"complex": false,
+"re": -0.8414709848078965,
+"im": 0.0
+},
+{
+"id": "cos(-1)",
+"expr": "cos(-1)",
+"angle": "RAD",
+"complex": false,
+"re": 0.5403023058681398,
+"im": 0.0
+},
+{
+"id": "sin(0.5235987755982988)",
+"expr": "sin(0.5235987755982988)",
+"angle": "RAD",
+"complex": false,
+"re": 0.49999999999999994,
+"im": 0.0
+},
+{
+"id": "cos(0.5235987755982988)",
+"expr": "cos(0.5235987755982988)",
+"angle": "RAD",
+"complex": false,
+"re": 0.8660254037844387,
+"im": 0.0
+},
+{
+"id": "sin(0.7853981633974483)",
+"expr": "sin(0.7853981633974483)",
+"angle": "RAD",
+"complex": false,
+"re": 0.7071067811865475,
+"im": 0.0
+},
+{
+"id": "cos(0.7853981633974483)",
+"expr": "cos(0.7853981633974483)",
+"angle": "RAD",
+"complex": false,
+"re": 0.7071067811865476,
+"im": 0.0
+},
+{
+"id": "sin(1.0471975511965976)",
+"expr": "sin(1.0471975511965976)",
+"angle": "RAD",
+"complex": false,
+"re": 0.8660254037844386,
+"im": 0.0
+},
+{
+"id": "cos(1.0471975511965976)",
+"expr": "cos(1.0471975511965976)",
+"angle": "RAD",
+"complex": false,
+"re": 0.5000000000000001,
+"im": 0.0
+},
+{
+"id": "sin(3.141592653589793)",
+"expr": "sin(3.141592653589793)",
+"angle": "RAD",
+"complex": false,
+"re": 1.2246467991473532e-16,
+"im": 0.0
+},
+{
+"id": "cos(3.141592653589793)",
+"expr": "cos(3.141592653589793)",
+"angle": "RAD",
+"complex": false,
+"re": -1.0,
+"im": 0.0
+},
+{
+"id": "sin(6.283185307179586)",
+"expr": "sin(6.283185307179586)",
+"angle": "RAD",
+"complex": false,
+"re": -2.4492935982947064e-16,
+"im": 0.0
+},
+{
+"id": "cos(6.283185307179586)",
+"expr": "cos(6.283185307179586)",
+"angle": "RAD",
+"complex": false,
+"re": 1.0,
+"im": 0.0
+},
+{
+"id": "sin(1e-05)",
+"expr": "sin(1e-05)",
+"angle": "RAD",
+"complex": false,
+"re": 9.999999999833334e-06,
+"im": 0.0
+},
+{
+"id": "cos(1e-05)",
+"expr": "cos(1e-05)",
+"angle": "RAD",
+"complex": false,
+"re": 0.99999999995,
+"im": 0.0
+},
+{
+"id": "tan(0)",
+"expr": "tan(0)",
+"angle": "RAD",
+"complex": false,
+"re": 0.0,
+"im": 0.0
+},
+{
+"id": "tan(0.5)",
+"expr": "tan(0.5)",
+"angle": "RAD",
+"complex": false,
+"re": 0.5463024898437905,
+"im": 0.0
+},
+{
+"id": "tan(1)",
+"expr": "tan(1)",
+"angle": "RAD",
+"complex": false,
+"re": 1.5574077246549023,
+"im": 0.0
+},
+{
+"id": "tan(2)",
+"expr": "tan(2)",
+"angle": "RAD",
+"complex": false,
+"re": -2.185039863261519,
+"im": 0.0
+},
+{
+"id": "tan(3)",
+"expr": "tan(3)",
+"angle": "RAD",
+"complex": false,
+"re": -0.1425465430742778,
+"im": 0.0
+},
+{
+"id": "tan(-1)",
+"expr": "tan(-1)",
+"angle": "RAD",
+"complex": false,
+"re": -1.5574077246549023,
+"im": 0.0
+},
+{
+"id": "tan(0.7853981633974483)",
+"expr": "tan(0.7853981633974483)",
+"angle": "RAD",
+"complex": false,
+"re": 0.9999999999999999,
+"im": 0.0
+},
+{
+"id": "tan(1.0471975511965976)",
+"expr": "tan(1.0471975511965976)",
+"angle": "RAD",
+"complex": false,
+"re": 1.7320508075688767,
+"im": 0.0
+},
+{
+"id": "tan(3.141592653589793)",
+"expr": "tan(3.141592653589793)",
+"angle": "RAD",
+"complex": false,
+"re": -1.2246467991473532e-16,
+"im": 0.0
+},
+{
+"id": "error:tan(1.5707963267948966)",
+"expr": "tan(1.5707963267948966)",
+"angle": "RAD",
+"complex": false,
+"error": true
+},
+{
+"id": "sin(0)",
+"expr": "sin(0)",
+"angle": "GRAD",
+"complex": false,
+"re": 0.0,
+"im": 0.0
+},
+{
+"id": "cos(0)",
+"expr": "cos(0)",
+"angle": "GRAD",
+"complex": false,
+"re": 1.0,
+"im": 0.0
+},
+{
+"id": "sin(10)",
+"expr": "sin(10)",
+"angle": "GRAD",
+"complex": false,
+"re": 0.15643446504023087,
+"im": 0.0
+},
+{
+"id": "cos(10)",
+"expr": "cos(10)",
+"angle": "GRAD",
+"complex": false,
+"re": 0.9876883405951378,
+"im": 0.0
+},
+{
+"id": "sin(50)",
+"expr": "sin(50)",
+"angle": "GRAD",
+"complex": false,
+"re": 0.7071067811865475,
+"im": 0.0
+},
+{
+"id": "cos(50)",
+"expr": "cos(50)",
+"angle": "GRAD",
+"complex": false,
+"re": 0.7071067811865476,
+"im": 0.0
+},
+{
+"id": "sin(100)",
+"expr": "sin(100)",
+"angle": "GRAD",
+"complex": false,
+"re": 1.0,
+"im": 0.0
+},
+{
+"id": "cos(100)",
+"expr": "cos(100)",
+"angle": "GRAD",
+"complex": false,
+"re": 6.123233995736766e-17,
+"im": 0.0
+},
+{
+"id": "sin(150)",
+"expr": "sin(150)",
+"angle": "GRAD",
+"complex": false,
+"re": 0.7071067811865476,
+"im": 0.0
+},
+{
+"id": "cos(150)",
+"expr": "cos(150)",
+"angle": "GRAD",
+"complex": false,
+"re": -0.7071067811865475,
+"im": 0.0
+},
+{
+"id": "sin(200)",
+"expr": "sin(200)",
+"angle": "GRAD",
+"complex": false,
+"re": 1.2246467991473532e-16,
+"im": 0.0
+},
+{
+"id": "cos(200)",
+"expr": "cos(200)",
+"angle": "GRAD",
+"complex": false,
+"re": -1.0,
+"im": 0.0
+},
+{
+"id": "sin(300)",
+"expr": "sin(300)",
+"angle": "GRAD",
+"complex": false,
+"re": -1.0,
+"im": 0.0
+},
+{
+"id": "cos(300)",
+"expr": "cos(300)",
+"angle": "GRAD",
+"complex": false,
+"re": -1.8369701987210297e-16,
+"im": 0.0
+},
+{
+"id": "sin(400)",
+"expr": "sin(400)",
+"angle": "GRAD",
+"complex": false,
+"re": -2.4492935982947064e-16,
+"im": 0.0
+},
+{
+"id": "cos(400)",
+"expr": "cos(400)",
+"angle": "GRAD",
+"complex": false,
+"re": 1.0,
+"im": 0.0
+},
+{
+"id": "sin(33.3)",
+"expr": "sin(33.3)",
+"angle": "GRAD",
+"complex": false,
+"re": 0.49954648164074283,
+"im": 0.0
+},
+{
+"id": "cos(33.3)",
+"expr": "cos(33.3)",
+"angle": "GRAD",
+"complex": false,
+"re": 0.8662870844473874,
+"im": 0.0
+},
+{
+"id": "tan(0)",
+"expr": "tan(0)",
+"angle": "GRAD",
+"complex": false,
+"re": 0.0,
+"im": 0.0
+},
+{
+"id": "tan(10)",
+"expr": "tan(10)",
+"angle": "GRAD",
+"complex": false,
+"re": 0.15838444032453627,
+"im": 0.0
+},
+{
+"id": "tan(50)",
+"expr": "tan(50)",
+"angle": "GRAD",
+"complex": false,
+"re": 0.9999999999999999,
+"im": 0.0
+},
+{
+"id": "tan(150)",
+"expr": "tan(150)",
+"angle": "GRAD",
+"complex": false,
+"re": -1.0000000000000002,
+"im": 0.0
+},
+{
+"id": "tan(333)",
+"expr": "tan(333)",
+"angle": "GRAD",
+"complex": false,
+"re": -1.753186632472239,
+"im": 0.0
+},
+{
+"id": "error:tan(100)",
+"expr": "tan(100)",
+"angle": "GRAD",
+"complex": false,
+"error": true
+},
+{
+"id": "asin(-1)",
+"expr": "asin(-1)",
+"angle": "DEG",
+"complex": false,
+"re": -90.0,
+"im": 0.0
+},
+{
+"id": "acos(-1)",
+"expr": "acos(-1)",
+"angle": "DEG",
+"complex": false,
+"re": 180.0,
+"im": 0.0
+},
+{
+"id": "asin(-1)",
+"expr": "asin(-1)",
+"angle": "RAD",
+"complex": false,
+"re": -1.5707963267948966,
+"im": 0.0
+},
+{
+"id": "acos(-1)",
+"expr": "acos(-1)",
+"angle": "RAD",
+"complex": false,
+"re": 3.141592653589793,
+"im": 0.0
+},
+{
+"id": "asin(-1)",
+"expr": "asin(-1)",
+"angle": "GRAD",
+"complex": false,
+"re": -100.0,
+"im": 0.0
+},
+{
+"id": "asin(-0.5)",
+"expr": "asin(-0.5)",
+"angle": "DEG",
+"complex": false,
+"re": -30.000000000000004,
+"im": 0.0
+},
+{
+"id": "acos(-0.5)",
+"expr": "acos(-0.5)",
+"angle": "DEG",
+"complex": false,
+"re": 120.00000000000001,
+"im": 0.0
+},
+{
+"id": "asin(-0.5)",
+"expr": "asin(-0.5)",
+"angle": "RAD",
+"complex": false,
+"re": -0.5235987755982989,
+"im": 0.0
+},
+{
+"id": "acos(-0.5)",
+"expr": "acos(-0.5)",
+"angle": "RAD",
+"complex": false,
+"re": 2.0943951023931957,
+"im": 0.0
+},
+{
+"id": "asin(-0.5)",
+"expr": "asin(-0.5)",
+"angle": "GRAD",
+"complex": false,
+"re": -33.333333333333336,
+"im": 0.0
+},
+{
+"id": "asin(0)",
+"expr": "asin(0)",
+"angle": "DEG",
+"complex": false,
+"re": 0.0,
+"im": 0.0
+},
+{
+"id": "acos(0)",
+"expr": "acos(0)",
+"angle": "DEG",
+"complex": false,
+"re": 90.0,
+"im": 0.0
+},
+{
+"id": "asin(0)",
+"expr": "asin(0)",
+"angle": "RAD",
+"complex": false,
+"re": 0.0,
+"im": 0.0
+},
+{
+"id": "acos(0)",
+"expr": "acos(0)",
+"angle": "RAD",
+"complex": false,
+"re": 1.5707963267948966,
+"im": 0.0
+},
+{
+"id": "asin(0)",
+"expr": "asin(0)",
+"angle": "GRAD",
+"complex": false,
+"re": 0.0,
+"im": 0.0
+},
+{
+"id": "asin(0.25)",
+"expr": "asin(0.25)",
+"angle": "DEG",
+"complex": false,
+"re": 14.477512185929925,
+"im": 0.0
+},
+{
+"id": "acos(0.25)",
+"expr": "acos(0.25)",
+"angle": "DEG",
+"complex": false,
+"re": 75.52248781407008,
+"im": 0.0
+},
+{
+"id": "asin(0.25)",
+"expr": "asin(0.25)",
+"angle": "RAD",
+"complex": false,
+"re": 0.25268025514207865,
+"im": 0.0
+},
+{
+"id": "acos(0.25)",
+"expr": "acos(0.25)",
+"angle": "RAD",
+"complex": false,
+"re": 1.318116071652818,
+"im": 0.0
+},
+{
+"id": "asin(0.25)",
+"expr": "asin(0.25)",
+"angle": "GRAD",
+"complex": false,
+"re": 16.08612465103325,
+"im": 0.0
+},
+{
+"id": "asin(0.5)",
+"expr": "asin(0.5)",
+"angle": "DEG",
+"complex": false,
+"re": 30.000000000000004,
+"im": 0.0
+},
+{
+"id": "acos(0.5)",
+"expr": "acos(0.5)",
+"angle": "DEG",
+"complex": false,
+"re": 60.00000000000001,
+"im": 0.0
+},
+{
+"id": "asin(0.5)",
+"expr": "asin(0.5)",
+"angle": "RAD",
+"complex": false,
+"re": 0.5235987755982989,
+"im": 0.0
+},
+{
+"id": "acos(0.5)",
+"expr": "acos(0.5)",
+"angle": "RAD",
+"complex": false,
+"re": 1.0471975511965979,
+"im": 0.0
+},
+{
+"id": "asin(0.5)",
+"expr": "asin(0.5)",
+"angle": "GRAD",
+"complex": false,
+"re": 33.333333333333336,
+"im": 0.0
+},
+{
+"id": "asin(0.8660254037844386)",
+"expr": "asin(0.8660254037844386)",
+"angle": "DEG",
+"complex": false,
+"re": 59.99999999999999,
+"im": 0.0
+},
+{
+"id": "acos(0.8660254037844386)",
+"expr": "acos(0.8660254037844386)",
+"angle": "DEG",
+"complex": false,
+"re": 30.000000000000004,
+"im": 0.0
+},
+{
+"id": "asin(0.8660254037844386)",
+"expr": "asin(0.8660254037844386)",
+"angle": "RAD",
+"complex": false,
+"re": 1.0471975511965976,
+"im": 0.0
+},
+{
+"id": "acos(0.8660254037844386)",
+"expr": "acos(0.8660254037844386)",
+"angle": "RAD",
+"complex": false,
+"re": 0.5235987755982989,
+"im": 0.0
+},
+{
+"id": "asin(0.8660254037844386)",
+"expr": "asin(0.8660254037844386)",
+"angle": "GRAD",
+"complex": false,
+"re": 66.66666666666666,
+"im": 0.0
+},
+{
+"id": "asin(1)",
+"expr": "asin(1)",
+"angle": "DEG",
+"complex": false,
+"re": 90.0,
+"im": 0.0
+},
+{
+"id": "acos(1)",
+"expr": "acos(1)",
+"angle": "DEG",
+"complex": false,
+"re": 0.0,
+"im": 0.0
+},
+{
+"id": "asin(1)",
+"expr": "asin(1)",
+"angle": "RAD",
+"complex": false,
+"re": 1.5707963267948966,
+"im": 0.0
+},
+{
+"id": "acos(1)",
+"expr": "acos(1)",
+"angle": "RAD",
+"complex": false,
+"re": 0.0,
+"im": 0.0
+},
+{
+"id": "asin(1)",
+"expr": "asin(1)",
+"angle": "GRAD",
+"complex": false,
+"re": 100.0,
+"im": 0.0
+},
+{
+"id": "atan(-100)",
+"expr": "atan(-100)",
+"angle": "DEG",
+"complex": false,
+"re": -89.42706130231652,
+"im": 0.0
+},
+{
+"id": "atan(-100)",
+"expr": "atan(-100)",
+"angle": "RAD",
+"complex": false,
+"re": -1.5607966601082315,
+"im": 0.0
+},
+{
+"id": "atan(-1)",
+"expr": "atan(-1)",
+"angle": "DEG",
+"complex": false,
+"re": -45.0,
+"im": 0.0
+},
+{
+"id": "atan(-1)",
+"expr": "atan(-1)",
+"angle": "RAD",
+"complex": false,
+"re": -0.7853981633974483,
+"im": 0.0
+},
+{
+"id": "atan(0)",
+"expr": "atan(0)",
+"angle": "DEG",
+"complex": false,
+"re": 0.0,
+"im": 0.0
+},
+{
+"id": "atan(0)",
+"expr": "atan(0)",
+"angle": "RAD",
+"complex": false,
+"re": 0.0,
+"im": 0.0
+},
+{
+"id": "atan(0.5)",
+"expr": "atan(0.5)",
+"angle": "DEG",
+"complex": false,
+"re": 26.56505117707799,
+"im": 0.0
+},
+{
+"id": "atan(0.5)",
+"expr": "atan(0.5)",
+"angle": "RAD",
+"complex": false,
+"re": 0.4636476090008061,
+"im": 0.0
+},
+{
+"id": "atan(1)",
+"expr": "atan(1)",
+"angle": "DEG",
+"complex": false,
+"re": 45.0,
+"im": 0.0
+},
+{
+"id": "atan(1)",
+"expr": "atan(1)",
+"angle": "RAD",
+"complex": false,
+"re": 0.7853981633974483,
+"im": 0.0
+},
+{
+"id": "atan(1.7320508075688772)",
+"expr": "atan(1.7320508075688772)",
+"angle": "DEG",
+"complex": false,
+"re": 59.99999999999999,
+"im": 0.0
+},
+{
+"id": "atan(1.7320508075688772)",
+"expr": "atan(1.7320508075688772)",
+"angle": "RAD",
+"complex": false,
+"re": 1.0471975511965976,
+"im": 0.0
+},
+{
+"id": "atan(10)",
+"expr": "atan(10)",
+"angle": "DEG",
+"complex": false,
+"re": 84.28940686250037,
+"im": 0.0
+},
+{
+"id": "atan(10)",
+"expr": "atan(10)",
+"angle": "RAD",
+"complex": false,
+"re": 1.4711276743037347,
+"im": 0.0
+},
+{
+"id": "atan(1000000)",
+"expr": "atan(1000000)",
+"angle": "DEG",
+"complex": false,
+"re": 89.99994270422049,
+"im": 0.0
+},
+{
+"id": "atan(1000000)",
+"expr": "atan(1000000)",
+"angle": "RAD",
+"complex": false,
+"re": 1.5707953267948966,
+"im": 0.0
+},
+{
+"id": "sin⁻¹(0.5)",
+"expr": "sin⁻¹(0.5)",
+"angle": "DEG",
+"complex": false,
+"re": 30.0,
+"im": 0.0
+},
+{
+"id": "cos⁻¹(0.5)",
+"expr": "cos⁻¹(0.5)",
+"angle": "DEG",
+"complex": false,
+"re": 60.0,
+"im": 0.0
+},
+{
+"id": "tan⁻¹(1)",
+"expr": "tan⁻¹(1)",
+"angle": "DEG",
+"complex": false,
+"re": 45.0,
+"im": 0.0
+},
+{
+"id": "error:asin(1.0001)",
+"expr": "asin(1.0001)",
+"angle": "DEG",
+"complex": false,
+"error": true
+},
+{
+"id": "error:acos(-1.5)",
+"expr": "acos(-1.5)",
+"angle": "DEG",
+"complex": false,
+"error": true
+},
+{
+"id": "sinh(-2)",
+"expr": "sinh(-2)",
+"angle": "DEG",
+"complex": false,
+"re": -3.626860407847019,
+"im": 0.0
+},
+{
+"id": "cosh(-2)",
+"expr": "cosh(-2)",
+"angle": "DEG",
+"complex": false,
+"re": 3.7621956910836314,
+"im": 0.0
+},
+{
+"id": "tanh(-2)",
+"expr": "tanh(-2)",
+"angle": "DEG",
+"complex": false,
+"re": -0.9640275800758169,
+"im": 0.0
+},
+{
+"id": "asinh(-2)",
+"expr": "asinh(-2)",
+"angle": "DEG",
+"complex": false,
+"re": -1.4436354751788103,
+"im": 0.0
+},
+{
+"id": "sinh(-0.5)",
+"expr": "sinh(-0.5)",
+"angle": "DEG",
+"complex": false,
+"re": -0.5210953054937474,
+"im": 0.0
+},
+{
+"id": "cosh(-0.5)",
+"expr": "cosh(-0.5)",
+"angle": "DEG",
+"complex": false,
+"re": 1.1276259652063807,
+"im": 0.0
+},
+{
+"id": "tanh(-0.5)",
+"expr": "tanh(-0.5)",
+"angle": "DEG",
+"complex": false,
+"re": -0.46211715726000974,
+"im": 0.0
+},
+{
+"id": "asinh(-0.5)",
+"expr": "asinh(-0.5)",
+"angle": "DEG",
+"complex": false,
+"re": -0.48121182505960347,
+"im": 0.0
+},
+{
+"id": "sinh(0)",
+"expr": "sinh(0)",
+"angle": "DEG",
+"complex": false,
+"re": 0.0,
+"im": 0.0
+},
+{
+"id": "cosh(0)",
+"expr": "cosh(0)",
+"angle": "DEG",
+"complex": false,
+"re": 1.0,
+"im": 0.0
+},
+{
+"id": "tanh(0)",
+"expr": "tanh(0)",
+"angle": "DEG",
+"complex": false,
+"re": 0.0,
+"im": 0.0
+},
+{
+"id": "asinh(0)",
+"expr": "asinh(0)",
+"angle": "DEG",
+"complex": false,
+"re": 0.0,
+"im": 0.0
+},
+{
+"id": "sinh(0.5)",
+"expr": "sinh(0.5)",
+"angle": "DEG",
+"complex": false,
+"re": 0.5210953054937474,
+"im": 0.0
+},
+{
+"id": "cosh(0.5)",
+"expr": "cosh(0.5)",
+"angle": "DEG",
+"complex": false,
+"re": 1.1276259652063807,
+"im": 0.0
+},
+{
+"id": "tanh(0.5)",
+"expr": "tanh(0.5)",
+"angle": "DEG",
+"complex": false,
+"re": 0.46211715726000974,
+"im": 0.0
+},
+{
+"id": "asinh(0.5)",
+"expr": "asinh(0.5)",
+"angle": "DEG",
+"complex": false,
+"re": 0.48121182505960347,
+"im": 0.0
+},
+{
+"id": "sinh(1)",
+"expr": "sinh(1)",
+"angle": "DEG",
+"complex": false,
+"re": 1.1752011936438014,
+"im": 0.0
+},
+{
+"id": "cosh(1)",
+"expr": "cosh(1)",
+"angle": "DEG",
+"complex": false,
+"re": 1.5430806348152437,
+"im": 0.0
+},
+{
+"id": "tanh(1)",
+"expr": "tanh(1)",
+"angle": "DEG",
+"complex": false,
+"re": 0.7615941559557649,
+"im": 0.0
+},
+{
+"id": "asinh(1)",
+"expr": "asinh(1)",
+"angle": "DEG",
+"complex": false,
+"re": 0.881373587019543,
+"im": 0.0
+},
+{
+"id": "sinh(2)",
+"expr": "sinh(2)",
+"angle": "DEG",
+"complex": false,
+"re": 3.626860407847019,
+"im": 0.0
+},
+{
+"id": "cosh(2)",
+"expr": "cosh(2)",
+"angle": "DEG",
+"complex": false,
+"re": 3.7621956910836314,
+"im": 0.0
+},
+{
+"id": "tanh(2)",
+"expr": "tanh(2)",
+"angle": "DEG",
+"complex": false,
+"re": 0.9640275800758169,
+"im": 0.0
+},
+{
+"id": "asinh(2)",
+"expr": "asinh(2)",
+"angle": "DEG",
+"complex": false,
+"re": 1.4436354751788103,
+"im": 0.0
+},
+{
+"id": "sinh(5)",
+"expr": "sinh(5)",
+"angle": "DEG",
+"complex": false,
+"re": 74.20321057778875,
+"im": 0.0
+},
+{
+"id": "cosh(5)",
+"expr": "cosh(5)",
+"angle": "DEG",
+"complex": false,
+"re": 74.20994852478785,
+"im": 0.0
+},
+{
+"id": "tanh(5)",
+"expr": "tanh(5)",
+"angle": "DEG",
+"complex": false,
+"re": 0.9999092042625951,
+"im": 0.0
+},
+{
+"id": "asinh(5)",
+"expr": "asinh(5)",
+"angle": "DEG",
+"complex": false,
+"re": 2.3124383412727525,
+"im": 0.0
+},
+{
+"id": "acosh(1)",
+"expr": "acosh(1)",
+"angle": "DEG",
+"complex": false,
+"re": 0.0,
+"im": 0.0
+},
+{
+"id": "acosh(1.5)",
+"expr": "acosh(1.5)",
+"angle": "DEG",
+"complex": false,
+"re": 0.9624236501192069,
+"im": 0.0
+},
+{
+"id": "acosh(2)",
+"expr": "acosh(2)",
+"angle": "DEG",
+"complex": false,
+"re": 1.3169578969248166,
+"im": 0.0
+},
+{
+"id": "acosh(10)",
+"expr": "acosh(10)",
+"angle": "DEG",
+"complex": false,
+"re": 2.993222846126381,
+"im": 0.0
+},
+{
+"id": "atanh(-0.9)",
+"expr": "atanh(-0.9)",
+"angle": "DEG",
+"complex": false,
+"re": -1.4722194895832204,
+"im": 0.0
+},
+{
+"id": "atanh(-0.5)",
+"expr": "atanh(-0.5)",
+"angle": "DEG",
+"complex": false,
+"re": -0.5493061443340548,
+"im": 0.0
+},
+{
+"id": "atanh(0)",
+"expr": "atanh(0)",
+"angle": "DEG",
+"complex": false,
+"re": 0.0,
+"im": 0.0
+},
+{
+"id": "atanh(0.5)",
+"expr": "atanh(0.5)",
+"angle": "DEG",
+"complex": false,
+"re": 0.5493061443340548,
+"im": 0.0
+},
+{
+"id": "atanh(0.99)",
+"expr": "atanh(0.99)",
+"angle": "DEG",
+"complex": false,
+"re": 2.6466524123622457,
+"im": 0.0
+},
+{
+"id": "error:acosh(0.5)",
+"expr": "acosh(0.5)",
+"angle": "DEG",
+"complex": false,
+"error": true
+},
+{
+"id": "error:atanh(1)",
+"expr": "atanh(1)",
+"angle": "DEG",
+"complex": false,
+"error": true
+},
+{
+"id": "error:atanh(-1)",
+"expr": "atanh(-1)",
+"angle": "DEG",
+"complex": false,
+"error": true
+},
+{
+"id": "log(0.001)",
+"expr": "log(0.001)",
+"angle": "DEG",
+"complex": false,
+"re": -3.0,
+"im": 0.0
+},
+{
+"id": "ln(0.001)",
+"expr": "ln(0.001)",
+"angle": "DEG",
+"complex": false,
+"re": -6.907755278982137,
+"im": 0.0
+},
+{
+"id": "log2(0.001)",
+"expr": "log2(0.001)",
+"angle": "DEG",
+"complex": false,
+"re": -9.965784284662087,
+"im": 0.0
+},
+{
+"id": "log(0.5)",
+"expr": "log(0.5)",
+"angle": "DEG",
+"complex": false,
+"re": -0.3010299956639812,
+"im": 0.0
+},
+{
+"id": "ln(0.5)",
+"expr": "ln(0.5)",
+"angle": "DEG",
+"complex": false,
+"re": -0.6931471805599453,
+"im": 0.0
+},
+{
+"id": "log2(0.5)",
+"expr": "log2(0.5)",
+"angle": "DEG",
+"complex": false,
+"re": -1.0,
+"im": 0.0
+},
+{
+"id": "log(1)",
+"expr": "log(1)",
+"angle": "DEG",
+"complex": false,
+"re": 0.0,
+"im": 0.0
+},
+{
+"id": "ln(1)",
+"expr": "ln(1)",
+"angle": "DEG",
+"complex": false,
+"re": 0.0,
+"im": 0.0
+},
+{
+"id": "log2(1)",
+"expr": "log2(1)",
+"angle": "DEG",
+"complex": false,
+"re": 0.0,
+"im": 0.0
+},
+{
+"id": "log(2)",
+"expr": "log(2)",
+"angle": "DEG",
+"complex": false,
+"re": 0.3010299956639812,
+"im": 0.0
+},
+{
+"id": "ln(2)",
+"expr": "ln(2)",
+"angle": "DEG",
+"complex": false,
+"re": 0.6931471805599453,
+"im": 0.0
+},
+{
+"id": "log2(2)",
+"expr": "log2(2)",
+"angle": "DEG",
+"complex": false,
+"re": 1.0,
+"im": 0.0
+},
+{
+"id": "log(10)",
+"expr": "log(10)",
+"angle": "DEG",
+"complex": false,
+"re": 1.0,
+"im": 0.0
+},
+{
+"id": "ln(10)",
+"expr": "ln(10)",
+"angle": "DEG",
+"complex": false,
+"re": 2.302585092994046,
+"im": 0.0
+},
+{
+"id": "log2(10)",
+"expr": "log2(10)",
+"angle": "DEG",
+"complex": false,
+"re": 3.321928094887362,
+"im": 0.0
+},
+{
+"id": "log(100)",
+"expr": "log(100)",
+"angle": "DEG",
+"complex": false,
+"re": 2.0,
+"im": 0.0
+},
+{
+"id": "ln(100)",
+"expr": "ln(100)",
+"angle": "DEG",
+"complex": false,
+"re": 4.605170185988092,
+"im": 0.0
+},
+{
+"id": "log2(100)",
+"expr": "log2(100)",
+"angle": "DEG",
+"complex": false,
+"re": 6.643856189774724,
+"im": 0.0
+},
+{
+"id": "log(1000)",
+"expr": "log(1000)",
+"angle": "DEG",
+"complex": false,
+"re": 3.0,
+"im": 0.0
+},
+{
+"id": "ln(1000)",
+"expr": "ln(1000)",
+"angle": "DEG",
+"complex": false,
+"re": 6.907755278982137,
+"im": 0.0
+},
+{
+"id": "log2(1000)",
+"expr": "log2(1000)",
+"angle": "DEG",
+"complex": false,
+"re": 9.965784284662087,
+"im": 0.0
+},
+{
+"id": "log(12345.678)",
+"expr": "log(12345.678)",
+"angle": "DEG",
+"complex": false,
+"re": 4.091514945509202,
+"im": 0.0
+},
+{
+"id": "ln(12345.678)",
+"expr": "ln(12345.678)",
+"angle": "DEG",
+"complex": false,
+"re": 9.421061321291832,
+"im": 0.0
+},
+{
+"id": "log2(12345.678)",
+"expr": "log2(12345.678)",
+"angle": "DEG",
+"complex": false,
+"re": 13.59171844813855,
+"im": 0.0
+},
+{
+"id": "log(1000000)",
+"expr": "log(1000000)",
+"angle": "DEG",
+"complex": false,
+"re": 6.0,
+"im": 0.0
+},
+{
+"id": "ln(1000000)",
+"expr": "ln(1000000)",
+"angle": "DEG",
+"complex": false,
+"re": 13.815510557964274,
+"im": 0.0
+},
+{
+"id": "log2(1000000)",
+"expr": "log2(1000000)",
+"angle": "DEG",
+"complex": false,
+"re": 19.931568569324174,
+"im": 0.0
+},
+{
+"id": "log(1e-06)",
+"expr": "log(1e-06)",
+"angle": "DEG",
+"complex": false,
+"re": -6.0,
+"im": 0.0
+},
+{
+"id": "ln(1e-06)",
+"expr": "ln(1e-06)",
+"angle": "DEG",
+"complex": false,
+"re": -13.815510557964274,
+"im": 0.0
+},
+{
+"id": "log2(1e-06)",
+"expr": "log2(1e-06)",
+"angle": "DEG",
+"complex": false,
+"re": -19.931568569324174,
+"im": 0.0
+},
+{
+"id": "logb(8,2)",
+"expr": "logb(8,2)",
+"angle": "DEG",
+"complex": false,
+"re": 3.0,
+"im": 0.0
+},
+{
+"id": "log(8,2)",
+"expr": "log(8,2)",
+"angle": "DEG",
+"complex": false,
+"re": 3.0,
+"im": 0.0
+},
+{
+"id": "logb(81,3)",
+"expr": "logb(81,3)",
+"angle": "DEG",
+"complex": false,
+"re": 4.0,
+"im": 0.0
+},
+{
+"id": "log(81,3)",
+"expr": "log(81,3)",
+"angle": "DEG",
+"complex": false,
+"re": 4.0,
+"im": 0.0
+},
+{
+"id": "logb(1000,10)",
+"expr": "logb(1000,10)",
+"angle": "DEG",
+"complex": false,
+"re": 2.9999999999999996,
+"im": 0.0
+},
+{
+"id": "log(1000,10)",
+"expr": "log(1000,10)",
+"angle": "DEG",
+"complex": false,
+"re": 2.9999999999999996,
+"im": 0.0
+},
+{
+"id": "logb(0.25,2)",
+"expr": "logb(0.25,2)",
+"angle": "DEG",
+"complex": false,
+"re": -2.0,
+"im": 0.0
+},
+{
+"id": "log(0.25,2)",
+"expr": "log(0.25,2)",
+"angle": "DEG",
+"complex": false,
+"re": -2.0,
+"im": 0.0
+},
+{
+"id": "logb(5,7)",
+"expr": "logb(5,7)",
+"angle": "DEG",
+"complex": false,
+"re": 0.8270874753469162,
+"im": 0.0
+},
+{
+"id": "log(5,7)",
+"expr": "log(5,7)",
+"angle": "DEG",
+"complex": false,
+"re": 0.8270874753469162,
+"im": 0.0
+},
+{
+"id": "logb(2,0.5)",
+"expr": "logb(2,0.5)",
+"angle": "DEG",
+"complex": false,
+"re": -1.0,
+"im": 0.0
+},
+{
+"id": "log(2,0.5)",
+"expr": "log(2,0.5)",
+"angle": "DEG",
+"complex": false,
+"re": -1.0,
+"im": 0.0
+},
+{
+"id": "logb(1000000,100)",
+"expr": "logb(1000000,100)",
+"angle": "DEG",
+"complex": false,
+"re": 2.9999999999999996,
+"im": 0.0
+},
+{
+"id": "log(1000000,100)",
+"expr": "log(1000000,100)",
+"angle": "DEG",
+"complex": false,
+"re": 2.9999999999999996,
+"im": 0.0
+},
+{
+"id": "exp(-3)",
+"expr": "exp(-3)",
+"angle": "DEG",
+"complex": false,
+"re": 0.049787068367863944,
+"im": 0.0
+},
+{
+"id": "exp(-1)",
+"expr": "exp(-1)",
+"angle": "DEG",
+"complex": false,
+"re": 0.36787944117144233,
+"im": 0.0
+},
+{
+"id": "exp(0)",
+"expr": "exp(0)",
+"angle": "DEG",
+"complex": false,
+"re": 1.0,
+"im": 0.0
+},
+{
+"id": "exp(0.5)",
+"expr": "exp(0.5)",
+"angle": "DEG",
+"complex": false,
+"re": 1.6487212707001282,
+"im": 0.0
+},
+{
+"id": "exp(1)",
+"expr": "exp(1)",
+"angle": "DEG",
+"complex": false,
+"re": 2.718281828459045,
+"im": 0.0
+},
+{
+"id": "exp(2)",
+"expr": "exp(2)",
+"angle": "DEG",
+"complex": false,
+"re": 7.38905609893065,
+"im": 0.0
+},
+{
+"id": "exp(10)",
+"expr": "exp(10)",
+"angle": "DEG",
+"complex": false,
+"re": 22026.465794806718,
+"im": 0.0
+},
+{
+"id": "exp(50)",
+"expr": "exp(50)",
+"angle": "DEG",
+"complex": false,
+"re": 5.184705528587072e+21,
+"im": 0.0
+},
+{
+"id": "ln(e)",
+"expr": "ln(e)",
+"angle": "DEG",
+"complex": false,
+"re": 1.0,
+"im": 0.0
+},
+{
+"id": "log(1000)",
+"expr": "log(1000)",
+"angle": "DEG",
+"complex": false,
+"re": 3.0,
+"im": 0.0
+},
+{
+"id": "error:ln(0)",
+"expr": "ln(0)",
+"angle": "DEG",
+"complex": false,
+"error": true
+},
+{
+"id": "error:log(0)",
+"expr": "log(0)",
+"angle": "DEG",
+"complex": false,
+"error": true
+},
+{
+"id": "error:log(-1)",
+"expr": "log(-1)",
+"angle": "DEG",
+"complex": false,
+"error": true
+},
+{
+"id": "error:ln(-2)",
+"expr": "ln(-2)",
+"angle": "DEG",
+"complex": false,
+"error": true
+},
+{
+"id": "error:log2(0)",
+"expr": "log2(0)",
+"angle": "DEG",
+"complex": false,
+"error": true
+},
+{
+"id": "error:logb(8,1)",
+"expr": "logb(8,1)",
+"angle": "DEG",
+"complex": false,
+"error": true
+},
+{
+"id": "error:logb(8,0)",
+"expr": "logb(8,0)",
+"angle": "DEG",
+"complex": false,
+"error": true
+},
+{
+"id": "error:logb(8,-2)",
+"expr": "logb(8,-2)",
+"angle": "DEG",
+"complex": false,
+"error": true
+},
+{
+"id": "error:logb(-8,2)",
+"expr": "logb(-8,2)",
+"angle": "DEG",
+"complex": false,
+"error": true
+},
+{
+"id": "2^3",
+"expr": "2^3",
+"angle": "DEG",
+"complex": false,
+"re": 8.0,
+"im": 0.0
+},
+{
+"id": "pow(2,3)",
+"expr": "pow(2,3)",
+"angle": "DEG",
+"complex": false,
+"re": 8.0,
+"im": 0.0
+},
+{
+"id": "2^10",
+"expr": "2^10",
+"angle": "DEG",
+"complex": false,
+"re": 1024.0,
+"im": 0.0
+},
+{
+"id": "pow(2,10)",
+"expr": "pow(2,10)",
+"angle": "DEG",
+"complex": false,
+"re": 1024.0,
+"im": 0.0
+},
+{
+"id": "2^-2",
+"expr": "2^-2",
+"angle": "DEG",
+"complex": false,
+"re": 0.25,
+"im": 0.0
+},
+{
+"id": "pow(2,-2)",
+"expr": "pow(2,-2)",
+"angle": "DEG",
+"complex": false,
+"re": 0.25,
+"im": 0.0
+},
+{
+"id": "10^3",
+"expr": "10^3",
+"angle": "DEG",
+"complex": false,
+"re": 1000.0,
+"im": 0.0
+},
+{
+"id": "pow(10,3)",
+"expr": "pow(10,3)",
+"angle": "DEG",
+"complex": false,
+"re": 1000.0,
+"im": 0.0
+},
+{
+"id": "10^-3",
+"expr": "10^-3",
+"angle": "DEG",
+"complex": false,
+"re": 0.001,
+"im": 0.0
+},
+{
+"id": "pow(10,-3)",
+"expr": "pow(10,-3)",
+"angle": "DEG",
+"complex": false,
+"re": 0.001,
+"im": 0.0
+},
+{
+"id": "1.5^2.5",
+"expr": "1.5^2.5",
+"angle": "DEG",
+"complex": false,
+"re": 2.7556759606310752,
+"im": 0.0
+},
+{
+"id": "pow(1.5,2.5)",
+"expr": "pow(1.5,2.5)",
+"angle": "DEG",
+"complex": false,
+"re": 2.7556759606310752,
+"im": 0.0
+},
+{
+"id": "9^0.5",
+"expr": "9^0.5",
+"angle": "DEG",
+"complex": false,
+"re": 3.0,
+"im": 0.0
+},
+{
+"id": "pow(9,0.5)",
+"expr": "pow(9,0.5)",
+"angle": "DEG",
+"complex": false,
+"re": 3.0,
+"im": 0.0
+},
+{
+"id": "0^0",
+"expr": "0^0",
+"angle": "DEG",
+"complex": false,
+"re": 1.0,
+"im": 0.0
+},
+{
+"id": "pow(0,0)",
+"expr": "pow(0,0)",
+"angle": "DEG",
+"complex": false,
+"re": 1.0,
+"im": 0.0
+},
+{
+"id": "0^3",
+"expr": "0^3",
+"angle": "DEG",
+"complex": false,
+"re": 0.0,
+"im": 0.0
+},
+{
+"id": "pow(0,3)",
+"expr": "pow(0,3)",
+"angle": "DEG",
+"complex": false,
+"re": 0.0,
+"im": 0.0
+},
+{
+"id": "(-2)^3",
+"expr": "(-2)^3",
+"angle": "DEG",
+"complex": false,
+"re": -8.0,
+"im": 0.0
+},
+{
+"id": "pow(-2,3)",
+"expr": "pow(-2,3)",
+"angle": "DEG",
+"complex": false,
+"re": -8.0,
+"im": 0.0
+},
+{
+"id": "(-2)^2",
+"expr": "(-2)^2",
+"angle": "DEG",
+"complex": false,
+"re": 4.0,
+"im": 0.0
+},
+{
+"id": "pow(-2,2)",
+"expr": "pow(-2,2)",
+"angle": "DEG",
+"complex": false,
+"re": 4.0,
+"im": 0.0
+},
+{
+"id": "(-3)^5",
+"expr": "(-3)^5",
+"angle": "DEG",
+"complex": false,
+"re": -243.0,
+"im": 0.0
+},
+{
+"id": "pow(-3,5)",
+"expr": "pow(-3,5)",
+"angle": "DEG",
+"complex": false,
+"re": -243.0,
+"im": 0.0
+},
+{
+"id": "5^0",
+"expr": "5^0",
+"angle": "DEG",
+"complex": false,
+"re": 1.0,
+"im": 0.0
+},
+{
+"id": "pow(5,0)",
+"expr": "pow(5,0)",
+"angle": "DEG",
+"complex": false,
+"re": 1.0,
+"im": 0.0
+},
+{
+"id": "7^1",
+"expr": "7^1",
+"angle": "DEG",
+"complex": false,
+"re": 7.0,
+"im": 0.0
+},
+{
+"id": "pow(7,1)",
+"expr": "pow(7,1)",
+"angle": "DEG",
+"complex": false,
+"re": 7.0,
+"im": 0.0
+},
+{
+"id": "2^0.5",
+"expr": "2^0.5",
+"angle": "DEG",
+"complex": false,
+"re": 1.4142135623730951,
+"im": 0.0
+},
+{
+"id": "pow(2,0.5)",
+"expr": "pow(2,0.5)",
+"angle": "DEG",
+"complex": false,
+"re": 1.4142135623730951,
+"im": 0.0
+},
+{
+"id": "100^0.25",
+"expr": "100^0.25",
+"angle": "DEG",
+"complex": false,
+"re": 3.1622776601683795,
+"im": 0.0
+},
+{
+"id": "pow(100,0.25)",
+"expr": "pow(100,0.25)",
+"angle": "DEG",
+"complex": false,
+"re": 3.1622776601683795,
+"im": 0.0
+},
+{
+"id": "sqrt(0)",
+"expr": "sqrt(0)",
+"angle": "DEG",
+"complex": false,
+"re": 0.0,
+"im": 0.0
+},
+{
+"id": "sqrt(1)",
+"expr": "sqrt(1)",
+"angle": "DEG",
+"complex": false,
+"re": 1.0,
+"im": 0.0
+},
+{
+"id": "sqrt(2)",
+"expr": "sqrt(2)",
+"angle": "DEG",
+"complex": false,
+"re": 1.4142135623730951,
+"im": 0.0
+},
+{
+"id": "sqrt(4)",
+"expr": "sqrt(4)",
+"angle": "DEG",
+"complex": false,
+"re": 2.0,
+"im": 0.0
+},
+{
+"id": "sqrt(9)",
+"expr": "sqrt(9)",
+"angle": "DEG",
+"complex": false,
+"re": 3.0,
+"im": 0.0
+},
+{
+"id": "sqrt(144)",
+"expr": "sqrt(144)",
+"angle": "DEG",
+"complex": false,
+"re": 12.0,
+"im": 0.0
+},
+{
+"id": "sqrt(2.25)",
+"expr": "sqrt(2.25)",
+"angle": "DEG",
+"complex": false,
+"re": 1.5,
+"im": 0.0
+},
+{
+"id": "sqrt(10000000000)",
+"expr": "sqrt(10000000000)",
+"angle": "DEG",
+"complex": false,
+"re": 100000.0,
+"im": 0.0
+},
+{
+"id": "sqrt(0.0001)",
+"expr": "sqrt(0.0001)",
+"angle": "DEG",
+"complex": false,
+"re": 0.01,
+"im": 0.0
+},
+{
+"id": "cbrt(-27)",
+"expr": "cbrt(-27)",
+"angle": "DEG",
+"complex": false,
+"re": -3.0,
+"im": 0.0
+},
+{
+"id": "cbrt(-8)",
+"expr": "cbrt(-8)",
+"angle": "DEG",
+"complex": false,
+"re": -2.0,
+"im": 0.0
+},
+{
+"id": "cbrt(-1)",
+"expr": "cbrt(-1)",
+"angle": "DEG",
+"complex": false,
+"re": -1.0,
+"im": 0.0
+},
+{
+"id": "cbrt(0)",
+"expr": "cbrt(0)",
+"angle": "DEG",
+"complex": false,
+"re": 0.0,
+"im": 0.0
+},
+{
+"id": "cbrt(1)",
+"expr": "cbrt(1)",
+"angle": "DEG",
+"complex": false,
+"re": 1.0,
+"im": 0.0
+},
+{
+"id": "cbrt(8)",
+"expr": "cbrt(8)",
+"angle": "DEG",
+"complex": false,
+"re": 2.0,
+"im": 0.0
+},
+{
+"id": "cbrt(27)",
+"expr": "cbrt(27)",
+"angle": "DEG",
+"complex": false,
+"re": 3.0,
+"im": 0.0
+},
+{
+"id": "cbrt(64)",
+"expr": "cbrt(64)",
+"angle": "DEG",
+"complex": false,
+"re": 3.9999999999999996,
+"im": 0.0
+},
+{
+"id": "cbrt(1000)",
+"expr": "cbrt(1000)",
+"angle": "DEG",
+"complex": false,
+"re": 9.999999999999998,
+"im": 0.0
+},
+{
+"id": "cbrt(2)",
+"expr": "cbrt(2)",
+"angle": "DEG",
+"complex": false,
+"re": 1.2599210498948732,
+"im": 0.0
+},
+{
+"id": "root(16,4)",
+"expr": "root(16,4)",
+"angle": "DEG",
+"complex": false,
+"re": 2.0,
+"im": 0.0
+},
+{
+"id": "root(32,5)",
+"expr": "root(32,5)",
+"angle": "DEG",
+"complex": false,
+"re": 2.0,
+"im": 0.0
+},
+{
+"id": "root(-27,3)",
+"expr": "root(-27,3)",
+"angle": "DEG",
+"complex": false,
+"re": -3.0,
+"im": 0.0
+},
+{
+"id": "root(-32,5)",
+"expr": "root(-32,5)",
+"angle": "DEG",
+"complex": false,
+"re": -2.0,
+"im": 0.0
+},
+{
+"id": "root(2,2)",
+"expr": "root(2,2)",
+"angle": "DEG",
+"complex": false,
+"re": 1.4142135623730951,
+"im": 0.0
+},
+{
+"id": "root(1000,3)",
+"expr": "root(1000,3)",
+"angle": "DEG",
+"complex": false,
+"re": 9.999999999999998,
+"im": 0.0
+},
+{
+"id": "root(81,4)",
+"expr": "root(81,4)",
+"angle": "DEG",
+"complex": false,
+"re": 3.0,
+"im": 0.0
+},
+{
+"id": "root(10,0.5)",
+"expr": "root(10,0.5)",
+"angle": "DEG",
+"complex": false,
+"re": 100.0,
+"im": 0.0
+},
+{
+"id": "√144",
+"expr": "√144",
+"angle": "DEG",
+"complex": false,
+"re": 12.0,
+"im": 0.0
+},
+{
+"id": "√2",
+"expr": "√2",
+"angle": "DEG",
+"complex": false,
+"re": 1.4142135623730951,
+"im": 0.0
+},
+{
+"id": "3²",
+"expr": "3²",
+"angle": "DEG",
+"complex": false,
+"re": 9.0,
+"im": 0.0
+},
+{
+"id": "3³",
+"expr": "3³",
+"angle": "DEG",
+"complex": false,
+"re": 27.0,
+"im": 0.0
+},
+{
+"id": "error:sqrt(-1)",
+"expr": "sqrt(-1)",
+"angle": "DEG",
+"complex": false,
+"error": true
+},
+{
+"id": "error:sqrt(-0.0001)",
+"expr": "sqrt(-0.0001)",
+"angle": "DEG",
+"complex": false,
+"error": true
+},
+{
+"id": "error:(-8)^(1/3)",
+"expr": "(-8)^(1/3)",
+"angle": "DEG",
+"complex": false,
+"error": true
+},
+{
+"id": "error:(-2)^0.5",
+"expr": "(-2)^0.5",
+"angle": "DEG",
+"complex": false,
+"error": true
+},
+{
+"id": "error:0^-1",
+"expr": "0^-1",
+"angle": "DEG",
+"complex": false,
+"error": true
+},
+{
+"id": "error:root(-16,4)",
+"expr": "root(-16,4)",
+"angle": "DEG",
+"complex": false,
+"error": true
+},
+{
+"id": "error:root(5,0)",
+"expr": "root(5,0)",
+"angle": "DEG",
+"complex": false,
+"error": true
+},
+{
+"id": "0!",
+"expr": "0!",
+"angle": "DEG",
+"complex": false,
+"re": 1.0,
+"im": 0.0
+},
+{
+"id": "fact(0)",
+"expr": "fact(0)",
+"angle": "DEG",
+"complex": false,
+"re": 1.0,
+"im": 0.0
+},
+{
+"id": "1!",
+"expr": "1!",
+"angle": "DEG",
+"complex": false,
+"re": 1.0,
+"im": 0.0
+},
+{
+"id": "fact(1)",
+"expr": "fact(1)",
+"angle": "DEG",
+"complex": false,
+"re": 1.0,
+"im": 0.0
+},
+{
+"id": "2!",
+"expr": "2!",
+"angle": "DEG",
+"complex": false,
+"re": 2.0,
+"im": 0.0
+},
+{
+"id": "fact(2)",
+"expr": "fact(2)",
+"angle": "DEG",
+"complex": false,
+"re": 2.0,
+"im": 0.0
+},
+{
+"id": "3!",
+"expr": "3!",
+"angle": "DEG",
+"complex": false,
+"re": 6.0,
+"im": 0.0
+},
+{
+"id": "fact(3)",
+"expr": "fact(3)",
+"angle": "DEG",
+"complex": false,
+"re": 6.0,
+"im": 0.0
+},
+{
+"id": "4!",
+"expr": "4!",
+"angle": "DEG",
+"complex": false,
+"re": 24.0,
+"im": 0.0
+},
+{
+"id": "fact(4)",
+"expr": "fact(4)",
+"angle": "DEG",
+"complex": false,
+"re": 24.0,
+"im": 0.0
+},
+{
+"id": "5!",
+"expr": "5!",
+"angle": "DEG",
+"complex": false,
+"re": 120.0,
+"im": 0.0
+},
+{
+"id": "fact(5)",
+"expr": "fact(5)",
+"angle": "DEG",
+"complex": false,
+"re": 120.0,
+"im": 0.0
+},
+{
+"id": "6!",
+"expr": "6!",
+"angle": "DEG",
+"complex": false,
+"re": 720.0,
+"im": 0.0
+},
+{
+"id": "fact(6)",
+"expr": "fact(6)",
+"angle": "DEG",
+"complex": false,
+"re": 720.0,
+"im": 0.0
+},
+{
+"id": "7!",
+"expr": "7!",
+"angle": "DEG",
+"complex": false,
+"re": 5040.0,
+"im": 0.0
+},
+{
+"id": "fact(7)",
+"expr": "fact(7)",
+"angle": "DEG",
+"complex": false,
+"re": 5040.0,
+"im": 0.0
+},
+{
+"id": "8!",
+"expr": "8!",
+"angle": "DEG",
+"complex": false,
+"re": 40320.0,
+"im": 0.0
+},
+{
+"id": "fact(8)",
+"expr": "fact(8)",
+"angle": "DEG",
+"complex": false,
+"re": 40320.0,
+"im": 0.0
+},
+{
+"id": "9!",
+"expr": "9!",
+"angle": "DEG",
+"complex": false,
+"re": 362880.0,
+"im": 0.0
+},
+{
+"id": "fact(9)",
+"expr": "fact(9)",
+"angle": "DEG",
+"complex": false,
+"re": 362880.0,
+"im": 0.0
+},
+{
+"id": "10!",
+"expr": "10!",
+"angle": "DEG",
+"complex": false,
+"re": 3628800.0,
+"im": 0.0
+},
+{
+"id": "fact(10)",
+"expr": "fact(10)",
+"angle": "DEG",
+"complex": false,
+"re": 3628800.0,
+"im": 0.0
+},
+{
+"id": "11!",
+"expr": "11!",
+"angle": "DEG",
+"complex": false,
+"re": 39916800.0,
+"im": 0.0
+},
+{
+"id": "fact(11)",
+"expr": "fact(11)",
+"angle": "DEG",
+"complex": false,
+"re": 39916800.0,
+"im": 0.0
+},
+{
+"id": "12!",
+"expr": "12!",
+"angle": "DEG",
+"complex": false,
+"re": 479001600.0,
+"im": 0.0
+},
+{
+"id": "fact(12)",
+"expr": "fact(12)",
+"angle": "DEG",
+"complex": false,
+"re": 479001600.0,
+"im": 0.0
+},
+{
+"id": "13!",
+"expr": "13!",
+"angle": "DEG",
+"complex": false,
+"re": 6227020800.0,
+"im": 0.0
+},
+{
+"id": "fact(13)",
+"expr": "fact(13)",
+"angle": "DEG",
+"complex": false,
+"re": 6227020800.0,
+"im": 0.0
+},
+{
+"id": "14!",
+"expr": "14!",
+"angle": "DEG",
+"complex": false,
+"re": 87178291200.0,
+"im": 0.0
+},
+{
+"id": "fact(14)",
+"expr": "fact(14)",
+"angle": "DEG",
+"complex": false,
+"re": 87178291200.0,
+"im": 0.0
+},
+{
+"id": "15!",
+"expr": "15!",
+"angle": "DEG",
+"complex": false,
+"re": 1307674368000.0,
+"im": 0.0
+},
+{
+"id": "fact(15)",
+"expr": "fact(15)",
+"angle": "DEG",
+"complex": false,
+"re": 1307674368000.0,
+"im": 0.0
+},
+{
+"id": "16!",
+"expr": "16!",
+"angle": "DEG",
+"complex": false,
+"re": 20922789888000.0,
+"im": 0.0
+},
+{
+"id": "fact(16)",
+"expr": "fact(16)",
+"angle": "DEG",
+"complex": false,
+"re": 20922789888000.0,
+"im": 0.0
+},
+{
+"id": "17!",
+"expr": "17!",
+"angle": "DEG",
+"complex": false,
+"re": 355687428096000.0,
+"im": 0.0
+},
+{
+"id": "fact(17)",
+"expr": "fact(17)",
+"angle": "DEG",
+"complex": false,
+"re": 355687428096000.0,
+"im": 0.0
+},
+{
+"id": "18!",
+"expr": "18!",
+"angle": "DEG",
+"complex": false,
+"re": 6402373705728000.0,
+"im": 0.0
+},
+{
+"id": "fact(18)",
+"expr": "fact(18)",
+"angle": "DEG",
+"complex": false,
+"re": 6402373705728000.0,
+"im": 0.0
+},
+{
+"id": "19!",
+"expr": "19!",
+"angle": "DEG",
+"complex": false,
+"re": 1.21645100408832e+17,
+"im": 0.0
+},
+{
+"id": "fact(19)",
+"expr": "fact(19)",
+"angle": "DEG",
+"complex": false,
+"re": 1.21645100408832e+17,
+"im": 0.0
+},
+{
+"id": "20!",
+"expr": "20!",
+"angle": "DEG",
+"complex": false,
+"re": 2.43290200817664e+18,
+"im": 0.0
+},
+{
+"id": "fact(20)",
+"expr": "fact(20)",
+"angle": "DEG",
+"complex": false,
+"re": 2.43290200817664e+18,
+"im": 0.0
+},
+{
+"id": "25!",
+"expr": "25!",
+"angle": "DEG",
+"complex": false,
+"re": 1.5511210043330986e+25,
+"im": 0.0
+},
+{
+"id": "fact(25)",
+"expr": "fact(25)",
+"angle": "DEG",
+"complex": false,
+"re": 1.5511210043330986e+25,
+"im": 0.0
+},
+{
+"id": "50!",
+"expr": "50!",
+"angle": "DEG",
+"complex": false,
+"re": 3.0414093201713376e+64,
+"im": 0.0
+},
+{
+"id": "fact(50)",
+"expr": "fact(50)",
+"angle": "DEG",
+"complex": false,
+"re": 3.0414093201713376e+64,
+"im": 0.0
+},
+{
+"id": "100!",
+"expr": "100!",
+"angle": "DEG",
+"complex": false,
+"re": 9.332621544394415e+157,
+"im": 0.0
+},
+{
+"id": "fact(100)",
+"expr": "fact(100)",
+"angle": "DEG",
+"complex": false,
+"re": 9.332621544394415e+157,
+"im": 0.0
+},
+{
+"id": "170!",
+"expr": "170!",
+"angle": "DEG",
+"complex": false,
+"re": 7.257415615307999e+306,
+"im": 0.0
+},
+{
+"id": "fact(170)",
+"expr": "fact(170)",
+"angle": "DEG",
+"complex": false,
+"re": 7.257415615307999e+306,
+"im": 0.0
+},
+{
+"id": "ncr(5,2)",
+"expr": "ncr(5,2)",
+"angle": "DEG",
+"complex": false,
+"re": 10.0,
+"im": 0.0
+},
+{
+"id": "npr(5,2)",
+"expr": "npr(5,2)",
+"angle": "DEG",
+"complex": false,
+"re": 20.0,
+"im": 0.0
+},
+{
+"id": "ncr(10,3)",
+"expr": "ncr(10,3)",
+"angle": "DEG",
+"complex": false,
+"re": 120.0,
+"im": 0.0
+},
+{
+"id": "npr(10,3)",
+"expr": "npr(10,3)",
+"angle": "DEG",
+"complex": false,
+"re": 720.0,
+"im": 0.0
+},
+{
+"id": "ncr(52,5)",
+"expr": "ncr(52,5)",
+"angle": "DEG",
+"complex": false,
+"re": 2598960.0,
+"im": 0.0
+},
+{
+"id": "npr(52,5)",
+"expr": "npr(52,5)",
+"angle": "DEG",
+"complex": false,
+"re": 311875200.0,
+"im": 0.0
+},
+{
+"id": "ncr(30,15)",
+"expr": "ncr(30,15)",
+"angle": "DEG",
+"complex": false,
+"re": 155117520.0,
+"im": 0.0
+},
+{
+"id": "npr(30,15)",
+"expr": "npr(30,15)",
+"angle": "DEG",
+"complex": false,
+"re": 2.0284320493172736e+20,
+"im": 0.0
+},
+{
+"id": "ncr(7,0)",
+"expr": "ncr(7,0)",
+"angle": "DEG",
+"complex": false,
+"re": 1.0,
+"im": 0.0
+},
+{
+"id": "npr(7,0)",
+"expr": "npr(7,0)",
+"angle": "DEG",
+"complex": false,
+"re": 1.0,
+"im": 0.0
+},
+{
+"id": "ncr(7,7)",
+"expr": "ncr(7,7)",
+"angle": "DEG",
+"complex": false,
+"re": 1.0,
+"im": 0.0
+},
+{
+"id": "npr(7,7)",
+"expr": "npr(7,7)",
+"angle": "DEG",
+"complex": false,
+"re": 5040.0,
+"im": 0.0
+},
+{
+"id": "ncr(100,50)",
+"expr": "ncr(100,50)",
+"angle": "DEG",
+"complex": false,
+"re": 1.008913445455642e+29,
+"im": 0.0
+},
+{
+"id": "npr(100,50)",
+"expr": "npr(100,50)",
+"angle": "DEG",
+"complex": false,
+"re": 3.068518756254966e+93,
+"im": 0.0
+},
+{
+"id": "error:171!",
+"expr": "171!",
+"angle": "DEG",
+"complex": false,
+"error": true
+},
+{
+"id": "error:(-1)!",
+"expr": "(-1)!",
+"angle": "DEG",
+"complex": false,
+"error": true
+},
+{
+"id": "error:2.5!",
+"expr": "2.5!",
+"angle": "DEG",
+"complex": false,
+"error": true
+},
+{
+"id": "error:fact(-3)",
+"expr": "fact(-3)",
+"angle": "DEG",
+"complex": false,
+"error": true
+},
+{
+"id": "error:ncr(3,5)",
+"expr": "ncr(3,5)",
+"angle": "DEG",
+"complex": false,
+"error": true
+},
+{
+"id": "error:ncr(3,-1)",
+"expr": "ncr(3,-1)",
+"angle": "DEG",
+"complex": false,
+"error": true
+},
+{
+"id": "error:npr(2.5,1)",
+"expr": "npr(2.5,1)",
+"angle": "DEG",
+"complex": false,
+"error": true
+},
+{
+"id": "2+3*4",
+"expr": "2+3*4",
+"angle": "DEG",
+"complex": false,
+"re": 14.0,
+"im": 0.0
+},
+{
+"id": "(2+3)*4",
+"expr": "(2+3)*4",
+"angle": "DEG",
+"complex": false,
+"re": 20.0,
+"im": 0.0
+},
+{
+"id": "100-10-5",
+"expr": "100-10-5",
+"angle": "DEG",
+"complex": false,
+"re": 85.0,
+"im": 0.0
+},
+{
+"id": "100/10/5",
+"expr": "100/10/5",
+"angle": "DEG",
+"complex": false,
+"re": 2.0,
+"im": 0.0
+},
+{
+"id": "-2^2",
+"expr": "-2^2",
+"angle": "DEG",
+"complex": false,
+"re": -4.0,
+"im": 0.0
+},
+{
+"id": "2^3^2",
+"expr": "2^3^2",
+"angle": "DEG",
+"complex": false,
+"re": 512.0,
+"im": 0.0
+},
+{
+"id": "2^-2",
+"expr": "2^-2",
+"angle": "DEG",
+"complex": false,
+"re": 0.25,
+"im": 0.0
+},
+{
+"id": "(-2)^2",
+"expr": "(-2)^2",
+"angle": "DEG",
+"complex": false,
+"re": 4.0,
+"im": 0.0
+},
+{
+"id": "-(3+4)*2",
+"expr": "-(3+4)*2",
+"angle": "DEG",
+"complex": false,
+"re": -14.0,
+"im": 0.0
+},
+{
+"id": "10/4*2",
+"expr": "10/4*2",
+"angle": "DEG",
+"complex": false,
+"re": 5.0,
+"im": 0.0
+},
+{
+"id": "2*3!",
+"expr": "2*3!",
+"angle": "DEG",
+"complex": false,
+"re": 12.0,
+"im": 0.0
+},
+{
+"id": "3!^2",
+"expr": "3!^2",
+"angle": "DEG",
+"complex": false,
+"re": 36.0,
+"im": 0.0
+},
+{
+"id": "2^3!",
+"expr": "2^3!",
+"angle": "DEG",
+"complex": false,
+"re": 64.0,
+"im": 0.0
+},
+{
+"id": "1.5e3+1",
+"expr": "1.5e3+1",
+"angle": "DEG",
+"complex": false,
+"re": 1501.0,
+"im": 0.0
+},
+{
+"id": "1E-3*1000",
+"expr": "1E-3*1000",
+"angle": "DEG",
+"complex": false,
+"re": 1.0,
+"im": 0.0
+},
+{
+"id": "50%*200",
+"expr": "50%*200",
+"angle": "DEG",
+"complex": false,
+"re": 100.0,
+"im": 0.0
+},
+{
+"id": "200*5%",
+"expr": "200*5%",
+"angle": "DEG",
+"complex": false,
+"re": 10.0,
+"im": 0.0
+},
+{
+"id": "3(4+5)",
+"expr": "3(4+5)",
+"angle": "DEG",
+"complex": false,
+"re": 27.0,
+"im": 0.0
+},
+{
+"id": "(2)(3)",
+"expr": "(2)(3)",
+"angle": "DEG",
+"complex": false,
+"re": 6.0,
+"im": 0.0
+},
+{
+"id": "2pi",
+"expr": "2pi",
+"angle": "DEG",
+"complex": false,
+"re": 6.283185307179586,
+"im": 0.0
+},
+{
+"id": "2π",
+"expr": "2π",
+"angle": "DEG",
+"complex": false,
+"re": 6.283185307179586,
+"im": 0.0
+},
+{
+"id": "pi*2^2",
+"expr": "pi*2^2",
+"angle": "DEG",
+"complex": false,
+"re": 12.566370614359172,
+"im": 0.0
+},
+{
+"id": "e^2",
+"expr": "e^2",
+"angle": "DEG",
+"complex": false,
+"re": 7.3890560989306495,
+"im": 0.0
+},
+{
+"id": "2e",
+"expr": "2e",
+"angle": "DEG",
+"complex": false,
+"re": 5.43656365691809,
+"im": 0.0
+},
+{
+"id": "2sin(30)",
+"expr": "2sin(30)",
+"angle": "DEG",
+"complex": false,
+"re": 1.0,
+"im": 0.0
+},
+{
+"id": "sin30",
+"expr": "sin30",
+"angle": "DEG",
+"complex": false,
+"re": 0.5,
+"im": 0.0
+},
+{
+"id": "sin 30 + 1",
+"expr": "sin 30 + 1",
+"angle": "DEG",
+"complex": false,
+"re": 1.5,
+"im": 0.0
+},
+{
+"id": "0.1+0.2",
+"expr": "0.1+0.2",
+"angle": "DEG",
+"complex": false,
+"re": 0.3,
+"im": 0.0
+},
+{
+"id": "1/3*3",
+"expr": "1/3*3",
+"angle": "DEG",
+"complex": false,
+"re": 1.0,
+"im": 0.0
+},
+{
+"id": "7-(-3)",
+"expr": "7-(-3)",
+"angle": "DEG",
+"complex": false,
+"re": 10.0,
+"im": 0.0
+},
+{
+"id": "--5",
+"expr": "--5",
+"angle": "DEG",
+"complex": false,
+"re": 5.0,
+"im": 0.0
+},
+{
+"id": "2--2",
+"expr": "2--2",
+"angle": "DEG",
+"complex": false,
+"re": 4.0,
+"im": 0.0
+},
+{
+"id": "6÷3",
+"expr": "6÷3",
+"angle": "DEG",
+"complex": false,
+"re": 2.0,
+"im": 0.0
+},
+{
+"id": "4×5",
+"expr": "4×5",
+"angle": "DEG",
+"complex": false,
+"re": 20.0,
+"im": 0.0
+},
+{
+"id": "9−4",
+"expr": "9−4",
+"angle": "DEG",
+"complex": false,
+"re": 5.0,
+"im": 0.0
+},
+{
+"id": "12345.6789*1000",
+"expr": "12345.6789*1000",
+"angle": "DEG",
+"complex": false,
+"re": 12345678.9,
+"im": 0.0
+},
+{
+"id": "1e15+1",
+"expr": "1e15+1",
+"angle": "DEG",
+"complex": false,
+"re": 1000000000000001.0,
+"im": 0.0
+},
+{
+"id": "(1+2)*(3+4)*(5+6)",
+"expr": "(1+2)*(3+4)*(5+6)",
+"angle": "DEG",
+"complex": false,
+"re": 231.0,
+"im": 0.0
+},
+{
+"id": "2*(3+4)^2",
+"expr": "2*(3+4)^2",
+"angle": "DEG",
+"complex": false,
+"re": 98.0,
+"im": 0.0
+},
+{
+"id": "((((1))))",
+"expr": "((((1))))",
+"angle": "DEG",
+"complex": false,
+"re": 1.0,
+"im": 0.0
+},
+{
+"id": "sqrt(16)+sqrt(9)",
+"expr": "sqrt(16)+sqrt(9)",
+"angle": "DEG",
+"complex": false,
+"re": 7.0,
+"im": 0.0
+},
+{
+"id": "10!/(8!*2!)",
+"expr": "10!/(8!*2!)",
+"angle": "DEG",
+"complex": false,
+"re": 45.0,
+"im": 0.0
+},
+{
+"id": "abs(-7.5)",
+"expr": "abs(-7.5)",
+"angle": "DEG",
+"complex": false,
+"re": 7.5,
+"im": 0.0
+},
+{
+"id": "floor(-2.5)",
+"expr": "floor(-2.5)",
+"angle": "DEG",
+"complex": false,
+"re": -3.0,
+"im": 0.0
+},
+{
+"id": "ceil(-2.5)",
+"expr": "ceil(-2.5)",
+"angle": "DEG",
+"complex": false,
+"re": -2.0,
+"im": 0.0
+},
+{
+"id": "round(2.5)",
+"expr": "round(2.5)",
+"angle": "DEG",
+"complex": false,
+"re": 3.0,
+"im": 0.0
+},
+{
+"id": "round(-2.5)",
+"expr": "round(-2.5)",
+"angle": "DEG",
+"complex": false,
+"re": -3.0,
+"im": 0.0
+},
+{
+"id": "trunc(-2.7)",
+"expr": "trunc(-2.7)",
+"angle": "DEG",
+"complex": false,
+"re": -2.0,
+"im": 0.0
+},
+{
+"id": "mod(10,3)",
+"expr": "mod(10,3)",
+"angle": "DEG",
+"complex": false,
+"re": 1.0,
+"im": 0.0
+},
+{
+"id": "mod(-7,3)",
+"expr": "mod(-7,3)",
+"angle": "DEG",
+"complex": false,
+"re": 2.0,
+"im": 0.0
+},
+{
+"id": "mod(7,-3)",
+"expr": "mod(7,-3)",
+"angle": "DEG",
+"complex": false,
+"re": -2.0,
+"im": 0.0
+},
+{
+"id": "inv(4)",
+"expr": "inv(4)",
+"angle": "DEG",
+"complex": false,
+"re": 0.25,
+"im": 0.0
+},
+{
+"id": "error:1/0",
+"expr": "1/0",
+"angle": "DEG",
+"complex": false,
+"error": true
+},
+{
+"id": "error:5/(2-2)",
+"expr": "5/(2-2)",
+"angle": "DEG",
+"complex": false,
+"error": true
+},
+{
+"id": "error:1 000",
+"expr": "1 000",
+"angle": "DEG",
+"complex": false,
+"error": true
+},
+{
+"id": "error:(1+2",
+"expr": "(1+2",
+"angle": "DEG",
+"complex": false,
+"error": true
+},
+{
+"id": "error:1+)",
+"expr": "1+)",
+"angle": "DEG",
+"complex": false,
+"error": true
+},
+{
+"id": "error:2+",
+"expr": "2+",
+"angle": "DEG",
+"complex": false,
+"error": true
+},
+{
+"id": "error:*3",
+"expr": "*3",
+"angle": "DEG",
+"complex": false,
+"error": true
+},
+{
+"id": "error:foo(1)",
+"expr": "foo(1)",
+"angle": "DEG",
+"complex": false,
+"error": true
+},
+{
+"id": "error:sin()",
+"expr": "sin()",
+"angle": "DEG",
+"complex": false,
+"error": true
+},
+{
+"id": "error:sin(1,2)",
+"expr": "sin(1,2)",
+"angle": "DEG",
+"complex": false,
+"error": true
+},
+{
+"id": "error:ncr(5)",
+"expr": "ncr(5)",
+"angle": "DEG",
+"complex": false,
+"error": true
+},
+{
+"id": "error:3 $ 4",
+"expr": "3 $ 4",
+"angle": "DEG",
+"complex": false,
+"error": true
+},
+{
+"id": "error:mod(5,0)",
+"expr": "mod(5,0)",
+"angle": "DEG",
+"complex": false,
+"error": true
+},
+{
+"id": "error:5∠30",
+"expr": "5∠30",
+"angle": "DEG",
+"complex": false,
+"error": true
+},
+{
+"id": "error:j5",
+"expr": "j5",
+"angle": "DEG",
+"complex": false,
+"error": true
+},
+{
+"id": "error:2i",
+"expr": "2i",
+"angle": "DEG",
+"complex": false,
+"error": true
+},
+{
+"id": "error:10∠90",
+"expr": "10∠90",
+"angle": "DEG",
+"complex": false,
+"error": true
+},
+{
+"id": "error:((2)",
+"expr": "((2)",
+"angle": "DEG",
+"complex": false,
+"error": true
+},
+{
+"id": "error:()",
+"expr": "()",
+"angle": "DEG",
+"complex": false,
+"error": true
+},
+{
+"id": "10+j15",
+"expr": "10+j15",
+"angle": "DEG",
+"complex": true,
+"re": 10.0,
+"im": 15.0
+},
+{
+"id": "10+15j",
+"expr": "10+15j",
+"angle": "DEG",
+"complex": true,
+"re": 10.0,
+"im": 15.0
+},
+{
+"id": "10-j15",
+"expr": "10-j15",
+"angle": "DEG",
+"complex": true,
+"re": 10.0,
+"im": -15.0
+},
+{
+"id": "j",
+"expr": "j",
+"angle": "DEG",
+"complex": true,
+"re": 0.0,
+"im": 1.0
+},
+{
+"id": "j*j",
+"expr": "j*j",
+"angle": "DEG",
+"complex": true,
+"re": -1.0,
+"im": 0.0
+},
+{
+"id": "3+4i",
+"expr": "3+4i",
+"angle": "DEG",
+"complex": true,
+"re": 3.0,
+"im": 4.0
+},
+{
+"id": "(10+j15)*(5-j2)",
+"expr": "(10+j15)*(5-j2)",
+"angle": "DEG",
+"complex": true,
+"re": 80.0,
+"im": 55.0
+},
+{
+"id": "(10+j15)/(5-j2)",
+"expr": "(10+j15)/(5-j2)",
+"angle": "DEG",
+"complex": true,
+"re": 0.6896551724137931,
+"im": 3.2758620689655173
+},
+{
+"id": "(3+j4)+(1-j9)",
+"expr": "(3+j4)+(1-j9)",
+"angle": "DEG",
+"complex": true,
+"re": 4.0,
+"im": -5.0
+},
+{
+"id": "(3+j4)-(1-j9)",
+"expr": "(3+j4)-(1-j9)",
+"angle": "DEG",
+"complex": true,
+"re": 2.0,
+"im": 13.0
+},
+{
+"id": "1/(j2)",
+"expr": "1/(j2)",
+"angle": "DEG",
+"complex": true,
+"re": 0.0,
+"im": -0.5
+},
+{
+"id": "1/j15",
+"expr": "1/j15",
+"angle": "DEG",
+"complex": true,
+"re": 0.0,
+"im": -0.06666666666666667
+},
+{
+"id": "(1+j)^2",
+"expr": "(1+j)^2",
+"angle": "DEG",
+"complex": true,
+"re": 0.0,
+"im": 2.0
+},
+{
+"id": "(1+j)^8",
+"expr": "(1+j)^8",
+"angle": "DEG",
+"complex": true,
+"re": 16.0,
+"im": 0.0
+},
+{
+"id": "(1+j)^-3",
+"expr": "(1+j)^-3",
+"angle": "DEG",
+"complex": true,
+"re": -0.25,
+"im": -0.25
+},
+{
+"id": "(1+j)^0.5",
+"expr": "(1+j)^0.5",
+"angle": "DEG",
+"complex": true,
+"re": 1.0986841134678098,
+"im": 0.45508986056222733
+},
+{
+"id": "(3+j4)^(1+j)",
+"expr": "(3+j4)^(1+j)",
+"angle": "DEG",
+"complex": true,
+"re": -1.6271590399255338,
+"im": 1.1248463410919416
+},
+{
+"id": "j^j",
+"expr": "j^j",
+"angle": "DEG",
+"complex": true,
+"re": 0.20787957635076193,
+"im": 0.0
+},
+{
+"id": "sqrt(-4)",
+"expr": "sqrt(-4)",
+"angle": "DEG",
+"complex": true,
+"re": 0.0,
+"im": 2.0
+},
+{
+"id": "sqrt(3+j4)",
+"expr": "sqrt(3+j4)",
+"angle": "DEG",
+"complex": true,
+"re": 2.0,
+"im": 1.0
+},
+{
+"id": "sqrt(-3-j4)",
+"expr": "sqrt(-3-j4)",
+"angle": "DEG",
+"complex": true,
+"re": 1.0,
+"im": -2.0
+},
+{
+"id": "(-8)^(1/3)",
+"expr": "(-8)^(1/3)",
+"angle": "DEG",
+"complex": true,
+"re": 1.0000000000000002,
+"im": 1.7320508075688772
+},
+{
+"id": "cbrt(-8)",
+"expr": "cbrt(-8)",
+"angle": "DEG",
+"complex": true,
+"re": -2.0,
+"im": 0.0
+},
+{
+"id": "root(-16,4)",
+"expr": "root(-16,4)",
+"angle": "DEG",
+"complex": true,
+"re": 1.4142135623730951,
+"im": 1.414213562373095
+},
+{
+"id": "ln(-1)",
+"expr": "ln(-1)",
+"angle": "DEG",
+"complex": true,
+"re": 0.0,
+"im": 3.141592653589793
+},
+{
+"id": "ln(3+j4)",
+"expr": "ln(3+j4)",
+"angle": "DEG",
+"complex": true,
+"re": 1.6094379124341003,
+"im": 0.9272952180016122
+},
+{
+"id": "log(-100)",
+"expr": "log(-100)",
+"angle": "DEG",
+"complex": true,
+"re": 2.0,
+"im": 1.3643763538418412
+},
+{
+"id": "exp(j*pi)",
+"expr": "exp(j*pi)",
+"angle": "RAD",
+"complex": true,
+"re": -1.0,
+"im": 1.2246467991473532e-16
+},
+{
+"id": "e^(j*pi)",
+"expr": "e^(j*pi)",
+"angle": "DEG",
+"complex": true,
+"re": -1.0,
+"im": 1.2246467991473532e-16
+},
+{
+"id": "exp(1+j)",
+"expr": "exp(1+j)",
+"angle": "DEG",
+"complex": true,
+"re": 1.4686939399158851,
+"im": 2.2873552871788423
+},
+{
+"id": "abs(3+j4)",
+"expr": "abs(3+j4)",
+"angle": "DEG",
+"complex": true,
+"re": 5.0,
+"im": 0.0
+},
+{
+"id": "mag(-6-j8)",
+"expr": "mag(-6-j8)",
+"angle": "DEG",
+"complex": true,
+"re": 10.0,
+"im": 0.0
+},
+{
+"id": "arg(1+j)",
+"expr": "arg(1+j)",
+"angle": "DEG",
+"complex": true,
+"re": 45.0,
+"im": 0.0
+},
+{
+"id": "arg(-1)",
+"expr": "arg(-1)",
+"angle": "DEG",
+"complex": true,
+"re": 180.0,
+"im": 0.0
+},
+{
+"id": "arg(-1-j)",
+"expr": "arg(-1-j)",
+"angle": "DEG",
+"complex": true,
+"re": -135.0,
+"im": 0.0
+},
+{
+"id": "arg(1+j)",
+"expr": "arg(1+j)",
+"angle": "RAD",
+"complex": true,
+"re": 0.7853981633974483,
+"im": 0.0
+},
+{
+"id": "arg(1+j)",
+"expr": "arg(1+j)",
+"angle": "GRAD",
+"complex": true,
+"re": 50.0,
+"im": 0.0
+},
+{
+"id": "re(3+j4)",
+"expr": "re(3+j4)",
+"angle": "DEG",
+"complex": true,
+"re": 3.0,
+"im": 0.0
+},
+{
+"id": "im(3+j4)",
+"expr": "im(3+j4)",
+"angle": "DEG",
+"complex": true,
+"re": 4.0,
+"im": 0.0
+},
+{
+"id": "conj(3+j4)",
+"expr": "conj(3+j4)",
+"angle": "DEG",
+"complex": true,
+"re": 3.0,
+"im": -4.0
+},
+{
+"id": "conj(5)",
+"expr": "conj(5)",
+"angle": "DEG",
+"complex": true,
+"re": 5.0,
+"im": 0.0
+},
+{
+"id": "re(asin(2))",
+"expr": "re(asin(2))",
+"angle": "DEG",
+"complex": true,
+"re": 90.0,
+"im": 0.0
+},
+{
+"id": "abs(im(asin(2)))",
+"expr": "abs(im(asin(2)))",
+"angle": "DEG",
+"complex": true,
+"re": 75.4561292902169,
+"im": 0.0
+},
+{
+"id": "re(acos(2))",
+"expr": "re(acos(2))",
+"angle": "DEG",
+"complex": true,
+"re": 0.0,
+"im": 0.0
+},
+{
+"id": "abs(im(acos(2)))",
+"expr": "abs(im(acos(2)))",
+"angle": "DEG",
+"complex": true,
+"re": 75.4561292902169,
+"im": 0.0
+},
+{
+"id": "acosh(0.5)",
+"expr": "acosh(0.5)",
+"angle": "DEG",
+"complex": true,
+"re": 0.0,
+"im": 1.0471975511965979
+},
+{
+"id": "re(atanh(2))",
+"expr": "re(atanh(2))",
+"angle": "DEG",
+"complex": true,
+"re": 0.5493061443340549,
+"im": 0.0
+},
+{
+"id": "abs(im(atanh(2)))",
+"expr": "abs(im(atanh(2)))",
+"angle": "DEG",
+"complex": true,
+"re": 1.5707963267948966,
+"im": 0.0
+},
+{
+"id": "ln(1+j)*ln(1-j)",
+"expr": "ln(1+j)*ln(1-j)",
+"angle": "DEG",
+"complex": true,
+"re": 0.7369635285476352,
+"im": 0.0
+},
+{
+"id": "sin(1+j)",
+"expr": "sin(1+j)",
+"angle": "RAD",
+"complex": true,
+"re": 1.2984575814159773,
+"im": 0.6349639147847361
+},
+{
+"id": "cos(1+j)",
+"expr": "cos(1+j)",
+"angle": "RAD",
+"complex": true,
+"re": 0.8337300251311491,
+"im": -0.9888977057628651
+},
+{
+"id": "tan(1+j)",
+"expr": "tan(1+j)",
+"angle": "RAD",
+"complex": true,
+"re": 0.2717525853195118,
+"im": 1.0839233273386946
+},
+{
+"id": "sinh(1+j)",
+"expr": "sinh(1+j)",
+"angle": "DEG",
+"complex": true,
+"re": 0.6349639147847361,
+"im": 1.2984575814159773
+},
+{
+"id": "cosh(1+j)",
+"expr": "cosh(1+j)",
+"angle": "DEG",
+"complex": true,
+"re": 0.8337300251311491,
+"im": 0.9888977057628651
+},
+{
+"id": "tanh(1+j)",
+"expr": "tanh(1+j)",
+"angle": "DEG",
+"complex": true,
+"re": 1.0839233273386946,
+"im": 0.2717525853195118
+},
+{
+"id": "asin(0.5+j)",
+"expr": "asin(0.5+j)",
+"angle": "DEG",
+"complex": true,
+"re": 20.021383498725008,
+"im": 53.063513964022604
+},
+{
+"id": "atan(1+j)",
+"expr": "atan(1+j)",
+"angle": "DEG",
+"complex": true,
+"re": 58.282525588538995,
+"im": 23.053499942704928
+},
+{
+"id": "asinh(1+j)",
+"expr": "asinh(1+j)",
+"angle": "DEG",
+"complex": true,
+"re": 1.0612750619050357,
+"im": 0.6662394324925153
+},
+{
+"id": "acosh(1+j)",
+"expr": "acosh(1+j)",
+"angle": "DEG",
+"complex": true,
+"re": 1.0612750619050357,
+"im": 0.9045568943023813
+},
+{
+"id": "atanh(0.5+j0.5)",
+"expr": "atanh(0.5+j0.5)",
+"angle": "DEG",
+"complex": true,
+"re": 0.40235947810852507,
+"im": 0.5535743588970452
+},
+{
+"id": "230∠30",
+"expr": "230∠30",
+"angle": "DEG",
+"complex": true,
+"re": 199.1858428704209,
+"im": 114.99999999999999
+},
+{
+"id": "230<30",
+"expr": "230<30",
+"angle": "DEG",
+"complex": true,
+"re": 199.1858428704209,
+"im": 114.99999999999999
+},
+{
+"id": "230∠0.5235987755982988",
+"expr": "230∠0.5235987755982988",
+"angle": "RAD",
+"complex": true,
+"re": 199.1858428704209,
+"im": 114.99999999999999
+},
+{
+"id": "10∠90",
+"expr": "10∠90",
+"angle": "DEG",
+"complex": true,
+"re": 6.123233995736766e-16,
+"im": 10.0
+},
+{
+"id": "10<90",
+"expr": "10<90",
+"angle": "DEG",
+"complex": true,
+"re": 6.123233995736766e-16,
+"im": 10.0
+},
+{
+"id": "10∠1.5707963267948966",
+"expr": "10∠1.5707963267948966",
+"angle": "RAD",
+"complex": true,
+"re": 6.123233995736766e-16,
+"im": 10.0
+},
+{
+"id": "5∠-45",
+"expr": "5∠-45",
+"angle": "DEG",
+"complex": true,
+"re": 3.5355339059327378,
+"im": -3.5355339059327373
+},
+{
+"id": "5<-45",
+"expr": "5<-45",
+"angle": "DEG",
+"complex": true,
+"re": 3.5355339059327378,
+"im": -3.5355339059327373
+},
+{
+"id": "5∠-0.7853981633974483",
+"expr": "5∠-0.7853981633974483",
+"angle": "RAD",
+"complex": true,
+"re": 3.5355339059327378,
+"im": -3.5355339059327373
+},
+{
+"id": "1∠180",
+"expr": "1∠180",
+"angle": "DEG",
+"complex": true,
+"re": -1.0,
+"im": 1.2246467991473532e-16
+},
+{
+"id": "1<180",
+"expr": "1<180",
+"angle": "DEG",
+"complex": true,
+"re": -1.0,
+"im": 1.2246467991473532e-16
+},
+{
+"id": "1∠3.141592653589793",
+"expr": "1∠3.141592653589793",
+"angle": "RAD",
+"complex": true,
+"re": -1.0,
+"im": 1.2246467991473532e-16
+},
+{
+"id": "100∠0",
+"expr": "100∠0",
+"angle": "DEG",
+"complex": true,
+"re": 100.0,
+"im": 0.0
+},
+{
+"id": "100<0",
+"expr": "100<0",
+"angle": "DEG",
+"complex": true,
+"re": 100.0,
+"im": 0.0
+},
+{
+"id": "100∠0",
+"expr": "100∠0",
+"angle": "RAD",
+"complex": true,
+"re": 100.0,
+"im": 0.0
+},
+{
+"id": "12.5∠120",
+"expr": "12.5∠120",
+"angle": "DEG",
+"complex": true,
+"re": -6.249999999999997,
+"im": 10.825317547305485
+},
+{
+"id": "12.5<120",
+"expr": "12.5<120",
+"angle": "DEG",
+"complex": true,
+"re": -6.249999999999997,
+"im": 10.825317547305485
+},
+{
+"id": "12.5∠2.0943951023931953",
+"expr": "12.5∠2.0943951023931953",
+"angle": "RAD",
+"complex": true,
+"re": -6.249999999999997,
+"im": 10.825317547305485
+},
+{
+"id": "3∠270",
+"expr": "3∠270",
+"angle": "DEG",
+"complex": true,
+"re": -5.51091059616309e-16,
+"im": -3.0
+},
+{
+"id": "3<270",
+"expr": "3<270",
+"angle": "DEG",
+"complex": true,
+"re": -5.51091059616309e-16,
+"im": -3.0
+},
+{
+"id": "3∠4.71238898038469",
+"expr": "3∠4.71238898038469",
+"angle": "RAD",
+"complex": true,
+"re": -5.51091059616309e-16,
+"im": -3.0
+},
+{
+"id": "7∠45",
+"expr": "7∠45",
+"angle": "DEG",
+"complex": true,
+"re": 4.949747468305833,
+"im": 4.949747468305832
+},
+{
+"id": "7<45",
+"expr": "7<45",
+"angle": "DEG",
+"complex": true,
+"re": 4.949747468305833,
+"im": 4.949747468305832
+},
+{
+"id": "7∠0.7853981633974483",
+"expr": "7∠0.7853981633974483",
+"angle": "RAD",
+"complex": true,
+"re": 4.949747468305833,
+"im": 4.949747468305832
+},
+{
+"id": "2∠360",
+"expr": "2∠360",
+"angle": "DEG",
+"complex": true,
+"re": 2.0,
+"im": -4.898587196589413e-16
+},
+{
+"id": "2<360",
+"expr": "2<360",
+"angle": "DEG",
+"complex": true,
+"re": 2.0,
+"im": -4.898587196589413e-16
+},
+{
+"id": "2∠6.283185307179586",
+"expr": "2∠6.283185307179586",
+"angle": "RAD",
+"complex": true,
+"re": 2.0,
+"im": -4.898587196589413e-16
+},
+{
+"id": "230∠30*2",
+"expr": "230∠30*2",
+"angle": "DEG",
+"complex": true,
+"re": 398.3716857408418,
+"im": 229.99999999999997
+},
+{
+"id": "10∠90*10∠90",
+"expr": "10∠90*10∠90",
+"angle": "DEG",
+"complex": true,
+"re": -100.0,
+"im": 1.2246467991473532e-14
+},
+{
+"id": "5∠30+3∠-10",
+"expr": "5∠30+3∠-10",
+"angle": "DEG",
+"complex": true,
+"re": 7.284550277958818,
+"im": 1.9790554669992084
+},
+{
+"id": "(100∠30)/(4∠15)",
+"expr": "(100∠30)/(4∠15)",
+"angle": "DEG",
+"complex": true,
+"re": 24.148145657226713,
+"im": 6.470476127563018
+},
+{
+"id": "10∠90°",
+"expr": "10∠90°",
+"angle": "DEG",
+"complex": true,
+"re": 6.123233995736766e-16,
+"im": 10.0
+},
+{
+"id": "10∠1.5707963267948966",
+"expr": "10∠1.5707963267948966",
+"angle": "RAD",
+"complex": true,
+"re": 6.123233995736766e-16,
+"im": 10.0
+},
+{
+"id": "sin(30°)",
+"expr": "sin(30°)",
+"angle": "DEG",
+"complex": false,
+"re": 0.5,
+"im": 0.0
+},
+{
+"id": "sin(30°)",
+"expr": "sin(30°)",
+"angle": "RAD",
+"complex": false,
+"re": 0.5,
+"im": 0.0
+},
+{
+"id": "sin(30°)",
+"expr": "sin(30°)",
+"angle": "GRAD",
+"complex": false,
+"re": 0.5,
+"im": 0.0
+},
+{
+"id": "cos(60°)",
+"expr": "cos(60°)",
+"angle": "RAD",
+"complex": false,
+"re": 0.5,
+"im": 0.0
+},
+{
+"id": "tan(45°)",
+"expr": "tan(45°)",
+"angle": "GRAD",
+"complex": false,
+"re": 1.0,
+"im": 0.0
+},
+{
+"id": "4.7k",
+"expr": "4.7k",
+"angle": "DEG",
+"complex": true,
+"re": 4700.0,
+"im": 0.0
+},
+{
+"id": "4.7k*2",
+"expr": "4.7k*2",
+"angle": "DEG",
+"complex": true,
+"re": 9400.0,
+"im": 0.0
+},
+{
+"id": "10m",
+"expr": "10m",
+"angle": "DEG",
+"complex": true,
+"re": 0.01,
+"im": 0.0
+},
+{
+"id": "2u",
+"expr": "2u",
+"angle": "DEG",
+"complex": true,
+"re": 2e-06,
+"im": 0.0
+},
+{
+"id": "2µ",
+"expr": "2µ",
+"angle": "DEG",
+"complex": true,
+"re": 2e-06,
+"im": 0.0
+},
+{
+"id": "33n",
+"expr": "33n",
+"angle": "DEG",
+"complex": true,
+"re": 3.3e-08,
+"im": 0.0
+},
+{
+"id": "100p",
+"expr": "100p",
+"angle": "DEG",
+"complex": true,
+"re": 1e-10,
+"im": 0.0
+},
+{
+"id": "1M",
+"expr": "1M",
+"angle": "DEG",
+"complex": true,
+"re": 1000000.0,
+"im": 0.0
+},
+{
+"id": "2G",
+"expr": "2G",
+"angle": "DEG",
+"complex": true,
+"re": 2000000000.0,
+"im": 0.0
+},
+{
+"id": "1T",
+"expr": "1T",
+"angle": "DEG",
+"complex": true,
+"re": 1000000000000.0,
+"im": 0.0
+},
+{
+"id": "5k+j2k",
+"expr": "5k+j2k",
+"angle": "DEG",
+"complex": true,
+"re": 5000.0,
+"im": 2000.0
+},
+{
+"id": "3pi",
+"expr": "3pi",
+"angle": "DEG",
+"complex": true,
+"re": 9.42477796076938,
+"im": 0.0
+},
+{
+"id": "230∠30k",
+"expr": "230∠30k",
+"angle": "DEG",
+"complex": true,
+"re": -114.99999999999687,
+"im": 199.1858428704227
+},
+{
+"id": "3mem",
+"expr": "3mem",
+"angle": "DEG",
+"complex": true,
+"re": 0.0,
+"im": 0.0
+},
+{
+"id": "par(10,10)",
+"expr": "par(10,10)",
+"angle": "DEG",
+"complex": true,
+"re": 5.0,
+"im": 0.0
+},
+{
+"id": "par(10+j5,10-j5)",
+"expr": "par(10+j5,10-j5)",
+"angle": "DEG",
+"complex": true,
+"re": 6.25,
+"im": 0.0
+},
+{
+"id": "par(3,6,2)",
+"expr": "par(3,6,2)",
+"angle": "DEG",
+"complex": true,
+"re": 1.0,
+"im": 0.0
+},
+{
+"id": "par(10+j10,10-j10,5)",
+"expr": "par(10+j10,10-j10,5)",
+"angle": "DEG",
+"complex": true,
+"re": 3.333333333333333,
+"im": 0.0
+},
+{
+"id": "10+j2*pi*50*0.1",
+"expr": "10+j2*pi*50*0.1",
+"angle": "DEG",
+"complex": true,
+"re": 10.0,
+"im": 31.415926535897935
+},
+{
+"id": "10+j*2*pi*50*0.1",
+"expr": "10+j*2*pi*50*0.1",
+"angle": "DEG",
+"complex": true,
+"re": 10.0,
+"im": 31.415926535897935
+},
+{
+"id": "1/(j*2*pi*50*100u)",
+"expr": "1/(j*2*pi*50*100u)",
+"angle": "DEG",
+"complex": true,
+"re": 0.0,
+"im": -31.830988618379067
+},
+{
+"id": "230∠0/(10+j2*pi*50*0.1)",
+"expr": "230∠0/(10+j2*pi*50*0.1)",
+"angle": "DEG",
+"complex": true,
+"re": 2.11599237205863,
+"im": -6.647586091111433
+},
+{
+"id": "abs(230∠0/(10+j31.41592653589793))",
+"expr": "abs(230∠0/(10+j31.41592653589793))",
+"angle": "DEG",
+"complex": true,
+"re": 6.976232834227117,
+"im": 0.0
+},
+{
+"id": "sin(30)",
+"expr": "sin(30)",
+"angle": "DEG",
+"complex": true,
+"re": 0.5,
+"im": 0.0
+},
+{
+"id": "5!",
+"expr": "5!",
+"angle": "DEG",
+"complex": true,
+"re": 120.0,
+"im": 0.0
+},
+{
+"id": "log(1000)",
+"expr": "log(1000)",
+"angle": "DEG",
+"complex": true,
+"re": 3.0,
+"im": 0.0
+},
+{
+"id": "2^10",
+"expr": "2^10",
+"angle": "DEG",
+"complex": true,
+"re": 1024.0,
+"im": 0.0
+},
+{
+"id": "error:1/0",
+"expr": "1/0",
+"angle": "DEG",
+"complex": true,
+"error": true
+},
+{
+"id": "error:1/(5-5)",
+"expr": "1/(5-5)",
+"angle": "DEG",
+"complex": true,
+"error": true
+},
+{
+"id": "error:foo(1)",
+"expr": "foo(1)",
+"angle": "DEG",
+"complex": true,
+"error": true
+},
+{
+"id": "error:(1+j",
+"expr": "(1+j",
+"angle": "DEG",
+"complex": true,
+"error": true
+},
+{
+"id": "error:0^-1",
+"expr": "0^-1",
+"angle": "DEG",
+"complex": true,
+"error": true
+},
+{
+"id": "error:ln(0)",
+"expr": "ln(0)",
+"angle": "DEG",
+"complex": true,
+"error": true
+},
+{
+"id": "error:tan(90)",
+"expr": "tan(90)",
+"angle": "DEG",
+"complex": true,
+"error": true
+},
+{
+"id": "error:1/(j*0)",
+"expr": "1/(j*0)",
+"angle": "DEG",
+"complex": true,
+"error": true
+},
+{
+"id": "error:171!",
+"expr": "171!",
+"angle": "DEG",
+"complex": true,
+"error": true
+},
+{
+"id": "error:(1+j)!",
+"expr": "(1+j)!",
+"angle": "DEG",
+"complex": true,
+"error": true
+},
+{
+"id": "error:3+j4",
+"expr": "3+j4",
+"angle": "DEG",
+"complex": false,
+"error": true
+},
+{
+"id": "error:2∠30",
+"expr": "2∠30",
+"angle": "DEG",
+"complex": false,
+"error": true
+},
+{
+"id": "error:sqrt(-4)",
+"expr": "sqrt(-4)",
+"angle": "DEG",
+"complex": false,
+"error": true
+},
+{
+"id": "error:(-8)^(1/3)",
+"expr": "(-8)^(1/3)",
+"angle": "DEG",
+"complex": false,
+"error": true
+},
+{
+"id": "error:asin(2)",
+"expr": "asin(2)",
+"angle": "DEG",
+"complex": false,
+"error": true
+},
+{
+"id": "error:ln(-1)",
+"expr": "ln(-1)",
+"angle": "DEG",
+"complex": false,
+"error": true
+},
+{
+"id": "par(0,5)",
+"expr": "par(0,5)",
+"angle": "DEG",
+"complex": true,
+"re": 0.0,
+"im": 0.0
+},
+{
+"id": "par(5,0)",
+"expr": "par(5,0)",
+"angle": "DEG",
+"complex": true,
+"re": 0.0,
+"im": 0.0
+},
+{
+"id": "par(0,0)",
+"expr": "par(0,0)",
+"angle": "DEG",
+"complex": true,
+"re": 0.0,
+"im": 0.0
+},
+{
+"id": "par(10,0,5)",
+"expr": "par(10,0,5)",
+"angle": "DEG",
+"complex": true,
+"re": 0.0,
+"im": 0.0
+},
+{
+"id": "par(0,3+j4)",
+"expr": "par(0,3+j4)",
+"angle": "DEG",
+"complex": true,
+"re": 0.0,
+"im": 0.0
+},
+{
+"id": "error:par(5,-5)",
+"expr": "par(5,-5)",
+"angle": "DEG",
+"complex": true,
+"error": true
+},
+{
+"id": "error:par(3+j4,-3-j4)",
+"expr": "par(3+j4,-3-j4)",
+"angle": "DEG",
+"complex": true,
+"error": true
+},
+{
+"id": "error:npr(171,171)",
+"expr": "npr(171,171)",
+"angle": "DEG",
+"complex": false,
+"error": true
+},
+{
+"id": "error:npr(200,200)",
+"expr": "npr(200,200)",
+"angle": "DEG",
+"complex": false,
+"error": true
+},
+{
+"id": "error:npr(1000000000,1000000000)",
+"expr": "npr(1000000000,1000000000)",
+"angle": "DEG",
+"complex": false,
+"error": true
+},
+{
+"id": "error:npr(1000000000000,1000000000000)",
+"expr": "npr(1000000000000,1000000000000)",
+"angle": "DEG",
+"complex": false,
+"error": true
+},
+{
+"id": "npr(170,170)",
+"expr": "npr(170,170)",
+"angle": "DEG",
+"complex": false,
+"re": 7.257415615307999e+306,
+"im": 0.0
+},
+{
+"id": "npr(1000000000,1)",
+"expr": "npr(1000000000,1)",
+"angle": "DEG",
+"complex": false,
+"re": 1000000000.0,
+"im": 0.0
+},
+{
+"id": "npr(1000000000,2)",
+"expr": "npr(1000000000,2)",
+"angle": "DEG",
+"complex": false,
+"re": 9.99999999e+17,
+"im": 0.0
+},
+{
+"id": "atan2(1,1)",
+"expr": "atan2(1,1)",
+"angle": "DEG",
+"complex": false,
+"re": 45.0,
+"im": 0.0
+},
+{
+"id": "atan2(1,1)",
+"expr": "atan2(1,1)",
+"angle": "RAD",
+"complex": false,
+"re": 0.7853981633974483,
+"im": 0.0
+},
+{
+"id": "atan2(1,1)",
+"expr": "atan2(1,1)",
+"angle": "GRAD",
+"complex": false,
+"re": 50.0,
+"im": 0.0
+},
+{
+"id": "atan2(1,-1)",
+"expr": "atan2(1,-1)",
+"angle": "DEG",
+"complex": false,
+"re": 135.0,
+"im": 0.0
+},
+{
+"id": "atan2(1,-1)",
+"expr": "atan2(1,-1)",
+"angle": "RAD",
+"complex": false,
+"re": 2.356194490192345,
+"im": 0.0
+},
+{
+"id": "atan2(1,-1)",
+"expr": "atan2(1,-1)",
+"angle": "GRAD",
+"complex": false,
+"re": 150.0,
+"im": 0.0
+},
+{
+"id": "atan2(-1,-1)",
+"expr": "atan2(-1,-1)",
+"angle": "DEG",
+"complex": false,
+"re": -135.0,
+"im": 0.0
+},
+{
+"id": "atan2(-1,-1)",
+"expr": "atan2(-1,-1)",
+"angle": "RAD",
+"complex": false,
+"re": -2.356194490192345,
+"im": 0.0
+},
+{
+"id": "atan2(-1,-1)",
+"expr": "atan2(-1,-1)",
+"angle": "GRAD",
+"complex": false,
+"re": -150.0,
+"im": 0.0
+},
+{
+"id": "atan2(-1,1)",
+"expr": "atan2(-1,1)",
+"angle": "DEG",
+"complex": false,
+"re": -45.0,
+"im": 0.0
+},
+{
+"id": "atan2(-1,1)",
+"expr": "atan2(-1,1)",
+"angle": "RAD",
+"complex": false,
+"re": -0.7853981633974483,
+"im": 0.0
+},
+{
+"id": "atan2(-1,1)",
+"expr": "atan2(-1,1)",
+"angle": "GRAD",
+"complex": false,
+"re": -50.0,
+"im": 0.0
+},
+{
+"id": "atan2(0,5)",
+"expr": "atan2(0,5)",
+"angle": "DEG",
+"complex": false,
+"re": 0.0,
+"im": 0.0
+},
+{
+"id": "atan2(0,5)",
+"expr": "atan2(0,5)",
+"angle": "RAD",
+"complex": false,
+"re": 0.0,
+"im": 0.0
+},
+{
+"id": "atan2(0,5)",
+"expr": "atan2(0,5)",
+"angle": "GRAD",
+"complex": false,
+"re": 0.0,
+"im": 0.0
+},
+{
+"id": "atan2(0,-5)",
+"expr": "atan2(0,-5)",
+"angle": "DEG",
+"complex": false,
+"re": 180.0,
+"im": 0.0
+},
+{
+"id": "atan2(0,-5)",
+"expr": "atan2(0,-5)",
+"angle": "RAD",
+"complex": false,
+"re": 3.141592653589793,
+"im": 0.0
+},
+{
+"id": "atan2(0,-5)",
+"expr": "atan2(0,-5)",
+"angle": "GRAD",
+"complex": false,
+"re": 200.0,
+"im": 0.0
+},
+{
+"id": "atan2(5,0)",
+"expr": "atan2(5,0)",
+"angle": "DEG",
+"complex": false,
+"re": 90.0,
+"im": 0.0
+},
+{
+"id": "atan2(5,0)",
+"expr": "atan2(5,0)",
+"angle": "RAD",
+"complex": false,
+"re": 1.5707963267948966,
+"im": 0.0
+},
+{
+"id": "atan2(5,0)",
+"expr": "atan2(5,0)",
+"angle": "GRAD",
+"complex": false,
+"re": 100.0,
+"im": 0.0
+},
+{
+"id": "atan2(-5,0)",
+"expr": "atan2(-5,0)",
+"angle": "DEG",
+"complex": false,
+"re": -90.0,
+"im": 0.0
+},
+{
+"id": "atan2(-5,0)",
+"expr": "atan2(-5,0)",
+"angle": "RAD",
+"complex": false,
+"re": -1.5707963267948966,
+"im": 0.0
+},
+{
+"id": "atan2(-5,0)",
+"expr": "atan2(-5,0)",
+"angle": "GRAD",
+"complex": false,
+"re": -100.0,
+"im": 0.0
+},
+{
+"id": "atan2(3,4)",
+"expr": "atan2(3,4)",
+"angle": "DEG",
+"complex": false,
+"re": 36.86989764584402,
+"im": 0.0
+},
+{
+"id": "atan2(3,4)",
+"expr": "atan2(3,4)",
+"angle": "RAD",
+"complex": false,
+"re": 0.6435011087932844,
+"im": 0.0
+},
+{
+"id": "atan2(3,4)",
+"expr": "atan2(3,4)",
+"angle": "GRAD",
+"complex": false,
+"re": 40.96655293982669,
+"im": 0.0
+},
+{
+"id": "atan2(-4,3)",
+"expr": "atan2(-4,3)",
+"angle": "DEG",
+"complex": false,
+"re": -53.13010235415598,
+"im": 0.0
+},
+{
+"id": "atan2(-4,3)",
+"expr": "atan2(-4,3)",
+"angle": "RAD",
+"complex": false,
+"re": -0.9272952180016122,
+"im": 0.0
+},
+{
+"id": "atan2(-4,3)",
+"expr": "atan2(-4,3)",
+"angle": "GRAD",
+"complex": false,
+"re": -59.03344706017331,
+"im": 0.0
+},
+{
+"id": "atan2(0.001,-2)",
+"expr": "atan2(0.001,-2)",
+"angle": "DEG",
+"complex": false,
+"re": 179.9713521126308,
+"im": 0.0
+},
+{
+"id": "atan2(0.001,-2)",
+"expr": "atan2(0.001,-2)",
+"angle": "RAD",
+"complex": false,
+"re": 3.14109265363146,
+"im": 0.0
+},
+{
+"id": "atan2(0.001,-2)",
+"expr": "atan2(0.001,-2)",
+"angle": "GRAD",
+"complex": false,
+"re": 199.9681690140342,
+"im": 0.0
+},
+{
+"id": "atan2(230,1e-06)",
+"expr": "atan2(230,1e-06)",
+"angle": "DEG",
+"complex": false,
+"re": 89.99999975088791,
+"im": 0.0
+},
+{
+"id": "atan2(230,1e-06)",
+"expr": "atan2(230,1e-06)",
+"angle": "RAD",
+"complex": false,
+"re": 1.5707963224470705,
+"im": 0.0
+},
+{
+"id": "atan2(230,1e-06)",
+"expr": "atan2(230,1e-06)",
+"angle": "GRAD",
+"complex": false,
+"re": 99.9999997232088,
+"im": 0.0
+},
+{
+"id": "error:atan2(0,0)",
+"expr": "atan2(0,0)",
+"angle": "DEG",
+"complex": false,
+"error": true
+},
+{
+"id": "error:atan2(1)",
+"expr": "atan2(1)",
+"angle": "DEG",
+"complex": false,
+"error": true
+},
+{
+"id": "error:atan2(1,2,3)",
+"expr": "atan2(1,2,3)",
+"angle": "DEG",
+"complex": false,
+"error": true
+},
+{
+"id": "error:atan2(1+j,1)",
+"expr": "atan2(1+j,1)",
+"angle": "DEG",
+"complex": true,
+"error": true
+},
+{
+"id": "1/2pi[equal]",
+"expr": "1/2pi",
+"angle": "DEG",
+"complex": false,
+"re": 1.5707963267948966,
+"im": 0.0,
+"implicit": "equal"
+},
+{
+"id": "1/2pi",
+"expr": "1/2pi",
+"angle": "DEG",
+"complex": false,
+"re": 1.5707963267948966,
+"im": 0.0
+},
+{
+"id": "1/2*pi[equal]",
+"expr": "1/2*pi",
+"angle": "DEG",
+"complex": false,
+"re": 1.5707963267948966,
+"im": 0.0,
+"implicit": "equal"
+},
+{
+"id": "6/2(1+2)[equal]",
+"expr": "6/2(1+2)",
+"angle": "DEG",
+"complex": false,
+"re": 9.0,
+"im": 0.0,
+"implicit": "equal"
+},
+{
+"id": "6/2(1+2)",
+"expr": "6/2(1+2)",
+"angle": "DEG",
+"complex": false,
+"re": 9.0,
+"im": 0.0
+},
+{
+"id": "8/2(2+2)[equal]",
+"expr": "8/2(2+2)",
+"angle": "DEG",
+"complex": false,
+"re": 16.0,
+"im": 0.0,
+"implicit": "equal"
+},
+{
+"id": "1/2sin(30)[equal]",
+"expr": "1/2sin(30)",
+"angle": "DEG",
+"complex": false,
+"re": 0.25,
+"im": 0.0,
+"implicit": "equal"
+},
+{
+"id": "3(4)/2[equal]",
+"expr": "3(4)/2",
+"angle": "DEG",
+"complex": false,
+"re": 6.0,
+"im": 0.0,
+"implicit": "equal"
+},
+{
+"id": "2pi*50[equal]",
+"expr": "2pi*50",
+"angle": "DEG",
+"complex": false,
+"re": 314.1592653589793,
+"im": 0.0,
+"implicit": "equal"
+},
+{
+"id": "1/2pi[tight]",
+"expr": "1/2pi",
+"angle": "DEG",
+"complex": false,
+"re": 0.15915494309189535,
+"im": 0.0,
+"implicit": "tight"
+},
+{
+"id": "1/2*pi[tight]",
+"expr": "1/2*pi",
+"angle": "DEG",
+"complex": false,
+"re": 1.5707963267948966,
+"im": 0.0,
+"implicit": "tight"
+},
+{
+"id": "6/2(1+2)[tight]",
+"expr": "6/2(1+2)",
+"angle": "DEG",
+"complex": false,
+"re": 1.0,
+"im": 0.0,
+"implicit": "tight"
+},
+{
+"id": "8/2(2+2)[tight]",
+"expr": "8/2(2+2)",
+"angle": "DEG",
+"complex": false,
+"re": 1.0,
+"im": 0.0,
+"implicit": "tight"
+},
+{
+"id": "1/2sin(30)[tight]",
+"expr": "1/2sin(30)",
+"angle": "DEG",
+"complex": false,
+"re": 1.0,
+"im": 0.0,
+"implicit": "tight"
+},
+{
+"id": "3(4)/2[tight]",
+"expr": "3(4)/2",
+"angle": "DEG",
+"complex": false,
+"re": 6.0,
+"im": 0.0,
+"implicit": "tight"
+},
+{
+"id": "2pi*50[tight]",
+"expr": "2pi*50",
+"angle": "DEG",
+"complex": false,
+"re": 314.1592653589793,
+"im": 0.0,
+"implicit": "tight"
+},
+{
+"id": "1/2pi50*100[tight]",
+"expr": "1/2pi50*100",
+"angle": "DEG",
+"complex": false,
+"re": 0.3183098861837907,
+"im": 0.0,
+"implicit": "tight"
+},
+{
+"id": "10/2(5)(1)[tight]",
+"expr": "10/2(5)(1)",
+"angle": "DEG",
+"complex": false,
+"re": 1.0,
+"im": 0.0,
+"implicit": "tight"
+},
+{
+"id": "1/(2pi)[tight]",
+"expr": "1/(2pi)",
+"angle": "DEG",
+"complex": false,
+"re": 0.15915494309189535,
+"im": 0.0,
+"implicit": "tight"
+},
+{
+"id": "2sin(30)[tight]",
+"expr": "2sin(30)",
+"angle": "DEG",
+"complex": false,
+"re": 1.0,
+"im": 0.0,
+"implicit": "tight"
+},
+{
+"id": "4/2sqrt(4)[tight]",
+"expr": "4/2sqrt(4)",
+"angle": "DEG",
+"complex": false,
+"re": 1.0,
+"im": 0.0,
+"implicit": "tight"
+},
+{
+"id": "1/2e[tight]",
+"expr": "1/2e",
+"angle": "DEG",
+"complex": false,
+"re": 0.18393972058572117,
+"im": 0.0,
+"implicit": "tight"
+},
+{
+"id": "100/4(5)[tight]",
+"expr": "100/4(5)",
+"angle": "DEG",
+"complex": false,
+"re": 5.0,
+"im": 0.0,
+"implicit": "tight"
+},
+{
+"id": "-1/2pi[tight]",
+"expr": "-1/2pi",
+"angle": "DEG",
+"complex": false,
+"re": -0.15915494309189535,
+"im": 0.0,
+"implicit": "tight"
+},
+{
+"id": "2^2(3)[tight]",
+"expr": "2^2(3)",
+"angle": "DEG",
+"complex": false,
+"re": 12.0,
+"im": 0.0,
+"implicit": "tight"
+},
+{
+"id": "1/2(3)(4)[tight]",
+"expr": "1/2(3)(4)",
+"angle": "DEG",
+"complex": false,
+"re": 0.041666666666666664,
+"im": 0.0,
+"implicit": "tight"
+},
+{
+"id": "error:2 3[tight]",
+"expr": "2 3",
+"angle": "DEG",
+"complex": false,
+"error": true,
+"implicit": "tight"
+},
+{
+"id": "error:1/2 3[tight]",
+"expr": "1/2 3",
+"angle": "DEG",
+"complex": false,
+"error": true,
+"implicit": "tight"
+},
+{
+"id": "error:1 000[tight]",
+"expr": "1 000",
+"angle": "DEG",
+"complex": false,
+"error": true,
+"implicit": "tight"
+},
+{
+"id": "1/2pi*50*100u[tight]",
+"expr": "1/2pi*50*100u",
+"angle": "DEG",
+"complex": true,
+"re": 0.0007957747154594768,
+"im": 0.0,
+"implicit": "tight"
+},
+{
+"id": "1/(2*pi*f*c){c,f,l,v}",
+"expr": "1/(2*pi*f*c)",
+"angle": "DEG",
+"complex": false,
+"re": 31.830988618379067,
+"im": 0.0,
+"vars": {
+"f": [
+50.0,
+0.0
+],
+"c": [
+0.0001,
+0.0
+],
+"l": [
+0.1,
+0.0
+],
+"v": [
+230.0,
+0.0
+]
+}
+},
+{
+"id": "1/2pi f c[tight]{c,f,l,v}",
+"expr": "1/2pi f c",
+"angle": "DEG",
+"complex": false,
+"re": 31.830988618379067,
+"im": 0.0,
+"implicit": "tight",
+"vars": {
+"f": [
+50.0,
+0.0
+],
+"c": [
+0.0001,
+0.0
+],
+"l": [
+0.1,
+0.0
+],
+"v": [
+230.0,
+0.0
+]
+}
+},
+{
+"id": "2*pi*f*l{c,f,l,v}",
+"expr": "2*pi*f*l",
+"angle": "DEG",
+"complex": false,
+"re": 31.415926535897935,
+"im": 0.0,
+"vars": {
+"f": [
+50.0,
+0.0
+],
+"c": [
+0.0001,
+0.0
+],
+"l": [
+0.1,
+0.0
+],
+"v": [
+230.0,
+0.0
+]
+}
+},
+{
+"id": "v/(2*pi*f*l){c,f,l,v}",
+"expr": "v/(2*pi*f*l)",
+"angle": "DEG",
+"complex": false,
+"re": 7.321127382227185,
+"im": 0.0,
+"vars": {
+"f": [
+50.0,
+0.0
+],
+"c": [
+0.0001,
+0.0
+],
+"l": [
+0.1,
+0.0
+],
+"v": [
+230.0,
+0.0
+]
+}
+},
+{
+"id": "F*2{c,f,l,v}",
+"expr": "F*2",
+"angle": "DEG",
+"complex": false,
+"re": 100.0,
+"im": 0.0,
+"vars": {
+"f": [
+50.0,
+0.0
+],
+"c": [
+0.0001,
+0.0
+],
+"l": [
+0.1,
+0.0
+],
+"v": [
+230.0,
+0.0
+]
+}
+},
+{
+"id": "f+f+f{c,f,l,v}",
+"expr": "f+f+f",
+"angle": "DEG",
+"complex": false,
+"re": 150.0,
+"im": 0.0,
+"vars": {
+"f": [
+50.0,
+0.0
+],
+"c": [
+0.0001,
+0.0
+],
+"l": [
+0.1,
+0.0
+],
+"v": [
+230.0,
+0.0
+]
+}
+},
+{
+"id": "sqrt(v^2){c,f,l,v}",
+"expr": "sqrt(v^2)",
+"angle": "DEG",
+"complex": false,
+"re": 230.0,
+"im": 0.0,
+"vars": {
+"f": [
+50.0,
+0.0
+],
+"c": [
+0.0001,
+0.0
+],
+"l": [
+0.1,
+0.0
+],
+"v": [
+230.0,
+0.0
+]
+}
+},
+{
+"id": "sin(f){c,f,l,v}",
+"expr": "sin(f)",
+"angle": "DEG",
+"complex": false,
+"re": 0.766044443118978,
+"im": 0.0,
+"vars": {
+"f": [
+50.0,
+0.0
+],
+"c": [
+0.0001,
+0.0
+],
+"l": [
+0.1,
+0.0
+],
+"v": [
+230.0,
+0.0
+]
+}
+},
+{
+"id": "z*2{w,z}",
+"expr": "z*2",
+"angle": "DEG",
+"complex": true,
+"re": 6.0,
+"im": 8.0,
+"vars": {
+"z": [
+3.0,
+4.0
+],
+"w": [
+1.0,
+-1.0
+]
+}
+},
+{
+"id": "z*w{w,z}",
+"expr": "z*w",
+"angle": "DEG",
+"complex": true,
+"re": 7.0,
+"im": 1.0,
+"vars": {
+"z": [
+3.0,
+4.0
+],
+"w": [
+1.0,
+-1.0
+]
+}
+},
+{
+"id": "abs(z){w,z}",
+"expr": "abs(z)",
+"angle": "DEG",
+"complex": true,
+"re": 5.0,
+"im": 0.0,
+"vars": {
+"z": [
+3.0,
+4.0
+],
+"w": [
+1.0,
+-1.0
+]
+}
+},
+{
+"id": "par(z,w){w,z}",
+"expr": "par(z,w)",
+"angle": "DEG",
+"complex": true,
+"re": 1.24,
+"im": -0.6799999999999999,
+"vars": {
+"z": [
+3.0,
+4.0
+],
+"w": [
+1.0,
+-1.0
+]
+}
+},
+{
+"id": "error:z*2{w,z}",
+"expr": "z*2",
+"angle": "DEG",
+"complex": false,
+"error": true,
+"vars": {
+"z": [
+3.0,
+4.0
+],
+"w": [
+1.0,
+-1.0
+]
+}
+},
+{
+"id": "error:q+1{c,f,l,v}",
+"expr": "q+1",
+"angle": "DEG",
+"complex": false,
+"error": true,
+"vars": {
+"f": [
+50.0,
+0.0
+],
+"c": [
+0.0001,
+0.0
+],
+"l": [
+0.1,
+0.0
+],
+"v": [
+230.0,
+0.0
+]
+}
+},
+{
+"id": "error:q+1{c,f,l,v}",
+"expr": "q+1",
+"angle": "DEG",
+"complex": true,
+"error": true,
+"vars": {
+"f": [
+50.0,
+0.0
+],
+"c": [
+0.0001,
+0.0
+],
+"l": [
+0.1,
+0.0
+],
+"v": [
+230.0,
+0.0
+]
+}
+}
+],
+"polar": [
+{
+"re": 10.0,
+"im": 15.0,
+"mag": 18.027756377319946,
+"ang": 56.309932474020215
+},
+{
+"re": 3.0,
+"im": 4.0,
+"mag": 5.0,
+"ang": 53.13010235415598
+},
+{
+"re": -3.0,
+"im": 4.0,
+"mag": 5.0,
+"ang": 126.86989764584402
+},
+{
+"re": -3.0,
+"im": -4.0,
+"mag": 5.0,
+"ang": -126.86989764584402
+},
+{
+"re": 3.0,
+"im": -4.0,
+"mag": 5.0,
+"ang": -53.13010235415598
+},
+{
+"re": 0.0,
+"im": 1.0,
+"mag": 1.0,
+"ang": 90.0
+},
+{
+"re": -0.0,
+"im": -1.0,
+"mag": 1.0,
+"ang": -90.0
+},
+{
+"re": 5,
+"im": 0,
+"mag": 5.0,
+"ang": 0.0
+},
+{
+"re": -5,
+"im": 0,
+"mag": 5.0,
+"ang": 180.0
+},
+{
+"re": 0.001,
+"im": 0.002,
+"mag": 0.00223606797749979,
+"ang": 63.43494882292201
+},
+{
+"re": 1000000.0,
+"im": 1000000.0,
+"mag": 1414213.562373095,
+"ang": 45.0
+},
+{
+"re": 199.1858428704209,
+"im": 114.99999999999999,
+"mag": 230.0,
+"ang": 29.999999999999996
+},
+{
+"re": 0.5,
+"im": -0.25,
+"mag": 0.5590169943749475,
+"ang": -26.56505117707799
+},
+{
+"re": 12.5,
+"im": 0.01,
+"mag": 12.50000399999936,
+"ang": 0.045836613831989906
+}
+]
+}

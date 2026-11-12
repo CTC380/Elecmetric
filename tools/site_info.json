@@ -1,0 +1,11 @@
+{
+  "_readme": "Shown in page footers and on privacy and terms pages. operator_name / operator_location: the person or company that operates the site (shown in footer, terms and privacy notice; fill in before launch). calculation_author is the authorship label. Individual professional approval must be entered in tools/review_records.json only after a named qualified person has actually reviewed the calculator. tools/team_review_approval.json is an internal record only and is not shown on public pages. contact_email is where page feedback is sent.",
+  "credit": "Developed by Elecmetric",
+  "contact_email": "elecmetrics@gmail.com",
+  "governing_law": "India",
+  "legal_updated": "2026-11-12",
+  "calculation_author": "Rahul Sharma (author)",
+  "operator_name": "Rahul Sharma",
+  "operator_location": "India",
+  "courts_city": "Delhi, India"
+}

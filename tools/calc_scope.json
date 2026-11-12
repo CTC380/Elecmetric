@@ -1,0 +1,241 @@
+{
+  "_readme": "What each engineering calculator checks and what it leaves unverified, shown under every result. Written from what the code in engine.js does, and re-checked when a calculator changes. A calculator without an entry here shows the default for its method basis.",
+  "defaults": {
+    "textbook": {
+      "checked": [
+        "The arithmetic of the published formula for the values you entered, in the units shown."
+      ],
+      "notChecked": [
+        "That the inputs suit your application. Take ratings, resistances and constants from the manufacturer data sheet or project specification."
+      ]
+    },
+    "standard-method": {
+      "checked": [
+        "The arithmetic of the published formula for the values you entered."
+      ],
+      "notChecked": [
+        "The constants and size lists against the licensed edition of the standard.",
+        "Any check outside the formula shown (see the notes)."
+      ]
+    },
+    "simplified": {
+      "checked": [
+        "The arithmetic of the simplified model for the values you entered."
+      ],
+      "notChecked": [
+        "Whether the simplifying assumptions listed on this page hold for your case.",
+        "Any standard, manufacturer or site data. Treat the result as an estimate and confirm it by a further engineering check."
+      ]
+    }
+  },
+  "calculators": {
+    "cable-size-vd": {
+      "checked": [
+        "Smallest IEC 60228 size that keeps voltage drop within the limit you set, with resistance at the full-load conductor temperature."
+      ],
+      "notChecked": [
+        "Current-carrying capacity (no ampacity table is embedded).",
+        "Installation method, grouping, ambient and soil correction.",
+        "Short-circuit withstand and protective-device coordination.",
+        "Cable manufacturer AC resistance and reactance (a constant reactance is assumed)."
+      ]
+    },
+    "cable-derating": {
+      "checked": [
+        "Iz = tabulated rating you enter × temperature factor × grouping factor × other factor.",
+        "Rule Ib ≤ In ≤ Iz for the chosen basis (1.25 × Ib for the NEC-style continuous case)."
+      ],
+      "notChecked": [
+        "The temperature factor is a heat-balance approximation, not the factor tabulated in the wiring standard.",
+        "The tabulated rating, grouping factor and installation method are yours to take from the data sheet or licensed standard.",
+        "Harmonics, soil thermal resistivity, voltage drop and short-circuit withstand."
+      ]
+    },
+    "voltage-drop": {
+      "checked": [
+        "Vd from the R and X per km you enter, current, length, power factor and parallel conductors."
+      ],
+      "notChecked": [
+        "Whether the cable carries the current (ampacity).",
+        "The permitted drop for your circuit type and edition of the wiring rules.",
+        "Mutual effects between parallel conductors and unbalanced loads."
+      ]
+    },
+    "ac-voltage-drop": {
+      "checked": [
+        "AC voltage drop from conductor material, size, length and temperature, with the reactance you enter, for lagging or leading load."
+      ],
+      "notChecked": [
+        "Skin and proximity effect (they matter above about 150 mm²).",
+        "Ampacity, installation method and grouping.",
+        "Manufacturer AC resistance and reactance for the real cable.",
+        "The permitted drop for your circuit type."
+      ]
+    },
+    "max-cable-length": {
+      "checked": [
+        "Longest run that stays within the drop limit for the R and X you enter."
+      ],
+      "notChecked": [
+        "Ampacity and short-circuit withstand.",
+        "Earth-fault loop impedance and disconnection time at that length."
+      ]
+    },
+    "cable-sc-withstand": {
+      "checked": [
+        "Minimum conductor area S = I√t / k with the built-in adiabatic k values."
+      ],
+      "notChecked": [
+        "The k values against the current edition of the standard (initial and final temperatures, size range, insulation).",
+        "The real clearing time at the fault level: take it from the protective-device curve.",
+        "Let-through energy of the breaker, and the withstand of screens and armour."
+      ]
+    },
+    "parallel-cable-sets": {
+      "checked": [
+        "Number of equal cable sets needed so that each carries no more than Iz × k."
+      ],
+      "notChecked": [
+        "Whether the sets really share current equally (length, route, spacing, termination).",
+        "Voltage drop, grouping and short-circuit withstand of the sets."
+      ]
+    },
+    "breaker-size": {
+      "checked": [
+        "Smallest standard rating at or above the current × margin, and that it does not exceed the cable capacity you enter."
+      ],
+      "notChecked": [
+        "Breaking capacity against the prospective fault level.",
+        "Trip curve, instantaneous pick-up and let-through energy.",
+        "Selectivity with upstream and downstream devices."
+      ]
+    },
+    "fault-current": {
+      "checked": [
+        "Terminal three-phase fault current from kVA, voltage and transformer impedance, with an infinite source."
+      ],
+      "notChecked": [
+        "Source (utility) impedance and cable impedance, so the value is an upper bound.",
+        "Minimum fault level, needed for protection to operate.",
+        "Motor contribution and the IEC 60909 voltage factor."
+      ]
+    },
+    "fault-types": {
+      "checked": [
+        "Three-phase, line-to-line and line-to-earth bolted-fault currents from Z1, Z0 and voltage."
+      ],
+      "notChecked": [
+        "Arc resistance and the angle of the impedances (they are combined as magnitudes).",
+        "Z2 = Z1 is assumed.",
+        "Maximum versus minimum fault-level cases and the IEC 60909 factors."
+      ]
+    },
+    "fault-mva": {
+      "checked": [
+        "Conversion between fault current and fault level at the voltage you enter."
+      ],
+      "notChecked": [
+        "Where the fault level comes from: the source data and the maximum or minimum case are yours to confirm."
+      ]
+    },
+    "fault-loop-impedance": {
+      "checked": [
+        "Zs = Ze + R1 + R2, the earth-fault current at U0 and the Zs needed for the device operating current you enter."
+      ],
+      "notChecked": [
+        "The disconnection time and the permitted Zs from your wiring rules.",
+        "The device trip characteristic, conductor temperature and reactance.",
+        "Ze is yours to obtain from the supply authority or by measurement."
+      ]
+    },
+    "earth-rod-resistance": {
+      "checked": [
+        "Single-rod resistance from soil resistivity, rod length and diameter."
+      ],
+      "notChecked": [
+        "Measured soil resistivity, layering and seasonal variation.",
+        "Neighbouring electrodes, and step and touch voltage."
+      ]
+    },
+    "earth-rods-parallel": {
+      "checked": [
+        "Combined resistance Rn = R1 / (n × u) for the number of rods and the utilisation factor you enter."
+      ],
+      "notChecked": [
+        "The utilisation factor is yours: it depends on rod spacing and soil, and is not calculated here.",
+        "Measured soil resistivity and seasonal variation.",
+        "Step and touch voltage."
+      ]
+    },
+    "earth-grid-resistance": {
+      "checked": [
+        "Grid resistance from soil resistivity, area and conductor length (Laurent-Niemann form)."
+      ],
+      "notChecked": [
+        "Burial depth refinement, measured resistivity and layered soil.",
+        "Step and touch voltage, ground potential rise and a full earthing study."
+      ]
+    },
+    "ngr-sizing": {
+      "checked": [
+        "Resistor value for the earth-fault current you choose, its power and energy for the stated time."
+      ],
+      "notChecked": [
+        "Source impedance and the relay settings.",
+        "The resistor's short-time and thermal rating from the manufacturer."
+      ]
+    },
+    "transformer-sizing": {
+      "checked": [
+        "Smallest standard kVA at or above the load, growth and loading target."
+      ],
+      "notChecked": [
+        "Harmonics (K-rating), motor starting and ambient temperature.",
+        "Impedance, losses and cooling class: take them from the transformer data sheet."
+      ]
+    },
+    "motor-starting": {
+      "checked": [
+        "Starting current and torque ratios for DOL, star-delta and auto-transformer starting."
+      ],
+      "notChecked": [
+        "Supply voltage sag during the start.",
+        "The motor's real locked-rotor current and torque curve."
+      ]
+    },
+    "motor-start-dip": {
+      "checked": [
+        "Voltage dip at the bus from motor starting kVA and source fault level."
+      ],
+      "notChecked": [
+        "Starting power factor and the true impedance angles.",
+        "The effect on other loads on the bus."
+      ]
+    },
+    "conduit-fill": {
+      "checked": [
+        "Fill percentage against the 53 / 31 / 40% NEC-style limits."
+      ],
+      "notChecked": [
+        "Whether that rule applies in your code (it is not a universal IEC or IS rule).",
+        "Pulling tension, bends, run length and cable derating inside the conduit."
+      ]
+    },
+    "transformer-regulation": {
+      "checked": [
+        "Voltage regulation from the resistance, reactance, load and power factor entered."
+      ],
+      "notChecked": [
+        "The impedance and loss figures: take them from the test certificate or data sheet."
+      ]
+    },
+    "generator-kva": {
+      "checked": [
+        "Standard kVA at or above the load, with the margin entered."
+      ],
+      "notChecked": [
+        "Motor starting, transient voltage and frequency dip, harmonics and altitude or temperature derating."
+      ]
+    }
+  }
+}

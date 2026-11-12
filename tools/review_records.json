@@ -1,0 +1,517 @@
+{
+  "_readme": "Stage 3 records in this file are public-scope screens only. A scope_screened record means the relevant standard and published scope/edition were identified from official or publisher catalogue data. It is NOT a clause-by-clause review of licensed text and must remain Partial until the exact clauses, tables and project-adopted edition are checked. Do not enter approved reviewer details unless a qualified person has actually approved the calculator.",
+  "_example": {
+    "cable-size-vd": {
+      "standard": {
+        "name": "IEC 60364-5-52",
+        "edition": "2009 + A1:2024, consolidated Ed 3.1",
+        "date": "2026-11-12",
+        "review_status": "scope_screened",
+        "review_basis": "Official/public publisher scope metadata; no licensed clause text reviewed",
+        "scope_note": "Scope screening only; verify the exact project edition, clauses, cable tables and assumptions."
+      }
+    }
+  },
+  "records": {
+    "ac-voltage-drop": {
+      "standard": {
+        "name": "IEC 60364-5-52; IEC 60228",
+        "edition": "IEC 60364-5-52:2009 + A1:2024 Ed 3.1; IEC 60228:2023 Ed 4.0",
+        "date": "2026-11-12",
+        "review_status": "scope_screened",
+        "review_basis": "Official/public publisher catalogue and published scope metadata; no licensed clause text reviewed",
+        "scope_note": "AC wiring-system voltage-drop and conductor resistance context are relevant. The calculator uses a simplified R/X equation; verify the conductor operating temperature, reactance, circuit layout and permitted drop."
+      }
+    },
+    "agl-brightness-steps": {
+      "standard": {
+        "name": "IEC 61820-1-2; IEC 61820-3-2; FAA AC 150/5345-10H",
+        "edition": "IEC 61820-1-2:2024; IEC 61820-3-2:2023; FAA AC 150/5345-10H",
+        "date": "2026-11-12",
+        "review_status": "scope_screened",
+        "review_basis": "Official/public publisher catalogue and published scope metadata; no licensed clause text reviewed",
+        "scope_note": "AGL series circuit and CCR requirements are relevant. The lamp power/current relationship is entered as an exponent-based model; actual brightness-step currents, lamp data and CCR output data must come from approved equipment documentation."
+      }
+    },
+    "agl-cable-loop-loss": {
+      "standard": {
+        "name": "IEC 61820-1-2; IEC 60228",
+        "edition": "IEC 61820-1-2:2024; IEC 60228:2023 Ed 4.0",
+        "date": "2026-11-12",
+        "review_status": "scope_screened",
+        "review_basis": "Official/public publisher catalogue and published scope metadata; no licensed clause text reviewed",
+        "scope_note": "AGL series-circuit cable context and conductor resistance/size requirements are relevant. The calculator estimates loop resistance and I²R loss; confirm cable construction, circuit topology, operating temperature and actual manufacturer resistance."
+      }
+    },
+    "agl-cable-size-loss": {
+      "standard": {
+        "name": "IEC 61820-1-2; IEC 60228",
+        "edition": "IEC 61820-1-2:2024; IEC 60228:2023 Ed 4.0",
+        "date": "2026-11-12",
+        "review_status": "scope_screened",
+        "review_basis": "Official/public publisher catalogue and published scope metadata; no licensed clause text reviewed",
+        "scope_note": "AGL series-circuit cable context and conductor dimensions/resistance are relevant. The calculator solves a user-defined loss limit; the selected limit is not a standard-prescribed value and final selection needs full circuit checks."
+      }
+    },
+    "agl-ccr-input-energy": {
+      "standard": {
+        "name": "IEC 61820-3-2; FAA AC 150/5345-10H",
+        "edition": "IEC 61820-3-2:2023; FAA AC 150/5345-10H",
+        "date": "2026-11-12",
+        "review_status": "scope_screened",
+        "review_basis": "Official/public publisher catalogue and published scope metadata; no licensed clause text reviewed",
+        "scope_note": "AGL series-circuit power-supply and CCR specification context is relevant. The calculator estimates input power, energy and cost from user-entered efficiency and power factor; it does not model CCR loss curves or metering accuracy."
+      }
+    },
+    "agl-ccr-loading": {
+      "standard": {
+        "name": "IEC 61820-1; IEC 61820-1-2; IEC 61820-3-2; FAA AC 150/5345-10H",
+        "edition": "IEC 61820-1:2019; IEC 61820-1-2:2024; IEC 61820-3-2:2023; FAA AC 150/5345-10H",
+        "date": "2026-11-12",
+        "review_status": "scope_screened",
+        "review_basis": "Official/public publisher catalogue and published scope metadata; no licensed clause text reviewed",
+        "scope_note": "AGL fundamental principles, series-circuit requirements and CCR/power-supply requirements are relevant. The calculator estimates circuit load and CCR size; fitting-specific data, cable resistance, regulator limits and project requirements must be verified."
+      }
+    },
+    "agl-isolating-transformer": {
+      "standard": {
+        "name": "IEC 61820-1-2; FAA AC 150/5345-47B",
+        "edition": "IEC 61820-1-2:2024; FAA AC 150/5345-47B (30 June 2005)",
+        "date": "2026-11-12",
+        "review_status": "scope_screened",
+        "review_basis": "Official/public publisher catalogue and published scope metadata; no licensed clause text reviewed",
+        "scope_note": "AGL series-circuit requirements and the FAA series-to-series isolation-transformer specification are relevant. Verify transformer type, VA rating, leakage, insulation, secondary loading and current FAA qualification status against the actual procurement specification."
+      }
+    },
+    "agl-lamp-failure-load": {
+      "standard": {
+        "name": "IEC 61820-1-2; FAA AC 150/5345-47B",
+        "edition": "IEC 61820-1-2:2024; FAA AC 150/5345-47B (30 June 2005)",
+        "date": "2026-11-12",
+        "review_status": "scope_screened",
+        "review_basis": "Official/public publisher catalogue and published scope metadata; no licensed clause text reviewed",
+        "scope_note": "AGL series-circuit and isolation-transformer context is relevant. Open-secondary voltage/power behaviour is manufacturer-specific; the calculator requires user-entered failed-lamp/open-secondary assumptions and is indicative."
+      }
+    },
+    "agl-max-fittings": {
+      "standard": {
+        "name": "IEC 61820-1; IEC 61820-1-2; IEC 61820-3-2; FAA AC 150/5345-10H",
+        "edition": "IEC 61820-1:2019; IEC 61820-1-2:2024; IEC 61820-3-2:2023; FAA AC 150/5345-10H",
+        "date": "2026-11-12",
+        "review_status": "scope_screened",
+        "review_basis": "Official/public publisher catalogue and published scope metadata; no licensed clause text reviewed",
+        "scope_note": "AGL series-circuit and CCR requirements are relevant. The calculator estimates a maximum fitting count from user-entered lamp, transformer and cable data; it does not replace CCR load curves or manufacturer limits."
+      }
+    },
+    "battery-bank-size": {
+      "standard": {
+        "name": "IEEE 485; IEC 62485-2",
+        "edition": "IEEE 485-2020 (active); IEC 62485-2:2010",
+        "date": "2026-11-12",
+        "review_status": "scope_screened",
+        "review_basis": "Official/public publisher catalogue and published scope metadata; no licensed clause text reviewed",
+        "scope_note": "Stationary lead-acid battery sizing and stationary battery safety are relevant. IEEE 485 applies to lead-acid float-service applications; the calculator is a simplified energy estimate and does not implement duty-cycle sizing."
+      }
+    },
+    "breaker-size": {
+      "standard": {
+        "name": "IEC 60364-4-43; IEC 60947-2",
+        "edition": "IEC 60364-4-43:2023 Ed 4.0; IEC 60947-2:2024 Ed 6.0",
+        "date": "2026-11-12",
+        "review_status": "scope_screened",
+        "review_basis": "Official/public publisher catalogue and published scope metadata; no licensed clause text reviewed",
+        "scope_note": "Overcurrent protection and LV circuit-breaker product requirements are relevant. The calculator only rounds a user-margined current to a nominal rating; it does not check breaking capacity, trip curves, selectivity or local adoption."
+      }
+    },
+    "cable-derating": {
+      "standard": {
+        "name": "IEC 60364-5-52",
+        "edition": "2009 + A1:2024, consolidated Ed 3.1",
+        "date": "2026-11-12",
+        "review_status": "scope_screened",
+        "review_basis": "Official/public publisher catalogue and published scope metadata; no licensed clause text reviewed",
+        "scope_note": "Cable current-carrying capacity and correction factors are relevant. The in-app square-root temperature factor is a simplified heat-balance approximation, not a tabulated IEC derating factor; group and other factors are user inputs."
+      }
+    },
+    "cable-resistance": {
+      "standard": {
+        "name": "IEC 60228",
+        "edition": "2023 Ed 4.0",
+        "date": "2026-11-12",
+        "review_status": "scope_screened",
+        "review_basis": "Official/public publisher catalogue and published scope metadata; no licensed clause text reviewed",
+        "scope_note": "Conductor classes, nominal cross-sectional areas and DC resistance are in scope. The calculator uses material resistivity and an approximate temperature correction; verify resistance against the cable datasheet and standard tables."
+      }
+    },
+    "cable-sc-withstand": {
+      "standard": {
+        "name": "IEC 60364-4-43; IEC 60949",
+        "edition": "IEC 60364-4-43:2023 Ed 4.0; IEC 60949:1988 Ed 1.0",
+        "date": "2026-11-12",
+        "review_status": "scope_screened",
+        "review_basis": "Official/public publisher catalogue and published scope metadata; no licensed clause text reviewed",
+        "scope_note": "Overcurrent protection and thermally permissible cable short-circuit current are relevant. The calculator uses S = I√t/k; confirm the correct k value, initial/final temperatures and adiabatic applicability in the project edition."
+      }
+    },
+    "cable-size-vd": {
+      "standard": {
+        "name": "IEC 60364-5-52; IEC 60228",
+        "edition": "IEC 60364-5-52:2009 + A1:2024 Ed 3.1; IEC 60228:2023 Ed 4.0",
+        "date": "2026-11-12",
+        "review_status": "scope_screened",
+        "review_basis": "Official/public publisher catalogue and published scope metadata; no licensed clause text reviewed",
+        "scope_note": "Wiring-system voltage-drop design and conductor dimensions/resistance are relevant. The calculator is a first-pass size estimate; confirm the actual cable data, installation method and permissible drop."
+      }
+    },
+    "conductor-temp-resistance": {
+      "standard": {
+        "name": "IEC 60228",
+        "edition": "2023 Ed 4.0",
+        "date": "2026-11-12",
+        "review_status": "scope_screened",
+        "review_basis": "Official/public publisher catalogue and published scope metadata; no licensed clause text reviewed",
+        "scope_note": "Conductor resistance and construction are in scope. The linear temperature coefficient is a material approximation; confirm actual conductor resistance and temperature limits from the cable standard and manufacturer."
+      }
+    },
+    "conduit-fill": {
+      "standard": {
+        "name": "NFPA 70",
+        "edition": "2026 edition, Chapter 9 Table 1",
+        "date": "2026-11-12",
+        "review_status": "scope_screened",
+        "review_basis": "Official/public publisher catalogue and published scope metadata; no licensed clause text reviewed",
+        "scope_note": "The calculator uses the NEC conduit/conductor fill percentages (53%, 31%, 40%). This is applicable only where the relevant NFPA 70 edition and Chapter 9 rules are adopted; cable types and local amendments must be checked."
+      }
+    },
+    "current-loop-4-20": {
+      "standard": {
+        "name": "IEC 60381-1",
+        "edition": "1982 Ed 2.0",
+        "date": "2026-11-12",
+        "review_status": "scope_screened",
+        "review_basis": "Official/public publisher catalogue and published scope metadata; no licensed clause text reviewed",
+        "scope_note": "Industrial analogue DC signal ranges are covered by this standard. The calculator performs a user-defined linear scaling and does not check transmitter, receiver, loop-power or accuracy requirements."
+      }
+    },
+    "dc-voltage-drop": {
+      "standard": {
+        "name": "IEC 60364-5-52; IEC 60228",
+        "edition": "IEC 60364-5-52:2009 + A1:2024 Ed 3.1; IEC 60228:2023 Ed 4.0",
+        "date": "2026-11-12",
+        "review_status": "scope_screened",
+        "review_basis": "Official/public publisher catalogue and published scope metadata; no licensed clause text reviewed",
+        "scope_note": "DC wiring-system design, conductor dimensions and resistance are relevant. The calculation is a simplified resistive drop estimate and does not check ampacity, protective-device coordination or installation conditions."
+      }
+    },
+    "earth-grid-resistance": {
+      "standard": {
+        "name": "IEEE 80; IEEE 81; IEC 60364-5-54",
+        "edition": "IEEE 80-2013 (inactive-reserved legacy guide); IEEE 81-2025; IEC 60364-5-54:2011 + A1:2021 Ed 3.1",
+        "date": "2026-11-12",
+        "review_status": "scope_screened",
+        "review_basis": "Official/public publisher catalogue and published scope metadata; no licensed clause text reviewed",
+        "scope_note": "Substation grounding-grid safety/design and field measurement are relevant. The calculator is a simplified resistance estimate only; it does not evaluate touch/step voltage, grid geometry, current division or fault duration."
+      }
+    },
+    "earth-rod-resistance": {
+      "standard": {
+        "name": "IEEE 81; IEC 60364-5-54",
+        "edition": "IEEE 81-2025; IEC 60364-5-54:2011 + A1:2021 Ed 3.1",
+        "date": "2026-11-12",
+        "review_status": "scope_screened",
+        "review_basis": "Official/public publisher catalogue and published scope metadata; no licensed clause text reviewed",
+        "scope_note": "Grounding-system field measurement and earthing arrangements are relevant. The calculator uses a theoretical single-rod approximation in uniform soil; it is not a substitute for soil measurements or site testing."
+      }
+    },
+    "earth-rods-parallel": {
+      "standard": {
+        "name": "IEEE 81; IEC 60364-5-54",
+        "edition": "IEEE 81-2025; IEC 60364-5-54:2011 + A1:2021 Ed 3.1",
+        "date": "2026-11-12",
+        "review_status": "scope_screened",
+        "review_basis": "Official/public publisher catalogue and published scope metadata; no licensed clause text reviewed",
+        "scope_note": "Ground-electrode measurement and earthing arrangements are relevant. R/n with a utilisation factor is an approximation; mutual resistance, spacing, soil layering and seasonal variation are not modelled."
+      }
+    },
+    "fault-current": {
+      "standard": {
+        "name": "IEC 60909-0",
+        "edition": "2026 Ed 3.0",
+        "date": "2026-11-12",
+        "review_status": "scope_screened",
+        "review_basis": "Official/public publisher catalogue and published scope metadata; no licensed clause text reviewed",
+        "scope_note": "Short-circuit current calculation for three-phase AC systems. The calculator is a transformer-impedance estimate and does not assemble a complete network model or apply every IEC correction factor."
+      }
+    },
+    "fault-loop-impedance": {
+      "standard": {
+        "name": "IEC 60364-4-41; IEC 60364-5-54",
+        "edition": "IEC 60364-4-41:2017; IEC 60364-5-54:2011 + A1:2021 Ed 3.1",
+        "date": "2026-11-12",
+        "review_status": "scope_screened",
+        "review_basis": "Official/public publisher catalogue and published scope metadata; no licensed clause text reviewed",
+        "scope_note": "Automatic disconnection of supply, earth-fault loop impedance and protective conductors are directly relevant. The calculator uses a simplified TN-loop relation; system type, conductor temperature, measured Ze, protective-device trip characteristic and required disconnection time must be verified."
+      }
+    },
+    "fault-mva": {
+      "standard": {
+        "name": "IEC 60909-0",
+        "edition": "2026 Ed 3.0",
+        "date": "2026-11-12",
+        "review_status": "scope_screened",
+        "review_basis": "Official/public publisher catalogue and published scope metadata; no licensed clause text reviewed",
+        "scope_note": "Short-circuit level in three-phase AC systems is the governing context. The calculator converts a supplied three-phase fault current to MVA; it does not calculate the fault current itself."
+      }
+    },
+    "fault-types": {
+      "standard": {
+        "name": "IEC 60909-0",
+        "edition": "2026 Ed 3.0",
+        "date": "2026-11-12",
+        "review_status": "scope_screened",
+        "review_basis": "Official/public publisher catalogue and published scope metadata; no licensed clause text reviewed",
+        "scope_note": "Short-circuit calculations for three-phase AC systems, including fault types and sequence networks, are relevant. The calculator is a simplified symmetrical-component estimate and assumes the sequence impedances entered represent the complete source path."
+      }
+    },
+    "generator-kva": {
+      "standard": {
+        "name": "ISO 8528-1",
+        "edition": "2018 Ed 3 (published edition; Ed 4 DIS was under development at review date)",
+        "date": "2026-11-12",
+        "review_status": "scope_screened",
+        "review_basis": "Official/public publisher catalogue and published scope metadata; no licensed clause text reviewed",
+        "scope_note": "Defines generating-set application, ratings and performance. The calculator only estimates kVA from kW, power factor and a user margin; load steps, ambient derating and engine/alternator ratings are not assessed."
+      }
+    },
+    "harmonic-thd": {
+      "standard": {
+        "name": "IEEE 519; IEC 61000-4-7",
+        "edition": "IEEE 519-2022; IEC 61000-4-7:2002 + A1:2008 consolidated",
+        "date": "2026-11-12",
+        "review_status": "scope_screened",
+        "review_basis": "Official/public publisher catalogue and published scope metadata; no licensed clause text reviewed",
+        "scope_note": "Harmonic control at the point of common coupling and harmonic measurement instrumentation are relevant. The calculator only combines selected 3rd, 5th and 7th currents; it is not a full spectrum, TDD or compliance assessment."
+      }
+    },
+    "insulation-pi-dar": {
+      "standard": {
+        "name": "IEC 60034-27-4",
+        "edition": "2018 Ed 1.0",
+        "date": "2026-11-12",
+        "review_status": "scope_screened",
+        "review_basis": "Official/public publisher catalogue and published scope metadata; no licensed clause text reviewed",
+        "scope_note": "Recommended test procedures for insulation resistance and polarisation index of rotating-machine windings are relevant. The calculator computes ratios only; test voltage, temperature correction, acceptance criteria and machine-specific limits remain outside scope."
+      }
+    },
+    "lumen-method": {
+      "standard": {
+        "name": "ISO/CIE 8995-1",
+        "edition": "2025 Ed 1",
+        "date": "2026-11-12",
+        "review_status": "scope_screened",
+        "review_basis": "Official/public publisher catalogue and published scope metadata; no licensed clause text reviewed",
+        "scope_note": "Indoor workplace lighting requirements and maintained-illuminance criteria are relevant. The lumen-method equation is a simplified planning method; use luminaire photometry, room data and project-specific criteria for design."
+      }
+    },
+    "max-cable-length": {
+      "standard": {
+        "name": "IEC 60364-5-52",
+        "edition": "2009 + A1:2024, consolidated Ed 3.1",
+        "date": "2026-11-12",
+        "review_status": "scope_screened",
+        "review_basis": "Official/public publisher catalogue and published scope metadata; no licensed clause text reviewed",
+        "scope_note": "Wiring-system selection and voltage-drop context. The calculator solves a simplified voltage-drop equation; it does not verify ampacity, fault protection or installation method."
+      }
+    },
+    "motor-current": {
+      "standard": {
+        "name": "IEC 60034-1",
+        "edition": "2026 Ed 15",
+        "date": "2026-11-12",
+        "review_status": "scope_screened",
+        "review_basis": "Official/public publisher catalogue and published scope metadata; no licensed clause text reviewed",
+        "scope_note": "Rotating-machine rating and performance context. The equation estimates input current from output power, efficiency, power factor and voltage; nameplate data takes precedence."
+      }
+    },
+    "motor-start-dip": {
+      "standard": {
+        "name": "IEC 60034-12; IEC 60909-0",
+        "edition": "IEC 60034-12:2024 Ed 4.0; IEC 60909-0:2026 Ed 3.0",
+        "date": "2026-11-12",
+        "review_status": "scope_screened",
+        "review_basis": "Official/public publisher catalogue and published scope metadata; no licensed clause text reviewed",
+        "scope_note": "Motor starting performance and supply-system short-circuit strength are relevant context. The voltage-dip equation is a simplified source-impedance estimate, not a complete motor-starting or network study."
+      }
+    },
+    "motor-starting": {
+      "standard": {
+        "name": "IEC 60034-12",
+        "edition": "2024 Ed 4.0",
+        "date": "2026-11-12",
+        "review_status": "scope_screened",
+        "review_basis": "Official/public publisher catalogue and published scope metadata; no licensed clause text reviewed",
+        "scope_note": "Starting performance of single-speed three-phase cage induction motors is relevant. The in-app DOL/star-delta/autotransformer ratios are simplified estimates; use motor-manufacturer starting-current and torque data."
+      }
+    },
+    "ngr-sizing": {
+      "standard": {
+        "name": "IEC 60076-25",
+        "edition": "2023 Ed 1.0",
+        "date": "2026-11-12",
+        "review_status": "scope_screened",
+        "review_basis": "Official/public publisher catalogue and published scope metadata; no licensed clause text reviewed",
+        "scope_note": "Neutral grounding resistors for power transformers are covered. The calculator derives resistance, duty power and energy from selected voltage/current/time; check system grounding philosophy, duty cycle, tolerances and thermal rating."
+      }
+    },
+    "parallel-cable-sets": {
+      "standard": {
+        "name": "IEC 60364-5-52",
+        "edition": "2009 + A1:2024, consolidated Ed 3.1",
+        "date": "2026-11-12",
+        "review_status": "scope_screened",
+        "review_basis": "Official/public publisher catalogue and published scope metadata; no licensed clause text reviewed",
+        "scope_note": "Parallel conductor installation and current-carrying capacity are relevant. The calculator estimates set count from user-supplied ampacity and factors; it does not verify equal current sharing, cable arrangement, terminals or derating tables."
+      }
+    },
+    "pue": {
+      "standard": {
+        "name": "ISO/IEC 30134-2",
+        "edition": "2026 Ed 2",
+        "date": "2026-11-12",
+        "review_status": "scope_screened",
+        "review_basis": "Official/public publisher catalogue and published scope metadata; no licensed clause text reviewed",
+        "scope_note": "Defines data-centre PUE measurement, calculation and reporting. The calculator implements the basic total-facility-power / IT-equipment-power ratio; metering boundaries and reporting conditions must follow the standard."
+      }
+    },
+    "pv-array-size": {
+      "standard": {
+        "name": "IEC 62548-1",
+        "edition": "2023 + AMD1:2025, consolidated version",
+        "date": "2026-11-12",
+        "review_status": "scope_screened",
+        "review_basis": "Official/public publisher catalogue and published scope metadata; no licensed clause text reviewed",
+        "scope_note": "PV-array design and DC-system protection are relevant. The energy-demand sizing formula is a preliminary estimate; module configuration, inverter limits, shading, storage and site yield require separate design checks."
+      }
+    },
+    "pv-energy": {
+      "standard": {
+        "name": "IEC 61724-1",
+        "edition": "2021 Ed 2.0",
+        "date": "2026-11-12",
+        "review_status": "scope_screened",
+        "review_basis": "Official/public publisher catalogue and published scope metadata; no licensed clause text reviewed",
+        "scope_note": "PV-system performance monitoring and performance-ratio terminology are relevant. The calculator is a simplified peak-sun-hours × performance-ratio estimate, not an IEC monitoring or yield-prediction implementation."
+      }
+    },
+    "pv-string-size": {
+      "standard": {
+        "name": "IEC 62548-1",
+        "edition": "2023 + AMD1:2025, consolidated version",
+        "date": "2026-11-12",
+        "review_status": "scope_screened",
+        "review_basis": "Official/public publisher catalogue and published scope metadata; no licensed clause text reviewed",
+        "scope_note": "PV-array design, DC wiring and protective provisions are relevant to cold-voltage string checks. Confirm module Voc and temperature coefficient, inverter maximum voltage and local code requirements."
+      }
+    },
+    "rtd-pt100": {
+      "standard": {
+        "name": "IEC 60751",
+        "edition": "2022 Ed 3",
+        "date": "2026-11-12",
+        "review_status": "scope_screened",
+        "review_basis": "Official/public publisher catalogue and published scope metadata; no licensed clause text reviewed",
+        "scope_note": "Industrial platinum resistance thermometers and sensors, including the resistance-temperature relationship, are directly relevant. Confirm tolerance class, connection arrangement, self-heating and temperature range."
+      }
+    },
+    "star-delta-starting": {
+      "standard": {
+        "name": "IEC 60034-12",
+        "edition": "2024 Ed 4.0",
+        "date": "2026-11-12",
+        "review_status": "scope_screened",
+        "review_basis": "Official/public publisher catalogue and published scope metadata; no licensed clause text reviewed",
+        "scope_note": "Starting performance for single-speed three-phase cage induction motors is relevant. The one-third current/torque relationships are idealised star-delta estimates; actual motor design, transition and load torque affect performance."
+      }
+    },
+    "transformer-current": {
+      "standard": {
+        "name": "IEC 60076-1",
+        "edition": "2011 Ed 3.0",
+        "date": "2026-11-12",
+        "review_status": "scope_screened",
+        "review_basis": "Official/public publisher catalogue and published scope metadata; no licensed clause text reviewed",
+        "scope_note": "General power-transformer requirements and ratings. The calculator uses the three-phase apparent-power/current identity, not a full transformer design method."
+      }
+    },
+    "transformer-loading": {
+      "standard": {
+        "name": "IEC 60076-1; IEC 60076-7",
+        "edition": "IEC 60076-1:2011 Ed 3.0; IEC 60076-7:2018 Ed 2.0",
+        "date": "2026-11-12",
+        "review_status": "scope_screened",
+        "review_basis": "Official/public publisher catalogue and published scope metadata; no licensed clause text reviewed",
+        "scope_note": "Transformer ratings and loading guidance are relevant. The calculator estimates apparent load from measured voltage/current; thermal loading and life assessment are not included."
+      }
+    },
+    "transformer-regulation": {
+      "standard": {
+        "name": "IEC 60076-1",
+        "edition": "2011 Ed 3.0",
+        "date": "2026-11-12",
+        "review_status": "scope_screened",
+        "review_basis": "Official/public publisher catalogue and published scope metadata; no licensed clause text reviewed",
+        "scope_note": "Power-transformer rating and performance context. The calculator uses user-entered resistance/impedance data and an approximate regulation relationship; confirm the test basis and sign convention."
+      }
+    },
+    "transformer-sizing": {
+      "standard": {
+        "name": "IEC 60076-1; IEC 60076-7",
+        "edition": "IEC 60076-1:2011 Ed 3.0; IEC 60076-7:2018 Ed 2.0",
+        "date": "2026-11-12",
+        "review_status": "scope_screened",
+        "review_basis": "Official/public publisher catalogue and published scope metadata; no licensed clause text reviewed",
+        "scope_note": "Power-transformer ratings and, for mineral-oil-immersed units, loading/thermal ageing are relevant. The calculator sizes from kW, power factor, growth and a selected loading fraction; it does not check harmonics, cooling, ambient or cyclic load."
+      }
+    },
+    "ups-runtime": {
+      "standard": {
+        "name": "IEC 62040-3; IEEE 485",
+        "edition": "IEC 62040-3:2021 Ed 3.0; IEEE 485-2020 (active)",
+        "date": "2026-11-12",
+        "review_status": "scope_screened",
+        "review_basis": "Official/public publisher catalogue and published scope metadata; no licensed clause text reviewed",
+        "scope_note": "UPS performance and stationary lead-acid battery sizing are relevant. The runtime equation is an energy-balance estimate, not a guaranteed discharge curve; IEEE 485 applies only to lead-acid stationary batteries in float service."
+      }
+    },
+    "voltage-drop": {
+      "standard": {
+        "name": "IEC 60364-5-52",
+        "edition": "2009 + A1:2024, consolidated Ed 3.1",
+        "date": "2026-11-12",
+        "review_status": "scope_screened",
+        "review_basis": "Official/public publisher catalogue and published scope metadata; no licensed clause text reviewed",
+        "scope_note": "Wiring-system selection and voltage-drop context. The calculator is a simplified estimate; allowable drop depends on the installation code, circuit use and project specification."
+      }
+    },
+    "voltage-unbalance": {
+      "standard": {
+        "name": "ANSI/NEMA MG 1",
+        "edition": "2021, Part 14.36.2",
+        "date": "2026-11-12",
+        "review_status": "scope_screened",
+        "review_basis": "Official/public publisher catalogue and published scope metadata; no licensed clause text reviewed",
+        "scope_note": "The calculator uses the maximum-deviation-from-average definition published in NEMA MG 1. IEC 60034-26:2026 addresses effects of unbalanced voltages on three-phase cage motors but uses a different analytical context; do not interchange definitions."
+      }
+    },
+    "wire-gauge-conversion": {
+      "standard": {
+        "name": "ASTM B258",
+        "edition": "B258-18 (reapproved 2026)",
+        "date": "2026-11-12",
+        "review_status": "scope_screened",
+        "review_basis": "Official/public publisher catalogue and published scope metadata; no licensed clause text reviewed",
+        "scope_note": "Defines nominal diameters and cross-sectional areas for AWG solid round wires. This is a gauge conversion only and does not establish ampacity or suitability."
+      }
+    }
+  }
+}

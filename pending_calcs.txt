@@ -1,0 +1,405 @@
+
+### voltage-drop | 09 Voltage Drop | Voltage Drop
+FORMULA: Vd = √3 × I × L × (R cos φ + X sin φ) / n     (single-phase: 2 × I × L × (…) / n; n = conductors per phase in parallel)
+ASSUMPTIONS: Balanced load; R and X are per-km values for one conductor, supplied by the user; Parallel conductors are identical, the same length and share the current equally; mutual effects between them are ignored; Single-phase uses out-and-return path, percentage taken on the given voltage
+NOTES: Cable R and X come from your data sheet. Standards-based sizing tables are not included; the calculation uses the General basis.
+
+### breaker-size | 16 Protection | Breaker Rating Selection
+FORMULA: In = smallest standard rating ≥ I × margin
+ASSUMPTIONS: Standard ratings: 6, 10, 16, 20, 25, 32, 40, 50, 63, 80, 100, 125, 160, 200, 250, 320, 400, 500, 630, 800, 1000, 1250, 1600, 2000, 2500, 3200, 4000 A; Rating must also not exceed the cable current capacity
+NOTES: Selection on current only. Breaking capacity, trip curve and discrimination are separate checks.
+
+### fault-current | 17 Short Circuit | Transformer Fault Current
+FORMULA: Isc = S / (√3 × V × Z%/100)
+ASSUMPTIONS: Infinite source (utility impedance ignored); Terminal fault, cable impedance ignored; Gives an upper bound
+NOTES: Including source and cable impedance lowers the value. Use as a conservative first check.
+
+### motor-current | 12 Motors | Motor Full-Load Current
+FORMULA: I = P / (η × √3 × V × pf)
+ASSUMPTIONS: Rated load; Nameplate current takes precedence over this value; Starting current is 5–8× and not included
+NOTES: Nameplate values should be preferred. Use this for planning when only kW is known.
+
+### transformer-current | 13 Transformers | Transformer Full-Load Current
+FORMULA: I = S / (√3 × V)
+ASSUMPTIONS: Three-phase transformer; Rated kVA at rated voltage
+NOTES: Run once per winding voltage.
+
+### electricity-bill-slabs | 07 Power and Energy | Electricity Bill from Tariff Slabs (fixed charge, tax)
+FORMULA: Energy charge = Σ (units in slab × slab rate)     Bill = (Energy charge + Fixed charge) × (1 + Tax / 100)
+ASSUMPTIONS: Units are billed in order: first slab, then second slab, then the rest at the third rate; Slab rates, fixed charge and tax are the values you enter from your tariff order; No demand charge, power-factor penalty, time-of-day rate or surcharge
+NOTES: Some tariffs apply one rate to all units (telescopic versus non-telescopic billing differ by utility). This calculator uses the telescopic method above; check your tariff order. It prices the whole bill from the units on your meter. To find what one appliance costs to run per day, month or year, use Appliance Running Cost (Energy and Cost).
+
+### cable-resistance | 10 Cable and Wire | Cable Resistance
+FORMULA: R = ρ × [1 + α (T − 20)] × L / A
+ASSUMPTIONS: Single conductor, one way; Linear temperature correction; DC resistance, no skin or proximity effect
+NOTES: Use the loop (out and back) value for a two-wire circuit.
+
+### wire-gauge-conversion | 10 Cable and Wire | AWG to Diameter and Area
+FORMULA: d = 0.127 mm × 92^((36 − n) / 39)     A = π d² / 4
+ASSUMPTIONS: Solid round conductor; Standard AWG definition
+NOTES: Stranded conductors have a slightly larger overall diameter. The full AWG 0000 to 40 chart, with a cross-section to AWG lookup, is at #awg-chart.
+
+### max-cable-length | 09 Voltage Drop | Maximum Cable Length
+FORMULA: L = n × (limit% × V) / (√3 × I × (R cos φ + X sin φ))     (n = conductors per phase in parallel)
+ASSUMPTIONS: Balanced load; R and X are per-km values for one conductor, supplied by the user; Parallel conductors are identical, the same length and share the current equally; Single-phase uses out-and-return path
+NOTES: Check cable ampacity and fault withstand separately.
+
+### cable-derating | 10 Cable and Wire | Cable Derating and Ampacity
+FORMULA: kt = √((θmax − Ta) / (θmax − Tref))     Iz = Itab × kt × kg × ko     Itab,req = In / (kt × kg × ko)
+ASSUMPTIONS: Approximate temperature factor from a steady-state conductor heat-balance model; it is not a standard-table correction factor; Tabulated ampacity and grouping factor supplied by the user; Rule checked: cf × Ib ≤ In ≤ Iz, with cf set by the chosen basis (1.0 General, 1.25 NEC-style continuous)
+NOTES: The temperature multiplier is an engineering approximation, not a substitute for the ambient-temperature correction factor in the applicable wiring standard or cable-manufacturer tables. For final cable selection, use the prescribed factor for the actual cable type, installation method, ambient conditions and grouping. Tabulated ampacity values are not built in because they depend on installation method and may be protected data; read them from your data sheet or licensed standard.
+
+### cable-size-vd | 10 Cable and Wire | Cable Size for Voltage Drop
+FORMULA: A = k × I × L × ρθ × cos φ / (Vmax − k × I × L × X × sin φ)     k = √3 (three-phase) or 2 (single-phase)
+ASSUMPTIONS: Resistivity taken at the full-load conductor temperature (70 or 90 °C); Reactance treated as constant, independent of size; Standard sizes from the IEC 60228 preferred series, 1.5 to 630 mm²; Copper 0.017241 and aluminium 0.02826 Ω·mm²/m at 20 °C
+NOTES: This sizes for voltage drop only. Check the result against derated ampacity and short-circuit withstand before selecting a cable.
+
+### cable-sc-withstand | 10 Cable and Wire | Cable Short-Circuit Withstand
+FORMULA: S = I × √t / k
+ASSUMPTIONS: Adiabatic heating (clearing time up to 5 s); k values at the normal starting temperature, as published in IEC 60364-4-43 and IEC 60364-5-54. For PVC the standard lowers k for conductors above 300 mm² (copper 103, aluminium 68), and this calculator applies that when the required area is above 300 mm²; Fault current is the prospective rms value at the cable; IEC-type k values apply on every basis. AS/NZS 3008.1.1:2025 uses its own K and final-temperature tables (for XLPE a higher K, reported as 167.4 for 250 °C), so do not use this result as an AS/NZS 3008 check
+NOTES: Use the clearing time of the protective device at the fault level, not its trip setting.
+
+### motor-starting | 12 Motors | Motor Starting Current
+FORMULA: DOL: Ist = k × In     Star-delta: Ist ÷ 3, torque ÷ 3     Auto-transformer: Ist × tap², torque × tap²
+ASSUMPTIONS: Motor torque varies with voltage squared; Supply voltage does not sag during the start
+NOTES: Star-delta suits only light or no-load starts. The changeover can cause a second current peak.
+
+### transformer-regulation | 13 Transformers | Transformer Voltage Regulation
+FORMULA: X = √(Z² − R²)     reg = x(R cosφ + X sinφ) + [x(X cosφ − R sinφ)]² / 200
+ASSUMPTIONS: Lagging power factor; Primary voltage held at rating; Load balanced
+NOTES: A leading power factor can give negative regulation (voltage rise); this calculator covers lagging loads only.
+
+### generator-kva | 14 Generators | Generator kVA Selection
+FORMULA: S = P / pf × (1 + margin)     I = S / (√3 × V)
+ASSUMPTIONS: Three-phase, continuous or standby duty as rated; Running load only; Standard sizes (kVA): 10, 15, 20, 30, 40, 50, 62.5, 75, 100, 125, 150, 200, 250, 320, 400, 500, 625, 750, 1000, 1250, 1500, 2000, 2500
+NOTES: Motor starting, non-linear loads and altitude or temperature derating need a separate check and can raise the size.
+
+### ups-runtime | 15 Batteries and UPS | UPS Battery Runtime
+FORMULA: E = Vb × Ah × DoD × ageing     t = E / (Load / η)
+ASSUMPTIONS: Constant power load; Capacity is the rated value at the stated discharge rate
+NOTES: High discharge rates deliver less than rated Ah (Peukert effect), so confirm against the battery discharge table for short runtimes.
+
+### pv-string-size | 25 Solar PV | Solar PV String Length
+FORMULA: Voc(cold) = Voc × (1 + tc × (Tmin − 25))     N = floor(Vmax / Voc(cold))
+ASSUMPTIONS: Standard test conditions are 25 °C; Linear temperature coefficient
+NOTES: Also check the inverter MPPT window at hot-weather Vmp; this sets only the upper limit.
+
+### pv-energy | 25 Solar PV | Solar PV Energy Yield
+FORMULA: E(day) = P × peak sun hours × PR     E(year) = E(day) × 365
+ASSUMPTIONS: Average day over the year; No degradation or shading beyond the PR
+NOTES: Annual output falls about 0.5% per year with module ageing.
+
+### ev-charge-time | 27 EV Charging | EV Charging Time
+FORMULA: Eb = capacity × (target − start)     Eg = Eb / η     t = Eg / P
+ASSUMPTIONS: Constant charging power; Vehicle onboard charger is not the limit
+NOTES: Charging slows above about 80%, so real times to 100% are longer than this linear estimate.
+
+### lumen-method | 28 Lighting | Lighting Level (Lumen Method)
+FORMULA: N = E × A / (Φ × UF × MF)
+ASSUMPTIONS: Uniform layout; Utilisation factor taken from the luminaire data for this room
+NOTES: Check uniformity and glare separately; the count is a starting point for layout.
+
+### earth-rod-resistance | 18 Earthing | Earth Rod Resistance
+FORMULA: R = ρ / (2π L) × (ln(8L / d) − 1)
+ASSUMPTIONS: Uniform soil; Single rod, no nearby electrodes
+NOTES: Measure on site. Soil moisture and season can change resistance several-fold; parallel rods must be spaced at least their length apart.
+
+### harmonic-thd | 20 Harmonics | Current THD
+FORMULA: THD = √(I3² + I5² + I7²) / I1 × 100     Irms = √(I1² + I3² + I5² + I7²)
+ASSUMPTIONS: Only the harmonics entered are included; Magnitudes are RMS
+NOTES: Add further harmonic orders from a power-quality analyser for a complete figure.
+
+### fault-mva | 17 Short Circuit | Fault Level (kA to MVA)
+FORMULA: S = √3 × V × I
+ASSUMPTIONS: Symmetrical three-phase fault; Voltage is the pre-fault line-to-line value
+NOTES: For the reverse, I = S / (√3 × V). Per-unit base values are in the Per-Unit calculator.
+
+### current-loop-4-20 | 31 Instrumentation | 4-20 mA Signal Scaling
+FORMULA: PV = lo + (I − 4 mA) / 16 mA × (hi − lo)
+ASSUMPTIONS: Linear transmitter; Live-zero 4 mA to 20 mA range
+NOTES: A current below about 3.8 mA or above 20.5 mA usually signals a wire break or a transmitter fault (NAMUR NE43).
+
+### battery-bank-size | 15 Batteries and UPS | Battery Bank Sizing
+FORMULA: Ah = P × t / (V × DoD × η)
+ASSUMPTIONS: Constant load for the whole backup time; Capacity quoted at the discharge rate of the backup time; No ageing, temperature or Peukert allowance
+NOTES: Add an ageing margin (typically 20 to 25%) and a temperature factor before selecting the battery.
+
+### cable-power-loss | 10 Cable and Wire | Cable Power Loss (I²R)
+FORMULA: Loss = 3 × I² × R × L (three-phase)     2 × I² × R × L (single-phase)
+ASSUMPTIONS: Balanced load; Resistance is the AC value at operating temperature; Neutral current ignored
+NOTES: Cable loss is continuous heat. Over a year it is often worth a larger conductor than the voltage-drop limit alone requires.
+
+### dc-voltage-drop | 09 Voltage Drop | Voltage Drop from Conductor Size
+FORMULA: Vd = k × I × L × ρT / A     ρT = ρ20 × (1 + α(T − 20))     k = 2 (two-wire) or √3 (three-phase)     AWG: d = 0.127 mm × 92^((36 − n) / 39), A = π d² / 4
+ASSUMPTIONS: Resistive load, reactance ignored; ρ20 (Ω·m): copper 1.7241e-8, aluminium 2.8264e-8, silver 1.59e-8, gold 2.44e-8, nickel 6.99e-8, nichrome 1.10e-6; α (per °C): copper 0.00393, aluminium 0.00403, silver 0.0038, gold 0.0034, nickel 0.006, nichrome 0.0004; Round solid conductor when size is given as AWG or diameter; A custom resistivity is taken as the value at 20 °C
+NOTES: Copper and aluminium use the annealed-copper (IACS) and commercial-aluminium values, which are slightly higher than pure-metal handbook values (copper 1.68e-8 and aluminium 2.65e-8 Ω·m would give a drop about 2.6% and 6.2% lower). The resistivity used is shown beside the result. Stranded conductors have more resistance than a solid wire of the same diameter. For AC circuits with significant reactance or low power factor use the Voltage Drop calculator with R and X from a data sheet.
+
+### conductor-temp-resistance | 10 Cable and Wire | Conductor Resistance vs Temperature
+FORMULA: RT = R20 × (1 + α × (T − 20))     α: copper 0.00393, aluminium 0.00403 per °C
+ASSUMPTIONS: Linear temperature coefficient; Valid across the normal operating range
+NOTES: A cable at 90 °C has about 27% more resistance than the cold catalogue value. Voltage drop and loss should use the hot value.
+
+### copper-vs-aluminium | 10 Cable and Wire | Copper vs Aluminium Conductor
+FORMULA: R = ρ L / A     A(Al) = A(Cu) × ρAl / ρCu
+ASSUMPTIONS: ρ at 20 °C: copper 1.7241e-8, aluminium 2.8264e-8 Ω·m; Density: copper 8960, aluminium 2700 kg/m³
+NOTES: Aluminium needs about 1.64 times the area but weighs about half as much. Terminations, ampacity tables and bending radius are separate checks.
+
+### motor-start-dip | 12 Motors | Motor Starting Voltage Dip
+FORMULA: Sst = √3 × V × k × In     dip = Sst / (Ssc + Sst)     torque ∝ (1 − dip)²
+ASSUMPTIONS: Source and motor impedances add arithmetically; Starting power factor ignored (slightly conservative)
+NOTES: Many specifications limit starting dip to 10 to 15% at the motor bus. Check lights, drives and contactors on the same bus.
+
+### pump-motor-power | 12 Motors | Pump Shaft and Motor Power
+FORMULA: Ph = ρ × g × Q × H     Ps = Ph / ηpump     Pin = Ps / ηmotor
+ASSUMPTIONS: g = 9.80665 m/s²; Steady flow at the duty point
+NOTES: Select the motor from the shaft power plus a margin (commonly 10 to 20%). Check NPSH and the pump curve separately.
+
+### transformer-sizing | 13 Transformers | Transformer kVA Selection
+FORMULA: S = P / pf × (1 + growth) / loading     I = S / (√3 × V)
+ASSUMPTIONS: Balanced three-phase load; Standard sizes: 25, 50, 63, 100, 160, 200, 250, 315, 400, 500, 630, 800, 1000, 1250, 1600, 2000, 2500, 3150 kVA
+NOTES: Harmonic-rich loads, motor starting and ambient temperature can call for a larger or K-rated unit.
+
+### transformer-loading | 13 Transformers | Transformer Loading from Measurements
+FORMULA: Load = √3 × V × I     loading = Load / rating
+ASSUMPTIONS: Balanced phases (use the average of the three line currents)
+NOTES: Sustained loading above 100% shortens insulation life. Check the winding temperature indicator as well.
+
+### fault-types | 17 Short Circuit | Fault Current by Fault Type
+FORMULA: I3φ = V / (√3 Z1)     ILL = (√3 / 2) × I3φ     ILE = √3 V / (2 Z1 + Z0)
+ASSUMPTIONS: Z2 = Z1; Impedances combined as magnitudes (no angle), slightly conservative; Bolted fault, no arc resistance
+NOTES: The largest value sets the breaking capacity; the smallest earth-fault value must still trip the protective device in time.
+
+### battery-series-parallel | 15 Batteries and UPS | Battery Series-Parallel Bank
+FORMULA: V = ns × Vc     Ah = np × Ahc     E = V × Ah
+ASSUMPTIONS: Identical batteries at the same state of charge
+NOTES: Keep parallel strings to four or fewer in lead-acid banks to limit current imbalance.
+
+### pv-array-size | 25 Solar PV | Solar PV Array Size from Energy Need
+FORMULA: Parray = E / (PSH × PR)     modules = Parray / Pmodule, rounded up
+ASSUMPTIONS: PSH is the daily irradiation on the module plane in kWh/m²; Performance ratio covers temperature, soiling, cable and inverter losses
+NOTES: Get PSH from site irradiation data. Roof area, string voltage window and inverter size are separate checks.
+
+### led-retrofit-payback | 28 Lighting | LED Retrofit Savings and Payback
+FORMULA: Saved energy = n × (Wold − Wnew) × hours     payback = n × cost / yearly saving
+ASSUMPTIONS: Fixed hours and tariff; Maintenance and lamp-replacement savings not included (they shorten payback)
+NOTES: Tariff and cost use any one currency. Include demand charges for a fuller picture.
+
+### generator-fuel | 14 Generators | Generator Fuel Consumption and Autonomy
+FORMULA: Fuel mass flow = P × SFC     L/h = mass flow / density     runtime = tank / (L/h)
+ASSUMPTIONS: Steady load; SFC taken at the stated load
+NOTES: Assume no more than about 90% of the tank is usable, and add reserve for fuel-polishing and sludge.
+
+### maximum-demand | 07 Power and Energy | Maximum Demand
+FORMULA: MD = connected × demand factor / diversity factor     S = MD / pf
+ASSUMPTIONS: Demand factor = max demand ÷ connected load for each group; Diversity factor ≥ 1 reflects groups peaking at different times
+NOTES: Use factors from your project specification or standard; the defaults are only examples.
+
+### ngr-sizing | 18 Earthing | Neutral Earthing Resistor
+FORMULA: R = (V / √3) / If     P = If² × R     E = P × t
+ASSUMPTIONS: Single line-to-earth fault, source impedance neglected; Fault current is purely resistive
+NOTES: Choose the current from relay sensitivity and damage limits. The resistor is rated for its short-time duty, not for continuous use.
+
+### earth-rods-parallel | 18 Earthing | Earth Rods in Parallel
+FORMULA: Rn = R1 / (n × u)
+ASSUMPTIONS: Rods driven in the same soil; Utilisation factor is user-supplied
+NOTES: Doubling the rods does not halve the resistance. Deeper rods or lower-resistivity backfill often work better than more rods.
+
+### earth-grid-resistance | 18 Earthing | Earth Grid Resistance
+FORMULA: Rg = ρ / (4r) + ρ / LT     r = √(A / π)
+ASSUMPTIONS: Uniform soil; Grid buried at shallow depth; Laurent-Niemann form; the Sverak refinement adds a depth term
+NOTES: Measure soil resistivity on site (Wenner method). Step and touch voltage need a separate study.
+
+### parallel-cable-sets | 10 Cable and Wire | Parallel Cable Sets
+FORMULA: n = ceil(Ib / (Iz × k))
+ASSUMPTIONS: Equal cables of the same length and type; Current shares equally
+NOTES: Parallel cables must have equal length, size and route conditions or the current will not share. Keep each set a similar distance from the others.
+
+### conduit-fill | 11 Conduit and Raceway | Conduit Fill
+FORMULA: fill = n × (d / D)² × 100     limit: 53% for 1 cable, 31% for 2, 40% for 3 or more
+ASSUMPTIONS: Round, equal cables; Limits are the widely used general rule; your code may differ
+NOTES: Pulling tension, bends and the length of run can require a lower fill than the limit.
+
+### hp-kw-converter | 36 Converters and Units | HP to kW and kW to HP
+FORMULA: 1 HP = 745.6999 W     1 PS = 735.4988 W
+ASSUMPTIONS: HP is mechanical (550 ft·lbf/s); Electrical HP of 746 W differs by 0.04%
+NOTES: Change the input unit to kW and read the other rows.
+
+### op-amp-gain | 23 Electronics | Op-Amp Gain
+FORMULA: Inverting: A = −Rf / Rin     Non-inverting: A = 1 + Rf / Rin
+ASSUMPTIONS: Ideal op-amp; Output stays within the supply rails
+NOTES: Real op-amps saturate near the supply rails and have a finite gain-bandwidth product.
+
+### water-heater-kw | 29 Industrial Electrical | Heater Power for Heating a Liquid
+FORMULA: Q = m × c × ΔT     P = Q / (t × η)
+ASSUMPTIONS: 1 L of water is 1 kg; Losses during heating are lumped in the efficiency
+NOTES: Add margin for standing losses on long heat-ups, and check the supply current with the three-phase current calculator.
+
+### ir-temp-correction | 32 Testing and Measurement | Insulation Resistance Temperature Correction
+FORMULA: R40 = Rm × 0.5 ^ ((40 − T) / 10)
+ASSUMPTIONS: Insulation resistance halves for each 10 °C rise; Rule of thumb; use the curve in your test standard where one applies
+NOTES: Always record the temperature with the reading. A cold reading flatters the insulation, so correct before comparing with a minimum value.
+
+### insulation-pi-dar | 32 Testing and Measurement | Polarisation Index and Dielectric Absorption Ratio
+FORMULA: DAR = R60 / R30     PI = R600 / R60
+ASSUMPTIONS: Same test voltage and temperature for all readings; Readings taken after the insulation is fully discharged
+NOTES: Commonly quoted guide for PI: below 1 poor, 1 to 2 questionable, 2 to 4 acceptable, above 4 good. A very high resistance can give a low PI that is still healthy. Follow your test standard for pass limits.
+
+### agl-ccr-loading | 35 Airport and AGL | AGL Series Circuit Load and CCR Size
+FORMULA: Pt = n × Plamp / ηT + I² × R × L     Vout = Pt / I     CCR ≥ Pt / max loading
+ASSUMPTIONS: Resistive series circuit, power factor near unity; Cable resistance given for the full loop length; Standard CCR sizes: 4, 7.5, 10, 15, 20, 25, 30 kW. Manufacturer catalogues also list 1, 2, 5, 50 and 70 kW units and a 20 A class; confirm the sizes and the current edition of FAA AC 150/5345-10 before use
+NOTES: Confirm against the CCR manufacturer's output curves, the isolating transformer open-circuit behaviour and the project specification. Lamp failures shift the load, so check at the highest brightness step.
+
+### agl-max-fittings | 35 Airport and AGL | AGL Maximum Fittings on a CCR
+FORMULA: Usable = loading × CCR rating     Pcable = I² × R × L     nmax = ⌊(Usable − Pcable) / (Plamp / ηT)⌋
+ASSUMPTIONS: Resistive series circuit, power factor near unity; Cable resistance given for the full loop length; Every fitting has the same lamp power and the same transformer efficiency
+NOTES: This is the reverse of the CCR sizing calculator. Confirm against the CCR manufacturer's output curves and the isolating transformer open-circuit behaviour, and keep spare capacity for future fittings. Check at the highest brightness step.
+
+### agl-isolating-transformer | 35 Airport and AGL | AGL Isolating Transformer Current and Loading
+FORMULA: Is = Ip × Isr / Ipr     Vs = Plamp / Is     Pin = Plamp / ηT     Vp = Pin / Ip     Loading = Plamp / Prated
+ASSUMPTIONS: Ideal current ratio: the secondary current follows the primary current in the ratio of the rated currents; Lamp power is the figure at the secondary current, taken as a fixed power; Resistive load, power factor near unity
+NOTES: The lamp is not a fixed resistance, so look up its power at the secondary current shown. An open secondary (failed lamp) is not modelled and needs the manufacturer data on open-circuit voltage and core saturation.
+
+### agl-ccr-input-energy | 35 Airport and AGL | AGL CCR Input Power and Annual Energy
+FORMULA: Pin = Pout / ηCCR     S = Pin / pf     Q = S × sin(acos pf)     E = Pin × hours     Cost = E × tariff
+ASSUMPTIONS: Efficiency and power factor are constant at the load entered; Input power factor is the figure at this load, not at full load; Hours are for the brightness step entered, so cost each step separately and add them
+NOTES: Regulator efficiency and input power factor both fall at light load and low brightness steps, so use the data sheet figure for the step you are costing. This is energy for the regulator input only.
+
+### agl-brightness-steps | 35 Airport and AGL | AGL Brightness Step Current and Circuit Load
+FORMULA: I = step current     Plamp = n × P6.6 × (I / 6.6)^k / ηT     Pcable = I² × R × L     Pt = Plamp + Pcable     Vout = Pt / I
+ASSUMPTIONS: Step currents are the usual 6.6 A circuit values: 2.8, 3.4, 4.1, 5.2, 6.6 A (5-step) and 4.8, 5.5, 6.6 A (3-step); Lamp power scales as a power of the current, with the exponent you enter; Transformer efficiency is constant at every step; Resistive series circuit, power factor near unity
+NOTES: The highest step normally sets the CCR size, so use the CCR sizing calculator at 6.6 A for that. Use this one to see the output voltage and load at the lower steps and to check them against the CCR curves. Confirm the step currents against your project specification.
+
+### agl-lamp-life-curve | 35 Airport and AGL | AGL Lamp Life at a Different Circuit Current
+FORMULA: Life = T1 × (I / I1)^(−m)     m = ln(T2 / T1) / ln(I1 / I2)     Replacements per year = n × H / T3
+ASSUMPTIONS: Life follows a power law in the circuit current between the points; Rated life is an average, so some lamps fail earlier; Operating hours are all at the evaluated current
+NOTES: Two points fix the curve exactly, so the answer is only as good as the readings. Staying between the two points is safer than going beyond them. Use the manufacturer curve where one exists.
+
+### agl-cable-loop-loss | 35 Airport and AGL | AGL Series Cable Loop Resistance and Loss
+FORMULA: R = ρ20 × [1 + α (T − 20)] × L / A     Vd = I × R     Ploss = I² × R
+ASSUMPTIONS: Copper 1.7241e-8 Ω·m and aluminium 2.8264e-8 Ω·m at 20 °C, with 0.00393 and 0.00403 per °C; DC resistance of the full loop, no skin or proximity effect; The same current flows through the whole loop
+NOTES: Use the result as the cable loss in the CCR sizing and brightness step calculators. Confirm the cable resistance against the manufacturer data for the cable you install.
+
+### agl-cable-size-loss | 35 Airport and AGL | AGL Series Cable Size for a Loss Limit
+FORMULA: A ≥ ρ(T) × L × I² / (limit × Plamp)     Ploss = I² × ρ(T) × L / A
+ASSUMPTIONS: Resistivity as in the loop resistance calculator; Standard sizes from the IEC 60228 preferred series, 1.5 to 630 mm²; The loss limit is a project choice, not a value from a standard
+NOTES: Check the chosen size against the cable manufacturer data, the maximum voltage the CCR can supply and the insulation rating before ordering.
+
+### agl-lamp-failure-load | 35 Airport and AGL | AGL Circuit Load with Failed Lamps
+FORMULA: P0 = n × Plamp / ηT + I² R L     Pf = (n − f) × Plamp / ηT + f × Popen + I² R L     Vout = Pf / I
+ASSUMPTIONS: Each failed lamp leaves its transformer drawing a fixed open-secondary power; Resistive series circuit, power factor near unity; Current held at the circuit value by the CCR
+NOTES: A real open-secondary transformer is not a fixed power. Its voltage and loss depend on the core design, so treat the result as a first estimate and confirm it with the transformer manufacturer. Several failures in a row can still push the CCR toward its overvoltage or open-circuit protection.
+
+### fault-loop-impedance | 30 Electrical Safety | Earth Fault Loop Impedance
+FORMULA: Zs = Ze + (R1 + R2)     If = U0 / Zs     Zs(max) = U0 / Ia
+ASSUMPTIONS: Impedances add arithmetically (conservative); Conductor resistances are at operating temperature; Fault is bolted, with no arc impedance
+NOTES: Required disconnection times and the permitted Zs values come from your wiring rules. This only compares the fault current with the device operating current you enter.
+
+### pue | 34 Data Center Electrical | Data Centre PUE
+FORMULA: PUE = total facility power / IT power     DCiE = 1 / PUE × 100
+ASSUMPTIONS: Both powers are averaged over the same period; IT power is measured at the PDU or rack outlet
+NOTES: A single spot reading can mislead. Use energy over a full year so seasonal cooling load is included.
+
+### rack-cooling | 34 Data Center Electrical | Rack Heat Load and Airflow
+FORMULA: Heat = P (all power becomes heat)     BTU/h = 3.41214 × W     ton = 12 000 BTU/h     V̇ = P / (ρ × cp × ΔT)
+ASSUMPTIONS: Air density 1.2 kg/m³, specific heat 1005 J/(kg·K); All electrical power ends up as heat in the room; No allowance for bypass or recirculation
+NOTES: Real designs add margin for hot-spot mixing. Switch the airflow unit to CFM for US cooling data.
+
+### wind-power | 26 Renewable Energy | Wind Turbine Power
+FORMULA: A = π D² / 4     Pwind = ½ ρ A v³     Pout = Pwind × Cp × η
+ASSUMPTIONS: Steady wind at hub height; Cp is for this wind speed, taken from the power curve; Standard sea-level air density 1.225 kg/m³
+NOTES: Power rises with the cube of wind speed, so a small error in the wind speed gives a large error in output. Use the manufacturer power curve for real yield.
+
+### zener-regulator | 24 Semiconductor Components | Zener Shunt Regulator
+FORMULA: Rs = (Vin − Vz) / (IL + Iz)     PR = (Vin − Vz)² / Rs     Pz(no load) = Vz × (Vin − Vz) / Rs
+ASSUMPTIONS: Design at the lowest input voltage and highest load; Zener voltage is constant over the current range
+NOTES: Check the zener power again at the highest input voltage with the load disconnected. A shunt regulator wastes the full current all the time.
+
+### bjt-base-resistor | 24 Semiconductor Components | Transistor Base Resistor
+FORMULA: Ib = k × Ic / hFE     Rb = (Vin − Vbe) / Ib
+ASSUMPTIONS: Transistor used as a switch, not an amplifier; Vbe about 0.7 V for silicon
+NOTES: Check that the driver pin can supply the base current, and that the transistor dissipation at Vce(sat) is within its rating.
+
+### timer-555 | 24 Semiconductor Components | 555 Timer Astable
+FORMULA: f = 1 / (ln2 × (R1 + 2 R2) × C)     Th = ln2 × (R1 + R2) × C     Tl = ln2 × R2 × C
+ASSUMPTIONS: Ideal components, supply well within the 555 range; The common 1.44 / ((R1 + 2R2) C) is this formula with ln2 rounded
+NOTES: Duty cycle is always above 50% in this circuit. A diode across R2 or a different topology is needed for a lower duty cycle. Capacitor tolerance sets the frequency accuracy.
+
+### heatsink-thermal | 24 Semiconductor Components | Heatsink Thermal Resistance
+FORMULA: θja(max) = (Tj − Ta) / P     θsa(max) = θja(max) − θjc − θcs
+ASSUMPTIONS: Steady-state dissipation; Single heat path from junction through case and sink to ambient
+NOTES: Leave margin below the junction limit. Heatsink data sheets give θsa for natural convection or a stated airflow, so match that condition.
+
+### star-delta-starting | 12 Motors | Star-Delta Starting
+FORMULA: IDOL = k × In     Istar = IDOL / 3     Tstar = TDOL / 3
+ASSUMPTIONS: Motor is delta-connected at its rated line voltage; Supply voltage stays constant; Switching transient peak is not included
+NOTES: Star-delta cuts both current and torque to one third. It only suits loads that start with low torque, such as unloaded fans and pumps with a closed valve.
+
+### battery-charge-time | 15 Batteries and UPS | Battery Charge Time
+FORMULA: t = Cap × fraction / (Icharge × η)
+ASSUMPTIONS: Constant charger current for the whole time; No allowance for the slower absorption stage near full
+NOTES: Real chargers taper the current near full charge, so the last 10 to 20% takes longer than this estimate. Follow the battery maker's limits on charge current.
+
+### fan-pump-affinity | 29 Industrial Electrical | Fan and Pump Affinity Laws
+FORMULA: Q2/Q1 = N2/N1     H2/H1 = (N2/N1)²     P2/P1 = (N2/N1)³
+ASSUMPTIONS: Same fan or pump, same fluid density; System resistance is friction-dominated with little static head; Efficiency stays the same across the speed range
+NOTES: Static head breaks the cube law, so savings on a pump lifting water are smaller. Below about 50% speed, motor and drive losses matter.
+
+### rtd-pt100 | 31 Instrumentation | RTD Resistance to Temperature
+FORMULA: R = R0 (1 + A T + B T²)     T = (−A + √(A² − 4B (1 − R/R0))) / 2B     A = 3.9083×10⁻³, B = −5.775×10⁻⁷
+ASSUMPTIONS: Standard platinum RTD, 0 to 850 °C range; Lead wire resistance already subtracted or a 3 or 4-wire connection
+NOTES: Two-wire connections add lead resistance, which reads as a temperature error of about 2.6 °C per ohm for a Pt100. Below 0 °C a third term is needed and this calculator does not cover it.
+
+### voltage-unbalance | 06 Three Phase | Three-Phase Voltage Unbalance
+FORMULA: Unbalance % = (max deviation from average / average) × 100
+ASSUMPTIONS: Line-to-line voltages measured at the motor terminals; NEMA definition; the IEC method uses symmetrical components and gives slightly different values
+NOTES: A small voltage unbalance causes a much larger current unbalance in an induction motor. Fix the cause before relying on derating.
+
+### ac-voltage-drop | 09 Voltage Drop | AC Voltage Drop from Conductor Size
+FORMULA: Vd = k × I × (R cos φ ± X sin φ)  (+ lagging, − leading)     R = ρT × L / A     ρT = ρ20 × (1 + α(T − 20))     k = √3 (three-phase) or 2 (single-phase)
+ASSUMPTIONS: Balanced load, sinusoidal currents; choose leading only for a capacitive load, where the reactive term reduces the drop; Resistance from material, size and temperature; skin and proximity effect are not included (they matter above about 150 mm²); Reactance is the per-conductor value you enter from the data sheet; Single-phase uses the out-and-return path; Parallel conductors (1 to 9 per phase) are identical, the same length and share the current equally; resistance and reactance are divided by the number in parallel, and mutual effects are ignored
+NOTES: For a resistive estimate set the power factor to 1 or the reactance to 0. Compare the result with the limit in your standard or specification.
+
+### swg-wire | 10 Cable and Wire | SWG to Diameter and Area
+FORMULA: d = table value for the SWG number (7/0 = 0.500 in … 50 = 0.0010 in)     A = π d² / 4
+ASSUMPTIONS: Solid round conductor; Diameters are the standard SWG table values; the series is a table, not a formula
+NOTES: SWG and AWG differ: SWG 18 is 1.219 mm, AWG 18 is 1.024 mm. Always state which gauge system a drawing or order uses.
+
+### lumens-lux-area | 28 Lighting | Lumens, Lux and Area (any two)
+FORMULA: E = Φ × u / A     Φ = E × A / u     A = Φ × u / E     (1 fc = 10.7639 lx)
+ASSUMPTIONS: Light is spread evenly over the area; u is the fraction of lamp lumens that reach the surface
+NOTES: Lux is lumens per square metre. For a room, use the utilisation and maintenance factors, or the lumen method for a luminaire count.
+
+### candela-lux-distance | 28 Lighting | Candela, Lux and Distance (any two)
+FORMULA: E = I × cos θ / d²     I = E × d² / cos θ     d = √(I × cos θ / E)
+ASSUMPTIONS: Treated as a point source: the distance should be at least five times the size of the source; Distance is measured along the line from the source to the point; No light is absorbed or reflected on the way
+NOTES: Valid when the distance is at least five times the source size. Near a large luminaire the inverse-square law overstates the lux.
+
+### candela-lumens-beam | 28 Lighting | Candela and Lumens from Beam Angle
+FORMULA: Ω = 2π × (1 − cos(θ / 2))     Φ = I × Ω     I = Φ / Ω
+ASSUMPTIONS: Intensity is the same everywhere inside the cone; No light outside the cone
+NOTES: Real beams are brightest on axis, so a data-sheet peak intensity gives more lumens than the beam really carries. Use the measured polar curve for accuracy.
+
+### lumens-watts | 28 Lighting | Lumens and Watts (luminous efficacy)
+FORMULA: Φ = P × η     P = Φ / η     η = Φ / P
+ASSUMPTIONS: Power is the lamp or luminaire input power as stated for the efficacy; Efficacy is taken from the data sheet
+NOTES: Efficacy depends on the lamp type and whether driver losses are counted. Compare lamps on the same basis, lamp-only or system.
+
+### lux-to-watts | 28 Lighting | Lighting Power for a Target Lux
+FORMULA: Φ = E × A / (UF × MF)     P = Φ / η     power density = P / A
+ASSUMPTIONS: Uniform illuminance across the area; Factors apply to the whole installation
+NOTES: Use the lumen method calculator for the number of luminaires. Check the power density against your energy code.
+
+### millicandela-lumens-beam | 28 Lighting | Millicandela and Lumens from Beam Angle
+FORMULA: Ω = 2π × (1 − cos(θ / 2))     Φ (lm) = I (cd) × Ω     I (mcd) = Φ / Ω × 1,000
+ASSUMPTIONS: Intensity is the same everywhere inside the cone; No light outside the cone
+NOTES: Data-sheet millicandela is normally the peak on-axis value, so the flux from this conversion is an upper estimate. Use the total luminous flux on the data sheet where it is given.
+
+### watts-to-lux | 28 Lighting | Illuminance from Lamp Power (watts to lux)
+FORMULA: Φ = P × η     E = Φ × UF × MF / A
+ASSUMPTIONS: Uniform illuminance across the area; Factors apply to the whole installation; Power is lamp or luminaire input power as stated for the efficacy
+NOTES: This is the reverse of Lighting Power for a Target Lux. Use the lumen method calculator for a luminaire count and the point calculation for uneven layouts.
+
+### agl-light-intensity-distance | 35 Airport and AGL | AGL Light Intensity at Distance (Allard's Law)
+FORMULA: E = I × T / d²     T = exp(−σ d)     σ = ln(20) / MOR
+ASSUMPTIONS: Point source seen head-on; Uniform atmosphere along the path; MOR is defined at 5% transmissivity (ln 20 = 2.9957)
+NOTES: This gives the light level at the eye only. Visual range needs an eye threshold for the background brightness you design for; take that from the method you follow (for example ICAO Doc 9328 for RVR). Not an operational RVR assessment.

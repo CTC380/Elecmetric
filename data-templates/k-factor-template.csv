@@ -1,0 +1,10 @@
+# kind: k-factor
+# standard: <standard name>
+# edition: <edition and amendment>
+# table: <table number>
+# conductor: Cu
+# insulation: XLPE
+# source: licensed-copy
+# entered_by: <your name>
+# Each row gives k for conductors up to that size; use inf for the last row.
+size_max_mm2,k

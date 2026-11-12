@@ -1,0 +1,22 @@
+# Operating systems
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors
+.vscode/
+.idea/
+
+# Node / test output
+node_modules/
+coverage/
+*.log
+npm-debug.log*
+
+# GitHub Pages build output
+_site/
+
+# Local environment files
+.env
+.env.*
+!.env.example

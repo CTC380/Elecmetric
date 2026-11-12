@@ -1,0 +1,10 @@
+# kind: temperature-factor
+# standard: <standard name>
+# edition: <edition and amendment>
+# table: <table number>
+# conductor: Cu
+# insulation: XLPE
+# reference_ambient_c: <reference ambient printed in the table>
+# source: licensed-copy
+# entered_by: <your name>
+ambient_c,factor

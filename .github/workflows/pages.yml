@@ -1,0 +1,75 @@
+name: Elecmetric | Test and deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Test and build site
+    runs-on: ubuntu-latest
+    env:
+      BASE_URL: ${{ vars.BASE_URL || 'https://elecmetric.com' }}
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: 22
+
+      - name: Run calculator and route tests
+        run: |
+          node tests/run_tests.js
+          node tests/router_test.js
+
+      - name: Build production pages and run deployment guard
+        run: |
+          export SITE_LASTMOD="$(git log -1 --format=%cs)"
+          test -n "$SITE_LASTMOD"
+          node tools/build_pages.js
+          REQUIRE_LASTMOD=1 node tools/check_deploy.js
+
+      - name: Assemble and audit GitHub Pages upload
+        run: |
+          mkdir _site
+          cp -r index.html 404.html privacy.html terms.html engine.js sw.js manifest.webmanifest icon.svg icon-192.png icon-512.png icon-maskable-512.png apple-touch-icon.png logo.png og-image.png robots.txt sitemap.xml pages calculators converters _site/
+          touch _site/.nojekyll
+          node tools/check_assets.js _site --production
+
+      - name: Upload GitHub Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+
+  deploy:
+    name: Publish GitHub Pages
+    if: github.event_name != 'pull_request'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    concurrency:
+      group: github-pages
+      cancel-in-progress: true
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Deploy site
+        id: deployment
+        uses: actions/deploy-pages@v4

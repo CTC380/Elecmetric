@@ -1,0 +1,1022 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'"><title>Scientific Calculator Online | Elecmetric</title><meta name="description" content="Free online scientific calculator for electrical engineers and students: trigonometry, logarithms, powers, roots, complex numbers and phasors."><meta property="og:title" content="Scientific Calculator Online | Elecmetric"><meta property="og:description" content="Free online scientific calculator for electrical engineers and students: trigonometry, logarithms, powers, roots, complex numbers and phasors."><meta property="og:type" content="website"><meta property="og:site_name" content="Elecmetric"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Scientific Calculator Online | Elecmetric"><meta name="twitter:description" content="Free online scientific calculator for electrical engineers and students: trigonometry, logarithms, powers, roots, complex numbers and phasors."><meta name="theme-color" content="#043B79"><link rel="icon" href="../../icon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="../../apple-touch-icon.png"><link rel="manifest" href="../../manifest.webmanifest"><style>#sc .sc-card{padding:16px 16px 18px}#sc .sc-top{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:end;margin-bottom:12px}#sc .sc-g{display:flex;flex-direction:column;gap:4px}#sc .sc-g select{width:auto;min-width:96px}#sc .sc-l,#sc label.sc-l{display:block;font-weight:600;font-size:13px;margin:0 0 4px}#sc .sc-g label{margin:0;font-weight:600;font-size:13px}#sc select{font:15px var(--body);color:var(--ink);background:var(--field);border:1px solid var(--line);border-radius:6px;padding:8px;min-height:40px}#sc th,#sc td{text-transform:none;letter-spacing:0}#sc .seg{display:inline-flex;border:1px solid var(--line);border-radius:6px;overflow:hidden}#sc .seg button{font:600 14px var(--body);padding:9px 14px;min-height:40px;background:var(--surface);color:var(--ink);border:0;border-right:1px solid var(--line);cursor:pointer}#sc .seg button:last-child{border-right:0}#sc .seg button[aria-pressed="true"]{background:var(--navy);color:var(--on-navy)}#sc .seg button:focus-visible,#sc .k:focus-visible,#sc .btn2:focus-visible,#sc .chipb:focus-visible,#sc .sc-h:focus-visible{outline:none;box-shadow:var(--ring)}#sc .sc-in{display:block;width:100%;box-sizing:border-box;font:500 22px/1.3 var(--mono);padding:12px 14px;min-height:52px;border-radius:8px;border:1px solid var(--line);background:var(--field);color:var(--ink)}#sc .sc-in:focus{outline:2px solid var(--gold);outline-offset:1px}#sc .sc-res{display:flex;gap:12px;align-items:baseline;flex-wrap:wrap;padding:12px 2px 2px;min-height:60px}#sc .sc-eq{font:600 28px var(--display);color:var(--muted)}#sc .sc-live{font:600 34px/1.15 var(--display);color:var(--num);word-break:break-word}#sc .sc-alt{flex-basis:100%;color:var(--muted);font:14px var(--mono);min-height:1.2em}#sc .sc-msg{min-height:1.4em;margin:2px 0 8px}#sc .sc-act{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:4px 0 10px}#sc .btn2,#sc .chipb{font:600 13px var(--body);color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:8px 12px;min-height:38px;cursor:pointer}#sc .btn2:hover,#sc .chipb:hover{background:var(--field)}#sc .chipb{border-radius:999px;padding:5px 12px;min-height:32px;font-weight:500;margin:3px 6px 3px 0}#sc .sc-mem{font:600 13px var(--mono);color:var(--muted)}#sc .sc-vars{margin:0 0 10px}#sc .sc-vars .sc-l{display:inline;margin-right:6px}#sc .sc-vars .btn2{margin-left:6px}#sc .sc-try{margin:0 0 10px}#sc .sc-try .sc-l{display:inline;margin-right:6px}#sc .pads{display:grid;gap:12px;grid-template-columns:1fr}@media(min-width:700px){#sc .pads{grid-template-columns:5fr 4fr}}#sc .pad{display:grid;gap:6px}#sc .f5{grid-template-columns:repeat(5,minmax(0,1fr))}#sc .d4{grid-template-columns:repeat(4,minmax(0,1fr))}#sc .e8{grid-template-columns:repeat(auto-fit,minmax(56px,1fr));margin-top:10px}#sc .e8[hidden]{display:none}#sc .k{min-height:46px;padding:6px 2px;font:600 15px var(--body);color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:8px;cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent}#sc .k:hover{background:var(--field)}#sc .k:active{transform:translateY(1px)}#sc .k.fn{background:var(--field);font-size:14px}#sc .k.n{font-size:19px}#sc .k.op{background:var(--gold-fill)}#sc .k.mem{font-size:13px}#sc .k.eq{background:var(--navy);color:var(--on-navy);border-color:var(--gold);font-size:22px}#sc .k.wide{grid-column:span 3}#sc .sc-cx{display:flex;flex-wrap:wrap;gap:16px;align-items:flex-start}#sc .sc-cx>div:first-child{flex:1 1 260px;min-width:0}#sc .sc-cx>div:last-child{flex:1 1 280px;max-width:340px}.sc-svg{width:100%;max-width:340px;height:auto;display:block}#sc .sc-hist{list-style:none;margin:0 0 8px;padding:0;display:grid;gap:4px}#sc .sc-h{width:100%;text-align:left;font:14px var(--mono);color:var(--ink);background:var(--field);border:1px solid var(--line);border-radius:6px;padding:8px 10px;cursor:pointer;overflow-wrap:anywhere}#sc .sc-h:hover{border-color:var(--gold)}.sc-cx th,.sc-cx td{text-transform:none}.sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}code{font-family:var(--mono)}[hidden]{display:none!important}@media(max-width:420px){#sc .sc-live{font-size:28px}#sc .k{font-size:14px}#sc .k.n{font-size:18px}#sc .f5 .k{font-size:12.5px}}#sc .sc-wsm{display:flex;flex-wrap:wrap;gap:10px 18px;margin:8px 0 12px}#sc .sc-wsm input{font:500 14px var(--body);padding:8px 10px;min-height:38px;border-radius:6px;border:1px solid var(--line);background:var(--field);color:var(--ink);min-width:200px}#sc .sc-wsl{list-style:none;margin:0 0 8px;padding:0}#sc .sc-wsl li{border:1px solid var(--line);border-radius:8px;padding:10px 12px;margin:0 0 8px;background:var(--surface)}#sc .sc-wsx{font:600 15px var(--mono);color:var(--num);word-break:break-word}#sc .sc-wss{font-size:12px;color:var(--muted);margin:2px 0 6px}#sc .sc-wsl textarea{display:block;width:100%;box-sizing:border-box;font:400 14px var(--body);padding:8px 10px;min-height:44px;border-radius:6px;border:1px solid var(--line);background:var(--field);color:var(--ink);resize:vertical}#sc .sc-wsl .btn2{margin-top:6px}#sc-ws-sheet{display:none}@media print{#sc .pads,#sc .sc-act,#sc .sc-try,#sc .sc-top{display:none}html.sc-wsp body>*:not(#sc-ws-sheet){display:none!important}html.sc-wsp body{background:#fff!important;background-image:none!important}html.sc-wsp #sc-ws-sheet{display:block;color:#000;background:#fff;font:13px/1.45 Arial,Helvetica,sans-serif;padding:0}#sc-ws-sheet h1{font-size:20px;margin:0 0 4px;color:#000}#sc-ws-sheet .m{color:#333;margin:0 0 12px;font-size:12px}#sc-ws-sheet table{width:100%;border-collapse:collapse;font-size:12px}#sc-ws-sheet th,#sc-ws-sheet td{border:1px solid #666;padding:5px 7px;text-align:left;vertical-align:top;color:#000;background:#fff}#sc-ws-sheet td.x,#sc-ws-sheet td.r{font-family:Consolas,Menlo,monospace;word-break:break-word}#sc-ws-sheet tr{break-inside:avoid}#sc-ws-sheet .f{margin-top:12px;font-size:11px;color:#333}}</style><style>.fb textarea{width:100%;font:15px/1.5 var(--body);padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--field);color:var(--ink);resize:vertical}.fb textarea:focus{outline:2px solid var(--gold);outline-offset:1px}:root{--bg:#F1F6FC;--surface:#fff;--ink:#0A2347;--muted:#4B5F86;--line:#D3DFEF;--navy:#043B79;--on-navy:#FFFFFF;--gold:#B34A00;--gold-fill:#FFEFDC;--field:#F4F8FE;--err:#B3261E;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;--display:"Arial Narrow","Roboto Condensed",system-ui,sans-serif;--body:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--navy-2:#0A5BBB;--cyan:#0062DE;--num:#043B79;--orange:#FF7A00;--gold-grad:linear-gradient(135deg,#FFA43D 0%,#FF7A00 52%,#E85F00 100%);--hero:radial-gradient(1000px 360px at 90% -35%,rgba(0,98,222,.55),transparent 62%),radial-gradient(640px 240px at 0% 110%,rgba(255,122,0,.20),transparent 60%),linear-gradient(135deg,#032A58,#043B79 58%,#0A55A8);--r:14px;--sh-0:0 1px 2px rgba(4,35,80,.06);--sh-1:0 1px 2px rgba(4,35,80,.05),0 6px 18px rgba(4,35,80,.07);--sh-2:0 2px 4px rgba(4,35,80,.05),0 22px 44px -14px rgba(4,35,80,.24);--ring:0 0 0 3px rgba(0,98,222,.26);color-scheme:light dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}@media(prefers-color-scheme:dark){:root{--bg:#04122B;--surface:#0A2046;--ink:#EAF2FF;--muted:#A0B5DA;--line:#183868;--navy:#031B3F;--on-navy:#EAF2FF;--gold:#FF9A3D;--gold-fill:#3D2410;--field:#071B3C;--err:#FF8A80;--navy-2:#0B4A98;--cyan:#4DA3FF;--orange:#FF8A1F;--num:#FFB066;--sh-0:0 1px 2px rgba(0,0,0,.4);--sh-1:0 1px 2px rgba(0,0,0,.35),0 8px 22px rgba(0,0,0,.35);--sh-2:0 2px 4px rgba(0,0,0,.4),0 24px 48px -14px rgba(0,0,0,.7);--ring:0 0 0 3px rgba(77,163,255,.34)}}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 var(--body)}a{color:inherit}header{background:var(--navy);color:var(--on-navy);border-bottom:3px solid var(--gold)}.w{max-width:860px;margin:0 auto;padding:0 max(16px,env(safe-area-inset-left,0px))}header .w{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-block:12px;flex-wrap:wrap}header a{text-decoration:none;font:600 20px var(--display);letter-spacing:.04em;text-transform:uppercase}header nav a{font:500 13px var(--body);text-transform:none;letter-spacing:0;margin-left:14px;opacity:.9}main{padding-block:24px 56px}h1{font:600 32px/1.1 var(--display);margin:0 0 8px;text-wrap:balance}h2{font:600 20px var(--display);letter-spacing:.02em;margin:28px 0 8px;text-transform:uppercase}.lede{color:var(--muted);margin:0 0 16px;max-width:62ch}.card{background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:16px 18px;margin:12px 0}.ans{border-left:4px solid var(--gold);display:flex;flex-wrap:wrap;gap:6px 24px;align-items:baseline;justify-content:space-between}.big{font:600 28px var(--display)}.jump{margin:8px 0 4px}details.more{border:1px solid var(--line);border-radius:12px;background:var(--surface);margin:14px 0;padding:0 16px;box-shadow:var(--sh-0)}details.more>summary{cursor:pointer;list-style:none}details.more>summary::-webkit-details-marker{display:none}details.more>summary h2{margin:14px 0}details.more>summary h2::after{content:"+";margin-left:auto;color:var(--gold)}details.more[open]>summary h2::after{content:"\2212"}details.more[open]{padding-bottom:12px}@media print{.jump{display:none}}.btn{display:inline-block;background:var(--navy);color:var(--on-navy);padding:9px 16px;border-radius:4px;text-decoration:none;font-weight:600;border:1px solid var(--gold)}.chip{display:inline-block;margin:3px 6px 3px 0;padding:5px 12px;border:1px solid var(--line);border-radius:999px;background:var(--surface);text-decoration:none;font-size:14px}.chip:hover{border-color:var(--gold)}main li>a:only-child{display:inline-block;padding:3px 0}code,pre,.f,td.n{font-family:var(--mono)}.f{background:var(--field);border:1px solid var(--line);padding:10px 12px;border-radius:4px;overflow-x:auto;white-space:pre-wrap}ol.steps{padding-left:22px;font-family:var(--mono);font-size:13px}ol.steps li{margin:4px 0}.tw{overflow-x:auto}table{border-collapse:collapse;width:100%;background:var(--surface)}th,td{border:1px solid var(--line);padding:6px 10px;text-align:left}td.n{text-align:right}tr.me td{background:var(--gold-fill)}th{background:var(--field);font-weight:600}.note{color:var(--muted);font-size:13px}ul{padding-left:20px}footer{border-top:1px solid var(--line);color:var(--muted);font-size:13px;padding-block:16px}h3{font:600 16px var(--body);margin:18px 0 4px}h3+p{margin:0;max-width:68ch}.tres .phasor{flex:0 0 100%;margin-top:12px}.phasor svg{display:block;width:100%;max-width:360px;height:auto;font:11px var(--body)}.tgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px 16px}.tgrid label{display:block;font-weight:600;font-size:13px;margin-bottom:4px}.trow{display:flex;gap:6px}.trow input,.trow select,.tgrid>div>select{font:16px var(--body);color:var(--ink);background:var(--field);border:1px solid var(--line);border-radius:4px;padding:8px;min-height:40px}.trow input{flex:1;min-width:0}.tgrid>div>select{width:100%}.hint{color:var(--muted);font-size:12px;margin-top:3px}.err{color:var(--err)}.tres{display:flex;flex-wrap:wrap;gap:6px 28px;align-items:baseline}.tres .big small{display:block;font:500 13px var(--body);color:var(--muted)}::selection{background:color-mix(in srgb,var(--gold) 30%,transparent)}body{background-image:radial-gradient(900px 520px at 100% -8%,color-mix(in srgb,var(--cyan) 10%,transparent),transparent 62%),radial-gradient(700px 420px at -5% 0%,color-mix(in srgb,var(--gold) 8%,transparent),transparent 60%);background-attachment:fixed;-webkit-font-smoothing:antialiased}header{position:relative;overflow:hidden;background:var(--hero);border-bottom:0;box-shadow:0 10px 30px -14px rgba(5,14,34,.6)}header::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);background-size:34px 34px;-webkit-mask-image:linear-gradient(100deg,#000,transparent 70%);mask-image:linear-gradient(100deg,#000,transparent 70%);pointer-events:none}header::after{content:"";position:absolute;left:0;right:0;bottom:0;height:18px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44 14'%3E%3Cpath d='M0 12.5H8L14 2l7 10.5 5-6 4 6H44' fill='none' stroke='%23FF7A00' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat right 36px bottom 3px/44px 14px,linear-gradient(90deg,#FF7A00,#FFA43D 55%,#FF7A00) no-repeat bottom/100% 4px;pointer-events:none}header .w{position:relative;z-index:1;padding-block:16px 22px}header .w>a.brand{display:block;line-height:0;letter-spacing:0;text-transform:none;background:#fff;border-radius:12px;padding:6px 14px;box-shadow:0 2px 12px rgba(2,16,42,.4),0 0 0 1px rgba(255,255,255,.5)}header .w>a.brand img{display:block;height:48px;width:auto}@media(max-width:600px){header .w>a.brand img{height:42px}}header a:focus-visible{outline-color:#FFB066}header nav a{color:#DCE5F5;opacity:1;padding:6px 12px;border-radius:999px;margin-left:6px;transition:background .15s,color .15s}header nav a:hover{background:rgba(255,255,255,.12);color:#FFB066}main.w{padding-top:36px;padding-bottom:64px}h1{font-size:36px;letter-spacing:.005em}h1::after{content:"";display:block;width:56px;height:3px;border-radius:3px;background:var(--gold-grad);margin-top:12px}h2{display:flex;align-items:center;gap:10px}h2::before{content:"";width:4px;height:.95em;border-radius:2px;background:var(--gold-grad);flex:none}h3{color:var(--gold)}.card{border-radius:14px;box-shadow:var(--sh-1)}.ans{position:relative;overflow:hidden;border-left:1px solid var(--line);padding-left:24px;background:linear-gradient(135deg,color-mix(in srgb,var(--gold) 12%,var(--surface)),var(--surface) 65%);border-color:color-mix(in srgb,var(--gold) 40%,var(--line));box-shadow:var(--sh-2)}.ans::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--gold-grad)}.big{color:var(--num);font-weight:700}.btn{border-radius:10px;border:0;background:var(--gold-grad);color:#0A2347;font-weight:700;box-shadow:var(--sh-1);transition:transform .15s,box-shadow .15s,filter .15s}.btn:hover{transform:translateY(-1px);box-shadow:var(--sh-2);filter:brightness(1.06)}.chip{box-shadow:var(--sh-0);transition:border-color .15s,background .15s,transform .15s,box-shadow .15s}.chip:hover{transform:translateY(-1px);box-shadow:var(--sh-1);border-color:var(--orange);background:color-mix(in srgb,var(--orange) 8%,var(--surface))}.f{border-radius:12px;border-left:3px solid var(--cyan)}.tw{border:1px solid var(--line);border-radius:12px;box-shadow:var(--sh-0)}.tw table{border:0}table{border-collapse:separate;border-spacing:0}th,td{border:0;border-bottom:1px solid var(--line)}tr:last-child td{border-bottom:0}th{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);background:var(--field)}tbody tr:hover td{background:color-mix(in srgb,var(--cyan) 7%,transparent)}tr.me td{background:var(--gold-fill)}.trow input,.trow select,.tgrid>div>select{border-radius:10px;transition:border-color .15s,box-shadow .15s}.trow select{background-color:color-mix(in srgb,var(--navy) 5%,var(--field))}.trow input:focus,.trow select:focus,.tgrid>div>select:focus{outline:0;border-color:var(--cyan);box-shadow:var(--ring)}.tgrid label{color:var(--ink)}a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--cyan);outline-offset:2px}footer{padding-block:20px}footer.mf{margin-top:24px;padding:0;border-top:0;background:var(--hero);color:#DCE5F5;font-size:13px;position:relative}footer.mf::before{content:"";display:block;height:4px;background:linear-gradient(90deg,#FF7A00,#FFA43D 55%,#FF7A00)}.mf-w{max-width:1100px;margin:0 auto;padding:36px max(16px,env(safe-area-inset-left,0px)) calc(24px + env(safe-area-inset-bottom,0px))}.mf-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:28px 24px}.mf-h{display:block;margin:0 0 12px;padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,.18);font:600 14px var(--display);letter-spacing:.06em;text-transform:uppercase;color:#FFB066}.mf-col ul{list-style:none;margin:0;padding:0}.mf-col li{margin:0}.mf-col a{display:inline-block;padding:4px 0;color:#DCE5F5;text-decoration:none}.mf-h a{padding:0;color:inherit}.mf-col a:hover,.mf-legal a:hover{color:#FFB066;text-decoration:underline}.mf a:focus-visible{outline:2px solid #FFB066;outline-offset:2px;border-radius:2px}.mf-legal{margin-top:28px;padding-top:18px;border-top:1px solid rgba(255,255,255,.18);color:#A9BADB;max-width:80ch}.mf-legal a{color:#DCE5F5}@media(max-width:980px){.mf-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(max-width:600px){.mf-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.mf-col a{padding:7px 0}}@media print{footer.mf{background:none;color:inherit}footer.mf::before,.mf-grid{display:none}.mf-legal{border:0;color:inherit}}@media(prefers-reduced-motion:reduce){.btn,.chip{transition:none;transform:none!important}}@media print{header{background:none;box-shadow:none}header::before,header::after,.ans::before,h1::after,h2::before{display:none}header .w>a.brand{box-shadow:none;padding:0}body{background-image:none}.card,.ans,.tw{box-shadow:none}.ans{padding-left:18px}}.totop{position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:60;min-height:44px;padding:0 18px;border:0;border-radius:999px;background:linear-gradient(135deg,#FFA43D,#FF7A00 52%,#E85F00);color:#0A2347;font:700 14px system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;box-shadow:0 2px 4px rgba(4,35,80,.2),0 14px 30px -8px rgba(4,35,80,.45);cursor:pointer;opacity:0;transform:translateY(12px);pointer-events:none;transition:opacity .2s,transform .2s,bottom .2s}.totop.on{opacity:1;transform:none;pointer-events:auto}.totop:hover{filter:brightness(1.06)}.totop:focus-visible{outline:2px solid #fff;outline-offset:2px;box-shadow:0 0 0 4px #0062DE}@media(prefers-reduced-motion:reduce){.totop{transition:none}}@media print{.totop{display:none}}.vstat{padding:12px 16px;border-left:4px solid var(--muted,#6b7a90)}.vstat.v-verified{border-left-color:#1f9d57}.vstat.v-reference{border-left-color:#2a7fd4}.vstat.v-indicative{border-left-color:#c98a10}</style></head><body><header><div class="w"><a class="brand" href="../../"><img src="../../logo.png" alt="Elecmetric" width="160" height="40"></a><nav><a href="../">All engineering calculators</a><a href="../../pages/index.html">Conversions</a><a href="../../index.html#verification">How it is verified</a></nav></div></header><main class="w"><h1>Scientific Calculator Online</h1><p class="lede">Free online scientific calculator for electrical engineers and students: trigonometry, logarithms, powers, roots, complex numbers and phasors. Calculate. Check. Understand.</p><div id="sc"><section class="card sc-card" aria-label="Scientific calculator"><div class="sc-top"><div class="sc-g"><span class="sc-l" id="sc-ml">Mode</span><div class="seg" id="sc-modes" role="group" aria-labelledby="sc-ml"><button type="button" data-mode="std" aria-pressed="true">Standard</button><button type="button" data-mode="eng" aria-pressed="false">Engineering</button></div></div><div class="sc-g"><span class="sc-l" id="sc-al">Angle</span><div class="seg" id="sc-angles" role="group" aria-labelledby="sc-al"><button type="button" data-angle="DEG" aria-pressed="true">DEG</button><button type="button" data-angle="RAD" aria-pressed="false">RAD</button><button type="button" data-angle="GRAD" aria-pressed="false">GRAD</button></div></div><div class="sc-g"><label for="sc-fmt">Output</label><select id="sc-fmt"><option value="auto" selected>Automatic</option><option value="sci">Scientific</option><option value="eng">Engineering</option><option value="fraction">Fraction</option></select></div><div class="sc-g"><label for="sc-dig">Significant digits</label><select id="sc-dig"><option value="5">5</option><option value="6">6</option><option value="8">8</option><option value="10" selected>10</option><option value="12">12</option><option value="15">15</option></select></div><div class="sc-g"><label for="sc-imp">Implicit multiplication</label><select id="sc-imp"><option value="equal" selected>1/2π = (1/2)·π</option><option value="tight">1/2π = 1/(2π)</option></select></div><div class="sc-g" data-eng hidden><label for="sc-unit">Unit of the result</label><select id="sc-unit"><option value="" selected>None</option><option value="Ω">Ω (ohm)</option><option value="V">V (volt)</option><option value="A">A (ampere)</option><option value="VA">VA</option><option value="W">W (watt)</option><option value="S">S (siemens)</option></select></div><div class="sc-g" data-eng hidden><label for="sc-form">Show complex results as</label><select id="sc-form"><option value="rect" selected>Rectangular (a + jb)</option><option value="polar">Polar (r ∠ θ)</option></select></div></div><label for="sc-in" class="sc-l">Expression</label><input id="sc-in" class="sc-in" type="text" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="done" aria-describedby="sc-live sc-err" value="sqrt(144)+sin(30)"><div class="sc-res" aria-live="polite" aria-atomic="true"><div class="sc-eq" aria-hidden="true">=</div><div class="sc-live" id="sc-live">12.5</div><div class="sc-alt" id="sc-alt"></div></div><p class="note sc-msg" id="sc-err" role="status"></p><div class="sc-act"><button type="button" class="btn2" data-act="copy">Copy result</button><button type="button" class="btn2" data-act="copyp" data-eng hidden>Copy polar form</button><button type="button" class="btn2" data-act="link">Copy link to this calculation</button><button type="button" class="btn2" data-act="wsadd">Add to worksheet</button><span class="sc-mem" id="sc-mem" hidden></span></div><p class="sr-only" id="sc-note" role="status" aria-live="polite"></p><div class="sc-vars" id="sc-vars" hidden><span class="sc-l">Variables</span> <span id="sc-vars-list"></span><button type="button" class="btn2" data-act="varclear">Clear variables</button></div><div class="sc-try"><span class="sc-l">Try</span> <span data-std><button type="button" class="chipb" data-ex="sin(30)" data-m="std">sin(30)</button><button type="button" class="chipb" data-ex="log(1000)" data-m="std">log(1000)</button><button type="button" class="chipb" data-ex="5!" data-m="std">5!</button><button type="button" class="chipb" data-ex="sqrt(144)" data-m="std">√144</button><button type="button" class="chipb" data-ex="2^10" data-m="std">2¹⁰</button><button type="button" class="chipb" data-ex="ln(e)" data-m="std">ln(e)</button><button type="button" class="chipb" data-ex="200*15%" data-m="std">15% of 200</button><button type="button" class="chipb" data-ex="asin(0.5)" data-m="std">sin⁻¹(0.5)</button></span><span data-eng hidden><button type="button" class="chipb" data-ex="10+j15" data-m="eng" data-u="Ω" data-d="5">Z = 10 + j15 Ω</button><button type="button" class="chipb" data-ex="10+j*2*pi*50*0.1" data-m="eng" data-u="Ω" data-d="5">R and L in series at 50 Hz</button><button type="button" class="chipb" data-ex="1/(j*2*pi*50*100u)" data-m="eng" data-u="Ω" data-d="5">Capacitor at 50 Hz</button><button type="button" class="chipb" data-ex="par(10+j5,10-j5)" data-m="eng" data-u="Ω" data-d="5">Two impedances in parallel</button><button type="button" class="chipb" data-ex="230∠30" data-m="eng" data-u="V" data-d="6">Polar input</button><button type="button" class="chipb" data-ex="230*(j20)/(10+j20)" data-m="eng" data-u="V" data-d="5">Voltage divider</button></span></div><div class="pads"><div class="pad f5" role="group" aria-label="Function keys"><button type="button" class="k fn" data-ins="sin(" aria-label="sine">sin</button><button type="button" class="k fn" data-ins="cos(" aria-label="cosine">cos</button><button type="button" class="k fn" data-ins="tan(" aria-label="tangent">tan</button><button type="button" class="k fn" data-ins="ln(" aria-label="natural logarithm">ln</button><button type="button" class="k fn" data-ins="log(" aria-label="logarithm base 10">log</button><button type="button" class="k fn" data-ins="asin(" aria-label="inverse sine">sin⁻¹</button><button type="button" class="k fn" data-ins="acos(" aria-label="inverse cosine">cos⁻¹</button><button type="button" class="k fn" data-ins="atan(" aria-label="inverse tangent">tan⁻¹</button><button type="button" class="k fn" data-ins="e^" aria-label="e to the power">eˣ</button><button type="button" class="k fn" data-ins="10^" aria-label="10 to the power">10ˣ</button><button type="button" class="k fn" data-ins="sinh(" aria-label="hyperbolic sine">sinh</button><button type="button" class="k fn" data-ins="cosh(" aria-label="hyperbolic cosine">cosh</button><button type="button" class="k fn" data-ins="tanh(" aria-label="hyperbolic tangent">tanh</button><button type="button" class="k fn" data-ins="sqrt(" aria-label="square root">√</button><button type="button" class="k fn" data-ins="^2" aria-label="square">x²</button><button type="button" class="k fn" data-ins="^" aria-label="power">xʸ</button><button type="button" class="k fn" data-ins="root(" aria-label="nth root: enter the number, a comma, then the root">ʸ√x</button><button type="button" class="k fn" data-ins="!" aria-label="factorial">n!</button><button type="button" class="k fn" data-act="recip" aria-label="reciprocal">1/x</button><button type="button" class="k fn" data-ins="%" aria-label="percent">%</button><button type="button" class="k fn" data-ins="pi" aria-label="pi">π</button><button type="button" class="k fn" data-ins="e" aria-label="Euler’s number e">e</button><button type="button" class="k fn" data-ins="E" aria-label="times ten to the power">EXP</button><button type="button" class="k fn" data-ins="ans" aria-label="previous answer">Ans</button><button type="button" class="k fn" data-ins="rnd" aria-label="random number">RND</button><button type="button" class="k fn" data-ins="log2(" aria-label="logarithm base 2">log₂</button><button type="button" class="k fn" data-ins="logb(" aria-label="logarithm to any base: enter the number, a comma, then the base">logₓ</button><button type="button" class="k fn" data-ins="ncr(" aria-label="combinations">nCr</button><button type="button" class="k fn" data-ins="npr(" aria-label="permutations">nPr</button><button type="button" class="k fn" data-ins="mod(" aria-label="remainder">mod</button><button type="button" class="k mem" data-act="mc" aria-label="memory clear">MC</button><button type="button" class="k mem" data-act="mr" aria-label="memory recall">MR</button><button type="button" class="k mem" data-act="ms" aria-label="memory store">MS</button><button type="button" class="k mem" data-act="mp" aria-label="add to memory">M+</button><button type="button" class="k mem" data-act="mm" aria-label="subtract from memory">M−</button></div><div class="pad d4" role="group" aria-label="Number keys"><button type="button" class="k op" data-act="ac" aria-label="clear all">AC</button><button type="button" class="k op" data-act="del" aria-label="backspace">⌫</button><button type="button" class="k op" data-ins="(" aria-label="open bracket">(</button><button type="button" class="k op" data-ins=")" aria-label="close bracket">)</button><button type="button" class="k n" data-ins="7">7</button><button type="button" class="k n" data-ins="8">8</button><button type="button" class="k n" data-ins="9">9</button><button type="button" class="k op" data-ins="/" aria-label="divide">÷</button><button type="button" class="k n" data-ins="4">4</button><button type="button" class="k n" data-ins="5">5</button><button type="button" class="k n" data-ins="6">6</button><button type="button" class="k op" data-ins="*" aria-label="multiply">×</button><button type="button" class="k n" data-ins="1">1</button><button type="button" class="k n" data-ins="2">2</button><button type="button" class="k n" data-ins="3">3</button><button type="button" class="k op" data-ins="-" aria-label="minus">−</button><button type="button" class="k n" data-ins="0">0</button><button type="button" class="k n" data-ins="." aria-label="decimal point">.</button><button type="button" class="k n" data-ins="," aria-label="comma between values">,</button><button type="button" class="k op" data-act="neg" aria-label="plus or minus">±</button><button type="button" class="k op" data-ins="+" aria-label="plus">+</button><button type="button" class="k eq wide" data-act="eq" aria-label="equals">=</button></div></div><div class="pad e8" role="group" aria-label="Engineering keys" data-eng hidden><button type="button" class="k fn" data-ins="j" aria-label="imaginary unit j">j</button><button type="button" class="k fn" data-ins="∠" aria-label="polar angle: magnitude, then angle">∠</button><button type="button" class="k fn" data-ins="°" aria-label="degrees">°</button><button type="button" class="k fn" data-ins="atan2(" aria-label="angle from y and x: enter y, a comma, then x">atan2</button><button type="button" class="k fn" data-ins="re(" aria-label="real part">re</button><button type="button" class="k fn" data-ins="im(" aria-label="imaginary part">im</button><button type="button" class="k fn" data-ins="abs(" aria-label="magnitude">|z|</button><button type="button" class="k fn" data-ins="arg(" aria-label="phase angle">arg</button><button type="button" class="k fn" data-ins="conj(" aria-label="complex conjugate">conj</button><button type="button" class="k fn" data-ins="par(" aria-label="parallel combination of impedances">par</button><button type="button" class="k fn" data-ins="G" aria-label="giga, times a billion">G</button><button type="button" class="k fn" data-ins="M" aria-label="mega, times a million">M</button><button type="button" class="k fn" data-ins="k" aria-label="kilo, times a thousand">k</button><button type="button" class="k fn" data-ins="m" aria-label="milli, divide by a thousand">m</button><button type="button" class="k fn" data-ins="µ" aria-label="micro, divide by a million">µ</button><button type="button" class="k fn" data-ins="n" aria-label="nano">n</button><button type="button" class="k fn" data-ins="p" aria-label="pico">p</button></div><noscript><p class="note">The calculator needs JavaScript. Nothing is sent anywhere: every calculation runs in your browser.</p></noscript></section><section class="card" id="sc-cx" aria-label="Complex result" hidden><h2>Complex result</h2><p class="note" id="sc-cx-hint">Enter a complex value such as 10+j15 or 230∠30 to see its real and imaginary parts, magnitude, phase angle and phasor diagram.</p><div id="sc-cx-body" hidden><div class="sc-cx"><div class="tw" tabindex="0" role="region" aria-label="Scrollable table: parts of the complex result"><table><tbody id="sc-cx-rows"></tbody></table></div><div id="sc-cx-svg"></div></div><p><strong>Working</strong></p><ol class="steps" id="sc-cx-steps"></ol></div></section><section class="card" aria-label="History"><h2>History</h2><p class="note" id="sc-hist-none">Results you confirm with = appear here. Select one to use its expression again. History stays in this page and is not stored.</p><ol class="sc-hist" id="sc-hist"></ol><button type="button" class="btn2" data-act="histclear" id="sc-hist-clear" hidden>Clear history</button></section><section class="card" id="sc-ws" aria-label="Worksheet"><h2>Worksheet</h2><p class="note" id="sc-ws-none">Press Add to worksheet to keep a result with its expression, settings and a note of your own. When you are done, print the worksheet or save it as a PDF. The worksheet stays in this page and is not stored, so print or copy it before you close the page.</p><div id="sc-ws-body" hidden><div class="sc-wsm"><div class="sc-g"><label class="sc-l" for="sc-ws-title">Worksheet title</label><input id="sc-ws-title" type="text" maxlength="80" autocomplete="off" placeholder="Calculation worksheet"></div><div class="sc-g"><label class="sc-l" for="sc-ws-by">Prepared by</label><input id="sc-ws-by" type="text" maxlength="60" autocomplete="off"></div></div><ol class="sc-wsl" id="sc-ws-list"></ol><div class="sc-act"><button type="button" class="btn2" data-act="wsprint">Print or save as PDF</button><button type="button" class="btn2" data-act="wscopy">Copy as text</button><button type="button" class="btn2" data-act="wsclear">Clear worksheet</button></div></div></section></div><section id="about"><h2>How to use it</h2><p>Standard mode is a full scientific calculator: brackets and operator precedence, trigonometry, logarithms, powers and roots, factorials, constants, memory and the previous answer. Engineering mode adds complex numbers, rectangular and polar form, phasor arithmetic and SI prefixes for electrical work. Type on the keyboard or use the keypad. Press Enter or = to confirm a result and add it to the history, and use Add to worksheet to collect results with notes for printing or saving as a PDF.</p><ul><li>Keyboard: type an expression, press Enter to confirm, Escape to clear. Use * and / or × and ÷. Powers are written with ^.</li><li>Functions take brackets, as in sin(30) or sqrt(16). Brackets are not needed for a single value: sin30 and √144 also work.</li><li>Variables: type a name, an equals sign and an expression, as in <code>f=50</code>, then press Enter. Use the name in later calculations, for example <code>1/(2*pi*f*100u)</code>. Names are letters only and are not case sensitive. The stored values appear under the result and are gone when you close the page.</li><li>Ans is the last confirmed result. MS, M+ and M− store, add to and subtract from memory, and MR enters it as <code>mem</code>.</li><li>An error is explained in words, for example division by zero, or a square root of a negative number outside Engineering mode.</li></ul></section><section id="functions"><h2>Functions and keys</h2><div class="tw" tabindex="0" role="region" aria-label="Scrollable table: Key, What it does, Example, Result"><table><thead><tr><th>Key</th><th>What it does</th><th>Example</th><th>Result</th></tr></thead><tbody><tr><td class="n">sin, cos, tan</td><td class="n">Sine, cosine and tangent of an angle in the angle mode you choose</td><td class="n">sin(30)</td><td class="n">0.5</td></tr><tr><td class="n">sin⁻¹, cos⁻¹, tan⁻¹</td><td class="n">Inverse functions: the angle, in the active angle unit</td><td class="n">asin(0.5)</td><td class="n">30</td></tr><tr><td class="n">atan2</td><td class="n">Angle of the point (x, y) in the correct quadrant, in the active angle unit: atan2(y, x)</td><td class="n">atan2(1,-1)</td><td class="n">135</td></tr><tr><td class="n">sinh, cosh, tanh</td><td class="n">Hyperbolic functions and their inverses (asinh, acosh, atanh)</td><td class="n">sinh(1)</td><td class="n">1.175201194</td></tr><tr><td class="n">log, ln</td><td class="n">Logarithm base 10 and natural logarithm</td><td class="n">log(1000)</td><td class="n">3</td></tr><tr><td class="n">log₂, logₓ</td><td class="n">Logarithm base 2, and to any base: logb(number, base)</td><td class="n">logb(81,3)</td><td class="n">4</td></tr><tr><td class="n">eˣ, xʸ</td><td class="n">Exponential and powers, evaluated right to left</td><td class="n">2^10</td><td class="n">1024</td></tr><tr><td class="n">√, ∛, ʸ√x</td><td class="n">Square root, cube root and nth root: root(number, n)</td><td class="n">root(32,5)</td><td class="n">2</td></tr><tr><td class="n">n!</td><td class="n">Factorial of a whole number from 0 to 170</td><td class="n">5!</td><td class="n">120</td></tr><tr><td class="n">nCr, nPr</td><td class="n">Combinations and permutations</td><td class="n">ncr(5,2)</td><td class="n">10</td></tr><tr><td class="n">mod</td><td class="n">Remainder, with the sign of the divisor</td><td class="n">mod(17,5)</td><td class="n">2</td></tr><tr><td class="n">%</td><td class="n">Divides by 100</td><td class="n">200*15%</td><td class="n">30</td></tr><tr><td class="n">abs, floor, ceil, round</td><td class="n">Absolute value and rounding to a whole number</td><td class="n">abs(-7.5)</td><td class="n">7.5</td></tr><tr><td class="n">1/x</td><td class="n">Reciprocal of the whole expression</td><td class="n">inv(8)</td><td class="n">0.125</td></tr></tbody></table></div><p class="note">Every result in this table is calculated by the same engine as the calculator above.</p></section><section id="angles"><h2>Angle modes</h2><p>The angle mode changes how trigonometric functions read their input. The same angle gives the same answer in each mode:</p><div class="tw" tabindex="0" role="region" aria-label="Scrollable table: Mode, Full circle, Example, Result"><table><thead><tr><th>Mode</th><th>Full circle</th><th>Example</th><th>Result</th></tr></thead><tbody><tr><td class="n">DEG</td><td class="n">360°</td><td class="n">sin(30)</td><td class="n">0.5</td></tr><tr><td class="n">RAD</td><td class="n">2π rad</td><td class="n">sin(pi/6)</td><td class="n">0.5</td></tr><tr><td class="n">GRAD</td><td class="n">400 grad</td><td class="n">sin(100/3)</td><td class="n">0.5</td></tr></tbody></table></div><p>Switching mode does not convert numbers you have already typed. A degree sign written after a value, as in 30°, always means 30 degrees and is converted to the active unit.</p></section><section id="order"><h2>Order of operations</h2><div class="tw" tabindex="0" role="region" aria-label="Scrollable table: Order, Rule, Example, Result"><table><thead><tr><th>Order</th><th>Rule</th><th>Example</th><th>Result</th></tr></thead><tbody><tr><td class="n">1</td><td class="n">Brackets and function arguments</td><td class="n">(2+3)*4</td><td class="n">20</td></tr><tr><td class="n">2</td><td class="n">Factorial, percent and degree sign, applied to the value before them</td><td class="n">3!^2</td><td class="n">36</td></tr><tr><td class="n">3</td><td class="n">Power, evaluated right to left</td><td class="n">2^3^2</td><td class="n">512</td></tr><tr><td class="n">4</td><td class="n">Unary minus, so it applies after a power</td><td class="n">-2^2</td><td class="n">-4</td></tr><tr><td class="n">5</td><td class="n">Polar angle ∠ (Engineering mode)</td><td class="n">2∠30*3</td><td class="n">5.19615 + j3</td></tr><tr><td class="n">6</td><td class="n">Multiply and divide, left to right, including a multiplication sign left out</td><td class="n">10/2*5</td><td class="n">25</td></tr><tr><td class="n">7</td><td class="n">Add and subtract, left to right</td><td class="n">2+3*4</td><td class="n">14</td></tr></tbody></table></div><p>Where a rule could be read two ways, the calculator follows the usual convention for scientific calculators: -2^2 is -4, and 2^3^2 is 2^9. Use brackets when in doubt. A product written without a sign, as in 3(4+5) or 2sin(30), is read as multiplication. The Implicit multiplication setting changes how a product with the sign left out ranks against division: by default 1/2π is (1/2)·π, and the other choice reads it as 1/(2π) so that 1/2πfC means 1/(2πfC). Explicit signs are never affected: 1/2*pi is always (1/2)·π. Two numbers side by side with a space, as in 1 000, are rejected rather than multiplied, so a thousands separator cannot silently change an answer.</p></section><section id="engineering"><h2>Engineering mode: impedance example</h2><p>Enter an impedance of Z = 10 + j15 Ω and the calculator returns its parts, its magnitude |Z| = √(10² + 15²) and its phase angle θ = tan⁻¹(15/10):</p><div class="sc-cx"><div class="tw" tabindex="0" role="region" aria-label="Scrollable table: parts of the impedance 10 + j15 ohms"><table><tbody><tr><th scope="row">Real component</th><td>10 Ω</td></tr><tr><th scope="row">Imaginary component</th><td>+15 Ω</td></tr><tr><th scope="row">Magnitude</th><td>18.028 Ω</td></tr><tr><th scope="row">Phase angle</th><td>56.31°</td></tr><tr><th scope="row">Representation</th><td>18.028 ∠ 56.31°</td></tr></tbody></table></div><div><svg class="sc-svg" viewBox="0 0 320 260" role="img" aria-label="Phasor diagram: 10 + j15, magnitude 18.028 Ω, angle 56.31 degrees" xmlns="http://www.w3.org/2000/svg" font-family="var(--body)" font-size="11"><rect x="36" y="20" width="248" height="206" fill="none" stroke="var(--line)"/><line x1="36" y1="202.2" x2="284" y2="202.2" stroke="var(--muted)" stroke-width="1"/><line x1="107.2" y1="20" x2="107.2" y2="226" stroke="var(--muted)" stroke-width="1"/><text x="280" y="197.2" text-anchor="end" fill="var(--muted)">Re</text><text x="112.2" y="31" fill="var(--muted)">Im (j)</text><line x1="212.8" y1="43.8" x2="212.8" y2="202.2" stroke="var(--muted)" stroke-dasharray="3 3"/><line x1="212.8" y1="43.8" x2="107.2" y2="43.8" stroke="var(--muted)" stroke-dasharray="3 3"/><line x1="107.2" y1="202.2" x2="207.8" y2="51.3" stroke="var(--cyan)" stroke-width="2.5"/><polygon points="212.8,43.8 204.5,49.0 211.2,53.5" fill="var(--cyan)"/><path d="M 137.2 202.2 A 30.0 30.0 0 0 0 123.8 177.3" fill="none" stroke="var(--gold)" stroke-width="2"/><text x="140.7" y="188.3" fill="var(--ink)" text-anchor="start">θ = 56.31°</text><text x="169.0" y="139.0" fill="var(--ink)" font-weight="600" text-anchor="start">|Z| = 18.028 Ω</text><circle cx="212.8" cy="43.8" r="3" fill="var(--cyan)"/></svg></div></div><ol class="steps"><li>Rectangular form: Z = 10 + j15 Ω</li><li>Magnitude: |Z| = √(10² + 15²) = 18.028 Ω</li><li>Phase angle: θ = atan2(15, 10) = tan⁻¹(15/10) = 56.31°</li><li>Polar form: Z = 18.028 ∠ 56.31° Ω</li></ol><p>More examples, with results shown to 6 significant digits:</p><div class="tw" tabindex="0" role="region" aria-label="Scrollable table: Expression, Rectangular, Polar"><table><thead><tr><th>Expression</th><th>Rectangular</th><th>Polar</th></tr></thead><tbody><tr><td class="n">(10+j15)*(5-j2)</td><td class="n">80 + j55</td><td class="n">97.0824 ∠ 34.5085°</td></tr><tr><td class="n">230∠30</td><td class="n">199.186 + j115</td><td class="n">230 ∠ 30°</td></tr><tr><td class="n">1/(j*2*pi*50*100u)</td><td class="n">0 - j31.831</td><td class="n">31.831 ∠ -90°</td></tr><tr><td class="n">230*(j20)/(10+j20)</td><td class="n">184 + j92</td><td class="n">205.718 ∠ 26.5651°</td></tr><tr><td class="n">sqrt(-4)</td><td class="n">0 + j2</td><td class="n">2 ∠ 90°</td></tr></tbody></table></div><p>Complex results from the trigonometric, logarithmic, power and root functions are available in Engineering mode, and a negative number under a square root gives an imaginary result instead of an error. Phase angles follow the angle mode and are normally read in degrees. par(Z1, Z2) gives impedances in parallel.</p></section><section id="limits"><h2>Limits and accuracy</h2><ul><li>Numbers are double precision (about 15 to 17 significant digits). Very large or very small results are shown in scientific form.</li><li>Factorials are limited to whole numbers up to 170. Larger values overflow.</li><li>An even root or a non-integer power of a negative number is an error in Standard mode, and a complex result in Engineering mode, using the principal value.</li><li>On a branch cut, such as asin(2), the sign of the imaginary part is a convention. Check it before using it in a design.</li><li>Phase angles are shown between -180° and 180°.</li><li>The calculator is a general mathematical tool. It does not know about units: the unit you choose in Engineering mode is a label on the result, and it is not checked.</li></ul><p class="note">Cross-check: 756 reference cases, calculated with Python’s math and cmath modules, written separately from this calculator (they cover each angle mode, inverse and hyperbolic functions, logarithms, powers and roots, factorials, operator order, error cases, complex arithmetic, polar input and SI prefixes), and 14 polar conversions agree with it. The calculator’s own tests also cover the standard values in the table below.</p><div class="tw" tabindex="0" role="region" aria-label="Scrollable table: Test, Expected result"><table><thead><tr><th>Test</th><th>Expected result</th></tr></thead><tbody><tr><td class="n">sin(30°)</td><td class="n">0.5</td></tr><tr><td class="n">cos(60°)</td><td class="n">0.5</td></tr><tr><td class="n">tan(45°)</td><td class="n">1</td></tr><tr><td class="n">log(1000)</td><td class="n">3</td></tr><tr><td class="n">ln(e)</td><td class="n">1</td></tr><tr><td class="n">√144</td><td class="n">12</td></tr><tr><td class="n">5!</td><td class="n">120</td></tr><tr><td class="n">2³</td><td class="n">8</td></tr><tr><td class="n">1/0</td><td class="n">Error: division by zero</td></tr></tbody></table></div></section><section id="faq"><h2>Frequently asked questions</h2><h3>How does this calculator read what I type?</h3><p>It uses its own expression parser, written for this page. It does not use eval or run your text as code, and nothing you type leaves your browser. Brackets, operator order and functions follow the usual rules of mathematics.</p><h3>How do I switch between degrees, radians and gradians?</h3><p>Choose DEG, RAD or GRAD above the keypad. It sets how sin, cos and tan read their input and the unit of asin, acos and atan results. You can also write the degree sign after a value, as in sin(30°), and it is converted to the active unit.</p><h3>Why does sin(180) show 0 and not a tiny number?</h3><p>In degree and gradian mode the calculator uses exact values at multiples of 30 and 45 degrees, so sin(30) is exactly 0.5 and cos(90) is exactly 0. In radian mode a result that is only rounding noise, such as sin(π), is shown as 0.</p><h3>How do I enter complex numbers and polar values?</h3><p>Switch to Engineering mode. Write the imaginary unit as j, for example 10+j15. For polar input write the magnitude, the ∠ sign and the angle, for example 230∠30, or type 230&lt;30. The angle follows the angle mode. Results show as rectangular and polar form, with a phasor diagram and the working.</p><h3>What do k, M, m, µ, n and p do in Engineering mode?</h3><p>Written directly after a number they are SI prefixes: 4.7k is 4,700, 100u is 100 microunits (0.0001) and 33n is 33 nano. They are not read as prefixes when a letter follows, so 3pi is 3 times pi.</p><h3>What does the % key do?</h3><p>It divides the value before it by 100, so 200*15% is 30. It does not add a percentage to a total: 50+10% is 50.1. For 50 plus 10 percent write 50*(1+10%).</p><h3>How many digits are right?</h3><p>Calculations use double-precision numbers, which hold about 15 to 17 significant digits. The display rounds to the number of significant digits you choose, 10 by default. Results can differ from exact mathematics in the last digits, for example 0.1+0.2 is shown as 0.3.</p><h3>How do I use a value again, such as a frequency?</h3><p>Type f=50 and press Enter. The name f then stands for 50 in every later calculation until you clear it or close the page. Names are letters only, up to 20 variables, and the names of functions and constants such as pi, e, i, j and ans are not allowed (i and j are both the imaginary unit, so i cannot stand for current; use a name such as ia). A name is read as one word, so write f c or f*c, not fc. A variable that holds a complex number needs Engineering mode.</p><h3>What does the Implicit multiplication setting do?</h3><p>It decides how 1/2π is read. With the default, a product with the sign left out ranks with multiply and divide, so 1/2π is (1/2)·π. With the other choice the product binds first, so 1/2π is 1/(2π), which is how the reactance formula 1/2πfC is usually meant. Use brackets to be sure.</p><h3>Does it keep my calculations?</h3><p>No. The history, the worksheet and any variables are held in the page and disappear when you close it. The Copy link button puts your expression in the link, so whoever opens the link sees the same calculation.</p><h3>Can I keep my results as a worksheet or a PDF?</h3><p>Yes. After a result appears, press Add to worksheet. Each entry keeps the expression, the result, the angle mode, the number of digits and any variable values it uses, and you can type a note beside it. Give the worksheet a title, then press Print or save as PDF and choose Save as PDF in the print window, or press Copy as text. The worksheet is built in your browser and is not stored or sent anywhere, so it is gone when you close the page.</p></section><section id="related"><h2>Related</h2><p><a class="chip" href="../basic-calculator/">Basic Calculator</a><a class="chip" href="../complex-number/">Complex Number Calculator</a><a class="chip" href="../phasor-sum/">Phasor Sum Calculator</a><a class="chip" href="../trig-functions/">Trig Functions Calculator</a><a class="chip" href="../impedance-rlc/">Impedance RLC Calculator</a><a class="chip" href="../ac-ohms-law/">AC Ohm’s Law Calculator</a><a class="chip" href="../engineering-mathematics/">More Engineering Mathematics calculators</a><a class="chip" href="../../converters/angle-converter.html">Angle Converter</a><a class="chip" href="../../converters/scientific-notation-converter.html">Scientific Notation Converter</a><a class="chip" href="../../converters/db-converter.html">dB to Ratio Converter</a><a class="chip" href="../">All engineering calculators</a></p></section></main><section class="w fb" aria-labelledby="fb-h"><h2 id="fb-h">Tell us how to improve this page</h2><textarea id="fb-t" rows="4" maxlength="1500" placeholder="Your message ..." aria-label="Tell us how to improve this page"></textarea><p><button type="button" class="btn" id="fb-b">Email your suggestion</button> <button type="button" class="btn" id="sh-b">Share this page</button> <span class="note" id="fb-n">This opens your email app. Nothing is sent until you press send.</span></p></section><script>(function(){var b=document.getElementById("fb-b");if(!b)return;b.onclick=function(){var t=document.getElementById("fb-t").value.trim(),n=document.getElementById("fb-n");if(!t){n.textContent="Please write a message first.";return}location.assign("mailto:"+"elecmetrics@gmail.com"+"?subject="+encodeURIComponent("Elecmetric feedback: "+document.title)+"&body="+encodeURIComponent(t+"\n\nPage: "+location.href))}})();</script><script>(function(){var s=document.getElementById("sh-b");if(!s)return;s.onclick=function(){var u=location.href,t=document.title,n=document.getElementById("fb-n");if(navigator.share){navigator.share({title:t,url:u}).catch(function(){});return}if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(u).then(function(){n.textContent="Link copied."},function(){n.textContent="Copy this address: "+u})}else{n.textContent="Copy this address: "+u}}})();</script><footer class="mf"><div class="mf-w"><div class="mf-grid" role="navigation" aria-label="Site map"><div class="mf-col"><p class="mf-h"><a href="../../calculators/">Calculators</a></p><ul><li><a href="../../calculators/electrical-fundamentals/">Electrical Fundamentals</a></li><li><a href="../../calculators/power-and-energy/">Power and Energy</a></li><li><a href="../../calculators/cable-engineering/">Cable Engineering</a></li><li><a href="../../calculators/motor-engineering/">Motor Engineering</a></li><li><a href="../../calculators/transformer-engineering/">Transformer Engineering</a></li><li><a href="../../calculators/electrical-protection/">Electrical Protection</a></li><li><a href="../../calculators/power-systems/">Power Systems</a></li><li><a href="../../calculators/earthing-and-grounding/">Earthing and Grounding</a></li><li><a href="../../calculators/renewable-energy/">Renewable Energy</a></li><li><a href="../../calculators/airport-agl-engineering/">Airport and AGL Engineering</a></li><li><a href="../../calculators/electronics-and-instrumentation/">Electronics and Instrumentation</a></li><li><a href="../../calculators/lighting-and-facilities/">Lighting and Facilities</a></li><li><a href="../../calculators/engineering-mathematics/">Engineering Mathematics</a></li></ul></div><div class="mf-col"><p class="mf-h"><a href="../../calculators/">Popular calculators</a></p><ul><li><a href="../../calculators/cable-size/">Cable Size</a></li><li><a href="../../calculators/voltage-drop/">Voltage Drop</a></li><li><a href="../../calculators/breaker-size/">Breaker Size</a></li><li><a href="../../calculators/motor-current/">Motor Current</a></li><li><a href="../../calculators/transformer-sizing/">Transformer Sizing</a></li><li><a href="../../calculators/earth-resistance/">Earth Resistance</a></li><li><a href="../../calculators/pf-correction-kvar/">Power Factor Correction</a></li><li><a href="../../calculators/generator-sizing/">Generator Sizing</a></li><li><a href="../../calculators/battery-bank-sizing/">Battery Bank Sizing</a></li><li><a href="../../calculators/pv-energy/">Solar PV Energy</a></li></ul></div><div class="mf-col"><p class="mf-h"><a href="../../converters/index.html">Conversions</a></p><ul><li><a href="../../pages/index.html">Electrical conversions</a></li><li><a href="../../pages/kw-to-amps.html">kW to Amps</a></li><li><a href="../../pages/amps-to-kw.html">Amps to kW</a></li><li><a href="../../pages/kva-to-kw.html">kVA to kW</a></li><li><a href="../../pages/watts-to-amps.html">Watts to Amps</a></li><li><a href="../../converters/length-converter.html">Length</a></li><li><a href="../../converters/power-converter.html">Power</a></li><li><a href="../../converters/energy-converter.html">Energy</a></li><li><a href="../../converters/temperature-converter.html">Temperature</a></li><li><a href="../../pages/wire-gauge.html">AWG to mm²</a></li></ul></div><div class="mf-col"><p class="mf-h"><a href="../../converters/index.html">Formulas</a></p><ul><li><a href="../../converters/ohms-law-formulas.html">Ohm’s Law formulas</a></li><li><a href="../../converters/kirchhoffs-laws.html">Kirchhoff’s laws</a></li><li><a href="../../converters/cable-sizing-formulas.html">Cable sizing formulas</a></li><li><a href="../../converters/circuit-breaker-formulas.html">Circuit breaker formulas</a></li><li><a href="../../converters/ac-circuit-formulas.html">AC circuit formulas</a></li><li><a href="../../converters/battery-formulas.html">Battery formulas</a></li></ul></div><div class="mf-col"><p class="mf-h">Elecmetric</p><ul><li><a href="../../calculators/basic-calculator/">Basic Calculator</a></li><li><a href="../../calculators/scientific-calculator/">Scientific Calculator</a></li><li><a href="../../index.html#verification">How it is verified</a></li><li><a href="../../privacy.html">Privacy</a></li><li><a href="../../terms.html">Terms</a></li><li><a href="mailto:elecmetrics@gmail.com">Contact us</a></li></ul></div></div><div class="mf-legal">Results are computed by the same tested engine as the calculators in Elecmetric and are for estimating. Check design values against the standard and the equipment data you work to. Elecmetric results are not a substitute for a design review by a competent engineer.<br>Developed by Elecmetric. No independent technical review of the calculators has been carried out. Results are for estimating.<br>&copy; 2026 Rahul Sharma (Elecmetric) &middot; <a href="../../privacy.html">Privacy</a> &middot; <a href="../../terms.html">Terms</a></div></div><script>(function(){if(location.protocol!=="file:")return;document.addEventListener("click",function(e){if(e.defaultPrevented||e.button||e.metaKey||e.ctrlKey||e.shiftKey)return;var a=e.target.closest&&e.target.closest("a[href]");if(!a||a.target)return;var m=/^([^?#]*)(.*)$/.exec(a.getAttribute("href"));if(!m[1]||/^[a-z][a-z0-9+.-]*:/i.test(m[1])||!/[/]$/.test(m[1]))return;e.preventDefault();location.href=m[1]+"index.html"+m[2]})})();</script><button type="button" class="totop" id="totop" aria-label="Back to top" tabindex="-1">↑ Top</button><script>(function(){var b=document.getElementById("totop");if(!b)return;var t=0;function u(){t=0;var on=(window.pageYOffset||document.documentElement.scrollTop)>400,bar=document.getElementById("bar"),h=bar&&bar.offsetHeight?bar.offsetHeight:0;b.classList.toggle("on",on);b.tabIndex=on?0:-1;b.style.bottom=h?"calc("+(h+16)+"px + env(safe-area-inset-bottom,0px))":"";}function q(){if(!t)t=requestAnimationFrame(u)}window.addEventListener("scroll",q,{passive:true});window.addEventListener("resize",q);b.addEventListener("click",function(){var r=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;window.scrollTo({top:0,behavior:r?"auto":"smooth"})});u()})();</script></footer><script>/* Elecmetric Scientific Calculator engine.
+   One file, no dependencies, no DOM. It is required by the tests in Node and inlined, unchanged, into
+   calculators/scientific-calculator/index.html by tools/scicalc_page.js, so the page runs exactly the code the tests run.
+   Safe by construction: a hand-written tokenizer and recursive-descent parser. Nothing the user types is ever run as code.
+   Values are complex numbers {re, im}. In Standard mode a result that leaves the real numbers is a domain error;
+   in Engineering mode the same operation returns the complex result. */
+(function (root, factory) {
+  if (typeof module === 'object' && module.exports) module.exports = factory();
+  else root.SciCalc = factory();
+})(typeof self !== 'undefined' ? self : this, function () {
+  'use strict';
+  var PI = Math.PI;
+  var MINUS = '\u2212';
+
+  function C(re, im) { return { re: re, im: im || 0 }; }
+  function err(msg) { return { sciError: msg }; }
+
+  /* ---------- complex arithmetic ---------- */
+  function fin(z) {
+    if (!isFinite(z.re) || !isFinite(z.im)) throw err('Overflow: the result is too large to show');
+    return z;
+  }
+  function add(a, b) { return C(a.re + b.re, a.im + b.im); }
+  function sub(a, b) { return C(a.re - b.re, a.im - b.im); }
+  function mul(a, b) { return C(a.re * b.re - a.im * b.im, a.re * b.im + a.im * b.re); }
+  function div(a, b) {
+    if (b.re === 0 && b.im === 0) throw err('Division by zero');
+    if (b.im === 0) return C(a.re / b.re, a.im / b.re);
+    var d = b.re * b.re + b.im * b.im;
+    return C((a.re * b.re + a.im * b.im) / d, (a.im * b.re - a.re * b.im) / d);
+  }
+  function cabs(z) { return z.im === 0 ? Math.abs(z.re) : Math.hypot(z.re, z.im); }
+  function carg(z) { return Math.atan2(z.im, z.re); }
+  function cexp(z) { var m = Math.exp(z.re); return C(m * Math.cos(z.im), z.im === 0 ? 0 : m * Math.sin(z.im)); }
+  function cln(z) {
+    if (z.re === 0 && z.im === 0) throw err('Domain error: ln(0) is undefined');
+    return C(Math.log(cabs(z)), carg(z));
+  }
+  function csqrt(z) {
+    var r = cabs(z);
+    var re = Math.sqrt((r + z.re) / 2), im = Math.sqrt(Math.max(0, (r - z.re) / 2));
+    return C(re, z.im < 0 ? -im : im);
+  }
+  function cpowGen(a, b) {
+    if (a.re === 0 && a.im === 0) {
+      if (b.im === 0 && b.re > 0) return C(0);
+      throw err('Division by zero: zero to a negative or complex power');
+    }
+    return cexp(mul(b, cln(a)));
+  }
+  function cpowInt(a, n) {
+    var neg = n < 0, k = Math.abs(n), r = C(1), p = a;
+    while (k > 0) { if (k & 1) r = mul(r, p); p = mul(p, p); k = Math.floor(k / 2); }
+    return neg ? div(C(1), r) : r;
+  }
+  function csin(z) { return C(Math.sin(z.re) * Math.cosh(z.im), Math.cos(z.re) * Math.sinh(z.im)); }
+  function ccos(z) { return C(Math.cos(z.re) * Math.cosh(z.im), -Math.sin(z.re) * Math.sinh(z.im)); }
+  function csinh(z) { return C(Math.sinh(z.re) * Math.cos(z.im), Math.cosh(z.re) * Math.sin(z.im)); }
+  function ccosh(z) { return C(Math.cosh(z.re) * Math.cos(z.im), Math.sinh(z.re) * Math.sin(z.im)); }
+  var J = C(0, 1);
+  function casin(z) { return mul(C(0, -1), cln(add(mul(J, z), csqrt(sub(C(1), mul(z, z)))))); }
+  function cacos(z) { return sub(C(PI / 2), casin(z)); }
+  function catan(z) { return mul(C(0, 0.5), sub(cln(sub(C(1), mul(J, z))), cln(add(C(1), mul(J, z))))); }
+  function casinh(z) { return cln(add(z, csqrt(add(mul(z, z), C(1))))); }
+  function cacosh(z) { return cln(add(z, mul(csqrt(add(z, C(1))), csqrt(sub(z, C(1)))))); }
+  function catanh(z) { return mul(C(0.5), sub(cln(add(C(1), z)), cln(sub(C(1), z)))); }
+
+  /* ---------- angle handling ---------- */
+  function angleFactor(mode) { return mode === 'RAD' ? 1 : mode === 'GRAD' ? PI / 200 : PI / 180; }
+  function degOf(x, c) { return c.angle === 'DEG' ? x : c.angle === 'GRAD' ? x * 9 / 10 : null; }
+  function norm360(d) { return ((d % 360) + 360) % 360; }
+  var SIN_EXACT = { 0: 0, 30: 0.5, 45: Math.SQRT1_2, 60: Math.sqrt(3) / 2, 90: 1 };
+  /* Exact values at multiples of 30 and 45 degrees, so sin(30) is 0.5 and cos(90) is 0 and not 1e-16. */
+  function exactSin(r) {
+    var sgn = 1, a = r;
+    if (a >= 180) { a -= 180; sgn = -1; }
+    if (a > 90) a = 180 - a;
+    var v = SIN_EXACT[a];
+    return v === undefined || !Object.prototype.hasOwnProperty.call(SIN_EXACT, a) ? null : sgn * v;
+  }
+  function snap(v, rad) { return Math.abs(rad) > 1e-3 && Math.abs(v) < 1e-15 ? 0 : v; }
+  function sinR(x, c) {
+    var d = degOf(x, c);
+    if (d !== null && isFinite(d)) { var e = exactSin(norm360(d)); if (e !== null) return e; }
+    var r = x * c.k; return snap(Math.sin(r), r);
+  }
+  function cosR(x, c) {
+    var d = degOf(x, c);
+    if (d !== null && isFinite(d)) { var e = exactSin(norm360(d + 90)); if (e !== null) return e; }
+    var r = x * c.k; return snap(Math.cos(r), r);
+  }
+  function tanR(x, c) {
+    var co = cosR(x, c);
+    if (co === 0) throw err('Domain error: tan is undefined at this angle');
+    return sinR(x, c) / co;
+  }
+
+  /* ---------- tokenizer ---------- */
+  function normalize(s) {
+    return String(s)
+      .replace(/\*\*/g, '^')
+      .replace(/[\u00d7\u00b7\u22c5]/g, '*')
+      .replace(/\u00f7/g, '/')
+      .replace(/[\u2212\u2013\u2014]/g, '-')
+      .replace(/\u03c0/g, ' pi ')
+      .replace(/\u221a/g, ' sqrt ')
+      .replace(/\u221b/g, ' cbrt ')
+      .replace(/\u00b2/g, '^2').replace(/\u00b3/g, '^3')
+      .replace(/(sinh|cosh|tanh|sin|cos|tan)\u207b\u00b9/gi, 'a$1')
+      .replace(/\u207b\u00b9/g, '^-1')
+      .replace(/\u2220/g, '@')
+      .replace(/[\u00a0\u2009\u202f]/g, ' ');
+  }
+  var PREFIX = { k: 1e3, M: 1e6, G: 1e9, T: 1e12, m: 1e-3, u: 1e-6, '\u00b5': 1e-6, '\u03bc': 1e-6, n: 1e-9, p: 1e-12 };
+  var NUM_RE = /^(\d+\.?\d*|\.\d+)([eE][+-]?\d+)?/;
+
+  function tokenize(src, c) {
+    var s = normalize(src), i = 0, out = [], m, ch;
+    while (i < s.length) {
+      ch = s.charAt(i);
+      if (ch === ' ' || ch === '\t' || ch === '\n') { i++; continue; }
+      if (c.complex && (ch === 'j' || ch === 'J' || ch === 'i' || ch === 'I')) {
+        m = NUM_RE.exec(s.slice(i + 1));
+        if (m && !/^[A-Za-z]/.test(s.slice(i + 1 + m[0].length))) {
+          out.push({ t: 'num', v: C(0, parseFloat(m[0])), cx: true }); i += 1 + m[0].length; continue;
+        }
+      }
+      m = NUM_RE.exec(s.slice(i));
+      if (m) {
+        var val = parseFloat(m[0]), rest = s.slice(i + m[0].length), used = m[0].length, cx = false, nx;
+        if (c.complex && rest.length && PREFIX.hasOwnProperty(rest.charAt(0))) {
+          nx = rest.charAt(1);
+          if (!/[A-Za-z0-9_]/.test(nx || '')) { val *= PREFIX[rest.charAt(0)]; used++; rest = rest.slice(1); }
+        }
+        if (c.complex && /^[jJiI]/.test(rest) && !/^[A-Za-z0-9_]/.test(rest.charAt(1) || '')) {
+          out.push({ t: 'num', v: C(0, val), cx: true }); used++;
+        } else out.push({ t: 'num', v: C(val) });
+        i += used; continue;
+      }
+      if (/[A-Za-z]/.test(ch)) {
+        m = /^[A-Za-z]+/.exec(s.slice(i));
+        var name = m[0].toLowerCase(), after = s.slice(i + m[0].length);
+        if (name === 'atan' && /^2\(/.test(after)) { name = 'atan2'; i += m[0].length + 1; }
+        else if (name === 'log' && /^(2|10)\(/.test(after)) { name = 'log' + /^(2|10)/.exec(after)[0]; i += m[0].length + /^(2|10)/.exec(after)[0].length; }
+        else i += m[0].length;
+        out.push({ t: 'id', v: name }); continue;
+      }
+      if ('+-*/^(),!%@\u00b0'.indexOf(ch) >= 0) { out.push({ t: ch === '\u00b0' ? '\u00b0' : ch }); i++; continue; }
+      if (ch === '<') { out.push({ t: '@' }); i++; continue; }
+      if (ch === '=') { i++; continue; }
+      throw err("Unexpected character '" + ch + "'");
+    }
+    return out;
+  }
+
+  /* ---------- functions ---------- */
+  function hint(c) { return c.complex ? '' : ' (switch to Engineering mode for complex results)'; }
+  function dom(msg, c) { return err('Domain error: ' + msg + hint(c)); }
+  function isReal(z) { return z.im === 0; }
+  function needReal(name, z) { if (!isReal(z)) throw err(name + ' needs a real number'); return z.re; }
+  function fromRad(z, c) { return C(z.re / c.k, z.im / c.k); }
+
+  function factorial(x) {
+    if (!Number.isInteger(x) || x < 0) throw err('Factorial needs a whole number from 0 to 170');
+    if (x > 170) throw err('Overflow: factorial is limited to 170!');
+    var r = 1; for (var i = 2; i <= x; i++) r *= i; return r;
+  }
+  function ncr(n, r) {
+    if (!Number.isInteger(n) || !Number.isInteger(r) || n < 0 || r < 0 || r > n) throw err('nCr needs whole numbers with 0 <= r <= n');
+    if (n > 1000) throw err('Overflow: nCr is limited to n <= 1000');
+    var k = Math.min(r, n - r), v = 1;
+    for (var i = 1; i <= k; i++) v = v * (n - k + i) / i;
+    return Math.round(v);
+  }
+  function npr(n, r) {
+    if (!Number.isInteger(n) || !Number.isInteger(r) || n < 0 || r < 0 || r > n) throw err('nPr needs whole numbers with 0 <= r <= n');
+    var v = 1; for (var i = 0; i < r; i++) { v *= (n - i); if (!isFinite(v)) throw err('Overflow: the result is too large to show'); } return v;
+  }
+
+  function real1(f) { return function (a, c) { return C(f(needReal('This function', a[0]), c)); }; }
+  /* A function that has a real formula with a domain check and a complex formula used in Engineering mode. */
+  function dual(realOk, realF, cplxF, msg) {
+    return function (a, c) {
+      var z = a[0];
+      if (c.complex && !isReal(z)) return cplxF(z, c);
+      var x = needReal('This function', z);
+      if (realOk(x)) return C(realF(x, c));
+      if (c.complex) return cplxF(z, c);
+      throw dom(msg(x), c);
+    };
+  }
+  function trig(realF, cplxF) {
+    return function (a, c) {
+      var z = a[0];
+      if (!isReal(z)) { if (!c.complex) throw err('Complex input needs Engineering mode'); return cplxF(C(z.re * c.k, z.im * c.k)); }
+      return C(realF(z.re, c));
+    };
+  }
+  function inv(realOk, realF, cplxF, msg) {
+    return function (a, c) {
+      var z = a[0];
+      if (!isReal(z)) { if (!c.complex) throw err('Complex input needs Engineering mode'); return fromRad(cplxF(z), c); }
+      if (realOk(z.re)) return C(realF(z.re) / c.k);
+      if (c.complex) return fromRad(cplxF(z), c);
+      throw dom(msg(z.re), c);
+    };
+  }
+  function hyp(realF, cplxF) {
+    return function (a, c) {
+      var z = a[0];
+      if (!isReal(z)) { if (!c.complex) throw err('Complex input needs Engineering mode'); return cplxF(z); }
+      return C(realF(z.re));
+    };
+  }
+  function powC(a, b, c) {
+    if (isReal(a) && isReal(b)) {
+      var x = a.re, y = b.re;
+      if (x === 0) {
+        if (y < 0) throw err('Division by zero: zero to a negative power');
+        return C(y === 0 ? 1 : 0);
+      }
+      if (x > 0 || Number.isInteger(y)) return C(Math.pow(x, y));
+      if (!c.complex) throw dom('a negative number to a non-integer power is not real', c);
+      return cpowGen(a, b);
+    }
+    if (!c.complex) throw err('Complex numbers need Engineering mode');
+    if (isReal(b) && Number.isInteger(b.re) && Math.abs(b.re) <= 1024) return cpowInt(a, b.re);
+    return cpowGen(a, b);
+  }
+  function rootC(a, n, c) {
+    var x = needReal('root', n);
+    if (x === 0) throw err('Division by zero: the 0th root is undefined');
+    if (isReal(a)) {
+      if (a.re >= 0) return C(Math.pow(a.re, 1 / x));
+      if (Number.isInteger(x) && Math.abs(x) % 2 === 1) return C(-Math.pow(-a.re, 1 / x));
+      if (!c.complex) throw dom('an even root of a negative number is not real', c);
+    }
+    if (!c.complex) throw err('Complex numbers need Engineering mode');
+    return cpowGen(a, C(1 / x));
+  }
+  var FN = {
+    sin: [1, 1, trig(sinR, csin)],
+    cos: [1, 1, trig(cosR, ccos)],
+    tan: [1, 1, trig(tanR, function (z) { return div(csin(z), ccos(z)); })],
+    sec: [1, 1, function (a, c) { var v = cosR(needReal('sec', a[0]), c); if (v === 0) throw err('Domain error: sec is undefined at this angle'); return C(1 / v); }],
+    csc: [1, 1, function (a, c) { var v = sinR(needReal('csc', a[0]), c); if (v === 0) throw err('Domain error: csc is undefined at this angle'); return C(1 / v); }],
+    cot: [1, 1, function (a, c) { var s = sinR(needReal('cot', a[0]), c); if (s === 0) throw err('Domain error: cot is undefined at this angle'); return C(cosR(a[0].re, c) / s); }],
+    asin: [1, 1, inv(function (x) { return Math.abs(x) <= 1; }, Math.asin, casin, function () { return 'asin needs a value from -1 to 1'; })],
+    acos: [1, 1, inv(function (x) { return Math.abs(x) <= 1; }, Math.acos, cacos, function () { return 'acos needs a value from -1 to 1'; })],
+    atan2: [2, 2, function (a, c) {
+      var y = needReal('atan2', a[0]), x = needReal('atan2', a[1]);
+      if (x === 0 && y === 0) throw err('Domain error: atan2(0, 0) is undefined');
+      return C(Math.atan2(y, x) / c.k);
+    }],
+    atan: [1, 1, inv(function () { return true; }, Math.atan, catan, function () { return ''; })],
+    sinh: [1, 1, hyp(Math.sinh, csinh)],
+    cosh: [1, 1, hyp(Math.cosh, ccosh)],
+    tanh: [1, 1, hyp(Math.tanh, function (z) { return div(csinh(z), ccosh(z)); })],
+    asinh: [1, 1, hyp(Math.asinh, casinh)],
+    acosh: [1, 1, dual(function (x) { return x >= 1; }, Math.acosh, cacosh, function () { return 'acosh needs a value of 1 or more'; })],
+    atanh: [1, 1, dual(function (x) { return Math.abs(x) < 1; }, Math.atanh, catanh, function (x) { return Math.abs(x) === 1 ? 'atanh is infinite at 1 and -1' : 'atanh needs a value between -1 and 1'; })],
+    ln: [1, 1, dual(function (x) { return x > 0; }, Math.log, cln, function (x) { return x === 0 ? 'ln(0) is undefined' : 'ln of a negative number is not real'; })],
+    log: [1, 2, function (a, c) {
+      if (a.length === 2) return FN.logb[2](a, c);
+      return dual(function (x) { return x > 0; }, Math.log10, function (z) { return div(cln(z), C(Math.LN10)); }, function (x) { return x === 0 ? 'log(0) is undefined' : 'log of a negative number is not real'; })(a, c);
+    }],
+    log10: [1, 1, function (a, c) { return FN.log[2]([a[0]], c); }],
+    log2: [1, 1, dual(function (x) { return x > 0; }, Math.log2, function (z) { return div(cln(z), C(Math.LN2)); }, function (x) { return x === 0 ? 'log2(0) is undefined' : 'log2 of a negative number is not real'; })],
+    logb: [2, 2, function (a, c) {
+      var x = a[0], b = a[1];
+      if (isReal(x) && isReal(b)) {
+        if (b.re <= 0 || b.re === 1) throw err('Domain error: the base must be positive and not 1');
+        if (x.re > 0) return C(Math.log(x.re) / Math.log(b.re));
+        if (!c.complex) throw dom('the logarithm of a number that is not positive is not real', c);
+      }
+      if (!c.complex) throw err('Complex numbers need Engineering mode');
+      return div(cln(x), cln(b));
+    }],
+    exp: [1, 1, function (a, c) { return fin(isReal(a[0]) ? C(Math.exp(a[0].re)) : cexp(a[0])); }],
+    sqrt: [1, 1, function (a, c) {
+      var z = a[0];
+      if (isReal(z)) { if (z.re >= 0) return C(Math.sqrt(z.re)); if (!c.complex) throw dom('the square root of a negative number is not real', c); return C(0, Math.sqrt(-z.re)); }
+      if (!c.complex) throw err('Complex numbers need Engineering mode');
+      return csqrt(z);
+    }],
+    cbrt: [1, 1, function (a, c) {
+      var z = a[0];
+      if (isReal(z)) return C(Math.cbrt(z.re));
+      if (!c.complex) throw err('Complex numbers need Engineering mode');
+      return cpowGen(z, C(1 / 3));
+    }],
+    root: [2, 2, function (a, c) { return rootC(a[0], a[1], c); }],
+    pow: [2, 2, function (a, c) { return powC(a[0], a[1], c); }],
+    abs: [1, 1, function (a) { return C(cabs(a[0])); }],
+    mag: [1, 1, function (a) { return C(cabs(a[0])); }],
+    arg: [1, 1, function (a, c) { return C(carg(a[0]) / c.k); }],
+    re: [1, 1, function (a) { return C(a[0].re); }],
+    im: [1, 1, function (a) { return C(a[0].im); }],
+    conj: [1, 1, function (a) { return C(a[0].re, a[0].im === 0 ? 0 : -a[0].im); }],
+    par: [2, 8, function (a) {
+      if (a.some(function (z) { return z.re === 0 && z.im === 0; })) return C(0);
+      var s = C(0); a.forEach(function (z) { s = add(s, div(C(1), z)); });
+      if (s.re === 0 && s.im === 0) throw err('Open circuit: these impedances cancel, so the parallel combination is infinite');
+      return div(C(1), s);
+    }],
+    fact: [1, 1, function (a) { return C(factorial(needReal('Factorial', a[0]))); }],
+    ncr: [2, 2, function (a) { return C(ncr(needReal('nCr', a[0]), needReal('nCr', a[1]))); }],
+    npr: [2, 2, function (a) { return C(npr(needReal('nPr', a[0]), needReal('nPr', a[1]))); }],
+    inv: [1, 1, function (a) { return div(C(1), a[0]); }],
+    floor: [1, 1, function (a) { return C(Math.floor(needReal('floor', a[0]))); }],
+    ceil: [1, 1, function (a) { return C(Math.ceil(needReal('ceil', a[0]))); }],
+    round: [1, 1, function (a) { var x = needReal('round', a[0]); return C(x < 0 ? -Math.round(-x) : Math.round(x)); }],
+    trunc: [1, 1, function (a) { return C(Math.trunc(needReal('trunc', a[0]))); }],
+    mod: [2, 2, function (a) {
+      var x = needReal('mod', a[0]), y = needReal('mod', a[1]);
+      if (y === 0) throw err('Division by zero');
+      return C(x - y * Math.floor(x / y));
+    }]
+  };
+  var UNITLESS = ['arg', 'asin', 'acos', 'atan', 'atan2', 'ncr', 'npr'];
+  var ALIAS = { arcsin: 'asin', arccos: 'acos', arctan: 'atan', arcsinh: 'asinh', arccosh: 'acosh', arctanh: 'atanh', sqr: 'sqrt', factorial: 'fact', phase: 'arg', angle: 'arg', real: 're', imag: 'im', modulus: 'mag', conjugate: 'conj', parallel: 'par' };
+  var FNLIST = Object.keys(FN);
+  /* Names a variable may not take: constants, the previous answer, memory, the imaginary unit, functions and their aliases. */
+  var RESERVED = { pi: 1, e: 1, ans: 1, mem: 1, rnd: 1, rand: 1, j: 1, i: 1 };
+  FNLIST.concat(Object.keys(ALIAS)).forEach(function (n) { RESERVED[n] = 1; });
+  function reserved(name) { return Object.prototype.hasOwnProperty.call(RESERVED, String(name).toLowerCase()); }
+
+  /* ---------- parser / evaluator ---------- */
+  function evaluate(expr, opts) {
+    opts = opts || {};
+    var c = { angle: opts.angle === 'RAD' || opts.angle === 'GRAD' ? opts.angle : 'DEG', complex: !!opts.complex, ans: opts.ans || C(0), mem: opts.mem || C(0), rand: opts.random || Math.random, volatile: false, usedComplex: false, tight: opts.implicit === 'tight', vars: opts.vars || null };
+    c.k = angleFactor(c.angle);
+    var toks, pos = 0;
+    function peek() { return toks[pos]; }
+    function eat(t) { var k = toks[pos]; if (k && k.t === t) { pos++; return k; } return null; }
+    function startsPrimary(k) { return !!k && (k.t === 'num' || k.t === 'id' || k.t === '('); }
+
+    function parseExpr() {
+      var v = parseTerm(), k;
+      while ((k = peek()) && (k.t === '+' || k.t === '-')) { pos++; var r = parseTerm(); v = fin(k.t === '+' ? add(v, r) : sub(v, r)); }
+      return v;
+    }
+    /* A product written without a sign (2pi, 3(4+5), 2sin(30)). */
+    function juxtapose(v) {
+      var k = peek();
+      if (k.t === 'num' && !k.cx && toks[pos - 1] && toks[pos - 1].t === 'num' && !toks[pos - 1].cx) throw err('Add an operator between the numbers (for example 1000 * 3)');
+      return fin(mul(v, parsePolar()));
+    }
+    /* Implicit multiplication setting. Equal (default): a product with the sign left out ranks with * and /, so 1/2pi is (1/2)*pi.
+       Tight: it binds before / so 1/2pi is 1/(2*pi). */
+    function parseOperand() {
+      var v = parsePolar();
+      if (c.tight) while (startsPrimary(peek())) v = juxtapose(v);
+      return v;
+    }
+    function parseTerm() {
+      var v = parseOperand(), k;
+      for (;;) {
+        k = peek();
+        if (k && (k.t === '*' || k.t === '/')) { pos++; var r = parseOperand(); v = fin(k.t === '*' ? mul(v, r) : div(v, r)); }
+        else if (!c.tight && startsPrimary(k)) v = juxtapose(v);
+        else break;
+      }
+      return v;
+    }
+    function parsePolar() {
+      var v = parseUnary();
+      if (peek() && peek().t === '@') {
+        if (!c.complex) throw err('Polar input (\u2220) needs Engineering mode');
+        pos++; var a = parseUnary();
+        if (!isReal(v) || !isReal(a)) throw err('Polar form needs a real magnitude and a real angle');
+        c.usedComplex = true;
+        return C(v.re * cosR(a.re, c), v.re * sinR(a.re, c));
+      }
+      return v;
+    }
+    function parseUnary() {
+      var k = peek();
+      if (k && k.t === '-') { pos++; var v = parseUnary(); return C(-v.re || 0, -v.im || 0); }
+      if (k && k.t === '+') { pos++; return parseUnary(); }
+      return parsePower();
+    }
+    function parsePower() {
+      var b = parsePostfix();
+      if (eat('^')) { var e = parseUnary(); return fin(powC(b, e, c)); }
+      return b;
+    }
+    function parsePostfix() {
+      var v = parsePrimary(), k;
+      while ((k = peek()) && (k.t === '!' || k.t === '%' || k.t === '\u00b0')) {
+        pos++;
+        if (k.t === '!') v = C(factorial(needReal('Factorial', v)));
+        else if (k.t === '%') v = C(v.re / 100, v.im / 100);
+        else v = C(v.re * (c.angle === 'DEG' ? 1 : c.angle === 'GRAD' ? 10 / 9 : PI / 180), v.im * (c.angle === 'DEG' ? 1 : c.angle === 'GRAD' ? 10 / 9 : PI / 180));
+      }
+      return v;
+    }
+    function parsePrimary() {
+      var k = peek();
+      if (!k) throw err('The expression is incomplete');
+      if (k.t === 'num') { pos++; if (k.cx) c.usedComplex = true; return k.v; }
+      if (k.t === '(') {
+        pos++; var v = parseExpr();
+        if (!eat(')')) throw err('Missing closing bracket )');
+        return v;
+      }
+      if (k.t === 'id') {
+        pos++;
+        var name = ALIAS[k.v] || k.v;
+        if (name === 'pi') return C(PI);
+        if (name === 'e') return C(Math.E);
+        var held = null, heldName = '';
+        if (name === 'ans') { held = c.ans; heldName = 'answer'; }
+        else if (name === 'mem') { held = c.mem; heldName = 'memory value'; }
+        else if (c.vars && Object.prototype.hasOwnProperty.call(c.vars, name) && !RESERVED[name]) { held = c.vars[name]; heldName = "variable '" + name + "'"; }
+        if (held) {
+          if (!c.complex && held.im !== 0) throw err('The stored ' + heldName + ' is a complex number: switch to Engineering mode to use it');
+          return held;
+        }
+        if (name === 'rnd' || name === 'rand') { c.volatile = true; if (eat('(')) { if (!eat(')')) throw err('rnd takes no arguments'); } return C(c.rand()); }
+        if ((name === 'j' || name === 'i') && c.complex) { c.usedComplex = true; return J; }
+        if (!FN.hasOwnProperty(name)) throw err("Unknown name '" + k.v + "'" + ((name === 'j' || name === 'i') ? ' (use Engineering mode for the imaginary unit)' : (name.length === 1 && 'kmgtunp'.indexOf(name) >= 0) ? (c.complex ? ' (an SI prefix must come straight after a number and end it, as in 4.7k or 100u)' : ' (SI prefixes such as k and u work in Engineering mode)') : ''));
+        var spec = FN[name], args = [], callStart = pos - 1;
+        if (eat('(')) {
+          if (!eat(')')) {
+            args.push(parseExpr());
+            while (eat(',')) args.push(parseExpr());
+            if (!eat(')')) throw err('Missing closing bracket )');
+          }
+        } else {
+          if (!startsPrimary(peek()) && !(peek() && (peek().t === '-' || peek().t === '+'))) throw err("'" + k.v + "' needs a value");
+          args.push(parseUnary());
+        }
+        if (args.length < spec[0] || args.length > spec[1]) throw err("'" + k.v + "' takes " + (spec[0] === spec[1] ? spec[0] : spec[0] + ' to ' + spec[1]) + ' value' + (spec[1] === 1 ? '' : 's'));
+        var r = fin(spec[2](args, c));
+        if (!isReal(r)) c.usedComplex = true;
+        c.lastCall = { name: name, start: callStart, end: pos };
+        return r;
+      }
+      if (k.t === ')') throw err("Unexpected closing bracket )");
+      throw err("Unexpected '" + (k.t === '@' ? '\u2220' : k.t) + "'");
+    }
+
+    try {
+      toks = tokenize(expr, c);
+      if (!toks.length) return { ok: false, empty: true, error: '' };
+      var v = parseExpr();
+      if (pos < toks.length) {
+        var k = toks[pos];
+        throw err(k.t === ')' ? 'Unexpected closing bracket )' : "Unexpected '" + (k.t === 'num' ? 'number' : k.t === 'id' ? k.v : k.t === '@' ? '\u2220' : k.t) + "'");
+      }
+      v = fin(v);
+      if (v.im !== 0) c.usedComplex = true;
+      /* A result that is a single call to an angle or counting function is not in the unit the user chose for the result (arg(3+j4) is an angle, not ohms). */
+      var lc = c.lastCall, unitless = !!lc && lc.start === 0 && lc.end === toks.length && UNITLESS.indexOf(lc.name) >= 0;
+      return { ok: true, value: v, complex: c.usedComplex, volatile: c.volatile, unitless: unitless };
+    } catch (e) {
+      if (e && e.sciError) return { ok: false, error: e.sciError };
+      return { ok: false, error: 'This expression could not be calculated', internal: true };
+    }
+  }
+
+  /* ---------- output formatting ---------- */
+  var SUP = { '-': '\u207b', '0': '\u2070', '1': '\u00b9', '2': '\u00b2', '3': '\u00b3', '4': '\u2074', '5': '\u2075', '6': '\u2076', '7': '\u2077', '8': '\u2078', '9': '\u2079' };
+  function sup(n) { return String(n).split('').map(function (ch) { return SUP[ch]; }).join(''); }
+  function stripZeros(s) { return s.indexOf('.') >= 0 ? s.replace(/0+$/, '').replace(/\.$/, '') : s; }
+  function digitsOf(o) { var d = o && o.digits ? Math.round(o.digits) : 10; return Math.min(15, Math.max(3, d)); }
+  var PFX_SYM = { 12: 'T', 9: 'G', 6: 'M', 3: 'k', 0: '', '-3': 'm', '-6': '\u00b5', '-9': 'n', '-12': 'p' };
+
+  function expParts(v, d) {
+    var s = Math.abs(v).toExponential(d - 1), m = /^(\d(?:\.\d+)?)e([+-]\d+)$/.exec(s);
+    return { mant: stripZeros(m[1]), exp: parseInt(m[2], 10) };
+  }
+  function engParts(v, d) {
+    var p = expParts(v, d), ee = Math.floor(p.exp / 3) * 3;
+    var mant = Number((Math.abs(v) / Math.pow(10, ee)).toPrecision(d));
+    if (mant >= 1000) { ee += 3; mant = Number((Math.abs(v) / Math.pow(10, ee)).toPrecision(d)); }
+    return { mant: stripZeros(String(mant)), exp: ee };
+  }
+  function toFraction(x, maxDen) {
+    var v = Math.abs(x), h1 = 1, h0 = 0, k1 = 0, k0 = 1, b = v;
+    for (var i = 0; i < 40; i++) {
+      var a = Math.floor(b), h2 = a * h1 + h0, k2 = a * k1 + k0;
+      if (k2 > maxDen) break;
+      h0 = h1; h1 = h2; k0 = k1; k1 = k2;
+      if (h1 !== 0 && Math.abs(v - h1 / k1) <= 1e-10 * v) return { n: x < 0 ? -h1 : h1, d: k1 };
+      var fr = b - a; if (fr < 1e-14) break; b = 1 / fr;
+    }
+    return null;
+  }
+  /* A real number as text. kind: auto, sci, eng, fraction. Returns the shown text. */
+  function fmtReal(x, o) {
+    o = o || {};
+    if (x === 0 || Object.is(x, -0)) return '0';
+    var d = digitsOf(o), kind = o.fmt || 'auto', neg = x < 0, body, v = Number(Math.abs(x).toPrecision(d));
+    if (kind === 'fraction') {
+      var f = toFraction(x, 9999);
+      if (f) {
+        if (f.d === 1) return String(f.n);
+        var ab = Math.abs(f.n), whole = Math.floor(ab / f.d), rem = ab % f.d;
+        return (f.n < 0 ? '-' : '') + ab + '/' + f.d + (whole > 0 ? ' (' + (f.n < 0 ? '-' : '') + whole + ' ' + rem + '/' + f.d + ')' : '');
+      }
+      kind = 'auto';
+    }
+    if (kind === 'sci') { var s = expParts(v, d); body = s.mant + '\u00d710' + sup(s.exp); }
+    else if (kind === 'eng') { var e = engParts(v, d); body = e.mant + '\u00d710' + sup(e.exp); }
+    else if (v >= 1e-6 && v < 1e12) body = String(v);
+    else { var a = expParts(v, d); body = a.mant + '\u00d710' + sup(a.exp); }
+    return (neg ? '-' : '') + body;
+  }
+  /* Plain machine-readable text for copying: 4.7e-5 style, no unicode. */
+  function plainReal(x, o) {
+    if (x === 0 || Object.is(x, -0)) return '0';
+    return String(Number(x.toPrecision(digitsOf(o))));
+  }
+  /* 4700 -> "4.7 k". Null when the exponent is outside T..p. */
+  function prefixed(x, o) {
+    if (!isFinite(x) || x === 0) return null;
+    var p = engParts(Number(Math.abs(x).toPrecision(digitsOf(o))), digitsOf(o));
+    if (!PFX_SYM.hasOwnProperty(p.exp)) return null;
+    return (x < 0 ? '-' : '') + p.mant + (PFX_SYM[p.exp] ? ' ' + PFX_SYM[p.exp] : '');
+  }
+  /* Remove rounding noise from a complex value before showing it: 1e-17 beside 5 is zero. */
+  function clean(z) {
+    var m = Math.max(Math.abs(z.re), Math.abs(z.im)), t = m * 1e-13;
+    return C(Math.abs(z.re) <= t && z.re !== 0 ? 0 : z.re, Math.abs(z.im) <= t && z.im !== 0 ? 0 : z.im);
+  }
+  var ANG_SYM = { DEG: '\u00b0', RAD: ' rad', GRAD: ' grad' };
+  function polarOf(z, o) {
+    var k = angleFactor(o && o.angle), mag = cabs(z), ang = mag === 0 ? 0 : carg(z) / k;
+    return { mag: mag, ang: ang, sym: ANG_SYM[o && (o.angle === 'RAD' || o.angle === 'GRAD') ? o.angle : 'DEG'] };
+  }
+  function unitTxt(o) { return o && o.unit ? ' ' + o.unit : ''; }
+  function fmtRect(z, o) {
+    var re = fmtReal(z.re, o), im = fmtReal(Math.abs(z.im), o);
+    if (z.im === 0) return re;
+    return re + ' ' + (z.im < 0 ? '-' : '+') + ' j' + im;
+  }
+  function fmtPolar(z, o) {
+    var p = polarOf(z, o);
+    return fmtReal(p.mag, o) + ' \u2220 ' + fmtReal(p.ang, o) + p.sym;
+  }
+  /* The main result text. form: 'rect' or 'polar' for complex values. */
+  function format(z, o) {
+    o = o || {};
+    z = clean(z);
+    if (z.im === 0) {
+      var t = fmtReal(z.re, o), pre = o.fmt === 'eng' ? prefixed(z.re, o) : null;
+      return { text: t + unitTxt(o), real: true, copy: plainReal(z.re, o), prefix: pre ? pre + (o.unit ? o.unit : '') : '' };
+    }
+    var rect = fmtRect(z, o) + unitTxt(o), polar = fmtPolar(z, o) + unitTxt(o), p = polarOf(z, o);
+    return { text: o.form === 'polar' ? polar : rect, real: false, rect: rect, polar: polar,
+      copy: plainReal(z.re, o) + (z.im < 0 ? '-' : '+') + 'j' + plainReal(Math.abs(z.im), o), copyPolar: plainReal(p.mag, o) + '\u2220' + plainReal(p.ang, o) + (o.angle === 'RAD' ? 'rad' : o.angle === 'GRAD' ? 'grad' : '\u00b0'), prefix: '' };
+  }
+  /* Rows, steps and drawing data for the phasor panel. Angles in the table follow the angle mode. */
+  function describe(z, o) {
+    o = o || {}; z = clean(z);
+    var p = polarOf(z, o), u = o.unit ? ' ' + o.unit : '', sgn = z.im < 0 ? '-' : '+', d = digitsOf(o);
+    var a = fmtReal(Math.abs(z.re), o), b = fmtReal(Math.abs(z.im), o), m = fmtReal(p.mag, o), th = fmtReal(p.ang, o);
+    var rows = [
+      ['Real component', fmtReal(z.re, o) + u],
+      ['Imaginary component', (z.im < 0 ? '-' : '+') + fmtReal(Math.abs(z.im), o) + u],
+      ['Magnitude', m + u],
+      ['Phase angle', th + p.sym],
+      ['Representation', m + ' \u2220 ' + th + p.sym]
+    ];
+    var steps = ['Rectangular form: Z = ' + fmtReal(z.re, o) + ' ' + sgn + ' j' + b + u];
+    if (z.re !== 0 || z.im !== 0) {
+      steps.push('Magnitude: |Z| = \u221a(' + a + '\u00b2 + ' + b + '\u00b2) = ' + m + u);
+      steps.push('Phase angle: \u03b8 = atan2(' + fmtReal(z.im, o) + ', ' + fmtReal(z.re, o) + ')' + (z.re > 0 ? ' = tan\u207b\u00b9(' + b + '/' + a + ')' : '') + ' = ' + th + p.sym + (z.re < 0 ? ' (the real part is negative, so the angle is in the second or third quadrant)' : ''));
+      steps.push('Polar form: Z = ' + m + ' \u2220 ' + th + p.sym + u);
+    } else steps.push('Both parts are zero, so the magnitude is 0 and the angle is not defined (shown as 0).');
+    return { rows: rows, steps: steps, re: z.re, im: z.im, mag: p.mag, angDeg: p.mag === 0 ? 0 : carg(z) * 180 / PI, digits: d };
+  }
+
+  function xml(t) { return String(t).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
+  /* Phasor diagram as an SVG string (equal scale on both axes). d comes from describe(). Colours are the site's CSS variables. */
+  function phasorSvg(d, o) {
+    o = o || {};
+    var W = 320, H = 260, L = 36, R = 284, T = 20, B = 226;
+    var re = d.re, im = d.im, xmin = Math.min(0, re), xmax = Math.max(0, re), ymin = Math.min(0, im), ymax = Math.max(0, im);
+    var spanX = xmax - xmin, spanY = ymax - ymin, m = Math.max(spanX, spanY);
+    if (!(m > 0)) { m = 1; spanX = spanY = 0; }
+    var pad = 0.3 * m, s = Math.min((R - L) / (spanX + pad), (B - T) / (spanY + pad));
+    var ox = L + (-xmin + pad / 2) * s + ((R - L) - (spanX + pad) * s) / 2;
+    var oy = B - ((-ymin + pad / 2) * s + ((B - T) - (spanY + pad) * s) / 2);
+    var px = ox + re * s, py = oy - im * s, f = function (n) { return n.toFixed(1); };
+    var u = o.unit ? ' ' + o.unit : '', mag = d.mag, th = d.angDeg;
+    var out = '<svg class="sc-svg" viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="Phasor diagram: ' + xml(fmtReal(re, o) + (im < 0 ? ' - j' : ' + j') + fmtReal(Math.abs(im), o) + ', magnitude ' + fmtReal(mag, o) + u + ', angle ' + fmtReal(th, { digits: digitsOf(o) }) + ' degrees') + '" xmlns="http://www.w3.org/2000/svg" font-family="var(--body)" font-size="11">';
+    out += '<rect x="' + L + '" y="' + T + '" width="' + (R - L) + '" height="' + (B - T) + '" fill="none" stroke="var(--line)"/>';
+    out += '<line x1="' + L + '" y1="' + f(oy) + '" x2="' + R + '" y2="' + f(oy) + '" stroke="var(--muted)" stroke-width="1"/><line x1="' + f(ox) + '" y1="' + T + '" x2="' + f(ox) + '" y2="' + B + '" stroke="var(--muted)" stroke-width="1"/>';
+    out += '<text x="' + (R - 4) + '" y="' + f(oy - 5) + '" text-anchor="end" fill="var(--muted)">Re</text><text x="' + f(ox + 5) + '" y="' + (T + 11) + '" fill="var(--muted)">Im (j)</text>';
+    if (mag > 0) {
+      if (re !== 0) out += '<line x1="' + f(px) + '" y1="' + f(py) + '" x2="' + f(px) + '" y2="' + f(oy) + '" stroke="var(--muted)" stroke-dasharray="3 3"/>';
+      if (im !== 0) out += '<line x1="' + f(px) + '" y1="' + f(py) + '" x2="' + f(ox) + '" y2="' + f(py) + '" stroke="var(--muted)" stroke-dasharray="3 3"/>';
+      var a = Math.atan2(-(py - oy), px - ox), hx = 9, hy = 4, ca = Math.cos(a), sa = Math.sin(a);
+      var bx = px - hx * ca, by = py + hx * sa, lx = bx - hy * sa, ly = by - hy * ca, rx = bx + hy * sa, ry = by + hy * ca;
+      out += '<line x1="' + f(ox) + '" y1="' + f(oy) + '" x2="' + f(bx) + '" y2="' + f(by) + '" stroke="var(--cyan)" stroke-width="2.5"/><polygon points="' + f(px) + ',' + f(py) + ' ' + f(lx) + ',' + f(ly) + ' ' + f(rx) + ',' + f(ry) + '" fill="var(--cyan)"/>';
+      var ra = Math.min(30, 0.45 * mag * s), ang = Math.atan2(im, re);
+      if (im !== 0 && ra > 8) {
+        out += '<path d="M ' + f(ox + ra) + ' ' + f(oy) + ' A ' + f(ra) + ' ' + f(ra) + ' 0 0 ' + (ang > 0 ? 0 : 1) + ' ' + f(ox + ra * Math.cos(ang)) + ' ' + f(oy - ra * Math.sin(ang)) + '" fill="none" stroke="var(--gold)" stroke-width="2"/>';
+        var tx = ox + (ra + 8) * Math.cos(ang / 2), ty = oy - (ra + 8) * Math.sin(ang / 2);
+        out += '<text x="' + f(tx) + '" y="' + f(ty + 4) + '" fill="var(--ink)" text-anchor="' + (Math.cos(ang / 2) >= 0 ? 'start' : 'end') + '">\u03b8 = ' + xml(fmtReal(th, { digits: Math.min(digitsOf(o), 6) })) + '\u00b0</text>';
+      }
+      var lx2 = (ox + px) / 2, ly2 = (oy + py) / 2, off = im >= 0 ? 16 : -8;
+      out += '<text x="' + f(lx2 + (re >= 0 ? 9 : -9)) + '" y="' + f(ly2 + off) + '" fill="var(--ink)" font-weight="600" text-anchor="' + (re >= 0 ? 'start' : 'end') + '">|Z| = ' + xml(fmtReal(mag, { digits: Math.min(digitsOf(o), 6) }) + u) + '</text>';
+      out += '<circle cx="' + f(px) + '" cy="' + f(py) + '" r="3" fill="var(--cyan)"/>';
+    } else out += '<circle cx="' + f(ox) + '" cy="' + f(oy) + '" r="3" fill="var(--cyan)"/>';
+    return out + '</svg>';
+  }
+
+  return { evaluate: evaluate, format: format, describe: describe, phasorSvg: phasorSvg, fmtReal: fmtReal, prefixed: prefixed, functions: FNLIST, reserved: reserved, version: 2 };
+});
+</script><script>/* Elecmetric Scientific Calculator: page script. Inlined into calculators/scientific-calculator/index.html by tools/scicalc_page.js.
+   Needs window.SciCalc (tools/scicalc_engine.js, inlined before this file). No network, no storage, no dynamic code.
+   The history and the worksheet live in memory only and are gone when the page closes. */
+(function () {
+  'use strict';
+  var S = window.SciCalc, doc = document;
+  var $ = function (id) { return doc.getElementById(id); };
+  var inp = $('sc-in'), live = $('sc-live'), alt = $('sc-alt'), msg = $('sc-err'), note = $('sc-note'), memEl = $('sc-mem');
+  if (!S || !inp) return;
+  var st = { mode: 'std', angle: 'DEG', fmt: 'auto', dig: 10, unit: '', form: 'rect', ans: { re: 0, im: 0 }, mem: { re: 0, im: 0 }, hist: [], ws: [], just: false, last: null, imp: 'equal', vars: Object.create(null) };
+
+  function opts() {
+    var eng = st.mode === 'eng';
+    return { angle: st.angle, complex: eng, digits: st.dig, fmt: st.fmt, unit: eng ? st.unit : '', form: st.form, ans: st.ans, mem: st.mem, implicit: st.imp, vars: st.vars };
+  }
+  function fo(r) { var o = opts(); if (r && r.unitless) o.unit = ''; return o; }
+  /* name=expression stores a variable. Only letters, because the engine reads a name as a run of letters. */
+  function splitAssign(t) {
+    var m = /^\s*([A-Za-z]+)\s*=\s*([^=].*?)\s*$/.exec(t);
+    return m ? { name: m[1].toLowerCase(), rhs: m[2] } : null;
+  }
+  function calc() { var a = splitAssign(inp.value); return S.evaluate(a ? a.rhs : inp.value, opts()); }
+  function announce(t) { note.textContent = ''; setTimeout(function () { note.textContent = t; }, 30); }
+  function clear(el) { while (el.firstChild) el.removeChild(el.firstChild); }
+
+  /* ---------- drawing the result ---------- */
+  function renderPanel(r) {
+    var panel = $('sc-cx');
+    if (st.mode !== 'eng') { panel.hidden = true; return; }
+    panel.hidden = false;
+    var body = $('sc-cx-body'), hint = $('sc-cx-hint');
+    if (!r || !r.ok || !r.complex) {
+      body.hidden = true; hint.hidden = false;
+      return;
+    }
+    var o = opts(), d = S.describe(r.value, o), tb = $('sc-cx-rows'), ol = $('sc-cx-steps');
+    hint.hidden = true; body.hidden = false;
+    clear(tb); clear(ol);
+    d.rows.forEach(function (row) {
+      var tr = doc.createElement('tr'), th = doc.createElement('th'), td = doc.createElement('td');
+      th.scope = 'row'; th.textContent = row[0]; td.textContent = row[1];
+      tr.appendChild(th); tr.appendChild(td); tb.appendChild(tr);
+    });
+    d.steps.forEach(function (t) { var li = doc.createElement('li'); li.textContent = t; ol.appendChild(li); });
+    $('sc-cx-svg').innerHTML = S.phasorSvg(d, o);
+  }
+  function show(committed) {
+    var r = calc(), o = opts();
+    st.last = r;
+    msg.className = committed && !r.ok && !r.empty ? 'err' : 'note';
+    clear(alt);
+    if (r.empty) { live.textContent = '0'; msg.textContent = ''; renderPanel(null); return r; }
+    if (!r.ok) {
+      live.textContent = '\u2026'; msg.textContent = r.error; renderPanel(null);
+      return r;
+    }
+    msg.textContent = '';
+    var asg = splitAssign(inp.value);
+    if (asg && !committed) msg.textContent = S.reserved(asg.name) ? "'" + asg.name + "' is a built-in name and cannot be a variable." : 'Press Enter to store this as ' + asg.name + '.';
+    if (r.volatile && !committed) { live.textContent = '?'; msg.textContent = 'Press = to generate a random number.'; renderPanel(null); return r; }
+    var f = S.format(r.value, fo(r));
+    live.textContent = f.text;
+    var line = '';
+    if (!f.real) line = st.form === 'polar' ? f.rect : f.polar;
+    else if (f.prefix) line = f.prefix;
+    if (line) alt.textContent = line;
+    renderPanel(r);
+    return r;
+  }
+
+  /* ---------- editing the expression ---------- */
+  function caret() {
+    var v = inp.value, on = doc.activeElement === inp;
+    return { s: on ? inp.selectionStart : v.length, e: on ? inp.selectionEnd : v.length };
+  }
+  function put(v, pos) {
+    inp.value = v;
+    try { inp.setSelectionRange(pos, pos); } catch (e) { /* not focusable yet */ }
+  }
+  function focusMaybe() {
+    if (window.matchMedia && window.matchMedia('(pointer:fine)').matches) inp.focus();
+  }
+  function ins(t) {
+    var isExp = t === 'E';
+    if (st.just) {
+      inp.value = /^[\^!%*\/+\-]/.test(t) || isExp ? 'ans' : '';
+      st.just = false;
+      try { inp.setSelectionRange(inp.value.length, inp.value.length); } catch (e) { /* ignore */ }
+    }
+    var c = caret(), v = inp.value;
+    /* EXP directly after a number is the exponent marker (2E3). After anything else it means times ten to the power, because a bare E would be read as Euler's number. */
+    if (isExp && !/[0-9.]/.test(v.charAt(c.s - 1))) t = /^$|[(+\-*\/^,]/.test(v.charAt(c.s - 1)) ? '10^' : '*10^';
+    put(v.slice(0, c.s) + t + v.slice(c.e), c.s + t.length);
+    focusMaybe();
+    show(false);
+  }
+  function backspace() {
+    var c = caret(), v = inp.value;
+    if (c.s !== c.e) put(v.slice(0, c.s) + v.slice(c.e), c.s);
+    else if (c.s > 0) put(v.slice(0, c.s - 1) + v.slice(c.s), c.s - 1);
+    st.just = false;
+    focusMaybe(); show(false);
+  }
+  function wrap(before, after) {
+    var v = inp.value.trim();
+    if (!v) { ins(before); return; }
+    put(before + v + after, (before + v + after).length);
+    st.just = false; focusMaybe(); show(false);
+  }
+  /* True when the opening bracket at the start of t is closed by the last character, so -(1)+(2) is not treated as -( ... ). */
+  function wrapsAll(t) {
+    var depth = 0;
+    for (var i = 0; i < t.length; i++) {
+      if (t.charAt(i) === '(') depth++;
+      else if (t.charAt(i) === ')') { depth--; if (depth === 0 && i < t.length - 1) return false; }
+    }
+    return depth === 0;
+  }
+  function negate() {
+    var v = inp.value.trim();
+    if (!v) { ins('-'); return; }
+    if (/^-\(.*\)$/.test(v) && wrapsAll(v.slice(1))) put(v.slice(2, -1), v.length - 3);
+    else put('-(' + v + ')', v.length + 3);
+    st.just = false; focusMaybe(); show(false);
+  }
+
+  /* ---------- history, memory ---------- */
+  function renderHist() {
+    var ol = $('sc-hist'), none = $('sc-hist-none');
+    clear(ol);
+    none.hidden = st.hist.length > 0;
+    $('sc-hist-clear').hidden = st.hist.length === 0;
+    st.hist.forEach(function (h) {
+      var li = doc.createElement('li'), b = doc.createElement('button');
+      b.type = 'button'; b.className = 'sc-h';
+      b.textContent = h.expr + ' = ' + h.text;
+      b.setAttribute('aria-label', 'Use ' + h.expr + ', which equals ' + h.text);
+      b.addEventListener('click', function () { st.just = false; put(h.expr, h.expr.length); focusMaybe(); show(false); });
+      li.appendChild(b); ol.appendChild(li);
+    });
+  }
+  function renderVars() {
+    var box = $('sc-vars'), list = $('sc-vars-list'), names = Object.keys(st.vars).sort();
+    if (!box) return;
+    box.hidden = names.length === 0;
+    clear(list);
+    names.forEach(function (n) {
+      var b = doc.createElement('button'), t = S.format(st.vars[n], opts()).text;
+      b.type = 'button'; b.className = 'chipb'; b.setAttribute('data-ins', n);
+      b.textContent = n + ' = ' + t;
+      b.setAttribute('aria-label', 'Insert variable ' + n + ', value ' + t);
+      list.appendChild(b);
+    });
+  }
+  function memShow() {
+    var z = st.mem, on = z.re !== 0 || z.im !== 0;
+    memEl.hidden = !on;
+    if (on) memEl.textContent = 'M = ' + S.format(z, opts()).text;
+  }
+  function commit() {
+    var asg = splitAssign(inp.value), r = show(true);
+    if (r.empty || !r.ok) return;
+    if (asg) {
+      var fresh = !(asg.name in st.vars);
+      if (S.reserved(asg.name)) { msg.className = 'err'; msg.textContent = "'" + asg.name + "' is a built-in name and cannot be a variable."; return; }
+      if (fresh && Object.keys(st.vars).length >= 20) { msg.className = 'err'; msg.textContent = 'At most 20 variables. Clear some first.'; return; }
+      st.vars[asg.name] = r.value; renderVars();
+    }
+    var f = S.format(r.value, fo(r));
+    st.ans = r.value; st.just = true;
+    st.hist.unshift({ expr: inp.value.trim(), text: f.text });
+    if (st.hist.length > 40) st.hist.pop();
+    renderHist();
+    try {
+      var h = hashFor();
+      if (window.history && history.replaceState) history.replaceState(null, '', h);
+    } catch (e) { /* the address bar is optional */ }
+    announce(asg ? asg.name + ' stored as ' + f.text : 'Result ' + f.text);
+  }
+  function memValue() {
+    var r = calc();
+    if (r.ok) return r.value;
+    if (st.last && st.last.ok) return st.last.value;
+    return null;
+  }
+
+  /* ---------- clipboard ---------- */
+  function copyText(t, label) {
+    function done() { announce((label || 'Result') + ' copied'); }
+    function fallback() {
+      var ta = doc.createElement('textarea');
+      ta.value = t; ta.setAttribute('readonly', ''); ta.style.position = 'fixed'; ta.style.opacity = '0';
+      doc.body.appendChild(ta); ta.select();
+      try { doc.execCommand('copy'); done(); } catch (e) { announce('Copy is not available in this browser'); }
+      doc.body.removeChild(ta);
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(t).then(done, fallback);
+    else fallback();
+  }
+  function hashFor() {
+    var h = '#e=' + encodeURIComponent(inp.value.trim()) + '&m=' + st.mode + '&a=' + st.angle + '&d=' + st.dig;
+    if (st.mode === 'eng') {
+      if (st.unit) h += '&u=' + encodeURIComponent(st.unit);
+      if (st.form === 'polar') h += '&f=polar';
+    }
+    if (st.imp === 'tight') h += '&i=tight';
+    var vn = Object.keys(st.vars).sort();
+    if (vn.length) h += '&v=' + encodeURIComponent(vn.map(function (n) { return n + ':' + st.vars[n].re + ',' + st.vars[n].im; }).join(';'));
+    return h;
+  }
+  function shareUrl() { return location.href.split('#')[0] + hashFor(); }
+
+
+  /* ---------- worksheet: results kept with their settings and a note, printed or copied. Memory only. ---------- */
+  var WS_MAX = 50;
+  function settingsText(e) {
+    var t = (e.mode === 'eng' ? 'Engineering' : 'Standard') + ' mode, ' + e.angle + ', ' + e.dig + ' significant digits';
+    if (e.unit) t += ', unit ' + e.unit;
+    if (e.vars) t += ', with ' + e.vars;
+    return t;
+  }
+  function varsUsed(expr) {
+    var toks = expr.toLowerCase().match(/[a-z]+/g) || [], seen = Object.create(null), out = [];
+    toks.forEach(function (n) {
+      if (n in st.vars && !(n in seen)) { seen[n] = 1; out.push(n + ' = ' + S.format(st.vars[n], opts()).text); }
+    });
+    return out.join(', ');
+  }
+  function wsEntry() {
+    var expr = inp.value.trim(), r = calc();
+    if (r.empty || !r.ok) return null;
+    var f, h = st.hist[0];
+    if (r.volatile) {
+      if (!(h && h.expr === expr)) return null;
+      f = { text: h.text, real: true };
+    } else f = S.format(r.value, fo(r));
+    var alt2 = '';
+    if (!r.volatile) { if (!f.real) alt2 = st.form === 'polar' ? f.rect : f.polar; else if (f.prefix) alt2 = f.prefix; }
+    return { expr: expr, text: f.text, alt: alt2, mode: st.mode, angle: st.angle, dig: st.dig, unit: st.mode === 'eng' && !r.unitless ? st.unit : '', vars: varsUsed(expr), note: '' };
+  }
+  function renderWs() {
+    var ol = $('sc-ws-list'), none = $('sc-ws-none'), body = $('sc-ws-body');
+    if (!ol) return;
+    clear(ol);
+    none.hidden = st.ws.length > 0; body.hidden = st.ws.length === 0;
+    st.ws.forEach(function (e, i) {
+      var li = doc.createElement('li'), x = doc.createElement('div'), sm = doc.createElement('div'), lab = doc.createElement('label'), ta = doc.createElement('textarea'), rm = doc.createElement('button');
+      x.className = 'sc-wsx'; x.textContent = (i + 1) + '. ' + e.expr + ' = ' + e.text + (e.alt ? '  (' + e.alt + ')' : '');
+      sm.className = 'sc-wss'; sm.textContent = settingsText(e);
+      lab.className = 'sr-only'; lab.setAttribute('for', 'sc-wsn-' + i); lab.textContent = 'Note for entry ' + (i + 1);
+      ta.id = 'sc-wsn-' + i; ta.maxLength = 300; ta.rows = 2; ta.value = e.note; ta.placeholder = 'Note (optional)';
+      ta.addEventListener('input', function () { e.note = ta.value; });
+      rm.type = 'button'; rm.className = 'btn2'; rm.textContent = 'Remove';
+      rm.setAttribute('aria-label', 'Remove entry ' + (i + 1) + ': ' + e.expr);
+      rm.addEventListener('click', function () { st.ws.splice(st.ws.indexOf(e), 1); renderWs(); announce('Entry removed'); });
+      li.appendChild(x); li.appendChild(sm); li.appendChild(lab); li.appendChild(ta); li.appendChild(rm); ol.appendChild(li);
+    });
+  }
+  function wsAdd() {
+    var e = wsEntry();
+    if (!e) { announce(st.last && st.last.volatile ? 'Press = to confirm the random number, then add it' : 'Nothing to add yet'); return; }
+    if (st.ws.length >= WS_MAX) { msg.className = 'err'; msg.textContent = 'The worksheet holds at most ' + WS_MAX + ' entries. Remove some first.'; return; }
+    st.ws.push(e); renderWs();
+    announce('Added to worksheet, entry ' + st.ws.length);
+  }
+  function wsTitle() { var t = ($('sc-ws-title').value || '').trim(); return t || 'Calculation worksheet'; }
+  function wsText() {
+    var by = ($('sc-ws-by').value || '').trim(), lines = [wsTitle()];
+    if (by) lines.push('Prepared by ' + by);
+    lines.push('');
+    st.ws.forEach(function (e, i) {
+      lines.push((i + 1) + '. ' + e.expr + ' = ' + e.text + (e.alt ? ' (' + e.alt + ')' : ''));
+      lines.push('   ' + settingsText(e));
+      if (e.note.trim()) lines.push('   Note: ' + e.note.trim());
+    });
+    lines.push('');
+    lines.push('Calculated with the Elecmetric Scientific Calculator (double-precision arithmetic). Check results independently before using them in a design.');
+    return lines.join('\n');
+  }
+  function wsSheet() {
+    var old = $('sc-ws-sheet'), el = doc.createElement('div'), h = doc.createElement('h1'), m = doc.createElement('p'), tb = doc.createElement('table'), hd = doc.createElement('thead'), hr = doc.createElement('tr'), bd = doc.createElement('tbody'), ft = doc.createElement('p'), by = ($('sc-ws-by').value || '').trim(), d = '';
+    if (old && old.parentNode) old.parentNode.removeChild(old);
+    try { d = new Date().toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' }); } catch (e) { d = ''; }
+    el.id = 'sc-ws-sheet';
+    h.textContent = wsTitle(); m.className = 'm';
+    m.textContent = [by ? 'Prepared by ' + by : '', d].filter(Boolean).join(' \u00b7 ');
+    ['No.', 'Expression', 'Result', 'Settings', 'Note'].forEach(function (t) { var th = doc.createElement('th'); th.scope = 'col'; th.textContent = t; hr.appendChild(th); });
+    hd.appendChild(hr); tb.appendChild(hd);
+    st.ws.forEach(function (e, i) {
+      var tr = doc.createElement('tr'), cells = [String(i + 1), e.expr, e.text + (e.alt ? '\n' + e.alt : ''), settingsText(e), e.note.trim()], cls = ['', 'x', 'r', '', ''];
+      cells.forEach(function (t, k) { var td = doc.createElement('td'); if (cls[k]) td.className = cls[k]; td.style.whiteSpace = 'pre-line'; td.textContent = t; tr.appendChild(td); });
+      bd.appendChild(tr);
+    });
+    tb.appendChild(bd);
+    ft.className = 'f';
+    ft.textContent = 'Calculated with the Elecmetric Scientific Calculator (double-precision arithmetic). Check results independently before using them in a design. ' + location.href.split('#')[0];
+    el.appendChild(h); el.appendChild(m); el.appendChild(tb); el.appendChild(ft);
+    doc.body.appendChild(el);
+    return el;
+  }
+  function wsEndPrint() {
+    doc.documentElement.classList.remove('sc-wsp');
+    var el = $('sc-ws-sheet');
+    if (el && el.parentNode) el.parentNode.removeChild(el);
+  }
+  function wsPrint() {
+    if (!st.ws.length) { announce('The worksheet is empty'); return; }
+    if (!window.print) { announce('Printing is not available in this browser. Use Copy as text.'); return; }
+    wsSheet();
+    doc.documentElement.classList.add('sc-wsp');
+    var once = function () { window.removeEventListener('afterprint', once); wsEndPrint(); };
+    window.addEventListener('afterprint', once);
+    try { window.print(); } catch (e) { wsEndPrint(); announce('Printing is not available in this browser. Use Copy as text.'); }
+  }
+
+  /* ---------- controls ---------- */
+  function press(group, attr, val) {
+    var bs = group.querySelectorAll('button');
+    for (var i = 0; i < bs.length; i++) bs[i].setAttribute('aria-pressed', bs[i].getAttribute(attr) === val ? 'true' : 'false');
+  }
+  function setMode(m) {
+    st.mode = m;
+    press($('sc-modes'), 'data-mode', m);
+    var eng = m === 'eng', els = doc.querySelectorAll('[data-eng]');
+    for (var i = 0; i < els.length; i++) els[i].hidden = !eng;
+    var ex = doc.querySelectorAll('[data-std]');
+    for (var k = 0; k < ex.length; k++) ex[k].hidden = eng;
+    show(false); memShow(); renderVars();
+  }
+  function setAngle(a) { st.angle = a; press($('sc-angles'), 'data-angle', a); show(false); }
+  function setSel(id, key, num) { $(id).addEventListener('change', function () { st[key] = num ? parseInt(this.value, 10) : this.value; show(false); memShow(); renderVars(); }); }
+
+  $('sc-modes').addEventListener('click', function (e) { var b = e.target.closest('button'); if (b) setMode(b.getAttribute('data-mode')); });
+  $('sc-angles').addEventListener('click', function (e) { var b = e.target.closest('button'); if (b) setAngle(b.getAttribute('data-angle')); });
+  setSel('sc-fmt', 'fmt'); setSel('sc-dig', 'dig', true); setSel('sc-unit', 'unit'); setSel('sc-form', 'form'); setSel('sc-imp', 'imp');
+
+  var ACT = {
+    ac: function () { st.just = false; put('', 0); focusMaybe(); show(false); },
+    del: backspace,
+    eq: commit,
+    recip: function () { wrap('1/(', ')'); },
+    neg: negate,
+    mc: function () { st.mem = { re: 0, im: 0 }; memShow(); announce('Memory cleared'); },
+    mr: function () { ins('mem'); },
+    ms: function () { var v = memValue(); if (v) { st.mem = v; memShow(); announce('Stored in memory'); } },
+    mp: function () { var v = memValue(); if (v) { st.mem = { re: st.mem.re + v.re, im: st.mem.im + v.im }; memShow(); announce('Added to memory'); } },
+    mm: function () { var v = memValue(); if (v) { st.mem = { re: st.mem.re - v.re, im: st.mem.im - v.im }; memShow(); announce('Subtracted from memory'); } },
+    copy: function () { var r = st.last; if (r && r.ok) copyText(S.format(r.value, fo(r)).copy, 'Result'); else announce('Nothing to copy yet'); },
+    copyp: function () { var r = st.last; if (r && r.ok) { var f = S.format(r.value, fo(r)); copyText(f.real ? f.copy : f.copyPolar, 'Polar result'); } else announce('Nothing to copy yet'); },
+    link: function () { copyText(shareUrl(), 'Link'); },
+    varclear: function () { st.vars = Object.create(null); renderVars(); show(false); announce('Variables cleared'); },
+    histclear: function () { st.hist = []; renderHist(); announce('History cleared'); },
+    wsadd: wsAdd,
+    wsprint: wsPrint,
+    wscopy: function () { if (st.ws.length) copyText(wsText(), 'Worksheet'); else announce('The worksheet is empty'); },
+    wsclear: function () { st.ws = []; renderWs(); announce('Worksheet cleared'); }
+  };
+  doc.addEventListener('mousedown', function (e) { if (e.target.closest && e.target.closest('.k')) e.preventDefault(); });
+  $('sc').addEventListener('click', function (e) {
+    var b = e.target.closest ? e.target.closest('button[data-ins],button[data-act],button[data-ex]') : null;
+    if (!b) return;
+    if (b.hasAttribute('data-ins')) { ins(b.getAttribute('data-ins')); return; }
+    if (b.hasAttribute('data-act')) { var f = ACT[b.getAttribute('data-act')]; if (f) f(); return; }
+    if (b.hasAttribute('data-ex')) {
+      var m = b.getAttribute('data-m');
+      if (m && m !== st.mode) setMode(m);
+      if (b.getAttribute('data-u') !== null) { st.unit = b.getAttribute('data-u'); $('sc-unit').value = st.unit; }
+      if (b.getAttribute('data-d')) { st.dig = parseInt(b.getAttribute('data-d'), 10); $('sc-dig').value = String(st.dig); }
+      st.just = false; put(b.getAttribute('data-ex'), b.getAttribute('data-ex').length); show(false);
+      if (window.matchMedia && window.matchMedia('(pointer:fine)').matches) inp.focus();
+    }
+  });
+  inp.addEventListener('input', function () { st.just = false; show(false); });
+  inp.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter') { e.preventDefault(); commit(); }
+    else if (e.key === 'Escape') { e.preventDefault(); ACT.ac(); }
+  });
+
+  /* ---------- start: read a shared link, then draw ---------- */
+  function fromHash() {
+    var h = (location.hash || '').replace(/^#/, ''), p = {};
+    if (h.indexOf('e=') !== 0 && h.indexOf('&e=') < 0) return;
+    h.split('&').forEach(function (kv) { var i = kv.indexOf('='); if (i > 0) { try { p[kv.slice(0, i)] = decodeURIComponent(kv.slice(i + 1)); } catch (e) { /* skip */ } } });
+    if (p.a === 'RAD' || p.a === 'GRAD' || p.a === 'DEG') { st.angle = p.a; press($('sc-angles'), 'data-angle', p.a); }
+    var dg = parseInt(p.d, 10), sel = $('sc-dig');
+    if (dg && sel.querySelector('option[value="' + dg + '"]')) { st.dig = dg; sel.value = String(dg); }
+    if (typeof p.u === 'string' && $('sc-unit').querySelector('option[value="' + p.u.replace(/["\\]/g, '') + '"]')) { st.unit = p.u; $('sc-unit').value = p.u; }
+    if (p.f === 'polar' || p.f === 'rect') { st.form = p.f; $('sc-form').value = p.f; }
+    if (p.i === 'tight' || p.i === 'equal') { st.imp = p.i; $('sc-imp').value = p.i; }
+    if (typeof p.v === 'string' && p.v.length <= 2000) {
+      var nv = Object.create(null), cnt = 0;
+      p.v.split(';').forEach(function (item) {
+        var m = /^([a-z]+):([^,]+),([^,]+)$/.exec(item), re, im;
+        if (!m || cnt >= 20 || S.reserved(m[1])) return;
+        re = Number(m[2]); im = Number(m[3]);
+        if (isFinite(re) && isFinite(im)) { nv[m[1]] = { re: re, im: im }; cnt++; }
+      });
+      st.vars = nv; renderVars();
+    }
+    if (p.m === 'eng' || p.m === 'std') setMode(p.m);
+    if (typeof p.e === 'string' && p.e.length <= 300) { st.just = false; inp.value = p.e; }
+    show(false); memShow();
+  }
+  fromHash();
+  window.addEventListener('hashchange', fromHash);
+  renderHist(); renderWs(); renderVars(); memShow(); show(false);
+  doc.documentElement.setAttribute('data-sc-ready', '1');
+}());
+</script><script>try{if("serviceWorker"in navigator&&/^https?:/.test(location.protocol))navigator.serviceWorker.register("../../sw.js")}catch(e){}</script></body></html>

@@ -1,0 +1,15 @@
+# kind: ampacity
+# standard: <standard name, e.g. the wiring standard you design to>
+# edition: <edition and amendment>
+# table: <table number from the standard or catalogue>
+# method: <installation method code or description>
+# conductor: Cu
+# insulation: XLPE
+# loaded_conductors: 3
+# source: licensed-copy
+# entered_by: <your name>
+# Optional, only when a qualified person has checked every row against the printed table:
+# verified_by: <name>
+# verified_qualification: <e.g. CEng>
+# verified_date: YYYY-MM-DD
+size_mm2,amps
