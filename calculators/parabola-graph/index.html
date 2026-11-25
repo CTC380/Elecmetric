@@ -1,0 +1,620 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><style data-crumbs>.crumbs{font-size:13px;color:var(--muted);margin:0 0 10px}.crumbs ol{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:2px 0}.crumbs li+li::before{content:"\203A";margin:0 7px;opacity:.7}.crumbs a{color:inherit}.crumbs [aria-current]{color:var(--ink)}</style><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'"><title>Parabola Graph &amp; Vertex Calculator | Axis, Intercepts</title><meta name="description" content="Graph y = ax² + bx + c and find the vertex, axis of symmetry, intercepts, maximum or minimum and focus. Exact values, with zoom and pan."><meta property="og:title" content="Parabola Graph &amp; Vertex Calculator | Axis, Intercepts"><meta property="og:description" content="Graph y = ax² + bx + c and find the vertex, axis of symmetry, intercepts, maximum or minimum and focus. Exact values, with zoom and pan."><meta property="og:type" content="website"><meta property="og:site_name" content="Elecmetric"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Parabola Graph &amp; Vertex Calculator | Axis, Intercepts"><meta name="twitter:description" content="Graph y = ax² + bx + c and find the vertex, axis of symmetry, intercepts, maximum or minimum and focus. Exact values, with zoom and pan."><meta name="theme-color" content="#043B79"><link rel="icon" href="../../icon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="../../apple-touch-icon.png"><link rel="manifest" href="../../manifest.webmanifest"><style>#ns .ns-card{padding:16px 16px 18px}#ns .ns-grid{display:grid;gap:12px;grid-template-columns:2fr 1fr 1fr 1fr}#ns .ns-l,#ns label.ns-l{display:block;font-weight:600;font-size:13px;margin:0 0 4px}#ns .ns-in,#ns .ns-sel{display:block;width:100%;box-sizing:border-box;font:500 18px/1.3 var(--mono);padding:10px 12px;min-height:48px;border-radius:8px;border:1px solid var(--line);background:var(--field);color:var(--ink)}#ns .ns-sel{font:500 15px var(--body)}#ns .ns-in:focus,#ns .ns-sel:focus{outline:2px solid var(--gold);outline-offset:1px}#ns .ns-in.bad{border-color:var(--err)}#ns .ns-msg{min-height:1.4em;margin:8px 0 4px;color:var(--err)}#ns .ns-act{display:flex;flex-wrap:wrap;gap:8px;margin:4px 0 10px}#ns .btn2,#ns .chipb{font:600 13px var(--body);color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:8px 12px;min-height:38px;cursor:pointer}#ns .btn2:hover,#ns .chipb:hover{background:var(--field)}#ns .chipb{border-radius:999px;padding:5px 12px;min-height:32px;font-weight:500;margin:3px 4px 3px 0}#ns .btn2:focus-visible,#ns .chipb:focus-visible{outline:2px solid var(--gold);outline-offset:2px}#ns .ns-try{margin:0 0 12px}#ns .ns-t td.r{font:600 17px var(--mono);color:var(--num);word-break:break-all;text-align:left}#ns .ns-t td.r small{display:block;font:500 12px var(--mono);color:var(--muted)}#ns .ns-t tr.cu td{background:var(--gold-fill)}#ns .ns-flag{font:600 11px var(--body);border-radius:999px;padding:1px 8px;margin-left:6px;border:1px solid var(--line);color:var(--muted);vertical-align:middle}#ns .ns-flag.r{color:var(--gold);border-color:var(--gold)}#ns .ns-facts{margin:12px 0 0;display:flex;flex-wrap:wrap;gap:6px 18px;font-size:14px}#ns .ns-facts b{font-family:var(--mono)}#ns ol.steps{font:14px/1.5 var(--mono);padding-left:26px}#ns h3{margin:14px 0 4px}.sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}code{font-family:var(--mono)}[hidden]{display:none!important}@media(max-width:700px){#ns .ns-grid{grid-template-columns:1fr 1fr}#ns .ns-f:first-child{grid-column:1/-1}}#nu .ns-card{padding:16px}#nu .ns-grid,#nu .ns-l,#nu .ns-in,#nu .ns-sel,#nu .ns-msg,#nu .ns-act,#nu .btn2,#nu .chipb,#nu .ns-try,#nu .ns-facts{}#nu .ns-grid{display:grid;gap:12px;grid-template-columns:2fr 1fr 1fr 1fr}#nu .ns-l,#nu label.ns-l{display:block;font-weight:600;font-size:13px;margin:0 0 4px}#nu .ns-in,#nu .ns-sel{display:block;width:100%;box-sizing:border-box;font:500 18px/1.3 var(--mono);padding:10px 12px;min-height:48px;border-radius:8px;border:1px solid var(--line);background:var(--field);color:var(--ink)}#nu .ns-sel{font:500 15px var(--body)}#nu .ns-in:focus,#nu .ns-sel:focus{outline:2px solid var(--gold);outline-offset:1px}#nu .ns-in.bad{border-color:var(--err)}#nu .ns-msg{min-height:1.4em;margin:8px 0 4px;color:var(--err)}#nu .ns-act{display:flex;gap:8px;margin:4px 0 10px}#nu .btn2,#nu .chipb{font:600 13px var(--body);color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:8px 12px;min-height:38px;cursor:pointer}#nu .btn2:hover,#nu .chipb:hover{background:var(--field)}#nu .chipb{border-radius:999px;padding:5px 12px;min-height:32px;font-weight:500;margin:3px 4px 3px 0}#nu .btn2:focus-visible,#nu .chipb:focus-visible{outline:2px solid var(--gold);outline-offset:2px}#nu .ns-try{margin:0 0 12px}#nu td.r{font:600 15px var(--mono);color:var(--num);word-break:break-all}#nu td small{display:block;font:500 12px var(--mono);color:var(--muted)}#nu .btn2{margin-left:8px;padding:2px 8px;min-height:28px}#nu tr.cu td{background:var(--gold-fill)}#nu .ns-flag{font:600 11px var(--body);border-radius:999px;padding:1px 8px;border:1px solid var(--gold);color:var(--gold)}#nu .ns-facts{margin:12px 0 0;display:flex;flex-wrap:wrap;gap:6px 18px;font-size:14px}#nu .ns-facts b{font-family:var(--mono)}#nu ol.steps{font:14px/1.5 var(--mono);padding-left:26px}#nu .bits{display:flex;flex-wrap:wrap;gap:4px;margin:14px 0 4px}#nu .bit{display:flex;flex-direction:column;align-items:center;min-width:40px;padding:4px 2px;border:1px solid var(--line);border-radius:6px;background:var(--field)}#nu .bit.sg{border-color:var(--gold);background:var(--gold-fill)}#nu .bit i{font:11px var(--mono);color:var(--muted);font-style:normal}#nu .bit b{font:700 20px var(--mono);color:var(--num)}#nu .bit em{font:10px var(--mono);color:var(--muted);font-style:normal}@media(max-width:700px){#nu .ns-grid{grid-template-columns:1fr 1fr}#nu .ns-f:first-child{grid-column:1/-1}}#nu .blg{grid-template-columns:2fr 1.4fr 2fr}#nu .blg2{grid-template-columns:1fr 1fr 1fr;margin-top:12px}#nu .nu-hist{list-style:none;margin:0 0 8px;padding:0}#nu pre.al{font:600 15px/1.6 var(--mono);background:var(--field);border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin:6px 0 12px;overflow-x:auto;color:var(--num)}#nu .res .big{font:700 28px/1.3 var(--mono);color:var(--num);word-break:break-all}#nu .res .big .btn2{vertical-align:middle}#nu .res .sub{color:var(--muted);margin:2px 0 8px}#nu .res table{max-width:420px}#nu td.r{font:600 15px var(--mono);color:var(--num)}#nu .fls{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}#nu .fl{border:1px solid var(--line);background:var(--field);border-radius:8px;padding:6px 10px;font-size:14px}#nu .fl.on{border-color:var(--gold);background:var(--gold-fill)}#nu .fl small{display:block;color:var(--muted);font-size:12px}#nu h3{margin:14px 0 4px}@media(max-width:700px){#nu .blg,#nu .blg2{grid-template-columns:1fr}}#nu .fpg{grid-template-columns:2fr 1.3fr 1.3fr 1.6fr}#nu .res .big{font:700 28px/1.3 var(--mono);color:var(--num);word-break:break-all}#nu .res .sub{color:var(--muted);margin:2px 0 8px}#nu .ns-t{max-width:640px}#nu td.r{font:600 15px var(--mono);color:var(--num);word-break:break-all}#nu td.r small{display:block;font:500 12px var(--mono);color:var(--muted)}#nu td.r .btn2{margin-left:8px;padding:2px 8px;min-height:28px}#nu .lng{display:block;max-height:7.5em;overflow:auto;font-size:13px}#nu .bg{display:flex;flex-wrap:wrap;gap:3px;margin:10px 0 4px}#nu .gap{width:10px}#nu .bit{min-width:30px;min-height:44px;border-radius:6px;border:1px solid var(--line);background:var(--field);color:var(--ink);cursor:pointer;font:600 15px var(--mono);padding:2px 0;line-height:1.1}#nu .bit small{display:block;font:500 9px var(--mono);color:var(--muted)}#nu .bit.s{border-color:#c0392b}#nu .bit.e{border-color:#2d7dd2}#nu .bit.f{border-color:var(--gold)}#nu .bit.on{background:var(--gold-fill);color:var(--num)}#nu .bit:focus-visible{outline:2px solid var(--gold);outline-offset:2px}#nu .lg{display:flex;gap:12px;font-size:12px;margin:2px 0 10px}#nu .k{border-left:10px solid;padding-left:6px}#nu .k.s{border-color:#c0392b}#nu .k.e{border-color:#2d7dd2}#nu .k.f{border-color:var(--gold)}#nu .fls{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}#nu .fl{border:1px solid var(--line);background:var(--field);border-radius:8px;padding:6px 10px;font-size:14px}#nu .fl.on{border-color:var(--gold);background:var(--gold-fill)}#nu .fl small{display:block;color:var(--muted);font-size:12px}#nu h3{margin:14px 0 4px}#faq p,#tenth td,#nu ol.steps li,#nu .sub{overflow-wrap:anywhere}@media(max-width:700px){#nu .fpg{grid-template-columns:1fr}#nu .bit{min-width:22px;font-size:13px}}#nu .res .big{font:700 28px/1.3 var(--mono);color:var(--num);word-break:break-word;overflow-wrap:anywhere}#nu .res .big.wd{font:600 22px/1.4 var(--body)}#nu .res .sub{color:var(--muted);margin:6px 0;overflow-wrap:anywhere}#nu .nwg{grid-template-columns:1.6fr 1.2fr 1.4fr 1.2fr}#nu .res .btn2{vertical-align:middle;margin-left:8px}#nu td.r{font:600 15px var(--mono);color:var(--num)}#nu ol.steps li{overflow-wrap:anywhere}#nu h3{margin:14px 0 4px}@media(max-width:700px){#nu .nwg{grid-template-columns:1fr}}@media print{header,.fb,#related,#faq,.ns-try,.ns-act,.ns-card,#scales,#examples,footer{display:none!important}#nu .card:first-child{display:block!important}#nu .card:first-child>*{display:none}#nu .card:first-child #nu-out{display:block}}#nu pre.al{font:600 15px/1.6 var(--mono);background:var(--field);border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin:6px 0 12px;overflow-x:auto;color:var(--num)}#pg .ns-f{display:flex;flex-direction:column;gap:4px;min-width:0}#pg .ns-in,#pg .ns-sel{width:100%;box-sizing:border-box}#pg .btn2{padding:7px 12px}#pg .qgrid{display:grid;gap:12px;grid-template-columns:repeat(3,minmax(0,1fr)) 130px;margin-top:10px}#pg .qgrid.sg{grid-template-columns:repeat(3,minmax(0,1fr));margin-top:6px}#pg .sl input[type=range]{width:100%;accent-color:var(--gold)}#pg .qeq{font:600 20px var(--mono);color:var(--num);margin:10px 0 0;min-height:1.4em;word-break:break-word}#pg .ns-try{margin-top:6px}#pg .gtools{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:12px 0 8px}#pg .gchk{display:inline-flex;gap:6px;align-items:center;font-size:14px;margin-left:6px}#pg .graph{border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--surface);touch-action:none;cursor:crosshair;max-width:720px}#pg .graph.grab{cursor:grabbing}#pg .graph:focus-visible{outline:none;box-shadow:var(--ring)}#pg .graph svg{display:block;width:100%;height:auto}#pg .gbg{fill:var(--surface)}#pg .grid{stroke:var(--line);stroke-width:1;opacity:.55}#pg .axis{stroke:var(--muted);stroke-width:1.6}#pg .sym{stroke:var(--gold);stroke-width:1.3;stroke-dasharray:6 5}#pg .dir{stroke:var(--cyan);stroke-width:1.3;stroke-dasharray:3 4}#pg .curve{fill:none;stroke:var(--num);stroke-width:2.6;stroke-linejoin:round}#pg .pt{fill:var(--surface);stroke:var(--num);stroke-width:2}#pg .pv{fill:var(--orange)}#pg .py{fill:var(--cyan);stroke:var(--surface)}#pg .pf{fill:var(--cyan);stroke:var(--surface)}#pg .plab{font:600 12px var(--body);fill:var(--ink);paint-order:stroke;stroke:var(--surface);stroke-width:3px}#pg .tick{font:11px var(--mono);fill:var(--muted)}#pg .gfr{fill:none;stroke:var(--line)}#pg .trl{stroke:var(--muted);stroke-dasharray:3 3}#pg .trp{fill:var(--orange);stroke:var(--surface);stroke-width:2}#pg .gread{font:14px/1.4 var(--mono);color:var(--muted);margin:4px 0 8px;min-height:1.4em;overflow-wrap:anywhere}#pg .xval{margin:10px 0 14px;max-width:320px}#pg .xo{font:15px var(--mono);margin:6px 0 0;min-height:1.4em;overflow-wrap:anywhere}#pg ul.vl{list-style:none;margin:0 0 10px;padding:0}#pg ul.vl li{font:14px/1.5 var(--mono);padding:3px 0;overflow-wrap:anywhere}#pg #pg-out,#pg #pg-val{margin-top:14px}#pg .res .big{display:flex;flex-direction:column;gap:2px;font:700 26px var(--mono);color:var(--num);word-break:break-word}#pg .res .qroot{overflow-wrap:anywhere}#pg .res .sub{font:500 14px var(--mono);color:var(--muted);margin:6px 0 10px;overflow-wrap:anywhere}#pg ol.steps li{overflow-wrap:anywhere}#pg .ns-t{width:100%}#pg .ns-t td.r{word-break:normal;overflow-wrap:anywhere}#pg .ns-t td:first-child{white-space:nowrap}#pg tr.vx td{font-weight:700;background:var(--gold-fill)}@media(max-width:700px){#pg .qgrid{grid-template-columns:repeat(2,minmax(0,1fr))}#pg .qgrid.sg{grid-template-columns:minmax(0,1fr)}#pg .res .big{font-size:21px}#pg .ns-t td:first-child{white-space:normal}#pg .plab{font-size:11px}}@media print{#pg .ns-try,#pg .ns-act,#pg .gtools,#pg .sg,#pg .qgrid select{display:none}}.fmodes{display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px;margin:0 0 12px}.fmodes .ns-l{margin:0 4px 0 0}.fmodes .chip.on{background:var(--gold-fill);border-color:var(--gold);font-weight:700}.fmodes .chip.soon{opacity:.6;cursor:default}</style><style>.fb textarea{width:100%;font:15px/1.5 var(--body);padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--field);color:var(--ink);resize:vertical}.fb textarea:focus{outline:2px solid var(--gold);outline-offset:1px}:root{--bg:#F1F6FC;--surface:#fff;--ink:#0A2347;--muted:#4B5F86;--line:#D3DFEF;--navy:#043B79;--on-navy:#FFFFFF;--gold:#B34A00;--gold-fill:#FFEFDC;--field:#F4F8FE;--err:#B3261E;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;--display:"Arial Narrow","Roboto Condensed",system-ui,sans-serif;--body:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--navy-2:#0A5BBB;--cyan:#0062DE;--num:#043B79;--orange:#FF7A00;--gold-grad:linear-gradient(135deg,#FFA43D 0%,#FF7A00 52%,#E85F00 100%);--hero:radial-gradient(1000px 360px at 90% -35%,rgba(0,98,222,.55),transparent 62%),radial-gradient(640px 240px at 0% 110%,rgba(255,122,0,.20),transparent 60%),linear-gradient(135deg,#032A58,#043B79 58%,#0A55A8);--r:14px;--sh-0:0 1px 2px rgba(4,35,80,.06);--sh-1:0 1px 2px rgba(4,35,80,.05),0 6px 18px rgba(4,35,80,.07);--sh-2:0 2px 4px rgba(4,35,80,.05),0 22px 44px -14px rgba(4,35,80,.24);--ring:0 0 0 3px rgba(0,98,222,.26);color-scheme:light dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}@media(prefers-color-scheme:dark){:root{--bg:#04122B;--surface:#0A2046;--ink:#EAF2FF;--muted:#A0B5DA;--line:#183868;--navy:#031B3F;--on-navy:#EAF2FF;--gold:#FF9A3D;--gold-fill:#3D2410;--field:#071B3C;--err:#FF8A80;--navy-2:#0B4A98;--cyan:#4DA3FF;--orange:#FF8A1F;--num:#FFB066;--sh-0:0 1px 2px rgba(0,0,0,.4);--sh-1:0 1px 2px rgba(0,0,0,.35),0 8px 22px rgba(0,0,0,.35);--sh-2:0 2px 4px rgba(0,0,0,.4),0 24px 48px -14px rgba(0,0,0,.7);--ring:0 0 0 3px rgba(77,163,255,.34)}}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 var(--body)}a{color:inherit}header{background:var(--navy);color:var(--on-navy);border-bottom:3px solid var(--gold)}.w{max-width:860px;margin:0 auto;padding:0 max(16px,env(safe-area-inset-left,0px))}header .w{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-block:12px;flex-wrap:wrap}header a{text-decoration:none;font:600 20px var(--display);letter-spacing:.04em;text-transform:uppercase}header nav a{font:500 13px var(--body);text-transform:none;letter-spacing:0;margin-left:14px;opacity:.9}main{padding-block:24px 56px}h1{font:600 32px/1.1 var(--display);margin:0 0 8px;text-wrap:balance}h2{font:600 20px var(--display);letter-spacing:.02em;margin:28px 0 8px;text-transform:uppercase}.lede{color:var(--muted);margin:0 0 16px;max-width:62ch}.card{background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:16px 18px;margin:12px 0}.ans{border-left:4px solid var(--gold);display:flex;flex-wrap:wrap;gap:6px 24px;align-items:baseline;justify-content:space-between}.big{font:600 28px var(--display)}.jump{margin:8px 0 4px}details.more{border:1px solid var(--line);border-radius:12px;background:var(--surface);margin:14px 0;padding:0 16px;box-shadow:var(--sh-0)}details.more>summary{cursor:pointer;list-style:none}details.more>summary::-webkit-details-marker{display:none}details.more>summary h2{margin:14px 0}details.more>summary h2::after{content:"+";margin-left:auto;color:var(--gold)}details.more[open]>summary h2::after{content:"\2212"}details.more[open]{padding-bottom:12px}@media print{.jump{display:none}}.btn{display:inline-block;background:var(--navy);color:var(--on-navy);padding:9px 16px;border-radius:4px;text-decoration:none;font-weight:600;border:1px solid var(--gold)}.chip{display:inline-block;margin:3px 6px 3px 0;padding:5px 12px;border:1px solid var(--line);border-radius:999px;background:var(--surface);text-decoration:none;font-size:14px}.chip:hover{border-color:var(--gold)}main li>a:only-child{display:inline-block;padding:3px 0}code,pre,.f,td.n{font-family:var(--mono)}.f{background:var(--field);border:1px solid var(--line);padding:10px 12px;border-radius:4px;overflow-x:auto;white-space:pre-wrap}ol.steps{padding-left:22px;font-family:var(--mono);font-size:13px}ol.steps li{margin:4px 0}.tw{overflow-x:auto}table{border-collapse:collapse;width:100%;background:var(--surface)}th,td{border:1px solid var(--line);padding:6px 10px;text-align:left}td.n{text-align:right}tr.me td{background:var(--gold-fill)}th{background:var(--field);font-weight:600}.note{color:var(--muted);font-size:13px}ul{padding-left:20px}footer{border-top:1px solid var(--line);color:var(--muted);font-size:13px;padding-block:16px}h3{font:600 16px var(--body);margin:18px 0 4px}h3+p{margin:0;max-width:68ch}.tres .tact{flex:0 0 100%;display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}@media print{.tact{display:none}}.tres .phasor{flex:0 0 100%;margin-top:12px}.phasor svg{display:block;width:100%;max-width:360px;height:auto;font:11px var(--body)}.arow{grid-column:1/-1;border:1px solid var(--line);border-radius:10px;padding:10px 12px 12px;margin:0}.arow[hidden]{display:none}.arow legend{font-weight:700;font-size:13px;padding:0 6px}.arow .tgrid{margin-top:2px}.arow-bar{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:8px;align-items:center}.arow-bar .note{margin:0}.arow .rm{margin-top:10px}.mgrid{margin-top:10px}.mgrid .mbody[hidden]{display:none}.mgrid .tgrid{margin-top:8px}.mgrid .fillm{margin-top:10px}.tres .rchart{flex:0 0 100%;margin-top:12px}.rchart svg{display:block;width:100%;height:auto;font:12px var(--body)}.rchart h3{margin:0 0 6px;font-size:14px}.tres .carry{flex:0 0 100%;margin-top:10px}.carry .chip{display:inline-block;margin:4px 6px 0 0}.arow .rm[hidden],#add-row[hidden]{display:none}@media print{.arow-bar,.arow .rm{display:none}}.tgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px 16px}.tgrid label{display:block;font-weight:600;font-size:13px;margin-bottom:4px}.trow{display:flex;gap:6px}.trow input,.trow select,.tgrid>div>select{font:16px var(--body);color:var(--ink);background:var(--field);border:1px solid var(--line);border-radius:4px;padding:8px;min-height:40px}.trow input{flex:1;min-width:0}.tgrid>div>select{width:100%}.hint{color:var(--muted);font-size:12px;margin-top:3px}.err{color:var(--err)}.tres{display:flex;flex-wrap:wrap;gap:6px 28px;align-items:baseline}.tres .big small{display:block;font:500 13px var(--body);color:var(--muted)}::selection{background:color-mix(in srgb,var(--gold) 30%,transparent)}body{background-image:radial-gradient(900px 520px at 100% -8%,color-mix(in srgb,var(--cyan) 10%,transparent),transparent 62%),radial-gradient(700px 420px at -5% 0%,color-mix(in srgb,var(--gold) 8%,transparent),transparent 60%);background-attachment:fixed;-webkit-font-smoothing:antialiased}header{position:relative;overflow:hidden;background:var(--hero);border-bottom:0;box-shadow:0 10px 30px -14px rgba(5,14,34,.6)}header::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);background-size:34px 34px;-webkit-mask-image:linear-gradient(100deg,#000,transparent 70%);mask-image:linear-gradient(100deg,#000,transparent 70%);pointer-events:none}header::after{content:"";position:absolute;left:0;right:0;bottom:0;height:18px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44 14'%3E%3Cpath d='M0 12.5H8L14 2l7 10.5 5-6 4 6H44' fill='none' stroke='%23FF7A00' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat right 36px bottom 3px/44px 14px,linear-gradient(90deg,#FF7A00,#FFA43D 55%,#FF7A00) no-repeat bottom/100% 4px;pointer-events:none}header .w{position:relative;z-index:1;padding-block:16px 22px}header .w>a.brand{display:block;line-height:0;letter-spacing:0;text-transform:none;background:#fff;border-radius:12px;padding:6px 14px;box-shadow:0 2px 12px rgba(2,16,42,.4),0 0 0 1px rgba(255,255,255,.5)}header .w>a.brand img{display:block;height:48px;width:auto}@media(max-width:600px){header .w>a.brand img{height:42px}}header a:focus-visible{outline-color:#FFB066}header nav a{color:#DCE5F5;opacity:1;padding:6px 12px;border-radius:999px;margin-left:6px;transition:background .15s,color .15s}header nav a:hover{background:rgba(255,255,255,.12);color:#FFB066}main.w{padding-top:36px;padding-bottom:64px}h1{font-size:36px;letter-spacing:.005em}h1::after{content:"";display:block;width:56px;height:3px;border-radius:3px;background:var(--gold-grad);margin-top:12px}h2{display:flex;align-items:center;gap:10px}h2::before{content:"";width:4px;height:.95em;border-radius:2px;background:var(--gold-grad);flex:none}h3{color:var(--gold)}.card{border-radius:14px;box-shadow:var(--sh-1)}.ans{position:relative;overflow:hidden;border-left:1px solid var(--line);padding-left:24px;background:linear-gradient(135deg,color-mix(in srgb,var(--gold) 12%,var(--surface)),var(--surface) 65%);border-color:color-mix(in srgb,var(--gold) 40%,var(--line));box-shadow:var(--sh-2)}.ans::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--gold-grad)}.big{color:var(--num);font-weight:700}.btn{border-radius:10px;border:0;background:var(--gold-grad);color:#0A2347;font-weight:700;box-shadow:var(--sh-1);transition:transform .15s,box-shadow .15s,filter .15s}.btn:hover{transform:translateY(-1px);box-shadow:var(--sh-2);filter:brightness(1.06)}.chip{box-shadow:var(--sh-0);transition:border-color .15s,background .15s,transform .15s,box-shadow .15s}.chip:hover{transform:translateY(-1px);box-shadow:var(--sh-1);border-color:var(--orange);background:color-mix(in srgb,var(--orange) 8%,var(--surface))}.f{border-radius:12px;border-left:3px solid var(--cyan)}.tw{border:1px solid var(--line);border-radius:12px;box-shadow:var(--sh-0)}.tw table{border:0}table{border-collapse:separate;border-spacing:0}th,td{border:0;border-bottom:1px solid var(--line)}tr:last-child td{border-bottom:0}th{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);background:var(--field)}tbody tr:hover td{background:color-mix(in srgb,var(--cyan) 7%,transparent)}tr.me td{background:var(--gold-fill)}.trow input,.trow select,.tgrid>div>select{border-radius:10px;transition:border-color .15s,box-shadow .15s}.trow select{background-color:color-mix(in srgb,var(--navy) 5%,var(--field))}.trow input:focus,.trow select:focus,.tgrid>div>select:focus{outline:0;border-color:var(--cyan);box-shadow:var(--ring)}.tgrid label{color:var(--ink)}a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--cyan);outline-offset:2px}footer{padding-block:20px}footer.mf{margin-top:24px;padding:0;border-top:0;background:var(--hero);color:#DCE5F5;font-size:13px;position:relative}footer.mf::before{content:"";display:block;height:4px;background:linear-gradient(90deg,#FF7A00,#FFA43D 55%,#FF7A00)}.mf-w{max-width:1100px;margin:0 auto;padding:36px max(16px,env(safe-area-inset-left,0px)) calc(24px + env(safe-area-inset-bottom,0px))}.mf-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:28px 24px}.mf-h{display:block;margin:0 0 12px;padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,.18);font:600 14px var(--display);letter-spacing:.06em;text-transform:uppercase;color:#FFB066}.mf-col ul{list-style:none;margin:0;padding:0}.mf-col li{margin:0}.mf-col a{display:inline-block;padding:4px 0;color:#DCE5F5;text-decoration:none}.mf-h a{padding:0;color:inherit}.mf-col a:hover,.mf-legal a:hover{color:#FFB066;text-decoration:underline}.mf a:focus-visible{outline:2px solid #FFB066;outline-offset:2px;border-radius:2px}.mf-legal{margin-top:28px;padding-top:18px;border-top:1px solid rgba(255,255,255,.18);color:#A9BADB;max-width:80ch}.mf-legal a{color:#DCE5F5}@media(max-width:980px){.mf-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(max-width:600px){.mf-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.mf-col a{padding:7px 0}}@media print{footer.mf{background:none;color:inherit}footer.mf::before,.mf-grid{display:none}.mf-legal{border:0;color:inherit}}@media(prefers-reduced-motion:reduce){.btn,.chip{transition:none;transform:none!important}}@media print{header{background:none;box-shadow:none}header::before,header::after,.ans::before,h1::after,h2::before{display:none}header .w>a.brand{box-shadow:none;padding:0}body{background-image:none}.card,.ans,.tw{box-shadow:none}.ans{padding-left:18px}}.totop{position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:60;min-height:44px;padding:0 18px;border:0;border-radius:999px;background:linear-gradient(135deg,#FFA43D,#FF7A00 52%,#E85F00);color:#0A2347;font:700 14px system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;box-shadow:0 2px 4px rgba(4,35,80,.2),0 14px 30px -8px rgba(4,35,80,.45);cursor:pointer;opacity:0;transform:translateY(12px);pointer-events:none;transition:opacity .2s,transform .2s,bottom .2s}.totop.on{opacity:1;transform:none;pointer-events:auto}.totop:hover{filter:brightness(1.06)}.totop:focus-visible{outline:2px solid #fff;outline-offset:2px;box-shadow:0 0 0 4px #0062DE}@media(prefers-reduced-motion:reduce){.totop{transition:none}}@media print{.totop{display:none}}.vstat{padding:12px 16px;border-left:4px solid var(--muted,#6b7a90)}.vstat.v-verified{border-left-color:#1f9d57}.vstat.v-reference{border-left-color:#2a7fd4}.vstat.v-indicative{border-left-color:#c98a10}</style><style id="em-ux1">.ns-f:has(>.mseg){grid-column:1/-1}main.w{max-width:1080px}.ns-card .mseg{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 4px}.ns-card .mseg button{flex:1 1 150px;font:600 14px var(--body);color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px;min-height:46px;cursor:pointer;text-align:center;transition:background .15s,border-color .15s}.ns-card .mseg button:hover{border-color:var(--orange);background:var(--field)}.ns-card .mseg button[aria-checked="true"]{background:var(--navy);color:var(--on-navy);border-color:var(--navy);box-shadow:inset 0 -3px 0 var(--orange)}.ns-card .mseg button:focus-visible,.ns-try .try-tabs button:focus-visible{outline:2px solid var(--cyan);outline-offset:2px}.ns-card .ns-try:not([role]){margin:14px 0 0;padding-top:12px;border-top:1px solid var(--line)}.ns-try .try-h{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;margin-bottom:6px}.ns-try .try-h .ns-l{margin:0}.ns-try .try-tabs{display:flex;flex-wrap:wrap;gap:6px}.ns-try .try-tabs button{font:600 12px var(--body);color:var(--muted);background:transparent;border:0;border-bottom:2px solid transparent;padding:6px 8px;cursor:pointer}.ns-try .try-tabs button[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--orange)}.ns-try .chipb[hidden]{display:none}@media(max-width:700px){.ns-card .mseg button{flex:1 1 calc(50% - 8px)}}</style></head><body><header><div class="w"><a class="brand" href="../../"><img src="../../logo.png" alt="Elecmetric" width="160" height="40"></a><nav><a href="../">All engineering calculators</a><a href="../../pages/index.html">Conversions</a><a href="../../index.html#verification">How it is verified</a></nav></div></header><main class="w"><nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="../../">Home</a></li><li><a href="../../categories/mathematics/">Mathematics</a></li><li><a href="../../categories/mathematics/#equations-and-inequalities">Equations and Inequalities</a></li><li><span aria-current="page">Parabola Graph &amp; Vertex Calculator</span></li></ol></nav><h1>Parabola Graph & Vertex Calculator</h1><p class="lede">Enter A, B and C to draw y = ax² + bx + c and read off the vertex, the axis of symmetry, the x- and y-intercepts, the maximum or minimum value and which way the curve opens. Change a coefficient and the curve moves at once. Calculate. Convert. Understand.</p><nav class="jump" aria-label="On this page"><a class="chip" href="#formulas">What the graph shows</a><a class="chip" href="#example">Worked example</a><a class="chip" href="#roots">Reading the roots from the graph</a><a class="chip" href="#focus">Focus, directrix and width</a><a class="chip" href="#use">Using the graph</a><a class="chip" href="#exact">Exact numbers, a drawn picture</a><a class="chip" href="#faq">FAQ</a></nav><nav class="fmodes" aria-label="Quadratic Formula Calculator modes"><span class="ns-l">Quadratic Formula Calculator</span><a class="chip" href="../quadratic-solver/">Mode 01 · Equation Solver</a><a class="chip" href="../discriminant-calculator/">Mode 02 · Discriminant &amp; Root Analysis</a><a class="chip on" href="../parabola-graph/" aria-current="page">Mode 03 · Parabola Graph &amp; Vertex</a><a class="chip" href="../exact-roots/">Mode 04 · Exact Root &amp; Factorisation</a><a class="chip" href="../engineering-quadratic/">Mode 05 · Engineering Solver</a></nav><div id="pg"><section class="card ns-card"><div class="qgrid"><div class="ns-f"><label for="pg-a" class="ns-l">A (coefficient of x²)</label><input id="pg-a" class="ns-in" type="text" inputmode="text" autocomplete="off" autocorrect="off" spellcheck="false" aria-describedby="pg-err" value="2" placeholder="e.g. 3/4"></div><div class="ns-f"><label for="pg-b" class="ns-l">B (coefficient of x)</label><input id="pg-b" class="ns-in" type="text" inputmode="text" autocomplete="off" autocorrect="off" spellcheck="false" aria-describedby="pg-err" value="3" placeholder="e.g. −2.5"></div><div class="ns-f"><label for="pg-c" class="ns-l">C (constant)</label><input id="pg-c" class="ns-in" type="text" inputmode="text" autocomplete="off" autocorrect="off" spellcheck="false" aria-describedby="pg-err" value="-5" placeholder="e.g. 1/3"></div><div class="ns-f"><label for="pg-dp" class="ns-l">Decimal places</label><select id="pg-dp" class="ns-sel"><option value="4">4</option><option value="6">6</option><option value="8" selected>8</option><option value="10">10</option><option value="12">12</option><option value="15">15</option></select></div></div><p class="qeq" id="pg-eq" aria-live="polite"></p><p class="note ns-msg" id="pg-err" role="status"></p><div class="qgrid sg"><div class="ns-f sl"><label for="pg-sa" class="ns-l">A slider</label><input id="pg-sa" type="range" min="-10" max="10" step="0.5" value="2"></div><div class="ns-f sl"><label for="pg-sb" class="ns-l">B slider</label><input id="pg-sb" type="range" min="-10" max="10" step="0.5" value="3"></div><div class="ns-f sl"><label for="pg-sc" class="ns-l">C slider</label><input id="pg-sc" type="range" min="-10" max="10" step="0.5" value="-5"></div></div><div class="ns-try"><span class="ns-l">Try</span> <button type="button" class="chipb" data-ex="{&quot;a&quot;:&quot;2&quot;,&quot;b&quot;:&quot;3&quot;,&quot;c&quot;:&quot;-5&quot;}">y = 2x² + 3x − 5</button><button type="button" class="chipb" data-ex="{&quot;a&quot;:&quot;1&quot;,&quot;b&quot;:&quot;-5&quot;,&quot;c&quot;:&quot;6&quot;}">y = x² − 5x + 6</button><button type="button" class="chipb" data-ex="{&quot;a&quot;:&quot;1&quot;,&quot;b&quot;:&quot;-4&quot;,&quot;c&quot;:&quot;4&quot;}">y = x² − 4x + 4</button><button type="button" class="chipb" data-ex="{&quot;a&quot;:&quot;1&quot;,&quot;b&quot;:&quot;2&quot;,&quot;c&quot;:&quot;5&quot;}">y = x² + 2x + 5</button><button type="button" class="chipb" data-ex="{&quot;a&quot;:&quot;-1&quot;,&quot;b&quot;:&quot;4&quot;,&quot;c&quot;:&quot;0&quot;}">y = −x² + 4x</button><button type="button" class="chipb" data-ex="{&quot;a&quot;:&quot;1&quot;,&quot;b&quot;:&quot;-2&quot;,&quot;c&quot;:&quot;-1&quot;}">y = x² − 2x − 1</button><button type="button" class="chipb" data-ex="{&quot;a&quot;:&quot;3&quot;,&quot;b&quot;:&quot;0&quot;,&quot;c&quot;:&quot;-12&quot;}">y = 3x² − 12</button><button type="button" class="chipb" data-ex="{&quot;a&quot;:&quot;-3/4&quot;,&quot;b&quot;:&quot;1/2&quot;,&quot;c&quot;:&quot;7&quot;}">y = −(3/4)x² + (1/2)x + 7</button><button type="button" class="chipb" data-ex="{&quot;a&quot;:&quot;0.1&quot;,&quot;b&quot;:&quot;0.2&quot;,&quot;c&quot;:&quot;0.1&quot;}">y = (1/10)x² + (1/5)x + (1/10)</button><button type="button" class="chipb" data-ex="{&quot;a&quot;:&quot;0&quot;,&quot;b&quot;:&quot;2&quot;,&quot;c&quot;:&quot;-4&quot;}">y = 2x − 4</button></div><div class="gtools" role="group" aria-label="Graph controls"><button type="button" class="btn2" data-z="in" aria-label="Zoom in">Zoom in</button><button type="button" class="btn2" data-z="out" aria-label="Zoom out">Zoom out</button><button type="button" class="btn2" data-z="l" aria-label="Pan left">◀</button><button type="button" class="btn2" data-z="r" aria-label="Pan right">▶</button><button type="button" class="btn2" data-z="u" aria-label="Pan up">▲</button><button type="button" class="btn2" data-z="d" aria-label="Pan down">▼</button><button type="button" class="btn2" data-z="fit">Fit curve</button><button type="button" class="btn2" data-z="eq">Equal axes</button><label class="gchk"><input type="checkbox" id="pg-focus"> Focus and directrix</label></div><div id="pg-gr" class="graph" tabindex="0" role="group" aria-label="Parabola graph. Drag to pan, mouse wheel or the buttons to zoom. With the keyboard: arrow keys pan, plus and minus zoom, 0 fits the curve." aria-describedby="pg-view"><svg id="pg-svg" viewBox="0 0 640 400" role="img" aria-label="Graph"></svg></div><p class="note" id="pg-view"></p><p class="gread" id="pg-read" aria-live="polite"></p><div class="xval"><label for="pg-x" class="ns-l">Value at x</label><input id="pg-x" class="ns-in" type="text" inputmode="text" autocomplete="off" spellcheck="false" placeholder="e.g. 1/2" aria-describedby="pg-xo"><p id="pg-xo" class="xo" aria-live="polite"></p></div><div id="pg-out" aria-live="polite"></div><div id="pg-val"></div><div class="ns-act"><button type="button" class="btn2" data-act="reset">Reset</button></div><p class="sr-only" id="pg-note" role="status" aria-live="polite"></p><noscript><p class="note">This tool needs JavaScript. Nothing is sent anywhere.</p></noscript></section><section class="card"><h2>Working</h2><div id="pg-steps"></div></section><section class="card"><h2>Checks</h2><div id="pg-verify"></div></section></div><section id="formulas"><h2>What the graph shows</h2><p>The graph of y = ax² + bx + c is a parabola. It is symmetric about a vertical line through its vertex, which is its highest point if A is negative and its lowest point if A is positive. Every value in the table is worked out in exact fractions and radicals, and the picture is drawn from them. The x-intercepts are the roots of the equation, the same numbers that Mode 01 solves for.</p><div class="tw" tabindex="0" role="region" aria-label="Scrollable table: Property, Formula, For y = 2x² + 3x − 5"><table><thead><tr><th>Property</th><th>Formula</th><th>For y = 2x² + 3x − 5</th></tr></thead><tbody><tr><td>Vertex x</td><td>h = −B / (2A)</td><td>−3/4</td></tr><tr><td>Vertex y</td><td>k = −Δ / (4A) = f(h)</td><td>−49/8</td></tr><tr><td>Axis of symmetry</td><td>x = −B / (2A)</td><td>x = −3/4</td></tr><tr><td>Y-intercept</td><td>f(0) = C</td><td>(0, −5)</td></tr><tr><td>X-intercepts</td><td>the roots, x = (−B ± √Δ) / (2A)</td><td>(−5/2, 0) and (1, 0)</td></tr><tr><td>Opening direction</td><td>upward if A &gt; 0, downward if A &lt; 0</td><td>Upward</td></tr><tr><td>Vertex form</td><td>y = A(x − h)² + k</td><td>2(x + 3/4)² − 49/8</td></tr><tr><td>Focus</td><td>(h, k + 1/(4A))</td><td>(−3/4, −6)</td></tr><tr><td>Directrix</td><td>y = k − 1/(4A)</td><td>−25/4</td></tr></tbody></table></div><p class="note">The vertex y-value −Δ/(4A) and the value found by substituting h into the equation are the same number. The page checks that, and seven other relations, in exact arithmetic.</p></section><section id="example"><h2>Parabola Graph & Vertex Worked Example</h2><p>For y = 2x² + 3x − 5 the vertex is at x = −B/(2A) = −3/4 = −0.75. Putting x = −3/4 back into the equation gives y = −49/8 = −6.125. Because A = 2 is positive, the curve opens upward and −49/8 is its minimum value. The curve crosses the y-axis at (0, −5) and the x-axis at (−5/2, 0) and (1, 0). Its mirror image of the y-intercept across the axis is (−3/2, −5). In vertex form the equation is y = 2(x + 3/4)² − 49/8.</p><div class="tw" tabindex="0" role="region" aria-label="Scrollable table: Equation, Vertex, Opens, X-intercepts, Y-intercept"><table><thead><tr><th>Equation</th><th>Vertex</th><th>Opens</th><th>X-intercepts</th><th>Y-intercept</th></tr></thead><tbody><tr><td>y = 2x² + 3x − 5</td><td>(−3/4, −49/8)</td><td>up</td><td>−5/2, 1</td><td>(0, −5)</td></tr><tr><td>y = x² − 5x + 6</td><td>(5/2, −1/4)</td><td>up</td><td>2, 3</td><td>(0, 6)</td></tr><tr><td>y = x² − 4x + 4</td><td>(2, 0)</td><td>up</td><td>2</td><td>(0, 4)</td></tr><tr><td>y = x² + 2x + 5</td><td>(−1, 4)</td><td>up</td><td>none</td><td>(0, 5)</td></tr><tr><td>y = −x² + 4x</td><td>(2, 4)</td><td>down</td><td>0, 4</td><td>(0, 0)</td></tr><tr><td>y = x² − 2x − 1</td><td>(1, −2)</td><td>up</td><td>1 − √2, 1 + √2</td><td>(0, −1)</td></tr><tr><td>y = 3x² − 12</td><td>(0, −12)</td><td>up</td><td>−2, 2</td><td>(0, −12)</td></tr><tr><td>y = −(3/4)x² + (1/2)x + 7</td><td>(1/3, 85/12)</td><td>down</td><td>(1 − √85)/3, (1 + √85)/3</td><td>(0, 7)</td></tr></tbody></table></div></section><section id="roots"><h2>Reading the roots from the graph</h2><p>The discriminant decides how the curve meets the x-axis. When the vertex lies on the opposite side of the axis from the way the curve opens, the curve crosses the axis twice. When the vertex is on the axis it touches it once. When the vertex is on the same side as the opening direction, the curve never reaches the axis and the roots are complex.</p><div class="tw" tabindex="0" role="region" aria-label="Scrollable table: Δ, Picture, Example, Where the vertex is"><table><thead><tr><th>Δ</th><th>Picture</th><th>Example</th><th>Where the vertex is</th></tr></thead><tbody><tr><td>Δ &gt; 0</td><td>crosses the x-axis twice</td><td>y = x² − 5x + 6</td><td>(5/2, −1/4) (below the axis, opening up)</td></tr><tr><td>Δ = 0</td><td>touches the x-axis at the vertex</td><td>y = x² − 4x + 4</td><td>(2, 0) (on the axis)</td></tr><tr><td>Δ &lt; 0</td><td>does not meet the x-axis</td><td>y = x² + 2x + 5</td><td>(−1, 4) (above the axis, opening up)</td></tr></tbody></table></div><p class="note">A complex pair such as −1 ± 2i has a real part, −1, equal to the vertex x and an imaginary part that measures how far the vertex is from the axis. The roots are not points of the real graph, so the page lists them rather than plotting them.</p></section><section id="focus"><h2>Focus, directrix and width</h2><p>Every parabola has a focus and a directrix: each point of the curve is exactly as far from the focus as from the directrix. For y = ax² + bx + c, with the vertex at (h, k), the focus is (h, k + 1/(4a)) and the directrix is the line y = k − 1/(4a). The width of the curve through the focus, the latus rectum, is 1/|a|. Tick the box above the graph to draw the focus and directrix. A larger |A| gives a narrower curve and a closer focus; these are the shapes used in reflectors and antennas.</p></section><section id="use"><h2>Using the graph</h2><p>Drag the graph to pan, turn the mouse wheel to zoom, or use the buttons. The sliders set A, B and C from −10 to 10 in steps of 0.5 and keep the window where it is, so you can watch the curve change. Typing a value or choosing an example refits the window. Click or tap the graph to read an approximate point; type an x in the Value at x box for an exact y. With the keyboard, focus the graph and use the arrow keys to pan, plus and minus to zoom and 0 to fit. Equal axes draws one unit the same length on both axes, so the true shape of the parabola shows.</p></section><section id="exact"><h2>Exact numbers, a drawn picture</h2><p>Every printed value comes from exact arithmetic on fractions, so 0.1x² + 0.2x + 0.1 has its vertex at exactly (−1, 0) and touches the axis. Only the line itself is drawn in ordinary floating point, sampled at 480 points, so the picture can differ from the true curve by less than a pixel and never changes a printed number. Equations whose values are too large or too small to draw still get their exact results.</p></section><section id="special"><h2>When A is zero</h2><p>With A = 0 the equation is y = Bx + C, a straight line. There is no vertex and no axis of symmetry, so the page draws the line and gives its two intercepts. When A and B are both zero the graph is a horizontal line, y = C.</p></section><section id="faq"><h2>Questions</h2><h3>How do I find the vertex of a parabola?</h3><p>Use h = −B/(2A) for the x-coordinate, then put h into the equation for the y-coordinate. For y = x² − 5x + 6 this gives h = 5/2 and k = −1/4.</p><h3>Is the vertex the maximum or the minimum?</h3><p>If A is positive the parabola opens upward and the vertex is the minimum. If A is negative it opens downward and the vertex is the maximum.</p><h3>Why does the graph not cross the x-axis for some equations?</h3><p>The discriminant is negative, so there are no real roots. The curve stays on one side of the axis. The complex roots are listed with the results.</p><h3>What is the axis of symmetry?</h3><p>It is the vertical line x = −B/(2A). Folding the graph along it places the left half exactly on the right half.</p><h3>How do the sliders differ from typing a value?</h3><p>Sliders keep the graph window fixed so you can see how the curve changes. Typing, or choosing an example, refits the window to the new curve. The sliders cover −10 to 10; type any other value in the box.</p><h3>Is anything sent to a server?</h3><p>No. The calculation and the drawing run in your browser. The page’s security policy also blocks it from sending data to other sites, so nothing you enter leaves your device.</p></section><section id="related"><h2>Related Calculators and Tools</h2><p><a class="chip" href="../quadratic-solver/">Quadratic Formula Calculator, Mode 01</a><a class="chip" href="../discriminant-calculator/">Discriminant Calculator, Mode 02</a><a class="chip" href="../complex-number/">Complex Number Calculator</a><a class="chip" href="../powers-roots/">Powers and Roots</a><a class="chip" href="../matrix-calculator/">Matrix Calculator</a><a class="chip" href="../rlc-transient/">RLC Transient</a><a class="chip" href="../scientific-calculator/">Scientific Calculator</a><a class="chip" href="../logarithm/">Logarithm Calculator</a></p></section></main><section class="w fb" aria-labelledby="fb-h"><h2 id="fb-h">Tell us how to improve this page</h2><textarea id="fb-t" rows="4" maxlength="1500" placeholder="Your message ..." aria-label="Tell us how to improve this page"></textarea><p><button type="button" class="btn" id="fb-b">Email your suggestion</button> <button type="button" class="btn" id="sh-b">Share this page</button> <span class="note" id="fb-n">This opens your email app. Nothing is sent until you press send.</span></p></section><script>(function(){var b=document.getElementById("fb-b");if(!b)return;b.onclick=function(){var t=document.getElementById("fb-t").value.trim(),n=document.getElementById("fb-n");if(!t){n.textContent="Please write a message first.";return}location.assign("mailto:"+"elecmetrics@gmail.com"+"?subject="+encodeURIComponent("Elecmetric feedback: "+document.title)+"&body="+encodeURIComponent(t+"\n\nPage: "+location.href))}})();</script><script>(function(){var s=document.getElementById("sh-b");if(!s)return;s.onclick=function(){var u=location.href,t=document.title,n=document.getElementById("fb-n");if(navigator.share){navigator.share({title:t,url:u}).catch(function(){});return}if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(u).then(function(){n.textContent="Link copied."},function(){n.textContent="Copy this address: "+u})}else{n.textContent="Copy this address: "+u}}})();</script><footer class="mf"><div class="mf-w"><div class="mf-grid" role="navigation" aria-label="Site map"><div class="mf-col"><p class="mf-h"><a href="../../calculators/">Calculators</a></p><ul><li><a href="../../calculators/electrical-fundamentals/">Electrical Fundamentals</a></li><li><a href="../../calculators/power-and-energy/">Power and Energy</a></li><li><a href="../../calculators/cable-engineering/">Cable Engineering</a></li><li><a href="../../calculators/motor-engineering/">Motor Engineering</a></li><li><a href="../../calculators/transformer-engineering/">Transformer Engineering</a></li><li><a href="../../calculators/electrical-protection/">Electrical Protection</a></li><li><a href="../../calculators/power-systems/">Power Systems</a></li><li><a href="../../calculators/earthing-and-grounding/">Earthing and Grounding</a></li><li><a href="../../calculators/renewable-energy/">Renewable Energy</a></li><li><a href="../../calculators/airport-agl-engineering/">Airport and AGL Engineering</a></li><li><a href="../../calculators/electronics-and-instrumentation/">Electronics and Instrumentation</a></li><li><a href="../../calculators/lighting-and-facilities/">Lighting and Facilities</a></li><li><a href="../../calculators/engineering-mathematics/">Engineering Mathematics</a></li></ul></div><div class="mf-col"><p class="mf-h"><a href="../../calculators/">Popular calculators</a></p><ul><li><a href="../../calculators/cable-size/">Cable Size</a></li><li><a href="../../calculators/voltage-drop/">Voltage Drop</a></li><li><a href="../../calculators/breaker-size/">Breaker Size</a></li><li><a href="../../calculators/motor-current/">Motor Current</a></li><li><a href="../../calculators/transformer-sizing/">Transformer Sizing</a></li><li><a href="../../calculators/earth-resistance/">Earth Resistance</a></li><li><a href="../../calculators/pf-correction-kvar/">Power Factor Correction</a></li><li><a href="../../calculators/generator-sizing/">Generator Sizing</a></li><li><a href="../../calculators/battery-bank-sizing/">Battery Bank Sizing</a></li><li><a href="../../calculators/pv-energy/">Solar PV Energy</a></li></ul></div><div class="mf-col"><p class="mf-h"><a href="../../converters/index.html">Conversions</a></p><ul><li><a href="../../pages/index.html">Electrical conversions</a></li><li><a href="../../pages/kw-to-amps.html">kW to Amps</a></li><li><a href="../../pages/amps-to-kw.html">Amps to kW</a></li><li><a href="../../pages/kva-to-kw.html">kVA to kW</a></li><li><a href="../../pages/watts-to-amps.html">Watts to Amps</a></li><li><a href="../../converters/length-converter.html">Length</a></li><li><a href="../../converters/power-converter.html">Power</a></li><li><a href="../../converters/energy-converter.html">Energy</a></li><li><a href="../../converters/temperature-converter.html">Temperature</a></li><li><a href="../../pages/wire-gauge.html">AWG to mm²</a></li></ul></div><div class="mf-col"><p class="mf-h"><a href="../../converters/index.html">Formulas</a></p><ul><li><a href="../../converters/ohms-law-formulas.html">Ohm’s Law formulas</a></li><li><a href="../../converters/kirchhoffs-laws.html">Kirchhoff’s laws</a></li><li><a href="../../converters/cable-sizing-formulas.html">Cable sizing formulas</a></li><li><a href="../../converters/circuit-breaker-formulas.html">Circuit breaker formulas</a></li><li><a href="../../converters/ac-circuit-formulas.html">AC circuit formulas</a></li><li><a href="../../converters/battery-formulas.html">Battery formulas</a></li></ul></div><div class="mf-col"><p class="mf-h">Elecmetric</p><ul><li><a href="../../calculators/basic-calculator/">Basic Calculator</a></li><li><a href="../../calculators/scientific-calculator/">Scientific Calculator</a></li><li><a href="../../index.html#verification">How it is verified</a></li><li><a href="../../privacy.html">Privacy</a></li><li><a href="../../terms.html">Terms</a></li><li><a href="../../technical-library/">Technical Library</a></li><li><a href="mailto:elecmetrics@gmail.com">Contact us</a></li></ul></div></div><div class="mf-legal">Results are computed by the same tested engine as the calculators in Elecmetric and are for estimating. Check design values against the standard and the equipment data you work to. Elecmetric results are not a substitute for a design review by a competent engineer.<br>Developed by Elecmetric. No independent technical review of the calculators has been carried out. Results are for estimating.<br>&copy; 2026 Elecmetric &middot; <a href="../../privacy.html">Privacy</a> &middot; <a href="../../terms.html">Terms</a></div></div><script>(function(){if(location.protocol!=="file:")return;document.addEventListener("click",function(e){if(e.defaultPrevented||e.button||e.metaKey||e.ctrlKey||e.shiftKey)return;var a=e.target.closest&&e.target.closest("a[href]");if(!a||a.target)return;var m=/^([^?#]*)(.*)$/.exec(a.getAttribute("href"));if(!m[1]||/^[a-z][a-z0-9+.-]*:/i.test(m[1])||!/[/]$/.test(m[1]))return;e.preventDefault();location.href=m[1]+"index.html"+m[2]})})();</script><button type="button" class="totop" id="totop" aria-label="Back to top" tabindex="-1">↑ Top</button><script>(function(){var b=document.getElementById("totop");if(!b)return;var t=0;function u(){t=0;var on=(window.pageYOffset||document.documentElement.scrollTop)>400,bar=document.getElementById("bar"),h=bar&&bar.offsetHeight?bar.offsetHeight:0;b.classList.toggle("on",on);b.tabIndex=on?0:-1;b.style.bottom=h?"calc("+(h+16)+"px + env(safe-area-inset-bottom,0px))":"";}function q(){if(!t)t=requestAnimationFrame(u)}window.addEventListener("scroll",q,{passive:true});window.addEventListener("resize",q);b.addEventListener("click",function(){var r=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;window.scrollTo({top:0,behavior:r?"auto":"smooth"})});u()})();</script></footer><script>/* Elecmetric Quadratic Formula Calculator: exact engine for Mode 01 (Quadratic Equation Solver).
+   Every coefficient is held as an exact rational number (BigInt numerator and denominator), so the discriminant, its sign and the roots are decided exactly.
+   Roots come out as (u +/- v*sqrt(r))/w with r squarefree; they are verified by exact substitution in the field Q(sqrt(d)).
+   Works in Node (module.exports) and in the browser (global Quad). */
+(function (root) {
+  'use strict';
+  var MAXDIG = 60, MAXEXP = 300, TRIAL = 200000;
+  function babs(x) { return x < 0n ? -x : x; }
+  function gcd(a, b) { a = babs(a); b = babs(b); while (b) { var t = a % b; a = b; b = t; } return a; }
+  function isqrt(n) { if (n < 0n) throw new Error('isqrt of negative'); if (n < 2n) return n; var x = 1n << BigInt((n.toString(2).length + 1) >> 1); for (;;) { var y = (x + n / x) >> 1n; if (y >= x) return x; x = y; } }
+  function R(n, d) { if (d === undefined) d = 1n; if (d === 0n) throw new Error('zero denominator'); if (d < 0n) { n = -n; d = -d; } var g = gcd(n, d); if (g > 1n) { n /= g; d /= g; } return { n: n, d: d }; }
+  var ZERO = R(0n), ONE = R(1n);
+  function add(a, b) { return R(a.n * b.d + b.n * a.d, a.d * b.d); }
+  function sub(a, b) { return R(a.n * b.d - b.n * a.d, a.d * b.d); }
+  function mul(a, b) { return R(a.n * b.n, a.d * b.d); }
+  function div(a, b) { return R(a.n * b.d, a.d * b.n); }
+  function neg(a) { return { n: -a.n, d: a.d }; }
+  function isZero(a) { return a.n === 0n; }
+  function sgn(a) { return a.n === 0n ? 0 : a.n < 0n ? -1 : 1; }
+  function eq(a, b) { return a.n === b.n && a.d === b.d; }
+  function ri(n) { return R(BigInt(n), 1n); }
+  function rs(a) { return a.d === 1n ? String(a.n) : a.n + '/' + a.d; }
+
+  /* ---------- input parsing ---------- */
+  function parseDec(s) {
+    var m = /^([+-]?)(\d*)(?:\.(\d*))?(?:[eE]([+-]?\d+))?$/.exec(s);
+    if (!m || (m[2] === '' && (m[3] === undefined || m[3] === ''))) return null;
+    var ip = m[2] || '', fp = m[3] || '', ex = m[4] ? parseInt(m[4], 10) : 0;
+    if (ip.length + fp.length > MAXDIG) return { err: 'Too many digits: use at most ' + MAXDIG + '.' };
+    if (Math.abs(ex) > MAXEXP) return { err: 'Exponent too large: use between \u2212' + MAXEXP + ' and ' + MAXEXP + '.' };
+    var n = BigInt((ip + fp) || '0'), e = ex - fp.length;
+    var v = e >= 0 ? R(n * 10n ** BigInt(e), 1n) : R(n, 10n ** BigInt(-e));
+    return { v: m[1] === '-' ? neg(v) : v };
+  }
+  /* A coefficient: integer, decimal, scientific, fraction a/b (a and b may be decimals) or mixed number "2 1/3". */
+  function parseNum(text) {
+    var s = String(text === undefined || text === null ? '' : text).replace(/\u2212|\u2013|\u2014/g, '-').replace(/\u2044|\u2215/g, '/').replace(/,/g, '').trim();
+    if (s === '') return { empty: true, error: 'Enter a value.' };
+    var m = /^([+-]?)\s*(\d+)[ _]+(\d+)\s*\/\s*(\d+)$/.exec(s);
+    if (m) { var w = BigInt(m[2]), nn = BigInt(m[3]), dd = BigInt(m[4]); if (dd === 0n) return { error: 'The denominator cannot be zero.' }; var mv = R(w * dd + nn, dd); return { v: m[1] === '-' ? neg(mv) : mv }; }
+    if (s.indexOf('/') >= 0) {
+      var parts = s.split('/'); if (parts.length !== 2) return { error: 'Use one fraction bar, for example 3/4.' };
+      var a = parseDec(parts[0].trim()), b = parseDec(parts[1].trim());
+      if (!a || !b) return { error: 'Cannot read \u201c' + s + '\u201d. Use a number, a decimal or a fraction such as 3/4.' };
+      if (a.err || b.err) return { error: a.err || b.err };
+      if (isZero(b.v)) return { error: 'The denominator cannot be zero.' };
+      return { v: div(a.v, b.v) };
+    }
+    var d = parseDec(s);
+    if (!d) return { error: 'Cannot read \u201c' + s + '\u201d. Use a number, a decimal or a fraction such as 3/4.' };
+    if (d.err) return { error: d.err };
+    return { v: d.v };
+  }
+
+  /* ---------- radicals ---------- */
+  /* n >= 0 BigInt -> {s, r, full} with n = s^2 * r and r squarefree as far as trial division up to TRIAL reaches (full=false if a large unfactored part remains). */
+  function sqrtSplit(n) {
+    if (n === 0n) return { s: 0n, r: 0n, full: true };
+    var s = 1n, r = 1n, rest = n, p = 2n, lim = BigInt(TRIAL);
+    while (p * p <= rest && p <= lim) {
+      var e = 0; while (rest % p === 0n) { rest /= p; e++; }
+      if (e) { s *= p ** BigInt(e >> 1); if (e & 1) r *= p; }
+      p += p === 2n ? 1n : 2n;
+    }
+    var full = rest === 1n || p * p > rest;
+    if (rest > 1n) { var q = isqrt(rest); if (q * q === rest) { s *= q; full = true; } else r *= rest; }
+    return { s: s, r: r, full: full };
+  }
+
+  /* ---------- number field Q(sqrt(d)), d an integer that is not a perfect square: a + b*sqrt(d) ---------- */
+  function Fm(a, b, d) { return { a: a, b: b, d: d }; }
+  function fmul(x, y) { return Fm(add(mul(x.a, y.a), mul(mul(x.b, y.b), x.d)), add(mul(x.a, y.b), mul(x.b, y.a)), x.d); }
+  function fadd(x, y) { return Fm(add(x.a, y.a), add(x.b, y.b), x.d); }
+  function fscale(k, x) { return Fm(mul(k, x.a), mul(k, x.b), x.d); }
+
+  /* ---------- formatting ---------- */
+  function mn(s) { return String(s).replace(/-/g, '\u2212'); }
+  function coefTerm(c, pow, first) { /* c rational non-zero -> text of one term of a polynomial */
+    var neg_ = c.n < 0n, ab = neg_ ? { n: -c.n, d: c.d } : c, body;
+    var isOne = ab.n === 1n && ab.d === 1n, v = pow === 0 ? 'x'.slice(0, 0) : pow === 1 ? 'x' : 'x\u00b2';
+    if (pow === 0) body = rs(ab).indexOf('/') >= 0 ? '(' + rs(ab) + ')' : rs(ab);
+    else body = (isOne ? '' : (ab.d === 1n ? rs(ab) : '(' + rs(ab) + ')')) + v;
+    if (first) return (neg_ ? '\u2212' : '') + body;
+    return (neg_ ? ' \u2212 ' : ' + ') + body;
+  }
+  function equationText(A, B, C) {
+    var out = '', first = true;
+    [[A, 2], [B, 1], [C, 0]].forEach(function (t) { if (isZero(t[0])) return; out += coefTerm(t[0], t[1], first); first = false; });
+    if (first) out = '0';
+    return out + ' = 0';
+  }
+  function sciOf(q, sig) {
+    var n = q.n < 0n ? -q.n : q.n, d = q.d, e = n.toString().length - d.toString().length;
+    for (var tries = 0; tries < 4; tries++) {
+      var sc = e >= 0 ? R(n, d * 10n ** BigInt(e)) : R(n * 10n ** BigInt(-e), d);
+      if (sc.n >= sc.d * 10n) e++; else if (sc.n < sc.d) e--; else break;
+    }
+    var m = e >= 0 ? R(n, d * 10n ** BigInt(e)) : R(n * 10n ** BigInt(-e), d), P = 10n ** BigInt(sig - 1), v = (m.n * P * 2n + m.d) / (m.d * 2n);
+    if (v >= P * 10n) { v /= 10n; e++; }
+    var t = String(v), mant = t[0] + (t.length > 1 ? '.' + t.slice(1) : ''); mant = mant.replace(/(\.\d*?)0+$/, '$1').replace(/\.$/, '');
+    return (q.n < 0n ? '-' : '') + mant + 'e' + (e < 0 ? '\u2212' : '') + Math.abs(e);
+  }
+  /* Exact decimal of a rational: returns {text, exact}; terminating expansions are shown in full (up to 40 places), others are rounded to dp places. */
+  function decOfRational(q, dp) {
+    var n = q.n, d = q.d, neg_ = n < 0n; if (neg_) n = -n;
+    var t = d, twos = 0, fives = 0; while (t % 2n === 0n) { t /= 2n; twos++; } while (t % 5n === 0n) { t /= 5n; fives++; }
+    var terminating = t === 1n, places = Math.max(twos, fives);
+    var use = terminating && places <= 40 ? places : dp, S = 10n ** BigInt(use);
+    var scaled = (n * S * 2n + d) / (d * 2n);
+    var ip = scaled / S, fp = scaled % S, fs = String(fp); fs = use ? '0'.repeat(Math.max(0, use - fs.length)) + fs : '';
+    var text = String(ip) + (use ? '.' + fs : '');
+    if (terminating && places <= 40) text = text.replace(/(\.\d*?)0+$/, '$1').replace(/\.$/, '');
+    var isZero_ = /^0(\.0*)?$/.test(text);
+    if (isZero_ && n !== 0n) return { text: sciOf(q, 10), exact: false };
+    return { text: (neg_ && !isZero_ ? '-' : '') + text, exact: terminating && places <= 40 };
+  }
+  /* (u + sg*v*sqrt(r))/w, r > 0 integer -> decimal rounded to dp places. u, v, w BigInt; sg = +1 or -1. */
+  function decOfRadical(u, v, r, w, sg, dp) {
+    var G = dp + 12, S = 10n ** BigInt(G), root = isqrt(r * S * S); /* sqrt(r)*S, floor */
+    var num = u * S + BigInt(sg) * v * root, q = R(num, w * S);
+    var res = decOfRational(q, dp);
+    if (res.exact && !/\./.test(res.text) ) return { text: res.text, exact: false };
+    /* force fixed dp places for irrational values */
+    var qq = R(num, w * S), n = qq.n, d = qq.d, ng = n < 0n; if (ng) n = -n;
+    var P = 10n ** BigInt(dp), sc = (n * P * 2n + d) / (d * 2n), ip = sc / P, fp = String(sc % P); fp = '0'.repeat(Math.max(0, dp - fp.length)) + fp;
+    var tx = String(ip) + (dp ? '.' + fp : ''); if (/^0(\.0*)?$/.test(tx)) return { text: sciOf(R(num * (ng ? -1n : 1n) * (ng ? -1n : 1n) * (ng ? -1n : 1n), w * S), 10), exact: false }; if (ng) tx = '-' + tx;
+    return { text: tx, exact: false };
+  }
+  function radText(r) { return '\u221a' + r; }
+  /* exact text of (u + sg*v*sqrt(r)*[i])/w with w > 0 and gcd(u, v, w) = 1. imag: use i. */
+  function exactText(u, v, r, w, sg, imag) {
+    var rad = (imag ? 'i' : '') + (r === 1n ? '' : radText(r)), vs = v === 1n ? '' : String(v);
+    var core = vs + rad;
+    if (u === 0n) { var t0 = (sg < 0 ? '\u2212' : '') + core; return w === 1n ? t0 : (sg < 0 ? '\u2212' + core + '/' + w : core + '/' + w); }
+    var us = mn(String(u)), op = sg < 0 ? ' \u2212 ' : ' + ';
+    if (w === 1n) return us + op + core;
+    return '(' + us + op + core + ')/' + w;
+  }
+  function imagUnit(core) { return core; }
+
+  /* ---------- the solver ---------- */
+  function classify(D, perfect) {
+    if (D.n > 0n) return perfect ? 'Two distinct real roots (rational)' : 'Two distinct real roots (irrational)';
+    if (D.n === 0n) return 'One repeated real root (double root)';
+    return 'Two complex conjugate roots';
+  }
+  function solve(input) {
+    input = input || {};
+    var dp = input.dp === undefined ? 8 : Math.max(2, Math.min(15, input.dp | 0));
+    var pa = parseNum(input.a), pb = parseNum(input.b), pc = parseNum(input.c);
+    var errs = {}, anyEmpty = pa.empty && pb.empty && pc.empty;
+    if (pa.error) errs.a = pa.error; if (pb.error) errs.b = pb.error; if (pc.error) errs.c = pc.error;
+    if (pa.empty && !pa.error) errs.a = 'Enter A (type 0 if the x\u00b2 term is absent).';
+    if (pb.empty && !pb.error) errs.b = 'Enter B (type 0 if the x term is absent).';
+    if (pc.empty && !pc.error) errs.c = 'Enter C (type 0 if there is no constant).';
+    if (errs.a || errs.b || errs.c) return { ok: false, empty: anyEmpty, errors: errs, error: errs.a || errs.b || errs.c };
+    var A = pa.v, B = pb.v, C = pc.v, eqn = equationText(A, B, C), steps = [];
+    var res = { ok: true, A: A, B: B, C: C, a: rs(A), b: rs(B), c: rs(C), equation: eqn, dp: dp, steps: steps };
+    steps.push('Equation: ' + eqn + '. Coefficients: A = ' + rs(A) + ', B = ' + rs(B) + ', C = ' + rs(C) + '.');
+
+    /* degenerate cases */
+    if (isZero(A) && isZero(B)) {
+      if (isZero(C)) { res.kind = 'indeterminate'; res.label = 'Every real number is a solution'; res.degree = -1; steps.push('A = B = C = 0, so the equation reads 0 = 0, which is true for every x. It is an identity, not an equation to solve.'); res.roots = []; return res; }
+      res.kind = 'none'; res.label = 'No solution'; res.degree = 0; res.roots = []; steps.push('A = B = 0 leaves ' + rs(C) + ' = 0, which is never true because C is not zero. There is no value of x that satisfies the equation.'); return res;
+    }
+    if (isZero(A)) {
+      var x = neg(div(C, B));
+      res.kind = 'linear'; res.degree = 1; res.label = 'A = 0: the equation is linear, with one root';
+      res.roots = [{ exact: rs(x), dec: decOfRational(x, dp), q: x, real: true, field: null }];
+      steps.push('A = 0, so this is the linear equation ' + rs(B) + 'x + ' + rs(C) + ' = 0, not a quadratic. There is one root: x = \u2212C/B = \u2212(' + rs(C) + ')/(' + rs(B) + ') = ' + rs(x) + '.');
+      res.verify = [verifyRational(A, B, C, x)]; res.verifyOk = res.verify.every(function (v) { return v.ok; });
+      steps.push('Check: A\u00b7x\u00b2 + B\u00b7x + C at x = ' + rs(x) + ' gives ' + res.verify[0].value + '.');
+      return res;
+    }
+
+    /* quadratic */
+    res.degree = 2;
+    var B2 = mul(B, B), fAC = mul(ri(4), mul(A, C)), D = sub(B2, fAC);
+    res.D = D; res.discriminant = rs(D);
+    steps.push('Discriminant: \u0394 = B\u00b2 \u2212 4AC = (' + rs(B) + ')\u00b2 \u2212 4\u00b7(' + rs(A) + ')\u00b7(' + rs(C) + ') = ' + rs(B2) + ' \u2212 (' + rs(fAC) + ') = ' + rs(D) + '.');
+    var twoA = mul(ri(2), A), h = neg(div(B, twoA)), k = neg(div(D, mul(ri(4), A)));
+    res.vertex = { x: h, y: k }; res.axis = h; res.yint = C; res.sum = neg(div(B, A)); res.product = div(C, A);
+    res.opens = sgn(A) > 0 ? 'up' : 'down'; res.extremum = sgn(A) > 0 ? 'minimum' : 'maximum'; res.extremumValue = k;
+    var perfectSq = false, sq = null;
+    if (D.n >= 0n) { var pn = isqrt(D.n), qd = isqrt(D.d); perfectSq = pn * pn === D.n && qd * qd === D.d; if (perfectSq) sq = R(pn, qd); }
+    res.perfectSquare = perfectSq;
+    res.label = classify(D, perfectSq); res.rootCount = D.n < 0n ? 2 : D.n === 0n ? 1 : 2;
+    steps.push(D.n > 0n ? '\u0394 > 0: two distinct real roots' + (perfectSq ? '. \u0394 is a perfect square, so both roots are rational.' : '. \u0394 is not a perfect square, so the roots are irrational.') : D.n === 0n ? '\u0394 = 0: one repeated real root, the parabola just touches the x-axis.' : '\u0394 < 0: no real roots; the roots are a complex conjugate pair, shown below as a \u00b1 bi.');
+    steps.push('Quadratic formula: x = (\u2212B \u00b1 \u221a\u0394) / (2A) = (' + mn(rs(neg(B))) + ' \u00b1 \u221a(' + rs(D) + ')) / ' + rs(twoA) + '.');
+    var roots = [];
+    if (D.n === 0n) {
+      roots.push({ exact: rs(h), dec: decOfRational(h, dp), q: h, real: true });
+      res.kind = 'repeated'; steps.push('x = \u2212B/(2A) = ' + rs(h) + ' (repeated).');
+      res.roots = roots;
+    } else if (perfectSq) {
+      var r1 = div(sub(neg(B), sq), twoA), r2 = div(add(neg(B), sq), twoA);
+      var lo = sgn(sub(r1, r2)) <= 0 ? r1 : r2, hi = lo === r1 ? r2 : r1;
+      roots.push({ exact: rs(lo), dec: decOfRational(lo, dp), q: lo, real: true }, { exact: rs(hi), dec: decOfRational(hi, dp), q: hi, real: true });
+      res.kind = 'rational'; steps.push('\u221a\u0394 = \u221a(' + rs(D) + ') = ' + rs(sq) + ', so x = (' + mn(rs(neg(B))) + ' \u00b1 ' + rs(sq) + ') / ' + rs(twoA) + ', which gives x = ' + rs(lo) + ' and x = ' + rs(hi) + '.');
+      res.roots = roots;
+    } else {
+      /* radical: sqrt(|D|) = sqrt(p*q)/q for D = p/q  =>  x = (u +/- v*sqrt(r))/w */
+      var absD = D.n < 0n ? { n: -D.n, d: D.d } : D, m = absD.n * absD.d, sp = sqrtSplit(m);
+      var s = sp.s, r = sp.r, qd2 = absD.d;
+      /* x = (-B +/- (s*sqrt(r)/qd2)) / (2A), with B = Bn/Bd, 2A = An2/Ad2 */
+      var Bn = B.n, Bd = B.d, An = twoA.n, Ad = twoA.d;
+      /* x = [(-Bn/Bd) +/- s*sqrt(r)/qd2] * Ad/An = [(-Bn*qd2 +/- s*Bd*sqrt(r)) / (Bd*qd2)] * Ad/An */
+      var uu = -Bn * qd2 * Ad, vv = s * Bd * Ad, ww = Bd * qd2 * An;
+      if (ww < 0n) { ww = -ww; uu = -uu; vv = -vv; }
+      var gg = gcd(gcd(uu, vv), ww); if (gg > 1n) { uu /= gg; vv /= gg; ww /= gg; }
+      var vpos = vv < 0n ? -vv : vv; /* the two signs cover both roots, so v can be taken positive */
+      var imag = D.n < 0n;
+      res.radicand = r; res.radicandFull = sp.full; res.form = { u: uu, v: vpos, r: r, w: ww, imag: imag };
+      steps.push('Simplify the radical: ' + (imag ? '\u221a(\u2212\u0394) ' : '\u221a\u0394 ') + '= \u221a(' + rs(absD) + ') = ' + (function () { var sq2 = R(s, qd2); return (sq2.n === 1n && sq2.d === 1n ? '' : rs(sq2)) + '\u221a' + r; })() + (sp.full ? '' : ' (the radicand has a large factor that could not be tested for square parts)') + '.');
+      var mk = function (sg) {
+        var ex = exactText(uu, vpos, r, ww, sg, imag), re_, im_;
+        if (!imag) { var dc = decOfRadical(uu, vpos, r, ww, sg, dp); return { exact: ex, dec: dc, real: true, sg: sg }; }
+        var reQ = R(uu, ww), imQ = decOfRadical(0n, vpos, r, ww, 1, dp);
+        var reD = decOfRational(reQ, dp), reT = reD.exact ? reD.text : reD.text;
+        var imN = imQ.text.replace(/^-/, ''), imT = imN === '1' ? '' : imN, sign = sg < 0 ? '\u2212' : '+';
+        var dtext = (isZero(reQ) ? '' : reT + ' ') + (isZero(reQ) ? (sg < 0 ? '-' : '') : sign + ' ') + imT + 'i';
+        return { exact: ex, dec: { text: dtext, exact: false }, re: reD, im: { text: (sg < 0 ? '-' : '') + imN, exact: false }, real: false, sg: sg };
+      };
+      var m1 = mk(-1), m2 = mk(1);
+      if (!imag) { /* order: smaller root first. sign of 2A decides: x = (u + sg v sqrt r)/w with w > 0, so sg=-1 is smaller */ roots.push(m1, m2); }
+      else roots.push(m2, m1);
+      res.kind = imag ? 'complex' : 'irrational';
+      steps.push('x = ' + roots[0].exact + '  and  x = ' + roots[1].exact + '.');
+      res.roots = roots;
+      /* exact verification in Q(sqrt(d)) */
+      var dField = imag ? -r : r, Ft = function (sg) { return Fm(R(uu, ww), R(BigInt(sg) * vpos, ww), ri(dField)); };
+      var verify = [-1, 1].map(function (sg) {
+        var x = Ft(sg), t2 = fscale(A, fmul(x, x)), t1 = fscale(B, x), tot = fadd(fadd(t2, t1), Fm(C, ZERO, ri(dField)));
+        var ok = isZero(tot.a) && isZero(tot.b);
+        return { ok: ok, value: ok ? '0' : (rs(tot.a) + (isZero(tot.b) ? '' : ' + ' + rs(tot.b) + '\u221a' + dField)), root: roots[sg < 0 ? 0 : 1].exact };
+      });
+      res.verify = verify; res.verifyOk = verify.every(function (v) { return v.ok; });
+      steps.push('Check by substitution in exact arithmetic: A\u00b7x\u00b2 + B\u00b7x + C = ' + (res.verifyOk ? '0 for both roots.' : 'NOT zero (' + verify.map(function (v) { return v.value; }).join(' and ') + ').'));
+      return res;
+    }
+    res.verify = roots.map(function (rt) { return verifyRational(A, B, C, rt.q); });
+    res.verifyOk = res.verify.every(function (v) { return v.ok; });
+    res.verify.forEach(function (v, i) { v.root = roots[i].exact; });
+    steps.push('Check by substitution in exact arithmetic: A\u00b7x\u00b2 + B\u00b7x + C = ' + (res.verifyOk ? '0 for ' + (roots.length > 1 ? 'both roots.' : 'the root.') : 'NOT zero.'));
+    return res;
+  }
+  function verifyRational(A, B, C, x) {
+    var t = add(add(mul(A, mul(x, x)), mul(B, x)), C);
+    return { ok: isZero(t), value: rs(t), root: rs(x), parts: [rs(mul(A, mul(x, x))), rs(mul(B, x)), rs(C)] };
+  }
+
+  /* ---------- plain-text summary (copy / report) ---------- */
+  function summary(r) {
+    if (!r.ok) return '';
+    var L = ['Equation: ' + mn(r.equation), 'Result: ' + r.label];
+    if (r.degree === 2) { L.push('Discriminant: ' + mn(r.discriminant)); }
+    (r.roots || []).forEach(function (x, i) { L.push('x' + (r.roots.length > 1 ? (i + 1) : '') + ' = ' + mn(x.exact) + (x.exact !== x.dec.text && !(x.dec.exact) ? '  \u2248 ' + mn(x.dec.text) : (x.exact !== x.dec.text ? '  = ' + mn(x.dec.text) : ''))); });
+    if (r.degree === 2) { L.push('Vertex: (' + mn(rs(r.vertex.x)) + ', ' + mn(rs(r.vertex.y)) + ')'); L.push('Sum of roots: ' + mn(rs(r.sum)) + '; product of roots: ' + mn(rs(r.product))); }
+    if (r.verify) L.push('Verified by exact substitution: ' + (r.verifyOk ? 'yes' : 'NO'));
+    return L.join('\n');
+  }
+
+  var api = { parseNum: parseNum, solve: solve, summary: summary, equationText: equationText, rs: rs, mn: mn, gcd: gcd, isqrt: isqrt, sqrtSplit: sqrtSplit, decOfRational: decOfRational, R: R, ops: { add: add, sub: sub, mul: mul, div: div, neg: neg, sgn: sgn, isZero: isZero, eq: eq, ri: ri } };
+  if (typeof module !== 'undefined' && module.exports) module.exports = api; else root.Quad = api;
+})(typeof window !== 'undefined' ? window : this);
+
+/* Elecmetric Quadratic Formula Calculator: engine for Mode 03 (Parabola Graph & Vertex).
+   Built on the exact engine of Mode 01 (tools/quad_engine.js): the vertex, axis, intercepts, focus, directrix and table of values are exact rationals or exact radicals.
+   Only the drawing window and the plotted curve use floating point, and the window never changes any value that is printed.
+   graph(): everything about the parabola y = Ax^2 + Bx + C (a straight line when A = 0), the checks, the working and the suggested drawing window.
+   evalAt(): y at any x, exact.
+   Works in Node (module.exports) and in the browser (global QuadGraph, after Quad). */
+(function (root) {
+  'use strict';
+  var Q = typeof module !== 'undefined' && module.exports ? require('./quad_engine.js') : root.Quad;
+  var O = Q.ops, R = Q.R, rs = Q.rs, mn = Q.mn, add = O.add, sub = O.sub, mul = O.mul, div = O.div, neg = O.neg, sgn = O.sgn, isZero = O.isZero, eq = O.eq, ri = O.ri;
+  var ZERO = ri(0), ONE = ri(1), TWO = ri(2), FOUR = ri(4);
+  function sqr(x) { return mul(x, x); }
+  function t(q) { return mn(rs(q)); }
+
+  /* rational -> double without overflow in the intermediate BigInts; Infinity or 0 only when the value is outside the double range */
+  function toNum(q) {
+    var n = q.n, d = q.d, ng = n < 0n; if (ng) n = -n; if (n === 0n) return 0;
+    var sh = n.toString(2).length - d.toString(2).length - 60, v;
+    if (sh > 0) v = Number(n / (d << BigInt(sh))) * Math.pow(2, sh); else v = Number((n << BigInt(-sh)) / d) / Math.pow(2, -sh);
+    return ng ? -v : v;
+  }
+  function floorDiv(n, d) { var q = n / d; if (n % d !== 0n && (n < 0n) !== (d < 0n)) q -= 1n; return q; }
+  function decNum(text) { return parseFloat(String(text).replace(/\u2212/g, '-')); }
+  function decOf(q, dp) { return Q.decOfRational(q, dp); }
+  function pt(x, y, dp) {
+    var dx = decOf(x, dp), dy = decOf(y, dp);
+    return { x: x, y: y, xt: t(x), yt: t(y), xd: dx.text, yd: dy.text, exact: dx.exact && dy.exact, text: '(' + t(x) + ', ' + t(y) + ')', dtext: '(' + mn(dx.text) + ', ' + mn(dy.text) + ')' };
+  }
+  function f(A, B, C, x) { return add(add(mul(A, sqr(x)), mul(B, x)), C); }
+
+  /* coefficient in front of a bracket: 1 -> '', -1 -> '-', fraction -> (3/4) */
+  function coefTxt(c) { if (eq(c, ONE)) return ''; if (eq(c, neg(ONE))) return '\u2212'; var s = t(c); return c.d === 1n ? s : '(' + s + ')'; }
+  function vertexForm(A, h, k) {
+    var inner = isZero(h) ? 'x' : '(x ' + (sgn(h) > 0 ? '\u2212 ' : '+ ') + mn(rs(sgn(h) > 0 ? h : neg(h))) + ')';
+    var s = 'y = ' + coefTxt(A) + inner + '\u00b2';
+    if (!isZero(k)) s += (sgn(k) > 0 ? ' + ' : ' \u2212 ') + mn(rs(sgn(k) > 0 ? k : neg(k)));
+    return s;
+  }
+  function standardForm(A, B, C) { return 'y = ' + mn(Q.equationText(A, B, C)).replace(/ = 0$/, ''); }
+
+  /* ---------- suggested drawing window (floating point, for the picture only) ---------- */
+  function fitWindow(fn, marks) {
+    var xs = marks.slice(), xlo, xhi, ylo, yhi, ok = true;
+    if (fn.kind === 'parabola') {
+      var w0 = 2 * Math.sqrt(Math.max(Math.abs(fn.k), 1) / Math.abs(fn.a)); xs.push(fn.h - w0, fn.h + w0);
+    }
+    xs = xs.filter(function (v) { return isFinite(v); });
+    if (!xs.length) return { x0: -10, x1: 10, y0: -10, y1: 10, drawable: false };
+    xlo = Math.min.apply(null, xs); xhi = Math.max.apply(null, xs);
+    if (!(xhi - xlo > 0)) { xlo -= 5; xhi += 5; }
+    var px = 0.15 * (xhi - xlo); xlo -= px; xhi += px;
+    var ys = [0, fn.at(xlo), fn.at(xhi)]; if (fn.kind === 'parabola') ys.push(fn.k); else ys.push(fn.c);
+    ok = ys.every(isFinite); if (!ok) return { x0: -10, x1: 10, y0: -10, y1: 10, drawable: false };
+    ylo = Math.min.apply(null, ys); yhi = Math.max.apply(null, ys);
+    if (!(yhi - ylo > 0)) { ylo -= 5; yhi += 5; }
+    var py = 0.12 * (yhi - ylo); ylo -= py; yhi += py;
+    return { x0: xlo, x1: xhi, y0: ylo, y1: yhi, drawable: isFinite(xhi - xlo) && isFinite(yhi - ylo) && xhi - xlo > 0 && yhi - ylo > 0 };
+  }
+
+  /* ---------- the analysis ---------- */
+  function graph(input) {
+    var r = Q.solve(input);
+    if (!r.ok) return r;
+    var dp = r.dp, A = r.A, B = r.B, C = r.C, g = { dp: dp }, S = [];
+    r.graph = g; r.graphSteps = S;
+    if (r.degree !== 2) {
+      g.kind = r.degree === 1 ? 'line' : 'none';
+      if (r.degree === 1) {
+        var x0 = r.roots[0].q, m = toNum(B), c = toNum(C);
+        g.slope = B; g.yint = pt(ZERO, C, dp); g.xint = pt(x0, ZERO, dp);
+        g.fn = { kind: 'line', m: m, c: c, at: function (x) { return m * x + c; } };
+        g.view = fitWindow(g.fn, [0, toNum(x0)]);
+        S.push('A = 0, so the graph is the straight line y = ' + t(B) + 'x + ' + t(C) + ', not a parabola. It crosses the y-axis at ' + g.yint.text + ' and the x-axis at ' + g.xint.text + '.');
+      } else g.view = { x0: -10, x1: 10, y0: -10, y1: 10, drawable: true };
+      return r;
+    }
+    g.kind = 'parabola';
+    var D = r.D, h = r.vertex.x, k = r.vertex.y, p = div(ONE, mul(FOUR, A)), two = TWO;
+    g.vertex = pt(h, k, dp); g.axis = 'x = ' + t(h); g.axisX = h;
+    g.opens = r.opens; g.extremum = r.extremum; g.extremumValue = k;
+    g.range = sgn(A) > 0 ? 'y \u2265 ' + t(k) : 'y \u2264 ' + t(k);
+    g.trend = sgn(A) > 0 ? 'Decreasing for x < ' + t(h) + ', increasing for x > ' + t(h) : 'Increasing for x < ' + t(h) + ', decreasing for x > ' + t(h);
+    g.yint = pt(ZERO, C, dp);
+    g.mirror = pt(neg(div(B, A)), C, dp); g.mirrorSame = isZero(B);
+    g.xints = D.n >= 0n ? r.roots.map(function (x) { return { exact: mn(x.exact), dec: mn(x.dec.text), num: x.q ? toNum(x.q) : decNum(x.dec.text), text: '(' + mn(x.exact) + ', 0)' }; }) : [];
+    if (D.n < 0n) g.complexRoots = r.roots.map(function (x) { return mn(x.exact); });
+    g.standard = standardForm(A, B, C); g.vertexForm = vertexForm(A, h, k);
+    g.focus = pt(h, add(k, p), dp); g.directrix = 'y = ' + t(sub(k, p)); g.directrixY = sub(k, p);
+    g.latus = div(ONE, sgn(A) > 0 ? A : neg(A)); g.latusText = t(g.latus);
+    g.discriminant = r.discriminant; g.label = r.label;
+
+    /* table of values around the vertex: whole numbers of x */
+    var near = floorDiv(h.n * 2n + h.d, h.d * 2n), rows = [];
+    for (var j = -3; j <= 3; j++) { var x = ri(near + BigInt(j)), y = f(A, B, C, x), dy = decOf(y, dp); rows.push({ x: t(x), y: t(y), yd: mn(dy.text), exact: dy.exact, isVertex: eq(x, h) }); }
+    g.values = rows;
+
+    /* exact checks, each by a different route */
+    var chk = [];
+    chk.push({ name: 'f(vertex x) = vertex y', ok: eq(f(A, B, C, h), k), value: t(f(A, B, C, h)) });
+    chk.push({ name: 'Vertex y by C \u2212 B\u00b2/(4A) agrees with \u2212\u0394/(4A)', ok: eq(sub(C, div(sqr(B), mul(FOUR, A))), k), value: t(sub(C, div(sqr(B), mul(FOUR, A)))) });
+    chk.push({ name: 'Slope 2A\u00b7h + B at the vertex is zero', ok: isZero(add(mul(mul(two, A), h), B)), value: t(add(mul(mul(two, A), h), B)) });
+    var fm = f(A, B, C, add(h, ONE)), fl = f(A, B, C, sub(h, ONE));
+    chk.push({ name: 'Symmetry: f(h + 1) = f(h \u2212 1)', ok: eq(fm, fl), value: t(fm) + ' and ' + t(fl) });
+    chk.push({ name: 'Mirror of the y-intercept: f(\u2212B/A) = C', ok: eq(f(A, B, C, neg(div(B, A))), C), value: t(f(A, B, C, neg(div(B, A)))) });
+    chk.push({ name: 'Vertex x is half the sum of the roots', ok: eq(div(r.sum, two), h), value: t(div(r.sum, two)) });
+    var y1 = f(A, B, C, add(h, ONE)), dF = add(ONE, sqr(sub(y1, add(k, p)))), dL = sqr(sub(y1, sub(k, p)));
+    chk.push({ name: 'Focus and directrix: a point of the curve is equally far from both', ok: eq(dF, dL), value: t(dF) + ' and ' + t(dL) });
+    chk.push({ name: 'Each root, by exact substitution', ok: !!r.verifyOk, value: (r.verify || []).map(function (v) { return v.value; }).join(' and ') });
+    g.checks = chk; g.checkOk = chk.every(function (c) { return c.ok; });
+
+    /* the drawing */
+    var a = toNum(A), hN = toNum(h), kN = toNum(k);
+    g.fn = { kind: 'parabola', a: a, h: hN, k: kN, at: function (x) { var u = x - hN; return a * u * u + kN; } };
+    var marks = [0, hN, toNum(g.mirror.x)]; g.xints.forEach(function (z) { marks.push(z.num); });
+    g.view = fitWindow(g.fn, marks);
+
+    /* working */
+    S.push('Vertex. h = \u2212B/(2A) = \u2212(' + t(B) + ')/(2\u00b7' + t(A) + ') = ' + t(h) + '. Then k = f(h) = ' + t(k) + ', which is also \u2212\u0394/(4A) = \u2212(' + r.discriminant.replace(/-/g, '\u2212') + ')/(4\u00b7' + t(A) + '). The vertex is ' + g.vertex.text + '.');
+    S.push('Axis of symmetry: the vertical line ' + g.axis + ' through the vertex. Points of the curve at equal distances either side of it have equal heights.');
+    S.push('Opening: A = ' + t(A) + (sgn(A) > 0 ? ' is positive, so the parabola opens upward and the vertex is the lowest point.' : ' is negative, so the parabola opens downward and the vertex is the highest point.') + ' The ' + g.extremum + ' value is ' + t(k) + ', so the range is ' + g.range + '.');
+    S.push('Y-intercept: x = 0 gives y = C = ' + t(C) + ', the point ' + g.yint.text + '.' + (g.mirrorSame ? ' B = 0, so this point lies on the axis of symmetry and is the vertex.' : ' Its mirror image across the axis is ' + g.mirror.text + '.'));
+    if (D.n > 0n) S.push('X-intercepts: \u0394 = ' + r.discriminant.replace(/-/g, '\u2212') + ' > 0, so the curve crosses the x-axis at x = ' + g.xints.map(function (z) { return z.exact; }).join(' and x = ') + '.');
+    else if (D.n === 0n) S.push('X-intercept: \u0394 = 0, so the curve touches the x-axis at one point, the vertex ' + g.vertex.text + '.');
+    else S.push('X-intercepts: \u0394 = ' + r.discriminant.replace(/-/g, '\u2212') + ' < 0, so the curve does not meet the x-axis. The complex roots ' + g.complexRoots.join(' and ') + ' do not appear on this graph.');
+    S.push('Vertex form: ' + g.vertexForm + '. Focus ' + g.focus.text + ', directrix ' + g.directrix + ', width of the curve at the focus (latus rectum) ' + g.latusText + '.');
+    S.push('Exact checks: ' + (g.checkOk ? 'all ' + chk.length + ' hold.' : 'one did not hold.'));
+    return r;
+  }
+
+  /* y at any x, exact */
+  function evalAt(input) {
+    var pa = Q.parseNum(input.a), pb = Q.parseNum(input.b), pc = Q.parseNum(input.c), px = Q.parseNum(input.x), dp = input.dp === undefined ? 8 : Math.max(2, Math.min(15, input.dp | 0));
+    var bad = [pa, pb, pc].filter(function (z) { return z.error || z.empty; })[0];
+    if (bad) return { ok: false, error: 'Enter A, B and C first.' };
+    if (px.empty) return { ok: false, empty: true, error: '' };
+    if (px.error) return { ok: false, error: px.error };
+    var y = f(pa.v, pb.v, pc.v, px.v), d = decOf(y, dp);
+    return { ok: true, x: px.v, y: y, xt: t(px.v), yt: t(y), yd: mn(d.text), exact: d.exact };
+  }
+
+  function summary(r) {
+    if (!r.ok || !r.graph) return '';
+    var g = r.graph, L = ['Equation: y = ' + mn(r.equation).replace(/ = 0$/, '')];
+    if (g.kind !== 'parabola') { L.push(g.kind === 'line' ? 'A = 0: a straight line. Y-intercept ' + g.yint.text + ', x-intercept ' + g.xint.text : r.label); return L.join('\n'); }
+    L.push('Opens: ' + g.opens + 'ward', 'Vertex: ' + g.vertex.text + (g.vertex.exact ? '' : '  \u2248 ' + g.vertex.dtext), 'Axis of symmetry: ' + g.axis, (g.extremum === 'minimum' ? 'Minimum' : 'Maximum') + ' value: ' + t(g.extremumValue), 'Range: ' + g.range, 'Y-intercept: ' + g.yint.text);
+    L.push('X-intercepts: ' + (g.xints.length ? g.xints.map(function (z) { return z.text; }).join(', ') : 'none (complex roots ' + g.complexRoots.join(', ') + ')'));
+    L.push('Discriminant: ' + mn(g.discriminant), 'Vertex form: ' + g.vertexForm, 'Focus: ' + g.focus.text + '; directrix: ' + g.directrix);
+    L.push('Verified by exact arithmetic: ' + (g.checkOk ? 'yes' : 'NO'));
+    return L.join('\n');
+  }
+
+  var api = { graph: graph, evalAt: evalAt, summary: summary, toNum: toNum, fitWindow: fitWindow };
+  if (typeof module !== 'undefined' && module.exports) module.exports = api; else root.QuadGraph = api;
+})(typeof window !== 'undefined' ? window : this);
+
+/* Elecmetric Quadratic Formula Calculator: page script for Mode 03 (Parabola Graph & Vertex). Inlined by tools/quad_graph_page.js after tools/quad_engine.js and tools/quad_graph_engine.js. */
+(function () {
+  var $ = function (id) { return document.getElementById(id); }, Qd = Quad, QG = QuadGraph, NS = 'http://www.w3.org/2000/svg';
+  var A = $('pg-a'), B = $('pg-b'), C = $('pg-c'), DP = $('pg-dp'), GR = $('pg-gr'), W = 640, H = 400, view = null, res = null, last = null, trace = null, showFocus = false;
+  function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
+  function mn(s) { return Qd.mn(s); }
+  function note(t) { $('pg-note').textContent = t; }
+  function copy(t) { var d = function () { note('Copied'); }; if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(t).then(d, d); else { var a = document.createElement('textarea'); a.value = t; document.body.appendChild(a); a.select(); try { document.execCommand('copy'); } catch (e) {} document.body.removeChild(a); d(); } }
+  function mark(el, msg) { el.classList.toggle('bad', !!msg); el.setAttribute('aria-invalid', String(!!msg)); }
+  function table(head, rows) { return '<div class="tw" tabindex="0" role="region" aria-label="Scrollable table: ' + esc(head.join(', ')) + '"><table class="ns-t"><thead><tr>' + head.map(function (h) { return '<th>' + esc(h) + '</th>'; }).join('') + '</tr></thead><tbody>' + rows.join('') + '</tbody></table></div>'; }
+  function row(a, b, c) { return '<tr><td>' + esc(a) + '</td><td class="r">' + esc(b) + '</td><td>' + (c ? esc(c) : '') + '</td></tr>'; }
+  function flag(t, hot) { return '<span class="ns-flag' + (hot ? ' r' : '') + '">' + esc(t) + '</span>'; }
+  function actions(text) { return '<div class="ns-act"><button type="button" class="btn2" data-copy="' + esc(text) + '">Copy result</button><button type="button" class="btn2" data-act="save">Save as .txt</button><button type="button" class="btn2" data-act="png">Save graph (SVG)</button><button type="button" class="btn2" data-act="print">Print</button></div>'; }
+
+  /* ---------- graph ---------- */
+  function niceStep(span) { var raw = span / 8, p = Math.pow(10, Math.floor(Math.log10(raw))), f = raw / p; return (f < 1.5 ? 1 : f < 3.5 ? 2 : f < 7.5 ? 5 : 10) * p; }
+  function fmtTick(v, step) {
+    if (Math.abs(v) < step * 1e-9) return '0';
+    if (Math.abs(v) >= 1e6 || step < 1e-4) return mn(v.toExponential(2).replace(/\.?0+e/, 'e').replace('e+', 'e'));
+    var d = Math.max(0, -Math.floor(Math.log10(step) + 1e-9)); return mn(v.toFixed(Math.min(d, 12)));
+  }
+  function short(v) { if (!isFinite(v)) return ''; var a = Math.abs(v); if (a !== 0 && (a >= 1e6 || a < 1e-4)) return mn(v.toExponential(3).replace(/\.?0+e/, 'e').replace('e+', 'e')); return mn(String(+v.toPrecision(5))); }
+  function sx(x) { return (x - view.x0) / (view.x1 - view.x0) * W; }
+  function sy(y) { return H - (y - view.y0) / (view.y1 - view.y0) * H; }
+  function ix(px) { return view.x0 + px / W * (view.x1 - view.x0); }
+  function iy(py) { return view.y0 + (H - py) / H * (view.y1 - view.y0); }
+  function clampPx(v) { return Math.max(-5000, Math.min(5000, v)); }
+
+  function drawGraph() {
+    var g = res && res.graph, s = [], i;
+    if (!view) view = { x0: -10, x1: 10, y0: -10 * H / W, y1: 10 * H / W };
+    var sxs = niceStep(view.x1 - view.x0), sys = niceStep(view.y1 - view.y0);
+    s.push('<defs><clipPath id="pg-clip"><rect x="0" y="0" width="' + W + '" height="' + H + '"/></clipPath></defs><rect class="gbg" x="0" y="0" width="' + W + '" height="' + H + '"/><g clip-path="url(#pg-clip)">');
+    for (var x = Math.ceil(view.x0 / sxs) * sxs, n = 0; x <= view.x1 && n < 60; x += sxs, n++) s.push('<line class="grid" x1="' + sx(x).toFixed(1) + '" y1="0" x2="' + sx(x).toFixed(1) + '" y2="' + H + '"/>');
+    for (var y = Math.ceil(view.y0 / sys) * sys, m = 0; y <= view.y1 && m < 60; y += sys, m++) s.push('<line class="grid" x1="0" y1="' + sy(y).toFixed(1) + '" x2="' + W + '" y2="' + sy(y).toFixed(1) + '"/>');
+    if (view.x0 <= 0 && view.x1 >= 0) s.push('<line class="axis" x1="' + sx(0).toFixed(1) + '" y1="0" x2="' + sx(0).toFixed(1) + '" y2="' + H + '"/>');
+    if (view.y0 <= 0 && view.y1 >= 0) s.push('<line class="axis" x1="0" y1="' + sy(0).toFixed(1) + '" x2="' + W + '" y2="' + sy(0).toFixed(1) + '"/>');
+    if (g && g.kind === 'parabola') {
+      var ax = sx(g.fn.h); s.push('<line class="sym" x1="' + ax.toFixed(1) + '" y1="0" x2="' + ax.toFixed(1) + '" y2="' + H + '"/>');
+      if (showFocus && isFinite(g.fn.h)) {
+        var p = 1 / (4 * g.fn.a), dy = sy(g.fn.k - p); s.push('<line class="dir" x1="0" y1="' + clampPx(dy).toFixed(1) + '" x2="' + W + '" y2="' + clampPx(dy).toFixed(1) + '"/>');
+      }
+    }
+    if (g && g.fn && g.view && g.view.drawable) {
+      var d = '', N = 480;
+      for (i = 0; i <= N; i++) { var xv = view.x0 + (view.x1 - view.x0) * i / N, yv = g.fn.at(xv); if (!isFinite(yv)) continue; d += (d ? 'L' : 'M') + sx(xv).toFixed(1) + ' ' + clampPx(sy(yv)).toFixed(1); }
+      if (d) s.push('<path class="curve" d="' + d + '"/>');
+    }
+    s.push('</g>');
+    for (x = Math.ceil(view.x0 / sxs) * sxs, n = 0; x <= view.x1 && n < 60; x += sxs, n++) { var tx = sx(x); if (tx > 14 && tx < W - 14) s.push('<text class="tick" x="' + tx.toFixed(1) + '" y="' + (H - 5) + '" text-anchor="middle">' + fmtTick(x, sxs) + '</text>'); }
+    for (y = Math.ceil(view.y0 / sys) * sys, m = 0; y <= view.y1 && m < 60; y += sys, m++) { var ty = sy(y); if (ty > 12 && ty < H - 16) s.push('<text class="tick" x="5" y="' + (ty - 3).toFixed(1) + '">' + fmtTick(y, sys) + '</text>'); }
+    var boxes = [];
+    function label(px, py, text, cls, shape, below) {
+      if (!isFinite(px) || !isFinite(py)) return;
+      if (px < -20 || px > W + 20 || py < -20 || py > H + 20) return;
+      var anc = px > W - 170 ? 'end' : 'start', off = anc === 'end' ? -10 : 10, wd = text.length * 6.6 + 6, ly = below ? py + 22 : py - 9, step = below ? 15 : -15, tries = 0;
+      if (ly < 14) { ly = py + 22; step = 15; } if (ly > H - 6) { ly = py - 9; step = -15; }
+      function hit() { var x0 = anc === 'end' ? px + off - wd : px + off, x1 = x0 + wd; return boxes.some(function (q) { return x0 < q[1] && x1 > q[0] && ly - 12 < q[3] && ly + 3 > q[2]; }); }
+      while (hit() && tries < 8) { ly += step; tries++; }
+      var bx0 = anc === 'end' ? px + off - wd : px + off; boxes.push([bx0, bx0 + wd, ly - 12, ly + 3]);
+      s.push((shape === 'sq' ? '<rect class="pt ' + cls + '" x="' + (px - 4.5).toFixed(1) + '" y="' + (py - 4.5).toFixed(1) + '" width="9" height="9"/>' : shape === 'di' ? '<path class="pt ' + cls + '" d="M' + px.toFixed(1) + ' ' + (py - 7).toFixed(1) + 'l7 7l-7 7l-7 -7z"/>' : '<circle class="pt ' + cls + '" cx="' + px.toFixed(1) + '" cy="' + py.toFixed(1) + '" r="5"/>') + '<text class="plab" x="' + (px + off).toFixed(1) + '" y="' + ly.toFixed(1) + '" text-anchor="' + anc + '">' + esc(text) + '</text>');
+    }
+    if (g && g.kind === 'parabola') {
+      var up = g.opens === 'up';
+      g.xints.forEach(function (z) { label(sx(z.num), sy(0), 'x = ' + short(z.num), 'px', 'c', !up); });
+      label(sx(0), sy(g.fn.at(0)), 'y-int (0, ' + short(g.fn.at(0)) + ')', 'py', 'sq', !up);
+      if (showFocus) label(sx(g.fn.h), sy(g.fn.k + 1 / (4 * g.fn.a)), 'Focus', 'pf', 'c', up);
+      label(sx(g.fn.h), sy(g.fn.k), 'Vertex (' + short(g.fn.h) + ', ' + short(g.fn.k) + ')', 'pv', 'di', up);
+    } else if (g && g.kind === 'line') { label(sx(0), sy(g.fn.c), 'y-int (0, ' + short(g.fn.c) + ')', 'py', 'sq'); label(sx(g.xint.x ? QG.toNum(g.xint.x) : 0), sy(0), 'x = ' + short(QG.toNum(g.xint.x)), 'px', 'c'); }
+    if (trace !== null && g && g.fn) { var yt = g.fn.at(trace), tpx = sx(trace), tpy = sy(yt); if (isFinite(tpy)) s.push('<line class="trl" x1="' + tpx.toFixed(1) + '" y1="0" x2="' + tpx.toFixed(1) + '" y2="' + H + '"/><circle class="trp" cx="' + tpx.toFixed(1) + '" cy="' + clampPx(tpy).toFixed(1) + '" r="5"/>'); }
+    s.push('<rect class="gfr" x="0.5" y="0.5" width="' + (W - 1) + '" height="' + (H - 1) + '"/>');
+    $('pg-svg').innerHTML = s.join('');
+    $('pg-svg').setAttribute('aria-label', g && g.kind === 'parabola' ? 'Graph of ' + mn(g.standard) + '. Vertex ' + g.vertex.text + ', ' + g.opens + 'ward opening, ' + (g.xints.length ? 'x-intercepts ' + g.xints.map(function (z) { return z.exact; }).join(' and ') : 'no x-intercepts') + ', y-intercept ' + g.yint.text + '.' : g && g.kind === 'line' ? 'Graph of a straight line, A = 0.' : 'No graph');
+    var el = $('pg-view'); el.textContent = 'x from ' + short(view.x0) + ' to ' + short(view.x1) + ', y from ' + short(view.y0) + ' to ' + short(view.y1);
+  }
+  function readout() {
+    var g = res && res.graph, el = $('pg-read');
+    if (trace === null || !g || !g.fn) { el.textContent = 'Click or tap the graph to read a point.'; return; }
+    el.textContent = 'x ≈ ' + short(trace) + ',  y ≈ ' + short(g.fn.at(trace)) + '  (approximate: read from the picture. Use "Value at x" below for an exact result.)';
+  }
+  function fit() { var g = res && res.graph; view = g && g.view ? { x0: g.view.x0, x1: g.view.x1, y0: g.view.y0, y1: g.view.y1 } : { x0: -10, x1: 10, y0: -10 * H / W, y1: 10 * H / W }; }
+  function zoom(f, cx, cy) {
+    var px = cx === undefined ? (view.x0 + view.x1) / 2 : cx, py = cy === undefined ? (view.y0 + view.y1) / 2 : cy;
+    var nx0 = px - (px - view.x0) * f, nx1 = px + (view.x1 - px) * f, ny0 = py - (py - view.y0) * f, ny1 = py + (view.y1 - py) * f;
+    if (!isFinite(nx0 + nx1 + ny0 + ny1) || nx1 - nx0 < 1e-12 * Math.max(1, Math.abs(nx0)) || ny1 - ny0 < 1e-12 * Math.max(1, Math.abs(ny0)) || nx1 - nx0 > 1e15 || ny1 - ny0 > 1e15) return;
+    view = { x0: nx0, x1: nx1, y0: ny0, y1: ny1 }; drawGraph();
+  }
+  function pan(fx, fy) { var dx = (view.x1 - view.x0) * fx, dy = (view.y1 - view.y0) * fy; view = { x0: view.x0 + dx, x1: view.x1 + dx, y0: view.y0 + dy, y1: view.y1 + dy }; drawGraph(); }
+  function equalAxes() { var cx = (view.x0 + view.x1) / 2, cy = (view.y0 + view.y1) / 2, half = (view.x1 - view.x0) / 2 * H / W; view = { x0: view.x0, x1: view.x1, y0: cy - half, y1: cy + half }; drawGraph(); }
+  function svgPoint(e) { var r = $('pg-svg').getBoundingClientRect(); return { x: (e.clientX - r.left) / r.width * W, y: (e.clientY - r.top) / r.height * H }; }
+
+  var drag = null;
+  GR.addEventListener('pointerdown', function (e) { if (e.button !== undefined && e.button > 0) return; var p = svgPoint(e); drag = { px: p.x, py: p.y, v: { x0: view.x0, x1: view.x1, y0: view.y0, y1: view.y1 }, moved: false, id: e.pointerId }; try { GR.setPointerCapture(e.pointerId); } catch (er) {} });
+  GR.addEventListener('pointermove', function (e) {
+    var p = svgPoint(e);
+    if (drag && drag.id === e.pointerId) {
+      var dx = p.x - drag.px, dy = p.y - drag.py; if (Math.abs(dx) + Math.abs(dy) > 4) drag.moved = true;
+      if (drag.moved) { var wx = (drag.v.x1 - drag.v.x0) / W, wy = (drag.v.y1 - drag.v.y0) / H; view = { x0: drag.v.x0 - dx * wx, x1: drag.v.x1 - dx * wx, y0: drag.v.y0 + dy * wy, y1: drag.v.y1 + dy * wy }; drawGraph(); GR.classList.add('grab'); }
+    } else if (e.pointerType === 'mouse' && res && res.graph && res.graph.fn) { trace = ix(p.x); drawGraph(); readout(); }
+  });
+  function endDrag(e) { if (!drag || drag.id !== e.pointerId) return; var was = drag; drag = null; GR.classList.remove('grab'); if (!was.moved && res && res.graph && res.graph.fn) { trace = ix(svgPoint(e).x); drawGraph(); readout(); } }
+  GR.addEventListener('pointerup', endDrag); GR.addEventListener('pointercancel', function (e) { if (drag && drag.id === e.pointerId) { drag = null; GR.classList.remove('grab'); } });
+  GR.addEventListener('wheel', function (e) { e.preventDefault(); var p = svgPoint(e); zoom(e.deltaY < 0 ? 0.85 : 1 / 0.85, ix(p.x), iy(p.y)); }, { passive: false });
+  GR.addEventListener('keydown', function (e) {
+    var k = e.key, h = true;
+    if (k === 'ArrowLeft') pan(-0.1, 0); else if (k === 'ArrowRight') pan(0.1, 0); else if (k === 'ArrowUp') pan(0, 0.1); else if (k === 'ArrowDown') pan(0, -0.1);
+    else if (k === '+' || k === '=') zoom(0.8); else if (k === '-' || k === '_') zoom(1.25); else if (k === '0') { fit(); drawGraph(); } else h = false;
+    if (h) e.preventDefault();
+  });
+
+  /* ---------- results ---------- */
+  function render(keepView) {
+    var a = Qd.parseNum(A.value), b = Qd.parseNum(B.value), c = Qd.parseNum(C.value);
+    $('pg-eq').textContent = (a.v && b.v && c.v) ? 'y = ' + mn(Qd.equationText(a.v, b.v, c.v)).replace(/ = 0$/, '') : '';
+    var r = QG.graph({ a: A.value, b: B.value, c: C.value, dp: +DP.value }), out = $('pg-out'), stp = $('pg-steps'), ver = $('pg-verify');
+    if (!r.ok) {
+      var e = r.errors || {}; mark(A, e.a); mark(B, e.b); mark(C, e.c); $('pg-err').textContent = r.empty ? '' : (e.a || e.b || e.c || r.error);
+      res = null; last = null; out.innerHTML = ''; ver.innerHTML = ''; stp.innerHTML = '<p class="note">Enter A, B and C to see the working.</p>'; $('pg-val').innerHTML = ''; if (!keepView) fit(); drawGraph(); readout(); return;
+    }
+    mark(A, ''); mark(B, ''); mark(C, ''); $('pg-err').textContent = '';
+    res = r; var g = r.graph; if (!keepView) { fit(); trace = null; }
+    if (g.kind === 'parabola' && !g.view.drawable) $('pg-err').textContent = 'These values are too large or too small to draw. The exact results below are still correct.';
+    drawGraph(); readout();
+    if (g.kind !== 'parabola') {
+      out.innerHTML = '<div class="res"><div class="big"><div class="qroot">' + esc(g.kind === 'line' ? 'A straight line' : 'No graph') + '</div></div><div class="sub">' + esc(g.kind === 'line' ? 'A = 0, so y = ' + mn(Qd.rs(r.B)) + 'x + ' + mn(Qd.rs(r.C)) + ' is a line, not a parabola. It has no vertex or axis of symmetry. Y-intercept ' + mn(g.yint.text) + ', x-intercept ' + mn(g.xint.text) + '.' : r.label + '. A = B = 0 gives ' + (r.kind === 'none' ? 'y = ' + mn(Qd.rs(r.C)) + ', a horizontal line that never meets the x-axis.' : 'y = 0, which is the x-axis itself.')) + '</div></div>';
+      stp.innerHTML = g.kind === 'line' ? '<ol class="steps"><li>' + esc(mn(r.graphSteps[0])) + '</li></ol>' : ''; ver.innerHTML = ''; $('pg-val').innerHTML = ''; last = null; return;
+    }
+    var rows = [];
+    rows.push(row('Vertex (h, k)', g.vertex.text, g.vertex.exact ? '' : '≈ ' + g.vertex.dtext));
+    rows.push(row('Vertex x, −B/(2A)', g.vertex.xt, g.vertex.xt !== g.vertex.xd ? (g.vertex.exact ? '= ' : '≈ ') + mn(g.vertex.xd) : ''));
+    rows.push(row('Vertex y, −Δ/(4A)', g.vertex.yt, g.vertex.yt !== g.vertex.yd ? (g.vertex.exact ? '= ' : '≈ ') + mn(g.vertex.yd) : ''));
+    rows.push(row('Axis of symmetry', g.axis));
+    rows.push(row('Opens', g.opens === 'up' ? 'Upward (A > 0)' : 'Downward (A < 0)'));
+    rows.push(row(g.extremum === 'minimum' ? 'Minimum value' : 'Maximum value', Qd.mn(Qd.rs(g.extremumValue)), 'at x = ' + g.vertex.xt));
+    rows.push(row('Range', g.range));
+    rows.push(row('Increasing / decreasing', g.trend));
+    rows.push(row('Y-intercept', g.yint.text, g.mirrorSame ? 'on the axis, the vertex' : 'mirror point ' + g.mirror.text));
+    if (g.xints.length) g.xints.forEach(function (z, i) { rows.push(row('X-intercept' + (g.xints.length > 1 ? ' ' + (i + 1) : ''), z.text, z.exact !== z.dec ? '≈ ' + z.dec : '')); });
+    else rows.push(row('X-intercepts', 'none', 'complex roots ' + g.complexRoots.join(', ')));
+    rows.push(row('Discriminant Δ', mn(g.discriminant), r.D.n > 0n ? 'Δ > 0: crosses the x-axis twice' : r.D.n === 0n ? 'Δ = 0: touches the x-axis' : 'Δ < 0: does not meet the x-axis'));
+    rows.push(row('Type', r.label));
+    rows.push(row('Vertex form', g.vertexForm));
+    rows.push(row('Focus', g.focus.text, g.focus.exact ? '' : '≈ ' + g.focus.dtext));
+    rows.push(row('Directrix', g.directrix));
+    rows.push(row('Latus rectum (width at the focus)', g.latusText));
+    var text = QG.summary(r); last = { text: text };
+    var big = '<div class="qroot">Vertex ' + esc(g.vertex.text) + '</div><div class="qroot">Opens ' + esc(g.opens === 'up' ? 'upward' : 'downward') + '</div>';
+    out.innerHTML = '<div class="res"><div class="big">' + big + '</div><div class="sub">' + esc(g.standard.replace(/-/g, '\u2212') + '   |   ' + g.range + '   |   axis ' + g.axis) + '</div></div>' + table(['Property', 'Value', ''], rows).replace(/<td class="r">/g, '<td class="r">') + actions(text);
+    stp.innerHTML = '<ol class="steps">' + r.graphSteps.map(function (t) { return '<li>' + esc(mn(t)) + '</li>'; }).join('') + '</ol>';
+    ver.innerHTML = '<p>' + (g.checkOk ? flag('Verified', false) + ' All ' + g.checks.length + ' checks hold in exact arithmetic. The graph is drawn from the same numbers; drawing uses ordinary floating point and changes none of the printed values.' : flag('Check failed', true) + ' A check did not hold. Please report this equation.') + '</p><ul class="vl">' + g.checks.map(function (c) { return '<li>' + (c.ok ? '✓' : '✗') + ' ' + esc(mn(c.name)) + ': <b>' + esc(mn(c.value)) + '</b></li>'; }).join('') + '</ul>';
+    $('pg-val').innerHTML = '<h3>Table of values near the vertex</h3>' + table(['x', 'y = f(x)', 'decimal'], g.values.map(function (v) { return '<tr' + (v.isVertex ? ' class="vx"' : '') + '><td>' + esc(mn(v.x)) + '</td><td class="r">' + esc(mn(v.y)) + '</td><td>' + (v.y !== v.yd ? (v.exact ? '= ' : '≈ ') + esc(mn(v.yd)) : '') + '</td></tr>'; }));
+    evalX();
+  }
+  function evalX() {
+    var el = $('pg-xo'), X = $('pg-x'); if (!res) { el.textContent = ''; return; }
+    var v = QG.evalAt({ a: A.value, b: B.value, c: C.value, x: X.value, dp: +DP.value });
+    mark(X, v.error && !v.empty && v.error !== 'Enter A, B and C first.' ? v.error : '');
+    if (!v.ok) { el.textContent = v.empty ? '' : v.error; return; }
+    el.innerHTML = 'f(' + esc(mn(v.xt)) + ') = <b>' + esc(mn(v.yt)) + '</b>' + (v.yt !== v.yd ? ' ' + (v.exact ? '= ' : '≈ ') + esc(mn(v.yd)) : '');
+  }
+
+  /* ---------- sliders ---------- */
+  var SL = { a: $('pg-sa'), b: $('pg-sb'), c: $('pg-sc') }, IN = { a: A, b: B, c: C };
+  function syncSliders() { ['a', 'b', 'c'].forEach(function (k) { var p = Qd.parseNum(IN[k].value); if (p.v) { var v = Number(p.v.n) / Number(p.v.d); if (isFinite(v)) SL[k].value = String(Math.max(-10, Math.min(10, v))); } }); }
+  ['a', 'b', 'c'].forEach(function (k) { SL[k].addEventListener('input', function () { IN[k].value = String(+SL[k].value); render(true); }); });
+
+  /* ---------- events ---------- */
+  $('pg').addEventListener('click', function (e) {
+    var b = e.target.closest('button'); if (!b) return;
+    if (b.dataset.copy) { copy(b.dataset.copy); return; }
+    if (b.dataset.z) { var z = b.dataset.z; if (z === 'in') zoom(0.8); else if (z === 'out') zoom(1.25); else if (z === 'fit') { fit(); drawGraph(); } else if (z === 'eq') equalAxes(); else if (z === 'l') pan(-0.15, 0); else if (z === 'r') pan(0.15, 0); else if (z === 'u') pan(0, 0.15); else if (z === 'd') pan(0, -0.15); return; }
+    if (b.dataset.ex) { var v = JSON.parse(b.dataset.ex); A.value = v.a; B.value = v.b; C.value = v.c; syncSliders(); render(false); return; }
+    if (b.dataset.act === 'print') { window.print(); return; }
+    if (b.dataset.act === 'save' && last) { var bl = new Blob([last.text + '\n\nCalculated with Elecmetric Quadratic Formula Calculator, Mode 03\n'], { type: 'text/plain' }); dl(bl, 'parabola-vertex.txt'); return; }
+    if (b.dataset.act === 'png') { var svg = $('pg-svg').cloneNode(true); svg.setAttribute('xmlns', NS); svg.setAttribute('viewBox', '0 0 ' + W + ' ' + H); svg.setAttribute('width', W); svg.setAttribute('height', H); var st = document.createElementNS(NS, 'style'); st.textContent = '.gbg{fill:#fff}.grid{stroke:#d3dfef;stroke-width:1}.axis{stroke:#4b5f86;stroke-width:1.6}.sym{stroke:#b34a00;stroke-width:1.2;stroke-dasharray:6 5}.dir{stroke:#0062de;stroke-width:1.2;stroke-dasharray:3 4}.curve{fill:none;stroke:#043b79;stroke-width:2.4}.pt{fill:#fff;stroke:#043b79;stroke-width:2}.pv{fill:#ff7a00;stroke:#043b79}.plab,.tick{font:12px sans-serif;fill:#0a2347}.tick{fill:#4b5f86}.gfr{fill:none;stroke:#4b5f86}.trl{stroke:#888;stroke-dasharray:3 3}.trp{fill:#ff7a00}'; svg.insertBefore(st, svg.firstChild); dl(new Blob([new XMLSerializer().serializeToString(svg)], { type: 'image/svg+xml' }), 'parabola-graph.svg'); return; }
+    if (b.dataset.act === 'reset') { [A, B, C].forEach(function (el) { el.value = el.defaultValue; }); DP.value = '8'; $('pg-x').value = ''; showFocus = false; $('pg-focus').checked = false; syncSliders(); render(false); A.focus(); }
+  });
+  function dl(bl, name) { var u = URL.createObjectURL(bl), a = document.createElement('a'); a.href = u; a.download = name; document.body.appendChild(a); a.click(); document.body.removeChild(a); setTimeout(function () { URL.revokeObjectURL(u); }, 500); }
+  [A, B, C].forEach(function (el) { el.addEventListener('input', function () { syncSliders(); render(false); }); });
+  $('pg-x').addEventListener('input', evalX);
+  DP.addEventListener('change', function () { render(true); });
+  $('pg-focus').addEventListener('change', function () { showFocus = this.checked; drawGraph(); });
+  syncSliders(); render(false);
+})();
+</script><script id="em-ux1-js">(function(IDS){var d=Object.getOwnPropertyDescriptor(HTMLSelectElement.prototype,"value"),di=Object.getOwnPropertyDescriptor(HTMLSelectElement.prototype,"selectedIndex"),first=null;
+IDS.forEach(function(id){var sel=document.getElementById(id);if(!sel||!sel.options.length)return;var seg=document.createElement("div");seg.className="mseg";seg.setAttribute("role","radiogroup");var lab=document.querySelector('label[for="'+id+'"]');if(lab){var sp=document.createElement("span");sp.className=lab.className;sp.id=id+"-lbl";sp.textContent=lab.textContent;lab.parentNode.replaceChild(sp,lab);seg.setAttribute("aria-labelledby",sp.id);sp.parentNode.insertBefore(seg,sel)}else sel.parentNode.insertBefore(seg,sel);
+var opts=[].slice.call(sel.options);opts.forEach(function(o){var b=document.createElement("button");b.type="button";b.setAttribute("role","radio");b.dataset.v=o.value;b.textContent=o.textContent;b.onclick=function(){if(d.get.call(sel)===o.value)return;d.set.call(sel,o.value);mark();sel.dispatchEvent(new Event("input",{bubbles:true}));sel.dispatchEvent(new Event("change",{bubbles:true}))};seg.appendChild(b)});
+seg.addEventListener("keydown",function(e){var k=e.key,i=sel.selectedIndex,n=k==="ArrowRight"||k==="ArrowDown"?i+1:k==="ArrowLeft"||k==="ArrowUp"?i-1:-1;if(n<0)return;e.preventDefault();n=(n+opts.length)%opts.length;seg.children[n].click();seg.children[n].focus()});
+sel.hidden=true;sel.tabIndex=-1;sel.setAttribute("aria-hidden","true");
+function mark(){var v=d.get.call(sel);[].forEach.call(seg.children,function(b){var on=b.dataset.v===v;b.setAttribute("aria-checked",on?"true":"false");b.tabIndex=on?0:-1});if(sel===first)tabs()}
+Object.defineProperty(sel,"value",{get:function(){return d.get.call(this)},set:function(v){d.set.call(this,v);mark()},configurable:true});Object.defineProperty(sel,"selectedIndex",{get:function(){return di.get.call(this)},set:function(v){di.set.call(this,v);mark()},configurable:true});sel.addEventListener("change",mark);if(!first)first=sel;mark()});
+var wrap=document.querySelector(".ns-try"),chips=wrap?[].slice.call(wrap.querySelectorAll(".chipb[data-ex]")):[],tb=null,groups=[];
+function tabs(){if(tb)sync()}
+if(first&&chips.length>=8){var key=null,vals=[].map.call(first.options,function(o){return o.value}),parsed=chips.map(function(c){try{return JSON.parse(c.dataset.ex)}catch(e){return {}}});["dir","op","mode","tool"].some(function(k){if(parsed.some(function(j){return vals.indexOf(j[k])>=0})){key=k;return true}});
+if(key){var def=vals[0];chips.forEach(function(c,i){var g=parsed[i][key];c.dataset.g=vals.indexOf(g)>=0?g:def});groups=vals.filter(function(v){return chips.some(function(c){return c.dataset.g===v})});
+if(groups.length>1){var h=document.createElement("div");h.className="try-h";var l=wrap.querySelector(".ns-l");if(l)h.appendChild(l);tb=document.createElement("div");tb.className="try-tabs";tb.setAttribute("role","tablist");groups.forEach(function(v){var b=document.createElement("button");b.type="button";b.setAttribute("role","tab");b.dataset.g=v;var o=[].filter.call(first.options,function(o){return o.value===v})[0];b.textContent=o?o.textContent:v;b.onclick=function(){show(v)};tb.appendChild(b)});h.appendChild(tb);wrap.insertBefore(h,wrap.firstChild);sync()}}}
+function show(g){[].forEach.call(tb.children,function(b){b.setAttribute("aria-selected",b.dataset.g===g?"true":"false")});chips.forEach(function(c){c.hidden=c.dataset.g!==g})}
+function sync(){var v=d.get.call(first);show(groups.indexOf(v)>=0?v:groups[0])}
+})(["nu-dir"]);</script><script>try{if("serviceWorker"in navigator&&/^https?:/.test(location.protocol))navigator.serviceWorker.register("../../sw.js")}catch(e){}</script></body></html>

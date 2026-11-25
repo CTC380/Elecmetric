@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><style data-crumbs>.crumbs{font-size:13px;color:var(--muted);margin:0 0 10px}.crumbs ol{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:2px 0}.crumbs li+li::before{content:"\203A";margin:0 7px;opacity:.7}.crumbs a{color:inherit}.crumbs [aria-current]{color:var(--ink)}</style>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+<title>Indian BMI Calculator | ESI, WHO Asia-Pacific and International Reference | Elecmetric</title>
+<meta name="description" content="Calculate BMI and compare it against the Indian (ESI), WHO Asia-Pacific, WHO 2004 Asian and international references. Add waist circumference as an extra indicator and see your healthy weight range.">
+<meta property="og:title" content="Indian BMI Calculator | ESI, WHO Asia-Pacific and International Reference"><meta property="og:description" content="Calculate BMI and compare it against the Indian (ESI), WHO Asia-Pacific, WHO 2004 Asian and international references. Add waist circumference as an extra indicator and see your healthy weight range."><meta property="og:type" content="website"><meta property="og:site_name" content="Elecmetric"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Indian BMI Calculator | ESI, WHO Asia-Pacific and International Reference"><meta name="twitter:description" content="Calculate BMI and compare it against the Indian (ESI), WHO Asia-Pacific, WHO 2004 Asian and international references. Add waist circumference as an extra indicator and see your healthy weight range.">
+<meta name="theme-color" content="#043B79"><link rel="icon" href="../../icon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="../../apple-touch-icon.png"><link rel="manifest" href="../../manifest.webmanifest"><style>.fb textarea{width:100%;font:15px/1.5 var(--body);padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--field);color:var(--ink);resize:vertical}.fb textarea:focus{outline:2px solid var(--gold);outline-offset:1px}:root{--bg:#F1F6FC;--surface:#fff;--ink:#0A2347;--muted:#4B5F86;--line:#D3DFEF;--navy:#043B79;--on-navy:#FFFFFF;--gold:#B34A00;--gold-fill:#FFEFDC;--field:#F4F8FE;--err:#B3261E;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;--display:"Arial Narrow","Roboto Condensed",system-ui,sans-serif;--body:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--navy-2:#0A5BBB;--cyan:#0062DE;--num:#043B79;--orange:#FF7A00;--gold-grad:linear-gradient(135deg,#FFA43D 0%,#FF7A00 52%,#E85F00 100%);--hero:radial-gradient(1000px 360px at 90% -35%,rgba(0,98,222,.55),transparent 62%),radial-gradient(640px 240px at 0% 110%,rgba(255,122,0,.20),transparent 60%),linear-gradient(135deg,#032A58,#043B79 58%,#0A55A8);--r:14px;--sh-0:0 1px 2px rgba(4,35,80,.06);--sh-1:0 1px 2px rgba(4,35,80,.05),0 6px 18px rgba(4,35,80,.07);--sh-2:0 2px 4px rgba(4,35,80,.05),0 22px 44px -14px rgba(4,35,80,.24);--ring:0 0 0 3px rgba(0,98,222,.26);color-scheme:light dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}@media(prefers-color-scheme:dark){:root{--bg:#04122B;--surface:#0A2046;--ink:#EAF2FF;--muted:#A0B5DA;--line:#183868;--navy:#031B3F;--on-navy:#EAF2FF;--gold:#FF9A3D;--gold-fill:#3D2410;--field:#071B3C;--err:#FF8A80;--navy-2:#0B4A98;--cyan:#4DA3FF;--orange:#FF8A1F;--num:#FFB066;--sh-0:0 1px 2px rgba(0,0,0,.4);--sh-1:0 1px 2px rgba(0,0,0,.35),0 8px 22px rgba(0,0,0,.35);--sh-2:0 2px 4px rgba(0,0,0,.4),0 24px 48px -14px rgba(0,0,0,.7);--ring:0 0 0 3px rgba(77,163,255,.34)}}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 var(--body)}a{color:inherit}header{background:var(--navy);color:var(--on-navy);border-bottom:3px solid var(--gold)}.w{max-width:860px;margin:0 auto;padding:0 max(16px,env(safe-area-inset-left,0px))}header .w{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-block:12px;flex-wrap:wrap}header a{text-decoration:none;font:600 20px var(--display);letter-spacing:.04em;text-transform:uppercase}header nav a{font:500 13px var(--body);text-transform:none;letter-spacing:0;margin-left:14px;opacity:.9}main{padding-block:24px 56px}h1{font:600 32px/1.1 var(--display);margin:0 0 8px;text-wrap:balance}h2{font:600 20px var(--display);letter-spacing:.02em;margin:28px 0 8px;text-transform:uppercase}.lede{color:var(--muted);margin:0 0 16px;max-width:62ch}.card{background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:16px 18px;margin:12px 0}.ans{border-left:4px solid var(--gold);display:flex;flex-wrap:wrap;gap:6px 24px;align-items:baseline;justify-content:space-between}.big{font:600 28px var(--display)}.jump{margin:8px 0 4px}details.more{border:1px solid var(--line);border-radius:12px;background:var(--surface);margin:14px 0;padding:0 16px;box-shadow:var(--sh-0)}details.more>summary{cursor:pointer;list-style:none}details.more>summary::-webkit-details-marker{display:none}details.more>summary h2{margin:14px 0}details.more>summary h2::after{content:"+";margin-left:auto;color:var(--gold)}details.more[open]>summary h2::after{content:"\2212"}details.more[open]{padding-bottom:12px}@media print{.jump{display:none}}.btn{display:inline-block;background:var(--navy);color:var(--on-navy);padding:9px 16px;border-radius:4px;text-decoration:none;font-weight:600;border:1px solid var(--gold)}.chip{display:inline-block;margin:3px 6px 3px 0;padding:5px 12px;border:1px solid var(--line);border-radius:999px;background:var(--surface);text-decoration:none;font-size:14px}.chip:hover{border-color:var(--gold)}main li>a:only-child{display:inline-block;padding:3px 0}code,pre,.f,td.n{font-family:var(--mono)}.f{background:var(--field);border:1px solid var(--line);padding:10px 12px;border-radius:4px;overflow-x:auto;white-space:pre-wrap}ol.steps{padding-left:22px;font-family:var(--mono);font-size:13px}ol.steps li{margin:4px 0}.tw{overflow-x:auto}table{border-collapse:collapse;width:100%;background:var(--surface)}th,td{border:1px solid var(--line);padding:6px 10px;text-align:left}td.n{text-align:right}tr.me td{background:var(--gold-fill)}th{background:var(--field);font-weight:600}.note{color:var(--muted);font-size:13px}ul{padding-left:20px}footer{border-top:1px solid var(--line);color:var(--muted);font-size:13px;padding-block:16px}h3{font:600 16px var(--body);margin:18px 0 4px}h3+p{margin:0;max-width:68ch}.tres .tact{flex:0 0 100%;display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}@media print{.tact{display:none}}.tres .phasor{flex:0 0 100%;margin-top:12px}.phasor svg{display:block;width:100%;max-width:360px;height:auto;font:11px var(--body)}.arow{grid-column:1/-1;border:1px solid var(--line);border-radius:10px;padding:10px 12px 12px;margin:0}.arow[hidden]{display:none}.arow legend{font-weight:700;font-size:13px;padding:0 6px}.arow .tgrid{margin-top:2px}.arow-bar{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:8px;align-items:center}.arow-bar .note{margin:0}.arow .rm{margin-top:10px}.mgrid{margin-top:10px}.mgrid .mbody[hidden]{display:none}.mgrid .tgrid{margin-top:8px}.mgrid .fillm{margin-top:10px}.tres .rchart{flex:0 0 100%;margin-top:12px}.rchart svg{display:block;width:100%;height:auto;font:12px var(--body)}.rchart h3{margin:0 0 6px;font-size:14px}.tres .carry{flex:0 0 100%;margin-top:10px}.carry .chip{display:inline-block;margin:4px 6px 0 0}.arow .rm[hidden],#add-row[hidden]{display:none}@media print{.arow-bar,.arow .rm{display:none}}.tgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px 16px}.tgrid label{display:block;font-weight:600;font-size:13px;margin-bottom:4px}.trow{display:flex;gap:6px}.trow input,.trow select,.tgrid>div>select{font:16px var(--body);color:var(--ink);background:var(--field);border:1px solid var(--line);border-radius:4px;padding:8px;min-height:40px}.trow input{flex:1;min-width:0}.tgrid>div>select{width:100%}.hint{color:var(--muted);font-size:12px;margin-top:3px}.err{color:var(--err)}.tres{display:flex;flex-wrap:wrap;gap:6px 28px;align-items:baseline}.tres .big small{display:block;font:500 13px var(--body);color:var(--muted)}::selection{background:color-mix(in srgb,var(--gold) 30%,transparent)}body{background-image:radial-gradient(900px 520px at 100% -8%,color-mix(in srgb,var(--cyan) 10%,transparent),transparent 62%),radial-gradient(700px 420px at -5% 0%,color-mix(in srgb,var(--gold) 8%,transparent),transparent 60%);background-attachment:fixed;-webkit-font-smoothing:antialiased}header{position:relative;overflow:hidden;background:var(--hero);border-bottom:0;box-shadow:0 10px 30px -14px rgba(5,14,34,.6)}header::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);background-size:34px 34px;-webkit-mask-image:linear-gradient(100deg,#000,transparent 70%);mask-image:linear-gradient(100deg,#000,transparent 70%);pointer-events:none}header::after{content:"";position:absolute;left:0;right:0;bottom:0;height:18px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44 14'%3E%3Cpath d='M0 12.5H8L14 2l7 10.5 5-6 4 6H44' fill='none' stroke='%23FF7A00' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat right 36px bottom 3px/44px 14px,linear-gradient(90deg,#FF7A00,#FFA43D 55%,#FF7A00) no-repeat bottom/100% 4px;pointer-events:none}header .w{position:relative;z-index:1;padding-block:8px 10px}header .w>a.brand{display:block;line-height:0;letter-spacing:0;text-transform:none;background:#fff;border-radius:10px;padding:4px 10px;box-shadow:0 2px 12px rgba(2,16,42,.4),0 0 0 1px rgba(255,255,255,.5)}header .w>a.brand img{display:block;height:34px;width:auto}@media(max-width:600px){header .w>a.brand img{height:30px}}header a:focus-visible{outline-color:#FFB066}header nav a{color:#DCE5F5;opacity:1;padding:6px 12px;border-radius:999px;margin-left:6px;transition:background .15s,color .15s}header nav a:hover{background:rgba(255,255,255,.12);color:#FFB066}main.w{padding-top:36px;padding-bottom:64px}h1{font-size:36px;letter-spacing:.005em}h1::after{content:"";display:block;width:56px;height:3px;border-radius:3px;background:var(--gold-grad);margin-top:12px}h2{display:flex;align-items:center;gap:10px}h2::before{content:"";width:4px;height:.95em;border-radius:2px;background:var(--gold-grad);flex:none}h3{color:var(--gold)}.card{border-radius:14px;box-shadow:var(--sh-1)}.ans{position:relative;overflow:hidden;border-left:1px solid var(--line);padding-left:24px;background:linear-gradient(135deg,color-mix(in srgb,var(--gold) 12%,var(--surface)),var(--surface) 65%);border-color:color-mix(in srgb,var(--gold) 40%,var(--line));box-shadow:var(--sh-2)}.ans::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--gold-grad)}.big{color:var(--num);font-weight:700}.btn{border-radius:10px;border:0;background:var(--gold-grad);color:#0A2347;font-weight:700;box-shadow:var(--sh-1);transition:transform .15s,box-shadow .15s,filter .15s}.btn:hover{transform:translateY(-1px);box-shadow:var(--sh-2);filter:brightness(1.06)}.chip{box-shadow:var(--sh-0);transition:border-color .15s,background .15s,transform .15s,box-shadow .15s}.chip:hover{transform:translateY(-1px);box-shadow:var(--sh-1);border-color:var(--orange);background:color-mix(in srgb,var(--orange) 8%,var(--surface))}.f{border-radius:12px;border-left:3px solid var(--cyan)}.tw{border:1px solid var(--line);border-radius:12px;box-shadow:var(--sh-0)}.tw table{border:0}table{border-collapse:separate;border-spacing:0}th,td{border:0;border-bottom:1px solid var(--line)}tr:last-child td{border-bottom:0}th{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);background:var(--field)}tbody tr:hover td{background:color-mix(in srgb,var(--cyan) 7%,transparent)}tr.me td{background:var(--gold-fill)}.trow input,.trow select,.tgrid>div>select{border-radius:10px;transition:border-color .15s,box-shadow .15s}.trow select{background-color:color-mix(in srgb,var(--navy) 5%,var(--field))}.trow input:focus,.trow select:focus,.tgrid>div>select:focus{outline:0;border-color:var(--cyan);box-shadow:var(--ring)}.tgrid label{color:var(--ink)}a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--cyan);outline-offset:2px}footer{padding-block:20px}footer.mf{margin-top:24px;padding:0;border-top:0;background:var(--hero);color:#DCE5F5;font-size:13px;position:relative}footer.mf::before{content:"";display:block;height:4px;background:linear-gradient(90deg,#FF7A00,#FFA43D 55%,#FF7A00)}.mf-w{max-width:1100px;margin:0 auto;padding:36px max(16px,env(safe-area-inset-left,0px)) calc(24px + env(safe-area-inset-bottom,0px))}.mf-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:28px 24px}.mf-h{display:block;margin:0 0 12px;padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,.18);font:600 14px var(--display);letter-spacing:.06em;text-transform:uppercase;color:#FFB066}.mf-col ul{list-style:none;margin:0;padding:0}.mf-col li{margin:0}.mf-col a{display:inline-block;padding:4px 0;color:#DCE5F5;text-decoration:none}.mf-h a{padding:0;color:inherit}.mf-col a:hover,.mf-legal a:hover{color:#FFB066;text-decoration:underline}.mf a:focus-visible{outline:2px solid #FFB066;outline-offset:2px;border-radius:2px}.mf-legal{margin-top:28px;padding-top:18px;border-top:1px solid rgba(255,255,255,.18);color:#A9BADB;max-width:80ch}.mf-legal a{color:#DCE5F5}@media(max-width:980px){.mf-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(max-width:600px){.mf-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.mf-col a{padding:7px 0}}@media print{footer.mf{background:none;color:inherit}footer.mf::before,.mf-grid{display:none}.mf-legal{border:0;color:inherit}}@media(prefers-reduced-motion:reduce){.btn,.chip{transition:none;transform:none!important}}@media print{header{background:none;box-shadow:none}header::before,header::after,.ans::before,h1::after,h2::before{display:none}header .w>a.brand{box-shadow:none;padding:0}body{background-image:none}.card,.ans,.tw{box-shadow:none}.ans{padding-left:18px}}.totop{position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:60;min-height:44px;padding:0 18px;border:0;border-radius:999px;background:linear-gradient(135deg,#FFA43D,#FF7A00 52%,#E85F00);color:#0A2347;font:700 14px system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;box-shadow:0 2px 4px rgba(4,35,80,.2),0 14px 30px -8px rgba(4,35,80,.45);cursor:pointer;opacity:0;transform:translateY(12px);pointer-events:none;transition:opacity .2s,transform .2s,bottom .2s}.totop.on{opacity:1;transform:none;pointer-events:auto}.totop:hover{filter:brightness(1.06)}.totop:focus-visible{outline:2px solid #fff;outline-offset:2px;box-shadow:0 0 0 4px #0062DE}@media(prefers-reduced-motion:reduce){.totop{transition:none}}@media print{.totop{display:none}}.vstat{padding:12px 16px;border-left:4px solid var(--muted,#6b7a90)}.vstat.v-verified{border-left-color:#1f9d57}.vstat.v-reference{border-left-color:#2a7fd4}.vstat.v-indicative{border-left-color:#c98a10}[hidden]{display:none!important}header{position:sticky;top:0;z-index:30}header .w{max-width:1120px;flex-wrap:nowrap;gap:16px;padding-block:8px}header .brand{flex:0 0 auto}header::after{height:3px;background:linear-gradient(90deg,#FF7A00,#FFA43D 55%,#FFC37A)}header nav{display:flex;gap:2px;overflow-x:auto;white-space:nowrap;scrollbar-width:none;min-width:0}header nav::-webkit-scrollbar{display:none}header nav a{margin-left:0;padding:8px 11px;border-radius:8px;opacity:.92}header nav a:hover,header nav a:focus-visible{background:rgba(255,255,255,.14);opacity:1;outline:none}main.calc{max-width:1120px;padding-top:18px}.calc h1{font-size:28px;margin-bottom:4px}.calc .lede{margin:0 0 10px;max-width:70ch}.calc-vb{display:inline-flex;align-items:center;gap:7px;margin:0 0 14px;padding:4px 11px;border:1px solid var(--line);border-radius:999px;background:var(--surface);font:600 12.5px var(--body);color:var(--ink);text-decoration:none}.calc-vb::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--gold)}.calc-vb:hover,.calc-vb:focus-visible{border-color:var(--gold);outline:none}.calc #try{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(290px,1fr);gap:0 20px;align-items:start}.calc #try>h2{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;margin:0}.calc #try>form{grid-column:1;margin:0}.calc #try>#try-out{grid-column:2;grid-row:1;position:sticky;top:64px;margin:0;flex-direction:column;align-items:stretch;gap:12px}.calc .tgrid{grid-template-columns:repeat(auto-fill,minmax(210px,1fr));align-items:start}.hd{margin-top:4px}.hd summary{cursor:pointer;font-size:12px;color:var(--muted);list-style:none}.hd summary::-webkit-details-marker{display:none}.hd summary::before{content:"\24D8  "}.hd[open]{font-size:12px;line-height:1.45}.hd[open] summary{margin-bottom:3px}.calc-limit{margin:14px 0 0;padding:10px 14px;border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:8px;background:var(--surface);font-size:14px}.calc-limit h2{font:700 13px var(--body);margin:0 0 2px;letter-spacing:0;text-transform:none}.calc-limit h2::before{display:none}.calc-limit p{margin:0}.calc-act{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;margin:12px 0 4px}.calc-act .btn{margin:0}.calc-act .note{margin:0;flex:1 1 340px;font-size:12px}.calc .cref{max-width:860px;margin-top:6px}.calc .jump{position:sticky;top:52px;z-index:10;display:flex;gap:6px;overflow-x:auto;white-space:nowrap;scrollbar-width:none;background:var(--bg);padding:8px 0;margin:10px 0 4px;border-bottom:1px solid var(--line)}.calc .jump::-webkit-scrollbar{display:none}.calc .jump .chip{flex:0 0 auto;margin:0}@media (max-width:980px){.calc #try{grid-template-columns:minmax(0,1fr)}.calc #try>#try-out{grid-column:1;grid-row:auto;position:static;margin-top:12px}}#mini-res{position:fixed;left:0;right:0;bottom:0;z-index:40;display:flex;flex-wrap:wrap;gap:2px 18px;padding:8px 16px calc(8px + env(safe-area-inset-bottom,0px));background:var(--surface);color:var(--ink);border-top:3px solid var(--gold);box-shadow:0 -8px 20px -10px rgba(5,20,50,.5);text-decoration:none}#mini-res span{display:block}#mini-res b{display:block;font:600 19px/1.2 var(--display)}#mini-res small{display:block;font-size:11px;color:var(--muted)}@media (min-width:981px){#mini-res{display:none!important}}@media (max-width:640px){main.calc{padding-top:12px}.calc h1{font-size:24px}.calc .jump{top:0}header{position:static}header .w{flex-wrap:wrap;gap:4px 8px;padding-block:8px 4px}header nav{flex:1 1 100%;-webkit-mask-image:linear-gradient(90deg,#000 90%,transparent);mask-image:linear-gradient(90deg,#000 90%,transparent)}}</style><style>:root{--ok:#0B6B3A;--b0:#8FB8F2;--b1:#7CCB9A;--b2:#F2C46B;--b3:#F0A060;--b4:#E57A5C;--b5:#C75470}
+@media(prefers-color-scheme:dark){:root{--ok:#6FD39A;--b0:#3F6FB5;--b1:#2F8F5B;--b2:#B8892B;--b3:#B8692F;--b4:#B04A33;--b5:#8F3350}}
+.kicker{font:600 12px var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--gold);margin:0 0 6px}
+form .row{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+label,.lab{display:block;font:600 13px var(--body);margin-bottom:5px}
+.pair{display:flex;gap:8px}
+.pair>*{min-width:0}
+input,select{width:100%;font:15px var(--body);padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--field);color:var(--ink)}
+input:focus,select:focus,button:focus-visible{outline:none;box-shadow:var(--ring);border-color:var(--cyan)}
+.unit{flex:0 0 118px}
+.hide{display:none!important}
+fieldset{border:0;padding:0;margin:14px 0 0}
+legend{font:600 13px var(--body);margin-bottom:6px;padding:0}
+.refs{display:grid;gap:8px}
+.refs label{display:flex;gap:10px;align-items:flex-start;font:400 14px var(--body);margin:0;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--field);cursor:pointer}
+.refs input{width:auto;margin-top:3px}
+.refs small{display:block;color:var(--muted)}
+button{font:600 15px var(--body);padding:11px 22px;border-radius:10px;border:0;background:var(--navy);color:var(--on-navy);cursor:pointer;margin-top:16px}
+button.sec{background:transparent;color:var(--ink);border:1px solid var(--line);margin-left:8px}
+.errs{margin:14px 0 0;padding:10px 14px;border-radius:10px;border:1px solid var(--err);color:var(--err);background:transparent}
+.errs ul{margin:0;padding-left:18px}
+.notice{margin:14px 0 0;padding:10px 14px;border-radius:10px;background:var(--gold-fill);color:var(--ink);border:1px solid var(--line)}
+.big{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:4px}
+.tile{border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:var(--field)}
+.tile .k{font:600 12px var(--body);letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+.tile .v{font:600 30px/1.15 var(--display);color:var(--num)}
+.tile .s{font-size:13px;color:var(--muted)}
+tr.cur td{background:var(--gold-fill);font-weight:600}
+.scroll{overflow-x:auto}
+.steps{font-family:var(--mono);font-size:13px;margin:0;padding-left:22px}
+.steps li{margin:4px 0}
+.chart{width:100%;height:auto;display:block}
+.chart text{fill:var(--ink);font:600 12px var(--body)}
+.muted{color:var(--muted)}
+ul.lim{padding-left:20px}
+.sel{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px}
+.tag{display:inline-block;font:600 11px var(--body);letter-spacing:.05em;text-transform:uppercase;padding:2px 8px;border-radius:99px;border:1px solid var(--line);color:var(--muted)}
+tr.selrow td{background:var(--gold-fill);font-weight:600}</style>
+<style>.fb button,.fb .btn,.totop{margin-top:0}.fb .btn{background:var(--gold-grad);color:#0A2347;border:0;border-radius:10px;font-weight:700;padding:9px 16px}.jump .chip[aria-current=page]{background:var(--gold-fill);border-color:var(--gold);font-weight:700}main.w{padding-top:36px;padding-bottom:64px}.mf-legal a,.mf-col a{font:inherit}.mf a{color:#DCE5F5}</style><style>.fmodes{display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px;margin:0 0 12px}.fmodes .ns-l{font:600 13px var(--body);margin:0 4px 0 0}.fmodes .chip.on{background:var(--gold-fill);border-color:var(--gold);font-weight:700}</style></head>
+<body>
+<header><div class="w"><a class="brand" href="../../"><img src="../../logo.png" alt="Elecmetric" width="160" height="40"></a><nav><a href="../">Calculators</a><a href="../all-tools/">All Tools</a><a href="../../converters/index.html">Conversion Centre</a><a href="../../pages/index.html">Conversions</a><a href="../../technical-library/">Technical Library</a><a href="../../index.html#verification">How it is verified</a></nav></div></header>
+<main class="w"><nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="../../">Home</a></li><li><a href="../../categories/health-fitness/">Health &amp; Fitness</a></li><li><a href="../../categories/health-fitness/#bmi">BMI</a></li><li><span aria-current="page">Indian &amp; Regional BMI Calculator</span></li></ol></nav>
+<p class="kicker">Elecmetric Health &amp; Fitness · BMI Module 02</p>
+<h1>Indian &amp; Regional BMI Calculator</h1>
+<p class="lede">Calculate adult BMI and see it against the Indian (ESI) reference, the WHO Asia-Pacific reference, the WHO 2004 Asian action points and the international reference, side by side. Add your waist measurement for an additional indicator. Everything is calculated in your browser. Nothing is sent or stored.</p><nav class="fmodes" aria-label="BMI Calculator modes"><span class="ns-l">BMI Calculator</span><a class="chip" href="../bmi-calculator/">Mode 01 · Adult BMI</a><a class="chip on" href="../bmi-indian-regional-calculator/" aria-current="page">Mode 02 · Indian Regional BMI</a></nav>
+
+<form class="card" id="f" novalidate autocomplete="off">
+  <div class="row">
+    <div><label for="age">Age (years)</label><input id="age" name="age" inputmode="numeric" placeholder="20 to 120"></div>
+    <div>
+      <span class="lab" id="hlab">Height</span>
+      <div class="pair" role="group" aria-labelledby="hlab">
+        <input id="h1" name="h1" inputmode="decimal" aria-label="Height value" placeholder="170">
+        <input id="h2" name="h2" inputmode="decimal" aria-label="Height inches" placeholder="in" class="hide">
+        <select id="hu" name="hu" class="unit" aria-label="Height unit"><option value="cm">cm</option><option value="m">m</option><option value="ftin">ft + in</option><option value="in">inches</option></select>
+      </div>
+    </div>
+    <div>
+      <span class="lab" id="wlab">Weight</span>
+      <div class="pair" role="group" aria-labelledby="wlab">
+        <input id="w1" name="w1" inputmode="decimal" aria-label="Weight value" placeholder="70">
+        <input id="w2" name="w2" inputmode="decimal" aria-label="Weight pounds" placeholder="lb" class="hide">
+        <select id="wu" name="wu" class="unit" aria-label="Weight unit"><option value="kg">kg</option><option value="g">g</option><option value="lb">lb</option><option value="st">stone + lb</option></select>
+      </div>
+    </div>
+  </div>
+  <fieldset>
+    <legend>Optional: waist measurement (an additional indicator, not part of the BMI)</legend>
+    <div class="row">
+      <div>
+        <label for="waist">Waist circumference</label>
+        <div class="pair"><input id="waist" name="waist" inputmode="decimal" placeholder="e.g. 86"><select id="wsu" name="wsu" class="unit" aria-label="Waist unit"><option value="cm">cm</option><option value="in">inches</option></select></div>
+      </div>
+      <div>
+        <span class="lab">Sex (used only for the waist action level)</span>
+        <div class="refs" style="grid-template-columns:1fr 1fr">
+          <label><input type="radio" name="sex" value="male"><span>Male</span></label>
+          <label><input type="radio" name="sex" value="female"><span>Female</span></label>
+        </div>
+      </div>
+    </div>
+  </fieldset>
+  <fieldset>
+    <legend>Classification reference (all four are compared in the result)</legend>
+    <div class="refs" id="refs"></div>
+  </fieldset>
+  <button type="submit">Calculate BMI</button><button type="button" class="sec" id="reset">Reset</button>
+  <div id="errs" class="errs hide" role="alert"></div>
+</form>
+
+<section id="out" class="hide" aria-live="polite">
+  <h2>Your result</h2>
+  <div class="card">
+    <div class="big">
+      <div class="tile"><div class="k">BMI</div><div class="v" id="o-bmi"></div><div class="s">kg/m²</div></div>
+      <div class="tile"><div class="k">Category (selected)</div><div class="v" id="o-cat" style="font-size:24px"></div><div class="s" id="o-ref"></div></div>
+      <div class="tile"><div class="k">Healthy BMI range</div><div class="v" id="o-hr"></div><div class="s" id="o-hrs"></div></div>
+      <div class="tile"><div class="k">Healthy weight range</div><div class="v" id="o-hw" style="font-size:24px"></div><div class="s" id="o-hwl"></div></div>
+      <div class="tile"><div class="k">Waist indicator</div><div class="v" id="o-waist" style="font-size:24px"></div><div class="s" id="o-waists"></div></div>
+    </div>
+    <p id="o-diff" style="margin:14px 0 0"></p>
+    <div id="o-wnote" class="notice hide"></div>
+    <div id="o-cmp" class="notice hide"></div>
+  </div>
+
+  <h2>Reference comparison</h2>
+  <div class="card scroll"><table id="cmp"></table></div>
+  <div class="card" style="margin-top:12px"><svg class="chart" id="chart" viewBox="0 0 640 200" role="img" aria-label="BMI scales"></svg></div>
+
+  <h2>Selected reference table</h2>
+  <div class="card scroll"><table id="tbl"></table></div>
+
+  <h2>How this was calculated</h2>
+  <div class="card"><ol class="steps" id="steps"></ol></div>
+</section>
+
+<h2>Why the classifications differ</h2>
+<div class="card">
+  <p style="margin-top:0">At the same body mass index, South Asian adults tend to carry more body fat, and more of it around the abdomen, than white European adults. For this reason, Asian and Indian references set the overweight cut-off at a BMI of 23 and obesity at 25, instead of 25 and 30. The international reference remains the standard for global comparison.</p>
+  <p>The four references used here are not interchangeable diagnostic criteria. The <strong>Indian (ESI)</strong> and <strong>WHO Asia-Pacific</strong> tables use similar cut-offs but different category names. The <strong>WHO 2004 Asian action points</strong> are risk levels for public-health action at 18.5, 23 and 27.5, and are not weight categories. At a BMI of 24.0, the international reference gives Normal and the Indian reference gives Overweight.</p>
+  <p style="margin-bottom:0">The WHO 2004 expert consultation itself noted that no single BMI cut-off fits all Asian populations. Treat every category as a screening result and discuss it with a doctor.</p>
+</div>
+
+<h2>Waist measurement</h2>
+<div class="card">
+  <p style="margin:0">Abdominal obesity can be significant in Indian adults even when BMI is in the normal range, so guidelines recommend looking at waist circumference as well as BMI. This calculator uses action levels of 90 cm for men and 80 cm for women, from the WHO Asia-Pacific and Asian Indian consensus tables. Measure at the midpoint between the lowest rib and the top of the hip bone, after a normal breath out. Waist-to-height and waist-to-hip ratios are covered in a separate module.</p>
+</div>
+
+<h2>Indian &amp; Regional BMI Formula</h2>
+<div class="card">
+  <p style="margin-top:0"><strong>BMI = weight (kg) ÷ height (m)²</strong></p>
+  <p style="margin-bottom:0">Every input is converted to kg and metres first, so the result does not depend on the unit you enter. Categories are decided on the BMI rounded to 2 decimals, the value shown on screen. The upper limit of each category is exclusive: a BMI of exactly 23.00 is in the overweight category of the Indian reference. The healthy weight range is BMI<sub>lower</sub> × H² to BMI<sub>upper</sub> × H² for the selected reference.</p>
+</div>
+
+<h2>Limitations</h2>
+<div class="card">
+  <ul class="lim" style="margin:0">
+    <li>BMI is a screening measure, not a diagnosis. It cannot tell muscle from fat or show where fat is carried.</li>
+    <li>It may mislead for athletes, very muscular people, older adults and during pregnancy.</li>
+    <li>Regional references are not valid for everyone in a region. They are population-level screening tools.</li>
+    <li>For ages under 20, adult categories do not apply. An age- and sex-specific child and teen reference is needed.</li>
+    <li>The healthy weight range is a reference range, not a personal target. Speak to a doctor or dietitian before making health decisions.</li>
+  </ul>
+</div>
+
+<section id="related"><h2>Related Calculators and Tools</h2><p><a class="chip" href="../bmi-calculator/">BMI Calculator (Mode 01)</a><a class="chip" href="../percentage-calculator/">Percentage Calculator</a><a class="chip" href="../ratio-calculator/">Ratio Calculator</a><a class="chip" href="../mean-median-mode/">Mean, Median and Mode</a><a class="chip" href="../basic-calculator/">Basic Calculator</a><a class="chip" href="../scientific-calculator/">Scientific Calculator</a><a class="chip" href="../fraction-arithmetic/">Fraction Arithmetic Calculator</a><a class="chip" href="../percentage-increase-decrease-calculator/">Percentage Increase and Decrease Calculator</a></p></section></main><section class="w fb" aria-labelledby="fb-h"><h2 id="fb-h">Tell us how to improve this page</h2><textarea id="fb-t" rows="4" maxlength="1500" placeholder="Your message ..." aria-label="Tell us how to improve this page"></textarea><p><button type="button" class="btn" id="fb-b">Email your suggestion</button> <button type="button" class="btn" id="sh-b">Share this page</button> <span class="note" id="fb-n">This opens your email app. Nothing is sent until you press send.</span></p></section><script>(function(){var b=document.getElementById("fb-b");if(!b)return;b.onclick=function(){var t=document.getElementById("fb-t").value.trim(),n=document.getElementById("fb-n");if(!t){n.textContent="Please write a message first.";return}location.assign("mailto:"+"elecmetrics@gmail.com"+"?subject="+encodeURIComponent("Elecmetric feedback: "+document.title)+"&body="+encodeURIComponent(t+"\n\nPage: "+location.href))}})();</script><script>(function(){var s=document.getElementById("sh-b");if(!s)return;s.onclick=function(){var u=location.href,t=document.title,n=document.getElementById("fb-n");if(navigator.share){navigator.share({title:t,url:u}).catch(function(){});return}if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(u).then(function(){n.textContent="Link copied."},function(){n.textContent="Copy this address: "+u})}else{n.textContent="Copy this address: "+u}}})();</script><footer class="mf"><div class="mf-w"><div class="mf-grid" role="navigation" aria-label="Site map"><div class="mf-col"><p class="mf-h"><a href="../../calculators/">Calculators</a></p><ul><li><a href="../../calculators/electrical-fundamentals/">Electrical Fundamentals</a></li><li><a href="../../calculators/power-and-energy/">Power and Energy</a></li><li><a href="../../calculators/cable-engineering/">Cable Engineering</a></li><li><a href="../../calculators/motor-engineering/">Motor Engineering</a></li><li><a href="../../calculators/transformer-engineering/">Transformer Engineering</a></li><li><a href="../../calculators/electrical-protection/">Electrical Protection</a></li><li><a href="../../calculators/power-systems/">Power Systems</a></li><li><a href="../../calculators/earthing-and-grounding/">Earthing and Grounding</a></li><li><a href="../../calculators/renewable-energy/">Renewable Energy</a></li><li><a href="../../calculators/airport-agl-engineering/">Airport and AGL Engineering</a></li><li><a href="../../calculators/electronics-and-instrumentation/">Electronics and Instrumentation</a></li><li><a href="../../calculators/lighting-and-facilities/">Lighting and Facilities</a></li><li><a href="../../calculators/engineering-mathematics/">Engineering Mathematics</a></li></ul></div><div class="mf-col"><p class="mf-h"><a href="../../calculators/">Popular calculators</a></p><ul><li><a href="../../calculators/cable-size/">Cable Size</a></li><li><a href="../../calculators/voltage-drop/">Voltage Drop</a></li><li><a href="../../calculators/breaker-size/">Breaker Size</a></li><li><a href="../../calculators/motor-current/">Motor Current</a></li><li><a href="../../calculators/transformer-sizing/">Transformer Sizing</a></li><li><a href="../../calculators/earth-resistance/">Earth Resistance</a></li><li><a href="../../calculators/pf-correction-kvar/">Power Factor Correction</a></li><li><a href="../../calculators/generator-sizing/">Generator Sizing</a></li><li><a href="../../calculators/battery-bank-sizing/">Battery Bank Sizing</a></li><li><a href="../../calculators/pv-energy/">Solar PV Energy</a></li></ul></div><div class="mf-col"><p class="mf-h"><a href="../../converters/index.html">Conversions</a></p><ul><li><a href="../../pages/index.html">Electrical conversions</a></li><li><a href="../../pages/kw-to-amps.html">kW to Amps</a></li><li><a href="../../pages/amps-to-kw.html">Amps to kW</a></li><li><a href="../../pages/kva-to-kw.html">kVA to kW</a></li><li><a href="../../pages/watts-to-amps.html">Watts to Amps</a></li><li><a href="../../converters/length-converter.html">Length</a></li><li><a href="../../converters/power-converter.html">Power</a></li><li><a href="../../converters/energy-converter.html">Energy</a></li><li><a href="../../converters/temperature-converter.html">Temperature</a></li><li><a href="../../pages/wire-gauge.html">AWG to mm²</a></li></ul></div><div class="mf-col"><p class="mf-h"><a href="../../converters/index.html">Formulas</a></p><ul><li><a href="../../converters/ohms-law-formulas.html">Ohm’s Law formulas</a></li><li><a href="../../converters/kirchhoffs-laws.html">Kirchhoff’s laws</a></li><li><a href="../../converters/cable-sizing-formulas.html">Cable sizing formulas</a></li><li><a href="../../converters/circuit-breaker-formulas.html">Circuit breaker formulas</a></li><li><a href="../../converters/ac-circuit-formulas.html">AC circuit formulas</a></li><li><a href="../../converters/battery-formulas.html">Battery formulas</a></li></ul></div><div class="mf-col"><p class="mf-h">Elecmetric</p><ul><li><a href="../../calculators/basic-calculator/">Basic Calculator</a></li><li><a href="../../calculators/scientific-calculator/">Scientific Calculator</a></li><li><a href="../../index.html#verification">How it is verified</a></li><li><a href="../../privacy.html">Privacy</a></li><li><a href="../../terms.html">Terms</a></li><li><a href="../../technical-library/">Technical Library</a></li><li><a href="mailto:elecmetrics@gmail.com">Contact us</a></li></ul></div></div><div class="mf-legal">Results are computed by the same tested engine as the calculators in Elecmetric and are for estimating. Check design values against the standard and the equipment data you work to. Elecmetric results are not a substitute for a design review by a competent engineer.<br>Developed by Elecmetric. No independent technical review of the calculators has been carried out. Results are for estimating.<br>&copy; 2026 Elecmetric &middot; <a href="../../privacy.html">Privacy</a> &middot; <a href="../../terms.html">Terms</a></div></div><script>(function(){if(location.protocol!=="file:")return;document.addEventListener("click",function(e){if(e.defaultPrevented||e.button||e.metaKey||e.ctrlKey||e.shiftKey)return;var a=e.target.closest&&e.target.closest("a[href]");if(!a||a.target)return;var m=/^([^?#]*)(.*)$/.exec(a.getAttribute("href"));if(!m[1]||/^[a-z][a-z0-9+.-]*:/i.test(m[1])||!/[/]$/.test(m[1]))return;e.preventDefault();location.href=m[1]+"index.html"+m[2]})})();</script><button type="button" class="totop" id="totop" aria-label="Back to top" tabindex="-1">↑ Top</button><script>(function(){var b=document.getElementById("totop");if(!b)return;var t=0;function u(){t=0;var on=(window.pageYOffset||document.documentElement.scrollTop)>400,bar=document.getElementById("bar"),h=bar&&bar.offsetHeight?bar.offsetHeight:0;b.classList.toggle("on",on);b.tabIndex=on?0:-1;b.style.bottom=h?"calc("+(h+16)+"px + env(safe-area-inset-bottom,0px))":"";}function q(){if(!t)t=requestAnimationFrame(u)}window.addEventListener("scroll",q,{passive:true});window.addEventListener("resize",q);b.addEventListener("click",function(){var r=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;window.scrollTo({top:0,behavior:r?"auto":"smooth"})});u()})();</script></footer>
+<script id="engine">
+/* Elecmetric BMI engine, Module 02 (Indian and regional BMI). No DOM access. Exposed as ElecmetricBMIRegional. */
+(function (root) {
+  'use strict';
+  var VERSION = '1.0.0';
+  var LB_KG = 0.45359237, IN_M = 0.0254, IN_CM = 2.54, FT_IN = 12, ST_LB = 14;
+  var LIMITS = { ageMin: 20, ageMax: 120, hMin: 0.9, hMax: 2.5, wMin: 10, wMax: 500, waistMin: 40, waistMax: 250 };
+  /* Waist circumference action levels, South Asian / Asia-Pacific adults (cm). Used only as an additional indicator. */
+  var WAIST = { male: 90, female: 80, source: 'WHO Asia-Pacific (2000) and Asian Indian consensus abdominal-obesity cut-offs' };
+
+  /* Versioned reference tables. Bands are [lo, hi): lo inclusive, hi exclusive. */
+  var REFERENCES = {
+    india: {
+      id: 'india', version: '1.0', short: 'Indian (ESI)', kind: 'category',
+      name: 'Indian adult reference (ESI)',
+      source: 'Endocrine Society of India, Clinical Practice Guidelines, 2022 (as supplied; clinical review pending)',
+      note: 'Normal 18.5 to 22.9; overweight from 23; obesity from 25',
+      healthy: [18.5, 23],
+      bands: [
+        { name: 'Underweight', lo: 0, hi: 18.5 }, { name: 'Normal', lo: 18.5, hi: 23 },
+        { name: 'Overweight', lo: 23, hi: 25 }, { name: 'Obesity grade 1', lo: 25, hi: 30 },
+        { name: 'Obesity grade 2', lo: 30, hi: 35 }, { name: 'Obesity grade 3', lo: 35, hi: Infinity }
+      ]
+    },
+    apac: {
+      id: 'apac', version: '1.0', short: 'WHO Asia-Pacific', kind: 'category',
+      name: 'WHO Asia-Pacific reference (2000)',
+      source: 'WHO / IASO / IOTF, The Asia-Pacific perspective: redefining obesity and its treatment, 2000',
+      note: 'Normal 18.5 to 22.9; overweight 23 to 24.9; obese from 25',
+      healthy: [18.5, 23],
+      bands: [
+        { name: 'Underweight', lo: 0, hi: 18.5 }, { name: 'Normal', lo: 18.5, hi: 23 },
+        { name: 'Overweight (at risk)', lo: 23, hi: 25 }, { name: 'Obese class I', lo: 25, hi: 30 },
+        { name: 'Obese class II', lo: 30, hi: Infinity }
+      ]
+    },
+    who2004: {
+      id: 'who2004', version: '1.0', short: 'WHO 2004 Asian action points', kind: 'risk',
+      name: 'WHO 2004 Asian public-health action points',
+      source: 'WHO Expert Consultation, Lancet 2004;363:157-163',
+      note: 'Risk bands with action points at 18.5, 23 and 27.5. These are risk levels, not diagnoses',
+      healthy: [18.5, 23],
+      bands: [
+        { name: 'Underweight', lo: 0, hi: 18.5 }, { name: 'Increasing but acceptable risk', lo: 18.5, hi: 23 },
+        { name: 'Increased risk', lo: 23, hi: 27.5 }, { name: 'High risk', lo: 27.5, hi: Infinity }
+      ]
+    },
+    intl: {
+      id: 'intl', version: '1.0', short: 'International', kind: 'category',
+      name: 'International adult reference',
+      source: 'WHO / CDC adult BMI categories',
+      note: 'Normal 18.5 to 24.9; overweight 25 to 29.9; obesity from 30',
+      healthy: [18.5, 25],
+      bands: [
+        { name: 'Underweight', lo: 0, hi: 18.5 }, { name: 'Normal', lo: 18.5, hi: 25 },
+        { name: 'Overweight', lo: 25, hi: 30 }, { name: 'Obesity', lo: 30, hi: Infinity }
+      ]
+    }
+  };
+  var ORDER = ['india', 'apac', 'who2004', 'intl'];
+
+  function round(x, dp) { var s = Number(x.toPrecision(12)); return Number(Math.round(Number(s + 'e' + dp)) + 'e-' + dp); }
+  function fmtNum(x, dp) { return round(x, dp).toFixed(dp); }
+  function readNumber(raw) {
+    var s = String(raw == null ? '' : raw).trim();
+    if (s === '') return { empty: true };
+    if (s.indexOf('.') < 0 && (s.match(/,/g) || []).length === 1) s = s.replace(',', '.');
+    if (!/^(\d+(\.\d*)?|\.\d+)$/.test(s)) return { err: 'must be a plain positive number' };
+    return { v: Number(s) };
+  }
+  function heightToM(u, a, b) { return u === 'cm' ? a / 100 : u === 'm' ? a : u === 'in' ? a * IN_M : u === 'ftin' ? (a * FT_IN + b) * IN_M : NaN; }
+  function weightToKg(u, a, b) { return u === 'kg' ? a : u === 'g' ? a / 1000 : u === 'lb' ? a * LB_KG : u === 'st' ? (a * ST_LB + b) * LB_KG : NaN; }
+  function classify(bmi, refId) {
+    var b = REFERENCES[refId].bands, i;
+    for (i = 0; i < b.length; i++) if (bmi >= b[i].lo && bmi < b[i].hi) return { index: i, name: b[i].name };
+    return { index: -1, name: 'Unclassified' };
+  }
+
+  /* input: {age, sex, hu,h1,h2, wu,w1,w2, waist, waistUnit, ref}. Waist and sex are optional; sex is needed only when waist is entered. */
+  function calculate(input) {
+    var errors = [], warnings = [], refId = input.ref || 'india';
+    if (!REFERENCES[refId]) return { ok: false, errors: ['Choose a classification reference'] };
+    var ref = REFERENCES[refId];
+
+    var age = readNumber(input.age);
+    if (age.empty) errors.push('Enter your age');
+    else if (age.err) errors.push('Age ' + age.err);
+    else if (age.v !== Math.floor(age.v)) errors.push('Enter age as a whole number of years');
+    else if (age.v > LIMITS.ageMax) errors.push('Age must be ' + LIMITS.ageMax + ' years or less');
+
+    var hu = input.hu || 'cm', wu = input.wu || 'kg';
+    var h1 = readNumber(input.h1), h2 = readNumber(input.h2), w1 = readNumber(input.w1), w2 = readNumber(input.w2);
+    var heightM = NaN, weightKg = NaN;
+    if (h1.empty) errors.push('Enter your height');
+    else if (h1.err) errors.push('Height ' + h1.err);
+    else if (hu === 'ftin') {
+      if (h2.err) errors.push('Inches ' + h2.err);
+      else { var inch = h2.empty ? 0 : h2.v; if (inch >= FT_IN) errors.push('Inches must be less than 12'); else heightM = heightToM('ftin', h1.v, inch); }
+    } else heightM = heightToM(hu, h1.v, 0);
+    if (w1.empty) errors.push('Enter your weight');
+    else if (w1.err) errors.push('Weight ' + w1.err);
+    else if (wu === 'st') {
+      if (w2.err) errors.push('Pounds ' + w2.err);
+      else { var lbs = w2.empty ? 0 : w2.v; if (lbs >= ST_LB) errors.push('Pounds must be less than 14 when using stone'); else weightKg = weightToKg('st', w1.v, lbs); }
+    } else weightKg = weightToKg(wu, w1.v, 0);
+
+    if (!errors.length) {
+      if (!(heightM > 0)) errors.push('Height must be greater than zero');
+      else if (heightM < LIMITS.hMin || heightM > LIMITS.hMax) errors.push('Height is outside the supported range of 90 cm to 250 cm. Check the unit.');
+      if (!(weightKg > 0)) errors.push('Weight must be greater than zero');
+      else if (weightKg < LIMITS.wMin || weightKg > LIMITS.wMax) errors.push('Weight is outside the supported range of 10 kg to 500 kg. Check the unit.');
+    }
+
+    /* optional waist */
+    var waist = null, wr = readNumber(input.waist), sex = input.sex === 'male' || input.sex === 'female' ? input.sex : '';
+    if (!wr.empty) {
+      if (wr.err) errors.push('Waist ' + wr.err);
+      else {
+        var wcm = (input.waistUnit === 'in') ? wr.v * IN_CM : wr.v;
+        if (!(wcm > 0)) errors.push('Waist must be greater than zero');
+        else if (wcm < LIMITS.waistMin || wcm > LIMITS.waistMax) errors.push('Waist is outside the supported range of 40 cm to 250 cm. Check the unit.');
+        else if (!sex) errors.push('Select male or female to interpret the waist measurement');
+        else waist = { cm: wcm, sex: sex, threshold: WAIST[sex], abdominal: round(wcm, 1) >= WAIST[sex] };
+      }
+    }
+    if (errors.length) return { ok: false, errors: errors };
+    if (age.v < LIMITS.ageMin) return { ok: false, tooYoung: true, errors: ['Adult BMI categories apply from age 20. For ages under 20, an age- and sex-specific child and teen BMI reference is needed, so no adult category is shown.'] };
+
+    var bmiExact = weightKg / (heightM * heightM), bmi = round(bmiExact, 2);
+    var cat = classify(bmi, refId), h2sq = heightM * heightM;
+    var wLo = ref.healthy[0] * h2sq, wHi = ref.healthy[1] * h2sq, diff;
+    if (bmi < ref.healthy[0]) diff = { type: 'below', kg: wLo - weightKg };
+    else if (bmi >= ref.healthy[1]) diff = { type: 'above', kg: weightKg - wHi };
+    else diff = { type: 'within', kg: 0 };
+
+    var comparisons = ORDER.map(function (id) {
+      var c = classify(bmi, id);
+      return { id: id, short: REFERENCES[id].short, name: REFERENCES[id].name, kind: REFERENCES[id].kind, category: c.name, index: c.index, selected: id === refId, sameAsSelected: c.name === cat.name };
+    });
+    var normalIn = comparisons.filter(function (c) { return REFERENCES[c.id].healthy[1] > bmi && bmi >= REFERENCES[c.id].healthy[0]; }).map(function (c) { return c.id; });
+    /* In the lowest-cut-off references' normal range, BMI is below 23; "split" = within normal range of one reference but not another. */
+    var split = normalIn.length > 0 && normalIn.length < comparisons.length;
+
+    if (bmi < 12 || bmi > 60) warnings.push('This BMI is very unusual. Check your height and weight units.');
+    return {
+      ok: true, version: VERSION, warnings: warnings, refId: refId, refName: ref.name, refVersion: ref.version, refSource: ref.source,
+      ageYears: age.v, heightM: heightM, weightKg: weightKg, bmiExact: bmiExact, bmi: bmi,
+      category: cat.name, categoryIndex: cat.index, healthyBmi: ref.healthy.slice(),
+      healthyKg: [wLo, wHi], healthyLb: [wLo / LB_KG, wHi / LB_KG], diff: diff,
+      comparisons: comparisons, split: split, waist: waist
+    };
+  }
+
+  root.ElecmetricBMIRegional = { VERSION: VERSION, LIMITS: LIMITS, WAIST: WAIST, REFERENCES: REFERENCES, ORDER: ORDER, round: round, readNumber: readNumber, heightToM: heightToM, weightToKg: weightToKg, classify: classify, calculate: calculate, fmtNum: fmtNum, LB_KG: LB_KG };
+  if (typeof module !== 'undefined' && module.exports) module.exports = root.ElecmetricBMIRegional;
+})(typeof window !== 'undefined' ? window : globalThis);
+</script>
+
+<script id="ui">
+(function () {
+  'use strict';
+  var E = window.ElecmetricBMIRegional, $ = function (id) { return document.getElementById(id); }, form = $('f');
+  var refsBox = $('refs');
+  E.ORDER.forEach(function (k, i) {
+    var r = E.REFERENCES[k], l = document.createElement('label');
+    l.innerHTML = '<input type="radio" name="ref" value="' + r.id + '"' + (i === 0 ? ' checked' : '') + '><span><strong></strong><small></small></span>';
+    l.querySelector('strong').textContent = r.name; l.querySelector('small').textContent = r.note; refsBox.appendChild(l);
+  });
+  function syncUnits() {
+    $('h2').classList.toggle('hide', $('hu').value !== 'ftin');
+    $('w2').classList.toggle('hide', $('wu').value !== 'st');
+    $('h1').placeholder = { cm: '170', m: '1.70', ftin: 'ft', 'in': '67' }[$('hu').value];
+    $('w1').placeholder = { kg: '70', g: '70000', lb: '154', st: 'st' }[$('wu').value];
+  }
+  $('hu').addEventListener('change', syncUnits); $('wu').addEventListener('change', syncUnits); syncUnits();
+  var g = E.fmtNum;
+  function kgLb(kg) { return g(kg, 1) + ' kg (' + g(kg / E.LB_KG, 1) + ' lb)'; }
+
+  function drawChart(r) {
+    var rows = r.comparisons, X0 = 190, X1 = 620, MIN = 10, MAX = 45, RH = 34, TOP = 30, H = TOP + rows.length * RH + 24;
+    function x(v) { v = Math.max(MIN, Math.min(MAX, v)); return X0 + (v - MIN) / (MAX - MIN) * (X1 - X0); }
+    var out = '';
+    rows.forEach(function (c, ri) {
+      var ref = E.REFERENCES[c.id], y = TOP + ri * RH;
+      out += '<text x="0" y="' + (y + 16) + '"' + (c.selected ? ' style="font-weight:800"' : '') + '>' + ref.short + (c.selected ? ' ★' : '') + '</text>';
+      ref.bands.forEach(function (b, i) {
+        var lo = Math.max(MIN, b.lo), hi = Math.min(MAX, b.hi);
+        out += '<rect x="' + x(lo).toFixed(1) + '" y="' + y + '" width="' + (x(hi) - x(lo)).toFixed(1) + '" height="22" fill="var(--b' + Math.min(i, 5) + ')"><title>' + b.name + '</title></rect>';
+        if (b.lo > 0) out += '<line x1="' + x(b.lo).toFixed(1) + '" x2="' + x(b.lo).toFixed(1) + '" y1="' + y + '" y2="' + (y + 22) + '" stroke="var(--surface)" stroke-width="2"/>';
+      });
+    });
+    var mx = x(r.bmi).toFixed(1), bot = TOP + rows.length * RH - 8;
+    out += '<line x1="' + mx + '" x2="' + mx + '" y1="22" y2="' + bot + '" stroke="var(--ink)" stroke-width="2"/>';
+    out += '<path d="M' + (mx - 6) + ' 14 L' + (+mx + 6) + ' 14 L' + mx + ' 24 Z" fill="var(--ink)"/>';
+    out += '<text x="' + Math.max(215, Math.min(600, +mx)) + '" y="10" text-anchor="middle">BMI ' + g(r.bmi, 2) + '</text>';
+    [15, 18.5, 23, 25, 30, 35, 40].forEach(function (t) { out += '<text x="' + x(t).toFixed(1) + '" y="' + (H - 4) + '" text-anchor="middle" style="font-weight:400">' + t + '</text>'; });
+    var svg = $('chart'); svg.setAttribute('viewBox', '0 0 640 ' + H); svg.innerHTML = out;
+    svg.setAttribute('aria-label', 'BMI ' + g(r.bmi, 2) + ' placed on the scales of four references; see the comparison table for the categories');
+  }
+
+  function drawCompare(r) {
+    var h = '<tr><th>Reference</th><th>Category at your BMI</th><th>Type</th></tr>';
+    r.comparisons.forEach(function (c) {
+      h += '<tr' + (c.selected ? ' class="selrow"' : '') + '><td></td><td></td><td></td></tr>';
+    });
+    $('cmp').innerHTML = h;
+    r.comparisons.forEach(function (c, i) {
+      var tr = $('cmp').rows[i + 1];
+      tr.cells[0].textContent = c.name + (c.selected ? ' (selected)' : '');
+      tr.cells[1].textContent = c.category;
+      tr.cells[2].textContent = c.kind === 'risk' ? 'Risk level' : 'Weight category';
+    });
+  }
+
+  function drawTable(r) {
+    var ref = E.REFERENCES[r.refId], h = '<tr><th>Category</th><th>BMI (kg/m²)</th></tr>';
+    ref.bands.forEach(function (b, i) {
+      var rng = b.lo === 0 ? 'Below ' + b.hi : (b.hi === Infinity ? b.lo + ' and above' : b.lo + ' to below ' + b.hi);
+      h += '<tr' + (i === r.categoryIndex ? ' class="cur"' : '') + '><td>' + b.name + '</td><td>' + rng + '</td></tr>';
+    });
+    $('tbl').innerHTML = h;
+  }
+
+  function drawSteps(r) {
+    var ref = E.REFERENCES[r.refId], s = [], sq = r.heightM * r.heightM;
+    s.push('Height in metres H = ' + g(r.heightM, 4) + ' m');
+    s.push('Weight in kg W = ' + g(r.weightKg, 3) + ' kg');
+    s.push('BMI = W ÷ H² = ' + g(r.weightKg, 3) + ' ÷ ' + g(sq, 4) + ' = ' + g(r.bmiExact, 4));
+    s.push('Rounded to 2 decimals: BMI = ' + g(r.bmi, 2) + ' (every category uses this rounded value)');
+    s.push('Selected reference: ' + ref.name + ', table v' + ref.version + ' → ' + r.category);
+    s.push('Lower weight = ' + ref.healthy[0] + ' × ' + g(sq, 4) + ' = ' + g(r.healthyKg[0], 2) + ' kg');
+    s.push('Upper weight = ' + ref.healthy[1] + ' × ' + g(sq, 4) + ' = ' + g(r.healthyKg[1], 2) + ' kg (BMI below ' + ref.healthy[1] + ')');
+    if (r.waist) s.push('Waist = ' + g(r.waist.cm, 1) + ' cm; action level for ' + r.waist.sex + ' = ' + r.waist.threshold + ' cm → ' + (r.waist.abdominal ? 'at or above' : 'below'));
+    $('steps').innerHTML = ''; s.forEach(function (t) { var li = document.createElement('li'); li.textContent = t; $('steps').appendChild(li); });
+  }
+
+  function show(r) {
+    var ref = E.REFERENCES[r.refId];
+    $('o-bmi').textContent = g(r.bmi, 2);
+    $('o-cat').textContent = r.category; $('o-ref').textContent = ref.short + ' reference';
+    $('o-hr').textContent = r.healthyBmi[0] + ' to <' + r.healthyBmi[1]; $('o-hrs').textContent = ref.kind === 'risk' ? 'Lower-risk band' : 'Normal range';
+    $('o-hw').textContent = g(r.healthyKg[0], 1) + ' to ' + g(r.healthyKg[1], 1) + ' kg';
+    $('o-hwl').textContent = g(r.healthyLb[0], 1) + ' to ' + g(r.healthyLb[1], 1) + ' lb (reference range, not a target)';
+    var d = r.diff;
+    $('o-diff').textContent = d.type === 'within' ? 'Your weight is within the reference range for your height.'
+      : d.type === 'above' ? 'Your weight is ' + kgLb(d.kg) + ' above the upper limit of the reference range for your height.'
+      : 'Your weight is ' + kgLb(d.kg) + ' below the lower limit of the reference range for your height.';
+    var wt = $('o-waist'), ws = $('o-waists');
+    if (r.waist) {
+      wt.textContent = r.waist.abdominal ? 'At or above' : 'Below'; ws.textContent = g(r.waist.cm, 1) + ' cm vs ' + r.waist.threshold + ' cm action level (' + r.waist.sex + ')';
+      var note = r.waist.abdominal && r.comparisons.some(function (c) { var h = E.REFERENCES[c.id].healthy; return r.bmi >= h[0] && r.bmi < h[1]; })
+        ? 'Your waist measurement is at or above the action level even though your BMI is in a normal range under at least one reference. In South Asian adults, abdominal fat can be significant at a normal BMI, so this is worth discussing with a doctor. It is an indicator, not a diagnosis.'
+        : r.waist.abdominal ? 'Your waist measurement is at or above the action level. Together with BMI, this is an indicator worth discussing with a doctor. It is not a diagnosis.'
+        : 'Your waist measurement is below the action level. This does not rule out other health risks.';
+      $('o-wnote').textContent = note; $('o-wnote').classList.remove('hide');
+    } else { wt.textContent = 'Not entered'; ws.textContent = 'Optional: add waist and sex for an additional indicator'; $('o-wnote').classList.add('hide'); }
+    var cmp = $('o-cmp'), msg = '';
+    if (r.split) msg = 'Your BMI of ' + g(r.bmi, 2) + ' is classed differently under different references. That is a difference between reference systems, not a calculation error. The BMI value itself does not change.';
+    else if (r.comparisons.some(function (c) { return !c.sameAsSelected; })) msg = 'The category names differ between references, but they agree on where your BMI sits.';
+    if (r.warnings.length) msg += (msg ? ' ' : '') + r.warnings.join(' ');
+    cmp.textContent = msg; cmp.classList.toggle('hide', !msg);
+    drawChart(r); drawCompare(r); drawTable(r); drawSteps(r); $('out').classList.remove('hide');
+  }
+
+  function run(ev) {
+    if (ev) ev.preventDefault();
+    var refEl = form.querySelector('input[name=ref]:checked'), sexEl = form.querySelector('input[name=sex]:checked');
+    var r = E.calculate({ age: $('age').value, sex: sexEl ? sexEl.value : '', hu: $('hu').value, h1: $('h1').value, h2: $('h2').value,
+      wu: $('wu').value, w1: $('w1').value, w2: $('w2').value, waist: $('waist').value, waistUnit: $('wsu').value, ref: refEl ? refEl.value : 'india' });
+    var box = $('errs');
+    if (!r.ok) {
+      box.innerHTML = '<ul></ul>';
+      r.errors.forEach(function (m) { var li = document.createElement('li'); li.textContent = m; box.firstChild.appendChild(li); });
+      box.classList.remove('hide'); $('out').classList.add('hide'); return;
+    }
+    box.classList.add('hide'); show(r);
+  }
+  form.addEventListener('submit', run);
+  refsBox.addEventListener('change', function () { if (!$('out').classList.contains('hide')) run(); });
+  $('reset').addEventListener('click', function () { form.reset(); syncUnits(); $('errs').classList.add('hide'); $('out').classList.add('hide'); });
+})();
+</script>
+</body>
+</html>

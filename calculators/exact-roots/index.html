@@ -1,0 +1,581 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><style data-crumbs>.crumbs{font-size:13px;color:var(--muted);margin:0 0 10px}.crumbs ol{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:2px 0}.crumbs li+li::before{content:"\203A";margin:0 7px;opacity:.7}.crumbs a{color:inherit}.crumbs [aria-current]{color:var(--ink)}</style><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'"><title>Factoring and Vertex Form Calculator | Exact Quadratic Roots</title><meta name="description" content="Factor a quadratic exactly and write it in vertex form. Rational roots, simplified radicals, complex factors and completing the square, with every step shown."><meta property="og:title" content="Factoring and Vertex Form Calculator | Exact Quadratic Roots"><meta property="og:description" content="Factor a quadratic exactly and write it in vertex form. Rational roots, simplified radicals, complex factors and completing the square, with every step shown."><meta property="og:type" content="website"><meta property="og:site_name" content="Elecmetric"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Factoring and Vertex Form Calculator | Exact Quadratic Roots"><meta name="twitter:description" content="Factor a quadratic exactly and write it in vertex form. Rational roots, simplified radicals, complex factors and completing the square, with every step shown."><meta name="theme-color" content="#043B79"><link rel="icon" href="../../icon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="../../apple-touch-icon.png"><link rel="manifest" href="../../manifest.webmanifest"><style>#ns .ns-card{padding:16px 16px 18px}#ns .ns-grid{display:grid;gap:12px;grid-template-columns:2fr 1fr 1fr 1fr}#ns .ns-l,#ns label.ns-l{display:block;font-weight:600;font-size:13px;margin:0 0 4px}#ns .ns-in,#ns .ns-sel{display:block;width:100%;box-sizing:border-box;font:500 18px/1.3 var(--mono);padding:10px 12px;min-height:48px;border-radius:8px;border:1px solid var(--line);background:var(--field);color:var(--ink)}#ns .ns-sel{font:500 15px var(--body)}#ns .ns-in:focus,#ns .ns-sel:focus{outline:2px solid var(--gold);outline-offset:1px}#ns .ns-in.bad{border-color:var(--err)}#ns .ns-msg{min-height:1.4em;margin:8px 0 4px;color:var(--err)}#ns .ns-act{display:flex;flex-wrap:wrap;gap:8px;margin:4px 0 10px}#ns .btn2,#ns .chipb{font:600 13px var(--body);color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:8px 12px;min-height:38px;cursor:pointer}#ns .btn2:hover,#ns .chipb:hover{background:var(--field)}#ns .chipb{border-radius:999px;padding:5px 12px;min-height:32px;font-weight:500;margin:3px 4px 3px 0}#ns .btn2:focus-visible,#ns .chipb:focus-visible{outline:2px solid var(--gold);outline-offset:2px}#ns .ns-try{margin:0 0 12px}#ns .ns-t td.r{font:600 17px var(--mono);color:var(--num);word-break:break-all;text-align:left}#ns .ns-t td.r small{display:block;font:500 12px var(--mono);color:var(--muted)}#ns .ns-t tr.cu td{background:var(--gold-fill)}#ns .ns-flag{font:600 11px var(--body);border-radius:999px;padding:1px 8px;margin-left:6px;border:1px solid var(--line);color:var(--muted);vertical-align:middle}#ns .ns-flag.r{color:var(--gold);border-color:var(--gold)}#ns .ns-facts{margin:12px 0 0;display:flex;flex-wrap:wrap;gap:6px 18px;font-size:14px}#ns .ns-facts b{font-family:var(--mono)}#ns ol.steps{font:14px/1.5 var(--mono);padding-left:26px}#ns h3{margin:14px 0 4px}.sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}code{font-family:var(--mono)}[hidden]{display:none!important}@media(max-width:700px){#ns .ns-grid{grid-template-columns:1fr 1fr}#ns .ns-f:first-child{grid-column:1/-1}}#nu .ns-card{padding:16px}#nu .ns-grid,#nu .ns-l,#nu .ns-in,#nu .ns-sel,#nu .ns-msg,#nu .ns-act,#nu .btn2,#nu .chipb,#nu .ns-try,#nu .ns-facts{}#nu .ns-grid{display:grid;gap:12px;grid-template-columns:2fr 1fr 1fr 1fr}#nu .ns-l,#nu label.ns-l{display:block;font-weight:600;font-size:13px;margin:0 0 4px}#nu .ns-in,#nu .ns-sel{display:block;width:100%;box-sizing:border-box;font:500 18px/1.3 var(--mono);padding:10px 12px;min-height:48px;border-radius:8px;border:1px solid var(--line);background:var(--field);color:var(--ink)}#nu .ns-sel{font:500 15px var(--body)}#nu .ns-in:focus,#nu .ns-sel:focus{outline:2px solid var(--gold);outline-offset:1px}#nu .ns-in.bad{border-color:var(--err)}#nu .ns-msg{min-height:1.4em;margin:8px 0 4px;color:var(--err)}#nu .ns-act{display:flex;gap:8px;margin:4px 0 10px}#nu .btn2,#nu .chipb{font:600 13px var(--body);color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:8px 12px;min-height:38px;cursor:pointer}#nu .btn2:hover,#nu .chipb:hover{background:var(--field)}#nu .chipb{border-radius:999px;padding:5px 12px;min-height:32px;font-weight:500;margin:3px 4px 3px 0}#nu .btn2:focus-visible,#nu .chipb:focus-visible{outline:2px solid var(--gold);outline-offset:2px}#nu .ns-try{margin:0 0 12px}#nu td.r{font:600 15px var(--mono);color:var(--num);word-break:break-all}#nu td small{display:block;font:500 12px var(--mono);color:var(--muted)}#nu .btn2{margin-left:8px;padding:2px 8px;min-height:28px}#nu tr.cu td{background:var(--gold-fill)}#nu .ns-flag{font:600 11px var(--body);border-radius:999px;padding:1px 8px;border:1px solid var(--gold);color:var(--gold)}#nu .ns-facts{margin:12px 0 0;display:flex;flex-wrap:wrap;gap:6px 18px;font-size:14px}#nu .ns-facts b{font-family:var(--mono)}#nu ol.steps{font:14px/1.5 var(--mono);padding-left:26px}#nu .bits{display:flex;flex-wrap:wrap;gap:4px;margin:14px 0 4px}#nu .bit{display:flex;flex-direction:column;align-items:center;min-width:40px;padding:4px 2px;border:1px solid var(--line);border-radius:6px;background:var(--field)}#nu .bit.sg{border-color:var(--gold);background:var(--gold-fill)}#nu .bit i{font:11px var(--mono);color:var(--muted);font-style:normal}#nu .bit b{font:700 20px var(--mono);color:var(--num)}#nu .bit em{font:10px var(--mono);color:var(--muted);font-style:normal}@media(max-width:700px){#nu .ns-grid{grid-template-columns:1fr 1fr}#nu .ns-f:first-child{grid-column:1/-1}}#nu .blg{grid-template-columns:2fr 1.4fr 2fr}#nu .blg2{grid-template-columns:1fr 1fr 1fr;margin-top:12px}#nu .nu-hist{list-style:none;margin:0 0 8px;padding:0}#nu pre.al{font:600 15px/1.6 var(--mono);background:var(--field);border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin:6px 0 12px;overflow-x:auto;color:var(--num)}#nu .res .big{font:700 28px/1.3 var(--mono);color:var(--num);word-break:break-all}#nu .res .big .btn2{vertical-align:middle}#nu .res .sub{color:var(--muted);margin:2px 0 8px}#nu .res table{max-width:420px}#nu td.r{font:600 15px var(--mono);color:var(--num)}#nu .fls{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}#nu .fl{border:1px solid var(--line);background:var(--field);border-radius:8px;padding:6px 10px;font-size:14px}#nu .fl.on{border-color:var(--gold);background:var(--gold-fill)}#nu .fl small{display:block;color:var(--muted);font-size:12px}#nu h3{margin:14px 0 4px}@media(max-width:700px){#nu .blg,#nu .blg2{grid-template-columns:1fr}}#nu .fpg{grid-template-columns:2fr 1.3fr 1.3fr 1.6fr}#nu .res .big{font:700 28px/1.3 var(--mono);color:var(--num);word-break:break-all}#nu .res .sub{color:var(--muted);margin:2px 0 8px}#nu .ns-t{max-width:640px}#nu td.r{font:600 15px var(--mono);color:var(--num);word-break:break-all}#nu td.r small{display:block;font:500 12px var(--mono);color:var(--muted)}#nu td.r .btn2{margin-left:8px;padding:2px 8px;min-height:28px}#nu .lng{display:block;max-height:7.5em;overflow:auto;font-size:13px}#nu .bg{display:flex;flex-wrap:wrap;gap:3px;margin:10px 0 4px}#nu .gap{width:10px}#nu .bit{min-width:30px;min-height:44px;border-radius:6px;border:1px solid var(--line);background:var(--field);color:var(--ink);cursor:pointer;font:600 15px var(--mono);padding:2px 0;line-height:1.1}#nu .bit small{display:block;font:500 9px var(--mono);color:var(--muted)}#nu .bit.s{border-color:#c0392b}#nu .bit.e{border-color:#2d7dd2}#nu .bit.f{border-color:var(--gold)}#nu .bit.on{background:var(--gold-fill);color:var(--num)}#nu .bit:focus-visible{outline:2px solid var(--gold);outline-offset:2px}#nu .lg{display:flex;gap:12px;font-size:12px;margin:2px 0 10px}#nu .k{border-left:10px solid;padding-left:6px}#nu .k.s{border-color:#c0392b}#nu .k.e{border-color:#2d7dd2}#nu .k.f{border-color:var(--gold)}#nu .fls{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}#nu .fl{border:1px solid var(--line);background:var(--field);border-radius:8px;padding:6px 10px;font-size:14px}#nu .fl.on{border-color:var(--gold);background:var(--gold-fill)}#nu .fl small{display:block;color:var(--muted);font-size:12px}#nu h3{margin:14px 0 4px}#faq p,#tenth td,#nu ol.steps li,#nu .sub{overflow-wrap:anywhere}@media(max-width:700px){#nu .fpg{grid-template-columns:1fr}#nu .bit{min-width:22px;font-size:13px}}#nu .res .big{font:700 28px/1.3 var(--mono);color:var(--num);word-break:break-word;overflow-wrap:anywhere}#nu .res .big.wd{font:600 22px/1.4 var(--body)}#nu .res .sub{color:var(--muted);margin:6px 0;overflow-wrap:anywhere}#nu .nwg{grid-template-columns:1.6fr 1.2fr 1.4fr 1.2fr}#nu .res .btn2{vertical-align:middle;margin-left:8px}#nu td.r{font:600 15px var(--mono);color:var(--num)}#nu ol.steps li{overflow-wrap:anywhere}#nu h3{margin:14px 0 4px}@media(max-width:700px){#nu .nwg{grid-template-columns:1fr}}@media print{header,.fb,#related,#faq,.ns-try,.ns-act,.ns-card,#scales,#examples,footer{display:none!important}#nu .card:first-child{display:block!important}#nu .card:first-child>*{display:none}#nu .card:first-child #nu-out{display:block}}#nu pre.al{font:600 15px/1.6 var(--mono);background:var(--field);border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin:6px 0 12px;overflow-x:auto;color:var(--num)}#dx .ns-f{display:flex;flex-direction:column;gap:4px;min-width:0}#dx .ns-in,#dx .ns-sel{width:100%;box-sizing:border-box}#dx .btn2{padding:7px 12px}#dx #ex-out,#dx #er-out,#dx #ev-out{margin-top:14px}#dx .qgrid{display:grid;gap:12px;grid-template-columns:repeat(3,minmax(0,1fr)) 130px;margin-top:10px}#dx .qgrid3{grid-template-columns:repeat(3,minmax(0,1fr))}#dx .qeq{font:600 20px var(--mono);color:var(--num);margin:10px 0 0;min-height:1.4em;word-break:break-word}#dx .ns-try{margin-top:6px}#dx h3{font-size:15px;margin:14px 0 6px}#dx .cands{display:flex;flex-wrap:wrap;gap:4px 6px}#dx .ns-flag.mute{opacity:.55}#dx ul.vl{list-style:none;margin:0 0 10px;padding:0}#dx ul.vl li{font:14px/1.5 var(--mono);padding:3px 0;overflow-wrap:anywhere}#dx .btn2.on{background:var(--gold-fill);border-color:var(--gold);font-weight:700}#dx .res .big{display:flex;flex-direction:column;gap:2px;font:700 28px var(--mono);color:var(--num);word-break:break-word}#dx .res .qroot{overflow-wrap:anywhere}#dx .res .sub{font:500 14px var(--mono);color:var(--muted);margin:6px 0 10px;overflow-wrap:anywhere}#dx ol.steps li{overflow-wrap:anywhere}#dx .ns-t{width:100%}#dx .ns-t td.r{word-break:normal;overflow-wrap:anywhere}#dx .ns-t td:first-child{white-space:nowrap}@media(max-width:700px){#dx .qgrid{grid-template-columns:repeat(2,minmax(0,1fr))}#dx .qgrid3{grid-template-columns:repeat(2,minmax(0,1fr))}#dx .res .big{font-size:22px}#dx .ns-t td:first-child{white-space:normal}}@media print{#dx .ns-try,#dx .ns-act,#dx .qgrid select{display:none}}.fmodes{display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px;margin:0 0 12px}.fmodes .ns-l{margin:0 4px 0 0}.fmodes .chip.on{background:var(--gold-fill);border-color:var(--gold);font-weight:700}.fmodes .chip.soon{opacity:.6;cursor:default}</style><style>.fb textarea{width:100%;font:15px/1.5 var(--body);padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--field);color:var(--ink);resize:vertical}.fb textarea:focus{outline:2px solid var(--gold);outline-offset:1px}:root{--bg:#F1F6FC;--surface:#fff;--ink:#0A2347;--muted:#4B5F86;--line:#D3DFEF;--navy:#043B79;--on-navy:#FFFFFF;--gold:#B34A00;--gold-fill:#FFEFDC;--field:#F4F8FE;--err:#B3261E;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;--display:"Arial Narrow","Roboto Condensed",system-ui,sans-serif;--body:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--navy-2:#0A5BBB;--cyan:#0062DE;--num:#043B79;--orange:#FF7A00;--gold-grad:linear-gradient(135deg,#FFA43D 0%,#FF7A00 52%,#E85F00 100%);--hero:radial-gradient(1000px 360px at 90% -35%,rgba(0,98,222,.55),transparent 62%),radial-gradient(640px 240px at 0% 110%,rgba(255,122,0,.20),transparent 60%),linear-gradient(135deg,#032A58,#043B79 58%,#0A55A8);--r:14px;--sh-0:0 1px 2px rgba(4,35,80,.06);--sh-1:0 1px 2px rgba(4,35,80,.05),0 6px 18px rgba(4,35,80,.07);--sh-2:0 2px 4px rgba(4,35,80,.05),0 22px 44px -14px rgba(4,35,80,.24);--ring:0 0 0 3px rgba(0,98,222,.26);color-scheme:light dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}@media(prefers-color-scheme:dark){:root{--bg:#04122B;--surface:#0A2046;--ink:#EAF2FF;--muted:#A0B5DA;--line:#183868;--navy:#031B3F;--on-navy:#EAF2FF;--gold:#FF9A3D;--gold-fill:#3D2410;--field:#071B3C;--err:#FF8A80;--navy-2:#0B4A98;--cyan:#4DA3FF;--orange:#FF8A1F;--num:#FFB066;--sh-0:0 1px 2px rgba(0,0,0,.4);--sh-1:0 1px 2px rgba(0,0,0,.35),0 8px 22px rgba(0,0,0,.35);--sh-2:0 2px 4px rgba(0,0,0,.4),0 24px 48px -14px rgba(0,0,0,.7);--ring:0 0 0 3px rgba(77,163,255,.34)}}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 var(--body)}a{color:inherit}header{background:var(--navy);color:var(--on-navy);border-bottom:3px solid var(--gold)}.w{max-width:860px;margin:0 auto;padding:0 max(16px,env(safe-area-inset-left,0px))}header .w{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-block:12px;flex-wrap:wrap}header a{text-decoration:none;font:600 20px var(--display);letter-spacing:.04em;text-transform:uppercase}header nav a{font:500 13px var(--body);text-transform:none;letter-spacing:0;margin-left:14px;opacity:.9}main{padding-block:24px 56px}h1{font:600 32px/1.1 var(--display);margin:0 0 8px;text-wrap:balance}h2{font:600 20px var(--display);letter-spacing:.02em;margin:28px 0 8px;text-transform:uppercase}.lede{color:var(--muted);margin:0 0 16px;max-width:62ch}.card{background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:16px 18px;margin:12px 0}.ans{border-left:4px solid var(--gold);display:flex;flex-wrap:wrap;gap:6px 24px;align-items:baseline;justify-content:space-between}.big{font:600 28px var(--display)}.jump{margin:8px 0 4px}details.more{border:1px solid var(--line);border-radius:12px;background:var(--surface);margin:14px 0;padding:0 16px;box-shadow:var(--sh-0)}details.more>summary{cursor:pointer;list-style:none}details.more>summary::-webkit-details-marker{display:none}details.more>summary h2{margin:14px 0}details.more>summary h2::after{content:"+";margin-left:auto;color:var(--gold)}details.more[open]>summary h2::after{content:"\2212"}details.more[open]{padding-bottom:12px}@media print{.jump{display:none}}.btn{display:inline-block;background:var(--navy);color:var(--on-navy);padding:9px 16px;border-radius:4px;text-decoration:none;font-weight:600;border:1px solid var(--gold)}.chip{display:inline-block;margin:3px 6px 3px 0;padding:5px 12px;border:1px solid var(--line);border-radius:999px;background:var(--surface);text-decoration:none;font-size:14px}.chip:hover{border-color:var(--gold)}main li>a:only-child{display:inline-block;padding:3px 0}code,pre,.f,td.n{font-family:var(--mono)}.f{background:var(--field);border:1px solid var(--line);padding:10px 12px;border-radius:4px;overflow-x:auto;white-space:pre-wrap}ol.steps{padding-left:22px;font-family:var(--mono);font-size:13px}ol.steps li{margin:4px 0}.tw{overflow-x:auto}table{border-collapse:collapse;width:100%;background:var(--surface)}th,td{border:1px solid var(--line);padding:6px 10px;text-align:left}td.n{text-align:right}tr.me td{background:var(--gold-fill)}th{background:var(--field);font-weight:600}.note{color:var(--muted);font-size:13px}ul{padding-left:20px}footer{border-top:1px solid var(--line);color:var(--muted);font-size:13px;padding-block:16px}h3{font:600 16px var(--body);margin:18px 0 4px}h3+p{margin:0;max-width:68ch}.tres .tact{flex:0 0 100%;display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}@media print{.tact{display:none}}.tres .phasor{flex:0 0 100%;margin-top:12px}.phasor svg{display:block;width:100%;max-width:360px;height:auto;font:11px var(--body)}.arow{grid-column:1/-1;border:1px solid var(--line);border-radius:10px;padding:10px 12px 12px;margin:0}.arow[hidden]{display:none}.arow legend{font-weight:700;font-size:13px;padding:0 6px}.arow .tgrid{margin-top:2px}.arow-bar{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:8px;align-items:center}.arow-bar .note{margin:0}.arow .rm{margin-top:10px}.mgrid{margin-top:10px}.mgrid .mbody[hidden]{display:none}.mgrid .tgrid{margin-top:8px}.mgrid .fillm{margin-top:10px}.tres .rchart{flex:0 0 100%;margin-top:12px}.rchart svg{display:block;width:100%;height:auto;font:12px var(--body)}.rchart h3{margin:0 0 6px;font-size:14px}.tres .carry{flex:0 0 100%;margin-top:10px}.carry .chip{display:inline-block;margin:4px 6px 0 0}.arow .rm[hidden],#add-row[hidden]{display:none}@media print{.arow-bar,.arow .rm{display:none}}.tgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px 16px}.tgrid label{display:block;font-weight:600;font-size:13px;margin-bottom:4px}.trow{display:flex;gap:6px}.trow input,.trow select,.tgrid>div>select{font:16px var(--body);color:var(--ink);background:var(--field);border:1px solid var(--line);border-radius:4px;padding:8px;min-height:40px}.trow input{flex:1;min-width:0}.tgrid>div>select{width:100%}.hint{color:var(--muted);font-size:12px;margin-top:3px}.err{color:var(--err)}.tres{display:flex;flex-wrap:wrap;gap:6px 28px;align-items:baseline}.tres .big small{display:block;font:500 13px var(--body);color:var(--muted)}::selection{background:color-mix(in srgb,var(--gold) 30%,transparent)}body{background-image:radial-gradient(900px 520px at 100% -8%,color-mix(in srgb,var(--cyan) 10%,transparent),transparent 62%),radial-gradient(700px 420px at -5% 0%,color-mix(in srgb,var(--gold) 8%,transparent),transparent 60%);background-attachment:fixed;-webkit-font-smoothing:antialiased}header{position:relative;overflow:hidden;background:var(--hero);border-bottom:0;box-shadow:0 10px 30px -14px rgba(5,14,34,.6)}header::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);background-size:34px 34px;-webkit-mask-image:linear-gradient(100deg,#000,transparent 70%);mask-image:linear-gradient(100deg,#000,transparent 70%);pointer-events:none}header::after{content:"";position:absolute;left:0;right:0;bottom:0;height:18px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44 14'%3E%3Cpath d='M0 12.5H8L14 2l7 10.5 5-6 4 6H44' fill='none' stroke='%23FF7A00' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat right 36px bottom 3px/44px 14px,linear-gradient(90deg,#FF7A00,#FFA43D 55%,#FF7A00) no-repeat bottom/100% 4px;pointer-events:none}header .w{position:relative;z-index:1;padding-block:16px 22px}header .w>a.brand{display:block;line-height:0;letter-spacing:0;text-transform:none;background:#fff;border-radius:12px;padding:6px 14px;box-shadow:0 2px 12px rgba(2,16,42,.4),0 0 0 1px rgba(255,255,255,.5)}header .w>a.brand img{display:block;height:48px;width:auto}@media(max-width:600px){header .w>a.brand img{height:42px}}header a:focus-visible{outline-color:#FFB066}header nav a{color:#DCE5F5;opacity:1;padding:6px 12px;border-radius:999px;margin-left:6px;transition:background .15s,color .15s}header nav a:hover{background:rgba(255,255,255,.12);color:#FFB066}main.w{padding-top:36px;padding-bottom:64px}h1{font-size:36px;letter-spacing:.005em}h1::after{content:"";display:block;width:56px;height:3px;border-radius:3px;background:var(--gold-grad);margin-top:12px}h2{display:flex;align-items:center;gap:10px}h2::before{content:"";width:4px;height:.95em;border-radius:2px;background:var(--gold-grad);flex:none}h3{color:var(--gold)}.card{border-radius:14px;box-shadow:var(--sh-1)}.ans{position:relative;overflow:hidden;border-left:1px solid var(--line);padding-left:24px;background:linear-gradient(135deg,color-mix(in srgb,var(--gold) 12%,var(--surface)),var(--surface) 65%);border-color:color-mix(in srgb,var(--gold) 40%,var(--line));box-shadow:var(--sh-2)}.ans::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--gold-grad)}.big{color:var(--num);font-weight:700}.btn{border-radius:10px;border:0;background:var(--gold-grad);color:#0A2347;font-weight:700;box-shadow:var(--sh-1);transition:transform .15s,box-shadow .15s,filter .15s}.btn:hover{transform:translateY(-1px);box-shadow:var(--sh-2);filter:brightness(1.06)}.chip{box-shadow:var(--sh-0);transition:border-color .15s,background .15s,transform .15s,box-shadow .15s}.chip:hover{transform:translateY(-1px);box-shadow:var(--sh-1);border-color:var(--orange);background:color-mix(in srgb,var(--orange) 8%,var(--surface))}.f{border-radius:12px;border-left:3px solid var(--cyan)}.tw{border:1px solid var(--line);border-radius:12px;box-shadow:var(--sh-0)}.tw table{border:0}table{border-collapse:separate;border-spacing:0}th,td{border:0;border-bottom:1px solid var(--line)}tr:last-child td{border-bottom:0}th{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);background:var(--field)}tbody tr:hover td{background:color-mix(in srgb,var(--cyan) 7%,transparent)}tr.me td{background:var(--gold-fill)}.trow input,.trow select,.tgrid>div>select{border-radius:10px;transition:border-color .15s,box-shadow .15s}.trow select{background-color:color-mix(in srgb,var(--navy) 5%,var(--field))}.trow input:focus,.trow select:focus,.tgrid>div>select:focus{outline:0;border-color:var(--cyan);box-shadow:var(--ring)}.tgrid label{color:var(--ink)}a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--cyan);outline-offset:2px}footer{padding-block:20px}footer.mf{margin-top:24px;padding:0;border-top:0;background:var(--hero);color:#DCE5F5;font-size:13px;position:relative}footer.mf::before{content:"";display:block;height:4px;background:linear-gradient(90deg,#FF7A00,#FFA43D 55%,#FF7A00)}.mf-w{max-width:1100px;margin:0 auto;padding:36px max(16px,env(safe-area-inset-left,0px)) calc(24px + env(safe-area-inset-bottom,0px))}.mf-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:28px 24px}.mf-h{display:block;margin:0 0 12px;padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,.18);font:600 14px var(--display);letter-spacing:.06em;text-transform:uppercase;color:#FFB066}.mf-col ul{list-style:none;margin:0;padding:0}.mf-col li{margin:0}.mf-col a{display:inline-block;padding:4px 0;color:#DCE5F5;text-decoration:none}.mf-h a{padding:0;color:inherit}.mf-col a:hover,.mf-legal a:hover{color:#FFB066;text-decoration:underline}.mf a:focus-visible{outline:2px solid #FFB066;outline-offset:2px;border-radius:2px}.mf-legal{margin-top:28px;padding-top:18px;border-top:1px solid rgba(255,255,255,.18);color:#A9BADB;max-width:80ch}.mf-legal a{color:#DCE5F5}@media(max-width:980px){.mf-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(max-width:600px){.mf-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.mf-col a{padding:7px 0}}@media print{footer.mf{background:none;color:inherit}footer.mf::before,.mf-grid{display:none}.mf-legal{border:0;color:inherit}}@media(prefers-reduced-motion:reduce){.btn,.chip{transition:none;transform:none!important}}@media print{header{background:none;box-shadow:none}header::before,header::after,.ans::before,h1::after,h2::before{display:none}header .w>a.brand{box-shadow:none;padding:0}body{background-image:none}.card,.ans,.tw{box-shadow:none}.ans{padding-left:18px}}.totop{position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:60;min-height:44px;padding:0 18px;border:0;border-radius:999px;background:linear-gradient(135deg,#FFA43D,#FF7A00 52%,#E85F00);color:#0A2347;font:700 14px system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;box-shadow:0 2px 4px rgba(4,35,80,.2),0 14px 30px -8px rgba(4,35,80,.45);cursor:pointer;opacity:0;transform:translateY(12px);pointer-events:none;transition:opacity .2s,transform .2s,bottom .2s}.totop.on{opacity:1;transform:none;pointer-events:auto}.totop:hover{filter:brightness(1.06)}.totop:focus-visible{outline:2px solid #fff;outline-offset:2px;box-shadow:0 0 0 4px #0062DE}@media(prefers-reduced-motion:reduce){.totop{transition:none}}@media print{.totop{display:none}}.vstat{padding:12px 16px;border-left:4px solid var(--muted,#6b7a90)}.vstat.v-verified{border-left-color:#1f9d57}.vstat.v-reference{border-left-color:#2a7fd4}.vstat.v-indicative{border-left-color:#c98a10}</style><style id="em-ux1">.ns-f:has(>.mseg){grid-column:1/-1}main.w{max-width:1080px}.ns-card .mseg{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 4px}.ns-card .mseg button{flex:1 1 150px;font:600 14px var(--body);color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px;min-height:46px;cursor:pointer;text-align:center;transition:background .15s,border-color .15s}.ns-card .mseg button:hover{border-color:var(--orange);background:var(--field)}.ns-card .mseg button[aria-checked="true"]{background:var(--navy);color:var(--on-navy);border-color:var(--navy);box-shadow:inset 0 -3px 0 var(--orange)}.ns-card .mseg button:focus-visible,.ns-try .try-tabs button:focus-visible{outline:2px solid var(--cyan);outline-offset:2px}.ns-card .ns-try:not([role]){margin:14px 0 0;padding-top:12px;border-top:1px solid var(--line)}.ns-try .try-h{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;margin-bottom:6px}.ns-try .try-h .ns-l{margin:0}.ns-try .try-tabs{display:flex;flex-wrap:wrap;gap:6px}.ns-try .try-tabs button{font:600 12px var(--body);color:var(--muted);background:transparent;border:0;border-bottom:2px solid transparent;padding:6px 8px;cursor:pointer}.ns-try .try-tabs button[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--orange)}.ns-try .chipb[hidden]{display:none}@media(max-width:700px){.ns-card .mseg button{flex:1 1 calc(50% - 8px)}}</style></head><body><header><div class="w"><a class="brand" href="../../"><img src="../../logo.png" alt="Elecmetric" width="160" height="40"></a><nav><a href="../">All engineering calculators</a><a href="../../pages/index.html">Conversions</a><a href="../../index.html#verification">How it is verified</a></nav></div></header><main class="w"><nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="../../">Home</a></li><li><a href="../../categories/mathematics/">Mathematics</a></li><li><a href="../../categories/mathematics/#algebra">Algebra</a></li><li><span aria-current="page">Factoring and Vertex Form Calculator</span></li></ol></nav><h1>Factoring and Vertex Form Calculator</h1><p class="lede">Enter A, B and C to get the factored form, the vertex form and the exact roots of ax² + bx + c = 0, with every step of the factoring and of completing the square. Or start from the roots, or from the vertex, and get the equation. Fractions and radicals stay exact. Calculate. Convert. Understand.</p><nav class="jump" aria-label="On this page"><a class="chip" href="#factoring">When a quadratic factors</a><a class="chip" href="#rational-root">The rational root theorem</a><a class="chip" href="#policy">Exact, not rounded</a><a class="chip" href="#faq">FAQ</a><a class="chip" href="#related">Related</a></nav><nav class="fmodes" aria-label="Quadratic Formula Calculator modes"><span class="ns-l">Quadratic Formula Calculator</span><a class="chip" href="../quadratic-solver/">Mode 01 · Equation Solver</a><a class="chip" href="../discriminant-calculator/">Mode 02 · Discriminant &amp; Root Analysis</a><a class="chip" href="../parabola-graph/">Mode 03 · Parabola Graph &amp; Vertex</a><a class="chip on" href="../exact-roots/" aria-current="page">Mode 04 · Exact Root &amp; Factorisation</a><a class="chip" href="../engineering-quadratic/">Mode 05 · Engineering Solver</a></nav><div id="dx"><section class="card ns-card"><div class="ns-act" role="group" aria-label="What to do"><button type="button" class="btn2 on" data-mode="equation" aria-pressed="true">Factor an equation</button><button type="button" class="btn2" data-mode="roots" aria-pressed="false">Build from roots</button><button type="button" class="btn2" data-mode="vertex" aria-pressed="false">Build from vertex form</button></div><div id="ex-p-equation"><div class="qgrid"><div class="ns-f"><label for="ex-a" class="ns-l">A (coefficient of x²)</label><input id="ex-a" class="ns-in" type="text" inputmode="text" autocomplete="off" autocorrect="off" spellcheck="false" aria-describedby="ex-err" value="2" placeholder="e.g. 3/4"></div><div class="ns-f"><label for="ex-b" class="ns-l">B (coefficient of x)</label><input id="ex-b" class="ns-in" type="text" inputmode="text" autocomplete="off" autocorrect="off" spellcheck="false" aria-describedby="ex-err" value="3" placeholder="e.g. −2.5"></div><div class="ns-f"><label for="ex-c" class="ns-l">C (constant)</label><input id="ex-c" class="ns-in" type="text" inputmode="text" autocomplete="off" autocorrect="off" spellcheck="false" aria-describedby="ex-err" value="-5" placeholder="e.g. 1/3"></div><div class="ns-f"><label for="ex-dp" class="ns-l">Decimal places</label><select id="ex-dp" class="ns-sel"><option value="4">4</option><option value="6">6</option><option value="8" selected>8</option><option value="10">10</option><option value="12">12</option><option value="15">15</option></select></div></div><p class="qeq" id="ex-eq" aria-live="polite"></p><p class="note ns-msg" id="ex-err" role="status"></p><div class="ns-try"><span class="ns-l">Try</span> <button type="button" class="chipb" data-kind="equation" data-ex="{&quot;a&quot;:&quot;2&quot;,&quot;b&quot;:&quot;3&quot;,&quot;c&quot;:&quot;-5&quot;}">2x² + 3x − 5 = 0</button><button type="button" class="chipb" data-kind="equation" data-ex="{&quot;a&quot;:&quot;1&quot;,&quot;b&quot;:&quot;-5&quot;,&quot;c&quot;:&quot;6&quot;}">x² − 5x + 6 = 0</button><button type="button" class="chipb" data-kind="equation" data-ex="{&quot;a&quot;:&quot;1&quot;,&quot;b&quot;:&quot;-4&quot;,&quot;c&quot;:&quot;4&quot;}">x² − 4x + 4 = 0</button><button type="button" class="chipb" data-kind="equation" data-ex="{&quot;a&quot;:&quot;6&quot;,&quot;b&quot;:&quot;5&quot;,&quot;c&quot;:&quot;-6&quot;}">6x² + 5x − 6 = 0</button><button type="button" class="chipb" data-kind="equation" data-ex="{&quot;a&quot;:&quot;3/4&quot;,&quot;b&quot;:&quot;1/2&quot;,&quot;c&quot;:&quot;-2&quot;}">(3/4)x² + (1/2)x − 2 = 0</button><button type="button" class="chipb" data-kind="equation" data-ex="{&quot;a&quot;:&quot;1&quot;,&quot;b&quot;:&quot;-2&quot;,&quot;c&quot;:&quot;-1&quot;}">x² − 2x − 1 = 0</button><button type="button" class="chipb" data-kind="equation" data-ex="{&quot;a&quot;:&quot;1&quot;,&quot;b&quot;:&quot;2&quot;,&quot;c&quot;:&quot;5&quot;}">x² + 2x + 5 = 0</button><button type="button" class="chipb" data-kind="equation" data-ex="{&quot;a&quot;:&quot;-6&quot;,&quot;b&quot;:&quot;0&quot;,&quot;c&quot;:&quot;24&quot;}">−6x² + 24 = 0</button><button type="button" class="chipb" data-kind="equation" data-ex="{&quot;a&quot;:&quot;2&quot;,&quot;b&quot;:&quot;-3&quot;,&quot;c&quot;:&quot;0&quot;}">2x² − 3x = 0</button><button type="button" class="chipb" data-kind="equation" data-ex="{&quot;a&quot;:&quot;0.1&quot;,&quot;b&quot;:&quot;0.2&quot;,&quot;c&quot;:&quot;0.1&quot;}">(1/10)x² + (1/5)x + (1/10) = 0</button></div><div id="ex-out" aria-live="polite"></div></div><div id="ex-p-roots" hidden><div class="qgrid qgrid3"><div class="ns-f"><label for="er-a" class="ns-l">A (leading coefficient)</label><input id="er-a" class="ns-in" type="text" inputmode="text" autocomplete="off" autocorrect="off" spellcheck="false" aria-describedby="er-err" value="1" placeholder="e.g. 2"></div><div class="ns-f"><label for="er-r1" class="ns-l">First root</label><input id="er-r1" class="ns-in" type="text" inputmode="text" autocomplete="off" autocorrect="off" spellcheck="false" aria-describedby="er-err" value="1" placeholder="e.g. 1/3"></div><div class="ns-f"><label for="er-r2" class="ns-l">Second root</label><input id="er-r2" class="ns-in" type="text" inputmode="text" autocomplete="off" autocorrect="off" spellcheck="false" aria-describedby="er-err" value="-5/2" placeholder="e.g. −2.5"></div></div><p class="note ns-msg" id="er-err" role="status"></p><div class="ns-try"><span class="ns-l">Try</span> <button type="button" class="chipb" data-kind="roots" data-ex="{&quot;a&quot;:&quot;1&quot;,&quot;r1&quot;:&quot;1&quot;,&quot;r2&quot;:&quot;-5/2&quot;}">A = 1, roots 1 and −5/2</button><button type="button" class="chipb" data-kind="roots" data-ex="{&quot;a&quot;:&quot;2&quot;,&quot;r1&quot;:&quot;1/3&quot;,&quot;r2&quot;:&quot;3/4&quot;}">A = 2, roots 1/3 and 3/4</button><button type="button" class="chipb" data-kind="roots" data-ex="{&quot;a&quot;:&quot;1&quot;,&quot;r1&quot;:&quot;-3&quot;,&quot;r2&quot;:&quot;-3&quot;}">A = 1, roots −3 and −3</button><button type="button" class="chipb" data-kind="roots" data-ex="{&quot;a&quot;:&quot;-1&quot;,&quot;r1&quot;:&quot;0&quot;,&quot;r2&quot;:&quot;4&quot;}">A = −1, roots 0 and 4</button></div><div id="er-out" aria-live="polite"></div></div><div id="ex-p-vertex" hidden><div class="qgrid qgrid3"><div class="ns-f"><label for="ev-a" class="ns-l">A (leading coefficient)</label><input id="ev-a" class="ns-in" type="text" inputmode="text" autocomplete="off" autocorrect="off" spellcheck="false" aria-describedby="ev-err" value="1" placeholder="e.g. 2"></div><div class="ns-f"><label for="ev-h" class="ns-l">h (vertex x)</label><input id="ev-h" class="ns-in" type="text" inputmode="text" autocomplete="off" autocorrect="off" spellcheck="false" aria-describedby="ev-err" value="2" placeholder="e.g. −3/4"></div><div class="ns-f"><label for="ev-k" class="ns-l">k (vertex y)</label><input id="ev-k" class="ns-in" type="text" inputmode="text" autocomplete="off" autocorrect="off" spellcheck="false" aria-describedby="ev-err" value="-3" placeholder="e.g. 5"></div></div><p class="note ns-msg" id="ev-err" role="status"></p><div class="ns-try"><span class="ns-l">Try</span> <button type="button" class="chipb" data-kind="vertex" data-ex="{&quot;a&quot;:&quot;1&quot;,&quot;h&quot;:&quot;2&quot;,&quot;k&quot;:&quot;-3&quot;}">(x − 2)² − 3</button><button type="button" class="chipb" data-kind="vertex" data-ex="{&quot;a&quot;:&quot;2&quot;,&quot;h&quot;:&quot;-3/4&quot;,&quot;k&quot;:&quot;-49/8&quot;}">2(x + 3/4)² − 49/8</button><button type="button" class="chipb" data-kind="vertex" data-ex="{&quot;a&quot;:&quot;-2&quot;,&quot;h&quot;:&quot;3&quot;,&quot;k&quot;:&quot;5&quot;}">−2(x − 3)² + 5</button><button type="button" class="chipb" data-kind="vertex" data-ex="{&quot;a&quot;:&quot;1&quot;,&quot;h&quot;:&quot;0&quot;,&quot;k&quot;:&quot;9&quot;}">x² + 9</button></div><div id="ev-out" aria-live="polite"></div></div><div class="ns-act"><button type="button" class="btn2" data-act="reset">Reset</button></div><p class="sr-only" id="ex-note" role="status" aria-live="polite"></p><noscript><p class="note">This tool needs JavaScript. Nothing is sent anywhere.</p></noscript></section><div id="ex-res" hidden><section class="card"><h2>Working</h2><div id="ex-steps"></div></section><section class="card"><h2>Checks</h2><div id="ex-verify"></div></section></div></div><section id="factoring"><h2>When a quadratic factors</h2><p>Every quadratic ax² + bx + c with a ≠ 0 can be written as a(x − r₁)(x − r₂), where r₁ and r₂ are its roots. What changes is which numbers the factors need. If the discriminant Δ = b² − 4ac is the square of a rational number, the roots are rational and the quadratic factors with whole-number coefficients, such as (2x + 5)(x − 1) for 2x² + 3x − 5 = 0. If Δ is positive but not such a square, the factors need square roots, and the quadratic does not factor over the rationals. If Δ is negative, the factors contain i, and over the real numbers the quadratic stays in one piece.</p><div class="tw" tabindex="0" role="region" aria-label="Scrollable table: Equation, Roots, Factored form, Over which numbers"><table><thead><tr><th>Equation</th><th>Roots</th><th>Factored form</th><th>Over which numbers</th></tr></thead><tbody><tr><td>x² − 5x + 6 = 0</td><td>2,  3</td><td>(x − 2)(x − 3)</td><td>whole numbers (rationals)</td></tr><tr><td>x² − 4x + 4 = 0</td><td>2</td><td>(x − 2)²</td><td>whole numbers (rationals)</td></tr><tr><td>x² − 2x − 1 = 0</td><td>1 − √2,  1 + √2</td><td>(x − 1 − √2)(x − 1 + √2)</td><td>real numbers, with radicals</td></tr><tr><td>x² + 2x + 5 = 0</td><td>−1 + 2i,  −1 − 2i</td><td>(x + 1 − 2i)(x + 1 + 2i)</td><td>complex numbers</td></tr></tbody></table></div><p class="note">A repeated root (Δ = 0) gives a perfect square, a(x − r)². The page also takes out any common factor first, so 3/4 x² + 1/2 x − 2 is factored as (1/4)(x + 2)(3x − 4).</p></section><section id="rational-root"><h2>The rational root theorem</h2><p>Write the equation with whole-number coefficients. A rational root p/q, in lowest terms, must have p dividing the constant and q dividing the leading coefficient. For 2x² + 3x − 5 = 0 the constant is −5 and the leading coefficient is 2, so p is ±1 or ±5 and q is 1 or 2. That gives 8 candidates: ±1, ±5, ±1/2 and ±5/2. The page tests each one exactly, and x = 1 and x = −5/2 are the two that work. The theorem lists candidates; it does not say whether any works. The discriminant does: the roots are rational exactly when Δ is a perfect square, and the page checks that both routes agree.</p></section><section id="vertex"><h2>Vertex form and completing the square</h2><p>Completing the square rewrites ax² + bx + c as a(x − h)² + k, where h = −b/(2a) and k = c − b²/(4a). The point (h, k) is the vertex of the parabola. Setting the vertex form to zero gives (x − h)² = −k/a, and taking square roots gives x = h ± √(−k/a), which is the quadratic formula in another dress. The table shows the three forms side by side for the same equations.</p><div class="tw" tabindex="0" role="region" aria-label="Scrollable table: Equation, Whole-number form, Factored form, Vertex form"><table><thead><tr><th>Equation</th><th>Whole-number form</th><th>Factored form</th><th>Vertex form</th></tr></thead><tbody><tr><td>2x² + 3x − 5 = 0</td><td>2x² + 3x − 5 = 0</td><td>(2x + 5)(x − 1)</td><td>2(x + 3/4)² − 49/8</td></tr><tr><td>x² − 5x + 6 = 0</td><td>x² − 5x + 6 = 0</td><td>(x − 2)(x − 3)</td><td>(x − 5/2)² − 1/4</td></tr><tr><td>x² − 4x + 4 = 0</td><td>x² − 4x + 4 = 0</td><td>(x − 2)²</td><td>(x − 2)²</td></tr><tr><td>6x² + 5x − 6 = 0</td><td>6x² + 5x − 6 = 0</td><td>(2x + 3)(3x − 2)</td><td>6(x + 5/12)² − 169/24</td></tr><tr><td>(3/4)x² + (1/2)x − 2 = 0</td><td>3x² + 2x − 8 = 0</td><td>(1/4)(x + 2)(3x − 4)</td><td>(3/4)(x + 1/3)² − 25/12</td></tr><tr><td>x² − 2x − 1 = 0</td><td>x² − 2x − 1 = 0</td><td>(x − 1 − √2)(x − 1 + √2)</td><td>(x − 1)² − 2</td></tr><tr><td>x² + 2x + 5 = 0</td><td>x² + 2x + 5 = 0</td><td>(x + 1 − 2i)(x + 1 + 2i)</td><td>(x + 1)² + 4</td></tr><tr><td>−6x² + 24 = 0</td><td>x² − 4 = 0</td><td>−6(x + 2)(x − 2)</td><td>−6x² + 24</td></tr><tr><td>2x² − 3x = 0</td><td>2x² − 3x = 0</td><td>x(2x − 3)</td><td>2(x − 3/4)² − 9/8</td></tr></tbody></table></div></section><section id="build"><h2>Building an equation from its roots or its vertex</h2><p>With the roots and A, the equation is A(x − r₁)(x − r₂) multiplied out: roots 1/3 and −5/2 with A = 1 give x² + (13/6)x − (5/6) = 0, which is 6x² + 13x − 5 = 0 in whole numbers. With a vertex (h, k) and A, the equation is A(x − h)² + k multiplied out: A = −2, vertex (3, 5) gives −2x² + 12x − 13 = 0. Either way the page then shows every form and checks that the equation solves back to what you entered. A complex pair of roots cannot be typed in; use the vertex form for those.</p></section><section id="policy"><h2>Exact, not rounded</h2><p>Every coefficient is held as an exact fraction of whole numbers, so the factors are decided exactly. 0.1 is read as 1/10, not as a binary approximation, so 0.1x² + 0.2x + 0.1 is exactly (1/10)(x + 1)². Each form is expanded back to A, B and C and compared exactly, and all three forms are compared at nine values of x.</p><div class="tw" tabindex="0" role="region" aria-label="Scrollable table: Equation, Factored form, Why it matters"><table><thead><tr><th>Equation</th><th>Factored form</th><th>Why it matters</th></tr></thead><tbody><tr><td>(1/10)x² + (1/5)x + (1/10) = 0</td><td>(1/10)(x + 1)²</td><td>0.1 is not exact in binary floating point</td></tr><tr><td>x² − 2000000000x + 1000000000000000000 = 0</td><td>(x − 1000000000)²</td><td>a perfect square with large coefficients</td></tr><tr><td>x² − 2000000000x + 1000000000000000001 = 0</td><td>(x − 1000000000 − i)(x − 1000000000 + i)</td><td>one unit in the constant changes the factors</td></tr><tr><td>(3/4)x² + (1/2)x − 2 = 0</td><td>(1/4)(x + 2)(3x − 4)</td><td>fractions stay as fractions</td></tr></tbody></table></div></section><section id="faq"><h2>Questions</h2><h3>What is the difference between the factored form and the vertex form?</h3><p>The factored form a(x − r₁)(x − r₂) shows where the curve crosses the x-axis. The vertex form a(x − h)² + k shows the turning point. Both describe the same parabola.</p><h3>What if the quadratic does not factor over the integers?</h3><p>Then its roots are irrational or complex. The page gives the factors with exact radicals, such as (x − 1 − √2)(x − 1 + √2), and says that they do not exist over the rationals.</p><h3>Why is there a common factor outside the brackets?</h3><p>Whole-number factors have no common factor, so any common factor of A, B and C, including a fraction, is taken out first. 6x² + 4x − 2 is 2(3x − 1)(x + 1).</p><h3>What happens when A is zero?</h3><p>The equation is linear, so there is nothing to factor. The page says so and gives the one root.</p><h3>How do I use complex factors in a circuit calculation?</h3><p>Mathematics writes the imaginary unit as i and electrical engineering writes it as j. Complex conjugate factors of a second-order circuit equation correspond to an oscillating, under-damped response.</p><h3>Is anything sent to a server?</h3><p>No. The calculation runs in your browser. The page’s security policy also blocks it from sending data to other sites, so nothing you enter leaves your device.</p></section><section id="related"><h2>Related Calculators and Tools</h2><p><a class="chip" href="../quadratic-solver/">Quadratic Formula Calculator, Mode 01</a><a class="chip" href="../discriminant-calculator/">Discriminant Calculator, Mode 02</a><a class="chip" href="../parabola-graph/">Parabola Graph &amp; Vertex Calculator, Mode 03</a><a class="chip" href="../complex-number/">Complex Number Calculator</a><a class="chip" href="../fraction-simplifier/">Fraction Simplifier</a><a class="chip" href="../powers-roots/">Powers and Roots</a><a class="chip" href="../rlc-transient/">RLC Transient</a><a class="chip" href="../scientific-calculator/">Scientific Calculator</a></p></section></main><section class="w fb" aria-labelledby="fb-h"><h2 id="fb-h">Tell us how to improve this page</h2><textarea id="fb-t" rows="4" maxlength="1500" placeholder="Your message ..." aria-label="Tell us how to improve this page"></textarea><p><button type="button" class="btn" id="fb-b">Email your suggestion</button> <button type="button" class="btn" id="sh-b">Share this page</button> <span class="note" id="fb-n">This opens your email app. Nothing is sent until you press send.</span></p></section><script>(function(){var b=document.getElementById("fb-b");if(!b)return;b.onclick=function(){var t=document.getElementById("fb-t").value.trim(),n=document.getElementById("fb-n");if(!t){n.textContent="Please write a message first.";return}location.assign("mailto:"+"elecmetrics@gmail.com"+"?subject="+encodeURIComponent("Elecmetric feedback: "+document.title)+"&body="+encodeURIComponent(t+"\n\nPage: "+location.href))}})();</script><script>(function(){var s=document.getElementById("sh-b");if(!s)return;s.onclick=function(){var u=location.href,t=document.title,n=document.getElementById("fb-n");if(navigator.share){navigator.share({title:t,url:u}).catch(function(){});return}if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(u).then(function(){n.textContent="Link copied."},function(){n.textContent="Copy this address: "+u})}else{n.textContent="Copy this address: "+u}}})();</script><footer class="mf"><div class="mf-w"><div class="mf-grid" role="navigation" aria-label="Site map"><div class="mf-col"><p class="mf-h"><a href="../../calculators/">Calculators</a></p><ul><li><a href="../../calculators/electrical-fundamentals/">Electrical Fundamentals</a></li><li><a href="../../calculators/power-and-energy/">Power and Energy</a></li><li><a href="../../calculators/cable-engineering/">Cable Engineering</a></li><li><a href="../../calculators/motor-engineering/">Motor Engineering</a></li><li><a href="../../calculators/transformer-engineering/">Transformer Engineering</a></li><li><a href="../../calculators/electrical-protection/">Electrical Protection</a></li><li><a href="../../calculators/power-systems/">Power Systems</a></li><li><a href="../../calculators/earthing-and-grounding/">Earthing and Grounding</a></li><li><a href="../../calculators/renewable-energy/">Renewable Energy</a></li><li><a href="../../calculators/airport-agl-engineering/">Airport and AGL Engineering</a></li><li><a href="../../calculators/electronics-and-instrumentation/">Electronics and Instrumentation</a></li><li><a href="../../calculators/lighting-and-facilities/">Lighting and Facilities</a></li><li><a href="../../calculators/engineering-mathematics/">Engineering Mathematics</a></li></ul></div><div class="mf-col"><p class="mf-h"><a href="../../calculators/">Popular calculators</a></p><ul><li><a href="../../calculators/cable-size/">Cable Size</a></li><li><a href="../../calculators/voltage-drop/">Voltage Drop</a></li><li><a href="../../calculators/breaker-size/">Breaker Size</a></li><li><a href="../../calculators/motor-current/">Motor Current</a></li><li><a href="../../calculators/transformer-sizing/">Transformer Sizing</a></li><li><a href="../../calculators/earth-resistance/">Earth Resistance</a></li><li><a href="../../calculators/pf-correction-kvar/">Power Factor Correction</a></li><li><a href="../../calculators/generator-sizing/">Generator Sizing</a></li><li><a href="../../calculators/battery-bank-sizing/">Battery Bank Sizing</a></li><li><a href="../../calculators/pv-energy/">Solar PV Energy</a></li></ul></div><div class="mf-col"><p class="mf-h"><a href="../../converters/index.html">Conversions</a></p><ul><li><a href="../../pages/index.html">Electrical conversions</a></li><li><a href="../../pages/kw-to-amps.html">kW to Amps</a></li><li><a href="../../pages/amps-to-kw.html">Amps to kW</a></li><li><a href="../../pages/kva-to-kw.html">kVA to kW</a></li><li><a href="../../pages/watts-to-amps.html">Watts to Amps</a></li><li><a href="../../converters/length-converter.html">Length</a></li><li><a href="../../converters/power-converter.html">Power</a></li><li><a href="../../converters/energy-converter.html">Energy</a></li><li><a href="../../converters/temperature-converter.html">Temperature</a></li><li><a href="../../pages/wire-gauge.html">AWG to mm²</a></li></ul></div><div class="mf-col"><p class="mf-h"><a href="../../converters/index.html">Formulas</a></p><ul><li><a href="../../converters/ohms-law-formulas.html">Ohm’s Law formulas</a></li><li><a href="../../converters/kirchhoffs-laws.html">Kirchhoff’s laws</a></li><li><a href="../../converters/cable-sizing-formulas.html">Cable sizing formulas</a></li><li><a href="../../converters/circuit-breaker-formulas.html">Circuit breaker formulas</a></li><li><a href="../../converters/ac-circuit-formulas.html">AC circuit formulas</a></li><li><a href="../../converters/battery-formulas.html">Battery formulas</a></li></ul></div><div class="mf-col"><p class="mf-h">Elecmetric</p><ul><li><a href="../../calculators/basic-calculator/">Basic Calculator</a></li><li><a href="../../calculators/scientific-calculator/">Scientific Calculator</a></li><li><a href="../../index.html#verification">How it is verified</a></li><li><a href="../../privacy.html">Privacy</a></li><li><a href="../../terms.html">Terms</a></li><li><a href="../../technical-library/">Technical Library</a></li><li><a href="mailto:elecmetrics@gmail.com">Contact us</a></li></ul></div></div><div class="mf-legal">Results are computed by the same tested engine as the calculators in Elecmetric and are for estimating. Check design values against the standard and the equipment data you work to. Elecmetric results are not a substitute for a design review by a competent engineer.<br>Developed by Elecmetric. No independent technical review of the calculators has been carried out. Results are for estimating.<br>&copy; 2026 Elecmetric &middot; <a href="../../privacy.html">Privacy</a> &middot; <a href="../../terms.html">Terms</a></div></div><script>(function(){if(location.protocol!=="file:")return;document.addEventListener("click",function(e){if(e.defaultPrevented||e.button||e.metaKey||e.ctrlKey||e.shiftKey)return;var a=e.target.closest&&e.target.closest("a[href]");if(!a||a.target)return;var m=/^([^?#]*)(.*)$/.exec(a.getAttribute("href"));if(!m[1]||/^[a-z][a-z0-9+.-]*:/i.test(m[1])||!/[/]$/.test(m[1]))return;e.preventDefault();location.href=m[1]+"index.html"+m[2]})})();</script><button type="button" class="totop" id="totop" aria-label="Back to top" tabindex="-1">↑ Top</button><script>(function(){var b=document.getElementById("totop");if(!b)return;var t=0;function u(){t=0;var on=(window.pageYOffset||document.documentElement.scrollTop)>400,bar=document.getElementById("bar"),h=bar&&bar.offsetHeight?bar.offsetHeight:0;b.classList.toggle("on",on);b.tabIndex=on?0:-1;b.style.bottom=h?"calc("+(h+16)+"px + env(safe-area-inset-bottom,0px))":"";}function q(){if(!t)t=requestAnimationFrame(u)}window.addEventListener("scroll",q,{passive:true});window.addEventListener("resize",q);b.addEventListener("click",function(){var r=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;window.scrollTo({top:0,behavior:r?"auto":"smooth"})});u()})();</script></footer><script>/* Elecmetric Quadratic Formula Calculator: exact engine for Mode 01 (Quadratic Equation Solver).
+   Every coefficient is held as an exact rational number (BigInt numerator and denominator), so the discriminant, its sign and the roots are decided exactly.
+   Roots come out as (u +/- v*sqrt(r))/w with r squarefree; they are verified by exact substitution in the field Q(sqrt(d)).
+   Works in Node (module.exports) and in the browser (global Quad). */
+(function (root) {
+  'use strict';
+  var MAXDIG = 60, MAXEXP = 300, TRIAL = 200000;
+  function babs(x) { return x < 0n ? -x : x; }
+  function gcd(a, b) { a = babs(a); b = babs(b); while (b) { var t = a % b; a = b; b = t; } return a; }
+  function isqrt(n) { if (n < 0n) throw new Error('isqrt of negative'); if (n < 2n) return n; var x = 1n << BigInt((n.toString(2).length + 1) >> 1); for (;;) { var y = (x + n / x) >> 1n; if (y >= x) return x; x = y; } }
+  function R(n, d) { if (d === undefined) d = 1n; if (d === 0n) throw new Error('zero denominator'); if (d < 0n) { n = -n; d = -d; } var g = gcd(n, d); if (g > 1n) { n /= g; d /= g; } return { n: n, d: d }; }
+  var ZERO = R(0n), ONE = R(1n);
+  function add(a, b) { return R(a.n * b.d + b.n * a.d, a.d * b.d); }
+  function sub(a, b) { return R(a.n * b.d - b.n * a.d, a.d * b.d); }
+  function mul(a, b) { return R(a.n * b.n, a.d * b.d); }
+  function div(a, b) { return R(a.n * b.d, a.d * b.n); }
+  function neg(a) { return { n: -a.n, d: a.d }; }
+  function isZero(a) { return a.n === 0n; }
+  function sgn(a) { return a.n === 0n ? 0 : a.n < 0n ? -1 : 1; }
+  function eq(a, b) { return a.n === b.n && a.d === b.d; }
+  function ri(n) { return R(BigInt(n), 1n); }
+  function rs(a) { return a.d === 1n ? String(a.n) : a.n + '/' + a.d; }
+
+  /* ---------- input parsing ---------- */
+  function parseDec(s) {
+    var m = /^([+-]?)(\d*)(?:\.(\d*))?(?:[eE]([+-]?\d+))?$/.exec(s);
+    if (!m || (m[2] === '' && (m[3] === undefined || m[3] === ''))) return null;
+    var ip = m[2] || '', fp = m[3] || '', ex = m[4] ? parseInt(m[4], 10) : 0;
+    if (ip.length + fp.length > MAXDIG) return { err: 'Too many digits: use at most ' + MAXDIG + '.' };
+    if (Math.abs(ex) > MAXEXP) return { err: 'Exponent too large: use between \u2212' + MAXEXP + ' and ' + MAXEXP + '.' };
+    var n = BigInt((ip + fp) || '0'), e = ex - fp.length;
+    var v = e >= 0 ? R(n * 10n ** BigInt(e), 1n) : R(n, 10n ** BigInt(-e));
+    return { v: m[1] === '-' ? neg(v) : v };
+  }
+  /* A coefficient: integer, decimal, scientific, fraction a/b (a and b may be decimals) or mixed number "2 1/3". */
+  function parseNum(text) {
+    var s = String(text === undefined || text === null ? '' : text).replace(/\u2212|\u2013|\u2014/g, '-').replace(/\u2044|\u2215/g, '/').replace(/,/g, '').trim();
+    if (s === '') return { empty: true, error: 'Enter a value.' };
+    var m = /^([+-]?)\s*(\d+)[ _]+(\d+)\s*\/\s*(\d+)$/.exec(s);
+    if (m) { var w = BigInt(m[2]), nn = BigInt(m[3]), dd = BigInt(m[4]); if (dd === 0n) return { error: 'The denominator cannot be zero.' }; var mv = R(w * dd + nn, dd); return { v: m[1] === '-' ? neg(mv) : mv }; }
+    if (s.indexOf('/') >= 0) {
+      var parts = s.split('/'); if (parts.length !== 2) return { error: 'Use one fraction bar, for example 3/4.' };
+      var a = parseDec(parts[0].trim()), b = parseDec(parts[1].trim());
+      if (!a || !b) return { error: 'Cannot read \u201c' + s + '\u201d. Use a number, a decimal or a fraction such as 3/4.' };
+      if (a.err || b.err) return { error: a.err || b.err };
+      if (isZero(b.v)) return { error: 'The denominator cannot be zero.' };
+      return { v: div(a.v, b.v) };
+    }
+    var d = parseDec(s);
+    if (!d) return { error: 'Cannot read \u201c' + s + '\u201d. Use a number, a decimal or a fraction such as 3/4.' };
+    if (d.err) return { error: d.err };
+    return { v: d.v };
+  }
+
+  /* ---------- radicals ---------- */
+  /* n >= 0 BigInt -> {s, r, full} with n = s^2 * r and r squarefree as far as trial division up to TRIAL reaches (full=false if a large unfactored part remains). */
+  function sqrtSplit(n) {
+    if (n === 0n) return { s: 0n, r: 0n, full: true };
+    var s = 1n, r = 1n, rest = n, p = 2n, lim = BigInt(TRIAL);
+    while (p * p <= rest && p <= lim) {
+      var e = 0; while (rest % p === 0n) { rest /= p; e++; }
+      if (e) { s *= p ** BigInt(e >> 1); if (e & 1) r *= p; }
+      p += p === 2n ? 1n : 2n;
+    }
+    var full = rest === 1n || p * p > rest;
+    if (rest > 1n) { var q = isqrt(rest); if (q * q === rest) { s *= q; full = true; } else r *= rest; }
+    return { s: s, r: r, full: full };
+  }
+
+  /* ---------- number field Q(sqrt(d)), d an integer that is not a perfect square: a + b*sqrt(d) ---------- */
+  function Fm(a, b, d) { return { a: a, b: b, d: d }; }
+  function fmul(x, y) { return Fm(add(mul(x.a, y.a), mul(mul(x.b, y.b), x.d)), add(mul(x.a, y.b), mul(x.b, y.a)), x.d); }
+  function fadd(x, y) { return Fm(add(x.a, y.a), add(x.b, y.b), x.d); }
+  function fscale(k, x) { return Fm(mul(k, x.a), mul(k, x.b), x.d); }
+
+  /* ---------- formatting ---------- */
+  function mn(s) { return String(s).replace(/-/g, '\u2212'); }
+  function coefTerm(c, pow, first) { /* c rational non-zero -> text of one term of a polynomial */
+    var neg_ = c.n < 0n, ab = neg_ ? { n: -c.n, d: c.d } : c, body;
+    var isOne = ab.n === 1n && ab.d === 1n, v = pow === 0 ? 'x'.slice(0, 0) : pow === 1 ? 'x' : 'x\u00b2';
+    if (pow === 0) body = rs(ab).indexOf('/') >= 0 ? '(' + rs(ab) + ')' : rs(ab);
+    else body = (isOne ? '' : (ab.d === 1n ? rs(ab) : '(' + rs(ab) + ')')) + v;
+    if (first) return (neg_ ? '\u2212' : '') + body;
+    return (neg_ ? ' \u2212 ' : ' + ') + body;
+  }
+  function equationText(A, B, C) {
+    var out = '', first = true;
+    [[A, 2], [B, 1], [C, 0]].forEach(function (t) { if (isZero(t[0])) return; out += coefTerm(t[0], t[1], first); first = false; });
+    if (first) out = '0';
+    return out + ' = 0';
+  }
+  function sciOf(q, sig) {
+    var n = q.n < 0n ? -q.n : q.n, d = q.d, e = n.toString().length - d.toString().length;
+    for (var tries = 0; tries < 4; tries++) {
+      var sc = e >= 0 ? R(n, d * 10n ** BigInt(e)) : R(n * 10n ** BigInt(-e), d);
+      if (sc.n >= sc.d * 10n) e++; else if (sc.n < sc.d) e--; else break;
+    }
+    var m = e >= 0 ? R(n, d * 10n ** BigInt(e)) : R(n * 10n ** BigInt(-e), d), P = 10n ** BigInt(sig - 1), v = (m.n * P * 2n + m.d) / (m.d * 2n);
+    if (v >= P * 10n) { v /= 10n; e++; }
+    var t = String(v), mant = t[0] + (t.length > 1 ? '.' + t.slice(1) : ''); mant = mant.replace(/(\.\d*?)0+$/, '$1').replace(/\.$/, '');
+    return (q.n < 0n ? '-' : '') + mant + 'e' + (e < 0 ? '\u2212' : '') + Math.abs(e);
+  }
+  /* Exact decimal of a rational: returns {text, exact}; terminating expansions are shown in full (up to 40 places), others are rounded to dp places. */
+  function decOfRational(q, dp) {
+    var n = q.n, d = q.d, neg_ = n < 0n; if (neg_) n = -n;
+    var t = d, twos = 0, fives = 0; while (t % 2n === 0n) { t /= 2n; twos++; } while (t % 5n === 0n) { t /= 5n; fives++; }
+    var terminating = t === 1n, places = Math.max(twos, fives);
+    var use = terminating && places <= 40 ? places : dp, S = 10n ** BigInt(use);
+    var scaled = (n * S * 2n + d) / (d * 2n);
+    var ip = scaled / S, fp = scaled % S, fs = String(fp); fs = use ? '0'.repeat(Math.max(0, use - fs.length)) + fs : '';
+    var text = String(ip) + (use ? '.' + fs : '');
+    if (terminating && places <= 40) text = text.replace(/(\.\d*?)0+$/, '$1').replace(/\.$/, '');
+    var isZero_ = /^0(\.0*)?$/.test(text);
+    if (isZero_ && n !== 0n) return { text: sciOf(q, 10), exact: false };
+    return { text: (neg_ && !isZero_ ? '-' : '') + text, exact: terminating && places <= 40 };
+  }
+  /* (u + sg*v*sqrt(r))/w, r > 0 integer -> decimal rounded to dp places. u, v, w BigInt; sg = +1 or -1. */
+  function decOfRadical(u, v, r, w, sg, dp) {
+    var G = dp + 12, S = 10n ** BigInt(G), root = isqrt(r * S * S); /* sqrt(r)*S, floor */
+    var num = u * S + BigInt(sg) * v * root, q = R(num, w * S);
+    var res = decOfRational(q, dp);
+    if (res.exact && !/\./.test(res.text) ) return { text: res.text, exact: false };
+    /* force fixed dp places for irrational values */
+    var qq = R(num, w * S), n = qq.n, d = qq.d, ng = n < 0n; if (ng) n = -n;
+    var P = 10n ** BigInt(dp), sc = (n * P * 2n + d) / (d * 2n), ip = sc / P, fp = String(sc % P); fp = '0'.repeat(Math.max(0, dp - fp.length)) + fp;
+    var tx = String(ip) + (dp ? '.' + fp : ''); if (/^0(\.0*)?$/.test(tx)) return { text: sciOf(R(num * (ng ? -1n : 1n) * (ng ? -1n : 1n) * (ng ? -1n : 1n), w * S), 10), exact: false }; if (ng) tx = '-' + tx;
+    return { text: tx, exact: false };
+  }
+  function radText(r) { return '\u221a' + r; }
+  /* exact text of (u + sg*v*sqrt(r)*[i])/w with w > 0 and gcd(u, v, w) = 1. imag: use i. */
+  function exactText(u, v, r, w, sg, imag) {
+    var rad = (imag ? 'i' : '') + (r === 1n ? '' : radText(r)), vs = v === 1n ? '' : String(v);
+    var core = vs + rad;
+    if (u === 0n) { var t0 = (sg < 0 ? '\u2212' : '') + core; return w === 1n ? t0 : (sg < 0 ? '\u2212' + core + '/' + w : core + '/' + w); }
+    var us = mn(String(u)), op = sg < 0 ? ' \u2212 ' : ' + ';
+    if (w === 1n) return us + op + core;
+    return '(' + us + op + core + ')/' + w;
+  }
+  function imagUnit(core) { return core; }
+
+  /* ---------- the solver ---------- */
+  function classify(D, perfect) {
+    if (D.n > 0n) return perfect ? 'Two distinct real roots (rational)' : 'Two distinct real roots (irrational)';
+    if (D.n === 0n) return 'One repeated real root (double root)';
+    return 'Two complex conjugate roots';
+  }
+  function solve(input) {
+    input = input || {};
+    var dp = input.dp === undefined ? 8 : Math.max(2, Math.min(15, input.dp | 0));
+    var pa = parseNum(input.a), pb = parseNum(input.b), pc = parseNum(input.c);
+    var errs = {}, anyEmpty = pa.empty && pb.empty && pc.empty;
+    if (pa.error) errs.a = pa.error; if (pb.error) errs.b = pb.error; if (pc.error) errs.c = pc.error;
+    if (pa.empty && !pa.error) errs.a = 'Enter A (type 0 if the x\u00b2 term is absent).';
+    if (pb.empty && !pb.error) errs.b = 'Enter B (type 0 if the x term is absent).';
+    if (pc.empty && !pc.error) errs.c = 'Enter C (type 0 if there is no constant).';
+    if (errs.a || errs.b || errs.c) return { ok: false, empty: anyEmpty, errors: errs, error: errs.a || errs.b || errs.c };
+    var A = pa.v, B = pb.v, C = pc.v, eqn = equationText(A, B, C), steps = [];
+    var res = { ok: true, A: A, B: B, C: C, a: rs(A), b: rs(B), c: rs(C), equation: eqn, dp: dp, steps: steps };
+    steps.push('Equation: ' + eqn + '. Coefficients: A = ' + rs(A) + ', B = ' + rs(B) + ', C = ' + rs(C) + '.');
+
+    /* degenerate cases */
+    if (isZero(A) && isZero(B)) {
+      if (isZero(C)) { res.kind = 'indeterminate'; res.label = 'Every real number is a solution'; res.degree = -1; steps.push('A = B = C = 0, so the equation reads 0 = 0, which is true for every x. It is an identity, not an equation to solve.'); res.roots = []; return res; }
+      res.kind = 'none'; res.label = 'No solution'; res.degree = 0; res.roots = []; steps.push('A = B = 0 leaves ' + rs(C) + ' = 0, which is never true because C is not zero. There is no value of x that satisfies the equation.'); return res;
+    }
+    if (isZero(A)) {
+      var x = neg(div(C, B));
+      res.kind = 'linear'; res.degree = 1; res.label = 'A = 0: the equation is linear, with one root';
+      res.roots = [{ exact: rs(x), dec: decOfRational(x, dp), q: x, real: true, field: null }];
+      steps.push('A = 0, so this is the linear equation ' + rs(B) + 'x + ' + rs(C) + ' = 0, not a quadratic. There is one root: x = \u2212C/B = \u2212(' + rs(C) + ')/(' + rs(B) + ') = ' + rs(x) + '.');
+      res.verify = [verifyRational(A, B, C, x)]; res.verifyOk = res.verify.every(function (v) { return v.ok; });
+      steps.push('Check: A\u00b7x\u00b2 + B\u00b7x + C at x = ' + rs(x) + ' gives ' + res.verify[0].value + '.');
+      return res;
+    }
+
+    /* quadratic */
+    res.degree = 2;
+    var B2 = mul(B, B), fAC = mul(ri(4), mul(A, C)), D = sub(B2, fAC);
+    res.D = D; res.discriminant = rs(D);
+    steps.push('Discriminant: \u0394 = B\u00b2 \u2212 4AC = (' + rs(B) + ')\u00b2 \u2212 4\u00b7(' + rs(A) + ')\u00b7(' + rs(C) + ') = ' + rs(B2) + ' \u2212 (' + rs(fAC) + ') = ' + rs(D) + '.');
+    var twoA = mul(ri(2), A), h = neg(div(B, twoA)), k = neg(div(D, mul(ri(4), A)));
+    res.vertex = { x: h, y: k }; res.axis = h; res.yint = C; res.sum = neg(div(B, A)); res.product = div(C, A);
+    res.opens = sgn(A) > 0 ? 'up' : 'down'; res.extremum = sgn(A) > 0 ? 'minimum' : 'maximum'; res.extremumValue = k;
+    var perfectSq = false, sq = null;
+    if (D.n >= 0n) { var pn = isqrt(D.n), qd = isqrt(D.d); perfectSq = pn * pn === D.n && qd * qd === D.d; if (perfectSq) sq = R(pn, qd); }
+    res.perfectSquare = perfectSq;
+    res.label = classify(D, perfectSq); res.rootCount = D.n < 0n ? 2 : D.n === 0n ? 1 : 2;
+    steps.push(D.n > 0n ? '\u0394 > 0: two distinct real roots' + (perfectSq ? '. \u0394 is a perfect square, so both roots are rational.' : '. \u0394 is not a perfect square, so the roots are irrational.') : D.n === 0n ? '\u0394 = 0: one repeated real root, the parabola just touches the x-axis.' : '\u0394 < 0: no real roots; the roots are a complex conjugate pair, shown below as a \u00b1 bi.');
+    steps.push('Quadratic formula: x = (\u2212B \u00b1 \u221a\u0394) / (2A) = (' + mn(rs(neg(B))) + ' \u00b1 \u221a(' + rs(D) + ')) / ' + rs(twoA) + '.');
+    var roots = [];
+    if (D.n === 0n) {
+      roots.push({ exact: rs(h), dec: decOfRational(h, dp), q: h, real: true });
+      res.kind = 'repeated'; steps.push('x = \u2212B/(2A) = ' + rs(h) + ' (repeated).');
+      res.roots = roots;
+    } else if (perfectSq) {
+      var r1 = div(sub(neg(B), sq), twoA), r2 = div(add(neg(B), sq), twoA);
+      var lo = sgn(sub(r1, r2)) <= 0 ? r1 : r2, hi = lo === r1 ? r2 : r1;
+      roots.push({ exact: rs(lo), dec: decOfRational(lo, dp), q: lo, real: true }, { exact: rs(hi), dec: decOfRational(hi, dp), q: hi, real: true });
+      res.kind = 'rational'; steps.push('\u221a\u0394 = \u221a(' + rs(D) + ') = ' + rs(sq) + ', so x = (' + mn(rs(neg(B))) + ' \u00b1 ' + rs(sq) + ') / ' + rs(twoA) + ', which gives x = ' + rs(lo) + ' and x = ' + rs(hi) + '.');
+      res.roots = roots;
+    } else {
+      /* radical: sqrt(|D|) = sqrt(p*q)/q for D = p/q  =>  x = (u +/- v*sqrt(r))/w */
+      var absD = D.n < 0n ? { n: -D.n, d: D.d } : D, m = absD.n * absD.d, sp = sqrtSplit(m);
+      var s = sp.s, r = sp.r, qd2 = absD.d;
+      /* x = (-B +/- (s*sqrt(r)/qd2)) / (2A), with B = Bn/Bd, 2A = An2/Ad2 */
+      var Bn = B.n, Bd = B.d, An = twoA.n, Ad = twoA.d;
+      /* x = [(-Bn/Bd) +/- s*sqrt(r)/qd2] * Ad/An = [(-Bn*qd2 +/- s*Bd*sqrt(r)) / (Bd*qd2)] * Ad/An */
+      var uu = -Bn * qd2 * Ad, vv = s * Bd * Ad, ww = Bd * qd2 * An;
+      if (ww < 0n) { ww = -ww; uu = -uu; vv = -vv; }
+      var gg = gcd(gcd(uu, vv), ww); if (gg > 1n) { uu /= gg; vv /= gg; ww /= gg; }
+      var vpos = vv < 0n ? -vv : vv; /* the two signs cover both roots, so v can be taken positive */
+      var imag = D.n < 0n;
+      res.radicand = r; res.radicandFull = sp.full; res.form = { u: uu, v: vpos, r: r, w: ww, imag: imag };
+      steps.push('Simplify the radical: ' + (imag ? '\u221a(\u2212\u0394) ' : '\u221a\u0394 ') + '= \u221a(' + rs(absD) + ') = ' + (function () { var sq2 = R(s, qd2); return (sq2.n === 1n && sq2.d === 1n ? '' : rs(sq2)) + '\u221a' + r; })() + (sp.full ? '' : ' (the radicand has a large factor that could not be tested for square parts)') + '.');
+      var mk = function (sg) {
+        var ex = exactText(uu, vpos, r, ww, sg, imag), re_, im_;
+        if (!imag) { var dc = decOfRadical(uu, vpos, r, ww, sg, dp); return { exact: ex, dec: dc, real: true, sg: sg }; }
+        var reQ = R(uu, ww), imQ = decOfRadical(0n, vpos, r, ww, 1, dp);
+        var reD = decOfRational(reQ, dp), reT = reD.exact ? reD.text : reD.text;
+        var imN = imQ.text.replace(/^-/, ''), imT = imN === '1' ? '' : imN, sign = sg < 0 ? '\u2212' : '+';
+        var dtext = (isZero(reQ) ? '' : reT + ' ') + (isZero(reQ) ? (sg < 0 ? '-' : '') : sign + ' ') + imT + 'i';
+        return { exact: ex, dec: { text: dtext, exact: false }, re: reD, im: { text: (sg < 0 ? '-' : '') + imN, exact: false }, real: false, sg: sg };
+      };
+      var m1 = mk(-1), m2 = mk(1);
+      if (!imag) { /* order: smaller root first. sign of 2A decides: x = (u + sg v sqrt r)/w with w > 0, so sg=-1 is smaller */ roots.push(m1, m2); }
+      else roots.push(m2, m1);
+      res.kind = imag ? 'complex' : 'irrational';
+      steps.push('x = ' + roots[0].exact + '  and  x = ' + roots[1].exact + '.');
+      res.roots = roots;
+      /* exact verification in Q(sqrt(d)) */
+      var dField = imag ? -r : r, Ft = function (sg) { return Fm(R(uu, ww), R(BigInt(sg) * vpos, ww), ri(dField)); };
+      var verify = [-1, 1].map(function (sg) {
+        var x = Ft(sg), t2 = fscale(A, fmul(x, x)), t1 = fscale(B, x), tot = fadd(fadd(t2, t1), Fm(C, ZERO, ri(dField)));
+        var ok = isZero(tot.a) && isZero(tot.b);
+        return { ok: ok, value: ok ? '0' : (rs(tot.a) + (isZero(tot.b) ? '' : ' + ' + rs(tot.b) + '\u221a' + dField)), root: roots[sg < 0 ? 0 : 1].exact };
+      });
+      res.verify = verify; res.verifyOk = verify.every(function (v) { return v.ok; });
+      steps.push('Check by substitution in exact arithmetic: A\u00b7x\u00b2 + B\u00b7x + C = ' + (res.verifyOk ? '0 for both roots.' : 'NOT zero (' + verify.map(function (v) { return v.value; }).join(' and ') + ').'));
+      return res;
+    }
+    res.verify = roots.map(function (rt) { return verifyRational(A, B, C, rt.q); });
+    res.verifyOk = res.verify.every(function (v) { return v.ok; });
+    res.verify.forEach(function (v, i) { v.root = roots[i].exact; });
+    steps.push('Check by substitution in exact arithmetic: A\u00b7x\u00b2 + B\u00b7x + C = ' + (res.verifyOk ? '0 for ' + (roots.length > 1 ? 'both roots.' : 'the root.') : 'NOT zero.'));
+    return res;
+  }
+  function verifyRational(A, B, C, x) {
+    var t = add(add(mul(A, mul(x, x)), mul(B, x)), C);
+    return { ok: isZero(t), value: rs(t), root: rs(x), parts: [rs(mul(A, mul(x, x))), rs(mul(B, x)), rs(C)] };
+  }
+
+  /* ---------- plain-text summary (copy / report) ---------- */
+  function summary(r) {
+    if (!r.ok) return '';
+    var L = ['Equation: ' + mn(r.equation), 'Result: ' + r.label];
+    if (r.degree === 2) { L.push('Discriminant: ' + mn(r.discriminant)); }
+    (r.roots || []).forEach(function (x, i) { L.push('x' + (r.roots.length > 1 ? (i + 1) : '') + ' = ' + mn(x.exact) + (x.exact !== x.dec.text && !(x.dec.exact) ? '  \u2248 ' + mn(x.dec.text) : (x.exact !== x.dec.text ? '  = ' + mn(x.dec.text) : ''))); });
+    if (r.degree === 2) { L.push('Vertex: (' + mn(rs(r.vertex.x)) + ', ' + mn(rs(r.vertex.y)) + ')'); L.push('Sum of roots: ' + mn(rs(r.sum)) + '; product of roots: ' + mn(rs(r.product))); }
+    if (r.verify) L.push('Verified by exact substitution: ' + (r.verifyOk ? 'yes' : 'NO'));
+    return L.join('\n');
+  }
+
+  var api = { parseNum: parseNum, solve: solve, summary: summary, equationText: equationText, rs: rs, mn: mn, gcd: gcd, isqrt: isqrt, sqrtSplit: sqrtSplit, decOfRational: decOfRational, R: R, ops: { add: add, sub: sub, mul: mul, div: div, neg: neg, sgn: sgn, isZero: isZero, eq: eq, ri: ri } };
+  if (typeof module !== 'undefined' && module.exports) module.exports = api; else root.Quad = api;
+})(typeof window !== 'undefined' ? window : this);
+
+/* Elecmetric Quadratic Formula Calculator: engine for Mode 04 (Exact Root & Factorisation).
+   Built on the exact engine of Mode 01 (tools/quad_engine.js): every coefficient is an exact rational, so the factorisation is decided exactly, with no tolerance.
+   forms(): for A x^2 + B x + C, the factored form (over the rationals when the roots are rational, otherwise over the reals or the complex numbers with simplified radicals),
+            the vertex form A(x - h)^2 + k, completing the square, the rational root theorem, the sum and product of the roots, and exact checks.
+   fromRoots(): A(x - r1)(x - r2) expanded. fromVertex(): A(x - h)^2 + k expanded. Both then give the same forms.
+   Works in Node (module.exports) and in the browser (global QuadExact, after Quad). */
+(function (root) {
+  'use strict';
+  var Q = typeof module !== 'undefined' && module.exports ? require('./quad_engine.js') : root.Quad;
+  var O = Q.ops, R = Q.R, rs = Q.rs, mn = Q.mn, gcd = Q.gcd, sqrtSplit = Q.sqrtSplit, add = O.add, sub = O.sub, mul = O.mul, div = O.div, neg = O.neg, sgn = O.sgn, isZero = O.isZero, eq = O.eq, ri = O.ri;
+  var ZERO = ri(0), ONE = ri(1), MINUS = '\u2212';
+  var MAXCAND = 20000, MAXDIV = 1000000000000n;
+  function absq(a) { return sgn(a) < 0 ? neg(a) : a; }
+  function babs(x) { return x < 0n ? -x : x; }
+  function lcm(a, b) { return a / gcd(a, b) * b; }
+  function T(s) { return mn(s); }
+  /* a prefix for a leading coefficient: 1 -> nothing, -1 -> minus sign, an integer -> the integer, a fraction -> (p/q) */
+  function pre(k) { if (eq(k, ONE)) return ''; if (eq(k, ri(-1))) return MINUS; return T(k.d === 1n ? rs(k) : '(' + rs(k) + ')'); }
+  function polyText(a, b, c) { return Q.equationText(a, b, c).replace(/ = 0$/, ''); }
+  function lin(q, p) { var lead = q === 1n ? 'x' : q + 'x'; return T(p === 0n ? lead : p > 0n ? lead + ' ' + MINUS + ' ' + p : lead + ' + ' + (-p)); }
+  function fw(q, p) { return q === 1n && p === 0n ? 'x' : '(' + lin(q, p) + ')'; }
+  function evalQ(A, B, C, x) { return add(add(mul(A, mul(x, x)), mul(B, x)), C); }
+
+  /* sqrt of a rational t >= 0 as coef * sqrt(r), r squarefree. */
+  function radOf(t) {
+    if (isZero(t)) return { coef: ZERO, r: 1n, zero: true, full: true };
+    var m = t.n * t.d, sp = sqrtSplit(m);
+    return { coef: R(sp.s, t.d), r: sp.r, zero: false, full: sp.full };
+  }
+  function radTerm(coef, r, imag) {
+    var core = (coef.n === 1n && (r !== 1n || imag) ? '' : String(coef.n)) + (imag ? 'i' : '') + (r === 1n ? '' : '\u221a' + r);
+    return coef.d === 1n ? core : core + '/' + coef.d;
+  }
+  function vertexText(A, h, k) {
+    var a = pre(A), sq = isZero(h) ? 'x\u00b2' : '(x ' + (sgn(h) > 0 ? MINUS + ' ' : '+ ') + rs(absq(h)) + ')\u00b2';
+    return T(a + sq + (isZero(k) ? '' : (sgn(k) > 0 ? ' + ' : ' ' + MINUS + ' ') + rs(absq(k))));
+  }
+  function shift(h, sg, sText) { var t = 'x'; if (!isZero(h)) t += (sgn(h) > 0 ? ' ' + MINUS + ' ' : ' + ') + rs(absq(h)); t += (sg < 0 ? ' ' + MINUS + ' ' : ' + ') + sText; return T('(' + t + ')'); }
+
+  /* ---------- divisors and the rational root theorem ---------- */
+  function divisors(n) {
+    n = babs(n); if (n === 0n || n > MAXDIV) return null;
+    var N = Number(n), small = [], big = [];
+    for (var i = 1; i * i <= N; i++) if (N % i === 0) { small.push(BigInt(i)); if (i * i !== N) big.push(BigInt(N / i)); }
+    return small.concat(big.reverse());
+  }
+  function candidates(a, c) { /* a, c whole numbers, c nonzero: all p/q in lowest terms with p | c, q | a, both signs */
+    var dc = divisors(c), da = divisors(a);
+    if (!dc || !da || dc.length * da.length > MAXCAND) return null;
+    var out = [];
+    dc.forEach(function (p) { da.forEach(function (q) { if (gcd(p, q) === 1n) { out.push(R(p, q)); out.push(R(-p, q)); } }); });
+    out.sort(function (x, y) { return sgn(sub(x, y)); });
+    return out;
+  }
+
+  /* ---------- the forms of one quadratic with exact rational A, B, C ---------- */
+  function core(A, B, C, dp, source, lead) {
+    var solved = Q.solve({ a: rs(A), b: rs(B), c: rs(C), dp: dp });
+    if (!solved.ok) return solved;
+    var res = { ok: true, source: source, A: A, B: B, C: C, a: rs(A), b: rs(B), c: rs(C), equation: T(Q.equationText(A, B, C)), dp: dp, solve: solved, buildSteps: lead || [] };
+    if (solved.degree !== 2) { res.degree = solved.degree; res.kind = solved.kind; res.label = solved.label; res.roots = solved.roots; res.steps = solved.steps; res.noQuadratic = true; return res; }
+    res.degree = 2; res.kind = solved.kind; res.label = solved.label; res.roots = solved.roots; res.D = solved.D; res.discriminant = solved.discriminant;
+    var twoA = mul(ri(2), A), h = neg(div(B, twoA)), k = sub(C, div(mul(B, B), mul(ri(4), A))), tt = div(neg(k), A); /* t = -k/A = D/(4A^2) */
+    var imag = sgn(tt) < 0, rad = radOf(absq(tt)), s2 = absq(tt);
+    res.vertex = { h: h, k: k, text: vertexText(A, h, k), hText: T(rs(h)), kText: T(rs(k)), hDec: Q.decOfRational(h, dp).text, kDec: Q.decOfRational(k, dp).text };
+    res.sum = neg(div(B, A)); res.product = div(C, A);
+
+    /* whole-number form and content */
+    var l = 1n; [A, B, C].forEach(function (x) { l = lcm(l, x.d); });
+    var ia = A.n * (l / A.d), ib = B.n * (l / B.d), ic = C.n * (l / C.d), g = gcd(gcd(ia, ib), ic);
+    ia /= g; ib /= g; ic /= g; if (ia < 0n) { ia = -ia; ib = -ib; ic = -ic; }
+    var kc = div(A, ri(ia));
+    res.content = { k: kc, kText: T(rs(kc)), a: ia, b: ib, c: ic, text: T(polyText(R(ia), R(ib), R(ic))), same: eq(kc, ONE) };
+    res.integerForm = eq(kc, ONE) ? null : T(polyText(R(ia), R(ib), R(ic)) + ' = 0');
+
+    /* completing the square */
+    var cs = [];
+    cs.push(T('Divide by A = ' + rs(A) + ': x\u00b2 + (' + rs(div(B, A)) + ')x + (' + rs(div(C, A)) + ') = 0.'));
+    cs.push(T('Half of the x coefficient is B/(2A) = ' + rs(div(B, twoA)) + '. Add and subtract its square, (' + rs(div(B, twoA)) + ')\u00b2 = ' + rs(mul(div(B, twoA), div(B, twoA))) + '.'));
+    cs.push(T('The first three terms are a perfect square: (x ' + (sgn(h) > 0 ? MINUS : '+') + ' ' + rs(absq(h)) + ')\u00b2 when h = \u2212B/(2A) = ' + rs(h) + '.'));
+    cs.push(T('The leftover constant is k = C \u2212 B\u00b2/(4A) = ' + rs(k) + ', so A x\u00b2 + B x + C = ' + res.vertex.text + '. This is the vertex form, and the vertex is (' + rs(h) + ', ' + rs(k) + ').'));
+    var sText = rad.zero ? '0' : (rad.r === 1n && !imag ? rs(rad.coef) : radTerm(rad.coef, rad.r, imag));
+    cs.push(T('Set it equal to zero and isolate the square: (x \u2212 h)\u00b2 = \u2212k/A = ' + rs(tt) + '. Taking square roots gives x = h ' + (rad.zero ? '' : '\u00b1 ' + sText + ' ') + '= ' + (rad.zero ? rs(h) : 'the roots below') + '.'));
+    res.completeSquare = cs;
+    res.s = { text: T(sText), coef: rad.coef, r: rad.r, imag: imag, zero: rad.zero };
+
+    /* the factored form */
+    var checks = [], fsteps = [], F = { };
+    var perfect = solved.perfectSquare || solved.kind === 'repeated';
+    var nonzeroRoots = solved.roots;
+    if (solved.kind === 'rational' || solved.kind === 'repeated') {
+      var rt = solved.roots.map(function (x) { return x.q; }), r1 = rt[0], r2 = rt.length > 1 ? rt[1] : rt[0];
+      var f1 = fw(r1.d, r1.n), f2 = fw(r2.d, r2.n), rep = solved.kind === 'repeated';
+      F.kind = rep ? 'repeated' : 'rational'; F.overQ = true;
+      F.text = rep ? (pre(kc) + (r1.d === 1n && r1.n === 0n ? 'x\u00b2' : f1 + '\u00b2')) : pre(kc) + f1 + f2;
+      F.text = T(F.text); F.integerText = rep ? T(r1.d === 1n && r1.n === 0n ? 'x\u00b2' : f1 + '\u00b2') : T(f1 + f2);
+      F.label = rep ? 'Perfect square' : 'Two rational linear factors';
+      F.q = [{ q: r1.d, p: r1.n }, { q: r2.d, p: r2.n }];
+      F.m = -r1.d * r2.n; F.n = -r2.d * r1.n;
+      fsteps.push(T('Whole-number form: multiply by ' + l + ' and divide by ' + g + ' to get ' + res.content.text + ' = 0' + (res.integerForm ? ', with the common factor ' + rs(kc) + ' taken out.' : '.')));
+      if (!isZero(R(ic))) fsteps.push(T('Rational root theorem: a rational root p/q has p dividing c = ' + ic + ' and q dividing a = ' + ia + '.'));
+      else fsteps.push(T('c = 0, so x = 0 is a root, and the other factor comes from ' + ia + 'x + (' + ib + ') = 0.'));
+      fsteps.push(T('\u0394 = ' + rs(solved.D) + ' is ' + (rep ? 'zero' : 'a perfect square') + ', so the roots are rational: ' + (rep ? 'x = ' + rs(r1) + ' (twice)' : 'x = ' + rs(r1) + ' and x = ' + rs(r2)) + '.'));
+      if (!rep) fsteps.push(T('Split the middle term: two whole numbers with sum b = ' + ib + ' and product a\u00b7c = ' + (ia * ic) + ' are ' + F.m + ' and ' + F.n + ', so ' + polyText(R(ia), R(ib), R(ic)) + ' = ' + ia + 'x\u00b2 + (' + F.m + ')x + (' + F.n + ')x + (' + ic + ') = ' + F.integerText + '.'));
+      else fsteps.push(T('A repeated root makes the whole-number form a perfect square: ' + polyText(R(ia), R(ib), R(ic)) + ' = ' + F.integerText + '.'));
+      fsteps.push(T('Restore the common factor: A x\u00b2 + B x + C = ' + F.text + '.'));
+      /* checks */
+      var cA = mul(kc, R(r1.d * r2.d)), cB = neg(mul(kc, R(r1.d * r2.n + r2.d * r1.n))), cC = mul(kc, R(r1.n * r2.n));
+      checks.push(['The factored form expands to A\u00b7x\u00b2 + B\u00b7x + C exactly', eq(cA, A) && eq(cB, B) && eq(cC, C)]);
+      checks.push(['The whole-number leading coefficient equals q\u2081\u00b7q\u2082 (Gauss\u2019s lemma)', ia === r1.d * r2.d]);
+      checks.push(['The split-the-middle-term integers have sum b and product a\u00b7c', F.m + F.n === ib && F.m * F.n === ia * ic]);
+      F.evalAt = function (x) { return mul(kc, mul(sub(mul(R(r1.d), x), R(r1.n)), sub(mul(R(r2.d), x), R(r2.n)))); };
+    } else {
+      F.overQ = false; F.q = null;
+      var hh = h, sTxt = T(sText);
+      F.kind = imag ? 'complex' : 'radical';
+      F.text = T(pre(A) + shift(hh, -1, sTxt) + shift(hh, 1, sTxt));
+      F.label = imag ? 'Two complex linear factors (conjugates)' : 'Two real linear factors with radicals';
+      if (imag) F.realForm = T(pre(A) + '[' + (isZero(h) ? 'x\u00b2' : '(x ' + (sgn(h) > 0 ? MINUS + ' ' : '+ ') + rs(absq(h)) + ')\u00b2') + ' + ' + rs(s2) + ']');
+      fsteps.push(T('\u0394 = ' + rs(solved.D) + (imag ? ' is negative' : ' is positive but not the square of a rational number') + ', so ' + res.content.text + ' has no rational root and does not factor over the rationals (it is irreducible there).'));
+      fsteps.push(T('The roots are h \u00b1 s, with h = \u2212B/(2A) = ' + rs(h) + ' and s = \u221a(\u2212k/A) = \u221a(' + rs(tt) + ') = ' + sTxt + '.'));
+      fsteps.push(T('So A x\u00b2 + B x + C = A(x \u2212 h \u2212 s)(x \u2212 h + s) = ' + F.text + (imag ? ' over the complex numbers.' : ' over the real numbers.')));
+      if (imag) fsteps.push(T('Over the real numbers the quadratic stays in one piece: ' + F.realForm + ', with a positive second term, so it never crosses zero.'));
+      var s2v = mul(mul(rad.coef, rad.coef), R(rad.r)); if (imag) s2v = neg(s2v);
+      var cA2 = A, cB2 = neg(mul(mul(ri(2), A), hh)), cC2 = mul(A, sub(mul(hh, hh), s2v));
+      checks.push(['The factored form expands to A\u00b7x\u00b2 + B\u00b7x + C exactly', eq(cA2, A) && eq(cB2, B) && eq(cC2, C)]);
+      checks.push(['The simplified radical squares back to \u2212k/A (s\u00b2 = ' + rs(tt) + ')', eq(s2v, tt)]);
+      F.evalAt = function (x) { var d = sub(x, hh); return mul(A, sub(mul(d, d), s2v)); };
+    }
+    res.factored = F; res.factorSteps = fsteps;
+
+    /* rational root theorem */
+    var rr = { whole: res.content.text, a: ia, b: ib, c: ic, zeroRoot: ic === 0n, count: null, list: null, found: [], enumerated: false };
+    var truth = (solved.kind === 'rational' || solved.kind === 'repeated') ? solved.roots.map(function (x) { return x.q; }) : [];
+    if (ic !== 0n) {
+      var cand = candidates(ia, ic);
+      if (cand) {
+        rr.enumerated = true; rr.count = cand.length; rr.list = cand.map(function (x) { return { text: T(rs(x)), root: ia * x.n * x.n + ib * x.n * x.d + ic * x.d * x.d === 0n }; });
+        rr.found = cand.filter(function (x) { return ia * x.n * x.n + ib * x.n * x.d + ic * x.d * x.d === 0n; });
+        var want = truth.map(rs).filter(function (v, i, a) { return a.indexOf(v) === i; }).sort(), got = rr.found.map(rs).sort();
+        checks.push(['The rational root theorem finds exactly the rational roots (' + (want.length ? want.map(T).join(', ') : 'none') + ')', want.join('|') === got.join('|')]);
+      }
+    } else rr.found = truth;
+    if (!rr.enumerated) rr.found = truth;
+    res.rational = rr;
+
+    /* vertex form, sums and values */
+    checks.push(['The vertex form expands to A\u00b7x\u00b2 + B\u00b7x + C exactly', eq(neg(mul(mul(ri(2), A), h)), B) && eq(add(mul(A, mul(h, h)), k), C)]);
+    var pts = ['-3', '-2', '-1', '0', '1', '2', '3', '1/2', '-7/3'].map(function (t) { return Q.R(BigInt(t.split('/')[0]), BigInt(t.split('/')[1] || '1')); });
+    var agree = pts.every(function (x) { var f = evalQ(A, B, C, x), v = add(mul(A, mul(sub(x, h), sub(x, h))), k); return eq(f, v) && eq(f, F.evalAt(x)); });
+    checks.push(['The original, factored and vertex forms agree at 9 test values of x', agree]);
+    var sumOk, prodOk;
+    if (solved.form) { var f = solved.form, d = f.imag ? -f.r : f.r; sumOk = eq(R(2n * f.u, f.w), res.sum); prodOk = eq(R(f.u * f.u - f.v * f.v * d, f.w * f.w), res.product); }
+    else { var q1 = solved.roots[0].q, q2 = solved.roots.length > 1 ? solved.roots[1].q : q1; sumOk = eq(add(q1, q2), res.sum); prodOk = eq(mul(q1, q2), res.product); }
+    checks.push(['Sum of the roots equals \u2212B/A = ' + T(rs(res.sum)), sumOk]); checks.push(['Product of the roots equals C/A = ' + T(rs(res.product)), prodOk]);
+    var match;
+    if (solved.form) { var g2 = solved.form; match = eq(R(g2.u, g2.w), h) && (!rad.full || (g2.r === rad.r && eq(R(g2.v, g2.w), rad.coef))); }
+    else match = true;
+    checks.push(['The roots h \u00b1 s from the vertex form match the roots of Mode 01', match]);
+    checks.push(['Every root gives exactly zero when substituted (exact arithmetic)', solved.verifyOk === true]);
+    res.checks = checks.map(function (c) { return { label: T(c[0]), ok: !!c[1] }; }); res.checkOk = checks.every(function (c) { return !!c[1]; });
+    res.steps = (lead || []).concat(['Equation: ' + res.equation + '.']).concat(fsteps).concat(cs);
+    return res;
+  }
+
+  function forms(input) {
+    input = input || {};
+    var dp = input.dp === undefined ? 8 : Math.max(2, Math.min(15, input.dp | 0));
+    var pa = Q.parseNum(input.a), pb = Q.parseNum(input.b), pc = Q.parseNum(input.c), errs = {}, anyEmpty = pa.empty && pb.empty && pc.empty;
+    if (pa.error) errs.a = pa.error; if (pb.error) errs.b = pb.error; if (pc.error) errs.c = pc.error;
+    if (pa.empty && !pa.error) errs.a = 'Enter A (type 0 if the x\u00b2 term is absent).';
+    if (pb.empty && !pb.error) errs.b = 'Enter B (type 0 if the x term is absent).';
+    if (pc.empty && !pc.error) errs.c = 'Enter C (type 0 if there is no constant).';
+    if (errs.a || errs.b || errs.c) return { ok: false, empty: anyEmpty, errors: errs, error: errs.a || errs.b || errs.c };
+    return core(pa.v, pb.v, pc.v, dp, 'equation', []);
+  }
+  function fromRoots(input) {
+    input = input || {};
+    var dp = input.dp === undefined ? 8 : Math.max(2, Math.min(15, input.dp | 0));
+    var pa = Q.parseNum(input.a), p1 = Q.parseNum(input.r1), p2 = Q.parseNum(input.r2), errs = {}, anyEmpty = pa.empty && p1.empty && p2.empty;
+    if (pa.error) errs.a = pa.error; if (p1.error) errs.r1 = p1.error; if (p2.error) errs.r2 = p2.error;
+    if (pa.empty && !pa.error) errs.a = 'Enter A, the leading coefficient (use 1 for x\u00b2 + \u2026).';
+    if (p1.empty && !p1.error) errs.r1 = 'Enter the first root.';
+    if (p2.empty && !p2.error) errs.r2 = 'Enter the second root (the same value again for a repeated root).';
+    if (!errs.a && !pa.error && pa.v && isZero(pa.v)) errs.a = 'A cannot be zero: the equation would not be quadratic.';
+    if (errs.a || errs.r1 || errs.r2) return { ok: false, empty: anyEmpty, errors: errs, error: errs.a || errs.r1 || errs.r2 };
+    var A = pa.v, r1 = p1.v, r2 = p2.v, B = neg(mul(A, add(r1, r2))), C = mul(A, mul(r1, r2));
+    var lead = [T('Roots x = ' + rs(r1) + ' and x = ' + rs(r2) + ' with leading coefficient A = ' + rs(A) + ': A(x \u2212 r\u2081)(x \u2212 r\u2082) = A x\u00b2 \u2212 A(r\u2081 + r\u2082)x + A r\u2081 r\u2082.'), T('B = \u2212A(r\u2081 + r\u2082) = ' + rs(B) + ' and C = A r\u2081 r\u2082 = ' + rs(C) + ', so the equation is ' + Q.equationText(A, B, C) + '.')];
+    var res = core(A, B, C, dp, 'roots', lead); if (res.ok) { res.input = { a: A, r1: r1, r2: r2 }; var back = res.roots.map(function (x) { return x.q; }); res.rootsRecovered = back.length === 2 ? (eq(back[0], sgn(sub(r1, r2)) <= 0 ? r1 : r2) && eq(back[1], sgn(sub(r1, r2)) <= 0 ? r2 : r1)) : eq(back[0], r1) && eq(r1, r2); res.checks.push({ label: T('The equation solves back to the roots you entered'), ok: res.rootsRecovered }); res.checkOk = res.checkOk && res.rootsRecovered; }
+    return res;
+  }
+  function fromVertex(input) {
+    input = input || {};
+    var dp = input.dp === undefined ? 8 : Math.max(2, Math.min(15, input.dp | 0));
+    var pa = Q.parseNum(input.a), ph = Q.parseNum(input.h), pk = Q.parseNum(input.k), errs = {}, anyEmpty = pa.empty && ph.empty && pk.empty;
+    if (pa.error) errs.a = pa.error; if (ph.error) errs.h = ph.error; if (pk.error) errs.k = pk.error;
+    if (pa.empty && !pa.error) errs.a = 'Enter A, the leading coefficient (use 1 if there is none).';
+    if (ph.empty && !ph.error) errs.h = 'Enter h, the x coordinate of the vertex.';
+    if (pk.empty && !pk.error) errs.k = 'Enter k, the y coordinate of the vertex.';
+    if (!errs.a && pa.v && isZero(pa.v)) errs.a = 'A cannot be zero: the curve would be a straight line.';
+    if (errs.a || errs.h || errs.k) return { ok: false, empty: anyEmpty, errors: errs, error: errs.a || errs.h || errs.k };
+    var A = pa.v, h = ph.v, k = pk.v, B = neg(mul(mul(ri(2), A), h)), C = add(mul(A, mul(h, h)), k);
+    var lead = [T('Vertex form A(x \u2212 h)\u00b2 + k with A = ' + rs(A) + ', h = ' + rs(h) + ', k = ' + rs(k) + ': ' + vertexText(A, h, k) + '.'), T('Expand: A x\u00b2 \u2212 2Ah x + (A h\u00b2 + k), so B = ' + rs(B) + ' and C = ' + rs(C) + ', and the equation is ' + Q.equationText(A, B, C) + '.')];
+    var res = core(A, B, C, dp, 'vertex', lead); if (res.ok) { res.input = { a: A, h: h, k: k }; var okv = eq(res.vertex.h, h) && eq(res.vertex.k, k); res.checks.push({ label: T('The equation\u2019s vertex is the one you entered'), ok: okv }); res.checkOk = res.checkOk && okv; }
+    return res;
+  }
+
+  function summary(r) {
+    if (!r || !r.ok) return '';
+    var L = ['Equation: ' + r.equation];
+    if (r.degree !== 2) { L.push('Result: ' + r.label); (r.roots || []).forEach(function (x) { L.push('x = ' + mn(x.exact)); }); return L.join('\n'); }
+    if (r.integerForm) L.push('Whole-number form: ' + r.integerForm);
+    L.push('Factored form: ' + r.factored.text + ' = 0' + (r.factored.overQ ? '' : (r.factored.kind === 'complex' ? '  (over the complex numbers)' : '  (over the real numbers)')));
+    if (r.factored.realForm) L.push('Real form: ' + r.factored.realForm + ' = 0');
+    L.push('Vertex form: ' + r.vertex.text + ' = 0', 'Vertex: (' + r.vertex.hText + ', ' + r.vertex.kText + ')');
+    r.roots.forEach(function (x, i) { L.push('x' + (r.roots.length > 1 ? (i + 1) : '') + ' = ' + mn(x.exact) + (x.exact !== x.dec.text ? '  ' + (x.dec.exact ? '= ' : '\u2248 ') + mn(x.dec.text) : '')); });
+    L.push('Sum of roots: ' + T(rs(r.sum)) + '; product of roots: ' + T(rs(r.product)), 'Verified by exact checks: ' + (r.checkOk ? 'yes' : 'NO'));
+    return L.join('\n');
+  }
+
+  var api = { forms: forms, fromRoots: fromRoots, fromVertex: fromVertex, summary: summary, radOf: radOf, vertexText: vertexText, divisors: divisors };
+  if (typeof module !== 'undefined' && module.exports) module.exports = api; else root.QuadExact = api;
+})(typeof window !== 'undefined' ? window : this);
+
+/* Elecmetric Quadratic Formula Calculator: page script for Mode 04 (Exact Root & Factorisation). Inlined by tools/quad_exact_page.js after tools/quad_engine.js and tools/quad_exact_engine.js. */
+(function () {
+  var $ = function (id) { return document.getElementById(id); }, Qd = Quad, QX = QuadExact, mode = 'equation', last = null;
+  var F = { equation: [$('ex-a'), $('ex-b'), $('ex-c')], roots: [$('er-a'), $('er-r1'), $('er-r2')], vertex: [$('ev-a'), $('ev-h'), $('ev-k')] }, DP = $('ex-dp');
+  function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
+  function mn(s) { return Qd.mn(s); }
+  function note(t) { $('ex-note').textContent = t; }
+  function copy(t) { var d = function () { note('Copied'); }; if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(t).then(d, d); else { var a = document.createElement('textarea'); a.value = t; document.body.appendChild(a); a.select(); try { document.execCommand('copy'); } catch (e) {} document.body.removeChild(a); d(); } }
+  function mark(el, msg) { el.classList.toggle('bad', !!msg); el.setAttribute('aria-invalid', String(!!msg)); }
+  function table(head, rows) { return '<div class="tw" tabindex="0" role="region" aria-label="Scrollable table: ' + esc(head.join(', ')) + '"><table class="ns-t"><thead><tr>' + head.map(function (h) { return '<th>' + esc(h) + '</th>'; }).join('') + '</tr></thead><tbody>' + rows.join('') + '</tbody></table></div>'; }
+  function flag(t, hot) { return '<span class="ns-flag' + (hot ? ' r' : '') + '">' + esc(t) + '</span>'; }
+  function row(a, b, c) { return '<tr><td>' + a + '</td><td class="r">' + esc(mn(b)) + '</td><td>' + (c || '') + '</td></tr>'; }
+  function actions(text, file) { return '<div class="ns-act"><button type="button" class="btn2" data-copy="' + esc(text) + '">Copy result</button><button type="button" class="btn2" data-act="save" data-file="' + file + '">Save as .txt</button><button type="button" class="btn2" data-act="print">Print</button></div>'; }
+  function xs(r, i) { return r.roots.length > 1 ? 'x' + (i === 0 ? '\u2081' : '\u2082') : 'x'; }
+  function list(a) { return '<ol class="steps">' + a.map(function (s) { return '<li>' + esc(mn(s)) + '</li>'; }).join('') + '</ol>'; }
+
+  function show(r, out, errEl, inputs, errKeys) {
+    var stp = $('ex-steps'), ver = $('ex-verify'), res = $('ex-res');
+    if (!r.ok) { var e = r.errors || {}; inputs.forEach(function (el, i) { mark(el, e[errKeys[i]]); }); errEl.textContent = r.empty ? '' : r.error; out.innerHTML = ''; last = null; res.hidden = true; return; }
+    inputs.forEach(function (el) { mark(el, ''); }); errEl.textContent = '';
+    if (r.noQuadratic) {
+      out.innerHTML = '<div class="res"><div class="big"><div class="qroot">Not a quadratic</div></div><div class="sub">' + esc(mn(r.label + (r.roots && r.roots.length ? '. x = ' + r.roots[0].exact : ''))) + '</div></div>';
+      res.hidden = true; last = null; return;
+    }
+    res.hidden = false;
+    var f = r.factored, v = r.vertex, rr = r.rational, rows = [];
+    rows.push(row('Equation', r.equation));
+    if (r.integerForm) rows.push(row('Whole-number form', r.integerForm, flag('common factor ' + r.content.kText)));
+    rows.push(row('Factored form', f.text + ' = 0', f.overQ ? flag(f.label) : flag(f.kind === 'complex' ? 'over the complex numbers' : 'over the real numbers', true)));
+    if (f.realForm) rows.push(row('Real form', f.realForm + ' = 0', flag('no real factors', true)));
+    rows.push(row('Vertex form', v.text + ' = 0'));
+    rows.push(row('Vertex (h, k)', '(' + v.hText + ', ' + v.kText + ')', v.hText !== v.hDec || v.kText !== v.kDec ? esc(mn('\u2248 (' + v.hDec + ', ' + v.kDec + ')')) : ''));
+    r.roots.forEach(function (x, i) { var same = x.exact === x.dec.text; rows.push(row(xs(r, i) + ' (exact)', x.exact)); if (!same) rows.push(row(xs(r, i) + ' (decimal)', (x.dec.exact ? '' : '\u2248 ') + x.dec.text)); });
+    rows.push(row('Sum of roots, \u2212B/A', Qd.rs(r.sum))); rows.push(row('Product of roots, C/A', Qd.rs(r.product)));
+    rows.push(row('Factors over the rationals', f.overQ ? 'yes' : 'no', f.overQ ? '' : flag(f.kind === 'complex' ? 'complex roots' : 'irrational roots')));
+    var big = '<div class="qroot">' + esc(mn(f.text)) + ' = 0</div><div class="qroot">' + esc(mn(v.text)) + ' = 0</div>';
+    var sub = r.roots.map(function (x, i) { return xs(r, i) + ' = ' + mn(x.exact); }).join(',  ');
+    var text = QX.summary(r); last = { text: text };
+    var rrHtml = '';
+    if (rr.enumerated) {
+      var cl = rr.list.slice(0, 40).map(function (c) { return '<span class="ns-flag' + (c.root ? '' : ' mute') + '">' + esc(c.text) + (c.root ? ' \u2713' : '') + '</span>'; }).join(' ');
+      rrHtml = '<h3>Rational root theorem</h3><p>For ' + esc(mn(rr.whole)) + ' = 0 a rational root p/q has p dividing ' + esc(mn(String(rr.c))) + ' and q dividing ' + esc(String(rr.a)) + '. That leaves ' + rr.count + ' candidates' + (rr.count > 40 ? ' (first 40 shown)' : '') + ', tested exactly: ' + (rr.found.length ? esc(mn(rr.found.map(Qd.rs).join(' and '))) + (rr.found.length > 1 ? ' work.' : ' works.') : 'none works, so there is no rational root.') + '</p><p class="cands">' + cl + '</p>';
+    } else if (rr.zeroRoot) rrHtml = '<h3>Rational root theorem</h3><p>C = 0, so x = 0 is a root and the other root comes from the remaining linear factor.</p>';
+    else rrHtml = '<h3>Rational root theorem</h3><p>The constant or leading term has too many divisors to list the candidates here. The discriminant test is exact and decides the same question: the roots are ' + (f.overQ ? 'rational.' : 'not rational.') + '</p>';
+    out.innerHTML = '<div class="res"><div class="big">' + big + '</div><div class="sub">' + esc(sub) + '</div></div>' + table(['Form', 'Result', ''], rows) + rrHtml + actions(text, 'factored-and-vertex-form') +
+      (f.kind === 'complex' ? '<p class="note">Mathematics writes the imaginary unit i; electrical engineering writes j. Replace i with j when you use these factors in a circuit calculation.</p>' : '');
+    stp.innerHTML = (r.buildSteps.length ? '<h3>Building the equation</h3>' + list(r.buildSteps) : '') + '<h3>Factoring</h3>' + list(r.factorSteps) + '<h3>Completing the square</h3>' + list(r.completeSquare);
+    ver.innerHTML = '<p>' + (r.checkOk ? flag('Verified', false) + ' Every check below holds in exact arithmetic.' : flag('Check failed', true) + ' A check did not hold. Please report this equation.') + '</p><ul class="vl">' + r.checks.map(function (c) { return '<li>' + esc(mn(c.label)) + ' ' + (c.ok ? '\u2713' : '\u2717') + '</li>'; }).join('') + '</ul>';
+  }
+
+  function render() {
+    var dp = +DP.value;
+    if (mode === 'equation') {
+      var a = Qd.parseNum(F.equation[0].value), b = Qd.parseNum(F.equation[1].value), c = Qd.parseNum(F.equation[2].value);
+      $('ex-eq').textContent = (a.v && b.v && c.v) ? mn(Qd.equationText(a.v, b.v, c.v)) : '';
+      show(QX.forms({ a: F.equation[0].value, b: F.equation[1].value, c: F.equation[2].value, dp: dp }), $('ex-out'), $('ex-err'), F.equation, ['a', 'b', 'c']);
+    } else if (mode === 'roots') show(QX.fromRoots({ a: F.roots[0].value, r1: F.roots[1].value, r2: F.roots[2].value, dp: dp }), $('er-out'), $('er-err'), F.roots, ['a', 'r1', 'r2']);
+    else show(QX.fromVertex({ a: F.vertex[0].value, h: F.vertex[1].value, k: F.vertex[2].value, dp: dp }), $('ev-out'), $('ev-err'), F.vertex, ['a', 'h', 'k']);
+  }
+  function setMode(m) {
+    mode = m; ['equation', 'roots', 'vertex'].forEach(function (k) { $('ex-p-' + k).hidden = k !== m; var b = document.querySelector('[data-mode="' + k + '"]'); b.classList.toggle('on', k === m); b.setAttribute('aria-pressed', String(k === m)); });
+    render();
+  }
+  $('dx').addEventListener('click', function (e) {
+    var b = e.target.closest('button'); if (!b) return;
+    if (b.dataset.copy) { copy(b.dataset.copy); return; }
+    if (b.dataset.mode) { setMode(b.dataset.mode); return; }
+    if (b.dataset.ex) { var v = JSON.parse(b.dataset.ex), k = b.dataset.kind || 'equation', f = F[k]; Object.keys(v).forEach(function (key, i) { f[i].value = v[key]; }); setMode(k); return; }
+    if (b.dataset.act === 'print') { window.print(); return; }
+    if (b.dataset.act === 'save' && last) { var bl = new Blob([last.text + '\n\nCalculated with Elecmetric Quadratic Formula Calculator, Mode 04\n'], { type: 'text/plain' }), u = URL.createObjectURL(bl), a = document.createElement('a'); a.href = u; a.download = b.dataset.file + '.txt'; document.body.appendChild(a); a.click(); document.body.removeChild(a); setTimeout(function () { URL.revokeObjectURL(u); }, 500); return; }
+    if (b.dataset.act === 'reset') { [].concat(F.equation, F.roots, F.vertex).forEach(function (el) { el.value = el.defaultValue; }); DP.value = '8'; setMode('equation'); F.equation[0].focus(); }
+  });
+  [].concat(F.equation, F.roots, F.vertex).forEach(function (el) { el.addEventListener('input', render); });
+  DP.addEventListener('change', render);
+  setMode('equation');
+})();
+</script><script id="em-ux1-js">(function(IDS){var d=Object.getOwnPropertyDescriptor(HTMLSelectElement.prototype,"value"),di=Object.getOwnPropertyDescriptor(HTMLSelectElement.prototype,"selectedIndex"),first=null;
+IDS.forEach(function(id){var sel=document.getElementById(id);if(!sel||!sel.options.length)return;var seg=document.createElement("div");seg.className="mseg";seg.setAttribute("role","radiogroup");var lab=document.querySelector('label[for="'+id+'"]');if(lab){var sp=document.createElement("span");sp.className=lab.className;sp.id=id+"-lbl";sp.textContent=lab.textContent;lab.parentNode.replaceChild(sp,lab);seg.setAttribute("aria-labelledby",sp.id);sp.parentNode.insertBefore(seg,sel)}else sel.parentNode.insertBefore(seg,sel);
+var opts=[].slice.call(sel.options);opts.forEach(function(o){var b=document.createElement("button");b.type="button";b.setAttribute("role","radio");b.dataset.v=o.value;b.textContent=o.textContent;b.onclick=function(){if(d.get.call(sel)===o.value)return;d.set.call(sel,o.value);mark();sel.dispatchEvent(new Event("input",{bubbles:true}));sel.dispatchEvent(new Event("change",{bubbles:true}))};seg.appendChild(b)});
+seg.addEventListener("keydown",function(e){var k=e.key,i=sel.selectedIndex,n=k==="ArrowRight"||k==="ArrowDown"?i+1:k==="ArrowLeft"||k==="ArrowUp"?i-1:-1;if(n<0)return;e.preventDefault();n=(n+opts.length)%opts.length;seg.children[n].click();seg.children[n].focus()});
+sel.hidden=true;sel.tabIndex=-1;sel.setAttribute("aria-hidden","true");
+function mark(){var v=d.get.call(sel);[].forEach.call(seg.children,function(b){var on=b.dataset.v===v;b.setAttribute("aria-checked",on?"true":"false");b.tabIndex=on?0:-1});if(sel===first)tabs()}
+Object.defineProperty(sel,"value",{get:function(){return d.get.call(this)},set:function(v){d.set.call(this,v);mark()},configurable:true});Object.defineProperty(sel,"selectedIndex",{get:function(){return di.get.call(this)},set:function(v){di.set.call(this,v);mark()},configurable:true});sel.addEventListener("change",mark);if(!first)first=sel;mark()});
+var wrap=document.querySelector(".ns-try"),chips=wrap?[].slice.call(wrap.querySelectorAll(".chipb[data-ex]")):[],tb=null,groups=[];
+function tabs(){if(tb)sync()}
+if(first&&chips.length>=8){var key=null,vals=[].map.call(first.options,function(o){return o.value}),parsed=chips.map(function(c){try{return JSON.parse(c.dataset.ex)}catch(e){return {}}});["dir","op","mode","tool"].some(function(k){if(parsed.some(function(j){return vals.indexOf(j[k])>=0})){key=k;return true}});
+if(key){var def=vals[0];chips.forEach(function(c,i){var g=parsed[i][key];c.dataset.g=vals.indexOf(g)>=0?g:def});groups=vals.filter(function(v){return chips.some(function(c){return c.dataset.g===v})});
+if(groups.length>1){var h=document.createElement("div");h.className="try-h";var l=wrap.querySelector(".ns-l");if(l)h.appendChild(l);tb=document.createElement("div");tb.className="try-tabs";tb.setAttribute("role","tablist");groups.forEach(function(v){var b=document.createElement("button");b.type="button";b.setAttribute("role","tab");b.dataset.g=v;var o=[].filter.call(first.options,function(o){return o.value===v})[0];b.textContent=o?o.textContent:v;b.onclick=function(){show(v)};tb.appendChild(b)});h.appendChild(tb);wrap.insertBefore(h,wrap.firstChild);sync()}}}
+function show(g){[].forEach.call(tb.children,function(b){b.setAttribute("aria-selected",b.dataset.g===g?"true":"false")});chips.forEach(function(c){c.hidden=c.dataset.g!==g})}
+function sync(){var v=d.get.call(first);show(groups.indexOf(v)>=0?v:groups[0])}
+})(["nu-dir"]);</script><script>try{if("serviceWorker"in navigator&&/^https?:/.test(location.protocol))navigator.serviceWorker.register("../../sw.js")}catch(e){}</script></body></html>

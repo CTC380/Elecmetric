@@ -1,0 +1,2458 @@
+{
+  "labels": {
+    "converters/number-base-converter.html": "Number Base Converter",
+    "converters/binary-calculator.html": "Binary Calculator and Number Converter",
+    "converters/length-converter.html": "Length Converter"
+  },
+  "meta": {
+    "note": "Single source of truth for every standalone calculator page that has its own page script (tools/*_page.js). Read by the All Tools catalogue, the category hubs, the home page, the calculators hub, the standalone pages' related sections and tests/internal_link_graph_test.js. An engine calculator is NOT listed here: its public page comes from the engine registry and tools/master_register.json.",
+    "fields": {
+      "id": "slug under /calculators/",
+      "primaryCategory": "slug of the category hub (tools/category_hubs.js) that always lists the tool",
+      "secondaryCategories": "hub slugs that list the tool only where the technical relationship is real",
+      "category": "master register category id (All Tools discipline)",
+      "subcategory": "master register subcategory id",
+      "toolType": "master register tool family id",
+      "task": "master register task",
+      "related": "site-root-relative paths of approved related tools, shown on the page (6 to 9)",
+      "inboundFrom": "engine calculator page slugs whose Related section also offers this tool",
+      "includeInAllTools": "false only for a page deliberately left out of All Tools",
+      "homepageFeatured": "true adds the tool to the home page More tools list"
+    }
+  },
+  "pages": [
+    {
+      "id": "half-life-calculator",
+      "name": "Half-Life Calculator",
+      "url": "/calculators/half-life-calculator/",
+      "pageType": "standalone-calculator",
+      "primaryCategory": "engineering-mathematics",
+      "secondaryCategories": [],
+      "category": "C24",
+      "subcategory": "C24-S02",
+      "toolType": "TT1",
+      "task": "Calculate",
+      "keywords": [
+        "decay",
+        "exponential",
+        "half-life",
+        "radioactive",
+        "time constant"
+      ],
+      "homepageFeatured": false,
+      "includeInAllTools": true,
+      "priority": "normal",
+      "related": [
+        "calculators/decay-constant-calculator/",
+        "calculators/decay-percentage-calculator/",
+        "calculators/decay-table-calculator/",
+        "calculators/logarithm/",
+        "calculators/engineering-exponential-decay-calculator/",
+        "calculators/first-order-ode/",
+        "calculators/rc-time-constant/"
+      ],
+      "inboundFrom": [
+        "logarithm",
+        "first-order-ode"
+      ]
+    },
+    {
+      "id": "decay-constant-calculator",
+      "name": "Decay Constant Calculator",
+      "url": "/calculators/decay-constant-calculator/",
+      "pageType": "standalone-calculator",
+      "primaryCategory": "engineering-mathematics",
+      "secondaryCategories": [],
+      "category": "C24",
+      "subcategory": "C24-S02",
+      "toolType": "TT1",
+      "task": "Calculate",
+      "keywords": [
+        "decay",
+        "exponential",
+        "half-life",
+        "radioactive",
+        "time constant"
+      ],
+      "homepageFeatured": false,
+      "includeInAllTools": true,
+      "priority": "normal",
+      "related": [
+        "calculators/half-life-calculator/",
+        "calculators/decay-percentage-calculator/",
+        "calculators/decay-table-calculator/",
+        "calculators/logarithm/",
+        "calculators/engineering-exponential-decay-calculator/",
+        "calculators/first-order-ode/",
+        "calculators/rc-time-constant/"
+      ],
+      "inboundFrom": []
+    },
+    {
+      "id": "decay-percentage-calculator",
+      "name": "Decay Percentage Calculator",
+      "url": "/calculators/decay-percentage-calculator/",
+      "pageType": "standalone-calculator",
+      "primaryCategory": "engineering-mathematics",
+      "secondaryCategories": [],
+      "category": "C24",
+      "subcategory": "C24-S02",
+      "toolType": "TT1",
+      "task": "Calculate",
+      "keywords": [
+        "decay",
+        "exponential",
+        "half-life",
+        "radioactive",
+        "time constant"
+      ],
+      "homepageFeatured": false,
+      "includeInAllTools": true,
+      "priority": "normal",
+      "related": [
+        "calculators/half-life-calculator/",
+        "calculators/decay-constant-calculator/",
+        "calculators/decay-table-calculator/",
+        "calculators/logarithm/",
+        "calculators/engineering-exponential-decay-calculator/",
+        "calculators/percentage-calculator/",
+        "calculators/rc-time-constant/"
+      ],
+      "inboundFrom": []
+    },
+    {
+      "id": "decay-table-calculator",
+      "name": "Decay Table & Graph Calculator",
+      "url": "/calculators/decay-table-calculator/",
+      "pageType": "standalone-calculator",
+      "primaryCategory": "engineering-mathematics",
+      "secondaryCategories": [],
+      "category": "C24",
+      "subcategory": "C24-S02",
+      "toolType": "TT1",
+      "task": "Calculate",
+      "keywords": [
+        "decay",
+        "exponential",
+        "half-life",
+        "radioactive",
+        "time constant"
+      ],
+      "homepageFeatured": false,
+      "includeInAllTools": true,
+      "priority": "normal",
+      "related": [
+        "calculators/half-life-calculator/",
+        "calculators/decay-constant-calculator/",
+        "calculators/decay-percentage-calculator/",
+        "calculators/logarithm/",
+        "calculators/engineering-exponential-decay-calculator/",
+        "calculators/first-order-ode/",
+        "calculators/rc-time-constant/"
+      ],
+      "inboundFrom": []
+    },
+    {
+      "id": "engineering-exponential-decay-calculator",
+      "name": "Engineering Exponential Decay Calculator",
+      "url": "/calculators/engineering-exponential-decay-calculator/",
+      "pageType": "standalone-calculator",
+      "primaryCategory": "engineering-mathematics",
+      "secondaryCategories": [],
+      "category": "C24",
+      "subcategory": "C24-S02",
+      "toolType": "TT1",
+      "task": "Calculate",
+      "keywords": [
+        "decay",
+        "exponential",
+        "time constant",
+        "half-life",
+        "settling time"
+      ],
+      "homepageFeatured": false,
+      "includeInAllTools": true,
+      "priority": "normal",
+      "related": [
+        "calculators/half-life-calculator/",
+        "calculators/decay-constant-calculator/",
+        "calculators/decay-percentage-calculator/",
+        "calculators/decay-table-calculator/",
+        "calculators/logarithm/",
+        "calculators/first-order-ode/",
+        "calculators/rc-time-constant/"
+      ],
+      "inboundFrom": []
+    },
+    {
+      "id": "exponent-calculator",
+      "name": "Exponent Calculator",
+      "url": "/calculators/exponent-calculator/",
+      "pageType": "standalone-calculator",
+      "primaryCategory": "engineering-mathematics",
+      "secondaryCategories": [],
+      "category": "C24",
+      "subcategory": "C24-S01",
+      "toolType": "TT1",
+      "task": "Calculate",
+      "keywords": [
+        "exponent calculator",
+        "power calculator",
+        "negative exponent",
+        "fractional exponent",
+        "a to the power n"
+      ],
+      "homepageFeatured": false,
+      "includeInAllTools": true,
+      "priority": "normal",
+      "related": [
+        "calculators/powers-roots/",
+        "calculators/negative-fractional-exponents-calculator/",
+        "calculators/logarithm/",
+        "calculators/scientific-calculator/",
+        "calculators/fraction-arithmetic/",
+        "calculators/half-life-calculator/",
+        "calculators/engineering-exponential-decay-calculator/",
+        "calculators/rc-time-constant/",
+        "calculators/exponent-solver/"
+      ],
+      "inboundFrom": [
+        "powers-roots",
+        "logarithm"
+      ]
+    },
+    {
+      "id": "negative-fractional-exponents-calculator",
+      "name": "Negative and Fractional Exponents Calculator",
+      "url": "/calculators/negative-fractional-exponents-calculator/",
+      "pageType": "standalone-calculator",
+      "primaryCategory": "engineering-mathematics",
+      "secondaryCategories": [],
+      "category": "C24",
+      "subcategory": "C24-S01",
+      "toolType": "TT1",
+      "task": "Calculate",
+      "keywords": [
+        "negative exponent calculator",
+        "fractional exponent calculator",
+        "rational exponent",
+        "simplified radical form",
+        "a to the power p over q"
+      ],
+      "homepageFeatured": false,
+      "includeInAllTools": true,
+      "priority": "normal",
+      "related": [
+        "calculators/exponent-calculator/",
+        "calculators/powers-roots/",
+        "calculators/logarithm/",
+        "calculators/fraction-arithmetic/",
+        "calculators/decimal-fraction-converter/",
+        "calculators/scientific-calculator/",
+        "calculators/half-life-calculator/",
+        "calculators/exponent-solver/",
+        "calculators/exponent-laws-calculator/"
+      ],
+      "inboundFrom": [
+        "powers-roots"
+      ]
+    },
+    {
+      "id": "exponent-solver",
+      "name": "Exponent Solver (Missing Value Solver)",
+      "url": "/calculators/exponent-solver/",
+      "pageType": "standalone-calculator",
+      "primaryCategory": "engineering-mathematics",
+      "secondaryCategories": [],
+      "category": "C24",
+      "subcategory": "C24-S01",
+      "toolType": "TT1",
+      "task": "Calculate",
+      "keywords": [
+        "exponent solver",
+        "solve for exponent",
+        "find the base",
+        "missing exponent calculator",
+        "a^n = y solver"
+      ],
+      "homepageFeatured": false,
+      "includeInAllTools": true,
+      "priority": "normal",
+      "related": [
+        "calculators/exponent-calculator/",
+        "calculators/negative-fractional-exponents-calculator/",
+        "calculators/logarithm/",
+        "calculators/powers-roots/",
+        "calculators/scientific-calculator/",
+        "calculators/half-life-calculator/",
+        "calculators/rc-time-constant/",
+        "calculators/engineering-exponential-decay-calculator/",
+        "calculators/exponent-laws-calculator/"
+      ],
+      "inboundFrom": [
+        "logarithm"
+      ]
+    },
+    {
+      "id": "exponent-laws-calculator",
+      "name": "Exponent Laws Calculator",
+      "url": "/calculators/exponent-laws-calculator/",
+      "pageType": "standalone-calculator",
+      "primaryCategory": "engineering-mathematics",
+      "secondaryCategories": [],
+      "category": "C24",
+      "subcategory": "C24-S01",
+      "toolType": "TT1",
+      "task": "Calculate",
+      "keywords": [
+        "exponent laws calculator",
+        "exponent rules",
+        "product of powers",
+        "power of a power",
+        "laws of exponents"
+      ],
+      "homepageFeatured": false,
+      "includeInAllTools": true,
+      "priority": "normal",
+      "related": [
+        "calculators/exponent-calculator/",
+        "calculators/negative-fractional-exponents-calculator/",
+        "calculators/exponent-solver/",
+        "calculators/powers-roots/",
+        "calculators/logarithm/",
+        "calculators/scientific-calculator/",
+        "calculators/fraction-arithmetic/",
+        "calculators/engineering-exponential-decay-calculator/",
+        "calculators/engineering-powers-scientific-notation/"
+      ],
+      "inboundFrom": [
+        "quadratic-solver"
+      ]
+    },
+    {
+      "id": "engineering-powers-scientific-notation",
+      "name": "Engineering Powers & Scientific Notation Calculator",
+      "url": "/calculators/engineering-powers-scientific-notation/",
+      "pageType": "standalone-calculator",
+      "primaryCategory": "engineering-mathematics",
+      "secondaryCategories": [],
+      "category": "C24",
+      "subcategory": "C24-S01",
+      "toolType": "TT1",
+      "task": "Calculate",
+      "keywords": [
+        "scientific notation calculator",
+        "engineering notation calculator",
+        "powers of ten",
+        "SI prefix calculator",
+        "rc discharge calculator"
+      ],
+      "homepageFeatured": false,
+      "includeInAllTools": true,
+      "priority": "normal",
+      "related": [
+        "calculators/exponent-calculator/",
+        "calculators/exponent-laws-calculator/",
+        "calculators/exponent-solver/",
+        "calculators/rc-time-constant/",
+        "calculators/rc-rl-transient/",
+        "calculators/engineering-exponential-decay-calculator/",
+        "calculators/scientific-calculator/",
+        "calculators/powers-roots/",
+        "calculators/logarithm/"
+      ],
+      "inboundFrom": [
+        "rc-time-constant"
+      ]
+    },
+    {
+      "id": "discriminant-calculator",
+      "name": "Discriminant Calculator (Discriminant & Root Analysis)",
+      "url": "/calculators/discriminant-calculator/",
+      "pageType": "standalone-calculator",
+      "primaryCategory": "engineering-mathematics",
+      "secondaryCategories": [],
+      "category": "C24",
+      "subcategory": "C24-S01",
+      "toolType": "TT1",
+      "task": "Calculate",
+      "keywords": [
+        "discriminant calculator",
+        "nature of roots",
+        "b squared minus 4ac",
+        "repeated root calculator",
+        "complex roots calculator"
+      ],
+      "homepageFeatured": false,
+      "includeInAllTools": true,
+      "priority": "normal",
+      "related": [
+        "calculators/quadratic-solver/",
+        "calculators/complex-number/",
+        "calculators/powers-roots/",
+        "calculators/fraction-arithmetic/",
+        "calculators/matrix-calculator/",
+        "calculators/rlc-transient/",
+        "calculators/scientific-calculator/",
+        "calculators/logarithm/"
+      ],
+      "inboundFrom": [
+        "quadratic-solver"
+      ]
+    },
+    {
+      "id": "parabola-graph",
+      "name": "Parabola Graph & Vertex Calculator",
+      "url": "/calculators/parabola-graph/",
+      "pageType": "standalone-calculator",
+      "primaryCategory": "engineering-mathematics",
+      "secondaryCategories": [],
+      "category": "C24",
+      "subcategory": "C24-S01",
+      "toolType": "TT1",
+      "task": "Calculate",
+      "keywords": [
+        "parabola graph calculator",
+        "vertex of a parabola calculator",
+        "axis of symmetry calculator",
+        "quadratic function graph",
+        "x and y intercepts calculator"
+      ],
+      "homepageFeatured": false,
+      "includeInAllTools": true,
+      "priority": "normal",
+      "related": [
+        "calculators/quadratic-solver/",
+        "calculators/discriminant-calculator/",
+        "calculators/complex-number/",
+        "calculators/powers-roots/",
+        "calculators/matrix-calculator/",
+        "calculators/rlc-transient/",
+        "calculators/scientific-calculator/",
+        "calculators/logarithm/"
+      ],
+      "inboundFrom": []
+    },
+    {
+      "id": "exact-roots",
+      "name": "Factoring and Vertex Form Calculator",
+      "url": "/calculators/exact-roots/",
+      "pageType": "standalone-calculator",
+      "primaryCategory": "engineering-mathematics",
+      "secondaryCategories": [],
+      "category": "C24",
+      "subcategory": "C24-S01",
+      "toolType": "TT1",
+      "task": "Calculate",
+      "keywords": [
+        "factoring quadratic calculator",
+        "vertex form calculator",
+        "completing the square calculator",
+        "rational root theorem calculator",
+        "factor quadratic equation with steps"
+      ],
+      "homepageFeatured": false,
+      "includeInAllTools": true,
+      "priority": "normal",
+      "related": [
+        "calculators/quadratic-solver/",
+        "calculators/discriminant-calculator/",
+        "calculators/parabola-graph/",
+        "calculators/complex-number/",
+        "calculators/powers-roots/",
+        "calculators/fraction-simplifier/",
+        "calculators/rlc-transient/",
+        "calculators/scientific-calculator/"
+      ],
+      "inboundFrom": []
+    },
+    {
+      "id": "engineering-quadratic",
+      "name": "Engineering Quadratic Equation Solver",
+      "url": "/calculators/engineering-quadratic/",
+      "pageType": "standalone-calculator",
+      "primaryCategory": "engineering-mathematics",
+      "secondaryCategories": [],
+      "category": "C24",
+      "subcategory": "C24-S01",
+      "toolType": "TT1",
+      "task": "Calculate",
+      "keywords": [
+        "rlc circuit calculator",
+        "series rlc characteristic equation",
+        "damping ratio calculator",
+        "critical damping calculator",
+        "second order system calculator"
+      ],
+      "homepageFeatured": false,
+      "includeInAllTools": true,
+      "priority": "normal",
+      "related": [
+        "calculators/quadratic-solver/",
+        "calculators/exact-roots/",
+        "calculators/rlc-transient/",
+        "calculators/second-order-response/",
+        "calculators/resonance-lc/",
+        "calculators/impedance-rlc/",
+        "calculators/complex-number/",
+        "calculators/scientific-calculator/"
+      ],
+      "inboundFrom": []
+    },
+    {
+      "id": "antilog-calculator",
+      "name": "Antilog Calculator (Log Calculator Mode 02)",
+      "url": "/calculators/antilog-calculator/",
+      "pageType": "standalone-calculator",
+      "primaryCategory": "engineering-mathematics",
+      "secondaryCategories": [],
+      "category": "C24",
+      "subcategory": "C24-S01",
+      "toolType": "TT1",
+      "task": "Calculate",
+      "keywords": [
+        "antilog calculator",
+        "inverse log calculator",
+        "10 to the power calculator",
+        "e to the power x calculator",
+        "antilogarithm any base"
+      ],
+      "homepageFeatured": false,
+      "includeInAllTools": true,
+      "priority": "normal",
+      "related": [
+        "calculators/logarithm/",
+        "calculators/exponent-calculator/",
+        "calculators/negative-fractional-exponents-calculator/",
+        "calculators/exponent-solver/",
+        "calculators/powers-roots/",
+        "calculators/scientific-calculator/",
+        "calculators/half-life-calculator/",
+        "calculators/decibel/"
+      ],
+      "inboundFrom": [
+        "decibel",
+        "rc-time-constant"
+      ]
+    },
+    {
+      "id": "log-solver",
+      "name": "Log Solver (Log Calculator Mode 03)",
+      "url": "/calculators/log-solver/",
+      "pageType": "standalone-calculator",
+      "primaryCategory": "engineering-mathematics",
+      "secondaryCategories": [],
+      "category": "C24",
+      "subcategory": "C24-S01",
+      "toolType": "TT1",
+      "task": "Calculate",
+      "keywords": [
+        "log solver",
+        "logarithm missing value calculator",
+        "find the base of a logarithm",
+        "solve log base b of x equals y",
+        "log equation solver"
+      ],
+      "homepageFeatured": false,
+      "includeInAllTools": true,
+      "priority": "normal",
+      "related": [
+        "calculators/logarithm/",
+        "calculators/antilog-calculator/",
+        "calculators/exponent-solver/",
+        "calculators/exponent-calculator/",
+        "calculators/powers-roots/",
+        "calculators/scientific-calculator/",
+        "calculators/half-life-calculator/",
+        "calculators/decibel/"
+      ],
+      "inboundFrom": [
+        "decibel",
+        "rc-time-constant"
+      ]
+    },
+    {
+      "id": "log-rules",
+      "name": "Logarithm Rules Calculator (Log Calculator Mode 04)",
+      "url": "/calculators/log-rules/",
+      "pageType": "standalone-calculator",
+      "primaryCategory": "engineering-mathematics",
+      "secondaryCategories": [],
+      "category": "C24",
+      "subcategory": "C24-S01",
+      "toolType": "TT1",
+      "task": "Calculate",
+      "keywords": [
+        "logarithm rules calculator",
+        "expand logarithms calculator",
+        "condense logarithms calculator",
+        "product quotient power rule of logarithms",
+        "change of base formula calculator"
+      ],
+      "homepageFeatured": false,
+      "includeInAllTools": true,
+      "priority": "normal",
+      "related": [
+        "calculators/logarithm/",
+        "calculators/antilog-calculator/",
+        "calculators/log-solver/",
+        "calculators/exponent-laws-calculator/",
+        "calculators/exponent-calculator/",
+        "calculators/scientific-calculator/",
+        "calculators/half-life-calculator/",
+        "calculators/decibel/"
+      ],
+      "inboundFrom": []
+    },
+    {
+      "id": "binary-arithmetic-calculator",
+      "name": "Binary Arithmetic Calculator",
+      "url": "/calculators/binary-arithmetic-calculator/",
+      "pageType": "standalone-calculator",
+      "primaryCategory": "electronics-and-instrumentation",
+      "secondaryCategories": [
+        "engineering-mathematics"
+      ],
+      "category": "C14",
+      "subcategory": "C14-S05",
+      "toolType": "TT1",
+      "task": "Calculate",
+      "keywords": [
+        "binary addition",
+        "binary subtraction",
+        "binary multiplication",
+        "binary division"
+      ],
+      "homepageFeatured": true,
+      "includeInAllTools": true,
+      "priority": "normal",
+      "related": [
+        "calculators/number-system-converter/",
+        "calculators/hex-calculator/",
+        "calculators/bitwise-operations-calculator/",
+        "calculators/signed-binary-calculator/",
+        "calculators/digital-logic-calculator/",
+        "calculators/bcd-converter/",
+        "calculators/gray-code-converter/",
+        "converters/number-base-converter.html",
+        "calculators/big-number-calculator/"
+      ],
+      "inboundFrom": [
+        "boolean-logic",
+        "ladder-logic-simulator"
+      ]
+    },
+    {
+      "id": "hex-calculator",
+      "name": "Hex Calculator",
+      "url": "/calculators/hex-calculator/",
+      "pageType": "standalone-calculator",
+      "primaryCategory": "electronics-and-instrumentation",
+      "secondaryCategories": [
+        "engineering-mathematics"
+      ],
+      "category": "C14",
+      "subcategory": "C14-S05",
+      "toolType": "TT1",
+      "task": "Calculate",
+      "keywords": [
+        "hex",
+        "hexadecimal",
+        "hex arithmetic",
+        "two's complement",
+        "bitwise",
+        "checksum"
+      ],
+      "homepageFeatured": false,
+      "includeInAllTools": true,
+      "priority": "normal",
+      "related": [
+        "calculators/number-system-converter/",
+        "calculators/binary-arithmetic-calculator/",
+        "calculators/bitwise-operations-calculator/",
+        "calculators/ascii-converter/",
+        "calculators/bcd-converter/",
+        "calculators/gray-code-converter/",
+        "calculators/unicode-converter/",
+        "converters/number-base-converter.html",
+        "converters/binary-calculator.html"
+      ],
+      "inboundFrom": [
+        "adc-sampling"
+      ]
+    },
+    {
+      "id": "number-system-converter",
+      "name": "Number System Converter",
+      "url": "/calculators/number-system-converter/",
+      "pageType": "standalone-calculator",
+      "primaryCategory": "electronics-and-instrumentation",
+      "secondaryCategories": [
+        "engineering-mathematics"
+      ],
+      "category": "C14",
+      "subcategory": "C14-S05",
+      "toolType": "TT5",
+      "task": "Convert",
+      "keywords": [
+        "binary",
+        "octal",
+        "decimal",
+        "hexadecimal",
+        "base conversion"
+      ],
+      "homepageFeatured": false,
+      "includeInAllTools": true,
+      "priority": "normal",
+      "related": [
+        "calculators/binary-arithmetic-calculator/",
+        "calculators/hex-calculator/",
+        "calculators/bitwise-operations-calculator/",
+        "calculators/signed-binary-calculator/",
+        "calculators/digital-logic-calculator/",
+        "calculators/bcd-converter/",
+        "calculators/gray-code-converter/",
+        "converters/number-base-converter.html",
+        "calculators/big-number-calculator/"
+      ],
+      "inboundFrom": [
+        "boolean-logic"
+      ]
+    },
+    {
+      "id": "bitwise-operations-calculator",
+      "name": "Bitwise Operations Calculator",
+      "url": "/calculators/bitwise-operations-calculator/",
+      "pageType": "standalone-calculator",
+      "primaryCategory": "electronics-and-instrumentation",
+      "secondaryCategories": [
+        "engineering-mathematics"
+      ],
+      "category": "C14",
+      "subcategory": "C14-S05",
+      "toolType": "TT1",
+      "task": "Calculate",
+      "keywords": [
+        "bitwise",
+        "AND",
+        "OR",
+        "XOR",
+        "shift",
+        "rotate",
+        "bit mask"
+      ],
+      "homepageFeatured": false,
+      "includeInAllTools": true,
+      "priority": "normal",
+      "related": [
+        "calculators/binary-arithmetic-calculator/",
+        "calculators/number-system-converter/",
+        "calculators/signed-binary-calculator/",
+        "calculators/digital-logic-calculator/",
+        "calculators/hex-calculator/",
+        "calculators/boolean-logic/",
+        "converters/number-base-converter.html"
+      ],
+      "inboundFrom": []
+    },
+    {
+      "id": "signed-binary-calculator",
+      "name": "Signed Binary Calculator",
+      "url": "/calculators/signed-binary-calculator/",
+      "pageType": "standalone-calculator",
+      "primaryCategory": "electronics-and-instrumentation",
+      "secondaryCategories": [
+        "engineering-mathematics"
+      ],
+      "category": "C14",
+      "subcategory": "C14-S05",
+      "toolType": "TT1",
+      "task": "Calculate",
+      "keywords": [
+        "signed binary",
+        "two's complement",
+        "sign magnitude",
+        "ones complement",
+        "overflow"
+      ],
+      "homepageFeatured": false,
+      "includeInAllTools": true,
+      "priority": "normal",
+      "related": [
+        "calculators/binary-arithmetic-calculator/",
+        "calculators/number-system-converter/",
+        "calculators/bitwise-operations-calculator/",
+        "calculators/digital-logic-calculator/",
+        "calculators/hex-calculator/",
+        "calculators/bcd-converter/",
+        "converters/binary-calculator.html"
+      ],
+      "inboundFrom": []
+    },
+    {
+      "id": "digital-logic-calculator",
+      "name": "Digital Logic Calculator",
+      "url": "/calculators/digital-logic-calculator/",
+      "pageType": "standalone-calculator",
+      "primaryCategory": "electronics-and-instrumentation",
+      "secondaryCategories": [
+        "engineering-mathematics"
+      ],
+      "category": "C14",
+      "subcategory": "C14-S05",
+      "toolType": "TT1",
+      "task": "Calculate",
+      "keywords": [
+        "logic gates",
+        "truth table",
+        "boolean",
+        "adder",
+        "flip-flop"
+      ],
+      "homepageFeatured": false,
+      "includeInAllTools": true,
+      "priority": "normal",
+      "related": [
+        "calculators/hex-calculator/",
+        "calculators/boolean-logic/",
+        "calculators/bitwise-operations-calculator/",
+        "calculators/signed-binary-calculator/",
+        "calculators/binary-arithmetic-calculator/",
+        "calculators/number-system-converter/",
+        "calculators/bcd-converter/",
+        "calculators/gray-code-converter/",
+        "calculators/ladder-logic-simulator/"
+      ],
+      "inboundFrom": []
+    },
+    {
+      "id": "bcd-converter",
+      "name": "BCD Converter",
+      "url": "/calculators/bcd-converter/",
+      "pageType": "standalone-calculator",
+      "primaryCategory": "electronics-and-instrumentation",
+      "secondaryCategories": [
+        "engineering-mathematics"
+      ],
+      "category": "C14",
+      "subcategory": "C14-S05",
+      "toolType": "TT5",
+      "task": "Convert",
+      "keywords": [
+        "BCD",
+        "binary coded decimal",
+        "8421",
+        "excess-3"
+      ],
+      "homepageFeatured": false,
+      "includeInAllTools": true,
+      "priority": "normal",
+      "related": [
+        "calculators/binary-arithmetic-calculator/",
+        "calculators/number-system-converter/",
+        "calculators/bitwise-operations-calculator/",
+        "calculators/gray-code-converter/",
+        "calculators/ascii-converter/",
+        "calculators/unicode-converter/",
+        "converters/number-base-converter.html",
+        "converters/binary-calculator.html",
+        "calculators/digital-logic-calculator/"
+      ],
+      "inboundFrom": []
+    },
+    {
+      "id": "gray-code-converter",
+      "name": "Gray Code Converter",
+      "url": "/calculators/gray-code-converter/",
+      "pageType": "standalone-calculator",
+      "primaryCategory": "electronics-and-instrumentation",
+      "secondaryCategories": [
+        "engineering-mathematics"
+      ],
+      "category": "C14",
+      "subcategory": "C14-S05",
+      "toolType": "TT5",
+      "task": "Convert",
+      "keywords": [
+        "gray code",
+        "reflected binary",
+        "encoder",
+        "rotary encoder"
+      ],
+      "homepageFeatured": false,
+      "includeInAllTools": true,
+      "priority": "normal",
+      "related": [
+        "calculators/binary-arithmetic-calculator/",
+        "calculators/number-system-converter/",
+        "calculators/bitwise-operations-calculator/",
+        "calculators/bcd-converter/",
+        "calculators/ascii-converter/",
+        "calculators/unicode-converter/",
+        "converters/number-base-converter.html",
+        "converters/binary-calculator.html",
+        "calculators/digital-logic-calculator/"
+      ],
+      "inboundFrom": []
+    },
+    {
+      "id": "ascii-converter",
+      "name": "ASCII Converter",
+      "url": "/calculators/ascii-converter/",
+      "pageType": "standalone-calculator",
+      "primaryCategory": "electronics-and-instrumentation",
+      "secondaryCategories": [
+        "engineering-mathematics"
+      ],
+      "category": "C14",
+      "subcategory": "C14-S05",
+      "toolType": "TT5",
+      "task": "Convert",
+      "keywords": [
+        "ascii",
+        "character code",
+        "text to binary",
+        "hex"
+      ],
+      "homepageFeatured": false,
+      "includeInAllTools": true,
+      "priority": "normal",
+      "related": [
+        "calculators/binary-arithmetic-calculator/",
+        "calculators/number-system-converter/",
+        "calculators/bitwise-operations-calculator/",
+        "calculators/bcd-converter/",
+        "calculators/gray-code-converter/",
+        "calculators/unicode-converter/",
+        "converters/number-base-converter.html",
+        "converters/binary-calculator.html"
+      ],
+      "inboundFrom": []
+    },
+    {
+      "id": "unicode-converter",
+      "name": "Unicode Converter",
+      "url": "/calculators/unicode-converter/",
+      "pageType": "standalone-calculator",
+      "primaryCategory": "electronics-and-instrumentation",
+      "secondaryCategories": [
+        "engineering-mathematics"
+      ],
+      "category": "C14",
+      "subcategory": "C14-S05",
+      "toolType": "TT5",
+      "task": "Convert",
+      "keywords": [
+        "unicode",
+        "code point",
+        "utf-8",
+        "utf-16"
+      ],
+      "homepageFeatured": false,
+      "includeInAllTools": true,
+      "priority": "normal",
+      "related": [
+        "calculators/binary-arithmetic-calculator/",
+        "calculators/number-system-converter/",
+        "calculators/bitwise-operations-calculator/",
+        "calculators/bcd-converter/",
+        "calculators/gray-code-converter/",
+        "calculators/ascii-converter/",
+        "converters/number-base-converter.html",
+        "converters/binary-calculator.html"
+      ],
+      "inboundFrom": []
+    },
+    {
+      "id": "random-number-generator",
+      "name": "Random Number Generator",
+      "url": "/calculators/random-number-generator/",
+      "pageType": "standalone-calculator",
+      "primaryCategory": "engineering-mathematics",
+      "secondaryCategories": [],
+      "category": "C24",
+      "subcategory": "C24-S05",
+      "toolType": "TT1",
+      "task": "Calculate",
+      "keywords": [
+        "random",
+        "dice",
+        "lottery",
+        "sampling",
+        "shuffle"
+      ],
+      "homepageFeatured": true,
+      "includeInAllTools": true,
+      "priority": "normal",
+      "related": [
+        "calculators/probability-calculator/",
+        "calculators/permutations-combinations/",
+        "calculators/mean-median-mode/",
+        "calculators/standard-deviation/",
+        "calculators/basic-calculator/",
+        "calculators/scientific-calculator/",
+        "calculators/number-system-converter/"
+      ],
+      "inboundFrom": [
+        "probability-calculator",
+        "permutations-combinations",
+        "mean-median-mode",
+        "standard-deviation"
+      ]
+    },
+    {
+      "id": "fraction-arithmetic",
+      "name": "Fraction Arithmetic Calculator",
+      "url": "/calculators/fraction-arithmetic/",
+      "pageType": "standalone-calculator",
+      "primaryCategory": "engineering-mathematics",
+      "secondaryCategories": [],
+      "category": "C24",
+      "subcategory": "C24-S07",
+      "toolType": "TT1",
+      "task": "Calculate",
+      "keywords": [
+        "fraction",
+        "add",
+        "subtract",
+        "multiply",
+        "divide"
+      ],
+      "homepageFeatured": false,
+      "includeInAllTools": true,
+      "priority": "normal",
+      "related": [
+        "calculators/fraction-simplifier/",
+        "calculators/decimal-fraction-converter/",
+        "calculators/mixed-number-calculator/",
+        "calculators/fraction-ratio-tools/",
+        "calculators/fractional-inch-converter/",
+        "calculators/ratio-calculator/",
+        "calculators/basic-calculator/"
+      ],
+      "inboundFrom": []
+    },
+    {
+      "id": "fraction-simplifier",
+      "name": "Fraction Simplifier",
+      "url": "/calculators/fraction-simplifier/",
+      "pageType": "standalone-calculator",
+      "primaryCategory": "engineering-mathematics",
+      "secondaryCategories": [],
+      "category": "C24",
+      "subcategory": "C24-S07",
+      "toolType": "TT1",
+      "task": "Calculate",
+      "keywords": [
+        "simplify",
+        "reduce",
+        "gcd",
+        "lowest terms"
+      ],
+      "homepageFeatured": false,
+      "includeInAllTools": true,
+      "priority": "normal",
+      "related": [
+        "calculators/fraction-arithmetic/",
+        "calculators/decimal-fraction-converter/",
+        "calculators/mixed-number-calculator/",
+        "calculators/fraction-ratio-tools/",
+        "calculators/fractional-inch-converter/",
+        "calculators/ratio-calculator/",
+        "calculators/basic-calculator/"
+      ],
+      "inboundFrom": []
+    },
+    {
+      "id": "proportion-calculator",
+      "name": "Proportion Calculator (Proportion Solver)",
+      "url": "/calculators/proportion-calculator/",
+      "pageType": "standalone-calculator",
+      "primaryCategory": "engineering-mathematics",
+      "secondaryCategories": [],
+      "category": "C24",
+      "subcategory": "C24-S07",
+      "toolType": "TT1",
+      "task": "Calculate",
+      "keywords": [
+        "proportion calculator",
+        "solve proportion",
+        "cross multiplication calculator",
+        "missing value in a ratio",
+        "a to b equals c to d"
+      ],
+      "homepageFeatured": false,
+      "includeInAllTools": true,
+      "priority": "normal",
+      "related": [
+        "calculators/ratio-calculator/",
+        "calculators/fraction-simplifier/",
+        "calculators/fraction-arithmetic/",
+        "calculators/fraction-ratio-tools/",
+        "calculators/basic-percentage-calculator/",
+        "calculators/transformer-turns-ratio/",
+        "calculators/pt-ratio/",
+        "calculators/ct-burden/"
+      ],
+      "inboundFrom": [
+        "ratio-calculator"
+      ]
+    },
+    {
+      "id": "lcm-calculator",
+      "name": "LCM Calculator (Multiple Number LCM)",
+      "url": "/calculators/lcm-calculator/",
+      "pageType": "standalone-calculator",
+      "primaryCategory": "engineering-mathematics",
+      "secondaryCategories": [],
+      "category": "C24",
+      "subcategory": "C24-S07",
+      "toolType": "TT1",
+      "task": "Calculate",
+      "keywords": [
+        "lcm calculator",
+        "least common multiple",
+        "lcm of multiple numbers",
+        "lcm of three numbers",
+        "lowest common multiple"
+      ],
+      "homepageFeatured": false,
+      "includeInAllTools": true,
+      "priority": "normal",
+      "related": [
+        "calculators/fraction-ratio-tools/",
+        "calculators/fraction-simplifier/",
+        "calculators/fraction-arithmetic/",
+        "calculators/mixed-number-calculator/",
+        "calculators/ratio-calculator/",
+        "calculators/proportion-calculator/",
+        "calculators/frequency-period/",
+        "calculators/binary-arithmetic-calculator/"
+      ],
+      "inboundFrom": [
+        "frequency-period",
+        "ratio-calculator"
+      ]
+    },
+    {
+      "id": "equivalent-ratio-calculator",
+      "name": "Equivalent Ratio Calculator (Equivalent Ratio Generator)",
+      "url": "/calculators/equivalent-ratio-calculator/",
+      "pageType": "standalone-calculator",
+      "primaryCategory": "engineering-mathematics",
+      "secondaryCategories": [],
+      "category": "C24",
+      "subcategory": "C24-S07",
+      "toolType": "TT1",
+      "task": "Calculate",
+      "keywords": [
+        "equivalent ratio calculator",
+        "equivalent ratios",
+        "scale a ratio",
+        "ratio scaling calculator",
+        "table of equivalent ratios"
+      ],
+      "homepageFeatured": false,
+      "includeInAllTools": true,
+      "priority": "normal",
+      "related": [
+        "calculators/ratio-calculator/",
+        "calculators/proportion-calculator/",
+        "calculators/fraction-simplifier/",
+        "calculators/fraction-arithmetic/",
+        "calculators/fraction-ratio-tools/",
+        "calculators/basic-percentage-calculator/",
+        "calculators/transformer-turns-ratio/",
+        "calculators/pt-ratio/",
+        "calculators/ct-burden/"
+      ],
+      "inboundFrom": []
+    },
+    {
+      "id": "gcf-calculator",
+      "name": "GCF Calculator (Multiple Number GCF, Mode 01)",
+      "url": "/calculators/gcf-calculator/",
+      "pageType": "standalone-calculator",
+      "primaryCategory": "engineering-mathematics",
+      "secondaryCategories": [],
+      "category": "C24",
+      "subcategory": "C24-S07",
+      "toolType": "TT1",
+      "task": "Calculate",
+      "keywords": [
+        "gcf calculator",
+        "greatest common factor",
+        "gcd calculator",
+        "hcf calculator",
+        "greatest common divisor"
+      ],
+      "homepageFeatured": false,
+      "includeInAllTools": true,
+      "priority": "normal",
+      "related": [
+        "calculators/fraction-simplifier/",
+        "calculators/fraction-ratio-tools/",
+        "calculators/ratio-calculator/",
+        "calculators/proportion-calculator/",
+        "calculators/fraction-arithmetic/",
+        "calculators/transformer-turns-ratio/",
+        "calculators/pt-ratio/",
+        "calculators/big-number-calculator/"
+      ],
+      "inboundFrom": []
+    },
+    {
+      "id": "gcf-prime-factorisation-calculator",
+      "name": "GCF by Prime Factorisation Calculator (GCF Calculator, Mode 02)",
+      "url": "/calculators/gcf-prime-factorisation-calculator/",
+      "pageType": "standalone-calculator",
+      "primaryCategory": "engineering-mathematics",
+      "secondaryCategories": [],
+      "category": "C24",
+      "subcategory": "C24-S07",
+      "toolType": "TT1",
+      "task": "Calculate",
+      "keywords": [
+        "gcf by prime factorization",
+        "prime factorization gcf calculator",
+        "gcf prime factors",
+        "common prime factors",
+        "hcf by prime factorisation"
+      ],
+      "homepageFeatured": false,
+      "includeInAllTools": true,
+      "priority": "normal",
+      "related": [
+        "calculators/gcf-calculator/",
+        "calculators/fraction-simplifier/",
+        "calculators/fraction-ratio-tools/",
+        "calculators/ratio-calculator/",
+        "calculators/proportion-calculator/",
+        "calculators/fraction-arithmetic/",
+        "calculators/transformer-turns-ratio/",
+        "calculators/pt-ratio/"
+      ],
+      "inboundFrom": []
+    },
+    {
+      "id": "rounding-calculator",
+      "name": "Rounding Calculator (Decimal Place Rounding, Mode 01)",
+      "url": "/calculators/rounding-calculator/",
+      "pageType": "standalone-calculator",
+      "primaryCategory": "engineering-mathematics",
+      "secondaryCategories": [],
+      "category": "C24",
+      "subcategory": "C24-S07",
+      "toolType": "TT1",
+      "task": "Calculate",
+      "keywords": [
+        "rounding calculator",
+        "round to decimal places",
+        "round to nearest ten",
+        "half even rounding calculator",
+        "bankers rounding calculator"
+      ],
+      "homepageFeatured": false,
+      "includeInAllTools": true,
+      "priority": "normal",
+      "related": [
+        "calculators/rounding-sig-figs/",
+        "calculators/engineering-measurement-analysis/",
+        "calculators/measurement-uncertainty/",
+        "calculators/engineering-powers-scientific-notation/",
+        "calculators/percentage-error-calculator/",
+        "calculators/decimal-fraction-converter/",
+        "calculators/fractional-inch-converter/",
+        "calculators/fraction-simplifier/"
+      ],
+      "inboundFrom": [
+        "rounding-sig-figs"
+      ]
+    },
+    {
+      "id": "factor-calculator",
+      "name": "Factor Calculator (All Factors Finder, Mode 01)",
+      "url": "/calculators/factor-calculator/",
+      "pageType": "standalone-calculator",
+      "primaryCategory": "engineering-mathematics",
+      "secondaryCategories": [],
+      "category": "C24",
+      "subcategory": "C24-S07",
+      "toolType": "TT1",
+      "task": "Calculate",
+      "keywords": [
+        "factor calculator",
+        "factors of a number",
+        "all factors of a number",
+        "find factors",
+        "factor pairs calculator",
+        "list of factors"
+      ],
+      "homepageFeatured": false,
+      "includeInAllTools": true,
+      "priority": "normal",
+      "related": [
+        "calculators/gcf-calculator/",
+        "calculators/gcf-prime-factorisation-calculator/",
+        "calculators/fraction-simplifier/",
+        "calculators/ratio-calculator/",
+        "calculators/proportion-calculator/",
+        "calculators/square-root-calculator/",
+        "calculators/cube-root-calculator/",
+        "calculators/battery-series-parallel/"
+      ],
+      "inboundFrom": [
+        "battery-series-parallel"
+      ]
+    },
+    {
+      "id": "big-number-calculator",
+      "name": "Big Number Calculator (Big Number Calculator, Mode 01)",
+      "url": "/calculators/big-number-calculator/",
+      "pageType": "standalone-calculator",
+      "primaryCategory": "engineering-mathematics",
+      "secondaryCategories": [],
+      "category": "C24",
+      "subcategory": "C24-S07",
+      "toolType": "TT1",
+      "task": "Calculate",
+      "keywords": [
+        "big number calculator",
+        "large number calculator",
+        "big integer calculator",
+        "large integer calculator",
+        "arbitrary precision calculator"
+      ],
+      "homepageFeatured": false,
+      "includeInAllTools": true,
+      "priority": "normal",
+      "related": [
+        "calculators/gcf-calculator/",
+        "calculators/exponent-calculator/",
+        "calculators/engineering-powers-scientific-notation/",
+        "calculators/scientific-calculator/",
+        "calculators/hex-calculator/",
+        "calculators/binary-arithmetic-calculator/",
+        "calculators/number-system-converter/",
+        "calculators/fraction-arithmetic/"
+      ],
+      "inboundFrom": []
+    },
+    {
+      "id": "square-root-calculator",
+      "name": "Square Root Calculator (Root Calculator, Mode 01)",
+      "url": "/calculators/square-root-calculator/",
+      "pageType": "standalone-calculator",
+      "primaryCategory": "engineering-mathematics",
+      "secondaryCategories": [],
+      "category": "C24",
+      "subcategory": "C24-S01",
+      "toolType": "TT1",
+      "task": "Calculate",
+      "keywords": [
+        "square root calculator",
+        "simplify square root",
+        "simplified radical form",
+        "perfect square calculator",
+        "root calculator",
+        "sqrt calculator"
+      ],
+      "homepageFeatured": false,
+      "includeInAllTools": true,
+      "priority": "normal",
+      "related": [
+        "calculators/scientific-calculator/",
+        "calculators/exponent-calculator/",
+        "calculators/negative-fractional-exponents-calculator/",
+        "calculators/powers-roots/",
+        "calculators/quadratic-solver/",
+        "calculators/fraction-simplifier/",
+        "calculators/impedance-rlc/",
+        "calculators/rms-peak/",
+        "calculators/pythagorean-theorem/"
+      ],
+      "inboundFrom": [
+        "pythagorean-theorem",
+        "rms-peak"
+      ]
+    },
+    {
+      "id": "cube-root-calculator",
+      "name": "Cube Root Calculator (Root Calculator, Mode 02)",
+      "url": "/calculators/cube-root-calculator/",
+      "pageType": "standalone-calculator",
+      "primaryCategory": "engineering-mathematics",
+      "secondaryCategories": [],
+      "category": "C24",
+      "subcategory": "C24-S01",
+      "toolType": "TT1",
+      "task": "Calculate",
+      "keywords": [
+        "cube root calculator",
+        "cube root of a negative number",
+        "simplify cube root",
+        "perfect cube calculator",
+        "negative cube root",
+        "cbrt calculator"
+      ],
+      "homepageFeatured": false,
+      "includeInAllTools": true,
+      "priority": "normal",
+      "related": [
+        "calculators/square-root-calculator/",
+        "calculators/exponent-calculator/",
+        "calculators/negative-fractional-exponents-calculator/",
+        "calculators/scientific-calculator/",
+        "calculators/powers-roots/",
+        "calculators/fraction-simplifier/",
+        "calculators/volume-surface-area/",
+        "calculators/quadratic-solver/"
+      ],
+      "inboundFrom": [
+        "complex-number",
+        "volume-surface-area"
+      ]
+    },
+    {
+      "id": "nth-root-calculator",
+      "name": "nth Root Calculator (Root Calculator, Mode 03)",
+      "url": "/calculators/nth-root-calculator/",
+      "pageType": "standalone-calculator",
+      "primaryCategory": "engineering-mathematics",
+      "secondaryCategories": [],
+      "category": "C24",
+      "subcategory": "C24-S01",
+      "toolType": "TT1",
+      "task": "Calculate",
+      "keywords": [
+        "nth root calculator",
+        "nth root of a number",
+        "fourth root calculator",
+        "fifth root calculator",
+        "simplify radicals",
+        "radical simplifier",
+        "general root calculator"
+      ],
+      "homepageFeatured": false,
+      "includeInAllTools": true,
+      "priority": "normal",
+      "related": [
+        "calculators/square-root-calculator/",
+        "calculators/cube-root-calculator/",
+        "calculators/exponent-calculator/",
+        "calculators/negative-fractional-exponents-calculator/",
+        "calculators/scientific-calculator/",
+        "calculators/powers-roots/",
+        "calculators/fraction-simplifier/",
+        "calculators/complex-number/",
+        "calculators/decibel/"
+      ],
+      "inboundFrom": [
+        "decibel"
+      ]
+    },
+    {
+      "id": "decimal-fraction-converter",
+      "name": "Decimal and Fraction Converter",
+      "url": "/calculators/decimal-fraction-converter/",
+      "pageType": "standalone-calculator",
+      "primaryCategory": "engineering-mathematics",
+      "secondaryCategories": [],
+      "category": "C24",
+      "subcategory": "C24-S07",
+      "toolType": "TT5",
+      "task": "Convert",
+      "keywords": [
+        "decimal to fraction",
+        "fraction to decimal"
+      ],
+      "homepageFeatured": false,
+      "includeInAllTools": true,
+      "priority": "normal",
+      "related": [
+        "calculators/fraction-arithmetic/",
+        "calculators/fraction-simplifier/",
+        "calculators/mixed-number-calculator/",
+        "calculators/fraction-ratio-tools/",
+        "calculators/fractional-inch-converter/",
+        "calculators/ratio-calculator/",
+        "calculators/basic-calculator/"
+      ],
+      "inboundFrom": []
+    },
+    {
+      "id": "mixed-number-calculator",
+      "name": "Mixed Number Calculator",
+      "url": "/calculators/mixed-number-calculator/",
+      "pageType": "standalone-calculator",
+      "primaryCategory": "engineering-mathematics",
+      "secondaryCategories": [],
+      "category": "C24",
+      "subcategory": "C24-S07",
+      "toolType": "TT1",
+      "task": "Calculate",
+      "keywords": [
+        "mixed number",
+        "improper fraction"
+      ],
+      "homepageFeatured": false,
+      "includeInAllTools": true,
+      "priority": "normal",
+      "related": [
+        "calculators/fraction-arithmetic/",
+        "calculators/fraction-simplifier/",
+        "calculators/decimal-fraction-converter/",
+        "calculators/fraction-ratio-tools/",
+        "calculators/fractional-inch-converter/",
+        "calculators/ratio-calculator/",
+        "calculators/basic-calculator/"
+      ],
+      "inboundFrom": []
+    },
+    {
+      "id": "fraction-ratio-tools",
+      "name": "Advanced Fraction and Ratio Tools",
+      "url": "/calculators/fraction-ratio-tools/",
+      "pageType": "standalone-calculator",
+      "primaryCategory": "engineering-mathematics",
+      "secondaryCategories": [],
+      "category": "C24",
+      "subcategory": "C24-S07",
+      "toolType": "TT1",
+      "task": "Calculate",
+      "keywords": [
+        "ratio",
+        "proportion",
+        "continued fraction"
+      ],
+      "homepageFeatured": false,
+      "includeInAllTools": true,
+      "priority": "normal",
+      "related": [
+        "calculators/fraction-arithmetic/",
+        "calculators/fraction-simplifier/",
+        "calculators/decimal-fraction-converter/",
+        "calculators/mixed-number-calculator/",
+        "calculators/fractional-inch-converter/",
+        "calculators/ratio-calculator/",
+        "calculators/basic-calculator/"
+      ],
+      "inboundFrom": []
+    },
+    {
+      "id": "fractional-inch-converter",
+      "name": "Fractional Inch to mm Converter",
+      "url": "/calculators/fractional-inch-converter/",
+      "pageType": "standalone-calculator",
+      "primaryCategory": "engineering-mathematics",
+      "secondaryCategories": [],
+      "category": "C24",
+      "subcategory": "C24-S08",
+      "toolType": "TT5",
+      "task": "Convert",
+      "keywords": [
+        "inch",
+        "fractional inch",
+        "millimetre",
+        "drill size"
+      ],
+      "homepageFeatured": false,
+      "includeInAllTools": true,
+      "priority": "normal",
+      "related": [
+        "calculators/fraction-arithmetic/",
+        "calculators/fraction-simplifier/",
+        "calculators/decimal-fraction-converter/",
+        "calculators/mixed-number-calculator/",
+        "calculators/fraction-ratio-tools/",
+        "calculators/ratio-calculator/",
+        "converters/length-converter.html"
+      ],
+      "inboundFrom": []
+    },
+    {
+      "id": "basic-percentage-calculator",
+      "name": "Basic Percentage Calculator",
+      "url": "/calculators/basic-percentage-calculator/",
+      "pageType": "standalone-calculator",
+      "primaryCategory": "engineering-mathematics",
+      "secondaryCategories": [],
+      "category": "C24",
+      "subcategory": "C24-S07",
+      "toolType": "TT1",
+      "task": "Calculate",
+      "keywords": [
+        "percentage",
+        "percent of",
+        "what percent"
+      ],
+      "homepageFeatured": false,
+      "includeInAllTools": true,
+      "priority": "normal",
+      "related": [
+        "calculators/percentage-increase-decrease-calculator/",
+        "calculators/percentage-difference-calculator/",
+        "calculators/percentage-error-calculator/",
+        "calculators/engineering-percentage-calculator/",
+        "calculators/sequential-discount-markup-calculator/",
+        "calculators/percentage-calculator/",
+        "calculators/basic-calculator/"
+      ],
+      "inboundFrom": []
+    },
+    {
+      "id": "percentage-increase-decrease-calculator",
+      "name": "Percentage Increase and Decrease Calculator",
+      "url": "/calculators/percentage-increase-decrease-calculator/",
+      "pageType": "standalone-calculator",
+      "primaryCategory": "engineering-mathematics",
+      "secondaryCategories": [],
+      "category": "C24",
+      "subcategory": "C24-S07",
+      "toolType": "TT1",
+      "task": "Calculate",
+      "keywords": [
+        "percentage increase",
+        "percentage decrease",
+        "percent change"
+      ],
+      "homepageFeatured": false,
+      "includeInAllTools": true,
+      "priority": "normal",
+      "related": [
+        "calculators/basic-percentage-calculator/",
+        "calculators/percentage-difference-calculator/",
+        "calculators/percentage-error-calculator/",
+        "calculators/engineering-percentage-calculator/",
+        "calculators/sequential-discount-markup-calculator/",
+        "calculators/percentage-calculator/",
+        "calculators/basic-calculator/"
+      ],
+      "inboundFrom": []
+    },
+    {
+      "id": "percentage-difference-calculator",
+      "name": "Percentage Difference Calculator",
+      "url": "/calculators/percentage-difference-calculator/",
+      "pageType": "standalone-calculator",
+      "primaryCategory": "engineering-mathematics",
+      "secondaryCategories": [],
+      "category": "C24",
+      "subcategory": "C24-S07",
+      "toolType": "TT1",
+      "task": "Calculate",
+      "keywords": [
+        "percentage difference",
+        "relative difference"
+      ],
+      "homepageFeatured": false,
+      "includeInAllTools": true,
+      "priority": "normal",
+      "related": [
+        "calculators/basic-percentage-calculator/",
+        "calculators/percentage-increase-decrease-calculator/",
+        "calculators/percentage-error-calculator/",
+        "calculators/engineering-percentage-calculator/",
+        "calculators/sequential-discount-markup-calculator/",
+        "calculators/percentage-calculator/",
+        "calculators/basic-calculator/"
+      ],
+      "inboundFrom": []
+    },
+    {
+      "id": "percentage-error-calculator",
+      "name": "Percentage Error Calculator",
+      "url": "/calculators/percentage-error-calculator/",
+      "pageType": "standalone-calculator",
+      "primaryCategory": "engineering-mathematics",
+      "secondaryCategories": [
+        "electronics-and-instrumentation"
+      ],
+      "category": "C22",
+      "subcategory": "C22-S03",
+      "toolType": "TT7",
+      "task": "Check / Verify",
+      "keywords": [
+        "percentage error",
+        "measurement error",
+        "accuracy"
+      ],
+      "homepageFeatured": false,
+      "includeInAllTools": true,
+      "priority": "normal",
+      "related": [
+        "calculators/percent-error-calculator/",
+        "calculators/signed-error-analysis/",
+        "calculators/tolerance-verification/",
+        "calculators/batch-measurement-analysis/",
+        "calculators/engineering-percentage-calculator/",
+        "calculators/measurement-uncertainty/",
+        "calculators/calibration-error/"
+      ],
+      "inboundFrom": []
+    },
+    {
+      "id": "percent-error-calculator",
+      "name": "Percent Error Calculator",
+      "url": "/calculators/percent-error-calculator/",
+      "pageType": "standalone-calculator",
+      "primaryCategory": "engineering-mathematics",
+      "secondaryCategories": [
+        "electronics-and-instrumentation"
+      ],
+      "category": "C22",
+      "subcategory": "C22-S03",
+      "toolType": "TT7",
+      "task": "Check / Verify",
+      "keywords": [
+        "percent error",
+        "experimental value",
+        "theoretical value"
+      ],
+      "homepageFeatured": false,
+      "includeInAllTools": true,
+      "priority": "normal",
+      "related": [
+        "calculators/percentage-error-calculator/",
+        "calculators/signed-error-analysis/",
+        "calculators/tolerance-verification/",
+        "calculators/batch-measurement-analysis/",
+        "calculators/engineering-percentage-calculator/",
+        "calculators/measurement-uncertainty/",
+        "calculators/calibration-error/"
+      ],
+      "inboundFrom": []
+    },
+    {
+      "id": "signed-error-analysis",
+      "name": "Signed Error Calculator",
+      "url": "/calculators/signed-error-analysis/",
+      "pageType": "standalone-calculator",
+      "primaryCategory": "engineering-mathematics",
+      "secondaryCategories": [
+        "electronics-and-instrumentation"
+      ],
+      "category": "C22",
+      "subcategory": "C22-S03",
+      "toolType": "TT3",
+      "task": "Analyse",
+      "keywords": [
+        "signed error",
+        "bias",
+        "over-read",
+        "under-read"
+      ],
+      "homepageFeatured": false,
+      "includeInAllTools": true,
+      "priority": "normal",
+      "related": [
+        "calculators/percentage-error-calculator/",
+        "calculators/percent-error-calculator/",
+        "calculators/tolerance-verification/",
+        "calculators/batch-measurement-analysis/",
+        "calculators/engineering-percentage-calculator/",
+        "calculators/measurement-uncertainty/",
+        "calculators/calibration-error/"
+      ],
+      "inboundFrom": []
+    },
+    {
+      "id": "tolerance-verification",
+      "name": "Tolerance Verification Calculator",
+      "url": "/calculators/tolerance-verification/",
+      "pageType": "standalone-calculator",
+      "primaryCategory": "engineering-mathematics",
+      "secondaryCategories": [
+        "electronics-and-instrumentation"
+      ],
+      "category": "C22",
+      "subcategory": "C22-S03",
+      "toolType": "TT7",
+      "task": "Check / Verify",
+      "keywords": [
+        "tolerance",
+        "pass fail",
+        "acceptance",
+        "limits"
+      ],
+      "homepageFeatured": false,
+      "includeInAllTools": true,
+      "priority": "normal",
+      "related": [
+        "calculators/percentage-error-calculator/",
+        "calculators/percent-error-calculator/",
+        "calculators/signed-error-analysis/",
+        "calculators/batch-measurement-analysis/",
+        "calculators/engineering-percentage-calculator/",
+        "calculators/measurement-uncertainty/",
+        "calculators/calibration-error/"
+      ],
+      "inboundFrom": [
+        "measurement-uncertainty",
+        "calibration-error"
+      ]
+    },
+    {
+      "id": "batch-measurement-analysis",
+      "name": "Batch Measurement Analysis Calculator",
+      "url": "/calculators/batch-measurement-analysis/",
+      "pageType": "standalone-calculator",
+      "primaryCategory": "engineering-mathematics",
+      "secondaryCategories": [
+        "electronics-and-instrumentation"
+      ],
+      "category": "C22",
+      "subcategory": "C22-S03",
+      "toolType": "TT3",
+      "task": "Analyse",
+      "keywords": [
+        "batch",
+        "repeat measurements",
+        "mean error",
+        "spread"
+      ],
+      "homepageFeatured": false,
+      "includeInAllTools": true,
+      "priority": "normal",
+      "related": [
+        "calculators/percentage-error-calculator/",
+        "calculators/percent-error-calculator/",
+        "calculators/signed-error-analysis/",
+        "calculators/tolerance-verification/",
+        "calculators/engineering-percentage-calculator/",
+        "calculators/measurement-uncertainty/",
+        "calculators/standard-deviation/",
+        "calculators/mean-median-mode/"
+      ],
+      "inboundFrom": [
+        "standard-deviation",
+        "mean-median-mode"
+      ]
+    },
+    {
+      "id": "engineering-measurement-analysis",
+      "name": "Engineering Measurement Analysis Calculator",
+      "url": "/calculators/engineering-measurement-analysis/",
+      "pageType": "standalone-calculator",
+      "primaryCategory": "engineering-mathematics",
+      "secondaryCategories": [
+        "electronics-and-instrumentation"
+      ],
+      "category": "C22",
+      "subcategory": "C22-S03",
+      "toolType": "TT3",
+      "task": "Check / Verify",
+      "keywords": [
+        "engineering measurement",
+        "instrument error",
+        "energy meter error",
+        "calibration deviation",
+        "photometry deviation"
+      ],
+      "homepageFeatured": false,
+      "includeInAllTools": true,
+      "priority": "normal",
+      "related": [
+        "calculators/percent-error-calculator/",
+        "calculators/signed-error-analysis/",
+        "calculators/tolerance-verification/",
+        "calculators/batch-measurement-analysis/",
+        "calculators/measurement-uncertainty/",
+        "calculators/calibration-error/"
+      ],
+      "inboundFrom": []
+    },
+    {
+      "id": "engineering-percentage-calculator",
+      "name": "Engineering Percentage Calculator",
+      "url": "/calculators/engineering-percentage-calculator/",
+      "pageType": "standalone-calculator",
+      "primaryCategory": "engineering-mathematics",
+      "secondaryCategories": [
+        "electronics-and-instrumentation"
+      ],
+      "category": "C24",
+      "subcategory": "C24-S07",
+      "toolType": "TT1",
+      "task": "Calculate",
+      "keywords": [
+        "efficiency",
+        "regulation",
+        "percent impedance",
+        "engineering percentage"
+      ],
+      "homepageFeatured": false,
+      "includeInAllTools": true,
+      "priority": "normal",
+      "related": [
+        "calculators/percentage-error-calculator/",
+        "calculators/percent-error-calculator/",
+        "calculators/signed-error-analysis/",
+        "calculators/tolerance-verification/",
+        "calculators/batch-measurement-analysis/",
+        "calculators/percentage-calculator/",
+        "calculators/transformer-regulation/",
+        "calculators/motor-efficiency-loss/"
+      ],
+      "inboundFrom": []
+    },
+    {
+      "id": "sequential-discount-markup-calculator",
+      "name": "Sequential Percentage, Discount and Markup Calculator",
+      "url": "/calculators/sequential-discount-markup-calculator/",
+      "pageType": "standalone-calculator",
+      "primaryCategory": "engineering-mathematics",
+      "secondaryCategories": [],
+      "category": "C24",
+      "subcategory": "C24-S07",
+      "toolType": "TT1",
+      "task": "Calculate",
+      "keywords": [
+        "discount",
+        "markup",
+        "sequential percentage",
+        "margin"
+      ],
+      "homepageFeatured": false,
+      "includeInAllTools": true,
+      "priority": "normal",
+      "related": [
+        "calculators/basic-percentage-calculator/",
+        "calculators/percentage-increase-decrease-calculator/",
+        "calculators/percentage-difference-calculator/",
+        "calculators/percentage-error-calculator/",
+        "calculators/engineering-percentage-calculator/",
+        "calculators/percentage-calculator/",
+        "calculators/basic-calculator/"
+      ],
+      "inboundFrom": []
+    },
+    {
+      "id": "basic-calculator",
+      "name": "Basic Calculator",
+      "url": "/calculators/basic-calculator/",
+      "pageType": "standalone-calculator",
+      "primaryCategory": "engineering-mathematics",
+      "secondaryCategories": [],
+      "category": "C24",
+      "subcategory": "C24-S07",
+      "toolType": "TT1",
+      "task": "Calculate",
+      "keywords": [
+        "calculator",
+        "arithmetic",
+        "memory",
+        "history"
+      ],
+      "homepageFeatured": true,
+      "includeInAllTools": true,
+      "priority": "normal",
+      "related": [
+        "calculators/scientific-calculator/",
+        "calculators/basic-percentage-calculator/",
+        "calculators/fraction-arithmetic/",
+        "calculators/random-number-generator/",
+        "calculators/binary-arithmetic-calculator/",
+        "calculators/ratio-calculator/",
+        "calculators/powers-roots/",
+        "calculators/rounding-sig-figs/"
+      ],
+      "inboundFrom": [
+        "powers-roots",
+        "rounding-sig-figs",
+        "ratio-calculator",
+        "percentage-calculator"
+      ]
+    },
+    {
+      "id": "scientific-calculator",
+      "name": "Scientific Calculator",
+      "url": "/calculators/scientific-calculator/",
+      "pageType": "standalone-calculator",
+      "primaryCategory": "engineering-mathematics",
+      "secondaryCategories": [],
+      "category": "C24",
+      "subcategory": "C24-S07",
+      "toolType": "TT1",
+      "task": "Calculate",
+      "keywords": [
+        "scientific",
+        "engineering notation",
+        "complex numbers",
+        "phasors"
+      ],
+      "homepageFeatured": true,
+      "includeInAllTools": true,
+      "priority": "normal",
+      "related": [
+        "calculators/basic-calculator/",
+        "calculators/complex-number/",
+        "calculators/phasor-sum/",
+        "calculators/trig-functions/",
+        "calculators/logarithm/",
+        "calculators/vector-calculator/",
+        "calculators/matrix-calculator/",
+        "calculators/number-system-converter/"
+      ],
+      "inboundFrom": []
+    },
+    {
+      "id": "standard-deviation-calculator",
+      "name": "Standard Deviation Calculator (Sample, Population and Variance, Mode 01)",
+      "url": "/calculators/standard-deviation-calculator/",
+      "pageType": "standalone-calculator",
+      "primaryCategory": "engineering-mathematics",
+      "secondaryCategories": [],
+      "category": "C24",
+      "subcategory": "C24-S04",
+      "toolType": "TT3",
+      "task": "Analyse",
+      "keywords": [
+        "standard deviation calculator",
+        "sample standard deviation",
+        "population standard deviation",
+        "variance calculator",
+        "coefficient of variation"
+      ],
+      "homepageFeatured": false,
+      "includeInAllTools": true,
+      "priority": "normal",
+      "related": [
+        "calculators/descriptive-statistics-calculator/",
+        "calculators/frequency-grouped-data-calculator/",
+        "calculators/mean-median-mode/",
+        "calculators/linear-regression/",
+        "calculators/binomial-distribution/",
+        "calculators/probability-calculator/",
+        "calculators/random-number-generator/",
+        "calculators/permutations-combinations/"
+      ],
+      "inboundFrom": []
+    },
+    {
+      "id": "descriptive-statistics-calculator",
+      "name": "Descriptive Statistics Calculator (Mode 02)",
+      "url": "/calculators/descriptive-statistics-calculator/",
+      "pageType": "standalone-calculator",
+      "primaryCategory": "engineering-mathematics",
+      "secondaryCategories": [],
+      "category": "C24",
+      "subcategory": "C24-S04",
+      "toolType": "TT3",
+      "task": "Analyse",
+      "keywords": [
+        "descriptive statistics calculator",
+        "mean median mode",
+        "quartiles calculator",
+        "five number summary",
+        "skewness kurtosis"
+      ],
+      "homepageFeatured": false,
+      "includeInAllTools": true,
+      "priority": "normal",
+      "related": [
+        "calculators/standard-deviation-calculator/",
+        "calculators/frequency-grouped-data-calculator/",
+        "calculators/mean-median-mode/",
+        "calculators/linear-regression/",
+        "calculators/binomial-distribution/",
+        "calculators/probability-calculator/",
+        "calculators/random-number-generator/",
+        "calculators/permutations-combinations/"
+      ],
+      "inboundFrom": []
+    },
+    {
+      "id": "frequency-grouped-data-calculator",
+      "name": "Frequency and Grouped Data Statistics Calculator (Mode 03)",
+      "url": "/calculators/frequency-grouped-data-calculator/",
+      "pageType": "standalone-calculator",
+      "primaryCategory": "engineering-mathematics",
+      "secondaryCategories": [],
+      "category": "C24",
+      "subcategory": "C24-S04",
+      "toolType": "TT3",
+      "task": "Analyse",
+      "keywords": [
+        "grouped data calculator",
+        "frequency table calculator",
+        "grouped mean standard deviation",
+        "class interval statistics",
+        "frequency distribution"
+      ],
+      "homepageFeatured": false,
+      "includeInAllTools": true,
+      "priority": "normal",
+      "related": [
+        "calculators/standard-deviation-calculator/",
+        "calculators/descriptive-statistics-calculator/",
+        "calculators/mean-median-mode/",
+        "calculators/linear-regression/",
+        "calculators/binomial-distribution/",
+        "calculators/probability-calculator/",
+        "calculators/random-number-generator/",
+        "calculators/permutations-combinations/"
+      ],
+      "inboundFrom": []
+    },
+    {
+      "id": "number-sequence-pattern-finder",
+      "name": "Number Sequence Pattern Finder",
+      "url": "/calculators/number-sequence-pattern-finder/",
+      "pageType": "standalone-calculator",
+      "primaryCategory": "engineering-mathematics",
+      "secondaryCategories": [],
+      "category": "C24",
+      "subcategory": "C24-S01",
+      "toolType": "TT3",
+      "task": "Analyse",
+      "keywords": [
+        "number sequence calculator",
+        "sequence pattern finder",
+        "arithmetic geometric sequence",
+        "nth term calculator",
+        "next number in sequence"
+      ],
+      "homepageFeatured": false,
+      "includeInAllTools": true,
+      "priority": "normal",
+      "related": [
+        "calculators/fraction-arithmetic/",
+        "calculators/gcf-calculator/",
+        "calculators/ratio-calculator/",
+        "calculators/percentage-calculator/",
+        "calculators/mean-median-mode/",
+        "calculators/random-number-generator/",
+        "calculators/matrix-calculator/",
+        "calculators/exact-roots/"
+      ],
+      "inboundFrom": [
+        "permutations-combinations"
+      ]
+    },
+    {
+      "id": "bmi-calculator",
+      "name": "BMI Calculator (Mode 01)",
+      "url": "/calculators/bmi-calculator/",
+      "pageType": "standalone-calculator",
+      "primaryCategory": "engineering-mathematics",
+      "secondaryCategories": [],
+      "category": "C24",
+      "subcategory": "C24-S07",
+      "toolType": "TT1",
+      "task": "Calculate",
+      "keywords": [
+        "bmi calculator",
+        "body mass index",
+        "healthy weight range",
+        "bmi categories",
+        "bmi chart"
+      ],
+      "homepageFeatured": false,
+      "includeInAllTools": true,
+      "priority": "normal",
+      "related": [
+        "calculators/bmi-indian-regional-calculator/",
+        "calculators/percentage-calculator/",
+        "calculators/ratio-calculator/",
+        "calculators/mean-median-mode/",
+        "calculators/basic-calculator/",
+        "calculators/scientific-calculator/",
+        "calculators/fraction-arithmetic/",
+        "calculators/percentage-increase-decrease-calculator/"
+      ],
+      "inboundFrom": []
+    },
+    {
+      "id": "bmi-indian-regional-calculator",
+      "name": "Indian and Regional BMI Calculator (Mode 02)",
+      "url": "/calculators/bmi-indian-regional-calculator/",
+      "pageType": "standalone-calculator",
+      "primaryCategory": "engineering-mathematics",
+      "secondaryCategories": [],
+      "category": "C24",
+      "subcategory": "C24-S07",
+      "toolType": "TT1",
+      "task": "Calculate",
+      "keywords": [
+        "indian bmi calculator",
+        "asian bmi cut-offs",
+        "south asian bmi",
+        "regional bmi categories",
+        "bmi india"
+      ],
+      "homepageFeatured": false,
+      "includeInAllTools": true,
+      "priority": "normal",
+      "related": [
+        "calculators/bmi-calculator/",
+        "calculators/percentage-calculator/",
+        "calculators/ratio-calculator/",
+        "calculators/mean-median-mode/",
+        "calculators/basic-calculator/",
+        "calculators/scientific-calculator/",
+        "calculators/fraction-arithmetic/",
+        "calculators/percentage-increase-decrease-calculator/"
+      ],
+      "inboundFrom": []
+    },
+    {
+      "id": "date-calculator",
+      "name": "Date Calculator (Date Difference, Mode 01)",
+      "url": "/calculators/date-calculator/",
+      "pageType": "standalone-calculator",
+      "primaryCategory": "engineering-mathematics",
+      "secondaryCategories": [],
+      "category": "C24",
+      "subcategory": "C24-S07",
+      "toolType": "TT1",
+      "task": "Calculate",
+      "keywords": [
+        "date calculator",
+        "days between dates",
+        "date difference calculator",
+        "how many days between",
+        "duration between dates"
+      ],
+      "homepageFeatured": false,
+      "includeInAllTools": true,
+      "priority": "normal",
+      "related": [
+        "calculators/add-subtract-date-calculator/",
+        "calculators/percentage-calculator/",
+        "calculators/random-number-generator/",
+        "calculators/fraction-arithmetic/",
+        "calculators/basic-calculator/",
+        "calculators/scientific-calculator/",
+        "calculators/mean-median-mode/",
+        "calculators/ratio-calculator/"
+      ],
+      "inboundFrom": []
+    },
+    {
+      "id": "add-subtract-date-calculator",
+      "name": "Add or Subtract Days from a Date Calculator (Mode 02)",
+      "url": "/calculators/add-subtract-date-calculator/",
+      "pageType": "standalone-calculator",
+      "primaryCategory": "engineering-mathematics",
+      "secondaryCategories": [],
+      "category": "C24",
+      "subcategory": "C24-S07",
+      "toolType": "TT1",
+      "task": "Calculate",
+      "keywords": [
+        "add days to date",
+        "subtract days from date",
+        "date plus days",
+        "add months to date",
+        "date calculator add subtract"
+      ],
+      "homepageFeatured": false,
+      "includeInAllTools": true,
+      "priority": "normal",
+      "related": [
+        "calculators/date-calculator/",
+        "calculators/percentage-calculator/",
+        "calculators/random-number-generator/",
+        "calculators/fraction-arithmetic/",
+        "calculators/basic-calculator/",
+        "calculators/scientific-calculator/",
+        "calculators/mean-median-mode/",
+        "calculators/ratio-calculator/"
+      ],
+      "inboundFrom": []
+    },
+    {
+      "id": "concrete-volume-calculator",
+      "name": "Concrete Volume Calculator (Mode 01)",
+      "url": "/calculators/concrete-volume-calculator/",
+      "pageType": "standalone-calculator",
+      "primaryCategory": "lighting-and-facilities",
+      "secondaryCategories": [],
+      "category": "C19",
+      "subcategory": "C19-S01",
+      "toolType": "TT1",
+      "task": "Calculate",
+      "keywords": [
+        "concrete volume calculator",
+        "concrete calculator",
+        "concrete quantity",
+        "m3 of concrete",
+        "concrete mix"
+      ],
+      "homepageFeatured": false,
+      "includeInAllTools": true,
+      "priority": "normal",
+      "related": [
+        "calculators/concrete-wastage-calculator/",
+        "calculators/concrete-bag-calculator/",
+        "calculators/rmc-calculator/",
+        "calculators/cement-sand-aggregate-calculator/",
+        "calculators/concrete-cost-estimator/",
+        "calculators/percentage-calculator/",
+        "calculators/ratio-calculator/"
+      ],
+      "inboundFrom": []
+    },
+    {
+      "id": "concrete-wastage-calculator",
+      "name": "Concrete Wastage Calculator (Mode 02)",
+      "url": "/calculators/concrete-wastage-calculator/",
+      "pageType": "standalone-calculator",
+      "primaryCategory": "lighting-and-facilities",
+      "secondaryCategories": [],
+      "category": "C19",
+      "subcategory": "C19-S01",
+      "toolType": "TT1",
+      "task": "Calculate",
+      "keywords": [
+        "concrete wastage calculator",
+        "concrete calculator",
+        "concrete quantity",
+        "m3 of concrete",
+        "concrete mix"
+      ],
+      "homepageFeatured": false,
+      "includeInAllTools": true,
+      "priority": "normal",
+      "related": [
+        "calculators/concrete-volume-calculator/",
+        "calculators/concrete-bag-calculator/",
+        "calculators/rmc-calculator/",
+        "calculators/cement-sand-aggregate-calculator/",
+        "calculators/concrete-cost-estimator/",
+        "calculators/percentage-calculator/",
+        "calculators/ratio-calculator/"
+      ],
+      "inboundFrom": []
+    },
+    {
+      "id": "concrete-bag-calculator",
+      "name": "Concrete Bag Calculator (Mode 03)",
+      "url": "/calculators/concrete-bag-calculator/",
+      "pageType": "standalone-calculator",
+      "primaryCategory": "lighting-and-facilities",
+      "secondaryCategories": [],
+      "category": "C19",
+      "subcategory": "C19-S01",
+      "toolType": "TT1",
+      "task": "Calculate",
+      "keywords": [
+        "concrete bag calculator",
+        "concrete calculator",
+        "concrete quantity",
+        "m3 of concrete",
+        "concrete mix"
+      ],
+      "homepageFeatured": false,
+      "includeInAllTools": true,
+      "priority": "normal",
+      "related": [
+        "calculators/concrete-volume-calculator/",
+        "calculators/concrete-wastage-calculator/",
+        "calculators/rmc-calculator/",
+        "calculators/cement-sand-aggregate-calculator/",
+        "calculators/concrete-cost-estimator/",
+        "calculators/percentage-calculator/",
+        "calculators/ratio-calculator/"
+      ],
+      "inboundFrom": []
+    },
+    {
+      "id": "rmc-calculator",
+      "name": "RMC Ready-Mix Concrete Calculator (Mode 04)",
+      "url": "/calculators/rmc-calculator/",
+      "pageType": "standalone-calculator",
+      "primaryCategory": "lighting-and-facilities",
+      "secondaryCategories": [],
+      "category": "C19",
+      "subcategory": "C19-S01",
+      "toolType": "TT1",
+      "task": "Calculate",
+      "keywords": [
+        "rmc calculator",
+        "concrete calculator",
+        "concrete quantity",
+        "m3 of concrete",
+        "concrete mix"
+      ],
+      "homepageFeatured": false,
+      "includeInAllTools": true,
+      "priority": "normal",
+      "related": [
+        "calculators/concrete-volume-calculator/",
+        "calculators/concrete-wastage-calculator/",
+        "calculators/concrete-bag-calculator/",
+        "calculators/cement-sand-aggregate-calculator/",
+        "calculators/concrete-cost-estimator/",
+        "calculators/percentage-calculator/",
+        "calculators/ratio-calculator/"
+      ],
+      "inboundFrom": []
+    },
+    {
+      "id": "cement-sand-aggregate-calculator",
+      "name": "Cement, Sand and Aggregate Calculator (Mode 05)",
+      "url": "/calculators/cement-sand-aggregate-calculator/",
+      "pageType": "standalone-calculator",
+      "primaryCategory": "lighting-and-facilities",
+      "secondaryCategories": [],
+      "category": "C19",
+      "subcategory": "C19-S01",
+      "toolType": "TT1",
+      "task": "Calculate",
+      "keywords": [
+        "cement sand aggregate calculator",
+        "concrete calculator",
+        "concrete quantity",
+        "m3 of concrete",
+        "concrete mix"
+      ],
+      "homepageFeatured": false,
+      "includeInAllTools": true,
+      "priority": "normal",
+      "related": [
+        "calculators/concrete-volume-calculator/",
+        "calculators/concrete-wastage-calculator/",
+        "calculators/concrete-bag-calculator/",
+        "calculators/rmc-calculator/",
+        "calculators/concrete-cost-estimator/",
+        "calculators/percentage-calculator/",
+        "calculators/ratio-calculator/"
+      ],
+      "inboundFrom": []
+    },
+    {
+      "id": "concrete-cost-estimator",
+      "name": "Concrete Cost Estimator (Mode 06)",
+      "url": "/calculators/concrete-cost-estimator/",
+      "pageType": "standalone-calculator",
+      "primaryCategory": "lighting-and-facilities",
+      "secondaryCategories": [],
+      "category": "C19",
+      "subcategory": "C19-S01",
+      "toolType": "TT6",
+      "task": "Size / Select",
+      "keywords": [
+        "concrete cost estimator",
+        "concrete calculator",
+        "concrete quantity",
+        "m3 of concrete",
+        "concrete mix"
+      ],
+      "homepageFeatured": false,
+      "includeInAllTools": true,
+      "priority": "normal",
+      "related": [
+        "calculators/concrete-volume-calculator/",
+        "calculators/concrete-wastage-calculator/",
+        "calculators/concrete-bag-calculator/",
+        "calculators/rmc-calculator/",
+        "calculators/cement-sand-aggregate-calculator/",
+        "calculators/percentage-calculator/",
+        "calculators/ratio-calculator/"
+      ],
+      "inboundFrom": []
+    }
+  ]
+}

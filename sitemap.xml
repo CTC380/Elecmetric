@@ -81,6 +81,7 @@
   <url><loc>https://elecmetric.com/pages/millicandela-to-lumens.html</loc></url>
   <url><loc>https://elecmetric.com/pages/wire-gauge.html</loc></url>
   <url><loc>https://elecmetric.com/calculators/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/electricity-cost/</loc></url>
   <url><loc>https://elecmetric.com/calculators/motor-current/</loc></url>
   <url><loc>https://elecmetric.com/calculators/motor-starting/</loc></url>
   <url><loc>https://elecmetric.com/calculators/transformer-sizing/</loc></url>
@@ -117,6 +118,7 @@
   <url><loc>https://elecmetric.com/calculators/three-phase-power/</loc></url>
   <url><loc>https://elecmetric.com/calculators/cable-resistance/</loc></url>
   <url><loc>https://elecmetric.com/calculators/max-cable-length/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/earthing-conductor-size/</loc></url>
   <url><loc>https://elecmetric.com/calculators/motor-torque/</loc></url>
   <url><loc>https://elecmetric.com/calculators/motor-slip/</loc></url>
   <url><loc>https://elecmetric.com/calculators/transformer-regulation/</loc></url>
@@ -135,10 +137,28 @@
   <url><loc>https://elecmetric.com/calculators/conductor-temp-resistance/</loc></url>
   <url><loc>https://elecmetric.com/calculators/copper-vs-aluminium/</loc></url>
   <url><loc>https://elecmetric.com/calculators/motor-power-output/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/motor-efficiency-loss/</loc></url>
   <url><loc>https://elecmetric.com/calculators/motor-start-dip/</loc></url>
   <url><loc>https://elecmetric.com/calculators/pump-motor-power/</loc></url>
   <url><loc>https://elecmetric.com/calculators/transformer-loading/</loc></url>
   <url><loc>https://elecmetric.com/calculators/fault-types/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/short-circuit-impedance/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/load-schedule/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/power-measurement/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/pt-ratio/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/diode-circuit/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/vfd-speed/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/derivative-integral/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/first-order-ode/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/laplace-transform/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/sensor-range-converter/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/energy-audit/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/tou-demand-bill/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/industrial-energy-cost/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/electricity-savings-calculator/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/electricity-bill-calculator/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/multiple-appliance-cost/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/energy-cost-analysis/</loc></url>
   <url><loc>https://elecmetric.com/calculators/per-unit-convert/</loc></url>
   <url><loc>https://elecmetric.com/calculators/battery-series-parallel/</loc></url>
   <url><loc>https://elecmetric.com/calculators/led-retrofit-payback/</loc></url>
@@ -184,7 +204,6 @@
   <url><loc>https://elecmetric.com/calculators/agl-light-intensity-distance/</loc></url>
   <url><loc>https://elecmetric.com/calculators/complex-number/</loc></url>
   <url><loc>https://elecmetric.com/calculators/phasor-sum/</loc></url>
-  <url><loc>https://elecmetric.com/calculators/percentage-error/</loc></url>
   <url><loc>https://elecmetric.com/calculators/mean-median-mode/</loc></url>
   <url><loc>https://elecmetric.com/calculators/standard-deviation/</loc></url>
   <url><loc>https://elecmetric.com/calculators/quadratic-solver/</loc></url>
@@ -193,7 +212,44 @@
   <url><loc>https://elecmetric.com/calculators/percentage-calculator/</loc></url>
   <url><loc>https://elecmetric.com/calculators/ratio-calculator/</loc></url>
   <url><loc>https://elecmetric.com/calculators/rounding-sig-figs/</loc></url>
-  <url><loc>https://elecmetric.com/calculators/fraction-calculator/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/superposition-theorem/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/magnetic-circuit/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/magnetic-flux-density/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/induced-emf/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/alternator-emf/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/pwm-inverter/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/second-order-response/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/routh-hurwitz/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/ladder-logic-simulator/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/synchronous-motor/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/transformer-parallel/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/transformer-inrush/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/two-wattmeter/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/controlled-rectifier/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/dc-dc-converter/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/switching-loss-comparison/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/load-factor/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/adc-sampling/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/lighting-uniformity/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/fourier-series/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/transformer-test-data/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/load-flow-3bus/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/symmetrical-components/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/thevenin-norton/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/transformer-vector-group/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/relay-setting/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/relay-coordination/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/ct-burden/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/busbar-sizing/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/ac-dc-equivalent/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/kirchhoff-solver/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/rlc-transient/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/rc-rl-transient/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/mesh-nodal-solver/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/transformer-turns-ratio/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/plant-load-flow/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/power-electronics-converter/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/dc-machine-emf-torque/</loc></url>
   <url><loc>https://elecmetric.com/calculators/simultaneous-equations/</loc></url>
   <url><loc>https://elecmetric.com/calculators/linear-interpolation/</loc></url>
   <url><loc>https://elecmetric.com/calculators/matrix-calculator/</loc></url>
@@ -210,6 +266,40 @@
   <url><loc>https://elecmetric.com/calculators/permutations-combinations/</loc></url>
   <url><loc>https://elecmetric.com/calculators/binomial-distribution/</loc></url>
   <url><loc>https://elecmetric.com/calculators/trig-functions/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/boolean-logic/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/solar-inverter-sizing/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/hybrid-system-sizing/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/bess-energy-power/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/ev-energy-consumption/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/ev-range/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/wavelength/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/contact-resistance/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/equipment-loss/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/calibration-error/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/electric-potential/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/electric-field/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/reliability-indices/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/scr-triggering/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/pid-tuning/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/bode-plot/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/thermal-rise/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/energy-savings/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/point-by-point-lighting/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/agl-photometry-data/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/signage-load/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/protection-coordination-check/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/power-supply-ripple/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/semiconductor-loss/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/resistivity-conductance/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/three-phase-network/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/coupled-inductance/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/motor-nameplate/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/motor-selection-load/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/protective-device-selection/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/measurement-uncertainty/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/pv-performance-ratio/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/ev-charger-load/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/railway-backup-load/</loc></url>
   <url><loc>https://elecmetric.com/calculators/electrical-fundamentals/</loc></url>
   <url><loc>https://elecmetric.com/calculators/power-and-energy/</loc></url>
   <url><loc>https://elecmetric.com/calculators/cable-engineering/</loc></url>
@@ -225,6 +315,77 @@
   <url><loc>https://elecmetric.com/calculators/engineering-mathematics/</loc></url>
   <url><loc>https://elecmetric.com/calculators/basic-calculator/</loc></url>
   <url><loc>https://elecmetric.com/calculators/scientific-calculator/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/half-life-calculator/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/decay-constant-calculator/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/decay-percentage-calculator/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/decay-table-calculator/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/engineering-exponential-decay-calculator/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/exponent-calculator/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/negative-fractional-exponents-calculator/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/exponent-solver/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/exponent-laws-calculator/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/engineering-powers-scientific-notation/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/discriminant-calculator/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/parabola-graph/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/exact-roots/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/engineering-quadratic/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/antilog-calculator/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/log-solver/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/log-rules/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/binary-arithmetic-calculator/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/hex-calculator/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/number-system-converter/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/bitwise-operations-calculator/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/signed-binary-calculator/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/digital-logic-calculator/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/bcd-converter/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/gray-code-converter/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/ascii-converter/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/unicode-converter/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/random-number-generator/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/fraction-arithmetic/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/fraction-simplifier/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/proportion-calculator/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/lcm-calculator/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/equivalent-ratio-calculator/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/gcf-calculator/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/gcf-prime-factorisation-calculator/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/rounding-calculator/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/factor-calculator/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/big-number-calculator/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/square-root-calculator/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/cube-root-calculator/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/nth-root-calculator/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/decimal-fraction-converter/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/mixed-number-calculator/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/fraction-ratio-tools/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/fractional-inch-converter/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/basic-percentage-calculator/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/percentage-increase-decrease-calculator/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/percentage-difference-calculator/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/percentage-error-calculator/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/percent-error-calculator/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/signed-error-analysis/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/tolerance-verification/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/batch-measurement-analysis/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/engineering-measurement-analysis/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/engineering-percentage-calculator/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/sequential-discount-markup-calculator/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/standard-deviation-calculator/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/descriptive-statistics-calculator/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/frequency-grouped-data-calculator/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/number-sequence-pattern-finder/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/bmi-calculator/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/bmi-indian-regional-calculator/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/date-calculator/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/add-subtract-date-calculator/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/concrete-volume-calculator/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/concrete-wastage-calculator/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/concrete-bag-calculator/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/rmc-calculator/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/cement-sand-aggregate-calculator/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/concrete-cost-estimator/</loc></url>
+  <url><loc>https://elecmetric.com/calculators/all-tools/</loc></url>
   <url><loc>https://elecmetric.com/converters/electrical-unit-converter.html</loc></url>
   <url><loc>https://elecmetric.com/converters/battery-capacity-converter.html</loc></url>
   <url><loc>https://elecmetric.com/converters/power-converter.html</loc></url>
@@ -520,4 +681,14 @@
   <url><loc>https://elecmetric.com/converters/percentage-ratio-rounding-formulas.html</loc></url>
   <url><loc>https://elecmetric.com/converters/probability-formulas.html</loc></url>
   <url><loc>https://elecmetric.com/converters/index.html</loc></url>
+  <url><loc>https://elecmetric.com/technical-library/</loc></url>
+  <url><loc>https://elecmetric.com/technical-library/technical-articles/</loc></url>
+  <url><loc>https://elecmetric.com/categories/</loc></url>
+  <url><loc>https://elecmetric.com/categories/engineering-technology/</loc></url>
+  <url><loc>https://elecmetric.com/categories/mathematics/</loc></url>
+  <url><loc>https://elecmetric.com/categories/unit-conversion-measurement/</loc></url>
+  <url><loc>https://elecmetric.com/categories/construction-architecture/</loc></url>
+  <url><loc>https://elecmetric.com/categories/statistics-data-analysis/</loc></url>
+  <url><loc>https://elecmetric.com/categories/energy-environment/</loc></url>
+  <url><loc>https://elecmetric.com/categories/automotive-transportation/</loc></url>
 </urlset>

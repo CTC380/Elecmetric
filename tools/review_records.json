@@ -75,8 +75,8 @@
     },
     "agl-isolating-transformer": {
       "standard": {
-        "name": "IEC 61820-1-2; FAA AC 150/5345-47B",
-        "edition": "IEC 61820-1-2:2024; FAA AC 150/5345-47B (30 June 2005)",
+        "name": "IEC 61820-1-2; FAA AC 150/5345-47C",
+        "edition": "IEC 61820-1-2:2024; FAA AC 150/5345-47C (22 July 2011)",
         "date": "2026-11-12",
         "review_status": "scope_screened",
         "review_basis": "Official/public publisher catalogue and published scope metadata; no licensed clause text reviewed",
@@ -85,8 +85,8 @@
     },
     "agl-lamp-failure-load": {
       "standard": {
-        "name": "IEC 61820-1-2; FAA AC 150/5345-47B",
-        "edition": "IEC 61820-1-2:2024; FAA AC 150/5345-47B (30 June 2005)",
+        "name": "IEC 61820-1-2; FAA AC 150/5345-47C",
+        "edition": "IEC 61820-1-2:2024; FAA AC 150/5345-47C (22 July 2011)",
         "date": "2026-11-12",
         "review_status": "scope_screened",
         "review_basis": "Official/public publisher catalogue and published scope metadata; no licensed clause text reviewed",
@@ -273,6 +273,26 @@
         "scope_note": "Short-circuit calculations for three-phase AC systems, including fault types and sequence networks, are relevant. The calculator is a simplified symmetrical-component estimate and assumes the sequence impedances entered represent the complete source path."
       }
     },
+    "short-circuit-impedance": {
+      "standard": {
+        "name": "IEC 60909-0",
+        "edition": "2026 Ed 3.0",
+        "date": "2026-11-13",
+        "review_status": "scope_screened",
+        "review_basis": "Official/public publisher catalogue and published scope metadata; no licensed clause text reviewed",
+        "scope_note": "Short-circuit currents in three-phase AC systems are the governing context. The calculator follows the usual IEC 60909 structure for a radial network (c V / (sqrt 3 Z) with network, transformer and cable impedances in series, and a peak factor from R/X) but is a simplified estimate: the transformer correction factor KT, motor contribution and the clause-by-clause voltage-factor rules are not applied."
+      }
+    },
+    "earthing-conductor-size": {
+      "standard": {
+        "name": "IEC 60364-5-54; IEC 60364-4-43",
+        "edition": "IEC 60364-5-54:2011 + A1:2021 Ed 3.1; IEC 60364-4-43:2023 Ed 4.0",
+        "date": "2026-11-13",
+        "review_status": "scope_screened",
+        "review_basis": "Official/public publisher catalogue and published scope metadata; no licensed clause text reviewed",
+        "scope_note": "Earthing arrangements and protective conductors, and the thermal withstand of conductors to fault current, are the governing context. The calculator uses the adiabatic equation S = I sqrt(t) / k with built-in k values, a mechanical minimum size and the phase-conductor table rule; confirm the k value, starting and final temperatures, minimum sizes and table rule in the project edition. Corrosion, loop impedance and soil heating are not assessed."
+      }
+    },
     "generator-kva": {
       "standard": {
         "name": "ISO 8528-1",
@@ -413,6 +433,16 @@
         "scope_note": "PV-array design, DC wiring and protective provisions are relevant to cold-voltage string checks. Confirm module Voc and temperature coefficient, inverter maximum voltage and local code requirements."
       }
     },
+    "relay-setting": {
+      "standard": {
+        "name": "IEC 60255-151",
+        "edition": "2009 Ed 1.0",
+        "date": "2026-11-13",
+        "review_status": "scope_screened",
+        "review_basis": "Official/public publisher catalogue and published scope metadata; no licensed clause text reviewed",
+        "scope_note": "IEC 60255-151 gives the functional requirements for over/under current protection, with the dependent-time operating characteristics and their constants in its Annex A. The calculator uses the four IEC curve shapes (standard, very, extremely and long-time inverse) and nominal constants. A relay maker may publish a different curve or tolerance, and the pick-up, time and high-set factors are the user's design inputs from a co-ordination study; the calculator does not grade relays, check CT saturation or burden, or cover earth-fault, directional or differential elements."
+      }
+    },
     "rtd-pt100": {
       "standard": {
         "name": "IEC 60751",
@@ -473,6 +503,16 @@
         "scope_note": "Power-transformer ratings and, for mineral-oil-immersed units, loading/thermal ageing are relevant. The calculator sizes from kW, power factor, growth and a selected loading fraction; it does not check harmonics, cooling, ambient or cyclic load."
       }
     },
+    "transformer-vector-group": {
+      "standard": {
+        "name": "IEC 60076-1",
+        "edition": "2011 Ed 3.0",
+        "date": "2026-11-13",
+        "review_status": "scope_screened",
+        "review_basis": "Official/public publisher catalogue and published scope metadata; no licensed clause text reviewed",
+        "scope_note": "IEC 60076-1 defines the connection symbols and the clock-number notation for phase displacement (its clause 7 on rating plates and connection symbols). The calculator applies the clock number x 30 degrees convention with textbook winding voltage and current relations; it does not check winding polarity, lead marking, the supply phase sequence or the vector-group conventions of other standards (the ANSI/IEEE convention for delta-star groups differs). Confirm against the nameplate and test certificate."
+      }
+    },
     "ups-runtime": {
       "standard": {
         "name": "IEC 62040-3; IEEE 485",
@@ -511,6 +551,86 @@
         "review_status": "scope_screened",
         "review_basis": "Official/public publisher catalogue and published scope metadata; no licensed clause text reviewed",
         "scope_note": "Defines nominal diameters and cross-sectional areas for AWG solid round wires. This is a gauge conversion only and does not establish ampacity or suitability."
+      }
+    },
+    "protection-coordination-check": {
+      "standard": {
+        "name": "IEC 60255-151",
+        "edition": "2009 Ed 1.0",
+        "date": "2026-11-17",
+        "review_status": "scope_screened",
+        "review_basis": "Same standard and edition as the relay-coordination record (public scope screen of 2026-11-13); not re-checked against the publisher catalogue for this calculator, no licensed clause text reviewed",
+        "scope_note": "IEC 60255-151 gives the functional requirements and the dependent-time operating characteristics (Annex A constants) for over and under current protection. The calculator uses the four IEC curve shapes with nominal constants to grade two relays at two fault currents, and adds pick-up, sensitivity and instantaneous-stability checks whose margins and factors are the user's own design inputs; no standard sets those values. The reset ratio, accuracy of operating time, CT requirements and relay-maker curves are not applied: confirm against the relay data sheet and the project protection philosophy."
+      }
+    },
+    "relay-coordination": {
+      "standard": {
+        "name": "IEC 60255-151",
+        "edition": "2009 Ed 1.0",
+        "date": "2026-11-13",
+        "review_status": "scope_screened",
+        "review_basis": "Official/public publisher catalogue and published scope metadata; no licensed clause text reviewed",
+        "scope_note": "IEC 60255-151 gives the functional requirements for over/under current protection, with the dependent-time operating characteristics and their constants in its Annex A. The calculator grades one upstream relay against one downstream relay with the four IEC curve shapes (standard, very, extremely and long-time inverse) and nominal constants, at one grading fault current and one lower fault current. A relay maker may publish a different curve or tolerance, and the grading margin and the settings of the downstream relay are the user's design inputs from a co-ordination study; the calculator does not draw time-current curves, build up the margin, check CT saturation or burden, model infeeds or transformers between the relays, or cover instantaneous, earth-fault, directional or differential elements."
+      }
+    },
+    "ct-burden": {
+      "standard": {
+        "name": "IEC 61869-2",
+        "edition": "2012 Ed 1.0",
+        "date": "2026-11-13",
+        "review_status": "scope_screened",
+        "review_basis": "Official/public publisher catalogue and published scope metadata; no licensed clause text reviewed",
+        "scope_note": "IEC 61869-2 gives the additional requirements for current transformers, including rated output (burden), accuracy classes and the accuracy limit factor of protection CTs. The calculator adds a lead cable, a relay and a meter burden to a stated rated burden and applies the usual relationship between the actual and rated accuracy limit factor. Class definitions, the 25% to 100% burden range, transient classes (TPS, TPX, TPY, TPZ), knee-point voltage, DC offset, remanence and the thermal and dynamic withstand are not checked, and the relay maker's CT requirement governs the selection."
+      }
+    },
+    "busbar-sizing": {
+      "standard": {
+        "name": "IEC 61439-1",
+        "edition": "2020 Ed 3.0",
+        "date": "2026-11-13",
+        "review_status": "scope_screened",
+        "review_basis": "Official/public publisher catalogue and published scope metadata; no licensed clause text reviewed",
+        "scope_note": "IEC 61439-1 gives the general rules for low-voltage switchgear and controlgear assemblies, including the temperature-rise limits, the rated currents of the busbars and the verification of short-circuit withstand strength. The calculator sizes bars from a user-supplied current density and checks the fault area with the adiabatic relation A = Isc x sqrt(t) / k, with k supplied by the user from the standard or the busbar maker. The temperature rise, the derating of bars in parallel, the electromagnetic force on the bars and supports (IEC 60865-1) and the verification of the assembly by test or by comparison with a tested design are not checked, and the maker's ratings govern the design."
+      }
+    },
+    "solar-inverter-sizing": {
+      "standard": {
+        "name": "IEC 62548-1",
+        "edition": "2023 + AMD1:2025, consolidated version",
+        "date": "2026-11-15",
+        "review_status": "scope_screened",
+        "review_basis": "Official/public publisher catalogue and published scope metadata; no licensed clause text reviewed",
+        "scope_note": "PV-array design, DC wiring and protective provisions are relevant to the cold-voltage and short-circuit-current checks against the inverter limits. The DC to AC ratio and the clipping at an assumed peak are design choices that no standard sets. Confirm the module data, the inverter data sheet limits and the local code requirements."
+      }
+    },
+    "protective-device-selection": {
+      "standard": {
+        "name": "IEC 60364-4-43; IEC 60947-2",
+        "edition": "IEC 60364-4-43:2023 Ed 4.0; IEC 60947-2:2024 Ed 6.0",
+        "date": "2026-11-17",
+        "review_status": "scope_screened",
+        "review_basis": "Same standards and editions as the breaker-size record (public scope screen of 2026-11-12); not re-checked against the publisher catalogue for this calculator, no licensed clause text reviewed",
+        "scope_note": "Overcurrent protection and LV circuit-breaker product requirements are relevant. The calculator applies the textbook condition Ib ≤ In ≤ Iz with a conventional operating current within 1.45 Iz, and compares breaking capacity, the instantaneous trip and the let-through energy with figures the user enters; the miniature breaker (IEC 60898-1) and fuse (IEC 60269) product standards are also relevant but their editions are not screened here. It does not check selectivity, back-up protection, loop impedance or local adoption."
+      }
+    },
+    "ev-charger-load": {
+      "standard": {
+        "name": "IEC 60364-7-722",
+        "edition": "2018 Ed 2.0",
+        "date": "2026-11-17",
+        "review_status": "scope_screened",
+        "review_basis": "Official/public publisher catalogue and published scope metadata; no licensed clause text reviewed",
+        "scope_note": "Circuits that supply energy to electric vehicles in low-voltage installations are the subject of this part, so it is relevant, and a newer edition is being prepared (the national-body project lists a third edition), so the edition should be confirmed against the one adopted for the project. The calculator is a textbook demand and diversity estimate on figures the user enters (share in use, average power, efficiency, building load) with a supply-limit check; it applies no clause, demand or diversity table of IEC 60364-7-722, IEC 61851-1 or a local rule, and is not a load-management design."
+      }
+    },
+    "pv-performance-ratio": {
+      "standard": {
+        "name": "IEC 61724-1",
+        "edition": "2021 Ed 2.0",
+        "date": "2026-11-17",
+        "review_status": "scope_screened",
+        "review_basis": "Official/public publisher catalogue and published scope metadata; no licensed clause text reviewed",
+        "scope_note": "PV-system performance monitoring and the performance ratio (energy over nameplate power and in-plane irradiation) are the subject of this standard, so it is relevant. The calculator is the plain energy-ratio definition on figures the user enters, with a single-average temperature correction and a design loss waterfall; it is not an IEC 61724-1 monitoring-class, sensor, data-filtering or interval-by-interval temperature-correction implementation."
       }
     }
   }

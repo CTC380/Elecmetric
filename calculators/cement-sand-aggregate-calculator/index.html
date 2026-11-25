@@ -1,0 +1,618 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><style data-crumbs>.crumbs{font-size:13px;color:var(--muted);margin:0 0 10px}.crumbs ol{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:2px 0}.crumbs li+li::before{content:"\203A";margin:0 7px;opacity:.7}.crumbs a{color:inherit}.crumbs [aria-current]{color:var(--ink)}</style><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+<title>Cement, Sand & Aggregate Calculator | Nominal Mix Material Estimator | Elecmetric</title>
+<meta name="description" content="Estimate cement bags, sand and coarse aggregate for a chosen nominal mix ratio using a dry-volume factor and bulk densities. A material estimate, not a structural mix design.">
+<meta property="og:title" content="Cement, Sand & Aggregate Calculator | Nominal Mix Material Estimator | Elecmetric"><meta property="og:description" content="Estimate cement bags, sand and coarse aggregate for a chosen nominal mix ratio using a dry-volume factor and bulk densities. A material estimate, not a structural mix design."><meta property="og:type" content="website"><meta property="og:site_name" content="Elecmetric"><meta name="twitter:card" content="summary_large_image"><meta name="theme-color" content="#043B79"><link rel="icon" href="../../icon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="../../apple-touch-icon.png"><link rel="manifest" href="../../manifest.webmanifest">
+<style>.fb textarea{width:100%;font:15px/1.5 var(--body);padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--field);color:var(--ink);resize:vertical}.fb textarea:focus{outline:2px solid var(--gold);outline-offset:1px}:root{--bg:#F1F6FC;--surface:#fff;--ink:#0A2347;--muted:#4B5F86;--line:#D3DFEF;--navy:#043B79;--on-navy:#FFFFFF;--gold:#B34A00;--gold-fill:#FFEFDC;--field:#F4F8FE;--err:#B3261E;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;--display:"Arial Narrow","Roboto Condensed",system-ui,sans-serif;--body:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--navy-2:#0A5BBB;--cyan:#0062DE;--num:#043B79;--orange:#FF7A00;--gold-grad:linear-gradient(135deg,#FFA43D 0%,#FF7A00 52%,#E85F00 100%);--hero:radial-gradient(1000px 360px at 90% -35%,rgba(0,98,222,.55),transparent 62%),radial-gradient(640px 240px at 0% 110%,rgba(255,122,0,.20),transparent 60%),linear-gradient(135deg,#032A58,#043B79 58%,#0A55A8);--r:14px;--sh-0:0 1px 2px rgba(4,35,80,.06);--sh-1:0 1px 2px rgba(4,35,80,.05),0 6px 18px rgba(4,35,80,.07);--sh-2:0 2px 4px rgba(4,35,80,.05),0 22px 44px -14px rgba(4,35,80,.24);--ring:0 0 0 3px rgba(0,98,222,.26);color-scheme:light dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}@media(prefers-color-scheme:dark){:root{--bg:#04122B;--surface:#0A2046;--ink:#EAF2FF;--muted:#A0B5DA;--line:#183868;--navy:#031B3F;--on-navy:#EAF2FF;--gold:#FF9A3D;--gold-fill:#3D2410;--field:#071B3C;--err:#FF8A80;--navy-2:#0B4A98;--cyan:#4DA3FF;--orange:#FF8A1F;--num:#FFB066;--sh-0:0 1px 2px rgba(0,0,0,.4);--sh-1:0 1px 2px rgba(0,0,0,.35),0 8px 22px rgba(0,0,0,.35);--sh-2:0 2px 4px rgba(0,0,0,.4),0 24px 48px -14px rgba(0,0,0,.7);--ring:0 0 0 3px rgba(77,163,255,.34)}}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 var(--body)}a{color:inherit}header{background:var(--navy);color:var(--on-navy);border-bottom:3px solid var(--gold)}.w{max-width:860px;margin:0 auto;padding:0 max(16px,env(safe-area-inset-left,0px))}header .w{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-block:12px;flex-wrap:wrap}header a{text-decoration:none;font:600 20px var(--display);letter-spacing:.04em;text-transform:uppercase}header nav a{font:500 13px var(--body);text-transform:none;letter-spacing:0;margin-left:14px;opacity:.9}main{padding-block:24px 56px}h1{font:600 32px/1.1 var(--display);margin:0 0 8px;text-wrap:balance}h2{font:600 20px var(--display);letter-spacing:.02em;margin:28px 0 8px;text-transform:uppercase}.lede{color:var(--muted);margin:0 0 16px;max-width:62ch}.card{background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:16px 18px;margin:12px 0}.ans{border-left:4px solid var(--gold);display:flex;flex-wrap:wrap;gap:6px 24px;align-items:baseline;justify-content:space-between}.big{font:600 28px var(--display)}.jump{margin:8px 0 4px}details.more{border:1px solid var(--line);border-radius:12px;background:var(--surface);margin:14px 0;padding:0 16px;box-shadow:var(--sh-0)}details.more>summary{cursor:pointer;list-style:none}details.more>summary::-webkit-details-marker{display:none}details.more>summary h2{margin:14px 0}details.more>summary h2::after{content:"+";margin-left:auto;color:var(--gold)}details.more[open]>summary h2::after{content:"\2212"}details.more[open]{padding-bottom:12px}@media print{.jump{display:none}}.btn{display:inline-block;background:var(--navy);color:var(--on-navy);padding:9px 16px;border-radius:4px;text-decoration:none;font-weight:600;border:1px solid var(--gold)}.chip{display:inline-block;margin:3px 6px 3px 0;padding:5px 12px;border:1px solid var(--line);border-radius:999px;background:var(--surface);text-decoration:none;font-size:14px}.chip:hover{border-color:var(--gold)}main li>a:only-child{display:inline-block;padding:3px 0}code,pre,.f,td.n{font-family:var(--mono)}.f{background:var(--field);border:1px solid var(--line);padding:10px 12px;border-radius:4px;overflow-x:auto;white-space:pre-wrap}ol.steps{padding-left:22px;font-family:var(--mono);font-size:13px}ol.steps li{margin:4px 0}.tw{overflow-x:auto}table{border-collapse:collapse;width:100%;background:var(--surface)}th,td{border:1px solid var(--line);padding:6px 10px;text-align:left}td.n{text-align:right}tr.me td{background:var(--gold-fill)}th{background:var(--field);font-weight:600}.note{color:var(--muted);font-size:13px}ul{padding-left:20px}footer{border-top:1px solid var(--line);color:var(--muted);font-size:13px;padding-block:16px}h3{font:600 16px var(--body);margin:18px 0 4px}h3+p{margin:0;max-width:68ch}.tres .tact{flex:0 0 100%;display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}@media print{.tact{display:none}}.tres .phasor{flex:0 0 100%;margin-top:12px}.phasor svg{display:block;width:100%;max-width:360px;height:auto;font:11px var(--body)}.arow{grid-column:1/-1;border:1px solid var(--line);border-radius:10px;padding:10px 12px 12px;margin:0}.arow[hidden]{display:none}.arow legend{font-weight:700;font-size:13px;padding:0 6px}.arow .tgrid{margin-top:2px}.arow-bar{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:8px;align-items:center}.arow-bar .note{margin:0}.arow .rm{margin-top:10px}.mgrid{margin-top:10px}.mgrid .mbody[hidden]{display:none}.mgrid .tgrid{margin-top:8px}.mgrid .fillm{margin-top:10px}.tres .rchart{flex:0 0 100%;margin-top:12px}.rchart svg{display:block;width:100%;height:auto;font:12px var(--body)}.rchart h3{margin:0 0 6px;font-size:14px}.tres .carry{flex:0 0 100%;margin-top:10px}.carry .chip{display:inline-block;margin:4px 6px 0 0}.arow .rm[hidden],#add-row[hidden]{display:none}@media print{.arow-bar,.arow .rm{display:none}}.tgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px 16px}.tgrid label{display:block;font-weight:600;font-size:13px;margin-bottom:4px}.trow{display:flex;gap:6px}.trow input,.trow select,.tgrid>div>select{font:16px var(--body);color:var(--ink);background:var(--field);border:1px solid var(--line);border-radius:4px;padding:8px;min-height:40px}.trow input{flex:1;min-width:0}.tgrid>div>select{width:100%}.hint{color:var(--muted);font-size:12px;margin-top:3px}.err{color:var(--err)}.tres{display:flex;flex-wrap:wrap;gap:6px 28px;align-items:baseline}.tres .big small{display:block;font:500 13px var(--body);color:var(--muted)}::selection{background:color-mix(in srgb,var(--gold) 30%,transparent)}body{background-image:radial-gradient(900px 520px at 100% -8%,color-mix(in srgb,var(--cyan) 10%,transparent),transparent 62%),radial-gradient(700px 420px at -5% 0%,color-mix(in srgb,var(--gold) 8%,transparent),transparent 60%);background-attachment:fixed;-webkit-font-smoothing:antialiased}header{position:relative;overflow:hidden;background:var(--hero);border-bottom:0;box-shadow:0 10px 30px -14px rgba(5,14,34,.6)}header::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);background-size:34px 34px;-webkit-mask-image:linear-gradient(100deg,#000,transparent 70%);mask-image:linear-gradient(100deg,#000,transparent 70%);pointer-events:none}header::after{content:"";position:absolute;left:0;right:0;bottom:0;height:18px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44 14'%3E%3Cpath d='M0 12.5H8L14 2l7 10.5 5-6 4 6H44' fill='none' stroke='%23FF7A00' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat right 36px bottom 3px/44px 14px,linear-gradient(90deg,#FF7A00,#FFA43D 55%,#FF7A00) no-repeat bottom/100% 4px;pointer-events:none}header .w{position:relative;z-index:1;padding-block:8px 10px}header .w>a.brand{display:block;line-height:0;letter-spacing:0;text-transform:none;background:#fff;border-radius:10px;padding:4px 10px;box-shadow:0 2px 12px rgba(2,16,42,.4),0 0 0 1px rgba(255,255,255,.5)}header .w>a.brand img{display:block;height:34px;width:auto}@media(max-width:600px){header .w>a.brand img{height:30px}}header a:focus-visible{outline-color:#FFB066}header nav a{color:#DCE5F5;opacity:1;padding:6px 12px;border-radius:999px;margin-left:6px;transition:background .15s,color .15s}header nav a:hover{background:rgba(255,255,255,.12);color:#FFB066}main.w{padding-top:36px;padding-bottom:64px}h1{font-size:36px;letter-spacing:.005em}h1::after{content:"";display:block;width:56px;height:3px;border-radius:3px;background:var(--gold-grad);margin-top:12px}h2{display:flex;align-items:center;gap:10px}h2::before{content:"";width:4px;height:.95em;border-radius:2px;background:var(--gold-grad);flex:none}h3{color:var(--gold)}.card{border-radius:14px;box-shadow:var(--sh-1)}.ans{position:relative;overflow:hidden;border-left:1px solid var(--line);padding-left:24px;background:linear-gradient(135deg,color-mix(in srgb,var(--gold) 12%,var(--surface)),var(--surface) 65%);border-color:color-mix(in srgb,var(--gold) 40%,var(--line));box-shadow:var(--sh-2)}.ans::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--gold-grad)}.big{color:var(--num);font-weight:700}.btn{border-radius:10px;border:0;background:var(--gold-grad);color:#0A2347;font-weight:700;box-shadow:var(--sh-1);transition:transform .15s,box-shadow .15s,filter .15s}.btn:hover{transform:translateY(-1px);box-shadow:var(--sh-2);filter:brightness(1.06)}.chip{box-shadow:var(--sh-0);transition:border-color .15s,background .15s,transform .15s,box-shadow .15s}.chip:hover{transform:translateY(-1px);box-shadow:var(--sh-1);border-color:var(--orange);background:color-mix(in srgb,var(--orange) 8%,var(--surface))}.f{border-radius:12px;border-left:3px solid var(--cyan)}.tw{border:1px solid var(--line);border-radius:12px;box-shadow:var(--sh-0)}.tw table{border:0}table{border-collapse:separate;border-spacing:0}th,td{border:0;border-bottom:1px solid var(--line)}tr:last-child td{border-bottom:0}th{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);background:var(--field)}tbody tr:hover td{background:color-mix(in srgb,var(--cyan) 7%,transparent)}tr.me td{background:var(--gold-fill)}.trow input,.trow select,.tgrid>div>select{border-radius:10px;transition:border-color .15s,box-shadow .15s}.trow select{background-color:color-mix(in srgb,var(--navy) 5%,var(--field))}.trow input:focus,.trow select:focus,.tgrid>div>select:focus{outline:0;border-color:var(--cyan);box-shadow:var(--ring)}.tgrid label{color:var(--ink)}a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--cyan);outline-offset:2px}footer{padding-block:20px}footer.mf{margin-top:24px;padding:0;border-top:0;background:var(--hero);color:#DCE5F5;font-size:13px;position:relative}footer.mf::before{content:"";display:block;height:4px;background:linear-gradient(90deg,#FF7A00,#FFA43D 55%,#FF7A00)}.mf-w{max-width:1100px;margin:0 auto;padding:36px max(16px,env(safe-area-inset-left,0px)) calc(24px + env(safe-area-inset-bottom,0px))}.mf-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:28px 24px}.mf-h{display:block;margin:0 0 12px;padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,.18);font:600 14px var(--display);letter-spacing:.06em;text-transform:uppercase;color:#FFB066}.mf-col ul{list-style:none;margin:0;padding:0}.mf-col li{margin:0}.mf-col a{display:inline-block;padding:4px 0;color:#DCE5F5;text-decoration:none}.mf-h a{padding:0;color:inherit}.mf-col a:hover,.mf-legal a:hover{color:#FFB066;text-decoration:underline}.mf a:focus-visible{outline:2px solid #FFB066;outline-offset:2px;border-radius:2px}.mf-legal{margin-top:28px;padding-top:18px;border-top:1px solid rgba(255,255,255,.18);color:#A9BADB;max-width:80ch}.mf-legal a{color:#DCE5F5}@media(max-width:980px){.mf-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(max-width:600px){.mf-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.mf-col a{padding:7px 0}}@media print{footer.mf{background:none;color:inherit}footer.mf::before,.mf-grid{display:none}.mf-legal{border:0;color:inherit}}@media(prefers-reduced-motion:reduce){.btn,.chip{transition:none;transform:none!important}}@media print{header{background:none;box-shadow:none}header::before,header::after,.ans::before,h1::after,h2::before{display:none}header .w>a.brand{box-shadow:none;padding:0}body{background-image:none}.card,.ans,.tw{box-shadow:none}.ans{padding-left:18px}}.totop{position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:60;min-height:44px;padding:0 18px;border:0;border-radius:999px;background:linear-gradient(135deg,#FFA43D,#FF7A00 52%,#E85F00);color:#0A2347;font:700 14px system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;box-shadow:0 2px 4px rgba(4,35,80,.2),0 14px 30px -8px rgba(4,35,80,.45);cursor:pointer;opacity:0;transform:translateY(12px);pointer-events:none;transition:opacity .2s,transform .2s,bottom .2s}.totop.on{opacity:1;transform:none;pointer-events:auto}.totop:hover{filter:brightness(1.06)}.totop:focus-visible{outline:2px solid #fff;outline-offset:2px;box-shadow:0 0 0 4px #0062DE}@media(prefers-reduced-motion:reduce){.totop{transition:none}}@media print{.totop{display:none}}.vstat{padding:12px 16px;border-left:4px solid var(--muted,#6b7a90)}.vstat.v-verified{border-left-color:#1f9d57}.vstat.v-reference{border-left-color:#2a7fd4}.vstat.v-indicative{border-left-color:#c98a10}[hidden]{display:none!important}header{position:sticky;top:0;z-index:30}header .w{max-width:1120px;flex-wrap:nowrap;gap:16px;padding-block:8px}header .brand{flex:0 0 auto}header::after{height:3px;background:linear-gradient(90deg,#FF7A00,#FFA43D 55%,#FFC37A)}header nav{display:flex;gap:2px;overflow-x:auto;white-space:nowrap;scrollbar-width:none;min-width:0}header nav::-webkit-scrollbar{display:none}header nav a{margin-left:0;padding:8px 11px;border-radius:8px;opacity:.92}header nav a:hover,header nav a:focus-visible{background:rgba(255,255,255,.14);opacity:1;outline:none}main.calc{max-width:1120px;padding-top:18px}.calc h1{font-size:28px;margin-bottom:4px}.calc .lede{margin:0 0 10px;max-width:70ch}.calc-vb{display:inline-flex;align-items:center;gap:7px;margin:0 0 14px;padding:4px 11px;border:1px solid var(--line);border-radius:999px;background:var(--surface);font:600 12.5px var(--body);color:var(--ink);text-decoration:none}.calc-vb::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--gold)}.calc-vb:hover,.calc-vb:focus-visible{border-color:var(--gold);outline:none}.calc #try{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(290px,1fr);gap:0 20px;align-items:start}.calc #try>h2{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;margin:0}.calc #try>form{grid-column:1;margin:0}.calc #try>#try-out{grid-column:2;grid-row:1;position:sticky;top:64px;margin:0;flex-direction:column;align-items:stretch;gap:12px}.calc .tgrid{grid-template-columns:repeat(auto-fill,minmax(210px,1fr));align-items:start}.hd{margin-top:4px}.hd summary{cursor:pointer;font-size:12px;color:var(--muted);list-style:none}.hd summary::-webkit-details-marker{display:none}.hd summary::before{content:"\24D8  "}.hd[open]{font-size:12px;line-height:1.45}.hd[open] summary{margin-bottom:3px}.calc-limit{margin:14px 0 0;padding:10px 14px;border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:8px;background:var(--surface);font-size:14px}.calc-limit h2{font:700 13px var(--body);margin:0 0 2px;letter-spacing:0;text-transform:none}.calc-limit h2::before{display:none}.calc-limit p{margin:0}.calc-act{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;margin:12px 0 4px}.calc-act .btn{margin:0}.calc-act .note{margin:0;flex:1 1 340px;font-size:12px}.calc .cref{max-width:860px;margin-top:6px}.calc .jump{position:sticky;top:52px;z-index:10;display:flex;gap:6px;overflow-x:auto;white-space:nowrap;scrollbar-width:none;background:var(--bg);padding:8px 0;margin:10px 0 4px;border-bottom:1px solid var(--line)}.calc .jump::-webkit-scrollbar{display:none}.calc .jump .chip{flex:0 0 auto;margin:0}@media (max-width:980px){.calc #try{grid-template-columns:minmax(0,1fr)}.calc #try>#try-out{grid-column:1;grid-row:auto;position:static;margin-top:12px}}#mini-res{position:fixed;left:0;right:0;bottom:0;z-index:40;display:flex;flex-wrap:wrap;gap:2px 18px;padding:8px 16px calc(8px + env(safe-area-inset-bottom,0px));background:var(--surface);color:var(--ink);border-top:3px solid var(--gold);box-shadow:0 -8px 20px -10px rgba(5,20,50,.5);text-decoration:none}#mini-res span{display:block}#mini-res b{display:block;font:600 19px/1.2 var(--display)}#mini-res small{display:block;font-size:11px;color:var(--muted)}@media (min-width:981px){#mini-res{display:none!important}}@media (max-width:640px){main.calc{padding-top:12px}.calc h1{font-size:24px}.calc .jump{top:0}header{position:static}header .w{flex-wrap:wrap;gap:4px 8px;padding-block:8px 4px}header nav{flex:1 1 100%;-webkit-mask-image:linear-gradient(90deg,#000 90%,transparent);mask-image:linear-gradient(90deg,#000 90%,transparent)}}</style><style>:root{--err-fill:#FDECEA;--ok:#17703A;--ok-fill:#E6F5EC}
+@media(prefers-color-scheme:dark){:root{--err-fill:#3A1512;--ok:#6FD39A;--ok-fill:#10301F}}
+.crumb{font-size:13px;color:var(--muted);margin-bottom:6px}
+.badge{display:inline-block;font:600 12px var(--body);padding:3px 10px;border-radius:999px;background:var(--gold-fill);color:var(--gold);border:1px solid var(--gold);margin:0 6px 10px 0}
+.warn{border-left:4px solid var(--gold);background:var(--gold-fill);padding:10px 14px;border-radius:4px;margin:12px 0;font-size:14px}
+.tgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px 16px}
+.tgrid label,.lbl{display:block;font-weight:600;font-size:13px;margin-bottom:4px}
+.trow{display:flex;gap:6px}
+input,select,button{font:16px var(--body)}
+input[type=text],input[type=number],select,textarea{color:var(--ink);background:var(--field);border:1px solid var(--line);border-radius:4px;padding:8px;min-height:40px;max-width:100%}
+input[type=text],input[type=number]{width:100%;min-width:0;flex:1}
+select{min-width:0}
+.tgrid>div>select{width:100%}
+input:focus,select:focus,button:focus-visible,summary:focus-visible,a:focus-visible{outline:none;box-shadow:var(--ring);border-color:var(--cyan)}
+input.bad,select.bad{border-color:var(--err);background:var(--err-fill)}
+.fe{color:var(--err);font-size:12px;margin-top:3px;min-height:0}
+.hint{color:var(--muted);font-size:12px;margin-top:3px}
+.btn{display:inline-block;background:var(--navy);color:var(--on-navy);padding:9px 16px;border-radius:4px;text-decoration:none;font:600 14px var(--body);border:1px solid var(--gold);cursor:pointer}
+.btn:hover{filter:brightness(1.15)}
+.btn.alt{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn.alt:hover{border-color:var(--gold)}
+.btn.sm{padding:5px 10px;font-size:13px}
+.btn[disabled]{opacity:.5;cursor:not-allowed}
+.bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:10px 0}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:4px;overflow:hidden}
+.seg button{background:var(--surface);color:var(--ink);border:0;padding:7px 14px;font:600 13px var(--body);cursor:pointer}
+.seg button[aria-pressed=true]{background:var(--navy);color:var(--on-navy)}
+.res{border-left:4px solid var(--gold)}
+.big{font:600 34px/1.1 var(--display);color:var(--num)}
+.big small{display:block;font:500 13px var(--body);color:var(--muted);margin-top:4px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px;margin:12px 0}
+.kpi{border:1px solid var(--line);border-radius:6px;padding:10px 12px;background:var(--field)}
+.kpi .v{font:600 22px var(--display);color:var(--num)}
+.kpi .t{font-size:12px;color:var(--muted)}
+.errs{background:var(--err-fill);border:1px solid var(--err);color:var(--err);border-radius:4px;padding:10px 14px;margin:10px 0}
+.errs ul{margin:4px 0 0;padding-left:18px}
+.okmsg{background:var(--ok-fill);border:1px solid var(--ok);color:var(--ok);border-radius:4px;padding:8px 12px;margin:10px 0;font-size:14px}
+td.n,th.n{text-align:right;font-family:var(--mono)}
+tr.tot td{background:var(--gold-fill);font-weight:700}
+.pass{color:var(--ok);font-weight:700}
+.failx{color:var(--err);font-weight:700}
+ol.steps{padding-left:22px;font-family:var(--mono);font-size:13px}
+ol.steps li{margin:4px 0}
+ul{padding-left:20px}
+code{font-family:var(--mono);background:var(--field);padding:0 4px;border-radius:3px}
+details.more>summary h2{margin:14px 0;flex:1}
+.el{border:1px solid var(--line);border-radius:8px;background:var(--surface);padding:14px 16px;margin:12px 0;box-shadow:var(--sh-0)}
+.el-h{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:end;margin-bottom:10px}
+.el-h>div{min-width:120px}
+.el-h .grow{flex:1;min-width:200px}
+.el-body{display:grid;grid-template-columns:minmax(0,1fr) 250px;gap:14px 18px}
+@media(max-width:720px){.el-body{grid-template-columns:1fr}}
+.el-res{margin-top:10px;padding-top:8px;border-top:1px dashed var(--line);font-size:14px}
+.dia{color:var(--muted);align-self:start}
+.dia svg{width:100%;height:auto;max-width:260px;display:block;margin:0 auto}
+.dia .cap{font-size:12px;text-align:center}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}
+.chip{display:inline-block;padding:6px 13px;border:1px solid var(--line);border-radius:999px;background:var(--surface);text-decoration:none;font-size:14px}
+.chip:hover{border-color:var(--gold)}
+@media print{header nav,.bar,.noprint,.el-h button,.btn,.chips,details.more:not([open])>*:not(summary){display:none!important}
+.card,.el,details.more{box-shadow:none;break-inside:avoid}}
+.fb button,.fb .btn,.totop{margin-top:0}.fb .btn{background:var(--gold-grad);color:#0A2347;border:0;border-radius:10px;font-weight:700;padding:9px 16px}.jump .chip[aria-current=page]{background:var(--gold-fill);border-color:var(--gold);font-weight:700}main.w{padding-top:36px;padding-bottom:64px}.mf-legal a,.mf-col a{font:inherit}.mf a{color:#DCE5F5}
+</style></head>
+<body data-mode="05"><header><div class="w"><a class="brand" href="../../"><img src="../../logo.png" alt="Elecmetric" width="160" height="40"></a><nav><a href="../">Calculators</a><a href="../all-tools/">All Tools</a><a href="../../converters/index.html">Conversion Centre</a><a href="../../pages/index.html">Conversions</a><a href="../../technical-library/">Technical Library</a><a href="../../index.html#verification">How it is verified</a></nav></div></header>
+<main class="w"><nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="../../">Home</a></li><li><a href="../../categories/construction-architecture/">Construction &amp; Architecture</a></li><li><a href="../../categories/construction-architecture/#concrete">Concrete</a></li><li><span aria-current="page">Cement, Sand &amp; Aggregate Calculator — Nominal Mix Material Estimator</span></li></ol></nav>
+<div class="crumb">Construction &amp; Civil › Concrete › Mode 05</div>
+<h1>Cement, Sand &amp; Aggregate Calculator — Nominal Mix Material Estimator</h1>
+<span class="badge">Mode 05 · Advanced material estimate</span>
+<p class="lede">Estimate cement bags, sand and coarse aggregate for a concrete volume using a nominal mix ratio and a dry-volume factor, with optional water and material cost.</p>
+<div class="warn"><strong>This is a material-quantity estimate, not a structural mix design.</strong> Choosing a ratio here does not make the concrete M20, M25 or M30, and does not show compliance with IS 456 or any code. Grade, cement content, water–cement ratio and admixtures must come from the approved mix design and material specification for your project.</div>
+<section class="card"><div class="tgrid">
+ <div><label for="m-v">Net concrete volume</label><div class="trow"><input type="text" inputmode="decimal" id="m-v" autocomplete="off"><select id="m-u" aria-label="Volume unit"><option value="m3">m³</option><option value="ft3">ft³ / cft</option><option value="yd3">yd³</option><option value="L">litres</option></select></div><div class="fe" id="m-v-e"></div></div>
+ <div><label for="m-pr">Nominal ratio (cement : sand : aggregate)</label><select id="m-pr"></select><div class="hint">Traditional site ratios shown as examples only.</div></div>
+ <div><label>Parts — cement / sand / aggregate</label><div class="trow"><input type="text" inputmode="decimal" id="m-c" value="1" aria-label="Cement parts"><input type="text" inputmode="decimal" id="m-s" value="2" aria-label="Sand parts"><input type="text" inputmode="decimal" id="m-a" value="4" aria-label="Aggregate parts"></div><div class="fe" id="m-c-e"></div></div>
+ <div><label for="m-d">Dry-volume factor</label><input type="text" inputmode="decimal" id="m-d" value="1.54"><div class="hint">Wet → dry volume. Values around 1.52–1.57 are common in practice; use the factor from your method statement.</div><div class="fe" id="m-d-e"></div></div>
+ <div><label for="m-cd">Cement bulk density (kg/m³)</label><input type="text" inputmode="decimal" id="m-cd" value="1440"><div class="fe" id="m-cd-e"></div></div>
+ <div><label for="m-sd">Sand bulk density (kg/m³)</label><input type="text" inputmode="decimal" id="m-sd" value="1600"><div class="fe" id="m-sd-e"></div></div>
+ <div><label for="m-ad">Coarse aggregate bulk density (kg/m³)</label><input type="text" inputmode="decimal" id="m-ad" value="1500"><div class="fe" id="m-ad-e"></div></div>
+ <div><label for="m-b">Cement bag mass (kg)</label><select id="m-b"><option>20</option><option>25</option><option>30</option><option>40</option><option selected>50</option></select></div>
+ <div><label for="m-wc">Water–cement ratio (optional)</label><input type="text" inputmode="decimal" id="m-wc" placeholder="from your approved design"><div class="fe" id="m-wc-e"></div></div>
+ <div><label for="m-mw">Material wastage % (optional)</label><input type="text" inputmode="decimal" id="m-mw" value="0"><div class="fe" id="m-mw-e"></div></div>
+ <div><label for="m-cs">Currency</label><select id="m-cs"></select><input type="text" id="m-cc" placeholder="symbol" hidden style="margin-top:6px"></div>
+ <div><label for="m-rc">Cement price (per bag, optional)</label><input type="text" inputmode="decimal" id="m-rc"><div class="fe" id="m-rc-e"></div></div>
+ <div><label for="m-rs">Sand price (per m³, optional)</label><input type="text" inputmode="decimal" id="m-rs"><div class="fe" id="m-rs-e"></div></div>
+ <div><label for="m-ra">Aggregate price (per m³, optional)</label><input type="text" inputmode="decimal" id="m-ra"><div class="fe" id="m-ra-e"></div></div>
+</div><div class="bar"><label class="btn alt sm" style="margin:0">Load Mode 01 project (.json)<input type="file" accept=".json,application/json" hidden data-proj></label></div></section>
+<section class="card res" aria-live="polite"><h2 style="margin-top:0">Result</h2><div id="out"></div></section>
+<h3>Continue</h3><div class="chips" id="next"></div>
+<section><h2>Formula</h2><div class="f">V_dry     = V_wet × dry factor × (1 + material wastage)
+Cement    = V_dry × c/(c+s+a)   → × bulk density → ÷ bag mass → ⌈bags⌉
+Sand      = V_dry × s/(c+s+a)
+Aggregate = V_dry × a/(c+s+a)
+Water     = w/c × cement mass          (only if you enter w/c)</div></section>
+<section><h2>Worked example</h2><ol class="steps" id="ex"></ol></section>
+<h2>Assumptions and limits</h2><ul><li>Bulk densities are material-dependent and change with moisture. Sand bulking, aggregate grading and moisture are not modelled; test your materials.</li><li>Quantities are by mix proportion by volume. Weigh-batched or design-mix concrete is specified by mass per m³ and needs its own mix design.</li><li>Water, admixtures, curing and testing are outside this estimate.</li></ul>
+<details class="more"><summary><h2>Verification — reference cases</h2></summary><div id="tests"></div><div class="tw"><table><tbody><tr><th scope="row">Status</th><td>Engineering reference — no independent technical review has been carried out. Formulas and default constants are not verified against a licensed standard text.</td></tr><tr><th scope="row">Reviewer / approval date</th><td><em>not recorded</em></td></tr></tbody></table></div></details>
+<details class="more"><summary><h2>FAQ</h2></summary><h3>Does 1:2:4 mean M15?</h3><p>This page does not map ratios to grades. Use the grade and proportions from your approved design.</p></details>
+
+<div class="warn noprint" style="margin-top:28px"><strong>Estimate only.</strong> Not engineering, structural or safety advice. Check quantities against the project drawings, specification and supplier, and have a competent engineer review them before they are relied on.</div>
+<section id="related"><h2>Related Calculators and Tools</h2><p><a class="chip" href="../concrete-volume-calculator/">Concrete Volume Calculator (Mode 01)</a><a class="chip" href="../concrete-wastage-calculator/">Concrete Wastage Calculator (Mode 02)</a><a class="chip" href="../concrete-bag-calculator/">Concrete Bag Calculator (Mode 03)</a><a class="chip" href="../rmc-calculator/">RMC Ready-Mix Concrete Calculator (Mode 04)</a><a class="chip" href="../concrete-cost-estimator/">Concrete Cost Estimator (Mode 06)</a><a class="chip" href="../percentage-calculator/">Percentage Calculator</a><a class="chip" href="../ratio-calculator/">Ratio Calculator</a></p></section></main><section class="w fb" aria-labelledby="fb-h"><h2 id="fb-h">Tell us how to improve this page</h2><textarea id="fb-t" rows="4" maxlength="1500" placeholder="Your message ..." aria-label="Tell us how to improve this page"></textarea><p><button type="button" class="btn" id="fb-b">Email your suggestion</button> <button type="button" class="btn" id="sh-b">Share this page</button> <span class="note" id="fb-n">This opens your email app. Nothing is sent until you press send.</span></p></section><script>(function(){var b=document.getElementById("fb-b");if(!b)return;b.onclick=function(){var t=document.getElementById("fb-t").value.trim(),n=document.getElementById("fb-n");if(!t){n.textContent="Please write a message first.";return}location.assign("mailto:"+"elecmetrics@gmail.com"+"?subject="+encodeURIComponent("Elecmetric feedback: "+document.title)+"&body="+encodeURIComponent(t+"\n\nPage: "+location.href))}})();</script><script>(function(){var s=document.getElementById("sh-b");if(!s)return;s.onclick=function(){var u=location.href,t=document.title,n=document.getElementById("fb-n");if(navigator.share){navigator.share({title:t,url:u}).catch(function(){});return}if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(u).then(function(){n.textContent="Link copied."},function(){n.textContent="Copy this address: "+u})}else{n.textContent="Copy this address: "+u}}})();</script><footer class="mf"><div class="mf-w"><div class="mf-grid" role="navigation" aria-label="Site map"><div class="mf-col"><p class="mf-h"><a href="../../calculators/">Calculators</a></p><ul><li><a href="../../calculators/electrical-fundamentals/">Electrical Fundamentals</a></li><li><a href="../../calculators/power-and-energy/">Power and Energy</a></li><li><a href="../../calculators/cable-engineering/">Cable Engineering</a></li><li><a href="../../calculators/motor-engineering/">Motor Engineering</a></li><li><a href="../../calculators/transformer-engineering/">Transformer Engineering</a></li><li><a href="../../calculators/electrical-protection/">Electrical Protection</a></li><li><a href="../../calculators/power-systems/">Power Systems</a></li><li><a href="../../calculators/earthing-and-grounding/">Earthing and Grounding</a></li><li><a href="../../calculators/renewable-energy/">Renewable Energy</a></li><li><a href="../../calculators/airport-agl-engineering/">Airport and AGL Engineering</a></li><li><a href="../../calculators/electronics-and-instrumentation/">Electronics and Instrumentation</a></li><li><a href="../../calculators/lighting-and-facilities/">Lighting and Facilities</a></li><li><a href="../../calculators/engineering-mathematics/">Engineering Mathematics</a></li></ul></div><div class="mf-col"><p class="mf-h"><a href="../../calculators/">Popular calculators</a></p><ul><li><a href="../../calculators/cable-size/">Cable Size</a></li><li><a href="../../calculators/voltage-drop/">Voltage Drop</a></li><li><a href="../../calculators/breaker-size/">Breaker Size</a></li><li><a href="../../calculators/motor-current/">Motor Current</a></li><li><a href="../../calculators/transformer-sizing/">Transformer Sizing</a></li><li><a href="../../calculators/earth-resistance/">Earth Resistance</a></li><li><a href="../../calculators/pf-correction-kvar/">Power Factor Correction</a></li><li><a href="../../calculators/generator-sizing/">Generator Sizing</a></li><li><a href="../../calculators/battery-bank-sizing/">Battery Bank Sizing</a></li><li><a href="../../calculators/pv-energy/">Solar PV Energy</a></li></ul></div><div class="mf-col"><p class="mf-h"><a href="../../converters/index.html">Conversions</a></p><ul><li><a href="../../pages/index.html">Electrical conversions</a></li><li><a href="../../pages/kw-to-amps.html">kW to Amps</a></li><li><a href="../../pages/amps-to-kw.html">Amps to kW</a></li><li><a href="../../pages/kva-to-kw.html">kVA to kW</a></li><li><a href="../../pages/watts-to-amps.html">Watts to Amps</a></li><li><a href="../../converters/length-converter.html">Length</a></li><li><a href="../../converters/power-converter.html">Power</a></li><li><a href="../../converters/energy-converter.html">Energy</a></li><li><a href="../../converters/temperature-converter.html">Temperature</a></li><li><a href="../../pages/wire-gauge.html">AWG to mm²</a></li></ul></div><div class="mf-col"><p class="mf-h"><a href="../../converters/index.html">Formulas</a></p><ul><li><a href="../../converters/ohms-law-formulas.html">Ohm’s Law formulas</a></li><li><a href="../../converters/kirchhoffs-laws.html">Kirchhoff’s laws</a></li><li><a href="../../converters/cable-sizing-formulas.html">Cable sizing formulas</a></li><li><a href="../../converters/circuit-breaker-formulas.html">Circuit breaker formulas</a></li><li><a href="../../converters/ac-circuit-formulas.html">AC circuit formulas</a></li><li><a href="../../converters/battery-formulas.html">Battery formulas</a></li></ul></div><div class="mf-col"><p class="mf-h">Elecmetric</p><ul><li><a href="../../calculators/basic-calculator/">Basic Calculator</a></li><li><a href="../../calculators/scientific-calculator/">Scientific Calculator</a></li><li><a href="../../index.html#verification">How it is verified</a></li><li><a href="../../privacy.html">Privacy</a></li><li><a href="../../terms.html">Terms</a></li><li><a href="../../technical-library/">Technical Library</a></li><li><a href="mailto:elecmetrics@gmail.com">Contact us</a></li></ul></div></div><div class="mf-legal">Results are computed by the same tested engine as the calculators in Elecmetric and are for estimating. Check design values against the standard and the equipment data you work to. Elecmetric results are not a substitute for a design review by a competent engineer.<br>Developed by Elecmetric. No independent technical review of the calculators has been carried out. Results are for estimating.<br>&copy; 2026 Elecmetric &middot; <a href="../../privacy.html">Privacy</a> &middot; <a href="../../terms.html">Terms</a></div></div><script>(function(){if(location.protocol!=="file:")return;document.addEventListener("click",function(e){if(e.defaultPrevented||e.button||e.metaKey||e.ctrlKey||e.shiftKey)return;var a=e.target.closest&&e.target.closest("a[href]");if(!a||a.target)return;var m=/^([^?#]*)(.*)$/.exec(a.getAttribute("href"));if(!m[1]||/^[a-z][a-z0-9+.-]*:/i.test(m[1])||!/[/]$/.test(m[1]))return;e.preventDefault();location.href=m[1]+"index.html"+m[2]})})();</script><button type="button" class="totop" id="totop" aria-label="Back to top" tabindex="-1">↑ Top</button><script>(function(){var b=document.getElementById("totop");if(!b)return;var t=0;function u(){t=0;var on=(window.pageYOffset||document.documentElement.scrollTop)>400,bar=document.getElementById("bar"),h=bar&&bar.offsetHeight?bar.offsetHeight:0;b.classList.toggle("on",on);b.tabIndex=on?0:-1;b.style.bottom=h?"calc("+(h+16)+"px + env(safe-area-inset-bottom,0px))":"";}function q(){if(!t)t=requestAnimationFrame(u)}window.addEventListener("scroll",q,{passive:true});window.addEventListener("resize",q);b.addEventListener("click",function(){var r=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;window.scrollTo({top:0,behavior:r?"auto":"smooth"})});u()})();</script></footer>
+
+<script>/* ELECMETRIC Concrete Engine v1.0  (shared by all six concrete modes)
+   Geometry / units / waste / density / bags / RMC / materials / cost.
+   Full precision internally; rounding only at display. Whole bags, trucks and supplier
+   increments are rounded UP with a tiny tolerance so 3.15/0.05 never becomes 64. */
+(function (root, factory) {
+  if (typeof module === 'object' && module.exports) module.exports = factory();
+  else root.CE = factory();
+})(typeof self !== 'undefined' ? self : this, function () {
+  'use strict';
+  const FT = 0.3048, LB = 0.45359237;
+  const LEN = { mm: 0.001, cm: 0.01, m: 1, in: 0.0254, ft: FT, yd: 0.9144 };
+  const LEN_LABEL = { mm: 'mm', cm: 'cm', m: 'm', in: 'in', ft: 'ft', yd: 'yd' };
+  const VOL = { m3: 1, L: 0.001, ft3: FT ** 3, cft: FT ** 3, yd3: 0.9144 ** 3 };
+  const VOL_LABEL = { m3: 'm³', L: 'litres', ft3: 'ft³', cft: 'cft', yd3: 'yd³' };
+  const MASS = { kg: 1, t: 1000, lb: LB };
+  const DENS = { 'kg/m3': 1, 'lb/ft3': LB / FT ** 3 };
+  const BAG_MIX_DENSITY = 133 * LB / FT ** 3;   // 133 lb/ft³ ≈ 2,130 kg/m³ (the value Calculator.net uses)
+  const PI = Math.PI;
+
+  /* ---------- parsing & small helpers ---------- */
+  function parse(x) {
+    if (typeof x === 'number') return x;
+    if (x == null) return NaN;
+    const s = String(x).trim().replace(/,/g, '');
+    if (s === '') return NaN;
+    let m;
+    if ((m = s.match(/^([+-]?\d+(?:\.\d+)?)\s+(\d+)\s*\/\s*(\d+)$/))) {
+      const d = +m[3]; if (d === 0) return NaN;
+      const w = +m[1]; return (w < 0 || /^-/.test(m[1]) ? -1 : 1) * (Math.abs(w) + (+m[2]) / d);
+    }
+    if ((m = s.match(/^([+-]?\d+)\s*\/\s*(\d+)$/))) { const d = +m[2]; return d === 0 ? NaN : (+m[1]) / d; }
+    if (/^[+-]?(\d+\.?\d*|\.\d+)(e[+-]?\d+)?$/i.test(s)) return Number(s);
+    return NaN;
+  }
+  function ceilTol(x, inc) {            // ceil(x/inc) with floating-point tolerance
+    const q = x / (inc || 1);
+    return Math.ceil(q - 1e-9 * Math.max(1, Math.abs(q)));
+  }
+  function roundUpTo(x, inc) { return inc > 0 ? ceilTol(x, inc) * inc : x; }
+  const err = (field, msg) => ({ field, msg });
+  const fail = (errors) => ({ ok: false, errors });
+
+  /* ---------- shape library (21 shapes) ---------- */
+  const L = (k, label, hint, o) => Object.assign({ k, label, hint: hint || '', type: 'len', min: 'pos', d: '' }, o || {});
+  const C = (k, label, hint, o) => Object.assign({ k, label, hint: hint || '', type: 'cnt', min: 'pos', d: '' }, o || {});
+  const A = (x) => x;   // readability
+  const circ = (d) => PI * d * d / 4;
+
+  const SHAPES = [
+    { id: 'slab', group: 'Slabs, footings & beams', name: 'Rectangular slab', diagram: 'box', labels: ['L', 'W', 'T'],
+      fields: [L('L', 'Length', '', { d: 5 }), L('W', 'Width', '', { d: 4 }), L('T', 'Thickness', '', { d: 0.15, u: 'mm' })],
+      formula: 'V = L × W × T', vol: (d) => d.L * d.W * d.T },
+    { id: 'sqfooting', group: 'Slabs, footings & beams', name: 'Square footing', diagram: 'box', labels: ['S', 'S', 'D'],
+      fields: [L('S', 'Side', 'Plan side of the square footing', { d: 1.5 }), L('D', 'Depth', 'Footing depth / thickness', { d: 0.4 })],
+      formula: 'V = S × S × D', vol: (d) => d.S * d.S * d.D },
+    { id: 'rectfooting', group: 'Slabs, footings & beams', name: 'Rectangular footing', diagram: 'box', labels: ['L', 'W', 'D'],
+      fields: [L('L', 'Length', '', { d: 2 }), L('W', 'Width', '', { d: 1.5 }), L('D', 'Depth', '', { d: 0.5 })],
+      formula: 'V = L × W × D', vol: (d) => d.L * d.W * d.D },
+    { id: 'strip', group: 'Slabs, footings & beams', name: 'Strip footing', diagram: 'box', labels: ['L', 'W', 'D'],
+      fields: [L('L', 'Total strip length', 'Centre-line length of the strip', { d: 24 }), L('W', 'Strip width', '', { d: 0.6 }), L('D', 'Depth', '', { d: 0.3 })],
+      formula: 'V = L × W × D', vol: (d) => d.L * d.W * d.D },
+    { id: 'beam', group: 'Slabs, footings & beams', name: 'Rectangular beam', diagram: 'box', labels: ['L', 'W', 'D'],
+      fields: [L('L', 'Length', '', { d: 5 }), L('W', 'Width', '', { d: 0.3 }), L('D', 'Overall depth', 'Overall depth; deduct slab depth separately if the beam is cast monolithically with a slab', { d: 0.5 })],
+      formula: 'V = L × W × D', vol: (d) => d.L * d.W * d.D },
+    { id: 'colcirc', group: 'Columns', name: 'Circular column', diagram: 'cyl', labels: ['D', 'H'],
+      fields: [L('D', 'Diameter', '', { d: 0.3 }), L('H', 'Height', '', { d: 3 })],
+      formula: 'V = π D² / 4 × H', vol: (d) => circ(d.D) * d.H },
+    { id: 'colsq', group: 'Columns', name: 'Square column', diagram: 'box', labels: ['S', 'S', 'H'],
+      fields: [L('S', 'Side', '', { d: 0.4 }), L('H', 'Height', '', { d: 3 })],
+      formula: 'V = S × S × H', vol: (d) => d.S * d.S * d.H },
+    { id: 'colrect', group: 'Columns', name: 'Rectangular column', diagram: 'box', labels: ['L', 'W', 'H'],
+      fields: [L('L', 'Length', '', { d: 0.5 }), L('W', 'Width', '', { d: 0.3 }), L('H', 'Height', '', { d: 3 })],
+      formula: 'V = L × W × H', vol: (d) => d.L * d.W * d.H },
+    { id: 'wall', group: 'Walls', name: 'Concrete wall', diagram: 'wall', labels: ['L', 'T', 'H'],
+      fields: [L('L', 'Length', '', { d: 5 }), L('H', 'Height', '', { d: 3 }), L('T', 'Thickness', '', { d: 0.2, u: 'mm' })],
+      formula: 'V = L × H × T', vol: (d) => d.L * d.H * d.T },
+    { id: 'wallopen', group: 'Walls', name: 'Wall with openings', diagram: 'wallopen', labels: ['L', 'T', 'H'],
+      fields: [L('L', 'Length', '', { d: 5 }), L('H', 'Height', '', { d: 3 }), L('T', 'Thickness', '', { d: 0.2, u: 'mm' }),
+        L('aw', 'Opening A width', 'Door/window type A', { d: 1, min: 'nonneg' }), L('ah', 'Opening A height', '', { d: 2, min: 'nonneg' }), C('an', 'Opening A quantity', 'Number of type-A openings (0 = none)', { d: 1, min: 'nonneg' }),
+        L('bw', 'Opening B width', 'Optional second type', { d: 0, min: 'nonneg' }), L('bh', 'Opening B height', '', { d: 0, min: 'nonneg' }), C('bn', 'Opening B quantity', '', { d: 0, min: 'nonneg' })],
+      formula: 'V = L × H × T − Σ (opening w × h × T)',
+      check: (d, e) => {
+        [['a', 'A'], ['b', 'B']].forEach(([p, n]) => {
+          if (d[p + 'n'] > 0) {
+            if (!(d[p + 'w'] > 0)) e.push(err(p + 'w', 'Opening ' + n + ' width must be greater than 0'));
+            if (!(d[p + 'h'] > 0)) e.push(err(p + 'h', 'Opening ' + n + ' height must be greater than 0'));
+            if (d[p + 'w'] > d.L) e.push(err(p + 'w', 'Opening ' + n + ' is wider than the wall'));
+            if (d[p + 'h'] > d.H) e.push(err(p + 'h', 'Opening ' + n + ' is taller than the wall'));
+          }
+        });
+        const open = d.aw * d.ah * d.an + d.bw * d.bh * d.bn;
+        if (!e.length && open >= d.L * d.H) e.push(err('an', 'Openings take up the whole wall face — no concrete left'));
+      },
+      vol: (d) => (d.L * d.H - d.aw * d.ah * d.an - d.bw * d.bh * d.bn) * d.T,
+      extra: (d) => ({ gross: d.L * d.H * d.T, openings: (d.aw * d.ah * d.an + d.bw * d.bh * d.bn) * d.T }) },
+    { id: 'circslab', group: 'Circular & hollow', name: 'Circular slab', diagram: 'cyl', labels: ['D', 'T'],
+      fields: [L('D', 'Diameter', '', { d: 3 }), L('T', 'Thickness', '', { d: 0.15, u: 'mm' })],
+      formula: 'V = π D² / 4 × T', vol: (d) => circ(d.D) * d.T },
+    { id: 'tube', group: 'Circular & hollow', name: 'Hollow circular tube / pipe', diagram: 'tube', labels: ['OD', 'ID', 'L'],
+      fields: [L('OD', 'Outer diameter', '', { d: 0.5 }), L('ID', 'Inner diameter', '', { d: 0.4 }), L('L', 'Length / height', '', { d: 2 })],
+      formula: 'V = π (R² − r²) L = π/4 (OD² − ID²) L',
+      check: (d, e) => { if (d.ID >= d.OD) e.push(err('ID', 'Inner diameter must be smaller than outer diameter')); },
+      vol: (d) => PI / 4 * (d.OD * d.OD - d.ID * d.ID) * d.L },
+    { id: 'posthole', group: 'Circular & hollow', name: 'Post hole / round footing', diagram: 'posthole', labels: ['D', 'H', 's'],
+      fields: [L('D', 'Hole diameter', '', { d: 0.3 }), L('H', 'Depth', '', { d: 0.9 }), L('s', 'Square post side (optional)', 'Post set in the concrete displaces volume; 0 = no post', { d: 0, min: 'nonneg' })],
+      formula: 'V = π D² / 4 × H − s² × H',
+      check: (d, e) => { if (d.s > 0 && d.s * Math.SQRT2 >= d.D) e.push(err('s', 'The post does not fit inside the hole (diagonal ≥ hole diameter)')); },
+      vol: (d) => circ(d.D) * d.H - d.s * d.s * d.H },
+    { id: 'pile', group: 'Circular & hollow', name: 'Pile / caisson (shaft + bell)', diagram: 'pile', labels: ['Ds', 'Ls', 'Db', 'Hb'],
+      fields: [L('Ds', 'Shaft diameter', '', { d: 0.6 }), L('Ls', 'Shaft length', 'Cut-off level to the start of the bell', { d: 12 }),
+        L('Db', 'Bell (under-ream) diameter', '0 = straight shaft, no bell', { d: 0, min: 'nonneg' }), L('Hb', 'Bell height', 'Frustum from bell diameter up to shaft diameter', { d: 0, min: 'nonneg' })],
+      formula: 'V = π Ds² / 4 × Ls + π Hb / 12 × (Db² + Db·Ds + Ds²)',
+      check: (d, e) => {
+        if (d.Db > 0) {
+          if (d.Db < d.Ds) e.push(err('Db', 'Bell diameter cannot be smaller than the shaft diameter'));
+          if (!(d.Hb > 0)) e.push(err('Hb', 'Bell height must be greater than 0 when a bell diameter is given'));
+        }
+      },
+      vol: (d) => circ(d.Ds) * d.Ls + (d.Db > 0 ? PI * d.Hb / 12 * (d.Db * d.Db + d.Db * d.Ds + d.Ds * d.Ds) : 0) },
+    { id: 'tank', group: 'Circular & hollow', name: 'Circular tank base (+ optional ring wall)', diagram: 'tank', labels: ['D', 'T', 'tw', 'hw'],
+      fields: [L('D', 'Base diameter', 'Also the outer diameter of the wall', { d: 4 }), L('T', 'Base thickness', '', { d: 0.25 }),
+        L('tw', 'Ring wall thickness (optional)', '0 = base only', { d: 0, min: 'nonneg' }), L('hw', 'Ring wall height (optional)', '', { d: 0, min: 'nonneg' })],
+      formula: 'V = π D² / 4 × T + π/4 (D² − (D − 2 tw)²) × hw',
+      check: (d, e) => { if (d.tw > 0 && 2 * d.tw >= d.D) e.push(err('tw', 'Twice the wall thickness must be less than the base diameter')); if (d.tw > 0 && !(d.hw > 0)) e.push(err('hw', 'Wall height must be greater than 0 when a wall thickness is given')); },
+      vol: (d) => circ(d.D) * d.T + (d.tw > 0 ? PI / 4 * (d.D * d.D - (d.D - 2 * d.tw) ** 2) * d.hw : 0) },
+    { id: 'stairs', group: 'Stairs, curbs & ramps', name: 'Stairs — solid stepped', diagram: 'stairs', labels: ['run', 'rise', 'W', 'n'],
+      fields: [L('run', 'Run (tread depth)', '', { d: 0.28 }), L('rise', 'Rise (riser height)', '', { d: 0.17 }), L('W', 'Width', '', { d: 1.2 }),
+        C('n', 'Number of risers', 'Whole number of steps', { type: 'int', d: 6 }), L('P', 'Top platform depth (optional)', 'Solid platform beyond the top step; 0 = none', { d: 0, min: 'nonneg' })],
+      formula: 'V = W × run × rise × n(n+1)/2 + W × P × n × rise',
+      vol: (d) => d.W * d.run * d.rise * d.n * (d.n + 1) / 2 + d.W * d.P * d.n * d.rise },
+    { id: 'waist', group: 'Stairs, curbs & ramps', name: 'Stairs — waist-slab (structural)', diagram: 'waist', labels: ['run', 'rise', 'W', 't'],
+      fields: [L('run', 'Going (tread)', '', { d: 0.25 }), L('rise', 'Rise (riser)', '', { d: 0.15 }), L('W', 'Width', '', { d: 1.2 }),
+        C('n', 'Number of risers', '', { type: 'int', d: 10 }), L('t', 'Waist thickness', 'Measured perpendicular to the slope', { d: 0.15 })],
+      formula: 'V = W × t × n√(run² + rise²) + W × n × (run × rise / 2)',
+      vol: (d) => d.W * d.t * d.n * Math.hypot(d.run, d.rise) + d.W * d.n * d.run * d.rise / 2 },
+    { id: 'landing', group: 'Stairs, curbs & ramps', name: 'Stair landing', diagram: 'box', labels: ['L', 'W', 'T'],
+      fields: [L('L', 'Length', '', { d: 1.2 }), L('W', 'Width', '', { d: 1.2 }), L('T', 'Thickness', '', { d: 0.15 })],
+      formula: 'V = L × W × T', vol: (d) => d.L * d.W * d.T },
+    { id: 'curb', group: 'Stairs, curbs & ramps', name: 'Curb and gutter', diagram: 'curb', labels: ['cd', 'ch', 'gw', 'ft'],
+      fields: [L('cd', 'Curb depth (thickness)', 'Horizontal thickness of the curb', { d: 0.15 }), L('ch', 'Curb height', 'Total vertical height of the curb, from underside of the flag to the top', { d: 0.45 }),
+        L('gw', 'Gutter width', 'Horizontal width of the flag measured out from the curb face', { d: 0.45 }), L('ft', 'Flag thickness', '', { d: 0.15 }), L('L', 'Length', '', { d: 30 })],
+      formula: 'V = (cd × ch + gw × ft) × L',
+      check: (d, e) => { if (d.ft > d.ch) e.push(err('ft', 'Flag thickness cannot exceed the total curb height')); },
+      vol: (d) => (d.cd * d.ch + d.gw * d.ft) * d.L },
+    { id: 'ramp', group: 'Stairs, curbs & ramps', name: 'Concrete ramp (solid wedge)', diagram: 'ramp', labels: ['L', 'H1', 'H0', 'W'],
+      fields: [L('L', 'Horizontal length', '', { d: 3 }), L('W', 'Width', '', { d: 1.2 }), L('H1', 'Height at high end', '', { d: 0.3 }), L('H0', 'Height at low end', '0 = feathers to nothing', { d: 0, min: 'nonneg' })],
+      formula: 'V = L × W × (H1 + H0) / 2', vol: (d) => d.L * d.W * (d.H1 + d.H0) / 2 },
+    { id: 'trench', group: 'Stairs, curbs & ramps', name: 'Trench filling', diagram: 'trench', labels: ['bw', 'tw', 'D', 'L'],
+      fields: [L('bw', 'Bottom width', '', { d: 0.6 }), L('tw', 'Top width', 'Equal to bottom width for a vertical-sided trench', { d: 0.6 }), L('D', 'Depth', '', { d: 0.9 }), L('L', 'Length', '', { d: 20 })],
+      formula: 'V = (bw + tw) / 2 × D × L', vol: (d) => (d.bw + d.tw) / 2 * d.D * d.L }
+  ];
+  const SHAPE_BY_ID = {}; SHAPES.forEach((s) => { SHAPE_BY_ID[s.id] = s; });
+
+  /* ---------- element (shape) volume ---------- */
+  // input: shapeId, values {k:{v:'5',u:'m'}}, qty
+  function elementVolume(shapeId, values, qty) {
+    const sh = SHAPE_BY_ID[shapeId];
+    if (!sh) return fail([err('shape', 'Unknown shape')]);
+    const e = [], d = {}, shown = {};
+    sh.fields.forEach((f) => {
+      const cell = values && values[f.k] || {};
+      const raw = cell.v, n = parse(raw);
+      const blank = raw == null || String(raw).trim() === '';
+      if (blank) {
+        if (f.min === 'nonneg') { d[f.k] = 0; return; }        // optional field left empty
+        e.push(err(f.k, f.label + ' is required')); return;
+      }
+      if (!isFinite(n)) { e.push(err(f.k, f.label + ' is not a valid number')); return; }
+      if (f.type === 'len') {
+        const u = cell.u || 'm';
+        if (!(u in LEN)) { e.push(err(f.k, f.label + ': unknown unit "' + u + '"')); return; }
+        if (n < 0) { e.push(err(f.k, f.label + ' cannot be negative')); return; }
+        if (f.min === 'pos' && n === 0) { e.push(err(f.k, f.label + ' must be greater than 0')); return; }
+        d[f.k] = n * LEN[u]; shown[f.k] = { v: n, u };
+      } else {
+        if (n < 0) { e.push(err(f.k, f.label + ' cannot be negative')); return; }
+        if (!Number.isInteger(n)) { e.push(err(f.k, f.label + ' must be a whole number')); return; }
+        if (f.min === 'pos' && n === 0) { e.push(err(f.k, f.label + ' must be at least 1')); return; }
+        d[f.k] = n; shown[f.k] = { v: n, u: '' };
+      }
+    });
+    const q = parse(qty == null || String(qty).trim() === '' ? 1 : qty);
+    if (!isFinite(q)) e.push(err('qty', 'Quantity is not a valid number'));
+    else if (q <= 0) e.push(err('qty', 'Quantity must be at least 1'));
+    else if (!Number.isInteger(q)) e.push(err('qty', 'Quantity must be a whole number'));
+    if (!e.length && sh.check) sh.check(d, e);
+    if (e.length) return fail(e);
+    const single = sh.vol(d);
+    if (!(single > 0) || !isFinite(single)) return fail([err('shape', 'These dimensions give no positive volume')]);
+    const out = { ok: true, shape: sh.id, name: sh.name, formula: sh.formula, d, single_m3: single, qty: q, total_m3: single * q };
+    if (sh.extra) out.extra = sh.extra(d);
+    return out;
+  }
+
+  /* ---------- conversions ---------- */
+  const fromM3 = (m3) => ({ m3, L: m3 / VOL.L, ft3: m3 / VOL.ft3, cft: m3 / VOL.cft, yd3: m3 / VOL.yd3 });
+  function toM3(v, unit) { if (!(unit in VOL)) throw new Error('unit ' + unit); return v * VOL[unit]; }
+  const toKgPerM3 = (rho, u) => rho * DENS[u];
+  function weight(m3, rho, rhoUnit) {
+    if (!(rho > 0) || !isFinite(rho)) return { ok: false, errors: [err('density', 'Enter a density greater than 0 — weight is not shown without it')] };
+    const kg = m3 * toKgPerM3(rho, rhoUnit || 'kg/m3');
+    return { ok: true, kg, t: kg / 1000, lb: kg / LB };
+  }
+
+  /* ---------- Mode 02: waste & order quantity ---------- */
+  function order(o) {
+    const e = [];
+    const net = o.net_m3, w = o.wastePct == null ? 0 : o.wastePct, over = o.overpour_m3 || 0, inc = o.incr_m3 || 0, cap = o.maxWaste == null ? 25 : o.maxWaste;
+    if (!(net > 0) || !isFinite(net)) e.push(err('net', 'Net volume must be greater than 0'));
+    if (!isFinite(w) || w < 0) e.push(err('waste', 'Waste percentage cannot be negative'));
+    else if (w > cap) e.push(err('waste', 'Waste of ' + w + '% is above the configured limit of ' + cap + '%. Raise the limit if this is intentional'));
+    if (!isFinite(over) || over < 0) e.push(err('over', 'Over-pour cannot be negative'));
+    if (!isFinite(inc) || inc < 0) e.push(err('incr', 'Delivery increment cannot be negative'));
+    if (e.length) return fail(e);
+    const allowance = net * w / 100, required = net + allowance + over;
+    const ordered = inc > 0 ? roundUpTo(required, inc) : required;
+    return { ok: true, net, allowance, over, required, ordered, rounding: ordered - required, effectiveWastePct: (ordered / net - 1) * 100 };
+  }
+
+  /* ---------- Mode 03: bags ---------- */
+  const BAGS = [
+    { id: 'kg20', label: '20 kg', mass: 20, u: 'kg' }, { id: 'kg25', label: '25 kg', mass: 25, u: 'kg' }, { id: 'kg30', label: '30 kg', mass: 30, u: 'kg' },
+    { id: 'kg40', label: '40 kg', mass: 40, u: 'kg' }, { id: 'kg50', label: '50 kg', mass: 50, u: 'kg' },
+    { id: 'lb40', label: '40 lb', mass: 40, u: 'lb' }, { id: 'lb50', label: '50 lb', mass: 50, u: 'lb' }, { id: 'lb60', label: '60 lb', mass: 60, u: 'lb' }, { id: 'lb80', label: '80 lb', mass: 80, u: 'lb' }
+  ];
+  BAGS.forEach((b) => { b.yield_m3 = b.mass * MASS[b.u] / BAG_MIX_DENSITY; });   // indicative only
+  function bagsFor(o) {
+    const e = [], v = o.volume_m3, y = o.yield_m3, pw = o.productWastePct || 0;
+    if (!(v > 0) || !isFinite(v)) e.push(err('volume', 'Concrete volume must be greater than 0'));
+    if (!(y > 0) || !isFinite(y)) e.push(err('yield', 'Bag yield must be greater than 0'));
+    if (!isFinite(pw) || pw < 0) e.push(err('pw', 'Product wastage cannot be negative'));
+    if (e.length) return fail(e);
+    const exact = v * (1 + pw / 100) / y, whole = ceilTol(exact);
+    return { ok: true, exact, whole, supplied_m3: whole * y, spare_m3: whole * y - v * (1 + pw / 100), bagsPerM3: 1 / y,
+      cost: o.pricePerBag > 0 ? whole * o.pricePerBag : null };
+  }
+  function volumeFromBags(n, y) {
+    if (!(n > 0) || !isFinite(n)) return fail([err('n', 'Number of bags must be greater than 0')]);
+    if (!(y > 0) || !isFinite(y)) return fail([err('yield', 'Bag yield must be greater than 0')]);
+    return { ok: true, m3: n * y };
+  }
+
+  /* ---------- Mode 04: RMC ---------- */
+  function rmc(o) {
+    const e = [];
+    const ord = order({ net_m3: o.net_m3, wastePct: o.wastePct, overpour_m3: o.overpour_m3, incr_m3: o.incr_m3, maxWaste: o.maxWaste });
+    if (!ord.ok) ord.errors.forEach((x) => e.push(x));
+    const cap = o.truck_m3;
+    if (!(cap > 0) || !isFinite(cap)) e.push(err('truck', 'Truck capacity must be greater than 0'));
+    ['rate', 'transport', 'pump', 'taxPct', 'minOrder_m3'].forEach((k) => { if (o[k] != null && (!isFinite(o[k]) || o[k] < 0)) e.push(err(k, k + ' cannot be negative')); });
+    if (e.length) return fail(e);
+    let supplied = ord.ordered;
+    const minApplied = o.minOrder_m3 > 0 && supplied < o.minOrder_m3;
+    if (minApplied) supplied = o.minOrder_m3;
+    const trucks = ceilTol(supplied, cap), full = Math.floor(supplied / cap + 1e-9), lastLoad = supplied - full * cap;
+    const partial = lastLoad > 1e-9 ? lastLoad : 0;
+    const r = { ok: true, net: ord.net, allowance: ord.allowance, over: ord.over, required: ord.required, ordered: ord.ordered, supplied, minApplied,
+      trucks, full, partial, spareInLast: partial > 0 ? cap - partial : 0, trucksCapacity: trucks * cap };
+    if (o.rate > 0) {
+      r.supply = supplied * o.rate;
+      const tm = o.transportMode || 'trip', pm = o.pumpMode || 'lump';
+      r.delivery = o.transport > 0 ? (tm === 'trip' ? trucks * o.transport : tm === 'm3' ? supplied * o.transport : o.transport) : 0;
+      r.pumping = o.pump > 0 ? (pm === 'm3' ? supplied * o.pump : o.pump) : 0;
+      r.subtotal = r.supply + r.delivery + r.pumping;
+      r.tax = r.subtotal * (o.taxPct || 0) / 100;
+      r.total = r.subtotal + r.tax;
+      r.perM3Net = r.total / ord.net;
+    }
+    return r;
+  }
+
+  /* ---------- Mode 05: cement / sand / aggregate (estimate, NOT a mix design) ---------- */
+  function materials(o) {
+    const e = [], c = o.c, s = o.s, a = o.a;
+    if (!(o.wet_m3 > 0) || !isFinite(o.wet_m3)) e.push(err('volume', 'Concrete volume must be greater than 0'));
+    if (!(c > 0)) e.push(err('c', 'Cement parts must be greater than 0'));
+    if (!(s >= 0) || !isFinite(s)) e.push(err('s', 'Sand parts cannot be negative'));
+    if (!(a >= 0) || !isFinite(a)) e.push(err('a', 'Aggregate parts cannot be negative'));
+    if (!(o.dryFactor > 1) || o.dryFactor > 2) e.push(err('dry', 'Dry-volume factor must be between 1 and 2 (commonly 1.52–1.57)'));
+    if (!(o.cementDensity > 0)) e.push(err('cd', 'Cement bulk density must be greater than 0'));
+    if (!(o.sandDensity > 0)) e.push(err('sd', 'Sand bulk density must be greater than 0'));
+    if (!(o.aggDensity > 0)) e.push(err('ad', 'Aggregate bulk density must be greater than 0'));
+    if (!(o.bagKg > 0)) e.push(err('bag', 'Cement bag mass must be greater than 0'));
+    if (o.wc != null && (!(o.wc > 0) || o.wc > 1.5)) e.push(err('wc', 'Water–cement ratio must be between 0 and 1.5'));
+    if (o.matWastePct != null && (!(o.matWastePct >= 0) || o.matWastePct > 50)) e.push(err('mw', 'Material wastage must be between 0 and 50%'));
+    if (e.length) return fail(e);
+    const tot = c + s + a, mw = 1 + (o.matWastePct || 0) / 100, dry = o.wet_m3 * o.dryFactor * mw;
+    const cem_m3 = dry * c / tot, sand_m3 = dry * s / tot, agg_m3 = dry * a / tot;
+    const cem_kg = cem_m3 * o.cementDensity, sand_kg = sand_m3 * o.sandDensity, agg_kg = agg_m3 * o.aggDensity;
+    const bagsExact = cem_kg / o.bagKg, bags = ceilTol(bagsExact);
+    const r = { ok: true, parts: tot, dry, cem_m3, sand_m3, agg_m3, cem_kg, sand_kg, agg_kg, bagsExact, bags, cementPerM3: cem_kg / (o.wet_m3 * mw) };
+    if (o.wc > 0) r.water_L = o.wc * cem_kg;
+    if (o.rateCementBag > 0 || o.rateSand > 0 || o.rateAgg > 0) {
+      r.cost = { cement: bags * (o.rateCementBag || 0), sand: sand_m3 * (o.rateSand || 0), agg: agg_m3 * (o.rateAgg || 0) };
+      r.cost.total = r.cost.cement + r.cost.sand + r.cost.agg; r.cost.perM3 = r.cost.total / o.wet_m3;
+    }
+    return r;
+  }
+
+  /* ---------- Mode 06: project cost estimator ---------- */
+  // items: [{name, net_m3, wastePct}] -> three supply routes compared
+  function project(o) {
+    const e = [];
+    if (!o.items || !o.items.length) e.push(err('items', 'Add at least one element'));
+    (o.items || []).forEach((it, i) => {
+      if (!(it.net_m3 > 0) || !isFinite(it.net_m3)) e.push(err('item' + i, 'Row ' + (i + 1) + ': volume must be greater than 0'));
+      if (!isFinite(it.wastePct) || it.wastePct < 0 || it.wastePct > (o.maxWaste == null ? 25 : o.maxWaste)) e.push(err('item' + i, 'Row ' + (i + 1) + ': waste must be between 0 and ' + (o.maxWaste == null ? 25 : o.maxWaste) + '%'));
+    });
+    ['labourPerM3', 'rebarKgPerM3', 'rebarRate', 'formworkM2PerM3', 'formworkRate', 'curingLump', 'contingencyPct', 'taxPct'].forEach((k) => { if (o[k] != null && (!isFinite(o[k]) || o[k] < 0)) e.push(err(k, k + ' cannot be negative')); });
+    if (e.length) return fail(e);
+    const net = o.items.reduce((s, it) => s + it.net_m3, 0);
+    const order_m3 = o.items.reduce((s, it) => s + it.net_m3 * (1 + it.wastePct / 100), 0);
+    const rows = o.items.map((it) => ({ name: it.name, net: it.net_m3, wastePct: it.wastePct, order: it.net_m3 * (1 + it.wastePct / 100) }));
+    // common add-ons
+    const add = {
+      labour: (o.labourPerM3 || 0) * net,
+      rebar: (o.rebarKgPerM3 || 0) * (o.rebarRate || 0) * net,
+      formwork: (o.formworkM2PerM3 || 0) * (o.formworkRate || 0) * net,
+      curing: o.curingLump || 0
+    };
+    add.total = add.labour + add.rebar + add.formwork + add.curing;
+    const wrap = (concrete) => {
+      const sub = concrete + add.total, cont = sub * (o.contingencyPct || 0) / 100, pre = sub + cont, tax = pre * (o.taxPct || 0) / 100;
+      return { concrete, add: add.total, contingency: cont, tax, total: pre + tax, perM3: (pre + tax) / net };
+    };
+    const out = { ok: true, net, order_m3, rows, add, routes: {} };
+    if (o.rmc && o.rmc.rate > 0) {
+      const r = rmc({ net_m3: order_m3, wastePct: 0, incr_m3: o.rmc.incr_m3, truck_m3: o.rmc.truck_m3, rate: o.rmc.rate, transport: o.rmc.transport, transportMode: o.rmc.transportMode, pump: o.rmc.pump, pumpMode: o.rmc.pumpMode, taxPct: 0, maxWaste: 100 });
+      if (r.ok) { out.routes.rmc = Object.assign({ supplied: r.supplied, trucks: r.trucks, supply: r.supply, delivery: r.delivery, pumping: r.pumping }, wrap(r.subtotal)); } else out.routeErrors = (out.routeErrors || []).concat(r.errors);
+    }
+    if (o.site) {
+      const m = materials(Object.assign({}, o.site, { wet_m3: order_m3 }));
+      if (m.ok && m.cost) out.routes.site = Object.assign({ materials: m }, wrap(m.cost.total + (o.site.mixingPerM3 || 0) * order_m3));
+      else if (!m.ok) out.routeErrors = (out.routeErrors || []).concat(m.errors);
+    }
+    if (o.bag && o.bag.price > 0 && o.bag.yield_m3 > 0) {
+      const b = bagsFor({ volume_m3: order_m3, yield_m3: o.bag.yield_m3, pricePerBag: o.bag.price });
+      if (b.ok) out.routes.bag = Object.assign({ bags: b.whole }, wrap(b.cost));
+    }
+    return out;
+  }
+
+  /* ---------- reference tests (document §12 + extras); tags say which mode shows them ---------- */
+  const near = (a, b, tol) => Math.abs(a - b) <= (tol == null ? 5e-4 : tol);
+  const V = (id, vals, q) => elementVolume(id, vals, q);
+  const m = (v) => ({ v: String(v), u: 'm' });
+  const TESTS = [
+    { tag: '01', name: 'Slab 5 × 4 × 0.15 m', formula: 'L×W×T', expect: '3.000 m³', run: () => { const r = V('slab', { L: m(5), W: m(4), T: m(0.15) }); return [r.total_m3, 3.000, r.total_m3.toFixed(3) + ' m³']; } },
+    { tag: '01', name: 'Slab, thickness in mm (5 m × 4 m × 150 mm)', formula: 'unit normalisation', expect: '3.000 m³', run: () => { const r = V('slab', { L: m(5), W: m(4), T: { v: '150', u: 'mm' } }); return [r.total_m3, 3.000, r.total_m3.toFixed(3) + ' m³']; } },
+    { tag: '01', name: 'Square column 0.4 × 0.4 × 3 m', formula: 'S×S×H', expect: '0.480 m³', run: () => { const r = V('colsq', { S: m(0.4), H: m(3) }); return [r.total_m3, 0.480, r.total_m3.toFixed(3) + ' m³']; } },
+    { tag: '01', name: 'Circular column D 0.3 m, H 3 m', formula: 'πD²/4×H', expect: '0.2121 m³', run: () => { const r = V('colcirc', { D: m(0.3), H: m(3) }); return [r.total_m3, 0.2121, r.total_m3.toFixed(4) + ' m³']; } },
+    { tag: '01', name: 'Four circular columns', formula: '4 × V', expect: '0.8482 m³', run: () => { const r = V('colcirc', { D: m(0.3), H: m(3) }, 4); return [r.total_m3, 0.8482, r.total_m3.toFixed(4) + ' m³']; } },
+    { tag: '01', name: 'Hollow tube OD 0.5, ID 0.4, L 2 m', formula: 'π/4(OD²−ID²)L', expect: '0.1414 m³', run: () => { const r = V('tube', { OD: m(0.5), ID: m(0.4), L: m(2) }); return [r.total_m3, 0.1414, r.total_m3.toFixed(4) + ' m³']; } },
+    { tag: '01', name: 'Wall 5 × 3 × 0.2 m', formula: 'L×H×T', expect: '3.000 m³', run: () => { const r = V('wall', { L: m(5), H: m(3), T: m(0.2) }); return [r.total_m3, 3.000, r.total_m3.toFixed(3) + ' m³']; } },
+    { tag: '01', name: 'Wall with 1 × 2 m opening (gross 3.0 − 0.4)', formula: 'gross − openings', expect: '2.600 m³', run: () => { const r = V('wallopen', { L: m(5), H: m(3), T: m(0.2), aw: m(1), ah: m(2), an: { v: '1' } }); return [r.total_m3, 2.600, r.total_m3.toFixed(3) + ' m³']; } },
+    { tag: '01', name: 'Beam 5 × 0.3 × 0.5 m', formula: 'L×W×D', expect: '0.750 m³', run: () => { const r = V('beam', { L: m(5), W: m(0.3), D: m(0.5) }); return [r.total_m3, 0.750, r.total_m3.toFixed(3) + ' m³']; } },
+    { tag: '01', name: 'Calculator.net sample: 12 ft × 20 ft × 4 in', formula: 'unit normalisation', expect: '80.000 ft³', run: () => { const r = V('slab', { L: { v: '12', u: 'ft' }, W: { v: '20', u: 'ft' }, T: { v: '4', u: 'in' } }); const f = fromM3(r.total_m3); return [f.ft3, 80, f.ft3.toFixed(3) + ' ft³']; } },
+    { tag: '01', name: 'Calculator.net sample in yd³', formula: '27 ft³ = 1 yd³', expect: '2.963 yd³', run: () => { const f = fromM3(V('slab', { L: { v: '12', u: 'ft' }, W: { v: '20', u: 'ft' }, T: { v: '4', u: 'in' } }).total_m3); return [f.yd3, 80 / 27, f.yd3.toFixed(3) + ' yd³']; } },
+    { tag: '01', name: 'Fractional dimension "3 1/2" in = 0.0889 m', formula: 'input parsing', expect: '0.0889 m', run: () => [parse('3 1/2') * LEN.in, 0.0889, (parse('3 1/2') * LEN.in).toFixed(4) + ' m'] },
+    { tag: '01', name: 'Stairs: 6 risers, 0.28 run, 0.17 rise, 1.2 wide', formula: 'W·run·rise·n(n+1)/2', expect: '1.1995 m³', run: () => { const r = V('stairs', { run: m(0.28), rise: m(0.17), W: m(1.2), n: { v: '6' } }); const e = 1.2 * 0.28 * 0.17 * 21; return [r.total_m3, e, r.total_m3.toFixed(4) + ' m³']; } },
+    { tag: '01', name: 'Waist stair: n=10, 0.25/0.15, W 1.2, t 0.15', formula: 'slope slab + triangles', expect: '0.7498 m³', run: () => { const r = V('waist', { run: m(0.25), rise: m(0.15), W: m(1.2), n: { v: '10' }, t: m(0.15) }); const e = 1.2 * 0.15 * 10 * Math.hypot(0.25, 0.15) + 1.2 * 10 * 0.25 * 0.15 / 2; return [r.total_m3, e, r.total_m3.toFixed(4) + ' m³']; } },
+    { tag: '01', name: 'Curb & gutter 0.15×0.45 + 0.45×0.15, L 30 m', formula: '(cd·ch + gw·ft)·L', expect: '4.0500 m³', run: () => { const r = V('curb', { cd: m(0.15), ch: m(0.45), gw: m(0.45), ft: m(0.15), L: m(30) }); return [r.total_m3, (0.0675 + 0.0675) * 30, r.total_m3.toFixed(4) + ' m³']; } },
+    { tag: '01', name: 'Pile 0.6 m × 12 m, bell 1.2 m × 0.5 m', formula: 'cylinder + frustum', expect: '3.3929 m³', run: () => { const r = V('pile', { Ds: m(0.6), Ls: m(12), Db: m(1.2), Hb: m(0.5) }); const e = PI * 0.36 / 4 * 12 + PI * 0.5 / 12 * (1.44 + 0.72 + 0.36); return [r.total_m3, e, r.total_m3.toFixed(4) + ' m³']; } },
+    { tag: '01', name: 'Large volume 1000 × 500 × 2 m', formula: 'L×W×T', expect: '1,000,000 m³', run: () => { const r = V('slab', { L: m(1000), W: m(500), T: m(2) }); return [r.total_m3, 1e6, r.total_m3.toLocaleString('en-US') + ' m³']; }, tol: 1e-6 },
+    { tag: '01', name: 'Zero thickness is rejected', formula: 'validation', expect: 'Validation error', run: () => { const r = V('slab', { L: m(5), W: m(4), T: m(0) }); return [r.ok ? 1 : 0, 0, r.ok ? 'accepted (wrong)' : 'Validation error']; } },
+    { tag: '01', name: 'Negative length is rejected', formula: 'validation', expect: 'Validation error', run: () => { const r = V('slab', { L: m(-5), W: m(4), T: m(0.15) }); return [r.ok ? 1 : 0, 0, r.ok ? 'accepted (wrong)' : 'Validation error']; } },
+    { tag: '01', name: 'Inner diameter greater than outer is rejected', formula: 'validation', expect: 'Validation error', run: () => { const r = V('tube', { OD: m(0.4), ID: m(0.5), L: m(2) }); return [r.ok ? 1 : 0, 0, r.ok ? 'accepted (wrong)' : 'Validation error']; } },
+    { tag: '01', name: 'Negative quantity is rejected', formula: 'validation', expect: 'Validation error', run: () => { const r = V('slab', { L: m(5), W: m(4), T: m(0.15) }, -2); return [r.ok ? 1 : 0, 0, r.ok ? 'accepted (wrong)' : 'Validation error']; } },
+    { tag: '01', name: 'Missing dimension is flagged', formula: 'validation', expect: 'Validation error', run: () => { const r = V('slab', { L: m(5), W: { v: '', u: 'm' }, T: m(0.15) }); return [r.ok ? 1 : 0, 0, r.ok ? 'accepted (wrong)' : 'Validation error']; } },
+    { tag: '01', name: '1 m³ = 1,000 litres', formula: 'conversion', expect: '1,000 L', run: () => [fromM3(1).L, 1000, fromM3(1).L + ' L'] },
+    { tag: '01', name: '1 m³ = 35.3147 ft³', formula: 'conversion', expect: '35.3147 ft³', run: () => [fromM3(1).ft3, 35.3147, fromM3(1).ft3.toFixed(4) + ' ft³'], tol: 5e-5 },
+    { tag: '01', name: '3 m³ at 2,400 kg/m³', formula: 'M = V × ρ', expect: '7,200 kg', run: () => { const w = weight(3, 2400, 'kg/m3'); return [w.kg, 7200, w.kg.toLocaleString('en-US') + ' kg']; }, tol: 1e-6 },
+    { tag: '01', name: 'Weight is withheld when density is missing', formula: 'validation', expect: 'Not shown', run: () => { const w = weight(3, NaN, 'kg/m3'); return [w.ok ? 1 : 0, 0, w.ok ? 'shown (wrong)' : 'Not shown']; } },
+    { tag: '02', name: 'Waste 3 m³ + 5%', formula: 'V_net(1 + W/100)', expect: '3.150 m³', run: () => { const r = order({ net_m3: 3, wastePct: 5 }); return [r.required, 3.15, r.required.toFixed(3) + ' m³']; } },
+    { tag: '02', name: 'Waste 3 m³ + 10%', formula: 'V_net(1 + W/100)', expect: '3.300 m³', run: () => { const r = order({ net_m3: 3, wastePct: 10 }); return [r.required, 3.3, r.required.toFixed(3) + ' m³']; } },
+    { tag: '02', name: 'Increment rounding: 3.15 m³ to 0.05 m³ steps stays 3.15', formula: 'ceil(x/inc − ε)·inc', expect: '3.150 m³', run: () => { const r = order({ net_m3: 3, wastePct: 5, incr_m3: 0.05 }); return [r.ordered, 3.15, r.ordered.toFixed(3) + ' m³']; } },
+    { tag: '02', name: 'Increment rounding: 3.15 m³ to 0.5 m³ steps', formula: 'ceil(x/inc)·inc', expect: '3.500 m³', run: () => { const r = order({ net_m3: 3, wastePct: 5, incr_m3: 0.5 }); return [r.ordered, 3.5, r.ordered.toFixed(3) + ' m³']; } },
+    { tag: '02', name: 'Waste above configured limit is rejected', formula: 'validation', expect: 'Validation error', run: () => { const r = order({ net_m3: 3, wastePct: 40, maxWaste: 25 }); return [r.ok ? 1 : 0, 0, r.ok ? 'accepted (wrong)' : 'Validation error']; } },
+    { tag: '03', name: 'Calculator.net parity: 80 ft³, 60 lb bags', formula: 'V ÷ (60 lb ÷ 133 lb/ft³)', expect: '177.33 bags', run: () => { const b = bagsFor({ volume_m3: 80 * VOL.ft3, yield_m3: BAGS.find((x) => x.id === 'lb60').yield_m3 }); return [b.exact, 177.3333, b.exact.toFixed(2) + ' bags']; }, tol: 5e-3 },
+    { tag: '03', name: 'Calculator.net parity: 80 ft³, 80 lb bags', formula: 'V ÷ (80 lb ÷ 133 lb/ft³)', expect: '133 bags', run: () => { const b = bagsFor({ volume_m3: 80 * VOL.ft3, yield_m3: BAGS.find((x) => x.id === 'lb80').yield_m3 }); return [b.whole, 133, b.whole + ' bags']; }, tol: 0 },
+    { tag: '03', name: 'Whole bags round up: 1 m³, 0.0125 m³ yield', formula: '⌈V ÷ Y⌉', expect: '80 bags', run: () => { const b = bagsFor({ volume_m3: 1, yield_m3: 0.0125 }); return [b.whole, 80, b.whole + ' bags']; }, tol: 0 },
+    { tag: '03', name: 'Whole bags round up: 1.01 m³, 0.0125 m³ yield', formula: '⌈V ÷ Y⌉', expect: '81 bags', run: () => { const b = bagsFor({ volume_m3: 1.01, yield_m3: 0.0125 }); return [b.whole, 81, b.whole + ' bags']; }, tol: 0 },
+    { tag: '03', name: 'Invalid bag yield is rejected', formula: 'validation', expect: 'Validation error', run: () => { const b = bagsFor({ volume_m3: 1, yield_m3: 0 }); return [b.ok ? 1 : 0, 0, b.ok ? 'accepted (wrong)' : 'Validation error']; } },
+    { tag: '04', name: 'RMC: 10 m³ + 5%, 6 m³ truck → 2 trucks', formula: '⌈V_order ÷ capacity⌉', expect: '10.5 m³ / 2 trucks', run: () => { const r = rmc({ net_m3: 10, wastePct: 5, truck_m3: 6 }); return [r.ordered + r.trucks * 1000, 10.5 + 2000, r.ordered.toFixed(2) + ' m³ / ' + r.trucks + ' trucks']; }, tol: 1e-9 },
+    { tag: '04', name: 'RMC: partial last load is 4.5 m³ (not 6)', formula: 'V − full×capacity', expect: '4.5 m³', run: () => { const r = rmc({ net_m3: 10, wastePct: 5, truck_m3: 6 }); return [r.partial, 4.5, r.partial.toFixed(2) + ' m³']; }, tol: 1e-9 },
+    { tag: '04', name: 'RMC cost: 10.5 m³ × ₹5,000 + ₹1,500/trip ×2 + pump ₹8,000 + 5% tax', formula: 'supply + delivery + pumping + tax', expect: '₹ 66,675', run: () => { const r = rmc({ net_m3: 10, wastePct: 5, truck_m3: 6, rate: 5000, transport: 1500, transportMode: 'trip', pump: 8000, pumpMode: 'lump', taxPct: 5 }); return [r.total, (52500 + 3000 + 8000) * 1.05, '₹ ' + Math.round(r.total).toLocaleString('en-IN')]; }, tol: 1e-6 },
+    { tag: '04', name: 'Exact multiple of truck size: 12 m³ → 2 trucks, no partial', formula: 'ceiling with tolerance', expect: '2 trucks', run: () => { const r = rmc({ net_m3: 12, wastePct: 0, truck_m3: 6 }); return [r.trucks, 2, r.trucks + ' trucks']; }, tol: 0 },
+    { tag: '04', name: 'Zero truck capacity is rejected', formula: 'validation', expect: 'Validation error', run: () => { const r = rmc({ net_m3: 10, wastePct: 5, truck_m3: 0 }); return [r.ok ? 1 : 0, 0, r.ok ? 'accepted (wrong)' : 'Validation error']; } },
+    { tag: '05', name: '1 m³ at 1:2:4, dry factor 1.54 → cement bags', formula: 'dry×c/(c+s+a)×1440 ÷ 50', expect: '6.34 bags', run: () => { const r = materials({ wet_m3: 1, c: 1, s: 2, a: 4, dryFactor: 1.54, cementDensity: 1440, sandDensity: 1600, aggDensity: 1500, bagKg: 50 }); return [r.bagsExact, 1.54 / 7 * 1440 / 50, r.bagsExact.toFixed(2) + ' bags']; }, tol: 1e-9 },
+    { tag: '05', name: '1 m³ at 1:2:4 → sand 0.44 m³, aggregate 0.88 m³', formula: 'dry×part/total', expect: '0.440 / 0.880 m³', run: () => { const r = materials({ wet_m3: 1, c: 1, s: 2, a: 4, dryFactor: 1.54, cementDensity: 1440, sandDensity: 1600, aggDensity: 1500, bagKg: 50 }); return [r.sand_m3 + r.agg_m3, 1.54 * 6 / 7, r.sand_m3.toFixed(3) + ' / ' + r.agg_m3.toFixed(3) + ' m³']; }, tol: 1e-9 },
+    { tag: '05', name: 'Water at w/c 0.5 for 316.8 kg cement', formula: 'w/c × cement mass', expect: '158.4 L', run: () => { const r = materials({ wet_m3: 1, c: 1, s: 2, a: 4, dryFactor: 1.54, cementDensity: 1440, sandDensity: 1600, aggDensity: 1500, bagKg: 50, wc: 0.5 }); return [r.water_L, 0.5 * 1.54 / 7 * 1440, r.water_L.toFixed(1) + ' L']; }, tol: 1e-9 },
+    { tag: '05', name: 'Dry-volume factor below 1 is rejected', formula: 'validation', expect: 'Validation error', run: () => { const r = materials({ wet_m3: 1, c: 1, s: 2, a: 4, dryFactor: 0.9, cementDensity: 1440, sandDensity: 1600, aggDensity: 1500, bagKg: 50 }); return [r.ok ? 1 : 0, 0, r.ok ? 'accepted (wrong)' : 'Validation error']; } },
+    { tag: '06', name: 'Project: 3 + 7 m³ at 5% waste → 10.5 m³', formula: 'Σ net × (1+W)', expect: '10.500 m³', run: () => { const r = project({ items: [{ name: 'A', net_m3: 3, wastePct: 5 }, { name: 'B', net_m3: 7, wastePct: 5 }] }); return [r.order_m3, 10.5, r.order_m3.toFixed(3) + ' m³']; }, tol: 1e-9 },
+    { tag: '06', name: 'Project RMC route: 10.5 m³ × ₹5,000, 2 trucks, 5% GST', formula: 'supply + delivery + tax', expect: '₹ 58,275', run: () => { const r = project({ items: [{ name: 'A', net_m3: 10, wastePct: 5 }], rmc: { rate: 5000, truck_m3: 6, transport: 1500, transportMode: 'trip', pump: 0 }, taxPct: 5 }); return [r.routes.rmc.total, (52500 + 3000) * 1.05, '₹ ' + Math.round(r.routes.rmc.total).toLocaleString('en-IN')]; }, tol: 1e-6 },
+    { tag: '06', name: 'Empty project is rejected', formula: 'validation', expect: 'Validation error', run: () => { const r = project({ items: [] }); return [r.ok ? 1 : 0, 0, r.ok ? 'accepted (wrong)' : 'Validation error']; } }
+  ];
+  function runTests(tag) {
+    return TESTS.filter((t) => !tag || t.tag === tag).map((t) => {
+      let a, e, txt, pass = false;
+      try { [a, e, txt] = t.run(); pass = near(a, e, t.tol); } catch (x) { txt = 'error: ' + x.message; }
+      return { name: t.name, formula: t.formula, expect: t.expect, actual: txt, pass, tag: t.tag };
+    });
+  }
+
+  /* ---------- project file exchange between modes ---------- */
+  function parseProjectJSON(text) {
+    let j; try { j = JSON.parse(text); } catch (x) { return fail([err('file', 'Not a valid project file')]); }
+    if (!j || j.kind !== 'elecmetric-concrete-project' || !Array.isArray(j.elements)) return fail([err('file', 'This is not an Elecmetric concrete project file (export one from Mode 01)')]);
+    const els = j.elements.filter((x) => x && x.net_m3 > 0).map((x) => ({ name: String(x.name || x.shape || 'Element'), net_m3: +x.net_m3 }));
+    if (!els.length) return fail([err('file', 'The project file has no elements with a positive volume')]);
+    return { ok: true, elements: els, total_m3: els.reduce((s, x) => s + x.net_m3, 0) };
+  }
+
+  /* ---------- number formatting ---------- */
+  function fmt(x, dp, loc) {
+    if (x == null || !isFinite(x)) return '—';
+    dp = dp == null ? 3 : dp;
+    return x.toLocaleString(loc || 'en-US', { minimumFractionDigits: dp, maximumFractionDigits: dp });
+  }
+  function money(x, sym, loc) { if (x == null || !isFinite(x)) return '—'; return (sym || '') + ' ' + x.toLocaleString(loc || 'en-IN', { minimumFractionDigits: 0, maximumFractionDigits: 0 }); }
+
+  return { LEN, LEN_LABEL, VOL, VOL_LABEL, MASS, DENS, BAG_MIX_DENSITY, BAGS, SHAPES, SHAPE_BY_ID,
+    parse, ceilTol, roundUpTo, elementVolume, fromM3, toM3, weight, order, bagsFor, volumeFromBags, rmc, materials, project,
+    TESTS, runTests, parseProjectJSON, fmt, money };
+});
+</script>
+<script>/* shared UI helpers (inlined into every mode page) */
+(function(){
+'use strict';
+// ---- EDIT HERE when you integrate: file names of the six modes (used by the top nav and "continue to" links) ----
+const MODES=[
+ {n:'01',t:'Volume',f:'../concrete-volume-calculator/'},
+ {n:'02',t:'Wastage & order',f:'../concrete-wastage-calculator/'},
+ {n:'03',t:'Bags',f:'../concrete-bag-calculator/'},
+ {n:'04',t:'Ready-mix (RMC)',f:'../rmc-calculator/'},
+ {n:'05',t:'Cement · sand · aggregate',f:'../cement-sand-aggregate-calculator/'},
+ {n:'06',t:'Cost & project',f:'../concrete-cost-estimator/'}];
+const HOME_URL='#';   // link target for the ELECMETRIC wordmark
+const U={MODES,CE:window.CE};
+U.$=(s,r)=>(r||document).querySelector(s);U.$$=(s,r)=>Array.from((r||document).querySelectorAll(s));
+U.esc=(s)=>String(s==null?'':s).replace(/[&<>"']/g,(c)=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+U.fmt=U.CE.fmt;U.money=U.CE.money;
+U.num=(id)=>U.CE.parse(document.getElementById(id).value);
+U.val=(id)=>document.getElementById(id).value;
+U.blank=(id)=>String(document.getElementById(id).value).trim()==='';
+U.opts=(pairs,sel)=>pairs.map(([v,t])=>'<option value="'+U.esc(v)+'"'+(String(v)===String(sel)?' selected':'')+'>'+U.esc(t)+'</option>').join('');
+// header + nav
+U.header=()=>{const cur=document.body.dataset.mode;const h=document.querySelector('main h1');if(!h||document.getElementById('modes-nav'))return;const n=document.createElement('nav');n.id='modes-nav';n.className='jump';n.setAttribute('aria-label','Concrete calculator modes');n.innerHTML=MODES.map((m)=>'<a class="chip" hr'+'ef="'+m.f+'"'+(m.n===cur?' aria-current="page"':'')+'>'+m.n+' '+U.esc(m.t)+'</a>').join('');let a=h;while(a.nextElementSibling&&/badge/.test(a.nextElementSibling.className||''))a=a.nextElementSibling;a.after(n);};
+// handoff between modes: ?v=<net m3>&w=<waste %>
+U.query=()=>{const p=new URLSearchParams(location.search);const o={};['v','w','n'].forEach((k)=>{if(p.has(k)){const x=parseFloat(p.get(k));if(isFinite(x))o[k]=x;}});return o;};
+U.chips=(el,vol_m3,extra)=>{if(!el)return;const cur=document.body.dataset.mode;const q=new URLSearchParams();if(vol_m3>0)q.set('v',(+vol_m3.toPrecision(10)).toString());Object.keys(extra||{}).forEach((k)=>{if(extra[k]!=null)q.set(k,extra[k]);});
+ el.innerHTML=MODES.filter((m)=>m.n!==cur).map((m)=>'<a class="chip" hr'+'ef="'+m.f+(q.toString()?'?'+q.toString():'')+'">'+m.n+' · '+U.esc(m.t)+' →</a>').join('');};
+// downloads
+U.download=(name,text,mime)=>{try{const b=new Blob([text],{type:mime||'text/plain'});const a=document.createElement('a');a.href=URL.createObjectURL(b);a.download=name;document.body.appendChild(a);a.click();setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove();},500);}catch(e){alert('Download is blocked in this view. Open the page directly in a browser.');}};
+U.csv=(rows)=>'﻿'+rows.map((r)=>r.map((c)=>{c=c==null?'':String(c);return /[",\n]/.test(c)?'"'+c.replace(/"/g,'""')+'"':c;}).join(',')).join('\r\n');
+U.print=()=>window.print();
+// error list
+U.errs=(list)=>list&&list.length?'<div class="errs" role="alert"><strong>Please fix:</strong><ul>'+list.map((e)=>'<li>'+U.esc(e.msg)+'</li>').join('')+'</ul></div>':'';
+U.markBad=(errors,idMap)=>{U.$$('.bad').forEach((x)=>x.classList.remove('bad'));U.$$('.fe').forEach((x)=>{x.textContent='';});(errors||[]).forEach((e)=>{const id=idMap?idMap(e.field):e.field;const x=document.getElementById(id);if(x){x.classList.add('bad');const f=document.getElementById(id+'-e');if(f)f.textContent=e.msg;}});};
+// self-test table (live "actual vs expected")
+U.tests=(tag,el)=>{const rows=U.CE.runTests(tag);const ok=rows.filter((r)=>r.pass).length;
+ el.innerHTML='<p class="note"><strong>'+ok+' of '+rows.length+'</strong> reference cases agree with this page\'s engine, computed live in your browser.</p><div class="tw" tabindex="0"><table><thead><tr><th>Case</th><th>Formula / check</th><th>Expected</th><th>Actual</th><th></th></tr></thead><tbody>'+rows.map((r)=>'<tr><td>'+U.esc(r.name)+'</td><td>'+U.esc(r.formula)+'</td><td class="n">'+U.esc(r.expect)+'</td><td class="n">'+U.esc(r.actual)+'</td><td class="'+(r.pass?'pass':'failx')+'">'+(r.pass?'PASS':'FAIL')+'</td></tr>').join('')+'</tbody></table></div>';};
+// currency
+U.CURR=[['₹','INR ₹'],['$','USD $'],['€','EUR €'],['£','GBP £'],['AED','AED'],['SAR','SAR'],['custom','Other…']];
+U.sym=(selId,customId)=>{const v=U.val(selId);return v==='custom'?(U.val(customId).trim()||'¤'):v;};
+U.loc=(sym)=>sym==='₹'?'en-IN':'en-US';
+U.m=(x,sym)=>U.CE.money(x,sym,U.loc(sym));
+// project-file loader (JSON saved from Mode 01)
+U.loadProject=(inputEl,cb)=>{inputEl.addEventListener('change',()=>{const f=inputEl.files&&inputEl.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{const res=U.CE.parseProjectJSON(String(r.result));cb(res);inputEl.value='';};r.readAsText(f);});};
+
+// volume field: input + unit, prefilled from ?v= (m³)
+U.volField=(p,label)=>'<div><label for="'+p+'-v">'+label+'</label><div class="trow"><input type="text" inputmode="decimal" id="'+p+'-v" autocomplete="off"><select id="'+p+'-u" aria-label="Volume unit"><option value="m3">m³</option><option value="ft3">ft³ / cft</option><option value="yd3">yd³</option><option value="L">litres</option></select></div><div class="fe" id="'+p+'-v-e"></div></div>';
+U.vol=(p)=>{const n=U.CE.parse(U.val(p+'-v'));if(!(n>0)||!isFinite(n))return {ok:false,m3:NaN};return {ok:true,m3:U.CE.toM3(n,U.val(p+'-u'))};};
+U.prefill=(p)=>{const q=U.query();if(q.v>0){document.getElementById(p+'-v').value=String(+q.v.toFixed(6));document.getElementById(p+'-u').value='m3';}return q;};
+U.setVol=(p,m3)=>{document.getElementById(p+'-v').value=String(+m3.toFixed(6));document.getElementById(p+'-u').value='m3';};
+U.pct=(id,max)=>{const raw=U.val(id).trim();if(raw==='')return {ok:true,v:0};const n=U.CE.parse(raw);return (isFinite(n)&&n>=0&&(max==null||n<=max))?{ok:true,v:n}:{ok:false,v:NaN};};
+U.opt=(id)=>{const raw=U.val(id).trim();if(raw==='')return {ok:true,v:0,blank:true};const n=U.CE.parse(raw);return (isFinite(n)&&n>=0)?{ok:true,v:n}:{ok:false,v:NaN};};
+U.flag=(id,msg)=>{const x=document.getElementById(id),f=document.getElementById(id+'-e');if(x)x.classList.toggle('bad',!!msg);if(f)f.textContent=msg||'';};
+U.projectBtn='<label class="btn alt sm" style="margin:0">Load Mode 01 project (.json)<input type="file" accept=".json,application/json" hidden data-proj></label>';
+window.U=U;
+})();
+</script>
+<script>(function(){'use strict';const CE=window.CE,U=window.U;
+const PR=[['1:1:2','1 : 1 : 2'],['1:1.5:3','1 : 1.5 : 3'],['1:2:4','1 : 2 : 4'],['1:3:6','1 : 3 : 6'],['1:4:8','1 : 4 : 8'],['custom','Custom parts']];
+U.$('#m-pr').innerHTML=U.opts(PR,'1:2:4');U.$('#m-cs').innerHTML=U.opts(U.CURR,'₹');
+function calc(){U.$('#m-cc').hidden=U.val('m-cs')!=='custom';const sym=U.sym('m-cs','m-cc');
+ const v=U.vol('m');U.flag('m-v',U.val('m-v').trim()===''||v.ok?'':'Enter a volume greater than 0');
+ const n=(id)=>CE.parse(U.val(id));const c=n('m-c'),s=n('m-s'),a=n('m-a'),d=n('m-d'),cd=n('m-cd'),sd=n('m-sd'),ad=n('m-ad');
+ const wc=U.blank('m-wc')?null:n('m-wc'),mw=U.pct('m-mw',50),rc=U.opt('m-rc'),rs=U.opt('m-rs'),ra=U.opt('m-ra');
+ U.flag('m-mw',mw.ok?'':'0–50');[['m-rc',rc],['m-rs',rs],['m-ra',ra]].forEach(([i,x])=>U.flag(i,x.ok?'':'Cannot be negative'));
+ const out=U.$('#out');if(!v.ok){out.innerHTML='<p>Enter the concrete volume.</p>';U.$('#next').innerHTML='';return;}
+ if(!mw.ok||!rc.ok||!rs.ok||!ra.ok){out.innerHTML=U.errs([{msg:'Check the highlighted fields'}]);return;}
+ const r=CE.materials({wet_m3:v.m3,c,s,a,dryFactor:d,cementDensity:cd,sandDensity:sd,aggDensity:ad,bagKg:+U.val('m-b'),wc,matWastePct:mw.v,rateCementBag:rc.v,rateSand:rs.v,rateAgg:ra.v});
+ const map={volume:'m-v',c:'m-c',s:'m-s',a:'m-a',dry:'m-d',cd:'m-cd',sd:'m-sd',ad:'m-ad',wc:'m-wc',mw:'m-mw'};
+ if(!r.ok){r.errors.forEach((e)=>{if(map[e.field])U.flag(map[e.field],e.msg);});out.innerHTML=U.errs(r.errors);return;}
+ ['m-c','m-s','m-a','m-d','m-cd','m-sd','m-ad','m-wc'].forEach((i)=>U.flag(i,''));
+ const cf=CE.fromM3(r.cem_m3),sf=CE.fromM3(r.sand_m3),af=CE.fromM3(r.agg_m3);
+ let h='<div class="big">'+r.bags+' bags cement<small>'+U.fmt(r.bagsExact,2)+' exact × '+U.val('m-b')+' kg · ratio '+c+' : '+s+' : '+a+' · dry factor '+d+'</small></div>';
+ h+='<div class="tw" tabindex="0"><table><thead><tr><th>Material</th><th class="n">m³</th><th class="n">cft</th><th class="n">kg</th><th class="n">tonnes</th></tr></thead><tbody><tr><td>Cement</td><td class="n">'+U.fmt(r.cem_m3,3)+'</td><td class="n">'+U.fmt(cf.cft,2)+'</td><td class="n">'+U.fmt(r.cem_kg,1)+'</td><td class="n">'+U.fmt(r.cem_kg/1000,3)+'</td></tr><tr><td>Sand (fine aggregate)</td><td class="n">'+U.fmt(r.sand_m3,3)+'</td><td class="n">'+U.fmt(sf.cft,2)+'</td><td class="n">'+U.fmt(r.sand_kg,0)+'</td><td class="n">'+U.fmt(r.sand_kg/1000,3)+'</td></tr><tr><td>Coarse aggregate</td><td class="n">'+U.fmt(r.agg_m3,3)+'</td><td class="n">'+U.fmt(af.cft,2)+'</td><td class="n">'+U.fmt(r.agg_kg,0)+'</td><td class="n">'+U.fmt(r.agg_kg/1000,3)+'</td></tr><tr class="tot"><td>Dry material total</td><td class="n">'+U.fmt(r.dry,3)+'</td><td class="n">'+U.fmt(CE.fromM3(r.dry).cft,2)+'</td><td class="n">'+U.fmt(r.cem_kg+r.sand_kg+r.agg_kg,0)+'</td><td class="n">'+U.fmt((r.cem_kg+r.sand_kg+r.agg_kg)/1000,3)+'</td></tr></tbody></table></div>';
+ h+='<div class="kpis"><div class="kpi"><div class="v">'+U.fmt(r.cementPerM3,0)+' kg</div><div class="t">cement per m³ of concrete in this estimate</div></div>'+(r.water_L!=null?'<div class="kpi"><div class="v">'+U.fmt(r.water_L,0)+' L</div><div class="t">mixing water at w/c '+wc+' (before free moisture in aggregates)</div></div>':'')+'</div>';
+ if(r.cost){h+='<h3>Material cost</h3><div class="tw" tabindex="0"><table><tbody><tr><td>Cement ('+r.bags+' bags)</td><td class="n">'+U.m(r.cost.cement,sym)+'</td></tr><tr><td>Sand</td><td class="n">'+U.m(r.cost.sand,sym)+'</td></tr><tr><td>Coarse aggregate</td><td class="n">'+U.m(r.cost.agg,sym)+'</td></tr><tr class="tot"><td>Total materials</td><td class="n">'+U.m(r.cost.total,sym)+'</td></tr><tr><td>Per m³ of concrete</td><td class="n">'+U.m(r.cost.perM3,sym)+'</td></tr></tbody></table></div>';}
+ out.innerHTML=h;U.chips(U.$('#next'),v.m3);}
+document.addEventListener('input',(e)=>{if(['m-c','m-s','m-a'].includes(e.target.id))U.$('#m-pr').value='custom';calc();});
+document.addEventListener('change',(e)=>{if(e.target.id==='m-pr'&&e.target.value!=='custom'){const p=e.target.value.split(':');U.$('#m-c').value=p[0];U.$('#m-s').value=p[1];U.$('#m-a').value=p[2];}
+ if(e.target.matches('[data-proj]')){const f=e.target.files[0];if(!f)return;const rd=new FileReader();rd.onload=()=>{const p=CE.parseProjectJSON(String(rd.result));if(p.ok){U.setVol('m',p.total_m3);calc();}else alert(p.errors[0].msg);};rd.readAsText(f);e.target.value='';return;}calc();});
+U.header();U.prefill('m');
+const e=CE.materials({wet_m3:1,c:1,s:2,a:4,dryFactor:1.54,cementDensity:1440,sandDensity:1600,aggDensity:1500,bagKg:50});
+U.$('#ex').innerHTML='<li>1 m³ at 1 : 2 : 4 → 7 parts; dry volume = 1 × 1.54 = 1.54 m³</li><li>Cement = 1.54 × 1/7 = '+U.fmt(e.cem_m3,3)+' m³ × 1,440 = '+U.fmt(e.cem_kg,1)+' kg = '+U.fmt(e.bagsExact,2)+' bags → '+e.bags+'</li><li>Sand = 1.54 × 2/7 = '+U.fmt(e.sand_m3,3)+' m³; aggregate = 1.54 × 4/7 = '+U.fmt(e.agg_m3,3)+' m³</li>';
+U.tests('05',U.$('#tests'));calc();})();
+</script>
+</body></html>

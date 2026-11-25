@@ -31,20 +31,87 @@ jobs:
         run: |
           node tests/run_tests.js
           node tests/router_test.js
+          node tests/check_site_test.js
+          node tests/master_architecture_test.js
+          node tests/category_pages_test.js
+          node tests/halflife_test.js
+          node tests/halflife_const_test.js
+          node tests/halflife_percent_test.js
+          node tests/halflife_table_test.js
+          node tests/halflife_eng_test.js
+          node tests/halflife_isotopes_test.js
+          node tests/exponent_test.js
+          node tests/exponent_frac_test.js
+          node tests/exponent_solver_test.js
+          node tests/exponent_laws_test.js
+          node tests/exponent_eng_test.js
+          node tests/binarith_test.js
+          node tests/numconv_test.js
+          node tests/bitops_test.js
+          node tests/signbin_test.js
+          node tests/dlogic_test.js
+          node tests/hex_test.js
+          node tests/binlogic_test.js
+          node tests/codes_test.js
+          node tests/chars_test.js
+          node tests/rng_test.js
+          node tests/fraction_test.js
+          node tests/fraction_simplify_test.js
+          node tests/fraction_convert_test.js
+          node tests/fraction_mixed_test.js
+          node tests/fraction_adv_test.js
+          node tests/fraction_inch_test.js
+          node tests/fraction_report_test.js
+          node tests/percent_basic_test.js
+          node tests/percent_change_test.js
+          node tests/percent_diff_test.js
+          node tests/percent_error_test.js
+          node tests/pe_test.js
+          node tests/pe_signed_test.js
+          node tests/pe_tol_test.js
+          node tests/pe_batch_test.js
+          node tests/percent_eng_test.js
+          node tests/percent_price_test.js
+          node tests/percent_report_test.js
+          node tests/matrix_test.js
+          node tests/quad_test.js
+          node tests/quad_disc_test.js
+          node tests/quad_graph_test.js
+          node tests/quad_exact_test.js
+          node tests/quad_eng_test.js
+          node tests/log_test.js
+          node tests/ratio_test.js
+          node tests/proportion_test.js
+          node tests/round_test.js
+          node tests/factor_test.js
+          node tests/equiv_test.js
+          node tests/gcf_test.js
+          node tests/gcf_prime_test.js
+          node tests/bignum_test.js
+          node tests/sqrt_test.js
+          node tests/cbrt_test.js
+          node tests/nthroot_test.js
+          node tests/antilog_test.js
+          node tests/log_solver_test.js
+          node tests/log_rules_test.js
+          node tests/lcm_test.js
+          node tests/site_pages_test.js
+          node tests/internal_link_graph_test.js
+          node tests/home_perf_search_test.js
 
       - name: Build production pages and run deployment guard
         run: |
-          export SITE_LASTMOD="$(git log -1 --format=%cs)"
-          test -n "$SITE_LASTMOD"
           node tools/build_pages.js
+          node tools/add_lastmod.js sitemap.xml
           REQUIRE_LASTMOD=1 node tools/check_deploy.js
 
       - name: Assemble and audit GitHub Pages upload
         run: |
           mkdir _site
-          cp -r index.html 404.html privacy.html terms.html engine.js sw.js manifest.webmanifest icon.svg icon-192.png icon-512.png icon-maskable-512.png apple-touch-icon.png logo.png og-image.png robots.txt sitemap.xml pages calculators converters _site/
+          cp -r index.html 404.html privacy.html terms.html engine.js search-index.js home-data.js sw.js manifest.webmanifest icon.svg icon-192.png icon-512.png icon-maskable-512.png apple-touch-icon.png logo.png og-image.png robots.txt sitemap.xml pages calculators categories converters technical-library _site/
           touch _site/.nojekyll
           node tools/check_assets.js _site --production
+          node tools/check_site.js _site sitemap.xml
 
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v4

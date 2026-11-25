@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><style data-crumbs>.crumbs{font-size:13px;color:var(--muted);margin:0 0 10px}.crumbs ol{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:2px 0}.crumbs li+li::before{content:"\203A";margin:0 7px;opacity:.7}.crumbs a{color:inherit}.crumbs [aria-current]{color:var(--ink)}</style><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+<title>Standard Deviation Calculator | Sample, Population &amp; Variance | Elecmetric</title>
+<meta name="description" content="Free online standard deviation calculator. Calculate sample and population standard deviation, variance, mean and sum with exact arithmetic and step-by-step solutions.">
+<meta property="og:title" content="Standard Deviation Calculator | Sample, Population &amp; Variance"><meta property="og:description" content="Free online standard deviation calculator. Calculate sample and population standard deviation, variance, mean and sum with exact arithmetic and step-by-step solutions."><meta property="og:type" content="website"><meta property="og:site_name" content="Elecmetric"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Standard Deviation Calculator | Sample, Population &amp; Variance"><meta name="twitter:description" content="Free online standard deviation calculator. Calculate sample and population standard deviation, variance, mean and sum with exact arithmetic and step-by-step solutions.">
+<meta name="theme-color" content="#043B79"><link rel="icon" href="../../icon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="../../apple-touch-icon.png"><link rel="manifest" href="../../manifest.webmanifest"><style>.fb textarea{width:100%;font:15px/1.5 var(--body);padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--field);color:var(--ink);resize:vertical}.fb textarea:focus{outline:2px solid var(--gold);outline-offset:1px}:root{--bg:#F1F6FC;--surface:#fff;--ink:#0A2347;--muted:#4B5F86;--line:#D3DFEF;--navy:#043B79;--on-navy:#FFFFFF;--gold:#B34A00;--gold-fill:#FFEFDC;--field:#F4F8FE;--err:#B3261E;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;--display:"Arial Narrow","Roboto Condensed",system-ui,sans-serif;--body:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--navy-2:#0A5BBB;--cyan:#0062DE;--num:#043B79;--orange:#FF7A00;--gold-grad:linear-gradient(135deg,#FFA43D 0%,#FF7A00 52%,#E85F00 100%);--hero:radial-gradient(1000px 360px at 90% -35%,rgba(0,98,222,.55),transparent 62%),radial-gradient(640px 240px at 0% 110%,rgba(255,122,0,.20),transparent 60%),linear-gradient(135deg,#032A58,#043B79 58%,#0A55A8);--r:14px;--sh-0:0 1px 2px rgba(4,35,80,.06);--sh-1:0 1px 2px rgba(4,35,80,.05),0 6px 18px rgba(4,35,80,.07);--sh-2:0 2px 4px rgba(4,35,80,.05),0 22px 44px -14px rgba(4,35,80,.24);--ring:0 0 0 3px rgba(0,98,222,.26);color-scheme:light dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}@media(prefers-color-scheme:dark){:root{--bg:#04122B;--surface:#0A2046;--ink:#EAF2FF;--muted:#A0B5DA;--line:#183868;--navy:#031B3F;--on-navy:#EAF2FF;--gold:#FF9A3D;--gold-fill:#3D2410;--field:#071B3C;--err:#FF8A80;--navy-2:#0B4A98;--cyan:#4DA3FF;--orange:#FF8A1F;--num:#FFB066;--sh-0:0 1px 2px rgba(0,0,0,.4);--sh-1:0 1px 2px rgba(0,0,0,.35),0 8px 22px rgba(0,0,0,.35);--sh-2:0 2px 4px rgba(0,0,0,.4),0 24px 48px -14px rgba(0,0,0,.7);--ring:0 0 0 3px rgba(77,163,255,.34)}}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 var(--body)}a{color:inherit}header{background:var(--navy);color:var(--on-navy);border-bottom:3px solid var(--gold)}.w{max-width:860px;margin:0 auto;padding:0 max(16px,env(safe-area-inset-left,0px))}header .w{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-block:12px;flex-wrap:wrap}header a{text-decoration:none;font:600 20px var(--display);letter-spacing:.04em;text-transform:uppercase}header nav a{font:500 13px var(--body);text-transform:none;letter-spacing:0;margin-left:14px;opacity:.9}main{padding-block:24px 56px}h1{font:600 32px/1.1 var(--display);margin:0 0 8px;text-wrap:balance}h2{font:600 20px var(--display);letter-spacing:.02em;margin:28px 0 8px;text-transform:uppercase}.lede{color:var(--muted);margin:0 0 16px;max-width:62ch}.card{background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:16px 18px;margin:12px 0}.ans{border-left:4px solid var(--gold);display:flex;flex-wrap:wrap;gap:6px 24px;align-items:baseline;justify-content:space-between}.big{font:600 28px var(--display)}.jump{margin:8px 0 4px}details.more{border:1px solid var(--line);border-radius:12px;background:var(--surface);margin:14px 0;padding:0 16px;box-shadow:var(--sh-0)}details.more>summary{cursor:pointer;list-style:none}details.more>summary::-webkit-details-marker{display:none}details.more>summary h2{margin:14px 0}details.more>summary h2::after{content:"+";margin-left:auto;color:var(--gold)}details.more[open]>summary h2::after{content:"\2212"}details.more[open]{padding-bottom:12px}@media print{.jump{display:none}}.btn{display:inline-block;background:var(--navy);color:var(--on-navy);padding:9px 16px;border-radius:4px;text-decoration:none;font-weight:600;border:1px solid var(--gold)}.chip{display:inline-block;margin:3px 6px 3px 0;padding:5px 12px;border:1px solid var(--line);border-radius:999px;background:var(--surface);text-decoration:none;font-size:14px}.chip:hover{border-color:var(--gold)}main li>a:only-child{display:inline-block;padding:3px 0}code,pre,.f,td.n{font-family:var(--mono)}.f{background:var(--field);border:1px solid var(--line);padding:10px 12px;border-radius:4px;overflow-x:auto;white-space:pre-wrap}ol.steps{padding-left:22px;font-family:var(--mono);font-size:13px}ol.steps li{margin:4px 0}.tw{overflow-x:auto}table{border-collapse:collapse;width:100%;background:var(--surface)}th,td{border:1px solid var(--line);padding:6px 10px;text-align:left}td.n{text-align:right}tr.me td{background:var(--gold-fill)}th{background:var(--field);font-weight:600}.note{color:var(--muted);font-size:13px}ul{padding-left:20px}footer{border-top:1px solid var(--line);color:var(--muted);font-size:13px;padding-block:16px}h3{font:600 16px var(--body);margin:18px 0 4px}h3+p{margin:0;max-width:68ch}.tres .tact{flex:0 0 100%;display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}@media print{.tact{display:none}}.tres .phasor{flex:0 0 100%;margin-top:12px}.phasor svg{display:block;width:100%;max-width:360px;height:auto;font:11px var(--body)}.arow{grid-column:1/-1;border:1px solid var(--line);border-radius:10px;padding:10px 12px 12px;margin:0}.arow[hidden]{display:none}.arow legend{font-weight:700;font-size:13px;padding:0 6px}.arow .tgrid{margin-top:2px}.arow-bar{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:8px;align-items:center}.arow-bar .note{margin:0}.arow .rm{margin-top:10px}.mgrid{margin-top:10px}.mgrid .mbody[hidden]{display:none}.mgrid .tgrid{margin-top:8px}.mgrid .fillm{margin-top:10px}.tres .rchart{flex:0 0 100%;margin-top:12px}.rchart svg{display:block;width:100%;height:auto;font:12px var(--body)}.rchart h3{margin:0 0 6px;font-size:14px}.tres .carry{flex:0 0 100%;margin-top:10px}.carry .chip{display:inline-block;margin:4px 6px 0 0}.arow .rm[hidden],#add-row[hidden]{display:none}@media print{.arow-bar,.arow .rm{display:none}}.tgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px 16px}.tgrid label{display:block;font-weight:600;font-size:13px;margin-bottom:4px}.trow{display:flex;gap:6px}.trow input,.trow select,.tgrid>div>select{font:16px var(--body);color:var(--ink);background:var(--field);border:1px solid var(--line);border-radius:4px;padding:8px;min-height:40px}.trow input{flex:1;min-width:0}.tgrid>div>select{width:100%}.hint{color:var(--muted);font-size:12px;margin-top:3px}.err{color:var(--err)}.tres{display:flex;flex-wrap:wrap;gap:6px 28px;align-items:baseline}.tres .big small{display:block;font:500 13px var(--body);color:var(--muted)}::selection{background:color-mix(in srgb,var(--gold) 30%,transparent)}body{background-image:radial-gradient(900px 520px at 100% -8%,color-mix(in srgb,var(--cyan) 10%,transparent),transparent 62%),radial-gradient(700px 420px at -5% 0%,color-mix(in srgb,var(--gold) 8%,transparent),transparent 60%);background-attachment:fixed;-webkit-font-smoothing:antialiased}header{position:relative;overflow:hidden;background:var(--hero);border-bottom:0;box-shadow:0 10px 30px -14px rgba(5,14,34,.6)}header::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);background-size:34px 34px;-webkit-mask-image:linear-gradient(100deg,#000,transparent 70%);mask-image:linear-gradient(100deg,#000,transparent 70%);pointer-events:none}header::after{content:"";position:absolute;left:0;right:0;bottom:0;height:18px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44 14'%3E%3Cpath d='M0 12.5H8L14 2l7 10.5 5-6 4 6H44' fill='none' stroke='%23FF7A00' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat right 36px bottom 3px/44px 14px,linear-gradient(90deg,#FF7A00,#FFA43D 55%,#FF7A00) no-repeat bottom/100% 4px;pointer-events:none}header .w{position:relative;z-index:1;padding-block:8px 10px}header .w>a.brand{display:block;line-height:0;letter-spacing:0;text-transform:none;background:#fff;border-radius:10px;padding:4px 10px;box-shadow:0 2px 12px rgba(2,16,42,.4),0 0 0 1px rgba(255,255,255,.5)}header .w>a.brand img{display:block;height:34px;width:auto}@media(max-width:600px){header .w>a.brand img{height:30px}}header a:focus-visible{outline-color:#FFB066}header nav a{color:#DCE5F5;opacity:1;padding:6px 12px;border-radius:999px;margin-left:6px;transition:background .15s,color .15s}header nav a:hover{background:rgba(255,255,255,.12);color:#FFB066}main.w{padding-top:36px;padding-bottom:64px}h1{font-size:36px;letter-spacing:.005em}h1::after{content:"";display:block;width:56px;height:3px;border-radius:3px;background:var(--gold-grad);margin-top:12px}h2{display:flex;align-items:center;gap:10px}h2::before{content:"";width:4px;height:.95em;border-radius:2px;background:var(--gold-grad);flex:none}h3{color:var(--gold)}.card{border-radius:14px;box-shadow:var(--sh-1)}.ans{position:relative;overflow:hidden;border-left:1px solid var(--line);padding-left:24px;background:linear-gradient(135deg,color-mix(in srgb,var(--gold) 12%,var(--surface)),var(--surface) 65%);border-color:color-mix(in srgb,var(--gold) 40%,var(--line));box-shadow:var(--sh-2)}.ans::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--gold-grad)}.big{color:var(--num);font-weight:700}.btn{border-radius:10px;border:0;background:var(--gold-grad);color:#0A2347;font-weight:700;box-shadow:var(--sh-1);transition:transform .15s,box-shadow .15s,filter .15s}.btn:hover{transform:translateY(-1px);box-shadow:var(--sh-2);filter:brightness(1.06)}.chip{box-shadow:var(--sh-0);transition:border-color .15s,background .15s,transform .15s,box-shadow .15s}.chip:hover{transform:translateY(-1px);box-shadow:var(--sh-1);border-color:var(--orange);background:color-mix(in srgb,var(--orange) 8%,var(--surface))}.f{border-radius:12px;border-left:3px solid var(--cyan)}.tw{border:1px solid var(--line);border-radius:12px;box-shadow:var(--sh-0)}.tw table{border:0}table{border-collapse:separate;border-spacing:0}th,td{border:0;border-bottom:1px solid var(--line)}tr:last-child td{border-bottom:0}th{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);background:var(--field)}tbody tr:hover td{background:color-mix(in srgb,var(--cyan) 7%,transparent)}tr.me td{background:var(--gold-fill)}.trow input,.trow select,.tgrid>div>select{border-radius:10px;transition:border-color .15s,box-shadow .15s}.trow select{background-color:color-mix(in srgb,var(--navy) 5%,var(--field))}.trow input:focus,.trow select:focus,.tgrid>div>select:focus{outline:0;border-color:var(--cyan);box-shadow:var(--ring)}.tgrid label{color:var(--ink)}a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--cyan);outline-offset:2px}footer{padding-block:20px}footer.mf{margin-top:24px;padding:0;border-top:0;background:var(--hero);color:#DCE5F5;font-size:13px;position:relative}footer.mf::before{content:"";display:block;height:4px;background:linear-gradient(90deg,#FF7A00,#FFA43D 55%,#FF7A00)}.mf-w{max-width:1100px;margin:0 auto;padding:36px max(16px,env(safe-area-inset-left,0px)) calc(24px + env(safe-area-inset-bottom,0px))}.mf-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:28px 24px}.mf-h{display:block;margin:0 0 12px;padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,.18);font:600 14px var(--display);letter-spacing:.06em;text-transform:uppercase;color:#FFB066}.mf-col ul{list-style:none;margin:0;padding:0}.mf-col li{margin:0}.mf-col a{display:inline-block;padding:4px 0;color:#DCE5F5;text-decoration:none}.mf-h a{padding:0;color:inherit}.mf-col a:hover,.mf-legal a:hover{color:#FFB066;text-decoration:underline}.mf a:focus-visible{outline:2px solid #FFB066;outline-offset:2px;border-radius:2px}.mf-legal{margin-top:28px;padding-top:18px;border-top:1px solid rgba(255,255,255,.18);color:#A9BADB;max-width:80ch}.mf-legal a{color:#DCE5F5}@media(max-width:980px){.mf-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(max-width:600px){.mf-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.mf-col a{padding:7px 0}}@media print{footer.mf{background:none;color:inherit}footer.mf::before,.mf-grid{display:none}.mf-legal{border:0;color:inherit}}@media(prefers-reduced-motion:reduce){.btn,.chip{transition:none;transform:none!important}}@media print{header{background:none;box-shadow:none}header::before,header::after,.ans::before,h1::after,h2::before{display:none}header .w>a.brand{box-shadow:none;padding:0}body{background-image:none}.card,.ans,.tw{box-shadow:none}.ans{padding-left:18px}}.totop{position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:60;min-height:44px;padding:0 18px;border:0;border-radius:999px;background:linear-gradient(135deg,#FFA43D,#FF7A00 52%,#E85F00);color:#0A2347;font:700 14px system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;box-shadow:0 2px 4px rgba(4,35,80,.2),0 14px 30px -8px rgba(4,35,80,.45);cursor:pointer;opacity:0;transform:translateY(12px);pointer-events:none;transition:opacity .2s,transform .2s,bottom .2s}.totop.on{opacity:1;transform:none;pointer-events:auto}.totop:hover{filter:brightness(1.06)}.totop:focus-visible{outline:2px solid #fff;outline-offset:2px;box-shadow:0 0 0 4px #0062DE}@media(prefers-reduced-motion:reduce){.totop{transition:none}}@media print{.totop{display:none}}.vstat{padding:12px 16px;border-left:4px solid var(--muted,#6b7a90)}.vstat.v-verified{border-left-color:#1f9d57}.vstat.v-reference{border-left-color:#2a7fd4}.vstat.v-indicative{border-left-color:#c98a10}[hidden]{display:none!important}header{position:sticky;top:0;z-index:30}header .w{max-width:1120px;flex-wrap:nowrap;gap:16px;padding-block:8px}header .brand{flex:0 0 auto}header::after{height:3px;background:linear-gradient(90deg,#FF7A00,#FFA43D 55%,#FFC37A)}header nav{display:flex;gap:2px;overflow-x:auto;white-space:nowrap;scrollbar-width:none;min-width:0}header nav::-webkit-scrollbar{display:none}header nav a{margin-left:0;padding:8px 11px;border-radius:8px;opacity:.92}header nav a:hover,header nav a:focus-visible{background:rgba(255,255,255,.14);opacity:1;outline:none}main.calc{max-width:1120px;padding-top:18px}.calc h1{font-size:28px;margin-bottom:4px}.calc .lede{margin:0 0 10px;max-width:70ch}.calc-vb{display:inline-flex;align-items:center;gap:7px;margin:0 0 14px;padding:4px 11px;border:1px solid var(--line);border-radius:999px;background:var(--surface);font:600 12.5px var(--body);color:var(--ink);text-decoration:none}.calc-vb::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--gold)}.calc-vb:hover,.calc-vb:focus-visible{border-color:var(--gold);outline:none}.calc #try{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(290px,1fr);gap:0 20px;align-items:start}.calc #try>h2{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;margin:0}.calc #try>form{grid-column:1;margin:0}.calc #try>#try-out{grid-column:2;grid-row:1;position:sticky;top:64px;margin:0;flex-direction:column;align-items:stretch;gap:12px}.calc .tgrid{grid-template-columns:repeat(auto-fill,minmax(210px,1fr));align-items:start}.hd{margin-top:4px}.hd summary{cursor:pointer;font-size:12px;color:var(--muted);list-style:none}.hd summary::-webkit-details-marker{display:none}.hd summary::before{content:"\24D8  "}.hd[open]{font-size:12px;line-height:1.45}.hd[open] summary{margin-bottom:3px}.calc-limit{margin:14px 0 0;padding:10px 14px;border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:8px;background:var(--surface);font-size:14px}.calc-limit h2{font:700 13px var(--body);margin:0 0 2px;letter-spacing:0;text-transform:none}.calc-limit h2::before{display:none}.calc-limit p{margin:0}.calc-act{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;margin:12px 0 4px}.calc-act .btn{margin:0}.calc-act .note{margin:0;flex:1 1 340px;font-size:12px}.calc .cref{max-width:860px;margin-top:6px}.calc .jump{position:sticky;top:52px;z-index:10;display:flex;gap:6px;overflow-x:auto;white-space:nowrap;scrollbar-width:none;background:var(--bg);padding:8px 0;margin:10px 0 4px;border-bottom:1px solid var(--line)}.calc .jump::-webkit-scrollbar{display:none}.calc .jump .chip{flex:0 0 auto;margin:0}@media (max-width:980px){.calc #try{grid-template-columns:minmax(0,1fr)}.calc #try>#try-out{grid-column:1;grid-row:auto;position:static;margin-top:12px}}#mini-res{position:fixed;left:0;right:0;bottom:0;z-index:40;display:flex;flex-wrap:wrap;gap:2px 18px;padding:8px 16px calc(8px + env(safe-area-inset-bottom,0px));background:var(--surface);color:var(--ink);border-top:3px solid var(--gold);box-shadow:0 -8px 20px -10px rgba(5,20,50,.5);text-decoration:none}#mini-res span{display:block}#mini-res b{display:block;font:600 19px/1.2 var(--display)}#mini-res small{display:block;font-size:11px;color:var(--muted)}@media (min-width:981px){#mini-res{display:none!important}}@media (max-width:640px){main.calc{padding-top:12px}.calc h1{font-size:24px}.calc .jump{top:0}header{position:static}header .w{flex-wrap:wrap;gap:4px 8px;padding-block:8px 4px}header nav{flex:1 1 100%;-webkit-mask-image:linear-gradient(90deg,#000 90%,transparent);mask-image:linear-gradient(90deg,#000 90%,transparent)}}</style><style>:root{--ok:#1B6E3A}
+@media(prefers-color-scheme:dark){:root{--ok:#6FD39A}}
+.modes{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 4px;padding:0;list-style:none}
+.modes li{padding:6px 12px;border:1px solid var(--line);border-radius:999px;background:var(--surface);font-size:13px;color:var(--muted)}
+.modes li.on{background:var(--navy);color:var(--on-navy);border-color:var(--gold);font-weight:600}
+.modes small{font-size:11px;opacity:.8;margin-left:4px}
+label,.lbl{display:block;font-weight:600;font-size:13px;margin:0 0 4px}
+textarea{width:100%;min-height:104px;font:15px/1.5 var(--mono);padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:var(--field);color:var(--ink);resize:vertical}
+textarea:focus,button:focus-visible,select:focus-visible{outline:none;box-shadow:var(--ring);border-color:var(--cyan)}
+.row{display:flex;flex-wrap:wrap;gap:14px 28px;margin-top:12px;align-items:flex-end}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.seg button{border:0;background:var(--field);color:var(--ink);padding:8px 16px;font:600 14px var(--body);cursor:pointer;border-right:1px solid var(--line)}
+.seg button:last-child{border-right:0}
+.seg button[aria-pressed=true]{background:var(--navy);color:var(--on-navy)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 0}
+.chip,.btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:6px 12px;border-radius:999px;font:500 13px var(--body);cursor:pointer}
+.chip:hover,.btn:hover{border-color:var(--gold)}
+.btn{border-radius:4px;font-weight:600;padding:8px 14px}
+.btn.pri{background:var(--navy);color:var(--on-navy);border-color:var(--gold)}
+.msg{margin:10px 0 0;font-size:13px;color:var(--muted)}
+.msg.bad{color:var(--err)}
+.msg ul{margin:4px 0 0;padding-left:20px}
+.hero{border-left:4px solid var(--gold);display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px 22px}
+.tile .k{font-size:12px;color:var(--muted)}
+.tile .v{font:600 28px/1.15 var(--display);color:var(--num);overflow-wrap:anywhere}
+.tile .x{font:12px var(--mono);color:var(--muted);overflow-wrap:anywhere}
+.tile.sel .v{color:var(--gold)}
+td.n{text-align:right;font-family:var(--mono);font-size:13px}
+tr.sel td{background:var(--gold-fill)}
+.warn{border:1px solid var(--gold);background:var(--gold-fill);border-radius:6px;padding:8px 12px;margin:10px 0;font-size:13px}
+.act{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.pass{color:var(--ok);font-weight:700}
+.failc{color:var(--err);font-weight:700}
+.hist button{display:block;width:100%;text-align:left;border:1px solid var(--line);background:var(--field);color:var(--ink);padding:6px 10px;border-radius:6px;margin:4px 0;font:13px var(--mono);cursor:pointer;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+@media print{header nav,.act,.chips,.seg,.hist,.modes{display:none}}</style><style>.fb button,.fb .btn,.totop{margin-top:0}.fb .btn{background:var(--gold-grad);color:#0A2347;border:0;border-radius:10px;font-weight:700;padding:9px 16px}.jump .chip[aria-current=page]{background:var(--gold-fill);border-color:var(--gold);font-weight:700}main.w{padding-top:36px;padding-bottom:64px}.mf-legal a,.mf-col a{font:inherit}.mf a{color:#DCE5F5}</style><style>.fmodes{display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px;margin:0 0 12px}.fmodes .ns-l{font:600 13px var(--body);margin:0 4px 0 0}.fmodes .chip.on{background:var(--gold-fill);border-color:var(--gold);font-weight:700}</style></head>
+<body>
+<header><div class="w"><a class="brand" href="../../"><img src="../../logo.png" alt="Elecmetric" width="160" height="40"></a><nav><a href="../">Calculators</a><a href="../all-tools/">All Tools</a><a href="../../converters/index.html">Conversion Centre</a><a href="../../pages/index.html">Conversions</a><a href="../../technical-library/">Technical Library</a><a href="../../index.html#verification">How it is verified</a></nav></div></header>
+<main class="w"><nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="../../">Home</a></li><li><a href="../../categories/statistics-data-analysis/">Statistics &amp; Data Analysis</a></li><li><a href="../../categories/statistics-data-analysis/#data-analysis">Data Analysis</a></li><li><span aria-current="page">Standard Deviation Calculator</span></li></ol></nav>
+<h1>Standard Deviation Calculator</h1>
+<p class="lede">Population and sample standard deviation and variance, with the mean, the sum and a step-by-step solution. Paste a list or a spreadsheet column; decimals, fractions and negative values are accepted.</p><nav class="fmodes" aria-label="Statistics modes"><span class="ns-l">Statistics</span><a class="chip on" href="../standard-deviation-calculator/" aria-current="page">Mode 01 · Standard Deviation &amp; Variance</a><a class="chip" href="../descriptive-statistics-calculator/">Mode 02 · Descriptive Statistics</a><a class="chip" href="../frequency-grouped-data-calculator/">Mode 03 · Frequency &amp; Grouped Data</a></nav>
+<ol class="modes" aria-label="Calculator modes"><li class="on" aria-current="true">01 Standard Deviation &amp; Variance</li><li>02 Descriptive Statistics<small>soon</small></li><li>03 Frequency &amp; Grouped Data<small>soon</small></li><li>04 Z-Score &amp; Outliers<small>soon</small></li><li>05 Engineering Measurement<small>soon</small></li><li>06 Standard Error &amp; CI<small>soon</small></li></ol>
+
+<section class="card" aria-labelledby="in-h">
+ <label for="data" id="in-h">Data values</label>
+ <textarea id="data" spellcheck="false" autocomplete="off" aria-describedby="in-hint">2, 4, 4, 4, 5, 5, 7, 9</textarea>
+ <div id="in-hint" class="note" style="margin-top:4px">Separate values with commas, spaces, semicolons or new lines. Accepted forms: 12, -3.5, .25, 1.5e3, 3/8.</div>
+ <div class="chips" id="presets" aria-label="Example presets"></div>
+ <div class="row">
+  <div><span class="lbl" id="t-l">Calculation type</span><div class="seg" role="group" aria-labelledby="t-l"><button type="button" data-t="pop" aria-pressed="true">Population</button><button type="button" data-t="samp" aria-pressed="false">Sample</button></div></div>
+  <div><span class="lbl" id="p-l">Decimal precision</span><div class="seg" role="group" aria-labelledby="p-l" id="prec"></div></div>
+ </div>
+ <div id="msg" class="msg" role="status" aria-live="polite"></div>
+</section>
+
+<section id="out" class="card" aria-live="polite" hidden></section>
+
+<details class="more" id="steps-d" open><summary>Step-by-step solution</summary><div id="steps"></div></details>
+
+<details class="more"><summary>Verification</summary>
+ <p class="note">Sums, mean, sum of squared deviations and both variances are computed with exact rational arithmetic, so there is no rounding error and no cancellation, however large the values or small the spread. Only the final square root is rounded, once, to the precision chosen. The check below runs an independent floating-point (Welford) calculation on your data and compares it.</p>
+ <div id="xcheck" class="f"></div>
+ <h3>Reference test vectors</h3>
+ <p class="note">Run in your browser against values from the product specification and from separately coded reference calculations.</p>
+ <button class="btn" id="runtests" type="button">Run reference tests</button>
+ <div class="tw" id="tests" style="margin-top:8px"></div>
+</details>
+
+<details class="more"><summary>Formulas</summary>
+<div class="f">Population:  σ² = Σ(xᵢ − μ)² / N        σ = √σ²
+Sample:      s² = Σ(xᵢ − x̄)² / (n − 1)    s = √s²
+Mean:        x̄ = Σxᵢ / n
+Shortcut used for exact sums:  Σ(xᵢ − x̄)² = Σxᵢ² − (Σxᵢ)² / n</div>
+<p>Use <strong>population</strong> when the list is the whole group you care about (every unit in a batch). Use <strong>sample</strong> when the list is a subset used to estimate a larger group (a few readings from a repeatable process). The n − 1 divisor makes the sample <em>variance</em> an unbiased estimator under the usual sampling assumptions; it does not make the sample standard deviation unbiased.</p>
+</details>
+
+<details class="more"><summary>History</summary><div class="hist" id="hist"></div><div class="act"><button class="btn" id="clearh" type="button">Clear history</button></div></details>
+
+<section class="card"><h3>Limits of this calculator</h3>
+<p class="note" style="margin:0">Standard deviation measures spread (repeatability), not accuracy. A measuring system can give very consistent readings that are all wrong by the same offset, so this result is not a substitute for calibration, a measurement-uncertainty evaluation, or the acceptance criteria of the applicable standard. Treat as an estimate and have a competent engineer review it before it is relied on.</p></section>
+<p class="note">Elecmetric · Standard Deviation Calculator · Mode 01 · Verification class: Engineering reference (cross-checked against separately coded reference calculations; not yet independently reviewed)</p><section id="related"><h2>Related Calculators and Tools</h2><p><a class="chip" href="../descriptive-statistics-calculator/">Descriptive Statistics Calculator (Mode 02)</a><a class="chip" href="../frequency-grouped-data-calculator/">Frequency and Grouped Data Statistics Calculator (Mode 03)</a><a class="chip" href="../mean-median-mode/">Mean, Median and Mode</a><a class="chip" href="../linear-regression/">Linear Regression</a><a class="chip" href="../binomial-distribution/">Binomial Distribution</a><a class="chip" href="../probability-calculator/">Probability</a><a class="chip" href="../random-number-generator/">Random Number Generator</a><a class="chip" href="../permutations-combinations/">Permutations and Combinations</a></p></section></main><section class="w fb" aria-labelledby="fb-h"><h2 id="fb-h">Tell us how to improve this page</h2><textarea id="fb-t" rows="4" maxlength="1500" placeholder="Your message ..." aria-label="Tell us how to improve this page"></textarea><p><button type="button" class="btn" id="fb-b">Email your suggestion</button> <button type="button" class="btn" id="sh-b">Share this page</button> <span class="note" id="fb-n">This opens your email app. Nothing is sent until you press send.</span></p></section><script>(function(){var b=document.getElementById("fb-b");if(!b)return;b.onclick=function(){var t=document.getElementById("fb-t").value.trim(),n=document.getElementById("fb-n");if(!t){n.textContent="Please write a message first.";return}location.assign("mailto:"+"elecmetrics@gmail.com"+"?subject="+encodeURIComponent("Elecmetric feedback: "+document.title)+"&body="+encodeURIComponent(t+"\n\nPage: "+location.href))}})();</script><script>(function(){var s=document.getElementById("sh-b");if(!s)return;s.onclick=function(){var u=location.href,t=document.title,n=document.getElementById("fb-n");if(navigator.share){navigator.share({title:t,url:u}).catch(function(){});return}if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(u).then(function(){n.textContent="Link copied."},function(){n.textContent="Copy this address: "+u})}else{n.textContent="Copy this address: "+u}}})();</script><footer class="mf"><div class="mf-w"><div class="mf-grid" role="navigation" aria-label="Site map"><div class="mf-col"><p class="mf-h"><a href="../../calculators/">Calculators</a></p><ul><li><a href="../../calculators/electrical-fundamentals/">Electrical Fundamentals</a></li><li><a href="../../calculators/power-and-energy/">Power and Energy</a></li><li><a href="../../calculators/cable-engineering/">Cable Engineering</a></li><li><a href="../../calculators/motor-engineering/">Motor Engineering</a></li><li><a href="../../calculators/transformer-engineering/">Transformer Engineering</a></li><li><a href="../../calculators/electrical-protection/">Electrical Protection</a></li><li><a href="../../calculators/power-systems/">Power Systems</a></li><li><a href="../../calculators/earthing-and-grounding/">Earthing and Grounding</a></li><li><a href="../../calculators/renewable-energy/">Renewable Energy</a></li><li><a href="../../calculators/airport-agl-engineering/">Airport and AGL Engineering</a></li><li><a href="../../calculators/electronics-and-instrumentation/">Electronics and Instrumentation</a></li><li><a href="../../calculators/lighting-and-facilities/">Lighting and Facilities</a></li><li><a href="../../calculators/engineering-mathematics/">Engineering Mathematics</a></li></ul></div><div class="mf-col"><p class="mf-h"><a href="../../calculators/">Popular calculators</a></p><ul><li><a href="../../calculators/cable-size/">Cable Size</a></li><li><a href="../../calculators/voltage-drop/">Voltage Drop</a></li><li><a href="../../calculators/breaker-size/">Breaker Size</a></li><li><a href="../../calculators/motor-current/">Motor Current</a></li><li><a href="../../calculators/transformer-sizing/">Transformer Sizing</a></li><li><a href="../../calculators/earth-resistance/">Earth Resistance</a></li><li><a href="../../calculators/pf-correction-kvar/">Power Factor Correction</a></li><li><a href="../../calculators/generator-sizing/">Generator Sizing</a></li><li><a href="../../calculators/battery-bank-sizing/">Battery Bank Sizing</a></li><li><a href="../../calculators/pv-energy/">Solar PV Energy</a></li></ul></div><div class="mf-col"><p class="mf-h"><a href="../../converters/index.html">Conversions</a></p><ul><li><a href="../../pages/index.html">Electrical conversions</a></li><li><a href="../../pages/kw-to-amps.html">kW to Amps</a></li><li><a href="../../pages/amps-to-kw.html">Amps to kW</a></li><li><a href="../../pages/kva-to-kw.html">kVA to kW</a></li><li><a href="../../pages/watts-to-amps.html">Watts to Amps</a></li><li><a href="../../converters/length-converter.html">Length</a></li><li><a href="../../converters/power-converter.html">Power</a></li><li><a href="../../converters/energy-converter.html">Energy</a></li><li><a href="../../converters/temperature-converter.html">Temperature</a></li><li><a href="../../pages/wire-gauge.html">AWG to mm²</a></li></ul></div><div class="mf-col"><p class="mf-h"><a href="../../converters/index.html">Formulas</a></p><ul><li><a href="../../converters/ohms-law-formulas.html">Ohm’s Law formulas</a></li><li><a href="../../converters/kirchhoffs-laws.html">Kirchhoff’s laws</a></li><li><a href="../../converters/cable-sizing-formulas.html">Cable sizing formulas</a></li><li><a href="../../converters/circuit-breaker-formulas.html">Circuit breaker formulas</a></li><li><a href="../../converters/ac-circuit-formulas.html">AC circuit formulas</a></li><li><a href="../../converters/battery-formulas.html">Battery formulas</a></li></ul></div><div class="mf-col"><p class="mf-h">Elecmetric</p><ul><li><a href="../../calculators/basic-calculator/">Basic Calculator</a></li><li><a href="../../calculators/scientific-calculator/">Scientific Calculator</a></li><li><a href="../../index.html#verification">How it is verified</a></li><li><a href="../../privacy.html">Privacy</a></li><li><a href="../../terms.html">Terms</a></li><li><a href="../../technical-library/">Technical Library</a></li><li><a href="mailto:elecmetrics@gmail.com">Contact us</a></li></ul></div></div><div class="mf-legal">Results are computed by the same tested engine as the calculators in Elecmetric and are for estimating. Check design values against the standard and the equipment data you work to. Elecmetric results are not a substitute for a design review by a competent engineer.<br>Developed by Elecmetric. No independent technical review of the calculators has been carried out. Results are for estimating.<br>&copy; 2026 Elecmetric &middot; <a href="../../privacy.html">Privacy</a> &middot; <a href="../../terms.html">Terms</a></div></div><script>(function(){if(location.protocol!=="file:")return;document.addEventListener("click",function(e){if(e.defaultPrevented||e.button||e.metaKey||e.ctrlKey||e.shiftKey)return;var a=e.target.closest&&e.target.closest("a[href]");if(!a||a.target)return;var m=/^([^?#]*)(.*)$/.exec(a.getAttribute("href"));if(!m[1]||/^[a-z][a-z0-9+.-]*:/i.test(m[1])||!/[/]$/.test(m[1]))return;e.preventDefault();location.href=m[1]+"index.html"+m[2]})})();</script><button type="button" class="totop" id="totop" aria-label="Back to top" tabindex="-1">↑ Top</button><script>(function(){var b=document.getElementById("totop");if(!b)return;var t=0;function u(){t=0;var on=(window.pageYOffset||document.documentElement.scrollTop)>400,bar=document.getElementById("bar"),h=bar&&bar.offsetHeight?bar.offsetHeight:0;b.classList.toggle("on",on);b.tabIndex=on?0:-1;b.style.bottom=h?"calc("+(h+16)+"px + env(safe-area-inset-bottom,0px))":"";}function q(){if(!t)t=requestAnimationFrame(u)}window.addEventListener("scroll",q,{passive:true});window.addEventListener("resize",q);b.addEventListener("click",function(){var r=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;window.scrollTo({top:0,behavior:r?"auto":"smooth"})});u()})();</script></footer>
+
+
+<script>
+/* Elecmetric Statistics Engine, Mode 01: Standard Deviation and Variance.
+   One file, no DOM. Exact rational arithmetic on BigInt, so sums, mean, sum of squared deviations and variances are exact
+   (no cancellation error, whatever the magnitude of the data). Only the final square root is rounded, and it is rounded
+   correctly (integer square root, half-up) at the requested number of decimals.
+   Reusable by later modes (descriptive statistics, z-score, standard error, confidence intervals, quality control).
+   Accepts integers, decimals, scientific notation (1.5e3) and fractions (3/8). Separators: comma, semicolon, space, tab, new line. */
+(function (root) {
+  'use strict';
+  var MAX_VALUES = 5000, MAX_EXP = 100, MAX_BITS = 60000;
+
+  function gcd(a, b) { if (a < 0n) a = -a; if (b < 0n) b = -b; while (b) { var t = a % b; a = b; b = t; } return a; }
+  function mk(n, d) {
+    if (d === 0n) throw new Error('division by zero');
+    if (d < 0n) { n = -n; d = -d; }
+    var g = gcd(n, d); if (g > 1n) { n /= g; d /= g; }
+    return { n: n, d: d };
+  }
+  function add(a, b) { return mk(a.n * b.d + b.n * a.d, a.d * b.d); }
+  function sub(a, b) { return mk(a.n * b.d - b.n * a.d, a.d * b.d); }
+  function mul(a, b) { return mk(a.n * b.n, a.d * b.d); }
+  function div(a, b) { return mk(a.n * b.d, a.d * b.n); }
+  function cmp(a, b) { var l = a.n * b.d, r = b.n * a.d; return l < r ? -1 : l > r ? 1 : 0; }
+  function isZero(a) { return a.n === 0n; }
+  function bits(x) { return (x < 0n ? -x : x).toString(2).length; }
+  var P10 = {}; function p10(k) { return P10[k] || (P10[k] = 10n ** BigInt(k)); }
+
+  function isqrt(n) {
+    if (n < 0n) throw new Error('negative');
+    if (n < 2n) return n;
+    var x = 1n << BigInt((n.toString(2).length + 1) >> 1);
+    for (;;) { var y = (x + n / x) >> 1n; if (y >= x) return x; x = y; }
+  }
+
+  /* ---------- parsing ---------- */
+  var DEC = /^([+-]?)(\d*)(?:\.(\d*))?(?:[eE]([+-]?\d+))?$/;
+  function parseToken(tok) {
+    var t = tok.replace(/[\u2212\u2013\u2014]/g, '-');
+    var slash = t.indexOf('/');
+    if (slash >= 0) {
+      var a = parseDec(t.slice(0, slash)), b = parseDec(t.slice(slash + 1));
+      if (!a || !b) return { err: 'not a valid fraction' };
+      if (/[+-]/.test(t.slice(slash + 1).replace(/[eE][+-]?\d+$/, ''))) return { err: 'denominator must be unsigned' };
+      if (isZero(b)) return { err: 'denominator is zero' };
+      return { r: div(a, b) };
+    }
+    var r = parseDec(t);
+    if (!r) return { err: 'not a number' };
+    return { r: r };
+  }
+  function parseDec(t) {
+    var m = DEC.exec(t); if (!m) return null;
+    var ip = m[2] || '', fp = m[3] || '';
+    if (ip === '' && fp === '') return null;
+    var exp = m[4] ? parseInt(m[4], 10) : 0;
+    if (Math.abs(exp) > MAX_EXP) return null;
+    var n = BigInt((ip + fp) || '0'), d = p10(fp.length);
+    if (m[1] === '-') n = -n;
+    if (exp > 0) n *= p10(exp); else if (exp < 0) d *= p10(-exp);
+    return mk(n, d);
+  }
+  function parseData(text) {
+    var out = { values: [], errors: [], tokens: 0 };
+    var toks = String(text == null ? '' : text).split(/[\s,;]+/).filter(function (s) { return s.length; });
+    out.tokens = toks.length;
+    for (var i = 0; i < toks.length; i++) {
+      var p = parseToken(toks[i]);
+      if (p.err) {
+        var why = p.err;
+        if (/^[^:]+:[^:]+$/.test(toks[i])) why = 'value:frequency entry belongs to Mode 03 (Frequency & Grouped Data)';
+        out.errors.push({ index: i + 1, token: toks[i], reason: why });
+      } else out.values.push({ raw: toks[i], r: p.r });
+    }
+    return out;
+  }
+
+  /* ---------- formatting ---------- */
+  function fmtRat(r, dp) {
+    var neg = r.n < 0n, a = neg ? -r.n : r.n;
+    var s = (a * p10(dp) * 2n + r.d) / (2n * r.d);          // half-up
+    return render(s, dp, neg && s !== 0n);
+  }
+  function fmtSqrt(r, dp) {                                  // correctly rounded sqrt(r), r >= 0
+    if (r.n === 0n) return render(0n, dp, false);
+    var y4 = (4n * r.n * p10(2 * dp)) / r.d;                 // floor(4*y), y = r*10^(2dp)
+    var m = (isqrt(y4) + 1n) / 2n;
+    return render(m, dp, false);
+  }
+  function render(s, dp, neg) {
+    var str = s.toString();
+    if (dp > 0) { while (str.length <= dp) str = '0' + str; str = str.slice(0, str.length - dp) + '.' + str.slice(str.length - dp); }
+    return (neg ? '-' : '') + str;
+  }
+  function fmtFrac(r, maxLen) {
+    var s = r.d === 1n ? r.n.toString() : r.n.toString() + '/' + r.d.toString();
+    return s.length > (maxLen || 40) ? null : s;
+  }
+  function toFloat(r) {
+    if (r.n === 0n) return 0;
+    var n = r.n, d = r.d, s = Math.max(bits(n), bits(d)) - 1000;
+    if (s > 0) { n >>= BigInt(s); d >>= BigInt(s); if (d === 0n) return n < 0n ? -Infinity : Infinity; }
+    return Number(n) / Number(d);
+  }
+  function sqrtIsZeroAtDp(r, dp) { return r.n !== 0n && fmtSqrt(r, dp).replace(/[0.]/g, '') === ''; }
+  function ratIsZeroAtDp(r, dp) { return r.n !== 0n && fmtRat(r, dp).replace(/[-0.]/g, '') === ''; }
+
+  /* ---------- analysis ---------- */
+  function analyse(values) {
+    var n = values.length;
+    if (n === 0) throw new Error('Enter at least one value.');
+    if (n > MAX_VALUES) throw new Error('Too many values: ' + n + ' (limit ' + MAX_VALUES + ').');
+    var sum = mk(0n, 1n), sumsq = mk(0n, 1n), mn = values[0].r, mx = values[0].r, i;
+    for (i = 0; i < n; i++) {
+      var x = values[i].r;
+      sum = add(sum, x); sumsq = add(sumsq, mul(x, x));
+      if (cmp(x, mn) < 0) mn = x; if (cmp(x, mx) > 0) mx = x;
+      if (bits(sum.d) > MAX_BITS) throw new Error('Values are too awkward to sum exactly (denominators too large). Use decimals.');
+    }
+    var N = mk(BigInt(n), 1n);
+    var mean = div(sum, N);
+    var ss = sub(sumsq, div(mul(sum, sum), N));              // sum of squared deviations, exact
+    var out = {
+      n: n, sum: sum, mean: mean, ss: ss, min: mn, max: mx, range: sub(mx, mn),
+      popVar: div(ss, N), sampVar: null, welford: welford(values)
+    };
+    if (n > 1) out.sampVar = div(ss, mk(BigInt(n - 1), 1n));
+    return out;
+  }
+  function welford(values) {                                 // independent float64 cross-check
+    var cnt = 0, m = 0, M2 = 0;
+    for (var i = 0; i < values.length; i++) {
+      var x = toFloat(values[i].r); cnt++;
+      var dlt = x - m; m += dlt / cnt; M2 += dlt * (x - m);
+    }
+    return { mean: m, popVar: M2 / cnt, sampVar: cnt > 1 ? M2 / (cnt - 1) : null };
+  }
+  function deviations(values, mean) {
+    return values.map(function (v) { var d = sub(v.r, mean); return { x: v.r, dev: d, sq: mul(d, d) }; });
+  }
+
+  var api = {
+    MAX_VALUES: MAX_VALUES, parseData: parseData, analyse: analyse, deviations: deviations,
+    fmtRat: fmtRat, fmtSqrt: fmtSqrt, fmtFrac: fmtFrac, toFloat: toFloat,
+    ratIsZeroAtDp: ratIsZeroAtDp, sqrtIsZeroAtDp: sqrtIsZeroAtDp,
+    rat: { mk: mk, add: add, sub: sub, mul: mul, div: div, cmp: cmp }
+  };
+  if (typeof module !== 'undefined' && module.exports) module.exports = api; else root.ElecStats = api;
+})(typeof self !== 'undefined' ? self : this);
+
+</script>
+<script>
+(function(){
+'use strict';
+var S=window.ElecStats, $=function(id){return document.getElementById(id)};
+var st={type:'pop',dp:4}, PRES=[2,4,6,10];
+var EX=[['Textbook','2, 4, 4, 4, 5, 5, 7, 9'],['Current readings (A)','6.58\n6.60\n6.61\n6.59\n6.62'],['Negative values','-4, -2, 0, 2, 4'],['Fractions','1/3 2/3 1'],['Zero spread','5, 5, 5, 5'],['Single value','7'],['Large offset','1000000000000001 1000000000000002 1000000000000003']];
+var last=null;
+
+function el(t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e}
+function seg(box,items,key,fmt){box.textContent='';items.forEach(function(v){var b=el('button',null,fmt?fmt(v):v);b.type='button';b.dataset.v=v;b.setAttribute('aria-pressed',String(st[key]==v));b.onclick=function(){st[key]=(key==='dp'?+v:v);sync();run()};box.appendChild(b)})}
+function sync(){document.querySelectorAll('[data-t]').forEach(function(b){b.setAttribute('aria-pressed',String(b.dataset.t===st.type))});
+  [].forEach.call($('prec').children,function(b){b.setAttribute('aria-pressed',String(+b.dataset.v===st.dp))})}
+document.querySelectorAll('[data-t]').forEach(function(b){b.onclick=function(){st.type=b.dataset.t;sync();run()}});
+seg($('prec'),PRES,'dp',function(v){return String(v)});
+EX.forEach(function(e){var b=el('button','chip',e[0]);b.type='button';b.onclick=function(){$('data').value=e[1];run()};$('presets').appendChild(b)});
+
+function run(){
+  var txt=$('data').value, msg=$('msg'), out=$('out');
+  var p=S.parseData(txt); msg.className='msg'; msg.textContent='';
+  last=null; $('steps').textContent=''; $('xcheck').textContent='';
+  if(!p.tokens){out.hidden=true;msg.textContent='Enter at least one value.';return}
+  if(p.errors.length){
+    out.hidden=true;msg.className='msg bad';
+    msg.appendChild(el('span',null,p.errors.length+' entr'+(p.errors.length>1?'ies':'y')+' could not be read as a number:'));
+    var ul=el('ul');p.errors.slice(0,8).forEach(function(e){ul.appendChild(el('li',null,'#'+e.index+' “'+e.token+'” — '+e.reason))});
+    if(p.errors.length>8)ul.appendChild(el('li',null,'… and '+(p.errors.length-8)+' more'));msg.appendChild(ul);return}
+  var a;try{a=S.analyse(p.values)}catch(e){out.hidden=true;msg.className='msg bad';msg.textContent=e.message;return}
+  msg.textContent=a.n+' value'+(a.n>1?'s':'')+' read.';
+  last={p:p,a:a};render(p,a);save(txt);
+}
+
+function sdStr(v,dp){return v?S.fmtSqrt(v,dp):'undefined'}
+function rStr(v,dp){return v?S.fmtRat(v,dp):'undefined'}
+function render(p,a){
+  var dp=st.dp,pop=st.type==='pop',out=$('out');out.textContent='';out.hidden=false;
+  var selSD=pop?a.popVar:a.sampVar, selV=pop?a.popVar:a.sampVar;
+  var hero=el('div','hero');
+  function tile(k,v,x,sel){var t=el('div','tile'+(sel?' sel':''));t.appendChild(el('div','k',k));t.appendChild(el('div','v',v));if(x)t.appendChild(el('div','x',x));hero.appendChild(t)}
+  tile((pop?'Population':'Sample')+' standard deviation ('+(pop?'σ':'s')+')',sdStr(selSD,dp),null,true);
+  tile((pop?'Population':'Sample')+' variance ('+(pop?'σ²':'s²')+')',rStr(selV,dp),selV?'= '+(S.fmtFrac(selV)||'exact fraction too long'):null);
+  tile('Mean',S.fmtRat(a.mean,dp),'= '+(S.fmtFrac(a.mean)||'—'));
+  tile('Observations',String(a.n));
+  out.appendChild(hero);
+  if(!pop&&a.n<2)out.appendChild(el('div','warn','Sample standard deviation and variance are undefined for a single observation (the divisor n − 1 is zero). The population values are shown in the table below.'));
+  var hid=[];
+  if(selSD&&S.sqrtIsZeroAtDp(selSD,dp))hid.push('The standard deviation is not zero but is smaller than the precision chosen; increase the decimal precision to see it.');
+  if(hid.length)out.appendChild(el('div','warn',hid[0]));
+  var rows=[['Number of observations',String(a.n),null],['Sum  Σx',S.fmtRat(a.sum,dp),S.fmtFrac(a.sum)],['Minimum',S.fmtRat(a.min,dp),null],['Maximum',S.fmtRat(a.max,dp),null],['Range',S.fmtRat(a.range,dp),null],
+   ['Mean  x̄',S.fmtRat(a.mean,dp),S.fmtFrac(a.mean)],['Sum of squared deviations  Σ(x−x̄)²',S.fmtRat(a.ss,dp),S.fmtFrac(a.ss)],
+   ['Population variance  σ²',S.fmtRat(a.popVar,dp),S.fmtFrac(a.popVar),pop],['Population standard deviation  σ',S.fmtSqrt(a.popVar,dp),null,pop],
+   ['Sample variance  s²',rStr(a.sampVar,dp),a.sampVar?S.fmtFrac(a.sampVar):null,!pop],['Sample standard deviation  s',sdStr(a.sampVar,dp),null,!pop]];
+  var tw=el('div','tw'),tb=el('table'),th=el('thead'),tr=el('tr');['Parameter','Result','Exact value'].forEach(function(h){tr.appendChild(el('th',null,h))});th.appendChild(tr);tb.appendChild(th);
+  var body=el('tbody');rows.forEach(function(r){var tr=el('tr',r[3]?'sel':null);tr.appendChild(el('td',null,r[0]));tr.appendChild(el('td','n',r[1]));tr.appendChild(el('td','n',r[2]||'—'));body.appendChild(tr)});
+  tb.appendChild(body);tw.appendChild(tb);out.appendChild(tw);
+  var act=el('div','act');
+  var c=el('button','btn pri','Copy results');c.type='button';c.onclick=function(){copy(resultText(p,a),c)};act.appendChild(c);
+  var d=el('button','btn','Download CSV');d.type='button';d.onclick=function(){csv(p,a)};act.appendChild(d);
+  out.appendChild(act);
+  steps(p,a);xcheck(a);
+}
+
+function steps(p,a){
+  var dp=st.dp,pop=st.type==='pop',box=$('steps'),n=a.n,sd=dp+2;box.textContent='';
+  var dv=S.deviations(p.values,a.mean),L=[];
+  L.push('1. Count and sum\n   n = '+n+'\n   Σx = '+S.fmtRat(a.sum,sd));
+  L.push('2. Mean\n   x̄ = Σx / n = '+S.fmtRat(a.sum,sd)+' / '+n+' = '+S.fmtRat(a.mean,sd));
+  L.push('3. Squared deviations from the mean (table below)\n   Σ(x − x̄)² = '+S.fmtRat(a.ss,sd));
+  if(pop){L.push('4. Population variance\n   σ² = Σ(x − μ)² / N = '+S.fmtRat(a.ss,sd)+' / '+n+' = '+S.fmtRat(a.popVar,sd));
+    L.push('5. Population standard deviation\n   σ = √σ² = √'+S.fmtRat(a.popVar,sd)+' = '+S.fmtSqrt(a.popVar,dp))}
+  else if(n>1){L.push('4. Sample variance\n   s² = Σ(x − x̄)² / (n − 1) = '+S.fmtRat(a.ss,sd)+' / '+(n-1)+' = '+S.fmtRat(a.sampVar,sd));
+    L.push('5. Sample standard deviation\n   s = √s² = √'+S.fmtRat(a.sampVar,sd)+' = '+S.fmtSqrt(a.sampVar,dp))}
+  else L.push('4. Sample variance\n   n − 1 = 0, so the sample variance and standard deviation are undefined for one observation.');
+  box.appendChild(el('div','f',L.join('\n\n')));
+  var LIM=60,tw=el('div','tw');tw.style.marginTop='10px';var tb=el('table'),tr=el('tr');
+  ['#','x','x − x̄','(x − x̄)²'].forEach(function(h){tr.appendChild(el('th',null,h))});tb.appendChild(tr);
+  dv.slice(0,LIM).forEach(function(r,i){var tr=el('tr');tr.appendChild(el('td','n',String(i+1)));tr.appendChild(el('td','n',S.fmtRat(r.x,sd)));tr.appendChild(el('td','n',S.fmtRat(r.dev,sd)));tr.appendChild(el('td','n',S.fmtRat(r.sq,sd)));tb.appendChild(tr)});
+  var f=el('tr');f.appendChild(el('th',null,'Σ'));f.appendChild(el('th','n',S.fmtRat(a.sum,sd)));f.appendChild(el('th','n',S.fmtRat(S.rat.sub(a.sum,S.rat.mk(BigInt(n),1n).n===0n?a.sum:a.sum.constructor===Object?a.sum:a.sum),sd).replace(/.*/,'')));f.appendChild(el('th','n',S.fmtRat(a.ss,sd)));tb.appendChild(f);
+  tw.appendChild(tb);box.appendChild(tw);
+  var nt='Deviations are computed exactly and shown to '+sd+' decimal places.';if(n>LIM)nt+=' Only the first '+LIM+' of '+n+' rows are listed; totals use all values.';
+  box.appendChild(el('p','note',nt));
+}
+
+function sig(x,y){if(x===y)return 15;var d=Math.abs(x-y),m=Math.max(Math.abs(x),Math.abs(y));return m===0?15:Math.max(0,Math.min(15,Math.floor(-Math.log10(d/m))))}
+function xcheck(a){
+  var w=a.welford,pv=S.toFloat(a.popVar),lines=['Independent float64 (Welford) calculation vs exact result',''];
+  lines.push('Mean          exact '+S.toFloat(a.mean).toPrecision(15)+'   Welford '+w.mean.toPrecision(15));
+  lines.push('Pop. variance exact '+pv.toPrecision(15)+'   Welford '+w.popVar.toPrecision(15)+'   agree to ~'+sig(pv,w.popVar)+' significant digits');
+  if(a.sampVar){var sv=S.toFloat(a.sampVar);lines.push('Samp. variance exact '+sv.toPrecision(15)+'   Welford '+w.sampVar.toPrecision(15)+'   agree to ~'+sig(sv,w.sampVar)+' significant digits')}
+  lines.push('','Floating-point disagreement on extreme data (huge offset, tiny spread) is expected; the exact result is the reference.');
+  $('xcheck').textContent=lines.join('\n');
+}
+
+function resultText(p,a){var dp=st.dp,pop=st.type==='pop';
+  return ['Elecmetric Standard Deviation Calculator (Mode 01)','Data: '+p.values.map(function(v){return v.raw}).join(', '),'Type: '+(pop?'Population':'Sample')+'   Precision: '+dp+' dp','',
+   'n = '+a.n,'Sum = '+S.fmtRat(a.sum,dp),'Mean = '+S.fmtRat(a.mean,dp),'Sum of squared deviations = '+S.fmtRat(a.ss,dp),
+   'Population variance = '+S.fmtRat(a.popVar,dp),'Population SD = '+S.fmtSqrt(a.popVar,dp),'Sample variance = '+rStr(a.sampVar,dp),'Sample SD = '+sdStr(a.sampVar,dp),
+   'Min = '+S.fmtRat(a.min,dp)+'   Max = '+S.fmtRat(a.max,dp)+'   Range = '+S.fmtRat(a.range,dp)].join('\n')}
+function copy(t,btn){var done=function(){var o=btn.textContent;btn.textContent='Copied';setTimeout(function(){btn.textContent=o},1400)};
+  if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(t).then(done,fb);else fb();
+  function fb(){var ta=el('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');done()}catch(e){}document.body.removeChild(ta)}}
+function csv(p,a){var dp=st.dp+2,dv=S.deviations(p.values,a.mean),q=function(s){return '"'+String(s).replace(/"/g,'""')+'"'};
+  var L=['Elecmetric Standard Deviation Calculator (Mode 01)','Parameter,Value'];
+  [['n',a.n],['Sum',S.fmtRat(a.sum,dp)],['Mean',S.fmtRat(a.mean,dp)],['Sum of squared deviations',S.fmtRat(a.ss,dp)],['Population variance',S.fmtRat(a.popVar,dp)],['Population SD',S.fmtSqrt(a.popVar,dp)],['Sample variance',rStr(a.sampVar,dp)],['Sample SD',sdStr(a.sampVar,dp)]].forEach(function(r){L.push(q(r[0])+','+q(r[1]))});
+  L.push('','#,x,x - mean,(x - mean)^2');dv.forEach(function(r,i){L.push([i+1,S.fmtRat(r.x,dp),S.fmtRat(r.dev,dp),S.fmtRat(r.sq,dp)].join(','))});
+  var b=new Blob([L.join('\r\n')],{type:'text/csv'}),u=URL.createObjectURL(b),l=document.createElement('a');l.href=u;l.download='standard-deviation-results.csv';document.body.appendChild(l);l.click();document.body.removeChild(l);setTimeout(function(){URL.revokeObjectURL(u)},1000)}
+
+/* history: in memory, mirrored to localStorage when available */
+var H=[];try{H=JSON.parse(localStorage.getItem('em_sd_hist')||'[]')}catch(e){}
+function save(txt){var t=txt.trim();if(!t)return;if(H.length&&H[0]===t)return;H=[t].concat(H.filter(function(x){return x!==t})).slice(0,10);try{localStorage.setItem('em_sd_hist',JSON.stringify(H))}catch(e){}drawH()}
+function drawH(){var b=$('hist');b.textContent='';if(!H.length){b.appendChild(el('p','note','No calculations yet.'));return}
+  H.forEach(function(t){var x=el('button',null,t.replace(/\s+/g,' '));x.type='button';x.title=t;x.onclick=function(){$('data').value=t;run();window.scrollTo({top:0,behavior:'smooth'})};b.appendChild(x)})}
+$('clearh').onclick=function(){H=[];try{localStorage.removeItem('em_sd_hist')}catch(e){}drawH()};
+
+/* in-page reference tests */
+var T=[
+ ['2, 4, 4, 4, 5, 5, 7, 9','Population SD = 2',function(a){return S.fmtSqrt(a.popVar,6)==='2.000000'}],
+ ['2, 4, 4, 4, 5, 5, 7, 9','Sample SD ≈ 2.138089935',function(a){return S.fmtSqrt(a.sampVar,9)==='2.138089935'}],
+ ['2, 4, 4, 4, 5, 5, 7, 9','Sum 40, SS 32, sample variance 4.571',function(a){return S.fmtRat(a.sum,0)==='40'&&S.fmtRat(a.ss,0)==='32'&&S.fmtRat(a.sampVar,3)==='4.571'}],
+ ['5, 5, 5, 5','Both SDs = 0',function(a){return S.fmtSqrt(a.popVar,6)==='0.000000'&&S.fmtSqrt(a.sampVar,6)==='0.000000'}],
+ ['7','Population SD = 0; sample undefined',function(a){return S.fmtSqrt(a.popVar,6)==='0.000000'&&a.sampVar===null}],
+ ['-4, -2, 0, 2, 4','Population SD ≈ 2.828427',function(a){return S.fmtSqrt(a.popVar,6)==='2.828427'}],
+ ['10, 10, 10, 12, 12, 15','Population SD ≈ 1.802776 (10:3, 12:2, 15:1)',function(a){return S.fmtSqrt(a.popVar,6)==='1.802776'}],
+ ['1/3 2/3 1','Exact fractions: population variance = 2/27',function(a){return S.fmtFrac(a.popVar)==='2/27'}],
+ ['1000000000000001 1000000000000002 1000000000000003','Large offset: population variance = 2/3, sample variance = 1',function(a){return S.fmtFrac(a.popVar)==='2/3'&&S.fmtFrac(a.sampVar)==='1'}],
+ ['6.58 6.60 6.61 6.59 6.62','Current readings: mean 6.600, sample SD 0.01581',function(a){return S.fmtRat(a.mean,3)==='6.600'&&S.fmtSqrt(a.sampVar,5)==='0.01581'}]
+];
+$('runtests').onclick=function(){var tb=$('tests');tb.textContent='';var t=el('table'),h=el('tr');['Data','Expectation','Result'].forEach(function(x){h.appendChild(el('th',null,x))});t.appendChild(h);var np=0;
+  T.forEach(function(c){var ok=false;try{ok=c[2](S.analyse(S.parseData(c[0]).values))}catch(e){}if(ok)np++;var r=el('tr');r.appendChild(el('td','n',c[0].length>34?c[0].slice(0,32)+'…':c[0]));r.appendChild(el('td',null,c[1]));r.appendChild(el('td',ok?'pass':'failc',ok?'PASS':'FAIL'));t.appendChild(r)});
+  var bad=[['Invalid text input','1, two, 3',function(){return S.parseData('1, two, 3').errors.length===1}],['Empty dataset','',function(){return S.parseData('').values.length===0}]];
+  bad.forEach(function(c){var ok=c[2](); if(ok)np++;var r=el('tr');r.appendChild(el('td','n',c[1]||'(empty)'));r.appendChild(el('td',null,c[0]+': validation error'));r.appendChild(el('td',ok?'pass':'failc',ok?'PASS':'FAIL'));t.appendChild(r)});
+  tb.appendChild(t);tb.appendChild(el('p','note',np+' of '+(T.length+bad.length)+' passed.'))};
+
+$('data').addEventListener('input',run);drawH();sync();run();
+})();
+</script>
+</body></html>

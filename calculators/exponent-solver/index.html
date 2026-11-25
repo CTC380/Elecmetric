@@ -1,0 +1,927 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><style data-crumbs>.crumbs{font-size:13px;color:var(--muted);margin:0 0 10px}.crumbs ol{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:2px 0}.crumbs li+li::before{content:"\203A";margin:0 7px;opacity:.7}.crumbs a{color:inherit}.crumbs [aria-current]{color:var(--ink)}</style><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'"><title>Exponent Solver: Find the Missing Base or Exponent</title><meta name="description" content="Free exponent solver: know two of the base, exponent and result of a^n = y and find the third, with exact fractions, radicals and steps."><meta property="og:title" content="Exponent Solver: Find the Missing Base or Exponent"><meta property="og:description" content="Free exponent solver: know two of the base, exponent and result of a^n = y and find the third, with exact fractions, radicals and steps."><meta property="og:type" content="website"><meta property="og:site_name" content="Elecmetric"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Exponent Solver: Find the Missing Base or Exponent"><meta name="twitter:description" content="Free exponent solver: know two of the base, exponent and result of a^n = y and find the third, with exact fractions, radicals and steps."><meta name="theme-color" content="#043B79"><link rel="icon" href="../../icon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="../../apple-touch-icon.png"><link rel="manifest" href="../../manifest.webmanifest"><style>.fmodes{display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px;margin:0 0 12px}.fmodes .ns-l{margin:0 4px 0 0}.fmodes .chip.on{background:var(--gold-fill);border-color:var(--gold);font-weight:700}.fmodes .chip.soon{opacity:.6;cursor:default}#ex .ex-eq{font:600 22px var(--mono);margin:0 0 10px;color:var(--muted)}#ex .ex-eq span{color:var(--num)}#ex .ex-keys .btn2{min-width:44px}#ex sup{font-size:.7em}#ex .ns-card{padding:16px}#ex .ns-grid{display:grid;gap:12px;margin-bottom:12px}#ex .dp3{grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}#ex .dp4{grid-template-columns:repeat(auto-fit,minmax(185px,1fr))}#ex .dp-pair{display:grid;grid-template-columns:minmax(0,1fr) minmax(110px,150px);gap:8px;align-items:end}#ex .ns-l,#ex label.ns-l{display:block;font-weight:600;font-size:13px;margin:0 0 4px}#ex .ns-in,#ex .ns-sel{display:block;width:100%;box-sizing:border-box;font:500 18px/1.3 var(--mono);padding:10px 12px;min-height:48px;border-radius:8px;border:1px solid var(--line);background:var(--field);color:var(--ink)}#ex .ns-sel{font:500 15px var(--body)}#ex .ns-in:focus,#ex .ns-sel:focus{outline:2px solid var(--gold);outline-offset:1px}#ex .ns-in.bad{border-color:var(--err)}#ex .ns-in.solved{background:var(--gold-fill);border-color:var(--gold);font-weight:700}#ex .ns-in::placeholder{color:var(--muted);opacity:1}#ex .ns-msg{min-height:1.4em;margin:4px 0 8px;color:var(--err)}#ex .ns-msg.hint{color:var(--muted)}#ex .ns-act{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:4px 0 10px}#ex .btn2,#ex .chipb{font:600 13px var(--body);color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:8px 12px;min-height:38px;cursor:pointer}#ex .btn2:hover,#ex .chipb:hover{background:var(--field)}#ex .chipb{border-radius:999px;padding:5px 12px;min-height:32px;font-weight:500;margin:3px 4px 3px 0}#ex .btn2:focus-visible,#ex .chipb:focus-visible{outline:2px solid var(--gold);outline-offset:2px}#ex .ns-try{margin:0 0 12px}#ex .dp-dll{margin:0}#ex pre.al{font:600 15px/1.6 var(--mono);background:var(--field);border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin:6px 0 12px;overflow-x:auto;color:var(--num);white-space:pre-wrap;overflow-wrap:anywhere}#ex .res .big{font:700 26px/1.4 var(--mono);color:var(--num);word-break:break-all}#ex .res .big .sym{color:var(--muted);font-weight:600}#ex .res .big.src{background:var(--gold-fill);border-radius:6px;padding:0 6px}#ex .res .big .btn2{vertical-align:middle;margin-left:8px;padding:2px 8px;min-height:28px}#ex .res .sub{color:var(--muted);margin:2px 0 8px}#ex .ns-t td.r{font:600 15px var(--mono);color:var(--num);text-align:left;word-break:break-all}#ex .ns-t tr.cu td,#ex .ns-t tr.cu th{background:var(--gold-fill)}#ex .ns-t th[scope=row]{text-align:left;text-transform:none;letter-spacing:normal}#ex .ns-facts{margin:12px 0;display:flex;flex-wrap:wrap;gap:6px 18px;font-size:14px}#ex .ns-facts b{font-family:var(--mono)}#ex .note.warn{color:var(--ink);border-left:3px solid var(--gold);padding-left:10px}#ex h3{margin:14px 0 4px}#ex .dp-hist{list-style:none;margin:0 0 8px;padding:0}#ex .dp-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin:8px 0 10px}#ex .dp-c{border:1px solid var(--line);border-radius:10px;padding:10px 12px;background:var(--surface)}#ex .dp-c .big{font:700 26px/1.4 var(--mono);color:var(--num);word-break:break-all}#ex .dp-c .big .btn2{vertical-align:middle;margin-left:8px;padding:2px 8px;min-height:28px}#ex .dp-c .sub{color:var(--muted);font-size:14px}#ex .dp-bar{display:flex;height:22px;border-radius:6px;overflow:hidden;border:1px solid var(--line);background:var(--field)}#ex .dp-bar .rem{background:var(--gold);display:block}#ex .dp-bar .dec{flex:1;background:repeating-linear-gradient(45deg,var(--field),var(--field) 6px,var(--line) 6px,var(--line) 7px)}#ex .dp-key{display:flex;gap:16px;font-size:13px;margin:4px 0 12px}#ex .dp-key i{display:inline-block;width:12px;height:12px;margin-right:6px;border:1px solid var(--line);vertical-align:-1px}#ex .dp-key .k1{background:var(--gold)}#ex .dp-key .k2{background:var(--field)}#ex .ns-t td.r,#ex .ns-t th[scope=row]{font-variant-numeric:tabular-nums}@media(max-width:700px){#ex .dp-c .big{font-size:20px}}td.n{font-family:var(--mono)}.sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}code{font-family:var(--mono)}[hidden]{display:none!important}@media(max-width:700px){#ex .res .big{font-size:20px}}@media print{#ex .ns-act,#ex .ns-try,#ex .fmodes{display:none}}#method pre.al{font:600 14px/1.6 var(--mono);background:var(--field);border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin:6px 0 12px;overflow-x:auto;color:var(--num);white-space:pre-wrap;overflow-wrap:anywhere}#method h3{margin:14px 0 4px}#ex .ex-cls{margin:8px 0 12px;padding:8px 12px;border-left:4px solid var(--line);background:var(--field);border-radius:6px}#ex .ex-cls.c-unique,#ex .ex-cls.c-multiple{border-left-color:var(--gold)}#ex .ex-cls.c-none{border-left-color:var(--err)}#ex .ns-in[readonly]{cursor:default}#ex .ex-unk .btn2[aria-pressed=true]{background:var(--gold-fill);border-color:var(--gold);font-weight:700}</style><style>.fb textarea{width:100%;font:15px/1.5 var(--body);padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--field);color:var(--ink);resize:vertical}.fb textarea:focus{outline:2px solid var(--gold);outline-offset:1px}:root{--bg:#F1F6FC;--surface:#fff;--ink:#0A2347;--muted:#4B5F86;--line:#D3DFEF;--navy:#043B79;--on-navy:#FFFFFF;--gold:#B34A00;--gold-fill:#FFEFDC;--field:#F4F8FE;--err:#B3261E;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;--display:"Arial Narrow","Roboto Condensed",system-ui,sans-serif;--body:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--navy-2:#0A5BBB;--cyan:#0062DE;--num:#043B79;--orange:#FF7A00;--gold-grad:linear-gradient(135deg,#FFA43D 0%,#FF7A00 52%,#E85F00 100%);--hero:radial-gradient(1000px 360px at 90% -35%,rgba(0,98,222,.55),transparent 62%),radial-gradient(640px 240px at 0% 110%,rgba(255,122,0,.20),transparent 60%),linear-gradient(135deg,#032A58,#043B79 58%,#0A55A8);--r:14px;--sh-0:0 1px 2px rgba(4,35,80,.06);--sh-1:0 1px 2px rgba(4,35,80,.05),0 6px 18px rgba(4,35,80,.07);--sh-2:0 2px 4px rgba(4,35,80,.05),0 22px 44px -14px rgba(4,35,80,.24);--ring:0 0 0 3px rgba(0,98,222,.26);color-scheme:light dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}@media(prefers-color-scheme:dark){:root{--bg:#04122B;--surface:#0A2046;--ink:#EAF2FF;--muted:#A0B5DA;--line:#183868;--navy:#031B3F;--on-navy:#EAF2FF;--gold:#FF9A3D;--gold-fill:#3D2410;--field:#071B3C;--err:#FF8A80;--navy-2:#0B4A98;--cyan:#4DA3FF;--orange:#FF8A1F;--num:#FFB066;--sh-0:0 1px 2px rgba(0,0,0,.4);--sh-1:0 1px 2px rgba(0,0,0,.35),0 8px 22px rgba(0,0,0,.35);--sh-2:0 2px 4px rgba(0,0,0,.4),0 24px 48px -14px rgba(0,0,0,.7);--ring:0 0 0 3px rgba(77,163,255,.34)}}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 var(--body)}a{color:inherit}header{background:var(--navy);color:var(--on-navy);border-bottom:3px solid var(--gold)}.w{max-width:860px;margin:0 auto;padding:0 max(16px,env(safe-area-inset-left,0px))}header .w{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-block:12px;flex-wrap:wrap}header a{text-decoration:none;font:600 20px var(--display);letter-spacing:.04em;text-transform:uppercase}header nav a{font:500 13px var(--body);text-transform:none;letter-spacing:0;margin-left:14px;opacity:.9}main{padding-block:24px 56px}h1{font:600 32px/1.1 var(--display);margin:0 0 8px;text-wrap:balance}h2{font:600 20px var(--display);letter-spacing:.02em;margin:28px 0 8px;text-transform:uppercase}.lede{color:var(--muted);margin:0 0 16px;max-width:62ch}.card{background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:16px 18px;margin:12px 0}.ans{border-left:4px solid var(--gold);display:flex;flex-wrap:wrap;gap:6px 24px;align-items:baseline;justify-content:space-between}.big{font:600 28px var(--display)}.jump{margin:8px 0 4px}details.more{border:1px solid var(--line);border-radius:12px;background:var(--surface);margin:14px 0;padding:0 16px;box-shadow:var(--sh-0)}details.more>summary{cursor:pointer;list-style:none}details.more>summary::-webkit-details-marker{display:none}details.more>summary h2{margin:14px 0}details.more>summary h2::after{content:"+";margin-left:auto;color:var(--gold)}details.more[open]>summary h2::after{content:"\2212"}details.more[open]{padding-bottom:12px}@media print{.jump{display:none}}.btn{display:inline-block;background:var(--navy);color:var(--on-navy);padding:9px 16px;border-radius:4px;text-decoration:none;font-weight:600;border:1px solid var(--gold)}.chip{display:inline-block;margin:3px 6px 3px 0;padding:5px 12px;border:1px solid var(--line);border-radius:999px;background:var(--surface);text-decoration:none;font-size:14px}.chip:hover{border-color:var(--gold)}main li>a:only-child{display:inline-block;padding:3px 0}code,pre,.f,td.n{font-family:var(--mono)}.f{background:var(--field);border:1px solid var(--line);padding:10px 12px;border-radius:4px;overflow-x:auto;white-space:pre-wrap}ol.steps{padding-left:22px;font-family:var(--mono);font-size:13px}ol.steps li{margin:4px 0}.tw{overflow-x:auto}table{border-collapse:collapse;width:100%;background:var(--surface)}th,td{border:1px solid var(--line);padding:6px 10px;text-align:left}td.n{text-align:right}tr.me td{background:var(--gold-fill)}th{background:var(--field);font-weight:600}.note{color:var(--muted);font-size:13px}ul{padding-left:20px}footer{border-top:1px solid var(--line);color:var(--muted);font-size:13px;padding-block:16px}h3{font:600 16px var(--body);margin:18px 0 4px}h3+p{margin:0;max-width:68ch}.tres .tact{flex:0 0 100%;display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}@media print{.tact{display:none}}.tres .phasor{flex:0 0 100%;margin-top:12px}.phasor svg{display:block;width:100%;max-width:360px;height:auto;font:11px var(--body)}.arow{grid-column:1/-1;border:1px solid var(--line);border-radius:10px;padding:10px 12px 12px;margin:0}.arow[hidden]{display:none}.arow legend{font-weight:700;font-size:13px;padding:0 6px}.arow .tgrid{margin-top:2px}.arow-bar{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:8px;align-items:center}.arow-bar .note{margin:0}.arow .rm{margin-top:10px}.mgrid{margin-top:10px}.mgrid .mbody[hidden]{display:none}.mgrid .tgrid{margin-top:8px}.mgrid .fillm{margin-top:10px}.tres .rchart{flex:0 0 100%;margin-top:12px}.rchart svg{display:block;width:100%;height:auto;font:12px var(--body)}.rchart h3{margin:0 0 6px;font-size:14px}.tres .carry{flex:0 0 100%;margin-top:10px}.carry .chip{display:inline-block;margin:4px 6px 0 0}.arow .rm[hidden],#add-row[hidden]{display:none}@media print{.arow-bar,.arow .rm{display:none}}.tgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px 16px}.tgrid label{display:block;font-weight:600;font-size:13px;margin-bottom:4px}.trow{display:flex;gap:6px}.trow input,.trow select,.tgrid>div>select{font:16px var(--body);color:var(--ink);background:var(--field);border:1px solid var(--line);border-radius:4px;padding:8px;min-height:40px}.trow input{flex:1;min-width:0}.tgrid>div>select{width:100%}.hint{color:var(--muted);font-size:12px;margin-top:3px}.err{color:var(--err)}.tres{display:flex;flex-wrap:wrap;gap:6px 28px;align-items:baseline}.tres .big small{display:block;font:500 13px var(--body);color:var(--muted)}::selection{background:color-mix(in srgb,var(--gold) 30%,transparent)}body{background-image:radial-gradient(900px 520px at 100% -8%,color-mix(in srgb,var(--cyan) 10%,transparent),transparent 62%),radial-gradient(700px 420px at -5% 0%,color-mix(in srgb,var(--gold) 8%,transparent),transparent 60%);background-attachment:fixed;-webkit-font-smoothing:antialiased}header{position:relative;overflow:hidden;background:var(--hero);border-bottom:0;box-shadow:0 10px 30px -14px rgba(5,14,34,.6)}header::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);background-size:34px 34px;-webkit-mask-image:linear-gradient(100deg,#000,transparent 70%);mask-image:linear-gradient(100deg,#000,transparent 70%);pointer-events:none}header::after{content:"";position:absolute;left:0;right:0;bottom:0;height:18px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44 14'%3E%3Cpath d='M0 12.5H8L14 2l7 10.5 5-6 4 6H44' fill='none' stroke='%23FF7A00' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat right 36px bottom 3px/44px 14px,linear-gradient(90deg,#FF7A00,#FFA43D 55%,#FF7A00) no-repeat bottom/100% 4px;pointer-events:none}header .w{position:relative;z-index:1;padding-block:8px 10px}header .w>a.brand{display:block;line-height:0;letter-spacing:0;text-transform:none;background:#fff;border-radius:10px;padding:4px 10px;box-shadow:0 2px 12px rgba(2,16,42,.4),0 0 0 1px rgba(255,255,255,.5)}header .w>a.brand img{display:block;height:34px;width:auto}@media(max-width:600px){header .w>a.brand img{height:30px}}header a:focus-visible{outline-color:#FFB066}header nav a{color:#DCE5F5;opacity:1;padding:6px 12px;border-radius:999px;margin-left:6px;transition:background .15s,color .15s}header nav a:hover{background:rgba(255,255,255,.12);color:#FFB066}main.w{padding-top:36px;padding-bottom:64px}h1{font-size:36px;letter-spacing:.005em}h1::after{content:"";display:block;width:56px;height:3px;border-radius:3px;background:var(--gold-grad);margin-top:12px}h2{display:flex;align-items:center;gap:10px}h2::before{content:"";width:4px;height:.95em;border-radius:2px;background:var(--gold-grad);flex:none}h3{color:var(--gold)}.card{border-radius:14px;box-shadow:var(--sh-1)}.ans{position:relative;overflow:hidden;border-left:1px solid var(--line);padding-left:24px;background:linear-gradient(135deg,color-mix(in srgb,var(--gold) 12%,var(--surface)),var(--surface) 65%);border-color:color-mix(in srgb,var(--gold) 40%,var(--line));box-shadow:var(--sh-2)}.ans::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--gold-grad)}.big{color:var(--num);font-weight:700}.btn{border-radius:10px;border:0;background:var(--gold-grad);color:#0A2347;font-weight:700;box-shadow:var(--sh-1);transition:transform .15s,box-shadow .15s,filter .15s}.btn:hover{transform:translateY(-1px);box-shadow:var(--sh-2);filter:brightness(1.06)}.chip{box-shadow:var(--sh-0);transition:border-color .15s,background .15s,transform .15s,box-shadow .15s}.chip:hover{transform:translateY(-1px);box-shadow:var(--sh-1);border-color:var(--orange);background:color-mix(in srgb,var(--orange) 8%,var(--surface))}.f{border-radius:12px;border-left:3px solid var(--cyan)}.tw{border:1px solid var(--line);border-radius:12px;box-shadow:var(--sh-0)}.tw table{border:0}table{border-collapse:separate;border-spacing:0}th,td{border:0;border-bottom:1px solid var(--line)}tr:last-child td{border-bottom:0}th{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);background:var(--field)}tbody tr:hover td{background:color-mix(in srgb,var(--cyan) 7%,transparent)}tr.me td{background:var(--gold-fill)}.trow input,.trow select,.tgrid>div>select{border-radius:10px;transition:border-color .15s,box-shadow .15s}.trow select{background-color:color-mix(in srgb,var(--navy) 5%,var(--field))}.trow input:focus,.trow select:focus,.tgrid>div>select:focus{outline:0;border-color:var(--cyan);box-shadow:var(--ring)}.tgrid label{color:var(--ink)}a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--cyan);outline-offset:2px}footer{padding-block:20px}footer.mf{margin-top:24px;padding:0;border-top:0;background:var(--hero);color:#DCE5F5;font-size:13px;position:relative}footer.mf::before{content:"";display:block;height:4px;background:linear-gradient(90deg,#FF7A00,#FFA43D 55%,#FF7A00)}.mf-w{max-width:1100px;margin:0 auto;padding:36px max(16px,env(safe-area-inset-left,0px)) calc(24px + env(safe-area-inset-bottom,0px))}.mf-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:28px 24px}.mf-h{display:block;margin:0 0 12px;padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,.18);font:600 14px var(--display);letter-spacing:.06em;text-transform:uppercase;color:#FFB066}.mf-col ul{list-style:none;margin:0;padding:0}.mf-col li{margin:0}.mf-col a{display:inline-block;padding:4px 0;color:#DCE5F5;text-decoration:none}.mf-h a{padding:0;color:inherit}.mf-col a:hover,.mf-legal a:hover{color:#FFB066;text-decoration:underline}.mf a:focus-visible{outline:2px solid #FFB066;outline-offset:2px;border-radius:2px}.mf-legal{margin-top:28px;padding-top:18px;border-top:1px solid rgba(255,255,255,.18);color:#A9BADB;max-width:80ch}.mf-legal a{color:#DCE5F5}@media(max-width:980px){.mf-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(max-width:600px){.mf-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.mf-col a{padding:7px 0}}@media print{footer.mf{background:none;color:inherit}footer.mf::before,.mf-grid{display:none}.mf-legal{border:0;color:inherit}}@media(prefers-reduced-motion:reduce){.btn,.chip{transition:none;transform:none!important}}@media print{header{background:none;box-shadow:none}header::before,header::after,.ans::before,h1::after,h2::before{display:none}header .w>a.brand{box-shadow:none;padding:0}body{background-image:none}.card,.ans,.tw{box-shadow:none}.ans{padding-left:18px}}.totop{position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:60;min-height:44px;padding:0 18px;border:0;border-radius:999px;background:linear-gradient(135deg,#FFA43D,#FF7A00 52%,#E85F00);color:#0A2347;font:700 14px system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;box-shadow:0 2px 4px rgba(4,35,80,.2),0 14px 30px -8px rgba(4,35,80,.45);cursor:pointer;opacity:0;transform:translateY(12px);pointer-events:none;transition:opacity .2s,transform .2s,bottom .2s}.totop.on{opacity:1;transform:none;pointer-events:auto}.totop:hover{filter:brightness(1.06)}.totop:focus-visible{outline:2px solid #fff;outline-offset:2px;box-shadow:0 0 0 4px #0062DE}@media(prefers-reduced-motion:reduce){.totop{transition:none}}@media print{.totop{display:none}}.vstat{padding:12px 16px;border-left:4px solid var(--muted,#6b7a90)}.vstat.v-verified{border-left-color:#1f9d57}.vstat.v-reference{border-left-color:#2a7fd4}.vstat.v-indicative{border-left-color:#c98a10}[hidden]{display:none!important}header{position:sticky;top:0;z-index:30}header .w{max-width:1120px;flex-wrap:nowrap;gap:16px;padding-block:8px}header .brand{flex:0 0 auto}header::after{height:3px;background:linear-gradient(90deg,#FF7A00,#FFA43D 55%,#FFC37A)}header nav{display:flex;gap:2px;overflow-x:auto;white-space:nowrap;scrollbar-width:none;min-width:0}header nav::-webkit-scrollbar{display:none}header nav a{margin-left:0;padding:8px 11px;border-radius:8px;opacity:.92}header nav a:hover,header nav a:focus-visible{background:rgba(255,255,255,.14);opacity:1;outline:none}main.calc{max-width:1120px;padding-top:18px}.calc h1{font-size:28px;margin-bottom:4px}.calc .lede{margin:0 0 10px;max-width:70ch}.calc-vb{display:inline-flex;align-items:center;gap:7px;margin:0 0 14px;padding:4px 11px;border:1px solid var(--line);border-radius:999px;background:var(--surface);font:600 12.5px var(--body);color:var(--ink);text-decoration:none}.calc-vb::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--gold)}.calc-vb:hover,.calc-vb:focus-visible{border-color:var(--gold);outline:none}.calc #try{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(290px,1fr);gap:0 20px;align-items:start}.calc #try>h2{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;margin:0}.calc #try>form{grid-column:1;margin:0}.calc #try>#try-out{grid-column:2;grid-row:1;position:sticky;top:64px;margin:0;flex-direction:column;align-items:stretch;gap:12px}.calc .tgrid{grid-template-columns:repeat(auto-fill,minmax(210px,1fr));align-items:start}.hd{margin-top:4px}.hd summary{cursor:pointer;font-size:12px;color:var(--muted);list-style:none}.hd summary::-webkit-details-marker{display:none}.hd summary::before{content:"\24D8  "}.hd[open]{font-size:12px;line-height:1.45}.hd[open] summary{margin-bottom:3px}.calc-limit{margin:14px 0 0;padding:10px 14px;border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:8px;background:var(--surface);font-size:14px}.calc-limit h2{font:700 13px var(--body);margin:0 0 2px;letter-spacing:0;text-transform:none}.calc-limit h2::before{display:none}.calc-limit p{margin:0}.calc-act{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;margin:12px 0 4px}.calc-act .btn{margin:0}.calc-act .note{margin:0;flex:1 1 340px;font-size:12px}.calc .cref{max-width:860px;margin-top:6px}.calc .jump{position:sticky;top:52px;z-index:10;display:flex;gap:6px;overflow-x:auto;white-space:nowrap;scrollbar-width:none;background:var(--bg);padding:8px 0;margin:10px 0 4px;border-bottom:1px solid var(--line)}.calc .jump::-webkit-scrollbar{display:none}.calc .jump .chip{flex:0 0 auto;margin:0}@media (max-width:980px){.calc #try{grid-template-columns:minmax(0,1fr)}.calc #try>#try-out{grid-column:1;grid-row:auto;position:static;margin-top:12px}}#mini-res{position:fixed;left:0;right:0;bottom:0;z-index:40;display:flex;flex-wrap:wrap;gap:2px 18px;padding:8px 16px calc(8px + env(safe-area-inset-bottom,0px));background:var(--surface);color:var(--ink);border-top:3px solid var(--gold);box-shadow:0 -8px 20px -10px rgba(5,20,50,.5);text-decoration:none}#mini-res span{display:block}#mini-res b{display:block;font:600 19px/1.2 var(--display)}#mini-res small{display:block;font-size:11px;color:var(--muted)}@media (min-width:981px){#mini-res{display:none!important}}@media (max-width:640px){main.calc{padding-top:12px}.calc h1{font-size:24px}.calc .jump{top:0}header{position:static}header .w{flex-wrap:wrap;gap:4px 8px;padding-block:8px 4px}header nav{flex:1 1 100%;-webkit-mask-image:linear-gradient(90deg,#000 90%,transparent);mask-image:linear-gradient(90deg,#000 90%,transparent)}}</style></head><body><header><div class="w"><a class="brand" href="../../"><img src="../../logo.png" alt="Elecmetric" width="160" height="40"></a><nav><a href="../">Calculators</a><a href="../all-tools/">All Tools</a><a href="../../converters/index.html">Conversion Centre</a><a href="../../pages/index.html">Conversions</a><a href="../../technical-library/">Technical Library</a><a href="../../index.html#verification">How it is verified</a></nav></div></header><main class="w"><nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="../../">Home</a></li><li><a href="../../categories/mathematics/">Mathematics</a></li><li><a href="../../categories/mathematics/#algebra">Algebra</a></li><li><span aria-current="page">Exponent Solver: Find the Missing Base, Exponent or Result</span></li></ol></nav><h1>Exponent Solver: Find the Missing Base, Exponent or Result</h1><p class="lede">Know any two of the base, the exponent and the result of a<sup>n</sup> = y and find the third: 2<sup>x</sup> = 32 gives x = 5, x<sup>3</sup> = 125 gives x = 5 and x<sup>2</sup> = 9 gives 3 and −3. The solver says whether the answer is unique, has several real values, does not exist or is indeterminate, and shows the working in your own numbers. Calculate. Convert. Understand.</p><nav class="jump" aria-label="On this page"><a class="chip" href="#examples">Worked examples</a><a class="chip" href="#formulas">Which formula finds which value</a><a class="chip" href="#method">How the solver works</a><a class="chip" href="#rules">Rules and limits</a><a class="chip" href="#faq">FAQ</a><a class="chip" href="#related">Related</a></nav><div id="ex"><nav class="fmodes" aria-label="Exponent Calculator modes"><span class="ns-l">Exponent Calculator</span><a class="chip" href="../exponent-calculator/">Mode 01 · Power Calculator</a><a class="chip" href="../negative-fractional-exponents-calculator/">Mode 02 · Negative & Fractional Exponents</a><a class="chip on" href="../exponent-solver/" aria-current="page">Mode 03 · Missing Value Solver</a><a class="chip" href="../exponent-laws-calculator/">Mode 04 · Exponent Laws</a><a class="chip" href="../engineering-powers-scientific-notation/">Mode 05 · Engineering Powers & Scientific Notation</a></nav><section class="card ns-card" aria-label="Missing value solver for a to the power n equals y"><p class="ex-eq" aria-hidden="true"><span>a</span><sup>n</sup> = <span>y</span></p><div class="ns-act ex-unk" id="ex-unk" role="group" aria-label="Which value do you want to find"><span class="ns-l dp-dll">Solve for</span><button type="button" class="btn2" data-solve="n" aria-pressed="true">Exponent n</button><button type="button" class="btn2" data-solve="a" aria-pressed="false">Base a</button><button type="button" class="btn2" data-solve="y" aria-pressed="false">Result y</button></div><div class="ns-grid dp3"><div class="ns-f"><label id="ex-la" for="ex-a" class="ns-l">Base (a)</label><input id="ex-a" class="ns-in" type="text" inputmode="text" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" aria-describedby="ex-err" value=""></div><div class="ns-f"><label id="ex-ln" for="ex-n" class="ns-l">Exponent (n)</label><input id="ex-n" class="ns-in" type="text" inputmode="text" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" aria-describedby="ex-err" value=""></div><div class="ns-f"><label id="ex-ly" for="ex-y" class="ns-l">Result (y)</label><input id="ex-y" class="ns-in" type="text" inputmode="text" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" aria-describedby="ex-err" value=""></div></div><div class="ns-act ex-keys" role="group" aria-label="Insert a symbol into the field you are typing in"><span class="ns-l dp-dll">Insert</span><button type="button" class="btn2" data-key="-" aria-label="Minus sign">−</button><button type="button" class="btn2" data-key="/" aria-label="Fraction slash">/</button><button type="button" class="btn2" data-key="." aria-label="Decimal point">.</button><button type="button" class="btn2" data-key="e" aria-label="The constant e as a base, or a power of ten as in 1e-3">e</button><button type="button" class="btn2" data-key="back" aria-label="Delete the last character">⌫</button></div><p class="note ns-msg" id="ex-err" role="status"></p><div class="ns-grid dp4"><div class="ns-f"><label for="ex-sig" class="ns-l">Show results to</label><select id="ex-sig" class="ns-sel"><option value="4">4 significant figures</option><option value="6" selected>6 significant figures</option><option value="8">8 significant figures</option><option value="10">10 significant figures</option><option value="12">12 significant figures</option><option value="15">15 significant figures</option><option value="full">Full precision (exact where possible)</option></select></div></div><div class="ns-act"><button type="button" class="btn2" data-act="clear">Clear numbers</button><button type="button" class="btn2" data-act="reset">Reset</button><button type="button" class="btn2" data-act="save">Save to history</button></div><div class="ns-try"><span class="ns-l">Try</span> <button type="button" class="chipb" data-ex="{&quot;solve&quot;:&quot;n&quot;,&quot;a&quot;:&quot;2&quot;,&quot;n&quot;:&quot;&quot;,&quot;y&quot;:&quot;32&quot;,&quot;sig&quot;:&quot;6&quot;}">2^x = 32</button><button type="button" class="chipb" data-ex="{&quot;solve&quot;:&quot;n&quot;,&quot;a&quot;:&quot;4&quot;,&quot;n&quot;:&quot;&quot;,&quot;y&quot;:&quot;8&quot;,&quot;sig&quot;:&quot;6&quot;}">4^x = 8</button><button type="button" class="chipb" data-ex="{&quot;solve&quot;:&quot;n&quot;,&quot;a&quot;:&quot;10&quot;,&quot;n&quot;:&quot;&quot;,&quot;y&quot;:&quot;0.001&quot;,&quot;sig&quot;:&quot;6&quot;}">10^x = 0.001</button><button type="button" class="chipb" data-ex="{&quot;solve&quot;:&quot;n&quot;,&quot;a&quot;:&quot;2&quot;,&quot;n&quot;:&quot;&quot;,&quot;y&quot;:&quot;10&quot;,&quot;sig&quot;:&quot;6&quot;}">2^x = 10</button><button type="button" class="chipb" data-ex="{&quot;solve&quot;:&quot;n&quot;,&quot;a&quot;:&quot;1/2&quot;,&quot;n&quot;:&quot;&quot;,&quot;y&quot;:&quot;8&quot;,&quot;sig&quot;:&quot;6&quot;}">(1/2)^x = 8</button><button type="button" class="chipb" data-ex="{&quot;solve&quot;:&quot;n&quot;,&quot;a&quot;:&quot;-8&quot;,&quot;n&quot;:&quot;&quot;,&quot;y&quot;:&quot;-2&quot;,&quot;sig&quot;:&quot;6&quot;}">(−8)^x = −2</button><button type="button" class="chipb" data-ex="{&quot;solve&quot;:&quot;n&quot;,&quot;a&quot;:&quot;e&quot;,&quot;n&quot;:&quot;&quot;,&quot;y&quot;:&quot;10&quot;,&quot;sig&quot;:&quot;6&quot;}">e^x = 10</button><button type="button" class="chipb" data-ex="{&quot;solve&quot;:&quot;n&quot;,&quot;a&quot;:&quot;2&quot;,&quot;n&quot;:&quot;&quot;,&quot;y&quot;:&quot;-8&quot;,&quot;sig&quot;:&quot;6&quot;}">2^x = −8 (none)</button><button type="button" class="chipb" data-ex="{&quot;solve&quot;:&quot;n&quot;,&quot;a&quot;:&quot;1&quot;,&quot;n&quot;:&quot;&quot;,&quot;y&quot;:&quot;1&quot;,&quot;sig&quot;:&quot;6&quot;}">1^x = 1 (indeterminate)</button><button type="button" class="chipb" data-ex="{&quot;solve&quot;:&quot;a&quot;,&quot;a&quot;:&quot;&quot;,&quot;n&quot;:&quot;3&quot;,&quot;y&quot;:&quot;125&quot;,&quot;sig&quot;:&quot;6&quot;}">x^3 = 125</button><button type="button" class="chipb" data-ex="{&quot;solve&quot;:&quot;a&quot;,&quot;a&quot;:&quot;&quot;,&quot;n&quot;:&quot;2&quot;,&quot;y&quot;:&quot;9&quot;,&quot;sig&quot;:&quot;6&quot;}">x^2 = 9</button><button type="button" class="chipb" data-ex="{&quot;solve&quot;:&quot;a&quot;,&quot;a&quot;:&quot;&quot;,&quot;n&quot;:&quot;2&quot;,&quot;y&quot;:&quot;12&quot;,&quot;sig&quot;:&quot;6&quot;}">x^2 = 12</button><button type="button" class="chipb" data-ex="{&quot;solve&quot;:&quot;a&quot;,&quot;a&quot;:&quot;&quot;,&quot;n&quot;:&quot;3&quot;,&quot;y&quot;:&quot;-27&quot;,&quot;sig&quot;:&quot;6&quot;}">x^3 = −27</button><button type="button" class="chipb" data-ex="{&quot;solve&quot;:&quot;a&quot;,&quot;a&quot;:&quot;&quot;,&quot;n&quot;:&quot;1/2&quot;,&quot;y&quot;:&quot;3&quot;,&quot;sig&quot;:&quot;6&quot;}">x^(1/2) = 3</button><button type="button" class="chipb" data-ex="{&quot;solve&quot;:&quot;a&quot;,&quot;a&quot;:&quot;&quot;,&quot;n&quot;:&quot;2/3&quot;,&quot;y&quot;:&quot;4&quot;,&quot;sig&quot;:&quot;6&quot;}">x^(2/3) = 4</button><button type="button" class="chipb" data-ex="{&quot;solve&quot;:&quot;a&quot;,&quot;a&quot;:&quot;&quot;,&quot;n&quot;:&quot;-2&quot;,&quot;y&quot;:&quot;1/4&quot;,&quot;sig&quot;:&quot;6&quot;}">x^(−2) = 1/4</button><button type="button" class="chipb" data-ex="{&quot;solve&quot;:&quot;a&quot;,&quot;a&quot;:&quot;&quot;,&quot;n&quot;:&quot;2&quot;,&quot;y&quot;:&quot;-4&quot;,&quot;sig&quot;:&quot;6&quot;}">x^2 = −4 (none)</button><button type="button" class="chipb" data-ex="{&quot;solve&quot;:&quot;a&quot;,&quot;a&quot;:&quot;&quot;,&quot;n&quot;:&quot;0&quot;,&quot;y&quot;:&quot;1&quot;,&quot;sig&quot;:&quot;6&quot;}">x^0 = 1 (indeterminate)</button><button type="button" class="chipb" data-ex="{&quot;solve&quot;:&quot;y&quot;,&quot;a&quot;:&quot;2&quot;,&quot;n&quot;:&quot;10&quot;,&quot;y&quot;:&quot;&quot;,&quot;sig&quot;:&quot;6&quot;}">2^10 = ?</button><button type="button" class="chipb" data-ex="{&quot;solve&quot;:&quot;y&quot;,&quot;a&quot;:&quot;27&quot;,&quot;n&quot;:&quot;2/3&quot;,&quot;y&quot;:&quot;&quot;,&quot;sig&quot;:&quot;6&quot;}">27^(2/3) = ?</button><button type="button" class="chipb" data-ex="{&quot;solve&quot;:&quot;y&quot;,&quot;a&quot;:&quot;-8&quot;,&quot;n&quot;:&quot;1/3&quot;,&quot;y&quot;:&quot;&quot;,&quot;sig&quot;:&quot;6&quot;}">(−8)^(1/3) = ?</button><button type="button" class="chipb" data-ex="{&quot;solve&quot;:&quot;y&quot;,&quot;a&quot;:&quot;0&quot;,&quot;n&quot;:&quot;0&quot;,&quot;y&quot;:&quot;&quot;,&quot;sig&quot;:&quot;6&quot;}">0^0 = ?</button></div><div id="ex-out" aria-live="polite"></div><div id="ex-dl" class="ns-act" hidden><span class="ns-l dp-dll">Copy and save</span><button type="button" class="btn2" data-act="copyall">Copy with working</button><button type="button" class="btn2" data-dl="txt">TXT</button><button type="button" class="btn2" data-dl="csv">CSV</button><button type="button" class="btn2" data-dl="json">JSON</button><button type="button" class="btn2" data-act="print">Print</button></div><p class="sr-only" id="ex-note" role="status" aria-live="polite"></p><noscript><p class="note">The calculator needs JavaScript. Nothing is sent anywhere.</p></noscript></section><section class="card"><h2>Working</h2><div id="ex-steps"></div></section><section class="card"><h2>History</h2><ul class="dp-hist" id="ex-hist"></ul><button type="button" class="btn2" id="ex-hclear" data-act="hclear" hidden>Clear history</button><p class="note">Kept only in this browser. Up to 10 calculations.</p></section></div><section id="examples"><h2>Worked examples</h2><div class="tw" tabindex="0" role="region" aria-label="Scrollable table: Equation, Solving for, Answer, Classification"><table><thead><tr><th>Equation</th><th>Solving for</th><th>Answer</th><th>Classification</th></tr></thead><tbody><tr><td>2^10 = ?</td><td>result y</td><td>y = 1024</td><td>unique real solution</td></tr><tr><td>2^n = 32</td><td>exponent n</td><td>n = 5</td><td>unique real solution</td></tr><tr><td>a^3 = 125</td><td>base a</td><td>a = 5</td><td>unique real solution</td></tr><tr><td>4^n = 8</td><td>exponent n</td><td>n = 3/2</td><td>unique real solution</td></tr><tr><td>10^n = 0.001</td><td>exponent n</td><td>n = −3</td><td>unique real solution</td></tr><tr><td>2^n = 10</td><td>exponent n</td><td>n ≈ 3.32193</td><td>unique real solution</td></tr><tr><td>(−8)^n = −2</td><td>exponent n</td><td>n = 1/3</td><td>unique real solution</td></tr><tr><td>a^2 = 9</td><td>base a</td><td>a = 3  or  a = −3</td><td>multiple real solutions</td></tr><tr><td>a^2 = 12</td><td>base a</td><td>a = 2√3  or  a = −2√3</td><td>multiple real solutions</td></tr><tr><td>a^(2/3) = 4</td><td>base a</td><td>a = 8  or  a = −8</td><td>multiple real solutions</td></tr><tr><td>a^(−2) = 1/4</td><td>base a</td><td>a = 2  or  a = −2</td><td>multiple real solutions</td></tr><tr><td>a^3 = −27</td><td>base a</td><td>a = −3</td><td>unique real solution</td></tr><tr><td>2^n = −8</td><td>exponent n</td><td>no real solution</td><td>no real solution</td></tr><tr><td>a^2 = −4</td><td>base a</td><td>no real solution</td><td>no real solution</td></tr><tr><td>1^n = 1</td><td>exponent n</td><td>indeterminate</td><td>indeterminate</td></tr><tr><td>a^0 = 1</td><td>base a</td><td>indeterminate</td><td>indeterminate</td></tr><tr><td>0^0 = ?</td><td>result y</td><td>indeterminate</td><td>indeterminate</td></tr></tbody></table></div><p class="note">Results calculated by this page’s engine and checked against independent arithmetic (sympy prime factorisation, Python Fraction and mpmath at 90 digits; 941 reference cases).</p></section><section id="formulas"><h2>Which formula finds which value</h2><div class="tw" tabindex="0" role="region" aria-label="Scrollable table: You know, You find, Formula, Valid when"><table><thead><tr><th>You know</th><th>You find</th><th>Formula</th><th>Valid when</th></tr></thead><tbody><tr><td>Base a and exponent n</td><td>Result y</td><td>y = a^n</td><td>a real power exists (see the rules below)</td></tr><tr><td>Base a and result y</td><td>Exponent n</td><td>n = ln y / ln a  (or log y / log a)</td><td>a &gt; 0, a ≠ 1 and y &gt; 0; a negative base needs a whole-number or odd-denominator n</td></tr><tr><td>Exponent n and result y</td><td>Base a</td><td>a = y^(1/n)</td><td>n ≠ 0; the sign of y and the parity of n decide the real roots</td></tr></tbody></table></div></section><section id="solutions"><h2>How many real solutions are there?</h2><div class="tw" tabindex="0" role="region" aria-label="Scrollable table: Case, Example, Answer"><table><thead><tr><th>Case</th><th>Example</th><th>Answer</th></tr></thead><tbody><tr><td>Unique real solution</td><td>2^x = 32, x^3 = −27</td><td>n = 5; a = −3</td></tr><tr><td>Multiple real solutions</td><td>x^2 = 9, x^(2/3) = 4</td><td>a = 3  or  a = −3; a = 8  or  a = −8</td></tr><tr><td>No real solution</td><td>2^x = −8, x^2 = −4, (−2)^x = 8</td><td>a positive base is always positive; an even power is never negative; the sign cannot match</td></tr><tr><td>Indeterminate</td><td>1^x = 1, x^0 = 1, 0^0</td><td>every value works, or the expression is undefined</td></tr></tbody></table></div><p class="note">For an exponent n = p/q in lowest terms: when q is even only a ≥ 0 has a real power; when q is odd and p is even, a and −a give the same positive value (two real bases); when p and q are both odd, a^n has the sign of a (one real base).</p></section><section id="method"><h2>How the solver works</h2><p>To find the exponent in 2<sup>x</sup> = 10, take logarithms: x ln 2 = ln 10, so x = ln 10 / ln 2. A whole number or a fraction is accepted only if it is proved with whole numbers (a^p = y^q); otherwise the result is an approximation, as here.</p><h3>The problem</h3><pre class="al" tabindex="0">a = 2
+y = 10
+Solve a^n = y for n</pre><h3>Take the logarithm of both sides</h3><pre class="al" tabindex="0">a^n = y
+n · ln(a) = ln(y)
+n = ln(y) / ln(a)
+(Any logarithm base gives the same ratio; natural logarithms are used here.)</pre><h3>Calculate</h3><pre class="al" tabindex="0">ln(2) = 0.6931471806
+ln(10) = 2.302585093
+n = 2.302585093 / 0.6931471806 = 3.32192809489</pre><h3>Exact value</h3><pre class="al" tabindex="0">n is not a whole number or a fraction with a denominator up to 1000 that satisfies a^n = y exactly, so it is irrational (or very close to a fraction with a larger denominator): the decimal is a double-precision approximation (about 15 reliable digits).</pre><h3>Result</h3><pre class="al" tabindex="0">n = ≈ 3.32193</pre><p>To find the base in x<sup>2</sup> = 12, take the square root and try both signs through the real-power rule. The root is simplified with the same method as the Negative &amp; Fractional Exponents mode.</p><h3>The problem</h3><pre class="al" tabindex="0">n = 2
+y = 12
+Solve a^n = y for a</pre><h3>Take the root</h3><pre class="al" tabindex="0">a^n = y
+a = y^(1/n)
+n = 2 (reduced), so 1/n = 1/2
+|a| = |y|^(1/2)</pre><h3>How many real solutions</h3><pre class="al" tabindex="0">The reduced exponent has an even numerator (2) and an odd denominator, so a and −a give the same positive value: a^n is never negative, and when y &gt; 0 there are two real bases.</pre><h3>Evaluate the root</h3><pre class="al" tabindex="0">|a| = |y|^(1/2) is worked out with the fractional-exponent method (the steps below call that exponent n).</pre><h3>Fractional exponent: a root and a power</h3><pre class="al" tabindex="0">a^(p/q) = (square root of a)^p = square root of (a^p)
+Here p = 1 and q = 2: the denominator q is the root, the numerator p is the power.</pre><h3>The root, then the power</h3><pre class="al" tabindex="0">The square root of 12 is ≈ 3.4641   (not a ratio of whole numbers)
+Raise it to the power 1</pre><h3>Factor the base into primes</h3><pre class="al" tabindex="0">The magnitude 12 = 2² × 3</pre><h3>Multiply each prime’s exponent by n</h3><pre class="al" tabindex="0">2²  →  exponent 2 × 1/2 = 1  =  1
+3  →  exponent 1 × 1/2 = 1/2  =  0 + 1/2
+The whole part comes out of the root. The fractional part stays inside it.</pre><h3>Outside and inside the root</h3><pre class="al" tabindex="0">Outside: 2 = 2
+Inside the square root: 3 = 3</pre><h3>Result</h3><pre class="al" tabindex="0">a = 2√3  or  a = −2√3   (≈ ±3.4641)</pre></section><section id="rules"><h2>Rules and limits</h2><ul><li>Base, exponent and result may be whole numbers, decimals, fractions such as 3/4, numbers with a power of ten such as 1e-3, or negative. The base may also be the constant e when you solve for the exponent or the result.</li><li>An exponent found by the solver is shown as an exact fraction when its denominator is up to 1,000 and its numerator up to 4,000 and a^p = y^q holds exactly; otherwise it is a double-precision approximation.</li><li>A negative base is judged by the reduced exponent: whole number or odd denominator gives a real power with the sign of (−1)^p; an even denominator has no real value.</li><li>0^0, 0 to a negative power and 0^n = y for y ≠ 0 are reported as indeterminate or having no solution, never silently given as 1 or infinity.</li><li>Complex solutions (for example x^2 = −4, x = ±2i) are not part of this mode.</li></ul></section><section id="faq"><h2>Questions</h2><h3>What does the exponent solver do?</h3><p>It solves a^n = y when you know two of the three values. Know the base and the exponent and it gives the result; know the base and the result and it gives the exponent; know the exponent and the result and it gives the base. It also tells you whether the answer is unique, has several real values, does not exist or is indeterminate.</p><h3>How do I find the exponent in 2^x = 32, and what if it is not a whole number or a fraction?</h3><p>Take logarithms of both sides: x ln 2 = ln 32, so x = ln 32 / ln 2 = 5. The solver finds whole-number and fractional answers exactly and proves them with whole-number arithmetic, so 4^x = 8 gives n = 3/2 and not 1.5000000001. <strong class="sub">What if the exponent is not a whole number or a fraction?</strong> Then it is an irrational number such as log2(10), and the solver gives a decimal approximation and says so: n ≈ 3.32193 (to 6 digits). About 15 digits are reliable.</p><h3>How do I find the base in x^3 = 125?</h3><p>Take the n-th root: x = 125^(1/3) = 5. The solver writes the answer as an exact whole number, fraction or simplified radical (x^2 = 12 gives a = 2√3  or  a = −2√3) and also shows the decimal.</p><h3>Why does x^2 = 9 give two answers?</h3><p>An even power hides the sign: 3^2 = 9 and (−3)^2 = 9. The solver lists both: a = 3  or  a = −3. For an odd power such as x^3 = −27 there is one answer, a = −3.</p><h3>Why is there no solution to 2^x = −8?</h3><p>A positive base raised to any real power is positive, so 2^x can never be −8. The solver reports “no real solution” instead of returning an error or a misleading number. Complex exponents are not part of this mode.</p><h3>Can the base be negative, and what does “indeterminate” mean?</h3><p>Yes, when the power is a real number: a whole-number exponent, or a reduced fraction with an odd denominator. (−2)^x = −8 gives n = 3 and (−8)^x = −2 gives n = 1/3, but (−2)^x = 8 has no real solution, because the sign would be wrong. <strong class="sub">What does “indeterminate” mean?</strong> Every value works, or the expression is undefined. 1^x = 1 is true for every x, a^0 = 1 is true for every non-zero a, and 0^0 is undefined, so the missing value cannot be found from the equation.</p><h3>How is the exponent found when the base is e?</h3><p>x = ln y, because ln e = 1: e^x = 10 gives n ≈ 2.30259. Type the letter e as the base.</p><h3>Can I type fractions and decimals, and how accurate is the answer?</h3><p>Yes. 1/2, 0.5 and 5e-1 are the same number. An exponent of 2/3 is read exactly, never as 0.6666667, so x^(2/3) = 4 gives a = 8  or  a = −8. <strong class="sub">How accurate is the answer?</strong> Whole numbers, fractions and radicals are exact. Irrational exponents and decimals are double-precision approximations with about 15 reliable digits, labelled as approximate. Every answer is put back into a^n and checked.</p><h3>Where is the power calculator?</h3><p>Mode 01 (Power Calculator) computes a^n exactly for whole-number exponents, and Mode 02 (Negative &amp; Fractional Exponents) gives radical forms. This mode works backwards from the result.</p><h3>Is anything sent to a server?</h3><p>No. The calculation runs in your browser, and the history list is stored only in your browser.</p></section><section id="related"><h2>Related Calculators and Tools</h2><p><a class="chip" href="../exponent-calculator/">Exponent Calculator (Mode 01)</a><a class="chip" href="../negative-fractional-exponents-calculator/">Negative and Fractional Exponents (Mode 02)</a><a class="chip" href="../logarithm/">Logarithm</a><a class="chip" href="../powers-roots/">Powers and Roots</a><a class="chip" href="../scientific-calculator/">Scientific Calculator</a><a class="chip" href="../half-life-calculator/">Half-Life Calculator</a><a class="chip" href="../rc-time-constant/">RC Time Constant</a><a class="chip" href="../engineering-mathematics/">Engineering Mathematics</a><a class="chip" href="../engineering-exponential-decay-calculator/">Engineering Exponential Decay Calculator</a></p></section></main><section class="w fb" aria-labelledby="fb-h"><h2 id="fb-h">Tell us how to improve this page</h2><textarea id="fb-t" rows="4" maxlength="1500" placeholder="Your message ..." aria-label="Tell us how to improve this page"></textarea><p><button type="button" class="btn" id="fb-b">Email your suggestion</button> <button type="button" class="btn" id="sh-b">Share this page</button> <span class="note" id="fb-n">This opens your email app. Nothing is sent until you press send.</span></p></section><script>(function(){var b=document.getElementById("fb-b");if(!b)return;b.onclick=function(){var t=document.getElementById("fb-t").value.trim(),n=document.getElementById("fb-n");if(!t){n.textContent="Please write a message first.";return}location.assign("mailto:"+"elecmetrics@gmail.com"+"?subject="+encodeURIComponent("Elecmetric feedback: "+document.title)+"&body="+encodeURIComponent(t+"\n\nPage: "+location.href))}})();</script><script>(function(){var s=document.getElementById("sh-b");if(!s)return;s.onclick=function(){var u=location.href,t=document.title,n=document.getElementById("fb-n");if(navigator.share){navigator.share({title:t,url:u}).catch(function(){});return}if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(u).then(function(){n.textContent="Link copied."},function(){n.textContent="Copy this address: "+u})}else{n.textContent="Copy this address: "+u}}})();</script><footer class="mf"><div class="mf-w"><div class="mf-grid" role="navigation" aria-label="Site map"><div class="mf-col"><p class="mf-h"><a href="../../calculators/">Calculators</a></p><ul><li><a href="../../calculators/electrical-fundamentals/">Electrical Fundamentals</a></li><li><a href="../../calculators/power-and-energy/">Power and Energy</a></li><li><a href="../../calculators/cable-engineering/">Cable Engineering</a></li><li><a href="../../calculators/motor-engineering/">Motor Engineering</a></li><li><a href="../../calculators/transformer-engineering/">Transformer Engineering</a></li><li><a href="../../calculators/electrical-protection/">Electrical Protection</a></li><li><a href="../../calculators/power-systems/">Power Systems</a></li><li><a href="../../calculators/earthing-and-grounding/">Earthing and Grounding</a></li><li><a href="../../calculators/renewable-energy/">Renewable Energy</a></li><li><a href="../../calculators/airport-agl-engineering/">Airport and AGL Engineering</a></li><li><a href="../../calculators/electronics-and-instrumentation/">Electronics and Instrumentation</a></li><li><a href="../../calculators/lighting-and-facilities/">Lighting and Facilities</a></li><li><a href="../../calculators/engineering-mathematics/">Engineering Mathematics</a></li></ul></div><div class="mf-col"><p class="mf-h"><a href="../../calculators/">Popular calculators</a></p><ul><li><a href="../../calculators/cable-size/">Cable Size</a></li><li><a href="../../calculators/voltage-drop/">Voltage Drop</a></li><li><a href="../../calculators/breaker-size/">Breaker Size</a></li><li><a href="../../calculators/motor-current/">Motor Current</a></li><li><a href="../../calculators/transformer-sizing/">Transformer Sizing</a></li><li><a href="../../calculators/earth-resistance/">Earth Resistance</a></li><li><a href="../../calculators/pf-correction-kvar/">Power Factor Correction</a></li><li><a href="../../calculators/generator-sizing/">Generator Sizing</a></li><li><a href="../../calculators/battery-bank-sizing/">Battery Bank Sizing</a></li><li><a href="../../calculators/pv-energy/">Solar PV Energy</a></li></ul></div><div class="mf-col"><p class="mf-h"><a href="../../converters/index.html">Conversions</a></p><ul><li><a href="../../pages/index.html">Electrical conversions</a></li><li><a href="../../pages/kw-to-amps.html">kW to Amps</a></li><li><a href="../../pages/amps-to-kw.html">Amps to kW</a></li><li><a href="../../pages/kva-to-kw.html">kVA to kW</a></li><li><a href="../../pages/watts-to-amps.html">Watts to Amps</a></li><li><a href="../../converters/length-converter.html">Length</a></li><li><a href="../../converters/power-converter.html">Power</a></li><li><a href="../../converters/energy-converter.html">Energy</a></li><li><a href="../../converters/temperature-converter.html">Temperature</a></li><li><a href="../../pages/wire-gauge.html">AWG to mm²</a></li></ul></div><div class="mf-col"><p class="mf-h"><a href="../../converters/index.html">Formulas</a></p><ul><li><a href="../../converters/ohms-law-formulas.html">Ohm’s Law formulas</a></li><li><a href="../../converters/kirchhoffs-laws.html">Kirchhoff’s laws</a></li><li><a href="../../converters/cable-sizing-formulas.html">Cable sizing formulas</a></li><li><a href="../../converters/circuit-breaker-formulas.html">Circuit breaker formulas</a></li><li><a href="../../converters/ac-circuit-formulas.html">AC circuit formulas</a></li><li><a href="../../converters/battery-formulas.html">Battery formulas</a></li></ul></div><div class="mf-col"><p class="mf-h">Elecmetric</p><ul><li><a href="../../calculators/basic-calculator/">Basic Calculator</a></li><li><a href="../../calculators/scientific-calculator/">Scientific Calculator</a></li><li><a href="../../index.html#verification">How it is verified</a></li><li><a href="../../privacy.html">Privacy</a></li><li><a href="../../terms.html">Terms</a></li><li><a href="../../technical-library/">Technical Library</a></li><li><a href="mailto:elecmetrics@gmail.com">Contact us</a></li></ul></div></div><div class="mf-legal">Results are computed by the same tested engine as the calculators in Elecmetric and are for estimating. Check design values against the standard and the equipment data you work to. Elecmetric results are not a substitute for a design review by a competent engineer.<br>Developed by Elecmetric. No independent technical review of the calculators has been carried out. Results are for estimating.<br>&copy; 2026 Elecmetric &middot; <a href="../../privacy.html">Privacy</a> &middot; <a href="../../terms.html">Terms</a></div></div><script>(function(){if(location.protocol!=="file:")return;document.addEventListener("click",function(e){if(e.defaultPrevented||e.button||e.metaKey||e.ctrlKey||e.shiftKey)return;var a=e.target.closest&&e.target.closest("a[href]");if(!a||a.target)return;var m=/^([^?#]*)(.*)$/.exec(a.getAttribute("href"));if(!m[1]||/^[a-z][a-z0-9+.-]*:/i.test(m[1])||!/[/]$/.test(m[1]))return;e.preventDefault();location.href=m[1]+"index.html"+m[2]})})();</script><button type="button" class="totop" id="totop" aria-label="Back to top" tabindex="-1">↑ Top</button><script>(function(){var b=document.getElementById("totop");if(!b)return;var t=0;function u(){t=0;var on=(window.pageYOffset||document.documentElement.scrollTop)>400,bar=document.getElementById("bar"),h=bar&&bar.offsetHeight?bar.offsetHeight:0;b.classList.toggle("on",on);b.tabIndex=on?0:-1;b.style.bottom=h?"calc("+(h+16)+"px + env(safe-area-inset-bottom,0px))":"";}function q(){if(!t)t=requestAnimationFrame(u)}window.addEventListener("scroll",q,{passive:true});window.addEventListener("resize",q);b.addEventListener("click",function(){var r=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;window.scrollTo({top:0,behavior:r?"auto":"smooth"})});u()})();</script></footer><script>/* Elecmetric Exponent Calculator, Mode 01: Power Calculator (y = a^n). Engine: one file, no dependencies, no DOM.
+   Required by tests/exponent_test.js and inlined into calculators/exponent-calculator/index.html by tools/exponent_page.js.
+
+   Inputs are read as EXACT rational numbers (BigInt numerator and denominator): 1.5 is 3/2, 0.001 is 1/1000, 1e-3 is 1/1000, 2/3 is 2/3. The exponent is read the same way, so
+   0.5 and 1/2 are the same exponent and 2/3 never has to be typed as 0.6666667.
+
+   Numerical policy (CEO brief, section 6):
+   - whole-number exponents use BigInt, so 2^100 is 1267650600228229401496703205376 digit for digit, and a^-n is the exact reciprocal fraction;
+   - a rational exponent p/q first tries an exact integer q-th root of the numerator and denominator (27^(2/3) = 9, 16^(3/4) = 8, (1/8)^(1/3) = 1/2);
+     if the root is not exact the result is a double-precision approximation and is labelled as one;
+   - a negative base is treated by the reduced exponent: whole number, or p/q with q odd, gives a real result with the sign of (-1)^p; q even has no real value and is refused
+     (an exponent typed as 0.5 is 1/2, so (-4)^0.5 is refused, and the message says so);
+   - 0^0 and 0 to a negative power are refused, never silently given as 1 or Infinity; 0 to a positive power is 0;
+   - an exact result of more than 50,000 digits is not written out: the page gives its digit count and scientific notation from logarithms, with only the digits that
+     the logarithm can carry (about 15 minus the number of digits in the exponent of ten);
+   - nothing is rounded internally: rounding happens once, when the result is displayed;
+   - the base may be the constant e (approximate, double precision).
+   Errors are returned, never thrown, with the field that caused them. */
+(function (root) {
+  'use strict';
+  var MAX_EXACT_DIGITS = 50000, MAX_EXP = 1e9, MAX_SCI_INPUT = 10000, MAX_ROOT_DIGITS = 3000;
+  var SIG_CHOICES = ['4', '6', '8', '10', '12', '15', 'full'];
+  var SUP = { '0': '⁰', '1': '¹', '2': '²', '3': '³', '4': '⁴', '5': '⁵', '6': '⁶', '7': '⁷', '8': '⁸', '9': '⁹', '-': '⁻', '+': '⁺' };
+  function sup(s) { return String(s).replace(/[0-9+-]/g, function (c) { return SUP[c]; }); }
+
+  /* ---------- BigInt helpers ---------- */
+  function babs(x) { return x < 0n ? -x : x; }
+  function gcd(a, b) { a = babs(a); b = babs(b); while (b) { var t = a % b; a = b; b = t; } return a; }
+  function bitLen(x) { return x === 0n ? 0 : x.toString(2).length; }
+  function pow10(k) { return 10n ** BigInt(k); }
+  function norm(n, d) { if (d < 0n) { n = -n; d = -d; } var g = gcd(n, d); return g > 1n ? { n: n / g, d: d / g } : { n: n, d: d }; }
+  function bigLog10(b) { /* log10 of a positive BigInt, to double precision, for any size */
+    var s = b.toString(), L = s.length; if (L <= 15) return Math.log10(Number(b));
+    var head = s.slice(0, 17);
+    return (L - head.length) + Math.log10(Number(head));
+  }
+  function ratLog10(n, d) { return bigLog10(babs(n)) - bigLog10(d); }
+  function ratToDouble(n, d) {
+    var a = babs(n), L = a.toString().length, M = d.toString().length, v;
+    if (L < 300 && M < 300) v = Number(a) / Number(d);
+    else v = Math.pow(10, ratLog10(a, d));
+    return n < 0n ? -v : v;
+  }
+  /* floor of the k-th root of a non-negative BigInt */
+  function iroot(N, k) {
+    if (N < 2n) return N;
+    var kk = BigInt(k), bl = bitLen(N);
+    if (k >= bl) return 1n;
+    var x = 1n << BigInt(Math.ceil(bl / k)), y;
+    for (;;) { y = ((kk - 1n) * x + N / (x ** (kk - 1n))) / kk; if (y >= x) return x; x = y; }
+  }
+  function groupInt(s) { return s.replace(/\B(?=(\d{3})+(?!\d))/g, ','); }
+
+  /* ---------- reading numbers ---------- */
+  function decimalToRat(t) { /* t: unsigned decimal with optional exponent, already validated; returns { n, d } or { error } */
+    var m = /^(\d*)\.?(\d*)(?:[eE]([+-]?\d+))?$/.exec(t), ip = m[1], fp = m[2], ex = m[3] ? parseInt(m[3], 10) : 0;
+    if (Math.abs(ex) > MAX_SCI_INPUT) return { error: 'the power of ten ' + ex + ' is outside the supported range (±' + MAX_SCI_INPUT + ').' };
+    var n = BigInt((ip + fp) || '0'), d = pow10(fp.length);
+    if (ex >= 0) n *= pow10(ex); else d *= pow10(-ex);
+    return norm(n, d);
+  }
+  /* Accepts 2, -2, +2, 1,000, 1 000, 1.5, .5, 1e-3, 1.5E3, 3/4, 1.5/2, -3/4, a Unicode minus, and (-8) in brackets. The base may also be e. */
+  function parseOperand(s, allowE) {
+    var raw = String(s === undefined || s === null ? '' : s).trim();
+    if (raw === '') return { empty: true };
+    var t = raw.replace(/−|–/g, '-').replace(/[\s_]/g, '');
+    while (/^\(.*\)$/.test(t)) t = t.slice(1, -1);
+    var sign = 1;
+    if (t[0] === '-') { sign = -1; t = t.slice(1); } else if (t[0] === '+') t = t.slice(1);
+    if (allowE && (t === 'e' || t === 'E')) return { kind: 'e', sign: sign, text: (sign < 0 ? '−' : '') + 'e' };
+    if (/^\d{1,3}(,\d{3})+(\.\d*)?([eE][+-]?\d+)?$/.test(t)) t = t.replace(/,/g, '');
+    var bad = '“' + raw + '” is not a number. Use digits such as 2, −3, 1.5, 1e-3 or a fraction such as 2/3' + (allowE ? ', or the letter e' : '') + '.';
+    var parts = t.split('/'), num = 1n, den = 1n, i, r;
+    if (parts.length > 2) return { error: bad };
+    for (i = 0; i < parts.length; i++) {
+      if (!/^(\d+\.?\d*|\.\d+)([eE][+-]?\d+)?$/.test(parts[i])) return { error: bad };
+      r = decimalToRat(parts[i]); if (r.error) return { error: '“' + raw + '”: ' + r.error };
+      if (i === 0) { num = r.n; den = r.d; } else { if (r.n === 0n) return { error: 'The denominator of “' + raw + '” is zero.' }; num = num * r.d; den = den * r.n; }
+    }
+    var q = norm(sign < 0 ? -num : num, den);
+    return { kind: 'rat', n: q.n, d: q.d, text: raw.replace(/−/g, '-').replace(/\s+/g, ''), isFraction: parts.length === 2, isDecimal: /[.eE]/.test(t) && parts.length === 1 };
+  }
+  function ratText(n, d) { var s = n < 0n ? '−' : '', a = babs(n).toString(), b = d.toString(); if (a.length > 40 || b.length > 40) return s + a.slice(0, 12) + '… / ' + b.slice(0, 12) + '…'; return s + a + (d === 1n ? '' : '/' + b); }
+
+  /* ---------- scientific digits: { digits, exp10, acc, complete } ---------- */
+  /* digits: significant digits string (first digit non-zero); exp10: power of ten of the first digit; acc: how many digits are reliable; complete: the digits end the number exactly */
+  function roundDigits(sd, sig) {
+    var digits = sd.digits, exp10 = sd.exp10, keep = Math.min(sig, sd.acc, digits.length), r;
+    if (!(keep >= digits.length)) {
+      var up = digits.charCodeAt(keep) >= 53, head = digits.slice(0, keep);
+      if (up) { r = (BigInt(head) + 1n).toString(); if (r.length > head.length) { exp10 += 1; r = r.slice(0, head.length); } head = r; }
+      digits = head;
+    }
+    digits = digits.replace(/0+$/, ''); if (digits === '') digits = '0';
+    return { digits: digits, exp10: exp10, rounded: !sd.complete || /[1-9]/.test(sd.digits.slice(keep)) };
+  }
+  function sciString(rd) { return rd.digits[0] + (rd.digits.length > 1 ? '.' + rd.digits.slice(1) : ''); }
+  function plainString(rd, sign) { /* the number written without an exponent, or null when it would be very long */
+    var dg = rd.digits, e = rd.exp10, s;
+    if (e > 40 || e < -30) return null;
+    if (e >= 0) { s = dg.length > e + 1 ? dg.slice(0, e + 1) + '.' + dg.slice(e + 1) : dg + '0'.repeat(e + 1 - dg.length); s = s.indexOf('.') < 0 ? groupInt(s) : groupInt(s.split('.')[0]) + '.' + s.split('.')[1]; }
+    else s = '0.' + '0'.repeat(-e - 1) + dg;
+    return (sign < 0 ? '−' : '') + s;
+  }
+  function sciFromRational(n, d, want) { /* exact rational, positive; digits with `want` significant digits (truncated) */
+    var a = n, b = d, k = want + 3 - (a.toString().length - b.toString().length), q, rem;
+    if (k >= 0) a = a * pow10(k); else b = b * pow10(-k);
+    q = a / b; rem = a % b;
+    var s = q.toString(), exp10 = s.length - 1 - k;
+    return { digits: s, exp10: exp10, acc: s.length, complete: rem === 0n };
+  }
+  function isTerminating(d) { while (d % 2n === 0n) d /= 2n; while (d % 5n === 0n) d /= 5n; return d === 1n; }
+
+  /* ---------- the exact and approximate result builders ---------- */
+  function exactResult(sign, n, d) { /* n, d positive; value = sign * n / d */
+    return { exact: true, sign: n === 0n ? 0 : sign, n: n, d: d };
+  }
+  function digitsOf(b) { return b.toString().length; }
+
+  function describeExact(res, sigPref) {
+    /* returns { fraction, standard, sciDigits, ... } for an exact rational result (res.n / res.d, both positive) */
+    var out = { isInteger: res.d === 1n, fraction: null, standard: null, digitCount: null, terminating: isTerminating(res.d) };
+    var sg = res.sign < 0 ? '−' : '';
+    if (res.sign === 0) { out.sd = { digits: '0', exp10: 0, acc: 1, complete: true }; out.zero = true; out.standard = '0'; return out; }
+    if (res.d === 1n) {
+      var s = res.n.toString(); out.digitCount = s.length;
+      out.sd = { digits: s, exp10: s.length - 1, acc: s.length, complete: true };
+      out.standard = s.length <= 5000 ? sg + groupInt(s) : sg + groupInt(s.slice(0, 30)).replace(/,$/, '') + '…' + s.slice(-30) + ' (' + s.length + ' digits)';
+      out.integerString = s;
+    } else {
+      out.fraction = sg + digitsOfShort(res.n) + '/' + digitsOfShort(res.d);
+      var wantDigits = out.terminating ? Math.min(5000, Math.max(digitsOf(res.n), digitsOf(res.d)) + 5) : 70;
+      out.sd = sciFromRational(res.n, res.d, wantDigits); if (!out.terminating) out.sd.complete = false;
+      if (out.terminating) out.sd.complete = true;
+    }
+    return out;
+  }
+  function digitsOfShort(b) { var s = b.toString(); return s.length > 60 ? s.slice(0, 20) + '…(' + s.length + ' digits)' : s; }
+
+  /* approximate: sign, x = log10 |y| (double), value (double or null), acc = reliable digits */
+  function approxResult(sign, absValue, x) {
+    var ax = Math.abs(x), acc = Math.max(1, Math.min(15, Math.floor(15.5 - Math.log10(Math.max(1, ax)))));
+    var sd;
+    if (absValue !== null && isFinite(absValue) && absValue > 0 && absValue < 1e300 && absValue > 1e-300) {
+      var ex = absValue.toExponential(14), m = /^(\d)\.(\d+)e([+-]\d+)$/.exec(ex);
+      sd = { digits: m[1] + m[2], exp10: parseInt(m[3], 10), acc: Math.min(15, acc), complete: false };
+    } else {
+      var e10 = Math.floor(x), fr = Math.pow(10, x - e10), ex2 = fr.toExponential(14), m2 = /^(\d)\.(\d+)e([+-]\d+)$/.exec(ex2);
+      sd = { digits: m2[1] + m2[2], exp10: e10 + parseInt(m2[3], 10), acc: acc, complete: false };
+    }
+    return { exact: false, sign: sign, x: x, sd: sd, value: absValue === null ? null : sign * absValue };
+  }
+
+  /* ---------- the calculation ---------- */
+  function powRat(n, d, p) { /* (n/d)^p for BigInt p (sign included), n,d positive */
+    if (p >= 0n) return { n: n ** p, d: d ** p };
+    return { n: d ** (-p), d: n ** (-p) };
+  }
+  function expFloat(p, q) { return Number(p) / Number(q); }
+
+  function compute(a, e) {
+    /* a: { kind:'rat'|'e', n, d, sign }, e: { n: p, d: q } reduced rational. Returns { ok, res, how, ... } */
+    var p = e.n, q = e.d, isInt = q === 1n, neg, baseAbsRat = null, ev = expFloat(p, q), how = {}, bn, bd;
+    var parityOdd = (babs(p) % 2n) === 1n;
+    if (a.kind === 'e') {
+      neg = a.sign < 0;
+      if (neg && q % 2n === 0n) return { ok: false, error: 'No real value: a negative base needs an exponent that is a whole number or a fraction with an odd denominator, and ' + ratText(p, q) + ' has an even denominator.', field: 'n', code: 'NOT_REAL' };
+      if (p === 0n) return { ok: true, res: exactResult(1, 1n, 1n), how: { kind: 'zero' } };
+      if (Math.abs(ev) > MAX_EXP) return { ok: false, error: 'The exponent is outside the supported range (±1,000,000,000).', field: 'n', code: 'RANGE' };
+      var sgn = neg && parityOdd ? -1 : 1, x = ev * Math.LOG10E;
+      return { ok: true, res: approxResult(sgn, Math.abs(x) < 300 ? Math.exp(ev) : null, x), how: { kind: 'e', neg: neg } };
+    }
+    bn = a.n; bd = a.d; neg = bn < 0n; var an = babs(bn);
+    /* zero base */
+    if (bn === 0n) {
+      if (p === 0n) return { ok: false, error: '0⁰ is undefined (an indeterminate form). Some conventions set it to 1, but this calculator does not choose one silently.', field: 'n', code: 'ZERO_TO_ZERO' };
+      if (p < 0n) return { ok: false, error: '0 raised to a negative power means dividing by zero, so it is undefined.', field: 'n', code: 'ZERO_NEGATIVE' };
+      return { ok: true, res: exactResult(0, 0n, 1n), how: { kind: 'zero-base' } };
+    }
+    if (p === 0n) return { ok: true, res: exactResult(1, 1n, 1n), how: { kind: 'zero' } };
+    /* sign of the result */
+    if (neg && !isInt && q % 2n === 0n) {
+      return { ok: false, error: 'No real value: (' + ratText(bn, bd) + ') to the power ' + ratText(p, q) + ' has an even denominator (' + q.toString() + '), so the result is not a real number. A negative base needs a whole-number exponent or a fraction with an odd denominator, such as 1/3.', field: 'n', code: 'NOT_REAL', hint: true };
+    }
+    var sign = neg && parityOdd ? -1 : 1;
+    if (Math.abs(ev) > MAX_EXP && an !== bd) return { ok: false, error: 'The exponent is outside the supported range (±1,000,000,000).', field: 'n', code: 'RANGE' };
+    /* base of magnitude 1 */
+    if (an === bd) return { ok: true, res: exactResult(sign, 1n, 1n), how: { kind: isInt ? 'unit' : 'unit' } };
+    var bl = ratLog10(an, bd), x2 = ev * bl;
+    if (isInt) {
+      /* the exact route when the result is not too long */
+      var est = Math.abs(ev) * Math.max(bigLog10(an), bigLog10(bd)) + 2;
+      if (est <= MAX_EXACT_DIGITS) { var r = powRat(an, bd, p); how = { kind: p > 0n ? 'integer' : 'negative' }; return { ok: true, res: exactResult(sign, r.n, r.d), how: how, baseAbs: { n: an, d: bd } }; }
+      return { ok: true, res: approxResult(sign, null, x2), how: { kind: 'huge', digits: Math.floor(Math.abs(x2)) + 1 }, baseAbs: { n: an, d: bd } };
+    }
+    /* rational exponent: exact root when it exists */
+    var pa = babs(p), tryRoot = digitsOf(an) <= MAX_ROOT_DIGITS && digitsOf(bd) <= MAX_ROOT_DIGITS;
+    if (tryRoot && q <= 100000n) {
+      var qn = Number(q), rn = iroot(an, qn), rd = iroot(bd, qn);
+      if (rn ** BigInt(qn) === an && rd ** BigInt(qn) === bd) {
+        var est2 = pa === 0n ? 0 : Number(pa) * Math.max(bigLog10(rn), bigLog10(rd)) + 2;
+        if (est2 <= MAX_EXACT_DIGITS) { var rr = powRat(rn, rd, p); return { ok: true, res: exactResult(sign, rr.n, rr.d), how: { kind: 'root', rootN: rn, rootD: rd, q: qn }, baseAbs: { n: an, d: bd } }; }
+      }
+    }
+    var absVal = null;
+    if (Math.abs(x2) < 300) { var bdbl = ratToDouble(an, bd); absVal = Math.pow(bdbl, ev); if (!isFinite(absVal) || absVal === 0 || absVal > 1e300 || absVal < 1e-300) absVal = Math.abs(x2) < 300 ? Math.pow(10, x2) : null; }
+    return { ok: true, res: approxResult(sign, absVal, x2), how: { kind: 'approx-root', q: Number(q) }, baseAbs: { n: an, d: bd } };
+  }
+
+  /* ---------- display ---------- */
+  function sigValue(sig, terminatingOrInt) { if (sig === 'full' || sig === undefined) return terminatingOrInt ? Infinity : 20; var v = Number(sig); return v >= 1 ? v : 6; }
+
+  function display(c, sigIn) {
+    var res = c.res, info, rd, sg = res.sign < 0 ? '−' : '', out = { sign: res.sign, exact: res.exact };
+    if (res.exact) {
+      info = describeExact(res, sigIn); var term = info.isInteger || info.terminating, S = sigValue(sigIn, term);
+      rd = roundDigits(info.sd, S);
+      out.isInteger = info.isInteger; out.fraction = info.fraction; out.digitCount = info.digitCount; out.terminating = info.terminating; out.integerString = info.integerString || null;
+      if (res.sign === 0) { out.standard = '0'; out.sciCoef = '0'; out.sciExp = 0; out.sciText = '0'; out.eText = '0'; out.decimalIsExact = true; return out; }
+      out.sciCoef = sg + sciString(rd); out.sciExp = rd.exp10;
+      if (info.isInteger) { out.standard = info.standard; out.decimalIsExact = true; }
+      else { var pl = plainString(rd, res.sign); out.standard = pl; out.decimalIsExact = info.terminating && !rd.rounded; }
+      out.roundedDigits = rd.rounded;
+    } else {
+      var S2 = sigValue(sigIn, false); rd = roundDigits(res.sd, S2);
+      out.sciCoef = sg + sciString(rd); out.sciExp = rd.exp10; out.standard = plainString(rd, res.sign); out.decimalIsExact = false; out.roundedDigits = true;
+      out.reliableDigits = res.sd.acc; out.isInteger = false; out.digitCount = c.how.kind === 'huge' && res.x > 0 ? Math.floor(res.x) + 1 : null;
+    }
+    out.sciText = out.sciCoef + ' × 10' + sup(out.sciExp);
+    out.eText = out.sciCoef.replace('\u2212', '-') + 'e' + (out.sciExp < 0 ? '-' : '+') + Math.abs(out.sciExp);
+    return out;
+  }
+
+  /* ---------- the working ---------- */
+  function supNum(s) { return sup(String(s).replace(/\u2212/g, '-')); }
+  function pw(base, ex) { return /^-?\d+$/.test(ex) ? base + supNum(ex) : base + '^(' + ex + ')'; }
+  function ordinal(k) { return k === 2 ? 'square' : k === 3 ? 'cube' : k + (k % 100 >= 11 && k % 100 <= 13 ? 'th' : ['th', 'st', 'nd', 'rd'][k % 10 > 3 ? 0 : k % 10] || 'th'); }
+  function typed(t) { return String(t).replace(/-/g, '\u2212'); }
+  function baseShow(a) { var t = typed(a.text); return (a.sign < 0 || a.n < 0n || /[/]/.test(t) || /[.eE]/.test(t) && a.kind === 'rat') ? '(' + t.replace(/^\((.*)\)$/, '$1') + ')' : t; }
+  function expShow(e) { var t = typed(e.text); return /^\d+$/.test(t) ? t : '(' + t + ')'; }
+  function valueText(r) { /* the value of y as one line */
+    var s = r.sol, sg = s.sign < 0 ? '\u2212' : '';
+    if (r.exact) { if (s.fraction) return s.fraction + (s.standard && s.standard.indexOf('\u2026') < 0 ? ' = ' + s.standard : ''); if (s.isInteger && s.integerString && s.integerString.length <= 60) return sg + groupInt(s.integerString); return s.standard && s.standard.length <= 60 ? s.standard : s.sciText; }
+    return '\u2248 ' + (s.standard || s.sciText);
+  }
+
+  function buildSteps(a, e, c, dsp, sigIn, rr) {
+    var st = [], how = c.how, res = c.res, k = how.kind, p = e.n, q = e.d, isInt = q === 1n, B = baseShow(a), En = ratText(p, q), sg = res.sign < 0 ? '−' : '';
+    var intro = 'a = ' + (a.kind === 'e' ? (a.sign < 0 ? '−e ≈ −2.718281828459045' : 'e ≈ 2.718281828459045') : ratText(a.n, a.d) + (a.d !== 1n && a.src && a.src.isDecimal ? '   (the decimal ' + a.src.text + ' as an exact fraction)' : '')) + '\nn = ' + En + (e.src && e.src.isDecimal && q !== 1n ? '   (the decimal ' + e.src.text + ' as an exact fraction)' : '') + '\ny = a^n = ' + B + (isInt ? sup(p.toString().replace('-', '−')) : '^(' + En + ')');
+    st.push({ title: 'The problem', text: intro });
+    if (k === 'zero') st.push({ title: 'Zero exponent', text: 'Any nonzero number raised to the power 0 is 1:   a⁰ = 1   (a ≠ 0)\n' + B + '⁰ = 1' });
+    else if (k === 'zero-base') st.push({ title: 'Zero base', text: '0 raised to a positive power is 0:   0^n = 0   (n > 0)' });
+    else if (k === 'unit') st.push({ title: 'Base of magnitude 1', text: '|a| = 1, so every power has magnitude 1.' + (res.sign < 0 ? ' The sign is negative because the exponent ' + p.toString() + ' is odd.' : (a.n < 0n ? ' The sign is positive because the exponent is even.' : '')) });
+    else if (k === 'integer' || k === 'negative') {
+      var m = babs(p), base = a.kind === 'rat' ? c.baseAbs : null, bs = ratText(base.n, base.d), pos = base.d === 1n ? bs : '(' + bs + ')';
+      if (a.n < 0n) st.push({ title: 'Sign of the result', text: 'The base is negative and the exponent ' + p.toString() + ' is ' + (res.sign < 0 ? 'odd, so the result is negative.' : 'even, so the result is positive.') + '\nCalculate with the magnitude ' + bs + ' and apply the sign at the end:   (−x)^n = (−1)^n × x^n' });
+      if (p < 0n) st.push({ title: 'Negative exponent', text: 'A negative exponent means the reciprocal of the positive power:   a^(−m) = 1 / a^m\n' + B + sup(p.toString().replace('-', '−')) + ' = 1 / ' + pw(pos, m.toString()) });
+      var pn = powRat(base.n, base.d, m);
+      var line = pw(pos, m.toString()) + ' = ' + (m <= 8n && m >= 2n ? Array(Number(m)).fill(pos).join(' × ') + ' = ' : '') + (pn.d === 1n ? groupInt(digitsOfShort(pn.n)) : digitsOfShort(pn.n) + '/' + digitsOfShort(pn.d));
+      st.push({ title: 'Multiply the base', text: line });
+      if (p < 0n) st.push({ title: 'Take the reciprocal', text: '1 / ' + (pn.d === 1n ? groupInt(digitsOfShort(pn.n)) : '(' + digitsOfShort(pn.n) + '/' + digitsOfShort(pn.d) + ')') + ' = ' + sg + (dsp.fraction ? dsp.fraction.replace('−', '') : dsp.integerString ? groupInt(digitsOfShort(BigInt(dsp.integerString))) : '') });
+    } else if (k === 'huge') {
+      st.push({ title: 'A very large (or very small) exact result', text: 'The exact value of ' + B + (isInt ? sup(p.toString().replace('-', '−')) : '') + ' would need more than 50,000 digits, so it is not written out.\nlog₁₀|y| = n × log₁₀|a| = ' + En + ' × ' + (ratLog10(babs(a.n), a.d)).toPrecision(12) + ' = ' + res.x.toPrecision(15) + '\nSo y has about ' + (res.x > 0 ? Math.floor(res.x) + 1 + ' digits' : 'a magnitude of 10^' + Math.floor(res.x)) + ' and is written in scientific notation below, with only the digits the logarithm can carry (' + res.sd.acc + ').' });
+    } else if (k === 'root' || k === 'approx-root') {
+      var base2 = c.baseAbs, bs2 = ratText(base2.n, base2.d);
+      if (a.n < 0n) st.push({ title: 'Sign of the result', text: 'The exponent ' + En + ' has an odd denominator, so a real value exists. The sign is ' + (res.sign < 0 ? 'negative (numerator ' + p.toString() + ' is odd).' : 'positive (numerator ' + p.toString() + ' is even).') + '\nCalculate with the magnitude ' + bs2 + '.' });
+      st.push({ title: 'Rational exponent', text: 'a^(p/q) = (q-th root of a)^p  with p = ' + p.toString() + ', q = ' + q.toString() + (p < 0n ? '\nThe exponent is negative, so take the reciprocal of the positive power.' : '') });
+      if (k === 'root') st.push({ title: 'Exact root', text: 'The ' + ordinal(Number(q)) + ' root of ' + bs2 + ' is exactly ' + ratText(how.rootN, how.rootD) + '   because ' + ratText(how.rootN, how.rootD) + sup(q.toString()) + ' = ' + bs2 + '\n' + (how.rootD === 1n ? ratText(how.rootN, how.rootD) : '(' + ratText(how.rootN, how.rootD) + ')') + sup(babs(p).toString()) + ' = ' + (function () { var r = powRat(how.rootN, how.rootD, babs(p)); return r.d === 1n ? groupInt(digitsOfShort(r.n)) : digitsOfShort(r.n) + '/' + digitsOfShort(r.d); })() + (p < 0n ? '\nReciprocal: ' + sg + (dsp.fraction ? dsp.fraction.replace('−', '') : groupInt(dsp.integerString || '')) : '') });
+      else st.push({ title: 'Approximate value', text: 'The ' + ordinal(Number(q)) + ' root of ' + bs2 + ' is not a ratio of whole numbers, so the result is evaluated in double precision as exp(n × ln a).\nlog₁₀|y| = ' + En + ' × ' + ratLog10(base2.n, base2.d).toPrecision(12) + ' = ' + res.x.toPrecision(15) });
+    } else if (k === 'e') {
+      st.push({ title: 'The constant e', text: 'e ≈ 2.718281828459045 (irrational), so the result is an approximation in double precision:   y = exp(' + (a.sign < 0 && !(babs(p) % 2n === 0n) ? '' : '') + 'n)' + (a.sign < 0 ? '\nThe base is −e, so the sign follows the parity of the exponent.' : '') });
+    }
+    st.push({ title: 'Result', text: 'y = ' + rr.vt + '\nScientific notation: ' + dsp.sciText + (dsp.digitCount && dsp.isInteger && dsp.digitCount > 1 ? '\nDigits: ' + dsp.digitCount : '') });
+    return st;
+  }
+
+  /* ---------- the public run() ---------- */
+  function run(input) {
+    input = input || {};
+    var sig = input.sig === undefined ? '6' : String(input.sig);
+    var a = parseOperand(input.a, true), e = parseOperand(input.n, false);
+    if (a.error) return { ok: false, error: 'Base: ' + a.error, field: 'a' };
+    if (e.error) return { ok: false, error: 'Exponent: ' + e.error, field: 'n' };
+    if (a.empty && e.empty) return { ok: false, empty: true, error: '' };
+    if (a.empty || e.empty) return { ok: false, partial: true, error: 'Enter the ' + (a.empty && e.empty ? 'base and the exponent' : a.empty ? 'base' : 'exponent') + ' to see the result.' };
+    var ea = { kind: a.kind, n: a.n, d: a.d, sign: a.sign, text: a.text, src: a }, ee = { n: e.n, d: e.d, text: e.text, src: e };
+    var c = compute(ea, ee);
+    if (!c.ok) return { ok: false, error: c.error, field: c.field, code: c.code, hint: !!c.hint };
+    var dsp = display(c, sig), warnings = [], tmp = { exact: c.res.exact, sol: dsp }, steps = buildSteps(ea, ee, c, dsp, sig, { vt: valueText(tmp) });
+    if (!c.res.exact) warnings.push({ code: 'APPROXIMATE', message: 'This result is not a ratio of whole numbers, so it is a double-precision approximation. About ' + Math.min(15, c.res.sd.acc) + ' significant digits are reliable.' });
+    if (c.how.kind === 'huge') warnings.push({ code: 'HUGE', message: 'The exact value has more than 50,000 digits and is not written out. The scientific notation is calculated from logarithms and carries about ' + c.res.sd.acc + ' reliable digits.' });
+    if (dsp.roundedDigits && c.res.exact && !dsp.isInteger && !dsp.decimalIsExact) warnings.push({ code: 'ROUNDED', message: 'The decimal is rounded for display. The fraction is exact.' });
+    /* independent check: log10 |y| = n log10 |a| */
+    var chk = { ok: true, detail: '' };
+    if (a.kind === 'rat' && a.n !== 0n && !(babs(a.n) === a.d)) {
+      var want = (Number(e.n) / Number(e.d)) * ratLog10(babs(a.n), a.d), have = c.res.exact ? (c.res.sign === 0 ? NaN : ratLog10(c.res.n, c.res.d)) : c.res.x;
+      if (c.res.exact && c.res.sign !== 0) { chk.ok = Math.abs(want - have) <= 1e-9 * Math.max(1, Math.abs(want)); chk.detail = 'log10|y| = ' + have.toPrecision(12) + ' and n log10|a| = ' + want.toPrecision(12); }
+    }
+    var exprPlain = baseShow(ea) + '^' + expShow(ee);
+    return { ok: true, base: { text: a.text, kind: a.kind, n: a.n, d: a.d, sign: a.sign }, exponent: { text: e.text, p: e.n, q: e.d }, exprText: exprPlain, how: c.how.kind, exact: c.res.exact, sol: dsp, rawSign: c.res.sign, exactN: c.res.exact ? c.res.n.toString() : null, exactD: c.res.exact ? c.res.d.toString() : null, steps: steps, warnings: warnings, check: chk, sig: sig, value: c.res.exact ? (c.res.sign === 0 ? 0 : c.res.sign * Number(babs(c.res.n)) / Number(c.res.d)) : c.res.value };
+  }
+
+  /* ---------- exports ---------- */
+  function headline(r) { return r.exprText + (r.exact ? ' = ' : ' ') + valueText(r); }
+  function exportTxt(r) {
+    var s = r.sol, L = ['ELECMETRIC EXPONENT CALCULATOR (Mode 01: Power Calculator)', '', 'Expression: ' + r.exprText, 'Result: ' + valueText(r), 'Scientific notation: ' + s.sciText, 'Exact: ' + (r.exact ? 'yes' : 'no, double-precision approximation')];
+    if (s.digitCount && s.isInteger) L.push('Digits: ' + s.digitCount);
+    L.push('', 'WORKING'); r.steps.forEach(function (x) { L.push('', x.title, x.text); });
+    if (r.warnings.length) { L.push('', 'NOTES'); r.warnings.forEach(function (w) { L.push(w.message); }); }
+    L.push('', 'Generated by Elecmetric. Calculate. Convert. Understand.'); return L.join('\n');
+  }
+  function csvq(v) { v = String(v); return /[",\n]/.test(v) ? '"' + v.replace(/"/g, '""') + '"' : v; }
+  function exportCsv(r) {
+    var s = r.sol, rows = [['Quantity', 'Value'], ['Base a', r.base.text], ['Exponent n', r.exponent.text], ['Result', (s.sign < 0 ? '−' : '') + (s.isInteger && s.integerString ? s.integerString : (s.fraction || s.standard || s.sciText))], ['Fraction', s.fraction || ''], ['Decimal', s.standard || ''], ['Scientific notation', s.eText], ['Exact', r.exact ? 'yes' : 'no'], ['Digits (integer result)', s.isInteger ? s.digitCount : '']];
+    return rows.map(function (x) { return x.map(csvq).join(','); }).join('\n');
+  }
+  function exportJson(r) {
+    var s = r.sol; return JSON.stringify({ calculator: 'Elecmetric Exponent Calculator, Mode 01', base: r.base.text, exponent: r.exponent.text, exact: r.exact, result: { sign: s.sign, fraction: s.fraction, decimal: s.standard, integer: s.isInteger ? s.integerString : null, scientific: s.eText, digits: s.isInteger ? s.digitCount : null }, warnings: r.warnings.map(function (w) { return w.code; }) }, null, 2);
+  }
+
+  var api = { run: run, parseOperand: parseOperand, iroot: iroot, sup: sup, groupInt: groupInt, exportTxt: exportTxt, exportCsv: exportCsv, exportJson: exportJson, headline: headline, valueText: valueText, SIG_CHOICES: SIG_CHOICES, MAX_EXACT_DIGITS: MAX_EXACT_DIGITS };
+  if (typeof module !== 'undefined' && module.exports) module.exports = api; else root.ExponentCalc = api;
+})(typeof self !== 'undefined' ? self : this);
+
+/* Elecmetric Exponent Calculator, Mode 02: Negative & Fractional Exponents. Engine: one file, no DOM.
+   Required by tests/exponent_frac_test.js and inlined (after tools/exponent_engine.js) into
+   calculators/negative-fractional-exponents-calculator/index.html by tools/exponent_frac_page.js.
+
+   The VALUE of a^(p/q) comes from the Mode 01 engine (ExponentCalc.run), so the two modes can never disagree. This module adds what Mode 02 is for:
+   - the exponent as an exact reduced fraction p/q (0.75 is 3/4), with its whole and fractional parts;
+   - the negative exponent as a reciprocal (a fraction base is flipped);
+   - the root and power forms:  a^(p/q) = (q-th root of a)^p = q-th root of (a^p);
+   - the SIMPLIFIED RADICAL FORM, exact, with the denominator rationalised:  12^(1/2) = 2√3,  2^(-3/2) = √2/4,  2^(2/3) = ∛4,  (2/3)^(1/2) = √6/3.
+     Method: factor the base into primes, multiply each prime's exponent by p/q, move the whole part out of the root and keep the fractional part inside it,
+     then divide the root index and the radicand's exponents by their common factor. The result is unique: the radicand has no prime with exponent >= the index,
+     and the index and the radicand's exponents have no common factor;
+   - a negative base is judged by the reduced exponent (odd denominator: real; even denominator: no real value), as in Mode 01.
+   The radical form needs the base's prime factors; bases above 1e12 (numerator or denominator) are not factored and the page says so instead of guessing.
+   Errors are returned, never thrown. */
+(function (root) {
+  'use strict';
+  var X = (typeof module !== 'undefined' && module.exports) ? require('./exponent_engine.js') : root.ExponentCalc;
+  var FACTOR_LIMIT = 1e12, MAX_FORM_DIGITS = 60, MAX_INDEX = 1000, MAX_NUM = 1000;
+  var sup = X.sup;
+  function babs(x) { return x < 0n ? -x : x; }
+  function gcd(a, b) { a = babs(a); b = babs(b); while (b) { var t = a % b; a = b; b = t; } return a; }
+  function floorDiv(a, b) { var q = a / b; if ((a % b !== 0n) && ((a < 0n) !== (b < 0n))) q -= 1n; return q; }
+  function ms(s) { return String(s).replace(/-/g, '\u2212'); }
+  function bs(b) { return ms(b.toString()); }
+
+  /* ---------- factoring (trial division, bounded) ---------- */
+  function factor(nBig) { /* returns { primes: [[p, k], ...] } or null when above the limit */
+    if (nBig > BigInt(FACTOR_LIMIT)) return null;
+    var n = Number(nBig), out = [], p = 2, k;
+    if (n === 1) return [];
+    for (p = 2; p * p <= n; p += (p === 2 ? 1 : 2)) { if (n % p === 0) { k = 0; while (n % p === 0) { n /= p; k++; } out.push([p, k]); } }
+    if (n > 1) out.push([n, 1]);
+    return out;
+  }
+  function powBig(base, k) { return BigInt(base) ** BigInt(k); }
+
+  /* ---------- text helpers ---------- */
+  function rad(idx, R) { /* the radical sign with its index; R is a BigInt radicand */
+    var s = R.toString(), body = s.length > 1 ? '(' + s + ')' : s;
+    var ch = idx === 2 ? '√' : idx === 3 ? '∛' : idx === 4 ? '∜' : sup(String(idx)) + '√';
+    return ch + body;
+  }
+  function radTextPlain(idx, R) { return idx === 2 ? 'sqrt(' + R + ')' : 'root(' + idx + ', ' + R + ')'; }
+  function fracText(n, d) { return d === 1n ? n.toString() : n.toString() + '/' + d.toString(); }
+
+  /* ---------- the simplified radical form ---------- */
+  /* base: { n, d } positive coprime BigInt; p, q: reduced exponent with q > 1 (p may be negative). */
+  function radicalForm(base, p, q) {
+    var fn = factor(base.n), fd = factor(base.d);
+    if (fn === null || fd === null) return { ok: false, reason: 'The base has a factor that is too large to find here (the limit is 1,000,000,000,000), so the simplified radical form is not given. The value above is still exact or labelled approximate.' };
+    if (q > BigInt(MAX_INDEX) || babs(p) > BigInt(MAX_NUM)) return { ok: false, reason: 'The exponent is too large for the radical form to be written out (the limit is a denominator of ' + MAX_INDEX + ' and a numerator of ' + MAX_NUM + ').' };
+    var primes = {}, rows = [], i;
+    fn.forEach(function (t) { primes[t[0]] = (primes[t[0]] || 0) + t[1]; });
+    fd.forEach(function (t) { primes[t[0]] = (primes[t[0]] || 0) - t[1]; });
+    var keys = Object.keys(primes).map(Number).sort(function (a, b) { return a - b; });
+    var N = 1n, D = 1n, R = 1n, remGcd = q, anyRem = false, est = 0;
+    keys.forEach(function (pr) {
+      var k = BigInt(primes[pr]), t = k * p, w = floorDiv(t, q), r = t - w * q; /* exponent t/q = w + r/q, 0 <= r < q */
+      rows.push({ prime: pr, k: primes[pr], t: t, w: w, r: r });
+      est += Math.abs(Number(w)) * Math.log10(pr) + Number(r) * Math.log10(pr);
+    });
+    if (est > MAX_FORM_DIGITS) return { ok: false, reason: 'The simplified radical form would have more than ' + MAX_FORM_DIGITS + ' digits, so it is not written out. Use the decimal value.' };
+    rows.forEach(function (x) {
+      if (x.w > 0n) N *= powBig(x.prime, x.w); else if (x.w < 0n) D *= powBig(x.prime, -x.w);
+      if (x.r > 0n) { R *= powBig(x.prime, x.r); remGcd = gcd(remGcd, x.r); anyRem = true; }
+    });
+    var idx = Number(q), rr = rows.map(function (x) { return { prime: x.prime, k: x.k, t: x.t, w: x.w, r: x.r }; });
+    if (!anyRem) return { ok: true, exactRoot: true, N: N, D: D, R: 1n, idx: 1, rows: rr, q: q };
+    var g = remGcd; /* divide the index and the radicand's exponents by g */
+    var idx2 = Number(q / g), R2 = 1n;
+    rows.forEach(function (x) { if (x.r > 0n) R2 *= powBig(x.prime, x.r / g); });
+    var g2 = gcd(N, D); N /= g2; D /= g2;
+    var text = (N === 1n ? '' : N.toString()) + rad(idx2, R2), plain = (N === 1n ? '' : N.toString() + '*') + radTextPlain(idx2, R2);
+    if (D !== 1n) { text = text + ' / ' + D.toString(); plain = '(' + plain + ')/' + D.toString(); }
+    return { ok: true, exactRoot: false, N: N, D: D, R: R2, idx: idx2, rows: rr, q: q, reduced: g > 1n, g: g, textNoSign: text, plain: plain, unreducedR: R };
+  }
+
+  /* ---------- exponent facts ---------- */
+  function expFacts(p, q) {
+    var ap = babs(p), w = ap / q, r = ap % q, neg = p < 0n;
+    return { p: p, q: q, neg: neg, whole: w, rem: r, mixed: q !== 1n && w > 0n && r > 0n };
+  }
+
+  /* ---------- the working ---------- */
+  function primeProduct(rows, which) { /* "2² × 3" for the base */
+    return rows.map(function (x) { var k = which === 'abs' ? Math.abs(x.k) : x.k; return x.prime + (Math.abs(k) === 1 ? '' : sup(String(k))); }).join(' × ');
+  }
+  function fracPart(num, den) { var g = gcd(num, den); num /= g; den /= g; return den === 1n ? num.toString() : num.toString() + '/' + den.toString(); }
+  function pwr(b, e) { return b + '^(' + e + ')'; }
+
+  function buildSteps(r1, F, rf, sigIn, base, e) {
+    var st = [], p = e.p, q = e.q, B = base.show, En = fracText(p, q).replace(/-/g, '\u2212'), AbsE = fracText(babs(p), q);
+    var intro = 'a = ' + base.intro + '\nn = ' + En + (e.src && e.src.isDecimal ? '   (the decimal ' + e.src.text + ' as an exact fraction)' : e.src && e.src.isFraction && e.src.text.replace(/^-/, '') !== AbsE ? '   (reduced from ' + ms(e.src.text) + ')' : '');
+    st.push({ title: 'The problem', text: intro });
+    /* negative base */
+    if (base.negative) st.push({ title: 'Is there a real value?', text: 'The base is negative. The exponent ' + En + ' has the odd denominator ' + q.toString() + ', so a real value exists: the odd root of a negative number is real.\nThe sign is ' + (r1.rawSign < 0 ? 'negative, because the numerator ' + bs(babs(p)) + ' is odd.' : 'positive, because the numerator ' + bs(babs(p)) + ' is even.') + '\nCalculate with the magnitude ' + base.absText + ' and apply the sign at the end.' });
+    /* negative exponent */
+    if (F.neg) {
+      var flip = base.absRat && base.absRat.d !== 1n ? '\nThe base is a fraction, so flipping it gives the same result:  (' + fracText(base.absRat.n, base.absRat.d) + ')^(' + ms(En) + ') = (' + fracText(base.absRat.d, base.absRat.n) + ')^(' + AbsE + ')' : '';
+      st.push({ title: 'Negative exponent: take the reciprocal', text: 'a^(−n) = 1 / a^n\n' + B + '^(' + En + ') = 1 / ' + (base.negative ? '(' + base.absText + ')' : B) + '^(' + AbsE + ')' + flip });
+    }
+    /* mixed split */
+    if (q !== 1n) {
+      var aq = q.toString(), ap = bs(babs(p));
+      st.push({ title: 'Fractional exponent: a root and a power', text: 'a^(p/q) = (' + ordinal(Number(q)) + ' root of a)^p = ' + ordinal(Number(q)) + ' root of (a^p)\nHere p = ' + ap + ' and q = ' + aq + ': the denominator q is the root, the numerator p is the power.' + (F.mixed ? '\nThe exponent is greater than 1: ' + AbsE + ' = ' + F.whole + ' + ' + fracPart(F.rem, q) + ', so a^(' + AbsE + ') = a^' + F.whole + ' × a^(' + fracPart(F.rem, q) + ').' : '') });
+      if (rf && rf.ok && base.kind === 'rat') {
+        var rt = r1.rootForm;
+        if (rt) st.push({ title: 'The root, then the power', text: rt });
+        if (rf.exactRoot) st.push({ title: 'Exact root', text: 'Every prime in the base has an exponent that the root divides evenly, so the root is a ratio of whole numbers and the result is exact:\n' + primeProduct(rf.rows) + (rf.rows.length ? '' : '1') });
+        else {
+          var lines = rf.rows.map(function (x) {
+            var e1 = fracPart(x.t, q);
+            return x.prime + sup(String(x.k)).replace(/^¹$/, '') + '  →  exponent ' + ms(String(x.k)) + ' × ' + ms(En) + ' = ' + ms(e1) + (x.w !== 0n || x.r !== 0n ? '  =  ' + ms(x.w.toString()) + (x.r > 0n ? ' + ' + fracPart(x.r, q) : '') : '');
+          });
+          st.push({ title: 'Factor the base into primes', text: 'The magnitude ' + base.absText + ' = ' + primeProduct(rf.rows) + (rf.rows.some(function (x) { return x.k < 0; }) ? '   (negative exponents: those primes are in the denominator)' : '') });
+          st.push({ title: 'Multiply each prime’s exponent by n', text: lines.join('\n') + '\nThe whole part comes out of the root. The fractional part stays inside it.' });
+          var outside = [], inside = [];
+          rf.rows.forEach(function (x) { if (x.w !== 0n) outside.push(x.prime + (x.w === 1n ? '' : '^(' + ms(x.w.toString()) + ')')); if (x.r > 0n) inside.push(x.prime + (x.r === 1n ? '' : sup(String(x.r)))); });
+          st.push({ title: 'Outside and inside the root', text: 'Outside: ' + (outside.length ? outside.join(' × ') : '1') + ' = ' + fracText(rf.N, rf.D) + '\nInside the ' + ordinal(Number(q)) + ' root: ' + (inside.length ? inside.join(' × ') : '1') + ' = ' + rf.unreducedR.toString() + (rf.reduced ? '\nThe index ' + q + ' and every exponent inside share the factor ' + rf.g + ', so divide them by it: the root is now a ' + ordinal(rf.idx) + ' root of ' + rf.R.toString() + '.' : '') });
+        }
+      }
+    }
+    st.push({ title: 'Result', text: 'y = ' + r1.valueLine + (rf && rf.ok && !rf.exactRoot ? '\nSimplified radical form: ' + (r1.rawSign < 0 ? '−' : '') + rf.textNoSign + (F.neg ? '   (denominator rationalised)' : '') : '') + '\nScientific notation: ' + r1.sol.sciText });
+    return st;
+  }
+  function ordinal(k) { return k === 2 ? 'square' : k === 3 ? 'cube' : k + (k % 100 >= 11 && k % 100 <= 13 ? 'th' : ['th', 'st', 'nd', 'rd'][k % 10 > 3 ? 0 : k % 10] || 'th'); }
+
+  /* ---------- the public run() ---------- */
+  function run(input) {
+    input = input || {};
+    var r = X.run(input);
+    if (!r.ok) return r;
+    var a = r.base, e = r.exponent, p = e.p, q = e.q, F = expFacts(p, q), neg = a.kind === 'rat' && a.n < 0n, absRat = a.kind === 'rat' ? { n: babs(a.n), d: a.d } : null;
+    var out = { ok: true, mode: 2, base: a, exponent: { text: e.text, p: p, q: q, neg: F.neg, whole: F.whole, rem: F.rem, mixed: F.mixed, isInteger: q === 1n }, exprText: r.exprText, exact: r.exact, sol: r.sol, rawSign: r.rawSign, how: r.how, warnings: r.warnings.slice(), check: r.check, exactN: r.exactN, exactD: r.exactD, steps: null, forms: [], radical: null, mode1: r };
+    var valueLine = X.valueText(r), sg = r.rawSign < 0 ? '\u2212' : '';
+    var baseTxt = a.kind === 'e' ? (a.sign < 0 ? '(\u2212e)' : 'e') : null;
+    var aShow = a.kind === 'e' ? baseTxt : (neg || a.d !== 1n ? '(' + ms(fracText(a.n, a.d)) + ')' : a.n.toString());
+    var absText = a.kind === 'rat' ? fracText(absRat.n, absRat.d) : 'e';
+    var Eshow = q === 1n ? ms(p.toString()) : '(' + ms(fracText(p, q)) + ')';
+    var aPos = a.kind === 'rat' ? (absRat.d !== 1n ? '(' + absText + ')' : absText) : 'e';
+    var rf = null;
+    /* radical form (positive-base magnitude) */
+    if (q !== 1n && a.kind === 'rat' && a.n !== 0n) {
+      rf = radicalForm(absRat, p, q);
+      if (rf.ok && !rf.exactRoot) { out.radical = { text: (r.rawSign < 0 ? '\u2212' : '') + rf.textNoSign, plain: (r.rawSign < 0 ? '-' : '') + rf.plain, index: rf.idx, radicand: rf.R.toString(), coefN: rf.N.toString(), coefD: rf.D.toString() }; }
+      else if (rf.ok && rf.exactRoot) out.radical = { exactRoot: true, text: valueLine };
+      else out.radicalNote = rf.reason;
+    }
+    /* the equivalent forms */
+    var Fm = out.forms;
+    if (q !== 1n && a.kind === 'rat' && a.n !== 0n) {
+      var ap = babs(p).toString(), qi = Number(q);
+      var rootVal = X.run({ a: a.n.toString() + '/' + a.d.toString(), n: '1/' + q.toString(), sig: input.sig || '6' });
+      var rootShow = rootVal.ok ? X.valueText(rootVal) : '';
+      var apIsOne = babs(p) === 1n;
+      Fm.push({ label: 'Exponent form', text: aShow + '^' + Eshow });
+      if (F.neg) Fm.push({ label: 'Reciprocal form', text: '1 / ' + (neg ? '(' + ms(fracText(a.n, a.d)) + ')' : aPos) + '^(' + ms(fracText(babs(p), q)) + ')' });
+      Fm.push({ label: 'Root, then power', text: (F.neg ? '1 / ' : '') + (apIsOne ? '' : '(') + ordinal(qi) + ' root of ' + (neg ? '(' + ms(fracText(a.n, a.d)) + ')' : aPos) + (apIsOne ? '' : ')^' + ap), note: rootVal.ok ? 'the ' + ordinal(qi) + ' root is ' + rootShow : '' });
+      Fm.push({ label: 'Power, then root', text: (F.neg ? '1 / ' : '') + ordinal(qi) + ' root of (' + (neg ? '(' + ms(fracText(a.n, a.d)) + ')' : aPos) + (apIsOne ? '' : '^' + ap) + ')' });
+      if (out.radical && !out.radical.exactRoot) Fm.push({ label: 'Simplified radical form', text: out.radical.text, note: 'exact' + (F.neg ? ', denominator rationalised' : '') });
+      Fm.push({ label: r.exact ? 'Exact value' : 'Value', text: valueLine, note: r.exact ? 'exact' : 'approximate' });
+      out.rootText = rootShow; r.rootForm = rootVal.ok ? 'The ' + ordinal(qi) + ' root of ' + (neg ? ms(fracText(a.n, a.d)) : absText) + ' is ' + rootShow + (rootVal.exact ? '' : '   (not a ratio of whole numbers)') + '\nRaise it to the power ' + ap + (rootVal.exact ? ':  ' + valueLine : '') + (F.neg ? '\nThen take the reciprocal.' : '') : null;
+    } else if (q === 1n && a.kind === 'rat' && a.n !== 0n) {
+      Fm.push({ label: 'Exponent form', text: aShow + '^' + Eshow });
+      if (F.neg) Fm.push({ label: 'Reciprocal form', text: '1 / ' + (neg ? '(' + ms(fracText(a.n, a.d)) + ')' : aPos) + '^' + babs(p).toString() });
+      Fm.push({ label: r.exact ? 'Exact value' : 'Value', text: valueLine, note: r.exact ? 'exact' : 'approximate' });
+    } else if (a.kind === 'e') {
+      Fm.push({ label: 'Exponent form', text: aShow + '^' + Eshow });
+      if (q !== 1n) Fm.push({ label: 'Root, then power', text: '(' + ordinal(Number(q)) + ' root of e)^' + bs(p), note: 'e is irrational: approximate' });
+      Fm.push({ label: 'Value', text: valueLine, note: 'approximate' });
+    }
+    /* steps */
+    var baseInfo = { kind: a.kind, show: aShow, absText: absText, negative: neg, absRat: absRat, intro: a.kind === 'e' ? (a.sign < 0 ? '−e ≈ −2.718281828459045' : 'e ≈ 2.718281828459045') : ms(fracText(a.n, a.d)) + (a.d !== 1n && /[.eE]/.test(a.text) && !/\//.test(a.text) ? '   (the decimal ' + ms(a.text) + ' as an exact fraction)' : '') };
+    var eInfo = { p: p, q: q, src: { text: e.text, isDecimal: /[.eE]/.test(e.text) && !/\//.test(e.text), isFraction: /\//.test(e.text) } };
+    r.valueLine = valueLine;
+    if (q === 1n) {
+      out.steps = r.steps.slice(); out.steps.splice(1, 0, { title: 'Whole-number exponent', text: 'The exponent ' + ms(p.toString()) + ' is a whole number, so no root is involved. Mode 01 (Power Calculator) shows the full working; the negative-exponent rule is applied below.' + (F.neg ? '\na^(−n) = 1 / a^n' : '') });
+    } else out.steps = buildSteps(r, F, rf, input.sig, baseInfo, eInfo);
+    /* independent check on the radical form: log10|y| = log10(N/D) + log10(R)/idx  against  n log10|a| */
+    var chk = { ok: true, detail: r.check && r.check.detail ? r.check.detail : '' };
+    if (out.radical && !out.radical.exactRoot) {
+      var rr = rf, lg = function (b) { var s = b.toString(), head = s.slice(0, 17); return s.length <= 15 ? Math.log10(Number(b)) : (s.length - head.length) + Math.log10(Number(head)); };
+      var have = lg(rr.N) - lg(rr.D) + lg(rr.R) / rr.idx, want = (Number(p) / Number(q)) * (lg(absRat.n) - lg(absRat.d));
+      chk.ok = Math.abs(have - want) <= 1e-9 * Math.max(1, Math.abs(want));
+      chk.detail = 'radical form: log10|y| = ' + have.toPrecision(12) + ' and n log10|a| = ' + want.toPrecision(12);
+    }
+    out.check = chk;
+    return out;
+  }
+
+  /* ---------- exports ---------- */
+  function exportTxt(r) {
+    var s = r.sol, L = ['ELECMETRIC EXPONENT CALCULATOR (Mode 02: Negative & Fractional Exponents)', '', 'Expression: ' + r.exprText, 'Result: ' + X.valueText(r.mode1), 'Scientific notation: ' + s.sciText, 'Exact: ' + (r.exact ? 'yes' : 'no, double-precision approximation')];
+    if (r.radical && !r.radical.exactRoot) L.push('Simplified radical form: ' + r.radical.text);
+    L.push('', 'EQUIVALENT FORMS'); r.forms.forEach(function (f) { L.push(f.label + ': ' + f.text + (f.note ? '   (' + f.note + ')' : '')); });
+    L.push('', 'WORKING'); r.steps.forEach(function (x) { L.push('', x.title, x.text); });
+    if (r.warnings.length) { L.push('', 'NOTES'); r.warnings.forEach(function (w) { L.push(w.message); }); }
+    L.push('', 'Generated by Elecmetric. Calculate. Convert. Understand.'); return L.join('\n');
+  }
+  function csvq(v) { v = String(v); return /[",\n]/.test(v) ? '"' + v.replace(/"/g, '""') + '"' : v; }
+  function exportCsv(r) {
+    var s = r.sol, rows = [['Quantity', 'Value'], ['Base a', r.base.text], ['Exponent n', r.exponent.text], ['Exponent as a fraction', r.exponent.q === 1n ? r.exponent.p.toString() : r.exponent.p.toString() + '/' + r.exponent.q.toString()], ['Result', (s.sign < 0 ? '\u2212' : '') + (s.isInteger && s.integerString ? s.integerString : (s.fraction || s.standard || s.sciText))], ['Simplified radical form', r.radical && !r.radical.exactRoot ? r.radical.text : ''], ['Decimal', s.standard || ''], ['Scientific notation', s.eText], ['Exact', r.exact ? 'yes' : 'no']];
+    return rows.map(function (x) { return x.map(csvq).join(','); }).join('\n');
+  }
+  function exportJson(r) {
+    var s = r.sol; return JSON.stringify({ calculator: 'Elecmetric Exponent Calculator, Mode 02 (Negative & Fractional Exponents)', base: r.base.text, exponent: r.exponent.text, exponentFraction: { numerator: r.exponent.p.toString(), denominator: r.exponent.q.toString() }, exact: r.exact, result: { sign: s.sign, fraction: s.fraction, decimal: s.standard, integer: s.isInteger ? s.integerString : null, scientific: s.eText }, radical: r.radical && !r.radical.exactRoot ? { text: r.radical.text, index: r.radical.index, radicand: r.radical.radicand, coefficient: r.radical.coefN + '/' + r.radical.coefD } : null, forms: r.forms }, null, 2);
+  }
+  function headline(r) { return r.exprText + (r.exact ? ' = ' : ' ') + X.valueText(r.mode1) + (r.radical && !r.radical.exactRoot ? '   (' + r.radical.text + ')' : ''); }
+
+  var api = { run: run, radicalForm: radicalForm, factor: factor, exportTxt: exportTxt, exportCsv: exportCsv, exportJson: exportJson, headline: headline, valueText: function (r) { return X.valueText(r.mode1); }, groupInt: X.groupInt, sup: X.sup, FACTOR_LIMIT: FACTOR_LIMIT };
+  if (typeof module !== 'undefined' && module.exports) module.exports = api; else root.ExponentFrac = api;
+})(typeof self !== 'undefined' ? self : this);
+
+/* Elecmetric Exponent Calculator, Mode 03: Missing Value Solver (a^n = y). Engine: one file, no DOM.
+   Required by tests/exponent_solver_test.js and inlined (after tools/exponent_engine.js and tools/exponent_frac_engine.js) into
+   calculators/exponent-solver/index.html by tools/exponent_solver_page.js.
+
+   The user knows two of the three values and the engine finds the third:
+     result   y = a^n          (the value comes from the Mode 02 engine, so Modes 01, 02 and 03 can never disagree)
+     exponent n = ln y / ln a  (logarithm, with domain checks; an exact whole number or fraction is found and proved by whole-number arithmetic when there is one)
+     base     a = y^(1/n)      (root, with the sign analysis that decides how many real bases there are)
+   Every answer is classified, as the CEO brief asks:
+     unique        exactly one real solution
+     multiple      more than one real solution (a^2 = 9 has a = 3 and a = -3)
+     none          no real solution (2^n = -8, a^2 = -4, a negative base to a power that is not real)
+     indeterminate every value works (1^n = 1, a^0 = 1) or the expression is undefined (0^0)
+   A negative base is judged as in Modes 01 and 02: a real power of a negative number needs a whole-number exponent or a reduced fraction p/q with q odd,
+   and the sign of the result is (-1)^p. Complex solutions are not part of this mode.
+   Nothing is rounded internally; rounding happens once, when a number is displayed. Errors are returned, never thrown. */
+(function (root) {
+  'use strict';
+  var X = (typeof module !== 'undefined' && module.exports) ? require('./exponent_engine.js') : root.ExponentCalc;
+  var F = (typeof module !== 'undefined' && module.exports) ? require('./exponent_frac_engine.js') : root.ExponentFrac;
+  var MAXQ = 1000, MAXP = 4000, MAX_CHECK_DIGITS = 150000, MINUS = '\u2212';
+
+  /* ---------- BigInt and rational helpers ---------- */
+  function babs(x) { return x < 0n ? -x : x; }
+  function gcd(a, b) { a = babs(a); b = babs(b); while (b) { var t = a % b; a = b; b = t; } return a; }
+  function sgn(x) { return x > 0n ? 1 : x < 0n ? -1 : 0; }
+  function rat(n, d) { if (d < 0n) { n = -n; d = -d; } var g = gcd(n, d); if (g > 1n) { n /= g; d /= g; } return { n: n, d: d }; }
+  function digits(x) { return babs(x).toString().length; }
+  function neg(s) { return s.replace(/^-/, MINUS); }
+  function powR(r, k) { /* r^k for a whole-number k (BigInt), exact */
+    var m = babs(k), n = r.n ** m, d = r.d ** m;
+    return k < 0n ? rat(d, n) : { n: n, d: d };
+  }
+  function bigln(x) { var s = x.toString(); return s.length <= 300 ? Math.log(Number(s)) : Math.log(Number(s.slice(0, 17))) + (s.length - 17) * Math.LN10; }
+  function lnRat(r) { /* ln of a positive rational, careful when it is close to 1 */
+    var diff = r.n - r.d, ratio = Number(diff * 10n ** 30n / r.d) / 1e30;
+    if (Math.abs(ratio) < 0.5) return Math.log1p(ratio);
+    return bigln(r.n) - bigln(r.d);
+  }
+  function ratText(r) { return r.d === 1n ? r.n.toString() : r.n + '/' + r.d; }
+  function disp(r) { return neg(ratText(r)); }
+  function trimZeros(s) { return s.indexOf('.') >= 0 ? s.replace(/0+$/, '').replace(/\.$/, '') : s; }
+  function fmt(x, sig) {
+    var sg = sig === 'full' ? 15 : (parseInt(sig, 10) || 6), ax = Math.abs(x);
+    if (x === 0) return '0';
+    if (ax >= 1e15 || ax < 1e-6) {
+      var parts = x.toExponential(sg - 1).split('e'), ex = parseInt(parts[1], 10);
+      return neg(trimZeros(parts[0])) + ' \u00d7 10' + X.sup(ex);
+    }
+    var s = x.toPrecision(sg);
+    if (s.indexOf('e') >= 0) s = String(Number(s));
+    return neg(trimZeros(s));
+  }
+  function fmtGroup(s) { var m = /^(\u2212?)(\d+)(\.\d+)?$/.exec(s); return m ? m[1] + X.groupInt(m[2]) + (m[3] || '') : s; }
+
+  /* exact test of a^(p/q) = y for rationals, p and q whole numbers, q > 0: a^p = y^q (needs a > 0 and y > 0 when q is even) */
+  function exactPow(a, p, q, y) {
+    if (q % 2n === 0n && (a.n <= 0n || y.n <= 0n)) return false;
+    if (a.n === 0n) return false;
+    if ((digits(a.n) + digits(a.d)) * Number(babs(p)) + (digits(y.n) + digits(y.d)) * Number(q) > MAX_CHECK_DIGITS) return null;
+    var l = powR(a, p), r = powR(y, q);
+    return l.n === r.n && l.d === r.d;
+  }
+
+  /* the rational p/q (q up to MAXQ) that equals x, proved by exactPow; null when there is none */
+  function findRational(a, y, x) {
+    if (!isFinite(x)) return null;
+    var h1 = 1, h0 = 0, k1 = 0, k0 = 1, v = Math.abs(x), i, aI, hN, kN, sign = x < 0 ? -1 : 1;
+    for (i = 0; i < 40; i++) {
+      aI = Math.floor(v); hN = aI * h1 + h0; kN = aI * k1 + k0;
+      if (kN > MAXQ || hN > MAXP) break;
+      h0 = h1; h1 = hN; k0 = k1; k1 = kN;
+      if (k1 > 0 && Math.abs(Math.abs(x) - h1 / k1) <= 1e-9 * Math.max(1, Math.abs(x))) {
+        var p = BigInt(sign * h1), q = BigInt(k1), ok = exactPow(a, p, q, y);
+        if (ok) return { p: p, q: q };
+      }
+      if (v - aI < 1e-12) break;
+      v = 1 / (v - aI);
+    }
+    return null;
+  }
+
+  /* ---------- reading the inputs ---------- */
+  var FIELDS = { y: 'Result (y)', n: 'Exponent (n)', a: 'Base (a)' };
+  function pickLabel(op, allowNeg) { return op.text; }
+  function paren(text) { return /^-|\u2212|\/|\./.test(text) ? '(' + text.replace(/^-/, MINUS) + ')' : text; }
+  function expr(aT, nT, yT) { return paren(aT) + '^' + (nT === 'n' ? 'n' : /^-|\u2212|\/|\./.test(nT) ? '(' + nT.replace(/^-/, MINUS) + ')' : nT) + ' = ' + yT; }
+
+  function base(solve, sig, a, n, y) {
+    var aT = solve === 'a' ? 'a' : a.text, nT = solve === 'n' ? 'n' : n.text, yT = solve === 'y' ? 'y' : y.text;
+    var A = solve === 'a' ? 'a' : paren(aT), N = solve === 'n' ? 'n' : (/^-|\u2212|\/|\./.test(nT) ? '(' + nT.replace(/^-/, MINUS) + ')' : nT);
+    return { ok: true, mode: 3, solve: solve, sig: sig, a: a, n: n, y: y, equation: A + '^' + N + ' = ' + (solve === 'y' ? '?' : yT.replace(/^-/, MINUS)), cls: 'none', message: '', solutions: [], steps: [], warnings: [], check: null };
+  }
+  function lines() { return Array.prototype.slice.call(arguments).join('\n'); }
+  function sciOf(sol) { return sol && sol.sciCoef !== undefined ? Number(sol.sciCoef + 'e' + sol.sciExp) : NaN; }
+  function log10Of(sol) { return Math.log10(Math.abs(Number(sol.sciCoef))) + sol.sciExp; }
+
+  /* a solution made from a Mode 02 run: exact text (radical, fraction or whole number), decimal and scientific notation.
+     The sign comes from the run (a negative result) or from negate (the second real base). */
+  function solFromRun(r, negate, name) {
+    var s = r.sol, ng = !!negate || r.rawSign < 0, sg = ng ? MINUS : '', exactText = null, dec, v = r.mode1 && r.mode1.value, l10;
+    if (r.exact) exactText = s.isInteger ? (s.integerString ? s.integerString : s.sciText) : s.fraction;
+    else if (r.radical && !r.radical.exactRoot) exactText = r.radical.text;
+    dec = String(s.standard ? s.standard : s.sciText).replace(/^[-\u2212]/, '');
+    var sci = String(s.sciText).replace(/^[-\u2212]/, '');
+    l10 = typeof v === 'number' && isFinite(v) && v !== 0 ? Math.log10(Math.abs(v)) : log10Of(s);
+    return { v: name, text: exactText ? sg + exactText : '\u2248 ' + sg + dec, exact: !!r.exact, exactText: exactText ? sg + exactText : null, decimal: sg + dec, decimalApprox: !s.decimalIsExact, approx: !r.exact, sci: sg + sci, sign: s.sign === 0 ? 0 : ng ? -1 : 1, log10: l10, ratN: r.exact ? r.exactN : null, ratD: r.exact ? r.exactD : null };
+  }
+
+  /* ---------- solve for the result y ---------- */
+  function solveY(o, a, n, sig) {
+    var r = base('y', sig, a, n, { text: '' }), f = F.run({ a: a.text, n: n.text, sig: sig });
+    if (!f.ok) {
+      r.cls = f.code === 'ZERO_TO_ZERO' ? 'indeterminate' : 'none'; r.message = f.error; r.code = f.code;
+      r.steps = [{ title: 'The problem', text: 'a = ' + a.text.replace(/^-/, MINUS) + '\nn = ' + n.text.replace(/^-/, MINUS) + '\ny = a^n' }, { title: r.cls === 'indeterminate' ? 'Indeterminate' : 'No real value', text: f.error }];
+      return r;
+    }
+    var s = solFromRun(f, false, 'y');
+    r.cls = 'unique'; r.solutions = [s]; r.message = 'Exactly one real value: a to the power n is defined and single-valued here.';
+    r.equation = (f.exprText || '').replace(/^-/, MINUS) + ' = ?'; r.run = f;
+    r.steps = f.steps; r.check = f.check; r.warnings = f.warnings || []; r.radicalNote = f.radicalNote || null;
+    r.value = f.value;
+    r.y = { text: F.valueText(f) }; r.valueLine = F.headline(f);
+    return r;
+  }
+
+  /* ---------- solve for the exponent n ---------- */
+  function solveN(o, a, y, sig) {
+    var r = base('n', sig, a, { text: '' }, y), problem = 'a = ' + a.text.replace(/^-/, MINUS) + '\ny = ' + y.text.replace(/^-/, MINUS) + '\nSolve a^n = y for n';
+    r.steps = [{ title: 'The problem', text: problem }];
+    function stop(cls, title, msg) { r.cls = cls; r.message = msg; r.steps.push({ title: title, text: msg }); return r; }
+    var isE = a.kind === 'e', A = isE ? { n: 1n, d: 1n } : rat(a.n, a.d), Y = rat(y.n, y.d), aPos = isE ? a.sign > 0 : A.n > 0n;
+    if (isE && a.sign < 0) { A = { n: -1n, d: 1n }; isE = false; aPos = false; r.warnings.push({ message: 'The base is read as the number \u2212e (about \u22122.71828). It is treated as an ordinary negative base.' }); isE = false; return stop('none', 'Not supported', 'A base of \u2212e is not supported: a negative base needs an exact value to decide whether a real power exists. Use a rational base.'); }
+    var aZero = !isE && A.n === 0n, aOne = !isE && A.n === 1n && A.d === 1n, aMinusOne = !isE && A.n === -1n && A.d === 1n, yZero = Y.n === 0n, yOne = Y.n === 1n && Y.d === 1n;
+    if (aZero) {
+      if (yZero) return stop('indeterminate', 'Every positive n works', '0^n = 0 for every n > 0, so every positive n is a solution. For n = 0 the expression 0\u2070 is undefined and for n < 0 it means dividing by zero.');
+      return stop('none', 'No solution', '0^n is 0 (for n > 0) or undefined (for n \u2264 0). It is never ' + disp(Y) + '.');
+    }
+    if (aOne) return yOne ? stop('indeterminate', 'Every n works', '1^n = 1 for every n, so every n is a solution: the value of n cannot be found from this equation.') : stop('none', 'No solution', '1^n = 1 for every n. It is never ' + disp(Y) + '.');
+    if (aMinusOne) {
+      if (yOne) return stop('indeterminate', 'Every even n works', '(\u22121)^n = 1 for every even whole number n (and \u22121 for every odd one). Infinitely many solutions.');
+      if (Y.n === -1n && Y.d === 1n) return stop('indeterminate', 'Every odd n works', '(\u22121)^n = \u22121 for every odd whole number n. Infinitely many solutions.');
+      return stop('none', 'No solution', '(\u22121)^n is only ever 1 or \u22121 (for whole-number n). It is never ' + disp(Y) + '.');
+    }
+    if (yZero) return stop('none', 'No solution', 'A non-zero base raised to any power is never 0.');
+    if (aPos && Y.n < 0n) return stop('none', 'No real solution', 'A positive base raised to any real power is positive, so a^n can never equal ' + disp(Y) + '. (A complex exponent would be needed; complex results are not part of this mode.)');
+    var lnA = isE ? 1 : lnRat(aPos ? A : rat(-A.n, A.d)), lnY = lnRat(rat(babs(Y.n), Y.d)), nf = yOne ? 0 : lnY / lnA, ex = null;
+    var txtA = isE ? 'e' : (aPos ? ratText(A) : ratText(rat(-A.n, A.d)));
+    r.steps.push({ title: 'Take the logarithm of both sides', text: lines('a^n = y', 'n \u00b7 ln(a) = ln(y)', 'n = ln(y) / ln(a)', '(Any logarithm base gives the same ratio; natural logarithms are used here.)') });
+    r.steps.push({ title: 'Calculate', text: lines('ln(' + (aPos ? '' : '|') + txtA + (aPos ? '' : '|') + ') = ' + fmt(lnA, 10), 'ln(' + (Y.n < 0n ? '|' : '') + ratText(rat(babs(Y.n), Y.d)) + (Y.n < 0n ? '|' : '') + ') = ' + fmt(lnY, 10), 'n = ' + fmt(lnY, 10) + ' / ' + fmt(lnA, 10) + ' = ' + fmt(nf, 12)) });
+    if (yOne) ex = { p: 0n, q: 1n };
+    else if (!isE) ex = findRational(A, Y, nf);
+    if (!aPos) {
+      /* negative base: the real power exists for a whole number or a fraction with an odd denominator, and the sign of the result is (-1)^p */
+      if (!ex) return stop('none', 'No real solution', 'The size works out as n \u2248 ' + fmt(nf, 8) + ', but that is not a whole number or a fraction (denominator up to ' + MAXQ + ') with an odd denominator, and a negative base raised to any other power is not a real number. (Complex results are not part of this mode.)');
+      var odd = ex.p % 2n !== 0n, yNeg = Y.n < 0n;
+      if (ex.q % 2n === 0n) return stop('none', 'No real solution', 'The size works out as n = ' + ex.p + '/' + ex.q + ', but a negative base raised to a fraction with an even denominator is not a real number.');
+      if (odd !== yNeg) return stop('none', 'No real solution', 'The size works out as n = ' + ratText(rat(ex.p, ex.q)) + ', but then the sign is wrong: with a negative base the sign of a^n is ' + (odd ? 'negative' : 'positive') + ' for this exponent, and y is ' + (yNeg ? 'negative' : 'positive') + '.');
+      r.steps.push({ title: 'Negative base', text: 'The size |y| = |a|^n gives n = ' + ratText(rat(ex.p, ex.q)) + '. With a negative base the real power exists for this exponent (odd denominator) and its sign is (\u22121)^' + ex.p + ' = ' + (odd ? 'negative' : 'positive') + ', which matches y.' });
+    }
+    var sol, nn = ex ? rat(ex.p, ex.q) : null;
+    if (ex) {
+      var dec = fmt(Number(nn.n) / Number(nn.d), sig === 'full' ? 15 : sig);
+      sol = { v: 'n', text: disp(nn), exact: true, exactText: disp(nn), decimal: dec, decimalApprox: false, approx: false, sci: fmt(Number(nn.n) / Number(nn.d), sig), sign: sgn(nn.n), ratN: nn.n.toString(), ratD: nn.d.toString(), value: Number(nn.n) / Number(nn.d) };
+      r.steps.push({ title: 'Exact value', text: ex.p === 0n ? txtA + '^0 = 1, so n = 0 exactly.' : (isE ? '' : (aPos ? ratText(A) : '(' + MINUS + ratText(rat(-A.n, A.d)) + ')') + '^' + (nn.d === 1n ? nn.n : '(' + nn.n + '/' + nn.d + ')') + ' = ' + ratText(Y) + ', checked with whole numbers (' + ratText(Y).replace(/^-/, MINUS) + ' is reached exactly), so n = ' + disp(nn) + ' exactly.') });
+      r.check = { ok: true, detail: expr(a.text, ratText(nn), y.text).replace(/ = /, ' = ') + ' holds exactly (a^' + nn.n + ' = y^' + nn.d + ' in whole-number arithmetic)' };
+    } else {
+      sol = { v: 'n', text: '\u2248 ' + fmt(nf, sig), exact: false, exactText: null, decimal: fmt(nf, sig), decimalApprox: true, approx: true, sci: fmt(nf, sig), sign: nf < 0 ? -1 : nf > 0 ? 1 : 0, value: nf };
+      r.steps.push({ title: 'Exact value', text: 'n is not a whole number or a fraction with a denominator up to ' + MAXQ + ' that satisfies a^n = y exactly, so it is irrational (or very close to a fraction with a larger denominator): the decimal is a double-precision approximation (about 15 reliable digits).' });
+      r.check = { ok: Math.abs(nf * lnA - lnY) <= 1e-9 * (1 + Math.abs(lnY)), detail: 'n ln|a| = ' + fmt(nf * lnA, 12) + ' and ln|y| = ' + fmt(lnY, 12) };
+    }
+    r.cls = 'unique'; r.solutions = [sol]; r.message = 'Exactly one real exponent solves a^n = y.';
+    r.steps.push({ title: 'Result', text: 'n = ' + sol.text + (ex && nn.d !== 1n ? '   (' + sol.decimal + ')' : '') });
+    return r;
+  }
+
+  /* ---------- solve for the base a ---------- */
+  function solveA(o, n, y, sig) {
+    var r = base('a', sig, { text: '' }, n, y), N = rat(n.n, n.d), Y = rat(y.n, y.d), p = N.n, q = N.d;
+    r.steps = [{ title: 'The problem', text: 'n = ' + n.text.replace(/^-/, MINUS) + '\ny = ' + y.text.replace(/^-/, MINUS) + '\nSolve a^n = y for a' }];
+    function stop(cls, title, msg) { r.cls = cls; r.message = msg; r.steps.push({ title: title, text: msg }); return r; }
+    if (p === 0n) return Y.n === 1n && Y.d === 1n ? stop('indeterminate', 'Every non-zero a works', 'a\u2070 = 1 for every a \u2260 0 (and 0\u2070 is undefined), so a cannot be found from this equation.') : stop('none', 'No solution', 'a\u2070 is 1 for every non-zero a, so it is never ' + disp(Y) + '.');
+    if (Y.n === 0n) return p > 0n ? (r.cls = 'unique', r.message = 'Exactly one real base: only 0 raised to a positive power is 0.', r.solutions = [{ v: 'a', text: '0', exact: true, exactText: '0', decimal: '0', decimalApprox: false, approx: false, sci: '0', sign: 0, ratN: '0', ratD: '1' }], r.steps.push({ title: 'Result', text: 'a = 0' }), r.check = { ok: true, detail: '0^n = 0 for n > 0' }, r) : stop('none', 'No solution', 'A negative power means dividing by a^|n|, which is never 0.');
+    var qEven = q % 2n === 0n, pEven = p % 2n === 0n, yPos = Y.n > 0n, pAbs = babs(p);
+    var nTxt = (p < 0n ? '-' : '') + q + '/' + pAbs;
+    r.steps.push({ title: 'Take the root', text: lines('a^n = y', 'a = y^(1/n)', 'n = ' + ratText(N).replace(/^-/, MINUS) + ' (reduced), so 1/n = ' + (p < 0n ? MINUS : '') + q + '/' + pAbs, '|a| = |y|^(' + (p < 0n ? MINUS : '') + q + '/' + pAbs + ')') });
+    /* real solutions: which signs of a are possible */
+    var signs;
+    if (qEven) { signs = yPos ? [1] : []; }
+    else if (pEven) { signs = yPos ? [1, -1] : []; }
+    else { signs = yPos ? [1] : [-1]; }
+    var why = qEven ? 'The reduced exponent has an even denominator (' + q + '), so a real power exists only for a \u2265 0 and the result is positive.' : pEven ? 'The reduced exponent has an even numerator (' + p + ') and an odd denominator, so a and \u2212a give the same positive value: a^n is never negative, and when y > 0 there are two real bases.' : 'The reduced exponent has an odd numerator and an odd denominator, so a^n has the same sign as a: one real base, with the sign of y.';
+    r.steps.push({ title: 'How many real solutions', text: why });
+    if (!signs.length) return stop('none', 'No real solution', (yPos ? '' : 'a^n would have to be negative, but ') + (qEven ? 'a negative base has no real power with an even denominator, and a positive base gives a positive value.' : 'an even power of a real number is never negative.') + ' Complex solutions are not part of this mode.');
+    var aA = rat(babs(Y.n), Y.d), f = F.run({ a: ratText(aA), n: nTxt, sig: sig });
+    if (!f.ok) { f.mode = 3; f.solve = 'a'; return f; }
+    var pos = solFromRun(f, false, 'a'), sols = signs.map(function (sg) { return sg > 0 ? pos : solFromRun(f, true, 'a'); });
+    r.steps.push({ title: 'Evaluate the root', text: '|a| = |y|^(' + (p < 0n ? MINUS : '') + q + '/' + pAbs + ') is worked out with the fractional-exponent method (the steps below call that exponent n).' });
+    r.steps = r.steps.concat(f.steps.slice(1, -1));
+    r.cls = sols.length > 1 ? 'multiple' : 'unique';
+    r.message = sols.length > 1 ? 'Two real bases: ' + sols[0].text + ' and ' + sols[1].text + '.' : 'Exactly one real base.';
+    r.solutions = sols; r.run = f; r.radicalNote = f.radicalNote || null; r.warnings = f.warnings || [];
+    /* check: put every solution back into a^n and compare with y (exactly when the base is a ratio of whole numbers) */
+    var allOk = true, detail = [];
+    sols.forEach(function (s) {
+      var lnaAbs = s.log10 * Math.LN10, lnY = lnRat(rat(babs(Y.n), Y.d)), nv = Number(N.n) / Number(N.d);
+      if (s.ratN !== null && s.ratD !== null) {
+        var base2 = rat(BigInt(s.ratN) * BigInt(s.sign), BigInt(s.ratD)), ok = exactPow(base2, p, q, Y);
+        if (ok === null) { ok = Math.abs(nv * lnaAbs - lnY) <= 1e-9 * (1 + Math.abs(lnY)); detail.push(s.text + ': numerical check'); } else detail.push(s.text + '^(' + ratText(N).replace(/^-/, MINUS) + ') = y exactly');
+        allOk = allOk && ok;
+      } else {
+        var good = Math.abs(nv * lnaAbs - lnY) <= 1e-9 * (1 + Math.abs(lnY)); allOk = allOk && good;
+        detail.push('n ln|a| = ' + fmt(nv * lnaAbs, 12) + ' and ln|y| = ' + fmt(lnY, 12));
+      }
+    });
+    r.check = { ok: allOk, detail: detail.filter(function (d, i) { return detail.indexOf(d) === i; }).join('; ') };
+    var s0 = sols[0], more = s0.exactText && s0.decimal !== s0.exactText ? '   (\u2248 ' + s0.decimal + ')' : '';
+    r.steps.push({ title: 'Result', text: sols.length > 1 ? 'a = ' + sols[0].text + '  or  a = ' + sols[1].text + more.replace('(\u2248 ', '(\u2248 \u00b1') : 'a = ' + s0.text + more });
+    return r;
+  }
+
+  /* ---------- run ---------- */
+  function run(o) {
+    o = o || {};
+    var solve = o.solve === 'n' || o.solve === 'a' ? o.solve : 'y', sig = X.SIG_CHOICES.indexOf(String(o.sig)) >= 0 ? String(o.sig) : '6';
+    var known = solve === 'y' ? ['a', 'n'] : solve === 'n' ? ['a', 'y'] : ['n', 'y'], ops = {}, empties = [], i, k, p;
+    for (i = 0; i < known.length; i++) {
+      k = known[i]; p = X.parseOperand(o[k], k === 'a');
+      if (p.empty) { empties.push(k); continue; }
+      if (p.error) return { ok: false, error: p.error, field: k };
+      ops[k] = p;
+    }
+    if (empties.length === 2) return { ok: false, empty: true, error: '' };
+    if (empties.length === 1) return { ok: false, partial: true, field: empties[0], error: 'Enter ' + FIELDS[empties[0]].toLowerCase().replace(/ \(.\)/, '') + ' (' + empties[0] + ').' };
+    if (ops.a && ops.a.kind === 'e' && solve === 'n' && ops.a.sign < 0) return { ok: false, error: 'A base of \u2212e is not supported here. Use a rational base.', field: 'a' };
+    if (solve === 'y') return solveY(o, ops.a, ops.n, sig);
+    if (solve === 'n') return solveN(o, ops.a, ops.y, sig);
+    if (ops.n && ops.n.kind !== 'rat') return { ok: false, error: 'The exponent must be a number or a fraction.', field: 'n' };
+    return solveA(o, ops.n, ops.y, sig);
+  }
+
+  /* ---------- text, CSV, JSON ---------- */
+  function solText(r) {
+    if (!r.solutions.length) return 'no real solution';
+    var name = r.solve;
+    return r.solutions.map(function (s) { return s.exactText ? name + ' = ' + s.text : name + ' \u2248 ' + s.decimal; }).join('  or  ');
+  }
+  function headline(r) {
+    if (r.solve === 'y') return r.cls === 'unique' ? r.valueLine : r.equation.replace(/ = \?$/, '') + ': ' + r.message;
+    return r.equation + (r.cls === 'unique' || r.cls === 'multiple' ? '   \u2192   ' + solText(r) : '   \u2192   ' + (r.cls === 'indeterminate' ? 'indeterminate' : 'no real solution'));
+  }
+  var CLS = { unique: 'unique real solution', multiple: 'multiple real solutions', none: 'no real solution', indeterminate: 'indeterminate' };
+  function exportTxt(r) {
+    var out = ['Elecmetric Exponent Calculator: Missing Value Solver (a^n = y)', '', 'Equation: ' + r.equation, 'Solving for: ' + ({ y: 'the result y', n: 'the exponent n', a: 'the base a' })[r.solve], 'Classification: ' + CLS[r.cls], 'Answer: ' + (r.solutions.length ? solText(r) : r.message), ''];
+    if (r.solutions.length) r.solutions.forEach(function (s) { out.push(s.v + (s.exactText ? ' = ' + s.text : ' \u2248 ' + s.decimal) + (s.exact ? ' (exact)' : s.exactText ? ' (exact radical form)' : ' (approximate)')); if (s.decimal && s.decimal !== s.text) out.push('  decimal: ' + (s.decimalApprox ? '\u2248 ' : '') + s.decimal); out.push('  scientific: ' + s.sci); });
+    out.push('', 'Working', '');
+    r.steps.forEach(function (s) { out.push(s.title, s.text, ''); });
+    if (r.check) out.push('Check: ' + (r.check.ok ? 'passed. ' : 'FAILED. ') + (r.check.detail || ''));
+    return out.join('\n');
+  }
+  function csvq(s) { s = String(s); return /[",\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s; }
+  function exportCsv(r) {
+    var rows = [['equation', 'solving_for', 'classification', 'variable', 'value', 'exact', 'decimal', 'scientific']];
+    if (r.solutions.length) r.solutions.forEach(function (s) { rows.push([r.equation, r.solve, r.cls, s.v, s.text, s.exact ? 'yes' : 'no', s.decimal, s.sci]); });
+    else rows.push([r.equation, r.solve, r.cls, '', r.message, '', '', '']);
+    return rows.map(function (x) { return x.map(csvq).join(','); }).join('\n');
+  }
+  function exportJson(r) {
+    return JSON.stringify({ tool: 'Elecmetric Exponent Calculator, Mode 03: Missing Value Solver', equation: r.equation, solving_for: r.solve, classification: r.cls, message: r.message, solutions: r.solutions.map(function (s) { return { variable: s.v, value: s.text, exact: s.exact, decimal: s.decimal, scientific: s.sci }; }), check: r.check, steps: r.steps }, null, 2);
+  }
+
+  var api = { run: run, headline: headline, solText: solText, exportTxt: exportTxt, exportCsv: exportCsv, exportJson: exportJson, findRational: findRational, CLASSES: CLS, fmt: fmt, fmtGroup: fmtGroup };
+  if (typeof module !== 'undefined' && module.exports) module.exports = api; else root.ExponentSolver = api;
+})(typeof self !== 'undefined' ? self : this);
+
+/* Elecmetric Exponent Calculator, Mode 03: page script. Inlined by tools/exponent_solver_page.js after the three engines (ExponentCalc, ExponentFrac, ExponentSolver). */
+(function () {
+  var $ = function (id) { return document.getElementById(id); }, X = ExponentSolver;
+  var inp = { a: $('ex-a'), n: $('ex-n'), y: $('ex-y') }, sigS = $('ex-sig'), err = $('ex-err'), out = $('ex-out'), stp = $('ex-steps'), focus = inp.a;
+  var DEF = { solve: 'n', a: '2', n: '', y: '32', sig: '6' }, HKEY = 'em-exponent-solver-history', hist = [], last = null, solve = 'n', vals = { a: '2', n: '', y: '32' };
+  var LAB = { a: 'Base (a)', n: 'Exponent (n)', y: 'Result (y)' }, WHAT = { a: 'the base a', n: 'the exponent n', y: 'the result y' };
+  var CLSL = { unique: 'Unique real solution', multiple: 'Multiple real solutions', none: 'No real solution', indeterminate: 'Indeterminate' };
+  function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
+  function say(t) { $('ex-note').textContent = t; }
+  function copy(t) { var d = function () { say('Copied ' + (t.length > 60 ? 'the text' : t)); }; if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(t).then(d, d); else { var a = document.createElement('textarea'); a.value = t; document.body.appendChild(a); a.select(); try { document.execCommand('copy'); } catch (e) {} document.body.removeChild(a); d(); } }
+  function copyBtn(t, label) { return '<button type="button" class="btn2" data-copy="' + esc(t) + '" aria-label="Copy ' + esc(label) + '">Copy</button>'; }
+  function state() { return { solve: solve, a: vals.a, n: vals.n, y: vals.y, sig: sigS.value }; }
+  function setState(d) { solve = d.solve === 'a' || d.solve === 'y' ? d.solve : 'n'; vals = { a: d.a || '', n: d.n || '', y: d.y || '' }; sigS.value = d.sig || '6'; render(); }
+  function mark(field) { ['a', 'n', 'y'].forEach(function (k) { var bad = k === field; inp[k].classList.toggle('bad', bad); inp[k].setAttribute('aria-invalid', String(bad)); }); }
+  function solvedText(r) {
+    if (!r || !r.solutions || !r.solutions.length) return '';
+    var s = r.solutions[0];
+    if (r.solutions.length > 1) return '\u00b1' + (s.exactText || s.decimal);
+    return s.text;
+  }
+  function sync(r) {
+    ['a', 'n', 'y'].forEach(function (k) {
+      var el = inp[k], unk = k === solve, lab = $('ex-l' + k), v = unk ? solvedText(r) : vals[k];
+      el.readOnly = unk; el.classList.toggle('solved', unk && !!v); el.setAttribute('aria-readonly', String(unk));
+      el.placeholder = unk ? 'solved here' : (k === 'a' ? 'e.g. 2, \u22128, 1/2, e' : k === 'n' ? 'e.g. 3, \u22122, 1/2, 0.75' : 'e.g. 32, 125, \u22128, 0.001');
+      if (el.value !== v) el.value = v;
+      if (lab) lab.textContent = LAB[k] + (unk ? ': solved' : '');
+    });
+    var btns = $('ex-unk').children;
+    for (var i = 0; i < (btns ? btns.length : 0); i++) { var b = btns[i]; if (b.dataset && b.dataset.solve) b.setAttribute('aria-pressed', String(b.dataset.solve === solve)); }
+  }
+  function card(label, big, copyText, sub) { return '<div class="dp-c"><span class="ns-l">' + esc(label) + '</span><div class="big">' + esc(big) + (copyText ? copyBtn(copyText, label) : '') + '</div><div class="sub">' + esc(sub || '') + '</div></div>'; }
+  function plain(t) { return String(t).replace(/^\u2248\s*/, '').replace(/\u2212/g, '-'); }
+  function render() {
+    var r = X.run({ solve: solve, a: vals.a, n: vals.n, y: vals.y, sig: sigS.value });
+    last = null; $('ex-dl').hidden = true;
+    if (!r.ok) {
+      sync(null);
+      err.textContent = r.empty ? '' : r.error; err.classList.toggle('hint', !!(r.empty || r.partial)); mark(r.empty || r.partial ? null : r.field);
+      out.innerHTML = ''; stp.innerHTML = '<p class="note">Enter the two known values to see the answer and the working.</p>'; return;
+    }
+    err.textContent = ''; err.classList.remove('hint'); mark(null); sync(r);
+    var html = '<p class="ex-cls c-' + r.cls + '"><b>' + esc(CLSL[r.cls]) + '.</b> ' + esc(r.message) + '</p>', cards = '', rows = [['Equation', r.equation, ''], ['Solving for', WHAT[r.solve], ''], ['Classification', CLSL[r.cls], '']];
+    var multi = r.solutions.length > 1;
+    r.solutions.forEach(function (s, k) {
+      var name = r.solve === 'a' && multi ? 'a' + (k === 0 ? '\u2081' : '\u2082') : r.solve, label = (r.solve === 'a' ? 'Base ' : r.solve === 'n' ? 'Exponent ' : 'Result ') + name;
+      cards += card(label, s.text, plain(s.exactText || s.decimal), s.exact ? 'exact' : s.exactText ? 'exact radical form' : 'approximate (about 15 reliable digits)');
+      if (s.exactText && s.decimal !== s.exactText) cards += card('Decimal', (s.decimalApprox ? '\u2248 ' : '') + s.decimal, plain(s.decimal), s.decimalApprox ? 'rounded for display' : 'exact');
+      rows.push([name, s.text, s.exact ? 'exact' : s.exactText ? 'exact radical form' : 'approximate']); rows.push(['Scientific notation of ' + name, s.sci, '']);
+    });
+    var tbl = '<div class="tw" tabindex="0" role="region" aria-label="Scrollable table: result summary"><table class="ns-t"><thead><tr><th scope="col">Item</th><th scope="col">Value</th><th scope="col">Note</th></tr></thead><tbody>' + rows.map(function (x) { return '<tr><th scope="row">' + esc(x[0]) + '</th><td class="r">' + esc(x[1]) + '</td><td>' + esc(x[2]) + '</td></tr>'; }).join('') + '</tbody></table></div>';
+    var warn = (r.warnings || []).map(function (w) { return '<p class="note warn">' + esc(w.message) + '</p>'; }).join('') + (r.radicalNote ? '<p class="note warn">' + esc(r.radicalNote) + '</p>' : '');
+    out.innerHTML = html + (cards ? '<div class="dp-cards">' + cards + '</div>' : '') + tbl + warn;
+    stp.innerHTML = r.steps.map(function (x) { return '<h3>' + esc(x.title) + '</h3><pre class="al" tabindex="0">' + esc(x.text) + '</pre>'; }).join('') + (r.check ? '<h3>Check</h3><pre class="al" tabindex="0">' + esc(r.check.ok ? (r.check.detail ? 'Passed: ' + r.check.detail + '.' : 'Passed.') : 'FAILED: ' + r.check.detail) + '</pre>' : '');
+    last = { r: r, text: X.headline(r) }; $('ex-dl').hidden = false;
+  }
+  function download(name, mime, text) { var a = document.createElement('a'), u = URL.createObjectURL(new Blob([text], { type: mime })); a.href = u; a.download = name; document.body.appendChild(a); a.click(); document.body.removeChild(a); setTimeout(function () { URL.revokeObjectURL(u); }, 500); say('Downloaded ' + name); }
+  function loadHist() { try { var x = JSON.parse(localStorage.getItem(HKEY) || '[]'); hist = Array.isArray(x) ? x.filter(function (h) { return h && typeof h.text === 'string' && h.s && typeof h.s === 'object'; }).slice(0, 10) : []; } catch (e) { hist = []; } }
+  function saveHist() { try { localStorage.setItem(HKEY, JSON.stringify(hist.slice(0, 10))); } catch (e) {} }
+  function drawHist() {
+    $('ex-hist').innerHTML = hist.length ? hist.map(function (h, k) { return '<li><button type="button" class="chipb" data-h="' + k + '" aria-label="Use again: ' + esc(h.text) + '">' + esc(h.text) + '</button></li>'; }).join('') : '<li class="note">No saved calculations yet. Press Save to history or Enter.</li>';
+    $('ex-hclear').hidden = !hist.length;
+  }
+  function keep() { if (!last) return; var t = last.text.length > 90 ? last.text.slice(0, 87) + '\u2026' : last.text; hist = hist.filter(function (h) { return h.text !== t; }); hist.unshift({ text: t, s: state() }); hist = hist.slice(0, 10); saveHist(); drawHist(); say('Saved to history'); }
+  function target() { var el = focus; if (!el || el.readOnly) el = ['a', 'n', 'y'].map(function (k) { return inp[k]; }).filter(function (e) { return !e.readOnly; })[0]; return el; }
+  function insert(k) {
+    var el = target(), key = Object.keys(inp).filter(function (x) { return inp[x] === el; })[0], v = el.value, s = el.selectionStart, e = el.selectionEnd;
+    if (typeof s !== 'number') { s = e = v.length; }
+    if (k === 'back') { if (s !== e) { el.value = v.slice(0, s) + v.slice(e); e = s; } else if (s > 0) { el.value = v.slice(0, s - 1) + v.slice(s); s = e = s - 1; } }
+    else { el.value = v.slice(0, s) + (k === '-' ? '\u2212' : k) + v.slice(e); s = e = s + 1; }
+    vals[key] = el.value; el.focus(); try { el.setSelectionRange(s, e); } catch (x) {} render();
+  }
+  ['a', 'n', 'y'].forEach(function (k) {
+    var el = inp[k];
+    el.addEventListener('focus', function () { focus = el; });
+    el.addEventListener('input', function () { if (!el.readOnly) { vals[k] = el.value; render(); } });
+    el.addEventListener('keydown', function (e) { if (e.key === 'Enter') { e.preventDefault(); keep(); } });
+  });
+  $('ex').addEventListener('click', function (e) {
+    var b = e.target.closest('button'); if (!b) return;
+    if (b.dataset.solve) { solve = b.dataset.solve; render(); return; }
+    if (b.dataset.key) { insert(b.dataset.key); return; }
+    if (b.dataset.copy) { copy(b.dataset.copy); return; }
+    if (b.dataset.ex) { setState(JSON.parse(b.dataset.ex)); return; }
+    if (b.dataset.h !== undefined) { var h = hist[Number(b.dataset.h)]; if (h) setState(h.s); return; }
+    if (b.dataset.act === 'reset') { setState(DEF); return; }
+    if (b.dataset.act === 'save') { keep(); return; }
+    if (b.dataset.act === 'clear') { vals = { a: '', n: '', y: '' }; render(); var t = target(); if (t) t.focus(); return; }
+    if (b.dataset.act === 'hclear') { hist = []; saveHist(); drawHist(); return; }
+    if (b.dataset.act === 'print') { window.print(); return; }
+    if (b.dataset.act === 'copyall' && last) { copy(X.exportTxt(last.r)); return; }
+    if (b.dataset.dl && last) { var n = 'exponent-missing-value'; if (b.dataset.dl === 'txt') download(n + '.txt', 'text/plain', X.exportTxt(last.r)); if (b.dataset.dl === 'csv') download(n + '.csv', 'text/csv', X.exportCsv(last.r)); if (b.dataset.dl === 'json') download(n + '.json', 'application/json', X.exportJson(last.r)); }
+  });
+  sigS.addEventListener('change', render); sigS.addEventListener('input', render);
+  loadHist(); drawHist(); setState(DEF);
+})();
+</script><script>try{if("serviceWorker"in navigator&&/^https?:/.test(location.protocol))navigator.serviceWorker.register("../../sw.js")}catch(e){}</script></body></html>

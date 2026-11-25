@@ -1,0 +1,7 @@
+/* Shared mode strip for the Percentage Calculator pages (Mode 01 to 06). modes('basic') returns the HTML with that mode marked current.
+   Only built modes are listed: a link to a page that does not exist would fail the deploy guard. */
+const LIST = [['basic', 'basic-percentage-calculator', '01', 'Basic Percentage'], ['change', 'percentage-increase-decrease-calculator', '02', 'Increase & Decrease'], ['diff', 'percentage-difference-calculator', '03', 'Difference & Change'], ['err', 'percentage-error-calculator', '04', 'Percentage Error'], ['eng', 'engineering-percentage-calculator', '05', 'Engineering Analysis'], ['price', 'sequential-discount-markup-calculator', '06', 'Sequential, Discount & Markup']];
+module.exports = function (cur) {
+  return '<nav class="fmodes" aria-label="Percentage Calculator modes"><span class="ns-l">Percentage Calculator</span>' + LIST.map((m) => '<a class="chip' + (m[0] === cur ? ' on' : '') + '" href="../' + m[1] + '/"' + (m[0] === cur ? ' aria-current="page"' : '') + '>Mode ' + m[2] + ' \u00b7 ' + m[3].replace('&', '&amp;') + '</a>').join('') + '<a class="chip" href="../percent-error-calculator/">Percent Error Calculator (five modes)</a><a class="chip" href="../percentage-calculator/">Percentage change and increase</a></nav>';
+};
+module.exports.css = '.fmodes{display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px;margin:0 0 12px}.fmodes .ns-l{margin:0 4px 0 0}.fmodes .chip.on{background:var(--gold-fill);border-color:var(--gold);font-weight:700}';
