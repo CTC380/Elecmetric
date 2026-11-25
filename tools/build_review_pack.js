@@ -25,7 +25,7 @@ md.push('# Elecmetric independent review pack (v' + E.VERSION + ')', '',
   '2. Check each assumption and note is true and stated honestly.',
   '3. Work one example by hand and compare it with the calculator.',
   '4. The team-level designation in `tools/team_review_approval.json` is administrative only. Only after a qualified individual has actually approved a calculator should an entry be added to `tools/review_records.json` (format in its `_example`). Never record a review that has not been done.', '',
-  'Team-level reviewer designation: Rahul Sharma (self-designation, not independent) (recorded 12 November 2026).', '', 'Individual reviewer name and qualification: ____________________   Date: ____________', '');
+  'Team-level reviewer designation: Elecmetric project team (self-designation, not independent) (recorded 12 November 2026).', '', 'Individual reviewer name and qualification: ____________________   Date: ____________', '');
 md.push('## Wave 1: review these first (' + WAVE1.reduce((n, g) => n + g[1].length, 0) + ' calculators)', '',
   'For each calculator the reviewer fills in: standard and edition used, exact clauses/tables checked, date, name and professional qualification. A public catalogue scope-screen is not a clause review. Set review_status to clause_reviewed only after checking the licensed text. A standard review and a reviewer approval are separate records and either can exist alone.', '');
 WAVE1.forEach((g) => {

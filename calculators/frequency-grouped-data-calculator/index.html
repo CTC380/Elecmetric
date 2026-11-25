@@ -1,0 +1,634 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><style data-crumbs>.crumbs{font-size:13px;color:var(--muted);margin:0 0 10px}.crumbs ol{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:2px 0}.crumbs li+li::before{content:"\203A";margin:0 7px;opacity:.7}.crumbs a{color:inherit}.crumbs [aria-current]{color:var(--ink)}</style><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+<title>Frequency Distribution &amp; Grouped Data Calculator | Mean, Median, Standard Deviation | Elecmetric</title>
+<meta name="description" content="Free frequency table and grouped data calculator. Enter raw data, value and frequency pairs or class intervals and get the mean, median, mode, quartiles, variance and standard deviation with step-by-step working. Grouped results are clearly marked as midpoint estimates.">
+<meta property="og:title" content="Frequency Distribution &amp; Grouped Data Calculator"><meta property="og:description" content="Free frequency table and grouped data calculator. Enter raw data, value and frequency pairs or class intervals and get the mean, median, mode, quartiles, variance and standard deviation with step-by-step working. Grouped results are clearly marked as midpoint estimates."><meta property="og:type" content="website"><meta property="og:site_name" content="Elecmetric"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Frequency Distribution &amp; Grouped Data Calculator"><meta name="twitter:description" content="Free frequency table and grouped data calculator. Enter raw data, value and frequency pairs or class intervals and get the mean, median, mode, quartiles, variance and standard deviation with step-by-step working. Grouped results are clearly marked as midpoint estimates.">
+<meta name="theme-color" content="#043B79"><link rel="icon" href="../../icon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="../../apple-touch-icon.png"><link rel="manifest" href="../../manifest.webmanifest"><style>.fb textarea{width:100%;font:15px/1.5 var(--body);padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--field);color:var(--ink);resize:vertical}.fb textarea:focus{outline:2px solid var(--gold);outline-offset:1px}:root{--bg:#F1F6FC;--surface:#fff;--ink:#0A2347;--muted:#4B5F86;--line:#D3DFEF;--navy:#043B79;--on-navy:#FFFFFF;--gold:#B34A00;--gold-fill:#FFEFDC;--field:#F4F8FE;--err:#B3261E;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;--display:"Arial Narrow","Roboto Condensed",system-ui,sans-serif;--body:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--navy-2:#0A5BBB;--cyan:#0062DE;--num:#043B79;--orange:#FF7A00;--gold-grad:linear-gradient(135deg,#FFA43D 0%,#FF7A00 52%,#E85F00 100%);--hero:radial-gradient(1000px 360px at 90% -35%,rgba(0,98,222,.55),transparent 62%),radial-gradient(640px 240px at 0% 110%,rgba(255,122,0,.20),transparent 60%),linear-gradient(135deg,#032A58,#043B79 58%,#0A55A8);--r:14px;--sh-0:0 1px 2px rgba(4,35,80,.06);--sh-1:0 1px 2px rgba(4,35,80,.05),0 6px 18px rgba(4,35,80,.07);--sh-2:0 2px 4px rgba(4,35,80,.05),0 22px 44px -14px rgba(4,35,80,.24);--ring:0 0 0 3px rgba(0,98,222,.26);color-scheme:light dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}@media(prefers-color-scheme:dark){:root{--bg:#04122B;--surface:#0A2046;--ink:#EAF2FF;--muted:#A0B5DA;--line:#183868;--navy:#031B3F;--on-navy:#EAF2FF;--gold:#FF9A3D;--gold-fill:#3D2410;--field:#071B3C;--err:#FF8A80;--navy-2:#0B4A98;--cyan:#4DA3FF;--orange:#FF8A1F;--num:#FFB066;--sh-0:0 1px 2px rgba(0,0,0,.4);--sh-1:0 1px 2px rgba(0,0,0,.35),0 8px 22px rgba(0,0,0,.35);--sh-2:0 2px 4px rgba(0,0,0,.4),0 24px 48px -14px rgba(0,0,0,.7);--ring:0 0 0 3px rgba(77,163,255,.34)}}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 var(--body)}a{color:inherit}header{background:var(--navy);color:var(--on-navy);border-bottom:3px solid var(--gold)}.w{max-width:860px;margin:0 auto;padding:0 max(16px,env(safe-area-inset-left,0px))}header .w{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-block:12px;flex-wrap:wrap}header a{text-decoration:none;font:600 20px var(--display);letter-spacing:.04em;text-transform:uppercase}header nav a{font:500 13px var(--body);text-transform:none;letter-spacing:0;margin-left:14px;opacity:.9}main{padding-block:24px 56px}h1{font:600 32px/1.1 var(--display);margin:0 0 8px;text-wrap:balance}h2{font:600 20px var(--display);letter-spacing:.02em;margin:28px 0 8px;text-transform:uppercase}.lede{color:var(--muted);margin:0 0 16px;max-width:62ch}.card{background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:16px 18px;margin:12px 0}.ans{border-left:4px solid var(--gold);display:flex;flex-wrap:wrap;gap:6px 24px;align-items:baseline;justify-content:space-between}.big{font:600 28px var(--display)}.jump{margin:8px 0 4px}details.more{border:1px solid var(--line);border-radius:12px;background:var(--surface);margin:14px 0;padding:0 16px;box-shadow:var(--sh-0)}details.more>summary{cursor:pointer;list-style:none}details.more>summary::-webkit-details-marker{display:none}details.more>summary h2{margin:14px 0}details.more>summary h2::after{content:"+";margin-left:auto;color:var(--gold)}details.more[open]>summary h2::after{content:"\2212"}details.more[open]{padding-bottom:12px}@media print{.jump{display:none}}.btn{display:inline-block;background:var(--navy);color:var(--on-navy);padding:9px 16px;border-radius:4px;text-decoration:none;font-weight:600;border:1px solid var(--gold)}.chip{display:inline-block;margin:3px 6px 3px 0;padding:5px 12px;border:1px solid var(--line);border-radius:999px;background:var(--surface);text-decoration:none;font-size:14px}.chip:hover{border-color:var(--gold)}main li>a:only-child{display:inline-block;padding:3px 0}code,pre,.f,td.n{font-family:var(--mono)}.f{background:var(--field);border:1px solid var(--line);padding:10px 12px;border-radius:4px;overflow-x:auto;white-space:pre-wrap}ol.steps{padding-left:22px;font-family:var(--mono);font-size:13px}ol.steps li{margin:4px 0}.tw{overflow-x:auto}table{border-collapse:collapse;width:100%;background:var(--surface)}th,td{border:1px solid var(--line);padding:6px 10px;text-align:left}td.n{text-align:right}tr.me td{background:var(--gold-fill)}th{background:var(--field);font-weight:600}.note{color:var(--muted);font-size:13px}ul{padding-left:20px}footer{border-top:1px solid var(--line);color:var(--muted);font-size:13px;padding-block:16px}h3{font:600 16px var(--body);margin:18px 0 4px}h3+p{margin:0;max-width:68ch}.tres .tact{flex:0 0 100%;display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}@media print{.tact{display:none}}.tres .phasor{flex:0 0 100%;margin-top:12px}.phasor svg{display:block;width:100%;max-width:360px;height:auto;font:11px var(--body)}.arow{grid-column:1/-1;border:1px solid var(--line);border-radius:10px;padding:10px 12px 12px;margin:0}.arow[hidden]{display:none}.arow legend{font-weight:700;font-size:13px;padding:0 6px}.arow .tgrid{margin-top:2px}.arow-bar{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:8px;align-items:center}.arow-bar .note{margin:0}.arow .rm{margin-top:10px}.mgrid{margin-top:10px}.mgrid .mbody[hidden]{display:none}.mgrid .tgrid{margin-top:8px}.mgrid .fillm{margin-top:10px}.tres .rchart{flex:0 0 100%;margin-top:12px}.rchart svg{display:block;width:100%;height:auto;font:12px var(--body)}.rchart h3{margin:0 0 6px;font-size:14px}.tres .carry{flex:0 0 100%;margin-top:10px}.carry .chip{display:inline-block;margin:4px 6px 0 0}.arow .rm[hidden],#add-row[hidden]{display:none}@media print{.arow-bar,.arow .rm{display:none}}.tgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px 16px}.tgrid label{display:block;font-weight:600;font-size:13px;margin-bottom:4px}.trow{display:flex;gap:6px}.trow input,.trow select,.tgrid>div>select{font:16px var(--body);color:var(--ink);background:var(--field);border:1px solid var(--line);border-radius:4px;padding:8px;min-height:40px}.trow input{flex:1;min-width:0}.tgrid>div>select{width:100%}.hint{color:var(--muted);font-size:12px;margin-top:3px}.err{color:var(--err)}.tres{display:flex;flex-wrap:wrap;gap:6px 28px;align-items:baseline}.tres .big small{display:block;font:500 13px var(--body);color:var(--muted)}::selection{background:color-mix(in srgb,var(--gold) 30%,transparent)}body{background-image:radial-gradient(900px 520px at 100% -8%,color-mix(in srgb,var(--cyan) 10%,transparent),transparent 62%),radial-gradient(700px 420px at -5% 0%,color-mix(in srgb,var(--gold) 8%,transparent),transparent 60%);background-attachment:fixed;-webkit-font-smoothing:antialiased}header{position:relative;overflow:hidden;background:var(--hero);border-bottom:0;box-shadow:0 10px 30px -14px rgba(5,14,34,.6)}header::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);background-size:34px 34px;-webkit-mask-image:linear-gradient(100deg,#000,transparent 70%);mask-image:linear-gradient(100deg,#000,transparent 70%);pointer-events:none}header::after{content:"";position:absolute;left:0;right:0;bottom:0;height:18px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44 14'%3E%3Cpath d='M0 12.5H8L14 2l7 10.5 5-6 4 6H44' fill='none' stroke='%23FF7A00' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat right 36px bottom 3px/44px 14px,linear-gradient(90deg,#FF7A00,#FFA43D 55%,#FF7A00) no-repeat bottom/100% 4px;pointer-events:none}header .w{position:relative;z-index:1;padding-block:8px 10px}header .w>a.brand{display:block;line-height:0;letter-spacing:0;text-transform:none;background:#fff;border-radius:10px;padding:4px 10px;box-shadow:0 2px 12px rgba(2,16,42,.4),0 0 0 1px rgba(255,255,255,.5)}header .w>a.brand img{display:block;height:34px;width:auto}@media(max-width:600px){header .w>a.brand img{height:30px}}header a:focus-visible{outline-color:#FFB066}header nav a{color:#DCE5F5;opacity:1;padding:6px 12px;border-radius:999px;margin-left:6px;transition:background .15s,color .15s}header nav a:hover{background:rgba(255,255,255,.12);color:#FFB066}main.w{padding-top:36px;padding-bottom:64px}h1{font-size:36px;letter-spacing:.005em}h1::after{content:"";display:block;width:56px;height:3px;border-radius:3px;background:var(--gold-grad);margin-top:12px}h2{display:flex;align-items:center;gap:10px}h2::before{content:"";width:4px;height:.95em;border-radius:2px;background:var(--gold-grad);flex:none}h3{color:var(--gold)}.card{border-radius:14px;box-shadow:var(--sh-1)}.ans{position:relative;overflow:hidden;border-left:1px solid var(--line);padding-left:24px;background:linear-gradient(135deg,color-mix(in srgb,var(--gold) 12%,var(--surface)),var(--surface) 65%);border-color:color-mix(in srgb,var(--gold) 40%,var(--line));box-shadow:var(--sh-2)}.ans::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--gold-grad)}.big{color:var(--num);font-weight:700}.btn{border-radius:10px;border:0;background:var(--gold-grad);color:#0A2347;font-weight:700;box-shadow:var(--sh-1);transition:transform .15s,box-shadow .15s,filter .15s}.btn:hover{transform:translateY(-1px);box-shadow:var(--sh-2);filter:brightness(1.06)}.chip{box-shadow:var(--sh-0);transition:border-color .15s,background .15s,transform .15s,box-shadow .15s}.chip:hover{transform:translateY(-1px);box-shadow:var(--sh-1);border-color:var(--orange);background:color-mix(in srgb,var(--orange) 8%,var(--surface))}.f{border-radius:12px;border-left:3px solid var(--cyan)}.tw{border:1px solid var(--line);border-radius:12px;box-shadow:var(--sh-0)}.tw table{border:0}table{border-collapse:separate;border-spacing:0}th,td{border:0;border-bottom:1px solid var(--line)}tr:last-child td{border-bottom:0}th{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);background:var(--field)}tbody tr:hover td{background:color-mix(in srgb,var(--cyan) 7%,transparent)}tr.me td{background:var(--gold-fill)}.trow input,.trow select,.tgrid>div>select{border-radius:10px;transition:border-color .15s,box-shadow .15s}.trow select{background-color:color-mix(in srgb,var(--navy) 5%,var(--field))}.trow input:focus,.trow select:focus,.tgrid>div>select:focus{outline:0;border-color:var(--cyan);box-shadow:var(--ring)}.tgrid label{color:var(--ink)}a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--cyan);outline-offset:2px}footer{padding-block:20px}footer.mf{margin-top:24px;padding:0;border-top:0;background:var(--hero);color:#DCE5F5;font-size:13px;position:relative}footer.mf::before{content:"";display:block;height:4px;background:linear-gradient(90deg,#FF7A00,#FFA43D 55%,#FF7A00)}.mf-w{max-width:1100px;margin:0 auto;padding:36px max(16px,env(safe-area-inset-left,0px)) calc(24px + env(safe-area-inset-bottom,0px))}.mf-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:28px 24px}.mf-h{display:block;margin:0 0 12px;padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,.18);font:600 14px var(--display);letter-spacing:.06em;text-transform:uppercase;color:#FFB066}.mf-col ul{list-style:none;margin:0;padding:0}.mf-col li{margin:0}.mf-col a{display:inline-block;padding:4px 0;color:#DCE5F5;text-decoration:none}.mf-h a{padding:0;color:inherit}.mf-col a:hover,.mf-legal a:hover{color:#FFB066;text-decoration:underline}.mf a:focus-visible{outline:2px solid #FFB066;outline-offset:2px;border-radius:2px}.mf-legal{margin-top:28px;padding-top:18px;border-top:1px solid rgba(255,255,255,.18);color:#A9BADB;max-width:80ch}.mf-legal a{color:#DCE5F5}@media(max-width:980px){.mf-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(max-width:600px){.mf-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.mf-col a{padding:7px 0}}@media print{footer.mf{background:none;color:inherit}footer.mf::before,.mf-grid{display:none}.mf-legal{border:0;color:inherit}}@media(prefers-reduced-motion:reduce){.btn,.chip{transition:none;transform:none!important}}@media print{header{background:none;box-shadow:none}header::before,header::after,.ans::before,h1::after,h2::before{display:none}header .w>a.brand{box-shadow:none;padding:0}body{background-image:none}.card,.ans,.tw{box-shadow:none}.ans{padding-left:18px}}.totop{position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:60;min-height:44px;padding:0 18px;border:0;border-radius:999px;background:linear-gradient(135deg,#FFA43D,#FF7A00 52%,#E85F00);color:#0A2347;font:700 14px system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;box-shadow:0 2px 4px rgba(4,35,80,.2),0 14px 30px -8px rgba(4,35,80,.45);cursor:pointer;opacity:0;transform:translateY(12px);pointer-events:none;transition:opacity .2s,transform .2s,bottom .2s}.totop.on{opacity:1;transform:none;pointer-events:auto}.totop:hover{filter:brightness(1.06)}.totop:focus-visible{outline:2px solid #fff;outline-offset:2px;box-shadow:0 0 0 4px #0062DE}@media(prefers-reduced-motion:reduce){.totop{transition:none}}@media print{.totop{display:none}}.vstat{padding:12px 16px;border-left:4px solid var(--muted,#6b7a90)}.vstat.v-verified{border-left-color:#1f9d57}.vstat.v-reference{border-left-color:#2a7fd4}.vstat.v-indicative{border-left-color:#c98a10}[hidden]{display:none!important}header{position:sticky;top:0;z-index:30}header .w{max-width:1120px;flex-wrap:nowrap;gap:16px;padding-block:8px}header .brand{flex:0 0 auto}header::after{height:3px;background:linear-gradient(90deg,#FF7A00,#FFA43D 55%,#FFC37A)}header nav{display:flex;gap:2px;overflow-x:auto;white-space:nowrap;scrollbar-width:none;min-width:0}header nav::-webkit-scrollbar{display:none}header nav a{margin-left:0;padding:8px 11px;border-radius:8px;opacity:.92}header nav a:hover,header nav a:focus-visible{background:rgba(255,255,255,.14);opacity:1;outline:none}main.calc{max-width:1120px;padding-top:18px}.calc h1{font-size:28px;margin-bottom:4px}.calc .lede{margin:0 0 10px;max-width:70ch}.calc-vb{display:inline-flex;align-items:center;gap:7px;margin:0 0 14px;padding:4px 11px;border:1px solid var(--line);border-radius:999px;background:var(--surface);font:600 12.5px var(--body);color:var(--ink);text-decoration:none}.calc-vb::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--gold)}.calc-vb:hover,.calc-vb:focus-visible{border-color:var(--gold);outline:none}.calc #try{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(290px,1fr);gap:0 20px;align-items:start}.calc #try>h2{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;margin:0}.calc #try>form{grid-column:1;margin:0}.calc #try>#try-out{grid-column:2;grid-row:1;position:sticky;top:64px;margin:0;flex-direction:column;align-items:stretch;gap:12px}.calc .tgrid{grid-template-columns:repeat(auto-fill,minmax(210px,1fr));align-items:start}.hd{margin-top:4px}.hd summary{cursor:pointer;font-size:12px;color:var(--muted);list-style:none}.hd summary::-webkit-details-marker{display:none}.hd summary::before{content:"\24D8  "}.hd[open]{font-size:12px;line-height:1.45}.hd[open] summary{margin-bottom:3px}.calc-limit{margin:14px 0 0;padding:10px 14px;border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:8px;background:var(--surface);font-size:14px}.calc-limit h2{font:700 13px var(--body);margin:0 0 2px;letter-spacing:0;text-transform:none}.calc-limit h2::before{display:none}.calc-limit p{margin:0}.calc-act{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;margin:12px 0 4px}.calc-act .btn{margin:0}.calc-act .note{margin:0;flex:1 1 340px;font-size:12px}.calc .cref{max-width:860px;margin-top:6px}.calc .jump{position:sticky;top:52px;z-index:10;display:flex;gap:6px;overflow-x:auto;white-space:nowrap;scrollbar-width:none;background:var(--bg);padding:8px 0;margin:10px 0 4px;border-bottom:1px solid var(--line)}.calc .jump::-webkit-scrollbar{display:none}.calc .jump .chip{flex:0 0 auto;margin:0}@media (max-width:980px){.calc #try{grid-template-columns:minmax(0,1fr)}.calc #try>#try-out{grid-column:1;grid-row:auto;position:static;margin-top:12px}}#mini-res{position:fixed;left:0;right:0;bottom:0;z-index:40;display:flex;flex-wrap:wrap;gap:2px 18px;padding:8px 16px calc(8px + env(safe-area-inset-bottom,0px));background:var(--surface);color:var(--ink);border-top:3px solid var(--gold);box-shadow:0 -8px 20px -10px rgba(5,20,50,.5);text-decoration:none}#mini-res span{display:block}#mini-res b{display:block;font:600 19px/1.2 var(--display)}#mini-res small{display:block;font-size:11px;color:var(--muted)}@media (min-width:981px){#mini-res{display:none!important}}@media (max-width:640px){main.calc{padding-top:12px}.calc h1{font-size:24px}.calc .jump{top:0}header{position:static}header .w{flex-wrap:wrap;gap:4px 8px;padding-block:8px 4px}header nav{flex:1 1 100%;-webkit-mask-image:linear-gradient(90deg,#000 90%,transparent);mask-image:linear-gradient(90deg,#000 90%,transparent)}}</style><style>:root{--ok:#1B6E3A}
+@media(prefers-color-scheme:dark){:root{--ok:#6FD39A}}
+.modes{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 4px;padding:0;list-style:none}
+.modes li{padding:6px 12px;border:1px solid var(--line);border-radius:999px;background:var(--surface);font-size:13px;color:var(--muted)}
+.modes li.on{background:var(--navy);color:var(--on-navy);border-color:var(--gold);font-weight:600}
+.modes small{font-size:11px;opacity:.8;margin-left:4px}
+label,.lbl{display:block;font-weight:600;font-size:13px;margin:0 0 4px}
+textarea{width:100%;min-height:104px;font:15px/1.5 var(--mono);padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:var(--field);color:var(--ink);resize:vertical}
+textarea:focus,button:focus-visible,select:focus-visible{outline:none;box-shadow:var(--ring);border-color:var(--cyan)}
+.row{display:flex;flex-wrap:wrap;gap:14px 28px;margin-top:12px;align-items:flex-end}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.seg button{border:0;background:var(--field);color:var(--ink);padding:8px 16px;font:600 14px var(--body);cursor:pointer;border-right:1px solid var(--line)}
+.seg button:last-child{border-right:0}
+.seg button[aria-pressed=true]{background:var(--navy);color:var(--on-navy)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 0}
+.chip,.btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:6px 12px;border-radius:999px;font:500 13px var(--body);cursor:pointer}
+.chip:hover,.btn:hover{border-color:var(--gold)}
+.btn{border-radius:4px;font-weight:600;padding:8px 14px}
+.btn.pri{background:var(--navy);color:var(--on-navy);border-color:var(--gold)}
+.msg{margin:10px 0 0;font-size:13px;color:var(--muted)}
+.msg.bad{color:var(--err)}
+.msg ul{margin:4px 0 0;padding-left:20px}
+.hero{border-left:4px solid var(--gold);display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px 22px}
+.tile .k{font-size:12px;color:var(--muted)}
+.tile .v{font:600 28px/1.15 var(--display);color:var(--num);overflow-wrap:anywhere}
+.tile .x{font:12px var(--mono);color:var(--muted);overflow-wrap:anywhere}
+.tile.sel .v{color:var(--gold)}
+td.n{text-align:right;font-family:var(--mono);font-size:13px}
+tr.sel td{background:var(--gold-fill)}
+.warn{border:1px solid var(--gold);background:var(--gold-fill);border-radius:6px;padding:8px 12px;margin:10px 0;font-size:13px}
+.act{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.pass{color:var(--ok);font-weight:700}
+.failc{color:var(--err);font-weight:700}
+.hist button{display:block;width:100%;text-align:left;border:1px solid var(--line);background:var(--field);color:var(--ink);padding:6px 10px;border-radius:6px;margin:4px 0;font:13px var(--mono);cursor:pointer;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+@media print{header nav,.act,.chips,.seg,.hist,.modes{display:none}}
+.bar{display:block;height:10px;background:var(--cyan);border-radius:2px;min-width:1px;opacity:.75}
+.est{border:1px solid var(--gold);background:var(--gold-fill);border-radius:6px;padding:8px 12px;margin:10px 0;font-size:13px;font-weight:600}
+td.c{font-family:var(--mono);font-size:13px}</style><style>.fb button,.fb .btn,.totop{margin-top:0}.fb .btn{background:var(--gold-grad);color:#0A2347;border:0;border-radius:10px;font-weight:700;padding:9px 16px}.jump .chip[aria-current=page]{background:var(--gold-fill);border-color:var(--gold);font-weight:700}main.w{padding-top:36px;padding-bottom:64px}.mf-legal a,.mf-col a{font:inherit}.mf a{color:#DCE5F5}</style><style>.fmodes{display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px;margin:0 0 12px}.fmodes .ns-l{font:600 13px var(--body);margin:0 4px 0 0}.fmodes .chip.on{background:var(--gold-fill);border-color:var(--gold);font-weight:700}</style></head>
+<body>
+<header><div class="w"><a class="brand" href="../../"><img src="../../logo.png" alt="Elecmetric" width="160" height="40"></a><nav><a href="../">Calculators</a><a href="../all-tools/">All Tools</a><a href="../../converters/index.html">Conversion Centre</a><a href="../../pages/index.html">Conversions</a><a href="../../technical-library/">Technical Library</a><a href="../../index.html#verification">How it is verified</a></nav></div></header>
+<main class="w"><nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="../../">Home</a></li><li><a href="../../categories/statistics-data-analysis/">Statistics &amp; Data Analysis</a></li><li><a href="../../categories/statistics-data-analysis/#data-analysis">Data Analysis</a></li><li><span aria-current="page">Frequency &amp; Grouped Data Calculator</span></li></ol></nav>
+<h1>Frequency &amp; Grouped Data Calculator</h1>
+<p class="lede">Statistics from a frequency table. Enter raw observations, value and frequency pairs, or class intervals, and get the frequency distribution, mean, median, mode, quartiles, variance and standard deviation with the working shown.</p><nav class="fmodes" aria-label="Statistics modes"><span class="ns-l">Statistics</span><a class="chip" href="../standard-deviation/">Mode 01 · Standard Deviation &amp; Variance</a><a class="chip" href="../descriptive-statistics-calculator/">Mode 02 · Descriptive Statistics</a><a class="chip on" href="../frequency-grouped-data-calculator/" aria-current="page">Mode 03 · Frequency &amp; Grouped Data</a></nav>
+<ol class="modes" aria-label="Calculator modes"><li>01 Standard Deviation &amp; Variance</li><li>02 Descriptive Statistics</li><li class="on" aria-current="true">03 Frequency &amp; Grouped Data</li><li>04 Z-Score &amp; Outliers<small>soon</small></li><li>05 Engineering Measurement<small>soon</small></li><li>06 Standard Error &amp; CI<small>soon</small></li></ol>
+<section class="card" aria-labelledby="in-h">
+ <span class="lbl" id="k-l">Data entry</span><div class="seg" role="group" aria-labelledby="k-l" id="kind"></div>
+ <label for="data" id="in-h" style="margin-top:12px">Data</label>
+ <textarea id="data" spellcheck="false" autocomplete="off" aria-describedby="in-hint"></textarea>
+ <div id="in-hint" class="note" style="margin-top:4px"></div>
+ <div class="chips" id="presets" aria-label="Example presets"></div>
+ <div class="row">
+  <div><span class="lbl" id="t-l">Spread uses</span><div class="seg" role="group" aria-labelledby="t-l"><button type="button" data-t="pop" aria-pressed="true">Population</button><button type="button" data-t="samp" aria-pressed="false">Sample</button></div></div>
+  <div><span class="lbl" id="p-l">Decimal precision</span><div class="seg" role="group" aria-labelledby="p-l" id="prec"></div></div>
+  <div id="qwrap"><span class="lbl" id="q-l">Quartile method</span><div class="seg" role="group" aria-labelledby="q-l" id="qm"></div></div>
+ </div>
+ <div id="msg" class="msg" role="status" aria-live="polite"></div>
+</section>
+<section id="out" class="card" aria-live="polite" hidden></section>
+<details class="more" open><summary>Frequency table</summary><div id="ftab"></div></details>
+<details class="more" id="steps-d" open><summary>How each value is found</summary><div id="steps"></div></details>
+<details class="more"><summary>Entry formats</summary>
+<div class="f">Raw observations   10, 10, 10, 12, 12, 15            (one list; tabulated for you)
+Value and frequency  10:3, 12:2, 15:1                       (pairs with a colon)
+                     or two columns: 10 3 / 12 2 / 15 1     (space, comma or tab)
+Grouped classes    0-10 5 / 10-20 12 / 20-30 8 / 30-40 4   (lower-upper frequency, one class per line)
+                     also: 0 to 10 5   0–10, 5   0 10 5   and negative limits such as -10--5 3</div>
+<p class="note">Frequencies are whole-number counts of repeated observations. Classes must not overlap. Open-ended classes (such as "40 and over") cannot be used because they have no midpoint.</p></details>
+<details class="more"><summary>Frequencies and weights are different</summary>
+<p>A frequency says how many times an observation occurred, so it raises the sample size N and the sample divisor N − 1. A statistical weight says how much an observation should count, without changing N. They give different standard deviations, so they are not interchangeable. This calculator accepts frequency counts only; weighted statistics are not part of Mode 03.</p></details>
+<details class="more"><summary>Grouped-data estimates</summary>
+<div class="f">Midpoint     m = (lower + upper) / 2
+Mean         x̄ = Σ f m / N
+Variance     Σ f (m − x̄)² / N   (population)   or   / (N − 1)   (sample)
+Median, Q1, Q3   L + ((p·N − CF) / f) × w      p = ½, ¼, ¾
+                 L lower limit of the class holding the p·N-th value, w its width,
+                 CF cumulative frequency before it, f its frequency
+Mode         L + ((f₁ − f₀) / (2f₁ − f₀ − f₂)) × w     one modal class, equal widths only</div>
+<p>These are estimates. Once data are grouped, the original values are lost, and every observation is treated as if it sat at its class midpoint, so the true mean and standard deviation can differ. Sheppard's correction for grouping is not applied. Minimum and maximum are the outer class limits, not observed values.</p></details>
+<details class="more"><summary>Formulas (frequency tables)</summary>
+<div class="f">N = Σ f          x̄ = Σ f x / N
+SS = Σ f x² − (Σ f x)² / N        σ² = SS / N        s² = SS / (N − 1)
+MAD = Σ f |x − x̄| / N        SE = s / √N        CV = s / |x̄| × 100 %
+Median and quartiles are found by position in the cumulative frequencies, then interpolated
+(Inclusive, Exclusive or Tukey, as in Mode 02) — no list is expanded.</div></details>
+<details class="more"><summary>Verification</summary>
+ <p class="note">All values except the SD, SE and CV square roots are exact fractions. For small datasets the page also expands the table into a plain list and compares it with the Mode 02 engine (grouped data: the midpoints expanded by frequency).</p>
+ <div id="xcheck" class="f"></div>
+ <h3>Reference test vectors</h3>
+ <button class="btn" id="runtests" type="button">Run reference tests</button>
+ <div class="tw" id="tests" style="margin-top:8px"></div>
+</details>
+<details class="more"><summary>History</summary><div class="hist" id="hist"></div><div class="act"><button class="btn" id="clearh" type="button">Clear history</button></div></details>
+<section class="card"><h3>Limits of this calculator</h3>
+<p class="note" style="margin:0">Statistics from a frequency table describe the table you enter; they do not check the data behind it. Grouped results are estimates and can differ from the statistics of the original observations. Standard deviation measures spread, not accuracy, and is not a substitute for calibration, measurement uncertainty evaluation or the acceptance criteria of the applicable standard. Treat as an estimate and have a competent engineer review it before it is relied on.</p></section>
+<p class="note">Elecmetric · Frequency &amp; Grouped Data Calculator · Mode 03 · Verification class: Engineering reference (cross-checked against separately coded reference calculations; not yet independently reviewed)</p><section id="related"><h2>Related Calculators and Tools</h2><p><a class="chip" href="../standard-deviation-calculator/">Standard Deviation Calculator (Sample, Population and Variance, Mode 01)</a><a class="chip" href="../descriptive-statistics-calculator/">Descriptive Statistics Calculator (Mode 02)</a><a class="chip" href="../mean-median-mode/">Mean, Median and Mode</a><a class="chip" href="../linear-regression/">Linear Regression</a><a class="chip" href="../binomial-distribution/">Binomial Distribution</a><a class="chip" href="../probability-calculator/">Probability</a><a class="chip" href="../random-number-generator/">Random Number Generator</a><a class="chip" href="../permutations-combinations/">Permutations and Combinations</a></p></section></main><section class="w fb" aria-labelledby="fb-h"><h2 id="fb-h">Tell us how to improve this page</h2><textarea id="fb-t" rows="4" maxlength="1500" placeholder="Your message ..." aria-label="Tell us how to improve this page"></textarea><p><button type="button" class="btn" id="fb-b">Email your suggestion</button> <button type="button" class="btn" id="sh-b">Share this page</button> <span class="note" id="fb-n">This opens your email app. Nothing is sent until you press send.</span></p></section><script>(function(){var b=document.getElementById("fb-b");if(!b)return;b.onclick=function(){var t=document.getElementById("fb-t").value.trim(),n=document.getElementById("fb-n");if(!t){n.textContent="Please write a message first.";return}location.assign("mailto:"+"elecmetrics@gmail.com"+"?subject="+encodeURIComponent("Elecmetric feedback: "+document.title)+"&body="+encodeURIComponent(t+"\n\nPage: "+location.href))}})();</script><script>(function(){var s=document.getElementById("sh-b");if(!s)return;s.onclick=function(){var u=location.href,t=document.title,n=document.getElementById("fb-n");if(navigator.share){navigator.share({title:t,url:u}).catch(function(){});return}if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(u).then(function(){n.textContent="Link copied."},function(){n.textContent="Copy this address: "+u})}else{n.textContent="Copy this address: "+u}}})();</script><footer class="mf"><div class="mf-w"><div class="mf-grid" role="navigation" aria-label="Site map"><div class="mf-col"><p class="mf-h"><a href="../../calculators/">Calculators</a></p><ul><li><a href="../../calculators/electrical-fundamentals/">Electrical Fundamentals</a></li><li><a href="../../calculators/power-and-energy/">Power and Energy</a></li><li><a href="../../calculators/cable-engineering/">Cable Engineering</a></li><li><a href="../../calculators/motor-engineering/">Motor Engineering</a></li><li><a href="../../calculators/transformer-engineering/">Transformer Engineering</a></li><li><a href="../../calculators/electrical-protection/">Electrical Protection</a></li><li><a href="../../calculators/power-systems/">Power Systems</a></li><li><a href="../../calculators/earthing-and-grounding/">Earthing and Grounding</a></li><li><a href="../../calculators/renewable-energy/">Renewable Energy</a></li><li><a href="../../calculators/airport-agl-engineering/">Airport and AGL Engineering</a></li><li><a href="../../calculators/electronics-and-instrumentation/">Electronics and Instrumentation</a></li><li><a href="../../calculators/lighting-and-facilities/">Lighting and Facilities</a></li><li><a href="../../calculators/engineering-mathematics/">Engineering Mathematics</a></li></ul></div><div class="mf-col"><p class="mf-h"><a href="../../calculators/">Popular calculators</a></p><ul><li><a href="../../calculators/cable-size/">Cable Size</a></li><li><a href="../../calculators/voltage-drop/">Voltage Drop</a></li><li><a href="../../calculators/breaker-size/">Breaker Size</a></li><li><a href="../../calculators/motor-current/">Motor Current</a></li><li><a href="../../calculators/transformer-sizing/">Transformer Sizing</a></li><li><a href="../../calculators/earth-resistance/">Earth Resistance</a></li><li><a href="../../calculators/pf-correction-kvar/">Power Factor Correction</a></li><li><a href="../../calculators/generator-sizing/">Generator Sizing</a></li><li><a href="../../calculators/battery-bank-sizing/">Battery Bank Sizing</a></li><li><a href="../../calculators/pv-energy/">Solar PV Energy</a></li></ul></div><div class="mf-col"><p class="mf-h"><a href="../../converters/index.html">Conversions</a></p><ul><li><a href="../../pages/index.html">Electrical conversions</a></li><li><a href="../../pages/kw-to-amps.html">kW to Amps</a></li><li><a href="../../pages/amps-to-kw.html">Amps to kW</a></li><li><a href="../../pages/kva-to-kw.html">kVA to kW</a></li><li><a href="../../pages/watts-to-amps.html">Watts to Amps</a></li><li><a href="../../converters/length-converter.html">Length</a></li><li><a href="../../converters/power-converter.html">Power</a></li><li><a href="../../converters/energy-converter.html">Energy</a></li><li><a href="../../converters/temperature-converter.html">Temperature</a></li><li><a href="../../pages/wire-gauge.html">AWG to mm²</a></li></ul></div><div class="mf-col"><p class="mf-h"><a href="../../converters/index.html">Formulas</a></p><ul><li><a href="../../converters/ohms-law-formulas.html">Ohm’s Law formulas</a></li><li><a href="../../converters/kirchhoffs-laws.html">Kirchhoff’s laws</a></li><li><a href="../../converters/cable-sizing-formulas.html">Cable sizing formulas</a></li><li><a href="../../converters/circuit-breaker-formulas.html">Circuit breaker formulas</a></li><li><a href="../../converters/ac-circuit-formulas.html">AC circuit formulas</a></li><li><a href="../../converters/battery-formulas.html">Battery formulas</a></li></ul></div><div class="mf-col"><p class="mf-h">Elecmetric</p><ul><li><a href="../../calculators/basic-calculator/">Basic Calculator</a></li><li><a href="../../calculators/scientific-calculator/">Scientific Calculator</a></li><li><a href="../../index.html#verification">How it is verified</a></li><li><a href="../../privacy.html">Privacy</a></li><li><a href="../../terms.html">Terms</a></li><li><a href="../../technical-library/">Technical Library</a></li><li><a href="mailto:elecmetrics@gmail.com">Contact us</a></li></ul></div></div><div class="mf-legal">Results are computed by the same tested engine as the calculators in Elecmetric and are for estimating. Check design values against the standard and the equipment data you work to. Elecmetric results are not a substitute for a design review by a competent engineer.<br>Developed by Elecmetric. No independent technical review of the calculators has been carried out. Results are for estimating.<br>&copy; 2026 Elecmetric &middot; <a href="../../privacy.html">Privacy</a> &middot; <a href="../../terms.html">Terms</a></div></div><script>(function(){if(location.protocol!=="file:")return;document.addEventListener("click",function(e){if(e.defaultPrevented||e.button||e.metaKey||e.ctrlKey||e.shiftKey)return;var a=e.target.closest&&e.target.closest("a[href]");if(!a||a.target)return;var m=/^([^?#]*)(.*)$/.exec(a.getAttribute("href"));if(!m[1]||/^[a-z][a-z0-9+.-]*:/i.test(m[1])||!/[/]$/.test(m[1]))return;e.preventDefault();location.href=m[1]+"index.html"+m[2]})})();</script><button type="button" class="totop" id="totop" aria-label="Back to top" tabindex="-1">↑ Top</button><script>(function(){var b=document.getElementById("totop");if(!b)return;var t=0;function u(){t=0;var on=(window.pageYOffset||document.documentElement.scrollTop)>400,bar=document.getElementById("bar"),h=bar&&bar.offsetHeight?bar.offsetHeight:0;b.classList.toggle("on",on);b.tabIndex=on?0:-1;b.style.bottom=h?"calc("+(h+16)+"px + env(safe-area-inset-bottom,0px))":"";}function q(){if(!t)t=requestAnimationFrame(u)}window.addEventListener("scroll",q,{passive:true});window.addEventListener("resize",q);b.addEventListener("click",function(){var r=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;window.scrollTo({top:0,behavior:r?"auto":"smooth"})});u()})();</script></footer>
+
+<script>
+/* Elecmetric Statistics Engine, Mode 01: Standard Deviation and Variance.
+   One file, no DOM. Exact rational arithmetic on BigInt, so sums, mean, sum of squared deviations and variances are exact
+   (no cancellation error, whatever the magnitude of the data). Only the final square root is rounded, and it is rounded
+   correctly (integer square root, half-up) at the requested number of decimals.
+   Reusable by later modes (descriptive statistics, z-score, standard error, confidence intervals, quality control).
+   Accepts integers, decimals, scientific notation (1.5e3) and fractions (3/8). Separators: comma, semicolon, space, tab, new line. */
+(function (root) {
+  'use strict';
+  var MAX_VALUES = 5000, MAX_EXP = 100, MAX_BITS = 60000;
+
+  function gcd(a, b) { if (a < 0n) a = -a; if (b < 0n) b = -b; while (b) { var t = a % b; a = b; b = t; } return a; }
+  function mk(n, d) {
+    if (d === 0n) throw new Error('division by zero');
+    if (d < 0n) { n = -n; d = -d; }
+    var g = gcd(n, d); if (g > 1n) { n /= g; d /= g; }
+    return { n: n, d: d };
+  }
+  function add(a, b) { return mk(a.n * b.d + b.n * a.d, a.d * b.d); }
+  function sub(a, b) { return mk(a.n * b.d - b.n * a.d, a.d * b.d); }
+  function mul(a, b) { return mk(a.n * b.n, a.d * b.d); }
+  function div(a, b) { return mk(a.n * b.d, a.d * b.n); }
+  function cmp(a, b) { var l = a.n * b.d, r = b.n * a.d; return l < r ? -1 : l > r ? 1 : 0; }
+  function isZero(a) { return a.n === 0n; }
+  function bits(x) { return (x < 0n ? -x : x).toString(2).length; }
+  var P10 = {}; function p10(k) { return P10[k] || (P10[k] = 10n ** BigInt(k)); }
+
+  function isqrt(n) {
+    if (n < 0n) throw new Error('negative');
+    if (n < 2n) return n;
+    var x = 1n << BigInt((n.toString(2).length + 1) >> 1);
+    for (;;) { var y = (x + n / x) >> 1n; if (y >= x) return x; x = y; }
+  }
+
+  /* ---------- parsing ---------- */
+  var DEC = /^([+-]?)(\d*)(?:\.(\d*))?(?:[eE]([+-]?\d+))?$/;
+  function parseToken(tok) {
+    var t = tok.replace(/[\u2212\u2013\u2014]/g, '-');
+    var slash = t.indexOf('/');
+    if (slash >= 0) {
+      var a = parseDec(t.slice(0, slash)), b = parseDec(t.slice(slash + 1));
+      if (!a || !b) return { err: 'not a valid fraction' };
+      if (/[+-]/.test(t.slice(slash + 1).replace(/[eE][+-]?\d+$/, ''))) return { err: 'denominator must be unsigned' };
+      if (isZero(b)) return { err: 'denominator is zero' };
+      return { r: div(a, b) };
+    }
+    var r = parseDec(t);
+    if (!r) return { err: 'not a number' };
+    return { r: r };
+  }
+  function parseDec(t) {
+    var m = DEC.exec(t); if (!m) return null;
+    var ip = m[2] || '', fp = m[3] || '';
+    if (ip === '' && fp === '') return null;
+    var exp = m[4] ? parseInt(m[4], 10) : 0;
+    if (Math.abs(exp) > MAX_EXP) return null;
+    var n = BigInt((ip + fp) || '0'), d = p10(fp.length);
+    if (m[1] === '-') n = -n;
+    if (exp > 0) n *= p10(exp); else if (exp < 0) d *= p10(-exp);
+    return mk(n, d);
+  }
+  function parseData(text) {
+    var out = { values: [], errors: [], tokens: 0 };
+    var toks = String(text == null ? '' : text).split(/[\s,;]+/).filter(function (s) { return s.length; });
+    out.tokens = toks.length;
+    for (var i = 0; i < toks.length; i++) {
+      var p = parseToken(toks[i]);
+      if (p.err) {
+        var why = p.err;
+        if (/^[^:]+:[^:]+$/.test(toks[i])) why = 'value:frequency entry belongs to Mode 03 (Frequency & Grouped Data)';
+        out.errors.push({ index: i + 1, token: toks[i], reason: why });
+      } else out.values.push({ raw: toks[i], r: p.r });
+    }
+    return out;
+  }
+
+  /* ---------- formatting ---------- */
+  function fmtRat(r, dp) {
+    var neg = r.n < 0n, a = neg ? -r.n : r.n;
+    var s = (a * p10(dp) * 2n + r.d) / (2n * r.d);          // half-up
+    return render(s, dp, neg && s !== 0n);
+  }
+  function fmtSqrt(r, dp) {                                  // correctly rounded sqrt(r), r >= 0
+    if (r.n === 0n) return render(0n, dp, false);
+    var y4 = (4n * r.n * p10(2 * dp)) / r.d;                 // floor(4*y), y = r*10^(2dp)
+    var m = (isqrt(y4) + 1n) / 2n;
+    return render(m, dp, false);
+  }
+  function render(s, dp, neg) {
+    var str = s.toString();
+    if (dp > 0) { while (str.length <= dp) str = '0' + str; str = str.slice(0, str.length - dp) + '.' + str.slice(str.length - dp); }
+    return (neg ? '-' : '') + str;
+  }
+  function fmtFrac(r, maxLen) {
+    var s = r.d === 1n ? r.n.toString() : r.n.toString() + '/' + r.d.toString();
+    return s.length > (maxLen || 40) ? null : s;
+  }
+  function toFloat(r) {
+    if (r.n === 0n) return 0;
+    var n = r.n, d = r.d, s = Math.max(bits(n), bits(d)) - 1000;
+    if (s > 0) { n >>= BigInt(s); d >>= BigInt(s); if (d === 0n) return n < 0n ? -Infinity : Infinity; }
+    return Number(n) / Number(d);
+  }
+  function sqrtIsZeroAtDp(r, dp) { return r.n !== 0n && fmtSqrt(r, dp).replace(/[0.]/g, '') === ''; }
+  function ratIsZeroAtDp(r, dp) { return r.n !== 0n && fmtRat(r, dp).replace(/[-0.]/g, '') === ''; }
+
+  /* ---------- analysis ---------- */
+  function analyse(values) {
+    var n = values.length;
+    if (n === 0) throw new Error('Enter at least one value.');
+    if (n > MAX_VALUES) throw new Error('Too many values: ' + n + ' (limit ' + MAX_VALUES + ').');
+    var sum = mk(0n, 1n), sumsq = mk(0n, 1n), mn = values[0].r, mx = values[0].r, i;
+    for (i = 0; i < n; i++) {
+      var x = values[i].r;
+      sum = add(sum, x); sumsq = add(sumsq, mul(x, x));
+      if (cmp(x, mn) < 0) mn = x; if (cmp(x, mx) > 0) mx = x;
+      if (bits(sum.d) > MAX_BITS) throw new Error('Values are too awkward to sum exactly (denominators too large). Use decimals.');
+    }
+    var N = mk(BigInt(n), 1n);
+    var mean = div(sum, N);
+    var ss = sub(sumsq, div(mul(sum, sum), N));              // sum of squared deviations, exact
+    var out = {
+      n: n, sum: sum, mean: mean, ss: ss, min: mn, max: mx, range: sub(mx, mn),
+      popVar: div(ss, N), sampVar: null, welford: welford(values)
+    };
+    if (n > 1) out.sampVar = div(ss, mk(BigInt(n - 1), 1n));
+    return out;
+  }
+  function welford(values) {                                 // independent float64 cross-check
+    var cnt = 0, m = 0, M2 = 0;
+    for (var i = 0; i < values.length; i++) {
+      var x = toFloat(values[i].r); cnt++;
+      var dlt = x - m; m += dlt / cnt; M2 += dlt * (x - m);
+    }
+    return { mean: m, popVar: M2 / cnt, sampVar: cnt > 1 ? M2 / (cnt - 1) : null };
+  }
+  function deviations(values, mean) {
+    return values.map(function (v) { var d = sub(v.r, mean); return { x: v.r, dev: d, sq: mul(d, d) }; });
+  }
+
+  var api = {
+    MAX_VALUES: MAX_VALUES, parseData: parseData, analyse: analyse, deviations: deviations,
+    fmtRat: fmtRat, fmtSqrt: fmtSqrt, fmtFrac: fmtFrac, toFloat: toFloat,
+    ratIsZeroAtDp: ratIsZeroAtDp, sqrtIsZeroAtDp: sqrtIsZeroAtDp,
+    rat: { mk: mk, add: add, sub: sub, mul: mul, div: div, cmp: cmp }
+  };
+  if (typeof module !== 'undefined' && module.exports) module.exports = api; else root.ElecStats = api;
+})(typeof self !== 'undefined' ? self : this);
+
+</script>
+<script>
+/* Elecmetric Statistics Engine, Mode 02: Descriptive Statistics.
+   Built only on the public API of stats_engine.js (Mode 01 is untouched). Exact rational arithmetic throughout:
+   count, sum, mean, median, mode(s), min, max, range, quartiles (three documented conventions), IQR,
+   sum of squared deviations, variances, mean absolute deviation, and the squares of SD, CV and SE (rounded once, correctly, at display).
+   Quartile conventions (sorted data x1..xn, p = 0.25 or 0.75):
+     inc    inclusive linear interpolation, position h = (n-1)p + 1 (Excel QUARTILE.INC, R type 7)
+     exc    exclusive linear interpolation, position h = (n+1)p, clamped to [1, n] (Excel QUARTILE.EXC, R type 6)
+     tukey  median of the lower and upper halves, the overall median excluded when n is odd (Tukey hinges, textbook method) */
+(function (root) {
+  'use strict';
+  var E = (typeof module !== 'undefined' && module.exports) ? require('./stats_engine.js') : root.ElecStats;
+  var R = E.rat, mk = R.mk;
+  var ZERO = mk(0n, 1n);
+  function big(n) { return mk(BigInt(n), 1n); }
+  function sortVals(values) { return values.map(function (v) { return v.r; }).sort(R.cmp); }
+  function medianOf(a) {                                   // a sorted, non-empty
+    var n = a.length, m = n >> 1;
+    return n % 2 ? a[m] : R.div(R.add(a[m - 1], a[m]), big(2));
+  }
+  function interp(a, h) {                                  // h: rational 1-based position, clamped
+    var n = a.length;
+    if (R.cmp(h, big(1)) <= 0) return a[0];
+    if (R.cmp(h, big(n)) >= 0) return a[n - 1];
+    var lo = Number(h.n / h.d);                            // floor, 1-based
+    var frac = R.sub(h, big(lo));
+    return R.add(a[lo - 1], R.mul(frac, R.sub(a[lo], a[lo - 1])));
+  }
+  function quartiles(a, method) {
+    var n = a.length, p1 = mk(1n, 4n), p3 = mk(3n, 4n), q1, q3, d = {};
+    if (n === 1) return { q1: a[0], q3: a[0], d: { h1: null, h3: null, note: 'one value: every quartile equals it' } };
+    if (method === 'tukey') {
+      var k = n >> 1, lower = a.slice(0, k), upper = a.slice(n - k);
+      q1 = medianOf(lower); q3 = medianOf(upper);
+      d.note = 'median of the lower ' + k + ' and upper ' + k + ' values' + (n % 2 ? ' (overall median excluded)' : '');
+    } else {
+      var f = method === 'exc' ? function (p) { return R.mul(big(n + 1), p); }
+                               : function (p) { return R.add(R.mul(big(n - 1), p), big(1)); };
+      var h1 = f(p1), h3 = f(p3);
+      q1 = interp(a, h1); q3 = interp(a, h3); d.h1 = h1; d.h3 = h3;
+      if (method === 'exc' && (R.cmp(h1, big(1)) < 0 || R.cmp(h3, big(n)) > 0)) d.clamped = true;
+    }
+    return { q1: q1, q3: q3, d: d };
+  }
+  function modes(a) {
+    var best = 0, list = [], i = 0;
+    while (i < a.length) {
+      var j = i; while (j + 1 < a.length && R.cmp(a[j + 1], a[i]) === 0) j++;
+      var c = j - i + 1;
+      if (c > best) { best = c; list = [a[i]]; } else if (c === best) list.push(a[i]);
+      i = j + 1;
+    }
+    return { count: best, values: best === 1 ? [] : list, none: best === 1 };
+  }
+  function describe(values, opts) {
+    opts = opts || {}; var method = opts.method || 'inc';
+    var base = E.analyse(values), a = sortVals(values), n = a.length, N = big(n);
+    var q = quartiles(a, method), mean = base.mean, absSum = ZERO, i;
+    for (i = 0; i < n; i++) { var d = R.sub(a[i], mean); absSum = R.add(absSum, d.n < 0n ? mk(-d.n, d.d) : d); }
+    var sumsq = R.add(base.ss, R.div(R.mul(base.sum, base.sum), N));    // raw sum of squares, exact
+    var meanSq = R.mul(mean, mean);
+    return {
+      n: n, sorted: a, method: method, sum: base.sum, mean: mean, median: medianOf(a), mode: modes(a),
+      min: a[0], max: a[n - 1], range: R.sub(a[n - 1], a[0]), q1: q.q1, q3: q.q3, iqr: R.sub(q.q3, q.q1), qd: q.d,
+      ss: base.ss, sumsq: sumsq, popVar: base.popVar, sampVar: base.sampVar,
+      mad: R.div(absSum, N),
+      cvSampSq: (base.sampVar && meanSq.n !== 0n) ? R.div(base.sampVar, meanSq) : null,
+      cvPopSq: meanSq.n !== 0n ? R.div(base.popVar, meanSq) : null,
+      seSq: base.sampVar ? R.div(base.sampVar, N) : null,
+      welford: base.welford
+    };
+  }
+  function fmtPercentOfSqrt(r, dp) { return r ? E.fmtSqrt(R.mul(r, big(10000)), dp) : null; }   // 100*sqrt(r)
+  var api = { describe: describe, quartiles: quartiles, medianOf: medianOf, fmtPercentOfSqrt: fmtPercentOfSqrt, sortVals: sortVals };
+  if (typeof module !== 'undefined' && module.exports) module.exports = api; else root.ElecDesc = api;
+})(typeof self !== 'undefined' ? self : this);
+
+</script>
+<script>
+/* Elecmetric Statistics Engine, Mode 03: Frequency and Grouped Data.
+   Built only on the public API of stats_engine.js (Modes 01 and 02 untouched). Exact rational arithmetic, BigInt frequencies.
+   Three entry types:
+     raw      list of observations, tabulated into a frequency distribution
+     values   value and frequency table (value:freq pairs, or two columns)
+     grouped  class intervals (lower, upper, frequency); statistics are ESTIMATES from class midpoints
+   Frequencies are counts of repeated observations (N = sum of f, sample divisor N - 1). Statistical weights are a different thing and are not accepted.
+   Grouped estimates (L = class lower bound, w = width, CF = cumulative frequency before the class):
+     median / Q1 / Q3  =  L + ((p N - CF) / f) w     p = 1/2, 1/4, 3/4
+     mode              =  L + ((f1 - f0) / (2 f1 - f0 - f2)) w     (single modal class, equal class widths only)
+   Sheppard's correction is NOT applied. */
+(function (root) {
+  'use strict';
+  var E = (typeof module !== 'undefined' && module.exports) ? require('./stats_engine.js') : root.ElecStats;
+  var R = E.rat, mk = R.mk, MAXF = 1000000000000000n;
+  function big(n) { return mk(BigInt(n), 1n); }
+  function bigf(b) { return mk(b, 1n); }
+  function num(tok) { var p = E.parseData(tok); return (p.errors.length || p.values.length !== 1) ? null : p.values[0].r; }
+  function freqTok(t) { if (!/^\+?\d+$/.test(t)) return null; var b = BigInt(t.replace('+', '')); return b > MAXF ? null : b; }
+
+  /* ---------- parsing ---------- */
+  function parseRaw(text) {
+    var p = E.parseData(text), out = { errors: p.errors, points: [] };
+    if (p.errors.length) return out;
+    var a = p.values.map(function (v) { return v.r; }).sort(R.cmp), i = 0;
+    while (i < a.length) { var j = i; while (j + 1 < a.length && R.cmp(a[j + 1], a[i]) === 0) j++; out.points.push({ x: a[i], f: BigInt(j - i + 1) }); i = j + 1; }
+    return out;
+  }
+  function merge(points, notes) {
+    points.sort(function (a, b) { return R.cmp(a.x, b.x); });
+    var out = [];
+    points.forEach(function (p) { var l = out[out.length - 1]; if (l && R.cmp(l.x, p.x) === 0) { l.f += p.f; notes.push('Repeated value merged: its frequencies were added.'); } else out.push({ x: p.x, f: p.f }); });
+    return out;
+  }
+  function parseValues(text) {
+    var out = { errors: [], points: [], notes: [] }, t = String(text || '').trim(), rows = [];
+    if (!t) return out;
+    if (t.indexOf(':') >= 0) rows = t.split(/[,;\n]+/).map(function (s) { return s.trim(); }).filter(Boolean).map(function (s) { return s.split(':').map(function (z) { return z.trim(); }); });
+    else rows = t.split(/\n|;/).map(function (s) { return s.trim(); }).filter(Boolean).map(function (s) { return s.split(/[\s,]+/).filter(Boolean); });
+    rows.forEach(function (r, i) {
+      if (r.length !== 2) { out.errors.push({ index: i + 1, token: r.join(' '), reason: 'each entry needs exactly a value and a frequency' }); return; }
+      var x = num(r[0]), f = freqTok(r[1]);
+      if (!x) { out.errors.push({ index: i + 1, token: r[0], reason: 'value is not a number' }); return; }
+      if (f === null) { out.errors.push({ index: i + 1, token: r[1], reason: 'frequency must be a whole number of 0 or more (a count, not a weight)' }); return; }
+      if (f > 0n) out.points.push({ x: x, f: f }); else out.notes.push('Value ' + r[0] + ' has frequency 0 and was ignored.');
+    });
+    if (!out.errors.length) out.points = merge(out.points, out.notes);
+    return out;
+  }
+  function parseRange(tok) {                                  // "0-10", "-10--5", "0–10", "0 to 10"
+    var t = tok.replace(/[\u2212\u2013\u2014]/g, '-').replace(/\s+to\s+/i, '~');
+    var cand = [];
+    if (t.indexOf('~') >= 0) { var q = t.split('~'); cand.push([q[0], q[1]]); }
+    else for (var i = 1; i < t.length; i++) if (t[i] === '-' && t[i - 1] !== '-' && !/[eE]/.test(t[i - 1])) cand.push([t.slice(0, i), t.slice(i + 1)]);
+    for (var k = 0; k < cand.length; k++) { var a = num(cand[k][0].trim()), b = num(cand[k][1].trim()); if (a && b) return [a, b]; }
+    return null;
+  }
+  function parseGrouped(text) {
+    var out = { errors: [], classes: [], notes: [] }, t = String(text || '').trim();
+    if (!t) return out;
+    var rows = t.split(/\n|;/).map(function (s) { return s.trim(); }).filter(Boolean);
+    rows.forEach(function (row, i) {
+      var tk = row.replace(/\s+to\s+/ig, '~').split(/[\s,:]+/).filter(Boolean), lo, hi, f;
+      if (tk.length === 3) { lo = num(tk[0]); hi = num(tk[1]); f = freqTok(tk[2]); }
+      else if (tk.length === 2) { var r = parseRange(tk[0]); if (r) { lo = r[0]; hi = r[1]; } f = freqTok(tk[1]); }
+      else { out.errors.push({ index: i + 1, token: row, reason: 'use "lower-upper frequency", for example 10-20 12' }); return; }
+      if (!lo || !hi) { out.errors.push({ index: i + 1, token: row, reason: 'class limits are not numbers' }); return; }
+      if (f === null) { out.errors.push({ index: i + 1, token: row, reason: 'frequency must be a whole number of 0 or more' }); return; }
+      if (R.cmp(lo, hi) >= 0) { out.errors.push({ index: i + 1, token: row, reason: 'lower limit must be below the upper limit' }); return; }
+      out.classes.push({ lo: lo, hi: hi, f: f, row: i + 1 });
+    });
+    if (out.errors.length) return out;
+    out.classes.sort(function (a, b) { return R.cmp(a.lo, b.lo); });
+    for (var i = 1; i < out.classes.length; i++) {
+      var p = out.classes[i - 1], c = out.classes[i], k = R.cmp(c.lo, p.hi);
+      if (k < 0) { out.errors.push({ index: c.row, token: 'class ' + c.row, reason: 'overlaps the previous class; classes must not overlap' }); }
+      else if (k > 0) out.notes.push('There is a gap between classes; check whether the data are continuous.');
+    }
+    var w0 = R.sub(out.classes[0].hi, out.classes[0].lo);
+    out.equalWidth = out.classes.every(function (c) { return R.cmp(R.sub(c.hi, c.lo), w0) === 0; });
+    if (!out.equalWidth) out.notes.push('Class widths are unequal: the mode estimate is not given, and a modal class by frequency may be misleading.');
+    out.notes = out.notes.filter(function (x, i, a) { return a.indexOf(x) === i; });
+    return out;
+  }
+
+  /* ---------- shared sums over (x, f) points ---------- */
+  function core(points) {
+    var N = 0n, sfx = mk(0n, 1n), sfx2 = mk(0n, 1n);
+    points.forEach(function (p) { N += p.f; var f = bigf(p.f); sfx = R.add(sfx, R.mul(f, p.x)); sfx2 = R.add(sfx2, R.mul(f, R.mul(p.x, p.x))); });
+    if (N === 0n) throw new Error('Total frequency is zero.');
+    var Nr = bigf(N), mean = R.div(sfx, Nr), ss = R.sub(sfx2, R.div(R.mul(sfx, sfx), Nr)), mad = mk(0n, 1n);
+    points.forEach(function (p) { var d = R.sub(p.x, mean); mad = R.add(mad, R.mul(bigf(p.f), d.n < 0n ? mk(-d.n, d.d) : d)); });
+    var meanSq = R.mul(mean, mean), popVar = R.div(ss, Nr), sampVar = N > 1n ? R.div(ss, bigf(N - 1n)) : null;
+    return { N: N, sum: sfx, sumsq: sfx2, mean: mean, ss: ss, popVar: popVar, sampVar: sampVar, mad: R.div(mad, Nr),
+      cvSampSq: (sampVar && meanSq.n !== 0n) ? R.div(sampVar, meanSq) : null, cvPopSq: meanSq.n !== 0n ? R.div(popVar, meanSq) : null,
+      seSq: sampVar ? R.div(sampVar, Nr) : null };
+  }
+  function table(points, N, xs) {
+    var cum = 0n, Nr = bigf(N), pc = mk(100n, 1n);
+    return points.map(function (p, i) {
+      cum += p.f;
+      return { x: xs ? xs[i] : p.x, f: p.f, rel: R.mul(R.div(bigf(p.f), Nr), pc), cum: cum, cumPct: R.mul(R.div(bigf(cum), Nr), pc) };
+    });
+  }
+
+  /* ---------- exact order statistics from a frequency table ---------- */
+  function getAt(points, pos) {                               // pos: 1-based BigInt
+    var c = 0n; for (var i = 0; i < points.length; i++) { c += points[i].f; if (pos <= c) return points[i].x; }
+    return points[points.length - 1].x;
+  }
+  function medianRange(points, lo, hi) {                      // positions lo..hi inclusive
+    var len = hi - lo + 1n, m = lo + (len - 1n) / 2n;
+    return len % 2n ? getAt(points, m) : R.div(R.add(getAt(points, m), getAt(points, m + 1n)), big(2));
+  }
+  function interpAt(points, N, h) {                           // h rational 1-based, clamped
+    if (R.cmp(h, big(1)) <= 0) return getAt(points, 1n);
+    if (R.cmp(h, bigf(N)) >= 0) return getAt(points, N);
+    var lo = h.n / h.d, fr = R.sub(h, bigf(lo)), a = getAt(points, lo), b = getAt(points, lo + 1n);
+    return R.add(a, R.mul(fr, R.sub(b, a)));
+  }
+  function quartilesAt(points, N, method) {
+    if (N === 1n) { var x = getAt(points, 1n); return { q1: x, q3: x }; }
+    if (method === 'tukey') { var k = N / 2n; return { q1: medianRange(points, 1n, k), q3: medianRange(points, N - k + 1n, N) }; }
+    var Nr = bigf(N), f = method === 'exc' ? function (p) { return R.mul(R.add(Nr, big(1)), p); } : function (p) { return R.add(R.mul(R.sub(Nr, big(1)), p), big(1)); };
+    var h1 = f(mk(1n, 4n)), h3 = f(mk(3n, 4n));
+    return { q1: interpAt(points, N, h1), q3: interpAt(points, N, h3), clamped: method === 'exc' && (R.cmp(h1, big(1)) < 0 || R.cmp(h3, Nr) > 0) };
+  }
+
+  function analyseValues(points, opts) {
+    var method = (opts && opts.method) || 'inc', c = core(points), N = c.N;
+    var best = 0n, modes = []; points.forEach(function (p) { if (p.f > best) { best = p.f; modes = [p.x]; } else if (p.f === best) modes.push(p.x); });
+    var q = quartilesAt(points, N, method), min = points[0].x, max = points[points.length - 1].x;
+    var out = Object.assign({ kind: 'values', method: method, points: points, table: table(points, N), median: medianRange(points, 1n, N),
+      min: min, max: max, range: R.sub(max, min), q1: q.q1, q3: q.q3, iqr: R.sub(q.q3, q.q1), clamped: !!q.clamped,
+      mode: { count: best, values: points.length === modes.length && best === 1n ? [] : modes, none: points.length === modes.length && best === 1n } }, c);
+    return out;
+  }
+
+  function analyseGrouped(classes, equalWidth) {
+    var pts = classes.map(function (c) { return { x: R.div(R.add(c.lo, c.hi), big(2)), f: c.f }; }), c = core(pts), N = c.N, Nr = bigf(N);
+    var cum = 0n, rows = classes.map(function (k, i) { var b = cum; cum += k.f; return { lo: k.lo, hi: k.hi, w: R.sub(k.hi, k.lo), f: k.f, mid: pts[i].x, before: b, after: cum }; });
+    function pctile(p) {
+      var t = R.mul(p, Nr);
+      for (var i = 0; i < rows.length; i++) { var r = rows[i]; if (r.f > 0n && R.cmp(bigf(r.after), t) >= 0)
+        return { v: R.add(r.lo, R.mul(R.div(R.sub(t, bigf(r.before)), bigf(r.f)), r.w)), cls: i }; }
+      return { v: rows[rows.length - 1].hi, cls: rows.length - 1 };
+    }
+    var med = pctile(mk(1n, 2n)), q1 = pctile(mk(1n, 4n)), q3 = pctile(mk(3n, 4n));
+    var best = 0n, idx = []; rows.forEach(function (r, i) { if (r.f > best) { best = r.f; idx = [i]; } else if (r.f === best) idx.push(i); });
+    var modeEst = null;
+    if (idx.length === 1 && equalWidth) {
+      var i = idx[0], f1 = bigf(rows[i].f), f0 = bigf(i > 0 ? rows[i - 1].f : 0n), f2 = bigf(i < rows.length - 1 ? rows[i + 1].f : 0n), den = R.sub(R.sub(R.mul(big(2), f1), f0), f2);
+      if (den.n > 0n) modeEst = R.add(rows[i].lo, R.mul(R.div(R.sub(f1, f0), den), rows[i].w));
+    }
+    var tb = table(pts, N, null).map(function (t, i) { return Object.assign(t, { lo: rows[i].lo, hi: rows[i].hi, mid: rows[i].mid, fx: R.mul(bigf(rows[i].f), rows[i].mid) }); });
+    return Object.assign({ kind: 'grouped', rows: rows, table: tb, median: med.v, medianClass: med.cls, q1: q1.v, q3: q3.v, iqr: R.sub(q3.v, q1.v), q1Class: q1.cls, q3Class: q3.cls,
+      min: rows[0].lo, max: rows[rows.length - 1].hi, range: R.sub(rows[rows.length - 1].hi, rows[0].lo), modalClasses: idx, modeEst: modeEst, modeBest: best }, c);
+  }
+  function pctOfSqrt(r, dp) { return r ? E.fmtSqrt(R.mul(r, big(10000)), dp) : null; }
+  var api = { parseRaw: parseRaw, parseValues: parseValues, parseGrouped: parseGrouped, analyseValues: analyseValues, analyseGrouped: analyseGrouped, fmtPercentOfSqrt: pctOfSqrt, MAXF: MAXF };
+  if (typeof module !== 'undefined' && module.exports) module.exports = api; else root.ElecFreq = api;
+})(typeof self !== 'undefined' ? self : this);
+
+</script>
+<script>
+(function(){
+'use strict';
+var S=window.ElecStats,D=window.ElecDesc,Q=window.ElecFreq,$=function(id){return document.getElementById(id)},R=S.rat;
+var st={kind:'values',type:'pop',dp:4,q:'inc'},PRES=[2,4,6,10],QM=[['inc','Inclusive'],['exc','Exclusive'],['tukey','Tukey']];
+var KINDS=[['raw','Raw observations'],['values','Value & frequency'],['grouped','Grouped classes']];
+var TXT={raw:'10, 10, 10, 12, 12, 15',values:'10:3, 12:2, 15:1',grouped:'0-10 5\n10-20 12\n20-30 8\n30-40 4'};
+var HINT={raw:'Separate observations with commas, spaces, semicolons or new lines. The calculator builds the frequency table.',values:'Enter value:frequency pairs (10:3, 12:2) or two columns, one value and its frequency per line. Frequencies are whole counts.',grouped:'One class per line as lower-upper frequency, for example 10-20 12. Classes must not overlap. Results are estimates from class midpoints.'};
+var EX={raw:[['CEO example','10, 10, 10, 12, 12, 15'],['Current readings (A)','6.58 6.60 6.58 6.61 6.60 6.60 6.59 6.62 6.60']],
+ values:[['10:3, 12:2, 15:1','10:3, 12:2, 15:1'],['Two columns','1 5\n2 3\n3 9\n7 1\n10 4'],['Fractions','1/3:2, 2/3:5, 1:1'],['Large counts','1:1000000, 2:2500000, 5:500000']],
+ grouped:[['Four classes','0-10 5\n10-20 12\n20-30 8\n30-40 4'],['Voltage readings (V)','226-228 3\n228-230 11\n230-232 18\n232-234 7\n234-236 1'],['Negative limits','-10--5 3\n-5-0 4\n0-5 9\n5-10 2'],['Unequal widths','0-5 4\n5-15 10\n15-40 6']]};
+var vals={raw:TXT.raw,values:TXT.values,grouped:TXT.grouped};
+function el(t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e}
+function mkseg(box,items,key,isNum,after){box.textContent='';items.forEach(function(v){var val=Array.isArray(v)?v[0]:v,lab=Array.isArray(v)?v[1]:String(v);var b=el('button',null,lab);b.type='button';b.dataset.v=val;b.onclick=function(){if(key==='kind')vals[st.kind]=$('data').value;st[key]=isNum?+val:val;if(key==='kind')load();sync();run()};box.appendChild(b)})}
+function sync(){document.querySelectorAll('[data-t]').forEach(function(b){b.setAttribute('aria-pressed',String(b.dataset.t===st.type))});
+ [].forEach.call($('prec').children,function(b){b.setAttribute('aria-pressed',String(+b.dataset.v===st.dp))});
+ [].forEach.call($('qm').children,function(b){b.setAttribute('aria-pressed',String(b.dataset.v===st.q))});
+ [].forEach.call($('kind').children,function(b){b.setAttribute('aria-pressed',String(b.dataset.v===st.kind))});
+ $('qwrap').style.display=st.kind==='grouped'?'none':''}
+function load(){$('data').value=vals[st.kind];$('in-hint').textContent=HINT[st.kind];var p=$('presets');p.textContent='';EX[st.kind].forEach(function(e){var b=el('button','chip',e[0]);b.type='button';b.onclick=function(){$('data').value=e[1];run()};p.appendChild(b)})}
+document.querySelectorAll('[data-t]').forEach(function(b){b.onclick=function(){st.type=b.dataset.t;sync();run()}});
+mkseg($('prec'),PRES,'dp',true);mkseg($('qm'),QM,'q',false);mkseg($('kind'),KINDS,'kind',false);
+var F=function(r,dp){return S.fmtRat(r,dp)},FS=function(r,dp){return S.fmtSqrt(r,dp)},FR=function(r){return S.fmtFrac(r)};
+
+function parse(){var t=$('data').value;
+ if(st.kind==='raw'){var p=Q.parseRaw(t);return{errors:p.errors,points:p.points,notes:[],empty:!t.trim()}}
+ if(st.kind==='values'){var v=Q.parseValues(t);return{errors:v.errors,points:v.points,notes:v.notes,empty:!t.trim()}}
+ var g=Q.parseGrouped(t);return{errors:g.errors,classes:g.classes,equalWidth:g.equalWidth,notes:g.notes,empty:!t.trim()}}
+function run(){
+ var msg=$('msg'),out=$('out'),pr=parse();msg.className='msg';msg.textContent='';$('steps').textContent='';$('xcheck').textContent='';$('ftab').textContent='';
+ if(pr.empty){out.hidden=true;msg.textContent='Enter some data.';return}
+ if(pr.errors.length){out.hidden=true;msg.className='msg bad';msg.appendChild(el('span',null,pr.errors.length+' problem'+(pr.errors.length>1?'s':'')+' in the entry:'));
+  var ul=el('ul');pr.errors.slice(0,8).forEach(function(e){ul.appendChild(el('li',null,'#'+e.index+' “'+e.token+'” — '+e.reason))});if(pr.errors.length>8)ul.appendChild(el('li',null,'… and '+(pr.errors.length-8)+' more'));msg.appendChild(ul);return}
+ var a;try{a=st.kind==='grouped'?Q.analyseGrouped(pr.classes,pr.equalWidth):Q.analyseValues(pr.points,{method:st.q})}catch(e){out.hidden=true;msg.className='msg bad';msg.textContent=e.message;return}
+ msg.textContent=String(a.N)+' observation'+(a.N>1n?'s':'')+' in '+a.table.length+(st.kind==='grouped'?' class'+(a.table.length>1?'es':''):' distinct value'+(a.table.length>1?'s':''))+'.'+(pr.notes.length?' '+pr.notes.join(' '):'');
+ render(a,pr);save($('data').value)}
+
+function modeText(a,dp){if(a.kind==='grouped'){var c=a.modalClasses.map(function(i){return F(a.rows[i].lo,dp)+'–'+F(a.rows[i].hi,dp)}).join(', ');return 'modal class '+c+(a.modeEst?'; estimate '+F(a.modeEst,dp):'')}
+ return a.mode.none?'no mode':a.mode.values.map(function(v){return F(v,dp)}).join(', ')+(a.mode.values.length>1?' (multimodal)':'')+' ×'+String(a.mode.best!==undefined?a.mode.best:a.mode.count)}
+function cvStr(a,dp){var q=st.type==='pop'?a.cvPopSq:a.cvSampSq;return q?Q.fmtPercentOfSqrt(q,dp)+' %':'undefined'}
+function rowsOf(a){var dp=st.dp,g=a.kind==='grouped',e=g?' (est.)':'',pop=st.type==='pop',qn=QM.filter(function(m){return m[0]===a.method})[0];
+ var R2=[['Total frequency N',String(a.N),null,'Σ f'],['Sum Σ f'+(g?'m':'x'),F(a.sum,dp),FR(a.sum),''],['Mean x̄'+e,F(a.mean,dp),FR(a.mean),g?'Σ f m / N':'Σ f x / N'],
+ ['Median'+e,F(a.median,dp),FR(a.median),g?'Interpolated within the median class':''],['Mode'+e,modeText(a,dp),null,''],
+ [g?'Lowest lower class limit':'Minimum',F(a.min,dp),null,g?'Class limit, not an observation':''],[g?'Highest upper class limit':'Maximum',F(a.max,dp),null,''],['Range',F(a.range,dp),FR(a.range),g?'Between class limits':'max − min'],
+ ['First quartile Q1'+e,F(a.q1,dp),FR(a.q1),g?'Interpolated':qn[1]+' method'],['Third quartile Q3'+e,F(a.q3,dp),FR(a.q3),''],['Interquartile range'+e,F(a.iqr,dp),FR(a.iqr),'Q3 − Q1'],
+ ['Population variance σ²'+e,F(a.popVar,dp),FR(a.popVar),'SS / N'],['Sample variance s²'+e,a.sampVar?F(a.sampVar,dp):'undefined',a.sampVar?FR(a.sampVar):null,'SS / (N − 1)'],
+ ['Population SD σ'+e,FS(a.popVar,dp),null,''],['Sample SD s'+e,a.sampVar?FS(a.sampVar,dp):'undefined',null,''],
+ ['CV'+e+' ('+(pop?'σ':'s')+' / |x̄|)',cvStr(a,dp),null,''],['Standard error SE'+e,a.seSq?FS(a.seSq,dp):'undefined',null,'s / √N'],['Mean absolute deviation'+e,F(a.mad,dp),FR(a.mad),'Σ f |x − x̄| / N'],
+ ['Sum of squares Σ f '+(g?'m²':'x²'),F(a.sumsq,dp),FR(a.sumsq),'Raw'],['Sum of squared deviations SS',F(a.ss,dp),FR(a.ss),'About the mean']];return R2}
+
+function render(a,pr){
+ var dp=st.dp,pop=st.type==='pop',g=a.kind==='grouped',out=$('out');out.textContent='';out.hidden=false;
+ if(g)out.appendChild(el('div','est','Estimates from class midpoints. These are not exact statistics of the original observations. Sheppard’s correction is not applied.'));
+ var hero=el('div','hero');function tile(k,v,x,sel){var t=el('div','tile'+(sel?' sel':''));t.appendChild(el('div','k',k));t.appendChild(el('div','v',v));if(x)t.appendChild(el('div','x',x));hero.appendChild(t)}
+ var e=g?' (est.)':'';tile('Mean'+e,F(a.mean,dp),'= '+(FR(a.mean)||'—'),true);tile('Median'+e,F(a.median,dp));
+ tile((pop?'Population':'Sample')+' SD ('+(pop?'σ':'s')+')'+e,pop?FS(a.popVar,dp):(a.sampVar?FS(a.sampVar,dp):'undefined'));tile('N',String(a.N));out.appendChild(hero);
+ var w=[],sdq=pop?a.popVar:a.sampVar;
+ if(!pop&&!a.sampVar)w.push('Sample SD, sample variance, CV (sample) and standard error are undefined for a single observation (N − 1 = 0).');
+ if(a.mean.n===0n)w.push('The mean is zero, so the coefficient of variation is undefined.');else if(sdq&&R.cmp(sdq,R.mul(a.mean,a.mean))>0)w.push('CV is above 100 %: the mean is small relative to the spread, so CV is unlikely to be a meaningful comparison.');
+ if(a.clamped)w.push('Exclusive method: a quartile position fell outside the data, so Q1 or Q3 is held at the smallest or largest value.');
+ if(g&&!pr.equalWidth)w.push('Class widths are unequal, so no mode estimate is given.');
+ if(g&&pr.notes.some(function(n){return /gap/.test(n)}))w.push('There is a gap between classes. If the data are continuous, close the gap (for example 10-19 and 20-29 become 9.5-19.5 and 19.5-29.5).');
+ if(sdq&&S.sqrtIsZeroAtDp(sdq,dp))w.push('The standard deviation is not zero but is smaller than the precision chosen; increase the decimal precision.');
+ w.forEach(function(x){out.appendChild(el('div','warn',x))});
+ var tw=el('div','tw'),tb=el('table'),tr=el('tr');['Statistic','Result','Exact value','Note'].forEach(function(h){tr.appendChild(el('th',null,h))});var th=el('thead');th.appendChild(tr);tb.appendChild(th);
+ var body=el('tbody');rowsOf(a).forEach(function(r){var tr=el('tr');tr.appendChild(el('td',null,r[0]));tr.appendChild(el('td','n',r[1]));tr.appendChild(el('td','n',r[2]||'—'));tr.appendChild(el('td','note',r[3]||''));body.appendChild(tr)});
+ tb.appendChild(body);tw.appendChild(tb);out.appendChild(tw);
+ var act=el('div','act'),c=el('button','btn pri','Copy results');c.type='button';c.onclick=function(){copy(text(a),c)};act.appendChild(c);
+ var x=el('button','btn','Download CSV');x.type='button';x.onclick=function(){csv(a)};act.appendChild(x);out.appendChild(act);
+ ftable(a);steps(a);xcheck(a)}
+
+function ftable(a){var g=a.kind==='grouped',dp=Math.min(st.dp,4),box=$('ftab'),LIM=200;
+ var tw=el('div','tw'),tb=el('table'),tr=el('tr'),H=g?['Class','Midpoint m','f','Relative %','Cumulative f','Cumulative %','f × m','']:['Value x','f','Relative %','Cumulative f','Cumulative %','f × x',''];
+ H.forEach(function(h){tr.appendChild(el('th',null,h))});tb.appendChild(tr);var mx=0;a.table.forEach(function(r){var v=Number(r.f);if(v>mx)mx=v});
+ a.table.slice(0,LIM).forEach(function(r){var tr=el('tr');function c(t){tr.appendChild(el('td','c',t))}
+  if(g){c(F(r.lo,dp)+' – '+F(r.hi,dp));c(F(r.mid,dp))}else c(F(r.x,dp));
+  c(String(r.f));c(F(r.rel,dp)+' %');c(String(r.cum));c(F(r.cumPct,dp)+' %');c(F(g?r.fx:R.mul(R.mk(r.f,1n),r.x),dp));
+  var td=el('td'),b=el('span','bar');b.style.width=Math.max(1,Math.round(Number(r.f)/mx*100))+'%';td.style.minWidth='90px';td.appendChild(b);tr.appendChild(td);tb.appendChild(tr)});
+ tw.appendChild(tb);box.appendChild(tw);if(a.table.length>LIM)box.appendChild(el('p','note','Showing the first '+LIM+' of '+a.table.length+' rows; statistics use all rows.'))}
+
+function steps(a){var sd=st.dp+2,g=a.kind==='grouped',L=[],box=$('steps'),N=String(a.N);
+ if(g){L.push('1. Class midpoints and frequencies\n   m = (lower + upper) / 2 for each class; N = Σ f = '+N);
+  L.push('2. Mean (estimate)\n   x̄ = Σ f m / N = '+F(a.sum,sd)+' / '+N+' = '+F(a.mean,sd));
+  function pc(name,v,ci,p){var r=a.rows[ci],pp=p.split('/'),tg=F(R.mul(R.div(R.mk(BigInt(pp[0]),1n),R.mk(BigInt(pp[1]),1n)),R.mk(a.N,1n)),sd);return '   '+name+': '+p+' × N = '+tg+'; class '+F(r.lo,sd)+'–'+F(r.hi,sd)+' (CF = '+r.before+', f = '+r.f+', w = '+F(r.w,sd)+')\n      = '+F(r.lo,sd)+' + (('+tg+' − '+r.before+') / '+r.f+') × '+F(r.w,sd)+' = '+F(v,sd)}
+  L.push('3. Median, Q1, Q3 (interpolated)\n'+pc('Median',a.median,a.medianClass,'1/2')+'\n'+pc('Q1',a.q1,a.q1Class,'1/4')+'\n'+pc('Q3',a.q3,a.q3Class,'3/4'));
+  L.push('4. Mode\n   '+modeText(a,sd));
+  L.push('5. Spread (estimate)\n   SS = Σ f (m − x̄)² = '+F(a.ss,sd)+'\n   σ² = SS / N = '+F(a.popVar,sd)+(a.sampVar?',  s² = SS / (N − 1) = '+F(a.sampVar,sd):',  s² undefined (N = 1)')+'\n   σ = '+FS(a.popVar,st.dp)+(a.sampVar?',  s = '+FS(a.sampVar,st.dp):''))}
+ else{L.push('1. Frequency table\n   '+a.table.length+' distinct value'+(a.table.length>1?'s':'')+', N = Σ f = '+N);
+  L.push('2. Mean\n   x̄ = Σ f x / N = '+F(a.sum,sd)+' / '+N+' = '+F(a.mean,sd));
+  var h=R.div(R.add(R.mk(a.N,1n),R.mk(1n,1n)),R.mk(2n,1n));L.push('3. Median\n   Position (N + 1) / 2 = '+F(h,sd)+' in the cumulative frequencies → '+F(a.median,sd));
+  L.push('4. Quartiles ('+QM.filter(function(m){return m[0]===a.method})[0][1]+' method)\n   Q1 = '+F(a.q1,sd)+',  Q3 = '+F(a.q3,sd)+',  IQR = '+F(a.iqr,sd));
+  L.push('5. Mode\n   '+modeText(a,sd));
+  L.push('6. Spread\n   SS = Σ f x² − (Σ f x)² / N = '+F(a.ss,sd)+'\n   σ² = SS / N = '+F(a.popVar,sd)+(a.sampVar?',  s² = SS / (N − 1) = '+F(a.sampVar,sd):',  s² undefined (N = 1)')+'\n   σ = '+FS(a.popVar,st.dp)+(a.sampVar?',  s = '+FS(a.sampVar,st.dp):'')+'\n   MAD = Σ f |x − x̄| / N = '+F(a.mad,sd))}
+ box.appendChild(el('div','f',L.join('\n\n')))}
+
+function xcheck(a){var g=a.kind==='grouped',L=[];
+ if(a.N>2000n){L.push('Dataset has '+a.N+' observations; the expanded-list comparison runs for N up to 2000 only.')}
+ else{var raw=[];(g?a.table.map(function(r){return{x:r.mid,f:r.f}}):a.table.map(function(r){return{x:r.x,f:r.f}})).forEach(function(p){for(var i=0n;i<p.f;i++)raw.push({raw:'',r:p.x})});
+  try{var d=D.describe(raw,{method:st.q});
+   var same=function(x,y){return R.cmp(x,y)===0};
+   var ok=same(d.mean,a.mean)&&same(d.popVar,a.popVar)&&same(d.mad,a.mad)&&(g||(same(d.median,a.median)&&same(d.q1,a.q1)&&same(d.q3,a.q3)));
+   L.push('Expanded list of '+raw.length+' '+(g?'class midpoints':'values')+' run through Mode 02: '+(ok?'mean, variance, MAD'+(g?'':', median and quartiles')+' all agree exactly.':'MISMATCH — please report.'));
+   if(g)L.push('(Median and quartiles of grouped data are interpolated within classes, so they are not compared with the midpoint list.)')}catch(e){L.push('Cross-check could not run: '+e.message)}}
+ $('xcheck').textContent=L.join('\n')}
+
+function text(a){return ['Elecmetric Frequency & Grouped Data Calculator (Mode 03)','Entry: '+st.kind+'   Spread: '+(st.type==='pop'?'population':'sample')+'   Precision: '+st.dp+' dp'+(a.kind==='grouped'?'   (ESTIMATES from class midpoints)':''),'Data: '+$('data').value.replace(/\s*\n\s*/g,' / '),''].concat(rowsOf(a).map(function(r){return r[0]+' = '+r[1]})).join('\n')}
+function copy(t,btn){var done=function(){var o=btn.textContent;btn.textContent='Copied';setTimeout(function(){btn.textContent=o},1400)};
+ if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(t).then(done,fb);else fb();
+ function fb(){var ta=el('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');done()}catch(e){}document.body.removeChild(ta)}}
+function csv(a){var g=a.kind==='grouped',q=function(s){return '"'+String(s).replace(/"/g,'""')+'"'},dp=st.dp+2,L=['Elecmetric Frequency & Grouped Data Calculator (Mode 03)'+(g?' - ESTIMATES from class midpoints':''),'Statistic,Result,Exact value'];
+ rowsOf(a).forEach(function(r){L.push([q(r[0]),q(r[1]),q(r[2]||'')].join(','))});L.push('',g?'Class lower,Class upper,Midpoint,f,Relative %,Cumulative f,Cumulative %':'Value,f,Relative %,Cumulative f,Cumulative %');
+ a.table.forEach(function(r){L.push((g?[F(r.lo,dp),F(r.hi,dp),F(r.mid,dp)]:[F(r.x,dp)]).concat([String(r.f),F(r.rel,dp),String(r.cum),F(r.cumPct,dp)]).join(','))});
+ var b=new Blob([L.join('\r\n')],{type:'text/csv'}),u=URL.createObjectURL(b),l=document.createElement('a');l.href=u;l.download='frequency-statistics-results.csv';document.body.appendChild(l);l.click();document.body.removeChild(l);setTimeout(function(){URL.revokeObjectURL(u)},1000)}
+
+var H=[];try{H=JSON.parse(localStorage.getItem('em_fq_hist')||'[]')}catch(e){}
+function save(txt){var t=txt.trim();if(!t)return;var rec={k:st.kind,t:t};if(H.length&&H[0].k===rec.k&&H[0].t===rec.t)return;H=[rec].concat(H.filter(function(x){return !(x.k===rec.k&&x.t===rec.t)})).slice(0,10);try{localStorage.setItem('em_fq_hist',JSON.stringify(H))}catch(e){}drawH()}
+function drawH(){var b=$('hist');b.textContent='';if(!H.length){b.appendChild(el('p','note','No calculations yet.'));return}
+ H.forEach(function(r){var x=el('button',null,'['+r.k+'] '+r.t.replace(/\s+/g,' '));x.type='button';x.title=r.t;x.onclick=function(){vals[st.kind]=$('data').value;st.kind=r.k;load();$('data').value=r.t;sync();run();window.scrollTo({top:0,behavior:'smooth'})};b.appendChild(x)})}
+$('clearh').onclick=function(){H=[];try{localStorage.removeItem('em_fq_hist')}catch(e){}drawH()};
+
+var T=[
+ ['values','10:3, 12:2, 15:1','Population SD = 1.802776',function(a){return FS(a.popVar,6)==='1.802776'}],
+ ['raw','10, 10, 10, 12, 12, 15','Tabulates to 3 values; same SD 1.802776',function(a){return a.table.length===3&&FS(a.popVar,6)==='1.802776'}],
+ ['values','10:3, 12:2, 15:1','Mean 23/2, median 11',function(a){return FR(a.mean)==='23/2'&&FR(a.median)==='11'}],
+ ['values','1 5\n2 3\n3 9\n7 1\n10 4','Two-column entry: N = 22, median 3, mode 3',function(a){return a.N===22n&&FR(a.median)==='3'&&FR(a.mode.values[0])==='3'}],
+ ['values','1:1000000, 2:2500000, 5:500000','Large counts: N = 4,000,000, mean 2.125, no list expanded',function(a){return a.N===4000000n&&FR(a.mean)==='17/8'}],
+ ['grouped','0-10 5\n10-20 12\n20-30 8\n30-40 4','Grouped: mean 545/29, median 215/12, Q1 95/8, Q3 415/16',function(a){return FR(a.mean)==='545/29'&&FR(a.median)==='215/12'&&FR(a.q1)==='95/8'&&FR(a.q3)==='415/16'}],
+ ['grouped','0-10 5\n10-20 12\n20-30 8\n30-40 4','Grouped mode estimate 180/11 (≈ 16.36)',function(a){return a.modeEst&&FR(a.modeEst)==='180/11'}],
+ ['grouped','0-5 4\n5-15 10\n15-40 6','Unequal widths: no mode estimate',function(a){return a.modeEst===null}]];
+$('runtests').onclick=function(){var tb=$('tests');tb.textContent='';var t=el('table'),h=el('tr');['Entry','Data','Expectation','Result'].forEach(function(x){h.appendChild(el('th',null,x))});t.appendChild(h);var np=0;
+ T.forEach(function(c){var ok=false;try{var a=c[0]==='grouped'?(function(){var g=Q.parseGrouped(c[1]);return Q.analyseGrouped(g.classes,g.equalWidth)})():Q.analyseValues(c[0]==='raw'?Q.parseRaw(c[1]).points:Q.parseValues(c[1]).points);ok=c[3](a)}catch(e){}if(ok)np++;var r=el('tr');r.appendChild(el('td',null,c[0]));r.appendChild(el('td','n',c[1].replace(/\n/g,' / ')));r.appendChild(el('td',null,c[2]));r.appendChild(el('td',ok?'pass':'failc',ok?'PASS':'FAIL'));t.appendChild(r)});
+ var bad=[['Overlapping classes rejected',function(){return Q.parseGrouped('0-10 5\n5-15 3').errors.length===1}],['Fractional frequency rejected',function(){return Q.parseValues('10:2.5').errors.length===1}],['Negative frequency rejected',function(){return Q.parseValues('10:-1').errors.length===1}]];
+ bad.forEach(function(c){var ok=c[1]();if(ok)np++;var r=el('tr');r.appendChild(el('td',null,'validation'));r.appendChild(el('td','n','—'));r.appendChild(el('td',null,c[0]));r.appendChild(el('td',ok?'pass':'failc',ok?'PASS':'FAIL'));t.appendChild(r)});
+ tb.appendChild(t);tb.appendChild(el('p','note',np+' of '+(T.length+bad.length)+' passed.'))};
+$('data').addEventListener('input',run);load();drawH();sync();run();
+})();
+</script>
+</body></html>

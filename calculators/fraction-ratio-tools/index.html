@@ -1,0 +1,1019 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><style data-crumbs>.crumbs{font-size:13px;color:var(--muted);margin:0 0 10px}.crumbs ol{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:2px 0}.crumbs li+li::before{content:"\203A";margin:0 7px;opacity:.7}.crumbs a{color:inherit}.crumbs [aria-current]{color:var(--ink)}</style><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'"><title>GCD, LCM, LCD, Ratio and Continued Fraction Calculator</title><meta name="description" content="Find the GCD, LCM and LCD, compare fractions, simplify ratios, solve proportions and write continued fractions with convergents, with working."><meta property="og:title" content="GCD, LCM, LCD, Ratio and Continued Fraction Calculator"><meta property="og:description" content="Find the GCD, LCM and LCD, compare fractions, simplify ratios, solve proportions and write continued fractions with convergents, with working."><meta property="og:type" content="website"><meta property="og:site_name" content="Elecmetric"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="GCD, LCM, LCD, Ratio and Continued Fraction Calculator"><meta name="twitter:description" content="Find the GCD, LCM and LCD, compare fractions, simplify ratios, solve proportions and write continued fractions with convergents, with working."><meta name="theme-color" content="#043B79"><link rel="icon" href="../../icon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="../../apple-touch-icon.png"><link rel="manifest" href="../../manifest.webmanifest"><style>#ns .ns-card{padding:16px 16px 18px}#ns .ns-grid{display:grid;gap:12px;grid-template-columns:2fr 1fr 1fr 1fr}#ns .ns-l,#ns label.ns-l{display:block;font-weight:600;font-size:13px;margin:0 0 4px}#ns .ns-in,#ns .ns-sel{display:block;width:100%;box-sizing:border-box;font:500 18px/1.3 var(--mono);padding:10px 12px;min-height:48px;border-radius:8px;border:1px solid var(--line);background:var(--field);color:var(--ink)}#ns .ns-sel{font:500 15px var(--body)}#ns .ns-in:focus,#ns .ns-sel:focus{outline:2px solid var(--gold);outline-offset:1px}#ns .ns-in.bad{border-color:var(--err)}#ns .ns-msg{min-height:1.4em;margin:8px 0 4px;color:var(--err)}#ns .ns-act{display:flex;flex-wrap:wrap;gap:8px;margin:4px 0 10px}#ns .btn2,#ns .chipb{font:600 13px var(--body);color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:8px 12px;min-height:38px;cursor:pointer}#ns .btn2:hover,#ns .chipb:hover{background:var(--field)}#ns .chipb{border-radius:999px;padding:5px 12px;min-height:32px;font-weight:500;margin:3px 4px 3px 0}#ns .btn2:focus-visible,#ns .chipb:focus-visible{outline:2px solid var(--gold);outline-offset:2px}#ns .ns-try{margin:0 0 12px}#ns .ns-t td.r{font:600 17px var(--mono);color:var(--num);word-break:break-all;text-align:left}#ns .ns-t td.r small{display:block;font:500 12px var(--mono);color:var(--muted)}#ns .ns-t tr.cu td{background:var(--gold-fill)}#ns .ns-flag{font:600 11px var(--body);border-radius:999px;padding:1px 8px;margin-left:6px;border:1px solid var(--line);color:var(--muted);vertical-align:middle}#ns .ns-flag.r{color:var(--gold);border-color:var(--gold)}#ns .ns-facts{margin:12px 0 0;display:flex;flex-wrap:wrap;gap:6px 18px;font-size:14px}#ns .ns-facts b{font-family:var(--mono)}#ns ol.steps{font:14px/1.5 var(--mono);padding-left:26px}#ns h3{margin:14px 0 4px}.sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}code{font-family:var(--mono)}[hidden]{display:none!important}@media(max-width:700px){#ns .ns-grid{grid-template-columns:1fr 1fr}#ns .ns-f:first-child{grid-column:1/-1}}#nu .ns-card{padding:16px}#nu .ns-grid,#nu .ns-l,#nu .ns-in,#nu .ns-sel,#nu .ns-msg,#nu .ns-act,#nu .btn2,#nu .chipb,#nu .ns-try,#nu .ns-facts{}#nu .ns-grid{display:grid;gap:12px;grid-template-columns:2fr 1fr 1fr 1fr}#nu .ns-l,#nu label.ns-l{display:block;font-weight:600;font-size:13px;margin:0 0 4px}#nu .ns-in,#nu .ns-sel{display:block;width:100%;box-sizing:border-box;font:500 18px/1.3 var(--mono);padding:10px 12px;min-height:48px;border-radius:8px;border:1px solid var(--line);background:var(--field);color:var(--ink)}#nu .ns-sel{font:500 15px var(--body)}#nu .ns-in:focus,#nu .ns-sel:focus{outline:2px solid var(--gold);outline-offset:1px}#nu .ns-in.bad{border-color:var(--err)}#nu .ns-msg{min-height:1.4em;margin:8px 0 4px;color:var(--err)}#nu .ns-act{display:flex;gap:8px;margin:4px 0 10px}#nu .btn2,#nu .chipb{font:600 13px var(--body);color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:8px 12px;min-height:38px;cursor:pointer}#nu .btn2:hover,#nu .chipb:hover{background:var(--field)}#nu .chipb{border-radius:999px;padding:5px 12px;min-height:32px;font-weight:500;margin:3px 4px 3px 0}#nu .btn2:focus-visible,#nu .chipb:focus-visible{outline:2px solid var(--gold);outline-offset:2px}#nu .ns-try{margin:0 0 12px}#nu td.r{font:600 15px var(--mono);color:var(--num);word-break:break-all}#nu td small{display:block;font:500 12px var(--mono);color:var(--muted)}#nu .btn2{margin-left:8px;padding:2px 8px;min-height:28px}#nu tr.cu td{background:var(--gold-fill)}#nu .ns-flag{font:600 11px var(--body);border-radius:999px;padding:1px 8px;border:1px solid var(--gold);color:var(--gold)}#nu .ns-facts{margin:12px 0 0;display:flex;flex-wrap:wrap;gap:6px 18px;font-size:14px}#nu .ns-facts b{font-family:var(--mono)}#nu ol.steps{font:14px/1.5 var(--mono);padding-left:26px}#nu .bits{display:flex;flex-wrap:wrap;gap:4px;margin:14px 0 4px}#nu .bit{display:flex;flex-direction:column;align-items:center;min-width:40px;padding:4px 2px;border:1px solid var(--line);border-radius:6px;background:var(--field)}#nu .bit.sg{border-color:var(--gold);background:var(--gold-fill)}#nu .bit i{font:11px var(--mono);color:var(--muted);font-style:normal}#nu .bit b{font:700 20px var(--mono);color:var(--num)}#nu .bit em{font:10px var(--mono);color:var(--muted);font-style:normal}@media(max-width:700px){#nu .ns-grid{grid-template-columns:1fr 1fr}#nu .ns-f:first-child{grid-column:1/-1}}#nu .blg{grid-template-columns:2fr 1.4fr 2fr}#nu .blg2{grid-template-columns:1fr 1fr 1fr;margin-top:12px}#nu pre.al{font:600 15px/1.6 var(--mono);background:var(--field);border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin:6px 0 12px;overflow-x:auto;color:var(--num)}#nu .res .big{font:700 28px/1.3 var(--mono);color:var(--num);word-break:break-all}#nu .res .big .btn2{vertical-align:middle}#nu .res .sub{color:var(--muted);margin:2px 0 8px}#nu .res table{max-width:420px}#nu td.r{font:600 15px var(--mono);color:var(--num)}#nu .fls{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}#nu .fl{border:1px solid var(--line);background:var(--field);border-radius:8px;padding:6px 10px;font-size:14px}#nu .fl.on{border-color:var(--gold);background:var(--gold-fill)}#nu .fl small{display:block;color:var(--muted);font-size:12px}#nu h3{margin:14px 0 4px}@media(max-width:700px){#nu .blg,#nu .blg2{grid-template-columns:1fr}}#nu .fpg{grid-template-columns:2fr 1.3fr 1.3fr 1.6fr}#nu .res .big{font:700 28px/1.3 var(--mono);color:var(--num);word-break:break-all}#nu .res .sub{color:var(--muted);margin:2px 0 8px}#nu .ns-t{max-width:640px}#nu td.r{font:600 15px var(--mono);color:var(--num);word-break:break-all}#nu td.r small{display:block;font:500 12px var(--mono);color:var(--muted)}#nu td.r .btn2{margin-left:8px;padding:2px 8px;min-height:28px}#nu .lng{display:block;max-height:7.5em;overflow:auto;font-size:13px}#nu .bg{display:flex;flex-wrap:wrap;gap:3px;margin:10px 0 4px}#nu .gap{width:10px}#nu .bit{min-width:30px;min-height:44px;border-radius:6px;border:1px solid var(--line);background:var(--field);color:var(--ink);cursor:pointer;font:600 15px var(--mono);padding:2px 0;line-height:1.1}#nu .bit small{display:block;font:500 9px var(--mono);color:var(--muted)}#nu .bit.s{border-color:#c0392b}#nu .bit.e{border-color:#2d7dd2}#nu .bit.f{border-color:var(--gold)}#nu .bit.on{background:var(--gold-fill);color:var(--num)}#nu .bit:focus-visible{outline:2px solid var(--gold);outline-offset:2px}#nu .lg{display:flex;gap:12px;font-size:12px;margin:2px 0 10px}#nu .k{border-left:10px solid;padding-left:6px}#nu .k.s{border-color:#c0392b}#nu .k.e{border-color:#2d7dd2}#nu .k.f{border-color:var(--gold)}#nu .fls{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}#nu .fl{border:1px solid var(--line);background:var(--field);border-radius:8px;padding:6px 10px;font-size:14px}#nu .fl.on{border-color:var(--gold);background:var(--gold-fill)}#nu .fl small{display:block;color:var(--muted);font-size:12px}#nu h3{margin:14px 0 4px}#faq p,#tenth td,#nu ol.steps li,#nu .sub{overflow-wrap:anywhere}@media(max-width:700px){#nu .fpg{grid-template-columns:1fr}#nu .bit{min-width:22px;font-size:13px}}#nu .res .big{font:700 28px/1.3 var(--mono);color:var(--num);word-break:break-word;overflow-wrap:anywhere}#nu .res .big.wd{font:600 22px/1.4 var(--body)}#nu .res .sub{color:var(--muted);margin:6px 0;overflow-wrap:anywhere}#nu .nwg{grid-template-columns:1.6fr 1.2fr 1.4fr 1.2fr}#nu .res .btn2{vertical-align:middle;margin-left:8px}#nu td.r{font:600 15px var(--mono);color:var(--num)}#nu ol.steps li{overflow-wrap:anywhere}#nu h3{margin:14px 0 4px}@media(max-width:700px){#nu .nwg{grid-template-columns:1fr}}@media print{header,.fb,#related,#faq,.ns-try,.ns-act,.ns-card,#scales,#examples,footer{display:none!important}#nu .card:first-child{display:block!important}#nu .card:first-child>*{display:none}#nu .card:first-child #nu-out{display:block}}#nu pre.al{font:600 15px/1.6 var(--mono);background:var(--field);border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin:6px 0 12px;overflow-x:auto;color:var(--num)}.fmodes{display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px;margin:0 0 12px}.fmodes .ns-l{margin:0 4px 0 0}.fmodes .chip.on{background:var(--gold-fill);border-color:var(--gold);font-weight:700}#ns .advt{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 12px}#ns .advt .chipb[aria-pressed=true]{background:var(--gold-fill);border-color:var(--gold);font-weight:700}#ns .fse{margin:0 0 8px}#ns ul.fh{list-style:none;margin:0 0 10px;padding:0;display:flex;flex-wrap:wrap;gap:4px}#ns .ns-try{margin:6px 0}#ns .ns-try[hidden],#ns #ns-tot[hidden]{display:none}#ns .res .big{display:flex;align-items:center;gap:12px;flex-wrap:wrap;font:700 30px var(--mono);color:var(--num);word-break:break-all}#ns td.r{font:600 15px var(--mono);word-break:break-all}#ns h3.advh{margin:14px 0 6px;font-size:16px}#ns ol.steps li,#ns .tw td{overflow-wrap:anywhere}#ns .fflag{margin-top:4px;font:400 13px/1.5 var(--body);overflow-wrap:normal;word-break:normal}#ns .fflag .ns-flag{display:inline-block;overflow-wrap:normal;word-break:normal;white-space:normal}#worked ol{padding-left:22px}#worked li{overflow-wrap:anywhere;margin:0 0 6px}@media print{#ns .ns-try,#ns .ns-act,#ns .fmodes,#ns .advt,#ns #ns-hint{display:none}}</style><style>.fb textarea{width:100%;font:15px/1.5 var(--body);padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--field);color:var(--ink);resize:vertical}.fb textarea:focus{outline:2px solid var(--gold);outline-offset:1px}:root{--bg:#F1F6FC;--surface:#fff;--ink:#0A2347;--muted:#4B5F86;--line:#D3DFEF;--navy:#043B79;--on-navy:#FFFFFF;--gold:#B34A00;--gold-fill:#FFEFDC;--field:#F4F8FE;--err:#B3261E;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;--display:"Arial Narrow","Roboto Condensed",system-ui,sans-serif;--body:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--navy-2:#0A5BBB;--cyan:#0062DE;--num:#043B79;--orange:#FF7A00;--gold-grad:linear-gradient(135deg,#FFA43D 0%,#FF7A00 52%,#E85F00 100%);--hero:radial-gradient(1000px 360px at 90% -35%,rgba(0,98,222,.55),transparent 62%),radial-gradient(640px 240px at 0% 110%,rgba(255,122,0,.20),transparent 60%),linear-gradient(135deg,#032A58,#043B79 58%,#0A55A8);--r:14px;--sh-0:0 1px 2px rgba(4,35,80,.06);--sh-1:0 1px 2px rgba(4,35,80,.05),0 6px 18px rgba(4,35,80,.07);--sh-2:0 2px 4px rgba(4,35,80,.05),0 22px 44px -14px rgba(4,35,80,.24);--ring:0 0 0 3px rgba(0,98,222,.26);color-scheme:light dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}@media(prefers-color-scheme:dark){:root{--bg:#04122B;--surface:#0A2046;--ink:#EAF2FF;--muted:#A0B5DA;--line:#183868;--navy:#031B3F;--on-navy:#EAF2FF;--gold:#FF9A3D;--gold-fill:#3D2410;--field:#071B3C;--err:#FF8A80;--navy-2:#0B4A98;--cyan:#4DA3FF;--orange:#FF8A1F;--num:#FFB066;--sh-0:0 1px 2px rgba(0,0,0,.4);--sh-1:0 1px 2px rgba(0,0,0,.35),0 8px 22px rgba(0,0,0,.35);--sh-2:0 2px 4px rgba(0,0,0,.4),0 24px 48px -14px rgba(0,0,0,.7);--ring:0 0 0 3px rgba(77,163,255,.34)}}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 var(--body)}a{color:inherit}header{background:var(--navy);color:var(--on-navy);border-bottom:3px solid var(--gold)}.w{max-width:860px;margin:0 auto;padding:0 max(16px,env(safe-area-inset-left,0px))}header .w{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-block:12px;flex-wrap:wrap}header a{text-decoration:none;font:600 20px var(--display);letter-spacing:.04em;text-transform:uppercase}header nav a{font:500 13px var(--body);text-transform:none;letter-spacing:0;margin-left:14px;opacity:.9}main{padding-block:24px 56px}h1{font:600 32px/1.1 var(--display);margin:0 0 8px;text-wrap:balance}h2{font:600 20px var(--display);letter-spacing:.02em;margin:28px 0 8px;text-transform:uppercase}.lede{color:var(--muted);margin:0 0 16px;max-width:62ch}.card{background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:16px 18px;margin:12px 0}.ans{border-left:4px solid var(--gold);display:flex;flex-wrap:wrap;gap:6px 24px;align-items:baseline;justify-content:space-between}.big{font:600 28px var(--display)}.jump{margin:8px 0 4px}details.more{border:1px solid var(--line);border-radius:12px;background:var(--surface);margin:14px 0;padding:0 16px;box-shadow:var(--sh-0)}details.more>summary{cursor:pointer;list-style:none}details.more>summary::-webkit-details-marker{display:none}details.more>summary h2{margin:14px 0}details.more>summary h2::after{content:"+";margin-left:auto;color:var(--gold)}details.more[open]>summary h2::after{content:"\2212"}details.more[open]{padding-bottom:12px}@media print{.jump{display:none}}.btn{display:inline-block;background:var(--navy);color:var(--on-navy);padding:9px 16px;border-radius:4px;text-decoration:none;font-weight:600;border:1px solid var(--gold)}.chip{display:inline-block;margin:3px 6px 3px 0;padding:5px 12px;border:1px solid var(--line);border-radius:999px;background:var(--surface);text-decoration:none;font-size:14px}.chip:hover{border-color:var(--gold)}main li>a:only-child{display:inline-block;padding:3px 0}code,pre,.f,td.n{font-family:var(--mono)}.f{background:var(--field);border:1px solid var(--line);padding:10px 12px;border-radius:4px;overflow-x:auto;white-space:pre-wrap}ol.steps{padding-left:22px;font-family:var(--mono);font-size:13px}ol.steps li{margin:4px 0}.tw{overflow-x:auto}table{border-collapse:collapse;width:100%;background:var(--surface)}th,td{border:1px solid var(--line);padding:6px 10px;text-align:left}td.n{text-align:right}tr.me td{background:var(--gold-fill)}th{background:var(--field);font-weight:600}.note{color:var(--muted);font-size:13px}ul{padding-left:20px}footer{border-top:1px solid var(--line);color:var(--muted);font-size:13px;padding-block:16px}h3{font:600 16px var(--body);margin:18px 0 4px}h3+p{margin:0;max-width:68ch}.tres .tact{flex:0 0 100%;display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}@media print{.tact{display:none}}.tres .phasor{flex:0 0 100%;margin-top:12px}.phasor svg{display:block;width:100%;max-width:360px;height:auto;font:11px var(--body)}.arow{grid-column:1/-1;border:1px solid var(--line);border-radius:10px;padding:10px 12px 12px;margin:0}.arow[hidden]{display:none}.arow legend{font-weight:700;font-size:13px;padding:0 6px}.arow .tgrid{margin-top:2px}.arow-bar{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:8px;align-items:center}.arow-bar .note{margin:0}.arow .rm{margin-top:10px}.mgrid{margin-top:10px}.mgrid .mbody[hidden]{display:none}.mgrid .tgrid{margin-top:8px}.mgrid .fillm{margin-top:10px}.tres .rchart{flex:0 0 100%;margin-top:12px}.rchart svg{display:block;width:100%;height:auto;font:12px var(--body)}.rchart h3{margin:0 0 6px;font-size:14px}.tres .carry{flex:0 0 100%;margin-top:10px}.carry .chip{display:inline-block;margin:4px 6px 0 0}.arow .rm[hidden],#add-row[hidden]{display:none}@media print{.arow-bar,.arow .rm{display:none}}.tgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px 16px}.tgrid label{display:block;font-weight:600;font-size:13px;margin-bottom:4px}.trow{display:flex;gap:6px}.trow input,.trow select,.tgrid>div>select{font:16px var(--body);color:var(--ink);background:var(--field);border:1px solid var(--line);border-radius:4px;padding:8px;min-height:40px}.trow input{flex:1;min-width:0}.tgrid>div>select{width:100%}.hint{color:var(--muted);font-size:12px;margin-top:3px}.err{color:var(--err)}.tres{display:flex;flex-wrap:wrap;gap:6px 28px;align-items:baseline}.tres .big small{display:block;font:500 13px var(--body);color:var(--muted)}::selection{background:color-mix(in srgb,var(--gold) 30%,transparent)}body{background-image:radial-gradient(900px 520px at 100% -8%,color-mix(in srgb,var(--cyan) 10%,transparent),transparent 62%),radial-gradient(700px 420px at -5% 0%,color-mix(in srgb,var(--gold) 8%,transparent),transparent 60%);background-attachment:fixed;-webkit-font-smoothing:antialiased}header{position:relative;overflow:hidden;background:var(--hero);border-bottom:0;box-shadow:0 10px 30px -14px rgba(5,14,34,.6)}header::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);background-size:34px 34px;-webkit-mask-image:linear-gradient(100deg,#000,transparent 70%);mask-image:linear-gradient(100deg,#000,transparent 70%);pointer-events:none}header::after{content:"";position:absolute;left:0;right:0;bottom:0;height:18px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44 14'%3E%3Cpath d='M0 12.5H8L14 2l7 10.5 5-6 4 6H44' fill='none' stroke='%23FF7A00' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat right 36px bottom 3px/44px 14px,linear-gradient(90deg,#FF7A00,#FFA43D 55%,#FF7A00) no-repeat bottom/100% 4px;pointer-events:none}header .w{position:relative;z-index:1;padding-block:16px 22px}header .w>a.brand{display:block;line-height:0;letter-spacing:0;text-transform:none;background:#fff;border-radius:12px;padding:6px 14px;box-shadow:0 2px 12px rgba(2,16,42,.4),0 0 0 1px rgba(255,255,255,.5)}header .w>a.brand img{display:block;height:48px;width:auto}@media(max-width:600px){header .w>a.brand img{height:42px}}header a:focus-visible{outline-color:#FFB066}header nav a{color:#DCE5F5;opacity:1;padding:6px 12px;border-radius:999px;margin-left:6px;transition:background .15s,color .15s}header nav a:hover{background:rgba(255,255,255,.12);color:#FFB066}main.w{padding-top:36px;padding-bottom:64px}h1{font-size:36px;letter-spacing:.005em}h1::after{content:"";display:block;width:56px;height:3px;border-radius:3px;background:var(--gold-grad);margin-top:12px}h2{display:flex;align-items:center;gap:10px}h2::before{content:"";width:4px;height:.95em;border-radius:2px;background:var(--gold-grad);flex:none}h3{color:var(--gold)}.card{border-radius:14px;box-shadow:var(--sh-1)}.ans{position:relative;overflow:hidden;border-left:1px solid var(--line);padding-left:24px;background:linear-gradient(135deg,color-mix(in srgb,var(--gold) 12%,var(--surface)),var(--surface) 65%);border-color:color-mix(in srgb,var(--gold) 40%,var(--line));box-shadow:var(--sh-2)}.ans::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--gold-grad)}.big{color:var(--num);font-weight:700}.btn{border-radius:10px;border:0;background:var(--gold-grad);color:#0A2347;font-weight:700;box-shadow:var(--sh-1);transition:transform .15s,box-shadow .15s,filter .15s}.btn:hover{transform:translateY(-1px);box-shadow:var(--sh-2);filter:brightness(1.06)}.chip{box-shadow:var(--sh-0);transition:border-color .15s,background .15s,transform .15s,box-shadow .15s}.chip:hover{transform:translateY(-1px);box-shadow:var(--sh-1);border-color:var(--orange);background:color-mix(in srgb,var(--orange) 8%,var(--surface))}.f{border-radius:12px;border-left:3px solid var(--cyan)}.tw{border:1px solid var(--line);border-radius:12px;box-shadow:var(--sh-0)}.tw table{border:0}table{border-collapse:separate;border-spacing:0}th,td{border:0;border-bottom:1px solid var(--line)}tr:last-child td{border-bottom:0}th{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);background:var(--field)}tbody tr:hover td{background:color-mix(in srgb,var(--cyan) 7%,transparent)}tr.me td{background:var(--gold-fill)}.trow input,.trow select,.tgrid>div>select{border-radius:10px;transition:border-color .15s,box-shadow .15s}.trow select{background-color:color-mix(in srgb,var(--navy) 5%,var(--field))}.trow input:focus,.trow select:focus,.tgrid>div>select:focus{outline:0;border-color:var(--cyan);box-shadow:var(--ring)}.tgrid label{color:var(--ink)}a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--cyan);outline-offset:2px}footer{padding-block:20px}footer.mf{margin-top:24px;padding:0;border-top:0;background:var(--hero);color:#DCE5F5;font-size:13px;position:relative}footer.mf::before{content:"";display:block;height:4px;background:linear-gradient(90deg,#FF7A00,#FFA43D 55%,#FF7A00)}.mf-w{max-width:1100px;margin:0 auto;padding:36px max(16px,env(safe-area-inset-left,0px)) calc(24px + env(safe-area-inset-bottom,0px))}.mf-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:28px 24px}.mf-h{display:block;margin:0 0 12px;padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,.18);font:600 14px var(--display);letter-spacing:.06em;text-transform:uppercase;color:#FFB066}.mf-col ul{list-style:none;margin:0;padding:0}.mf-col li{margin:0}.mf-col a{display:inline-block;padding:4px 0;color:#DCE5F5;text-decoration:none}.mf-h a{padding:0;color:inherit}.mf-col a:hover,.mf-legal a:hover{color:#FFB066;text-decoration:underline}.mf a:focus-visible{outline:2px solid #FFB066;outline-offset:2px;border-radius:2px}.mf-legal{margin-top:28px;padding-top:18px;border-top:1px solid rgba(255,255,255,.18);color:#A9BADB;max-width:80ch}.mf-legal a{color:#DCE5F5}@media(max-width:980px){.mf-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(max-width:600px){.mf-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.mf-col a{padding:7px 0}}@media print{footer.mf{background:none;color:inherit}footer.mf::before,.mf-grid{display:none}.mf-legal{border:0;color:inherit}}@media(prefers-reduced-motion:reduce){.btn,.chip{transition:none;transform:none!important}}@media print{header{background:none;box-shadow:none}header::before,header::after,.ans::before,h1::after,h2::before{display:none}header .w>a.brand{box-shadow:none;padding:0}body{background-image:none}.card,.ans,.tw{box-shadow:none}.ans{padding-left:18px}}.totop{position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:60;min-height:44px;padding:0 18px;border:0;border-radius:999px;background:linear-gradient(135deg,#FFA43D,#FF7A00 52%,#E85F00);color:#0A2347;font:700 14px system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;box-shadow:0 2px 4px rgba(4,35,80,.2),0 14px 30px -8px rgba(4,35,80,.45);cursor:pointer;opacity:0;transform:translateY(12px);pointer-events:none;transition:opacity .2s,transform .2s,bottom .2s}.totop.on{opacity:1;transform:none;pointer-events:auto}.totop:hover{filter:brightness(1.06)}.totop:focus-visible{outline:2px solid #fff;outline-offset:2px;box-shadow:0 0 0 4px #0062DE}@media(prefers-reduced-motion:reduce){.totop{transition:none}}@media print{.totop{display:none}}.vstat{padding:12px 16px;border-left:4px solid var(--muted,#6b7a90)}.vstat.v-verified{border-left-color:#1f9d57}.vstat.v-reference{border-left-color:#2a7fd4}.vstat.v-indicative{border-left-color:#c98a10}</style><style id="rp-css">#rp-card .rp-form{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px 12px;margin:0 0 8px}#rp-card textarea.ns-in{width:100%;box-sizing:border-box;font:inherit}.rp-sheet{font-size:14px;line-height:1.45}.rp-prev{border:1px solid var(--line,#ccc);border-radius:8px;padding:14px;margin-top:10px;background:#fff;color:#111}.rp-sheet h2,.rp-sheet h3,.rp-sheet h4,.rp-sheet p{color:#111}.rp-sheet h3{font-size:15px;margin:14px 0 4px;border-bottom:1px solid #1B3A6B;padding-bottom:2px}.rp-sheet h4{font-size:13px;margin:10px 0 4px}.rp-h{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;border-bottom:3px solid #C9A84C;padding-bottom:8px;margin-bottom:8px}.rp-brand{font-weight:800;letter-spacing:.12em;color:#1B3A6B}.rp-t h2{margin:0;font-size:20px}.rp-t p{margin:2px 0 0}.rp-id{text-align:right;font-size:12px}.rp-sheet table{width:100%;border-collapse:collapse;margin:4px 0}.rp-sheet th,.rp-sheet td{border:1px solid #bbb;padding:4px 7px;text-align:left;vertical-align:top;color:#111;background:#fff;font-size:13px;overflow-wrap:anywhere}.rp-sheet th{background:#eef1f7;width:22%}.rp-t2 th{width:auto}.rp-res{font-size:20px;font-weight:700;margin:4px 0;overflow-wrap:anywhere}.rp-steps{padding-left:20px;margin:4px 0}.rp-steps li{margin:3px 0;overflow-wrap:anywhere}.rp-lim,.rp-notes{font-size:12px}.rp-f{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;border-top:1px solid #bbb;margin-top:14px;padding-top:6px;font-size:11px;color:#444}#rp-sheet{display:none}@media print{body.rp-printing>*:not(#rp-sheet){display:none!important}body.rp-printing #rp-sheet{display:block!important;padding:0;margin:0}.rp-sheet th{-webkit-print-color-adjust:exact;print-color-adjust:exact}.rp-h{-webkit-print-color-adjust:exact;print-color-adjust:exact}}</style><style id="em-ux1">.ns-f:has(>.mseg){grid-column:1/-1}main.w{max-width:1080px}.ns-card .mseg{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 4px}.ns-card .mseg button{flex:1 1 150px;font:600 14px var(--body);color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px;min-height:46px;cursor:pointer;text-align:center;transition:background .15s,border-color .15s}.ns-card .mseg button:hover{border-color:var(--orange);background:var(--field)}.ns-card .mseg button[aria-checked="true"]{background:var(--navy);color:var(--on-navy);border-color:var(--navy);box-shadow:inset 0 -3px 0 var(--orange)}.ns-card .mseg button:focus-visible,.ns-try .try-tabs button:focus-visible{outline:2px solid var(--cyan);outline-offset:2px}.ns-card .ns-try:not([role]){margin:14px 0 0;padding-top:12px;border-top:1px solid var(--line)}.ns-try .try-h{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;margin-bottom:6px}.ns-try .try-h .ns-l{margin:0}.ns-try .try-tabs{display:flex;flex-wrap:wrap;gap:6px}.ns-try .try-tabs button{font:600 12px var(--body);color:var(--muted);background:transparent;border:0;border-bottom:2px solid transparent;padding:6px 8px;cursor:pointer}.ns-try .try-tabs button[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--orange)}.ns-try .chipb[hidden]{display:none}@media(max-width:700px){.ns-card .mseg button{flex:1 1 calc(50% - 8px)}}</style></head><body><header><div class="w"><a class="brand" href="../../"><img src="../../logo.png" alt="Elecmetric" width="160" height="40"></a><nav><a href="../">All engineering calculators</a><a href="../../pages/index.html">Conversions</a><a href="../../index.html#verification">How it is verified</a></nav></div></header><main class="w"><nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="../../">Home</a></li><li><a href="../../categories/mathematics/">Mathematics</a></li><li><a href="../../categories/mathematics/#fractions-and-decimals">Fractions and Decimals</a></li><li><span aria-current="page">Advanced Fraction &amp; Ratio Tools</span></li></ol></nav><h1>Advanced Fraction & Ratio Tools</h1><p class="lede">Six exact tools in one place: greatest common divisor and least common multiple, least common denominator, fraction comparison, ratio simplification, proportion solving and continued fractions. Fractions, mixed numbers and decimals all work, the numbers can be very long, and every answer comes with its working. Calculate. Convert. Understand.</p><nav class="jump" aria-label="On this page"><a class="chip" href="#worked">Worked example</a><a class="chip" href="#methods">How each tool works</a><a class="chip" href="#examples">Worked results</a><a class="chip" href="#formats">What you can type</a><a class="chip" href="#faq">FAQ</a><a class="chip" href="#related">Related</a><a class="chip" href="#rp-card">Calculation report</a></nav><div id="ns"><nav class="fmodes" aria-label="Fraction Calculator modes"><span class="ns-l">Fraction Calculator</span><a class="chip" href="../fraction-arithmetic/">Mode 01 · Fraction Arithmetic</a><a class="chip" href="../fraction-simplifier/">Mode 02 · Fraction Simplifier</a><a class="chip" href="../decimal-fraction-converter/">Mode 03 · Decimal & Fraction Converter</a><a class="chip" href="../mixed-number-calculator/">Mode 04 · Mixed Number Calculator</a><a class="chip on" href="../fraction-ratio-tools/" aria-current="page">Mode 05 · Advanced Fraction & Ratio Tools</a><a class="chip" href="../fractional-inch-converter/">Mode 06 · Fractional Inch to mm</a></nav><section class="card ns-card"><div class="advt" role="group" aria-label="Tool"><button type="button" class="chipb" data-tool="gcdlcm" aria-pressed="true">GCD & LCM</button><button type="button" class="chipb" data-tool="lcd" aria-pressed="false">LCD</button><button type="button" class="chipb" data-tool="compare" aria-pressed="false">Compare</button><button type="button" class="chipb" data-tool="ratio" aria-pressed="false">Ratio</button><button type="button" class="chipb" data-tool="proportion" aria-pressed="false">Proportion</button><button type="button" class="chipb" data-tool="continued" aria-pressed="false">Continued fraction</button></div><div class="ns-f fse"><label for="ns-e" class="ns-l" id="ns-lab">Whole numbers, separated by commas or spaces</label><input id="ns-e" class="ns-in" type="text" inputmode="text" autocomplete="off" autocorrect="off" spellcheck="false" aria-describedby="ns-err ns-hint" value="48, 18, 30" placeholder="e.g. 48, 18, 30"></div><div class="ns-f fse" id="ns-tot" hidden><label for="ns-t" class="ns-l">Optional: a total to share in this ratio</label><input id="ns-t" class="ns-in" type="text" inputmode="text" autocomplete="off" spellcheck="false" aria-describedby="ns-err" value="" placeholder="e.g. 240"></div><p class="note" id="ns-hint"></p><p class="note ns-msg" id="ns-err" role="status"></p><div class="ns-act"><button type="button" class="btn2" data-act="reset">Reset</button></div><div id="ns-out" aria-live="polite"></div><p class="sr-only" id="ns-note" role="status" aria-live="polite"></p><div class="ns-try" data-tool="gcdlcm"><span class="ns-l">Try</span> <button type="button" class="chipb" data-ex="{&quot;v&quot;:&quot;48, 18, 30&quot;,&quot;tot&quot;:&quot;&quot;}">48, 18, 30</button><button type="button" class="chipb" data-ex="{&quot;v&quot;:&quot;12, 18&quot;,&quot;tot&quot;:&quot;&quot;}">12, 18</button><button type="button" class="chipb" data-ex="{&quot;v&quot;:&quot;84, 126&quot;,&quot;tot&quot;:&quot;&quot;}">84, 126</button><button type="button" class="chipb" data-ex="{&quot;v&quot;:&quot;17, 31&quot;,&quot;tot&quot;:&quot;&quot;}">17, 31</button><button type="button" class="chipb" data-ex="{&quot;v&quot;:&quot;360, 600, 900&quot;,&quot;tot&quot;:&quot;&quot;}">360, 600, 900</button></div><div class="ns-try" data-tool="lcd" hidden><span class="ns-l">Try</span> <button type="button" class="chipb" data-ex="{&quot;v&quot;:&quot;1/6, 3/4, 5/9&quot;,&quot;tot&quot;:&quot;&quot;}">1/6, 3/4, 5/9</button><button type="button" class="chipb" data-ex="{&quot;v&quot;:&quot;1/2, 1/3&quot;,&quot;tot&quot;:&quot;&quot;}">1/2, 1/3</button><button type="button" class="chipb" data-ex="{&quot;v&quot;:&quot;2/4, 1/3&quot;,&quot;tot&quot;:&quot;&quot;}">2/4, 1/3</button><button type="button" class="chipb" data-ex="{&quot;v&quot;:&quot;1 1/3, 0.25, 5/6&quot;,&quot;tot&quot;:&quot;&quot;}">1 1/3, 0.25, 5/6</button></div><div class="ns-try" data-tool="compare" hidden><span class="ns-l">Try</span> <button type="button" class="chipb" data-ex="{&quot;v&quot;:&quot;3/4, 5/7&quot;,&quot;tot&quot;:&quot;&quot;}">3/4, 5/7</button><button type="button" class="chipb" data-ex="{&quot;v&quot;:&quot;1/3, 3/8, 0.4, 2/6&quot;,&quot;tot&quot;:&quot;&quot;}">1/3, 3/8, 0.4, 2/6</button><button type="button" class="chipb" data-ex="{&quot;v&quot;:&quot;5/8, 11/16, 9/16&quot;,&quot;tot&quot;:&quot;&quot;}">5/8, 11/16, 9/16</button><button type="button" class="chipb" data-ex="{&quot;v&quot;:&quot;-1/2, -1/3&quot;,&quot;tot&quot;:&quot;&quot;}">−1/2, −1/3</button></div><div class="ns-try" data-tool="ratio" hidden><span class="ns-l">Try</span> <button type="button" class="chipb" data-ex="{&quot;v&quot;:&quot;18 : 24&quot;,&quot;tot&quot;:&quot;&quot;}">18 : 24</button><button type="button" class="chipb" data-ex="{&quot;v&quot;:&quot;240 : 12&quot;,&quot;tot&quot;:&quot;&quot;}">240 : 12</button><button type="button" class="chipb" data-ex="{&quot;v&quot;:&quot;1/2 : 3/4 : 1 1/2&quot;,&quot;tot&quot;:&quot;&quot;}">1/2 : 3/4 : 1 1/2</button><button type="button" class="chipb" data-ex="{&quot;v&quot;:&quot;3 : 5&quot;,&quot;tot&quot;:&quot;240&quot;}">3 : 5 (share 240)</button><button type="button" class="chipb" data-ex="{&quot;v&quot;:&quot;0.5 : 0.25 : 0.75&quot;,&quot;tot&quot;:&quot;&quot;}">0.5 : 0.25 : 0.75</button></div><div class="ns-try" data-tool="proportion" hidden><span class="ns-l">Try</span> <button type="button" class="chipb" data-ex="{&quot;v&quot;:&quot;3 : 4 = 9 : x&quot;,&quot;tot&quot;:&quot;&quot;}">3 : 4 = 9 : x</button><button type="button" class="chipb" data-ex="{&quot;v&quot;:&quot;x : 5 = 2 : 3&quot;,&quot;tot&quot;:&quot;&quot;}">x : 5 = 2 : 3</button><button type="button" class="chipb" data-ex="{&quot;v&quot;:&quot;1/2 : 3 = 1 : x&quot;,&quot;tot&quot;:&quot;&quot;}">1/2 : 3 = 1 : x</button><button type="button" class="chipb" data-ex="{&quot;v&quot;:&quot;2 : x = 3 : 9&quot;,&quot;tot&quot;:&quot;&quot;}">2 : x = 3 : 9</button></div><div class="ns-try" data-tool="continued" hidden><span class="ns-l">Try</span> <button type="button" class="chipb" data-ex="{&quot;v&quot;:&quot;355/113&quot;,&quot;tot&quot;:&quot;&quot;}">355/113</button><button type="button" class="chipb" data-ex="{&quot;v&quot;:&quot;3.14159&quot;,&quot;tot&quot;:&quot;&quot;}">3.14159</button><button type="button" class="chipb" data-ex="{&quot;v&quot;:&quot;-415/93&quot;,&quot;tot&quot;:&quot;&quot;}">−415/93</button><button type="button" class="chipb" data-ex="{&quot;v&quot;:&quot;[3; 7, 15, 1]&quot;,&quot;tot&quot;:&quot;&quot;}">[3; 7, 15, 1]</button><button type="button" class="chipb" data-ex="{&quot;v&quot;:&quot;[2; 1, 2, 1, 1, 4, 1, 1, 6]&quot;,&quot;tot&quot;:&quot;&quot;}">[2; 1, 2, 1, 1, 4, 1, 1, 6]</button></div><noscript><p class="note">This tool needs JavaScript. Nothing is sent anywhere.</p></noscript></section><section class="card"><h2>Working</h2><div id="ns-steps"></div></section><section class="card"><h2>History</h2><div id="ns-hist"></div></section></div><section id="worked"><h2>Worked example: GCD and LCM of 48 and 18</h2><ol><li>Euclidean algorithm for gcd(48, 18): 48 = 2 × 18 + 12; 18 = 1 × 12 + 6; 12 = 2 × 6 + 0. The last non-zero remainder is 6, so gcd(48, 18) = 6.</li><li>lcm(48, 18) = 48 ÷ gcd(48, 18) × 18 = 48 ÷ 6 × 18 = 144.</li><li>Check: GCD × LCM = 6 × 144 = 864 and 48 × 18 = 864. For two numbers the two always agree.</li><li>Every number is divisible by 6, and 6 is the largest such number.</li><li>Prime factors: the GCD takes the lowest power of each prime that all the numbers share (2 × 3 = 6) and the LCM takes the highest power of every prime that appears (2^4 × 3^2 = 144).</li></ol><p>The GCD is 6 and the LCM is 144. With a third number the tool carries on one number at a time: for 48, 18 and 30 the GCD is 6 and the LCM is 720.</p><h3>Worked example: least common denominator of 1/6, 3/4 and 5/9</h3><ol><li>Every fraction is already in lowest terms.</li><li>The denominators are 6, 4, 9.</li><li>The least common denominator is the least common multiple of the denominators: lcm(6, 4) = 12; lcm(12, 9) = 36. So the LCD is 36.</li><li>1/6: 36 ÷ 6 = 6, so multiply the top and the bottom by 6: 1 × 6 = 6 and 6 × 6 = 36, giving 6/36.</li><li>3/4: 36 ÷ 4 = 9, so multiply the top and the bottom by 9: 3 × 9 = 27 and 4 × 9 = 36, giving 27/36.</li><li>5/9: 36 ÷ 9 = 4, so multiply the top and the bottom by 4: 5 × 4 = 20 and 9 × 4 = 36, giving 20/36.</li></ol><h3>Worked example: which is larger, 3/4 or 5/7?</h3><ol><li>Cross-multiplication: compare 3/4 and 5/7 by multiplying each numerator by the other denominator (both denominators are positive). 3 × 7 = 21 and 5 × 4 = 20.</li><li>21 is greater than 20, so 3/4 &gt; 5/7.</li><li>Over the common denominator 28 the values are 21/28, 20/28. With the same denominator, the larger numerator is the larger fraction.</li><li>In order from smallest to largest: 3/4 &gt; 5/7.</li><li>The difference between the largest (3/4) and the smallest (5/7) is 1/28, or 1/28 as a mixed number.</li></ol><h3>Worked example: putting 1/3, 3/8, 0.4 and 2/6 in order</h3><ol><li>Write every value as a fraction in lowest terms: 0.4 = 2/5; 2/6 = 1/3.</li><li>Over the common denominator 120 the values are 40/120, 45/120, 48/120, 40/120. With the same denominator, the larger numerator is the larger fraction.</li><li>In order from smallest to largest: 1/3 = 2/6 &lt; 3/8 &lt; 0.4.</li><li>The difference between the largest (2/5) and the smallest (1/3) is 1/15, or 1/15 as a mixed number.</li></ol><h3>Worked example: simplifying the ratio 18 : 24</h3><ol><li>The ratio is 18 : 24.</li><li>Every term is already a whole number.</li><li>Divide every term by the greatest common divisor of 18, 24, which is 6: 3 : 4.</li><li>The parts add up to 3 + 4 = 7, so each term is a share of the whole: 3/7, 4/7.</li></ol><h3>Worked example: sharing 240 in the ratio 3 : 5</h3><ol><li>The ratio is 3 : 5.</li><li>Every term is already a whole number.</li><li>Divide every term by the greatest common divisor of 3, 5, which is 1. The ratio is already in lowest terms: 3 : 5.</li><li>The parts add up to 3 + 5 = 8, so each term is a share of the whole: 3/8, 5/8.</li><li>Share 240 in this ratio: each term gets (term ÷ 8) × 240. 3/8 × 240 = 90; 5/8 × 240 = 150. The shares add up to 240.</li></ol><h3>Worked example: solving 3 : 4 = 9 : x</h3><ol><li>The proportion is 3 : 4 = 9 : x, which means 3/4 = 9/x. Name the terms a : b = c : d.</li><li>Cross-multiplication: a × d = b × c.</li><li>Substitute: 3 × x = 4 × 9. Solve for the unknown (term d): x = (b × c) ÷ a.</li><li>x = (4 × 9) ÷ 3 = 36 ÷ 3 = 12.</li><li>Check: a × d = 36 and b × c = 36, which are equal. The left side simplifies to 3 : 4 and the right side to 3 : 4.</li></ol><h3>Worked example: the continued fraction of 355/113</h3><ol><li>Write 355/113. A continued fraction comes from the Euclidean algorithm: take the whole part, then invert what is left over and repeat until nothing is left.</li><li>Divide: 355 ÷ 113 = 3 remainder 16; 113 ÷ 16 = 7 remainder 1; 16 ÷ 1 = 16, no remainder.</li><li>The quotients are the terms: [3; 7, 16].</li><li>Convergents are the fractions got by stopping after each term. They follow h(k) = a(k) × h(k−1) + h(k−2) and the same rule for the denominators, starting from 1/0 and 0/1. after term 0: 3; after term 1: 22/7; after term 2: 355/113.</li><li>The convergents are the best rational approximations: no fraction with a smaller denominator gets closer in the sense of the smallest |denominator × number − numerator|. They alternate below and above the number. The last one, 355/113, is the number itself.</li></ol><p>Going the other way, [3; 7, 15, 1] is not the standard form, and its value is 355/113. The standard form is [3; 7, 16].</p><h3>Worked example: a negative number, −415/93</h3><ol><li>Write −415/93. A continued fraction comes from the Euclidean algorithm: take the whole part, then invert what is left over and repeat until nothing is left.</li><li>For a negative number the whole part is rounded down (towards −∞), so the remainder is always positive and every later term is positive.</li><li>Divide: −415 ÷ 93 = −5 remainder 50; 93 ÷ 50 = 1 remainder 43; 50 ÷ 43 = 1 remainder 7; 43 ÷ 7 = 6 remainder 1; 7 ÷ 1 = 7, no remainder.</li><li>The quotients are the terms: [−5; 1, 1, 6, 7].</li><li>Convergents are the fractions got by stopping after each term. They follow h(k) = a(k) × h(k−1) + h(k−2) and the same rule for the denominators, starting from 1/0 and 0/1. after term 0: −5; after term 1: −4; after term 2: −9/2; after term 3: −58/13; after term 4: −415/93.</li><li>The convergents are the best rational approximations: no fraction with a smaller denominator gets closer in the sense of the smallest |denominator × number − numerator|. They alternate below and above the number. The last one, −415/93, is the number itself.</li></ol></section><section id="methods"><h2>How each tool works</h2><div class="tw" tabindex="0" role="region" aria-label="Scrollable table: Tool, What it finds, Method"><table><thead><tr><th>Tool</th><th>What it finds</th><th>Method</th></tr></thead><tbody><tr><td>GCD</td><td>The largest whole number that divides every number in the list</td><td>Euclidean algorithm: divide, keep the remainder, repeat. gcd(48, 18): 48 = 2 × 18 + 12, 18 = 1 × 12 + 6, 12 = 2 × 6 + 0, so 6</td></tr><tr><td>LCM</td><td>The smallest positive number that every number in the list divides</td><td>lcm(a, b) = a ÷ gcd(a, b) × b, applied to one number at a time. lcm(48, 18) = 48 ÷ 6 × 18 = 144</td></tr><tr><td>LCD</td><td>The smallest denominator that every fraction can be rewritten over</td><td>Reduce each fraction, then take the LCM of the denominators. Multiply the top and the bottom of each fraction by LCD ÷ its denominator</td></tr><tr><td>Comparison</td><td>Which fraction is larger, and the order of a list</td><td>For two fractions, cross-multiply (a/b against c/d is a × d against b × c). For a list, rewrite over the LCD and compare numerators</td></tr><tr><td>Ratio</td><td>A ratio in lowest terms, as whole numbers</td><td>Multiply every term by the LCM of the denominators to clear fractions, then divide every term by their GCD</td></tr><tr><td>Proportion</td><td>The missing term x in a : b = c : d</td><td>Cross-multiplication: a × d = b × c, then solve for x</td></tr></tbody></table></div><p class="note">All arithmetic uses whole numbers of any length and never floating point, so a result is exact however large the numbers are. Prime factors are shown only when every number has at most 15 digits.</p></section><section id="examples"><h2>Worked results</h2><div class="tw" tabindex="0" role="region" aria-label="Scrollable table: Tool, Input, Result"><table><thead><tr><th>Tool</th><th>Input</th><th>Result</th></tr></thead><tbody><tr><td>GCD and LCM</td><td>48, 18</td><td>GCD = 6 · LCM = 144</td></tr><tr><td>GCD and LCM</td><td>84, 126</td><td>GCD = 42 · LCM = 252</td></tr><tr><td>GCD and LCM</td><td>17, 31</td><td>GCD = 1 · LCM = 527</td></tr><tr><td>GCD and LCM</td><td>360, 600, 900</td><td>GCD = 60 · LCM = 1800</td></tr><tr><td>LCD</td><td>1/2, 1/3</td><td>LCD = 6</td></tr><tr><td>LCD</td><td>2/4, 1/3</td><td>LCD = 6</td></tr><tr><td>LCD</td><td>1/6, 3/4, 5/9</td><td>LCD = 36</td></tr><tr><td>Comparison</td><td>3/4, 5/7</td><td>3/4 &gt; 5/7</td></tr><tr><td>Comparison</td><td>5/8, 11/16, 9/16</td><td>9/16 &lt; 5/8 &lt; 11/16</td></tr><tr><td>Ratio</td><td>18 : 24</td><td>3 : 4</td></tr><tr><td>Ratio</td><td>240 : 12</td><td>20 : 1</td></tr><tr><td>Ratio</td><td>1/2 : 3/4 : 1 1/2</td><td>2 : 3 : 6</td></tr><tr><td>Proportion</td><td>3 : 4 = 9 : x</td><td>x = 12</td></tr><tr><td>Proportion</td><td>x : 5 = 2 : 3</td><td>x = 10/3</td></tr><tr><td>Continued fraction</td><td>355/113</td><td>[3; 7, 16] = 355/113</td></tr><tr><td>Continued fraction</td><td>3.14159</td><td>[3; 7, 15, 1, 25, 1, 7, 4] = 314159/100000</td></tr><tr><td>Continued fraction</td><td>[3; 7, 15, 1]</td><td>[3; 7, 16] = 355/113</td></tr></tbody></table></div></section><section id="engineering"><h2>Ratios and fractions in engineering work</h2><div class="tw" tabindex="0" role="region" aria-label="Scrollable table: Engineering use, Input, Result"><table><thead><tr><th>Engineering use</th><th>Input</th><th>Result</th></tr></thead><tbody><tr><td>Transformer turns ratio, 240 V to 12 V</td><td>240 : 12</td><td>20 : 1</td></tr><tr><td>Supply 11000 V to 415 V</td><td>11000 : 415</td><td>2200 : 83</td></tr><tr><td>Which drill is larger, 5/8 in or 11/16 in</td><td>5/8, 11/16</td><td>5/8 &lt; 11/16</td></tr><tr><td>Voltage across a divider leg: 2 : 3 sharing 100 V</td><td>2 : 3 (total 100)</td><td>40 V and 60 V</td></tr><tr><td>Scale a drawing: 1 : 50 = 3.5 : x</td><td>1 : 50 = 3.5 : x</td><td>x = 175</td></tr><tr><td>Common denominator for 3/16, 5/8 and 7/32 in</td><td>3/16, 5/8, 7/32</td><td>LCD 32</td></tr></tbody></table></div><p class="note">These are pure number results. A real turns ratio, scale or drill size also needs its units, tolerances and measurement precision, which fraction arithmetic does not supply.</p></section><section id="formats"><h2>What you can type</h2><div class="tw" tabindex="0" role="region" aria-label="Scrollable table: You type, Tool, It is read as"><table><thead><tr><th>You type</th><th>Tool</th><th>It is read as</th></tr></thead><tbody><tr><td>48, 18, 30  or  48 18 30  or  48; 18; 30</td><td>GCD &amp; LCM</td><td>three whole numbers</td></tr><tr><td>1/6, 3/4, 5/9</td><td>LCD, Compare</td><td>a list of fractions, separated by commas</td></tr><tr><td>1 1/3, 0.25, 50%</td><td>LCD, Compare, Ratio</td><td>a mixed number, a decimal and a percentage: each is read exactly (0.25 is 1/4)</td></tr><tr><td>0.(3)</td><td>LCD, Compare, Ratio</td><td>a repeating decimal, read exactly as 1/3</td></tr><tr><td>18 : 24  or  18 to 24</td><td>Ratio</td><td>a ratio of two terms</td></tr><tr><td>3 : 5 : 7</td><td>Ratio</td><td>a ratio of three terms (up to 8)</td></tr><tr><td>3 : 4 = 9 : x  or  3 : 4 = 9 : ?</td><td>Proportion</td><td>two ratios, one unknown term</td></tr></tbody></table></div><p class="note">Each number can have up to 400 digits and the whole input up to 2,000 characters. Use commas between fractions, because a space is part of a mixed number such as 2 1/3. Denominators cannot be 0. Zero is not allowed in a GCD or LCM list or as a known term of a proportion, and ratio terms cannot be negative.</p></section><section id="faq"><h2>Questions</h2><h3>What is the difference between GCD and LCM?</h3><p>The GCD is the largest number that divides all the numbers; the LCM is the smallest number that all of them divide. For 48 and 18 the GCD is 6 and the LCM is 144. For two numbers GCD × LCM is always their product: 6 × 144 = 864 = 48 × 18.</p><h3>How do I find the least common denominator, and why is the LCD of 2/4 and 1/3 equal to 6, not 12?</h3><p>Reduce each fraction, then take the least common multiple of the denominators. For 1/6, 3/4 and 5/9 the denominators are 6, 4 and 9, and their LCM is 36. Then multiply the top and the bottom of each fraction by LCD ÷ its denominator. <strong class="sub">Why does the LCD of 2/4 and 1/3 come out as 6, not 12?</strong> Because 2/4 reduces to 1/2 first. The least common denominator is the smallest one that works, and 2/4 = 1/2 only needs a denominator that 2 divides. The calculator reduces first, so it always gives the smallest.</p><h3>How do I compare two fractions?</h3><p>Cross-multiply. For 3/4 and 5/7, 3 × 7 = 21 and 5 × 4 = 20. Since 21 is greater than 20, 3/4 is greater than 5/7. This works because both denominators are positive. For a list, the tool rewrites every fraction over the LCD and compares the numerators.</p><h3>How do I simplify a ratio with fractions or decimals?</h3><p>Turn every term into a fraction, multiply all of them by the LCM of the denominators so they become whole numbers, then divide by the GCD. 0.5 : 0.75 : 1.5 becomes 1/2 : 3/4 : 3/2, then 2 : 3 : 6 after multiplying by 4.</p><h3>How do I share a quantity in a ratio?</h3><p>Add the parts, then give each term its share of the total. In the ratio 3 : 5 there are 8 parts, so a total of 240 is split into 90 and 150. Type the total in the optional box on the Ratio tool.</p><h3>What is a continued fraction, why does the standard form of [3; 7, 15, 1] end in 16, and can I get the continued fraction of pi?</h3><p>A way of writing a number as a whole part plus one over (a whole number plus one over (…)). 355/113 is [3; 7, 16], which means 3 + 1/(7 + 1/16). It comes from the Euclidean algorithm: the terms are the quotients. Stopping early gives the convergents, the best simple fractions for the number: for 355/113 they are 3, 22/7, 355/113. Every rational number has two continued fractions, one ending in 1 and one not. <strong class="sub">Why does the standard form of [3; 7, 15, 1] end in 16?</strong> 15 + 1/1 is the same as 16, so [3; 7, 15, 1] and [3; 7, 16] have the same value, 355/113. The tool shows the form whose last term is greater than 1. <strong class="sub">Can I get the continued fraction of pi?</strong> Only of the decimal you type, because a decimal is read as an exact fraction. 3.14159 gives [3; 7, 15, 1, 25, 1, 7, 4], which starts like pi (3; 7, 15, 1, 292…) only for its first four terms, because the decimal was cut short.</p><h3>How are negative numbers handled?</h3><p>The whole part is rounded down, so −415/93 starts with −5, not −4, and every later term is positive: [-5; 1, 1, 6, 7]. That keeps the later terms and the convergent rules the same for every number.</p><h3>How do I solve a proportion?</h3><p>Use cross-multiplication. In 3 : 4 = 9 : x, 3 × x = 4 × 9, so x = 12. The unknown can be in any of the four places: in x : 5 = 2 : 3, x = 10/3.</p><h3>Can I use decimals, percentages, or three or more numbers?</h3><p>Yes, in the LCD, comparison and ratio tools. A decimal is read as an exact fraction, so 0.25 is 1/4 and 0.(3) is 1/3. GCD and LCM need whole numbers. <strong class="sub">What about three or more numbers?</strong> GCD and LCM take up to 20 numbers, LCD up to 20 fractions, comparison up to 12 values and a ratio up to 8 terms. The tool works through them one at a time and shows each step.</p><h3>Is anything sent to a server?</h3><p>No. Everything runs in your browser. The history of your last ten calculations is kept only in this browser and can be cleared with one button.</p></section><section id="related"><h2>Related Calculators and Tools</h2><p><a class="chip" href="../fraction-arithmetic/">Fraction Arithmetic (Mode 01)</a><a class="chip" href="../fraction-simplifier/">Fraction Simplifier (Mode 02)</a><a class="chip" href="../decimal-fraction-converter/">Decimal & Fraction Converter (Mode 03)</a><a class="chip" href="../mixed-number-calculator/">Mixed Number Calculator (Mode 04)</a><a class="chip" href="../ratio-calculator/">Ratio Calculator</a><a class="chip" href="../scientific-calculator/">Scientific Calculator</a><a class="chip" href="../fractional-inch-converter/">Fractional Inch to mm Converter</a><a class="chip" href="../basic-calculator/">Basic Calculator</a></p></section><!--rp:start--><section class="card" id="rp-card" aria-labelledby="rp-h"><h2 id="rp-h">Calculation report</h2><p class="note">Turn the current result into a printable sheet with the input, the result, the working and a report number. Fill in the details you want on it, then print or save it as a PDF, copy it as text or save a text file. Nothing is sent anywhere.</p><div class="rp-form"><div><label class="ns-l" for="rp-proj">Project</label><input id="rp-proj" class="ns-in" type="text" maxlength="120" autocomplete="off"></div><div><label class="ns-l" for="rp-ref">Reference</label><input id="rp-ref" class="ns-in" type="text" maxlength="120" autocomplete="off"></div><div><label class="ns-l" for="rp-by">Prepared by</label><input id="rp-by" class="ns-in" type="text" maxlength="120" autocomplete="off"></div><div><label class="ns-l" for="rp-chk">Checked by</label><input id="rp-chk" class="ns-in" type="text" maxlength="120" autocomplete="off"></div></div><div><label class="ns-l" for="rp-note">Notes</label><textarea id="rp-note" class="ns-in" rows="2" maxlength="1000"></textarea></div><div class="ns-act"><button type="button" class="btn2" data-rp="print">Print or save as PDF</button><button type="button" class="btn2" data-rp="copy">Copy as text</button><button type="button" class="btn2" data-rp="save">Save as .txt</button></div><p class="note ns-msg" id="rp-msg" role="status" aria-live="polite"></p><div id="rp-prev" class="rp-sheet rp-prev" hidden></div></section><!--rp:end--></main><section class="w fb" aria-labelledby="fb-h"><h2 id="fb-h">Tell us how to improve this page</h2><textarea id="fb-t" rows="4" maxlength="1500" placeholder="Your message ..." aria-label="Tell us how to improve this page"></textarea><p><button type="button" class="btn" id="fb-b">Email your suggestion</button> <button type="button" class="btn" id="sh-b">Share this page</button> <span class="note" id="fb-n">This opens your email app. Nothing is sent until you press send.</span></p></section><script>(function(){var b=document.getElementById("fb-b");if(!b)return;b.onclick=function(){var t=document.getElementById("fb-t").value.trim(),n=document.getElementById("fb-n");if(!t){n.textContent="Please write a message first.";return}location.assign("mailto:"+"elecmetrics@gmail.com"+"?subject="+encodeURIComponent("Elecmetric feedback: "+document.title)+"&body="+encodeURIComponent(t+"\n\nPage: "+location.href))}})();</script><script>(function(){var s=document.getElementById("sh-b");if(!s)return;s.onclick=function(){var u=location.href,t=document.title,n=document.getElementById("fb-n");if(navigator.share){navigator.share({title:t,url:u}).catch(function(){});return}if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(u).then(function(){n.textContent="Link copied."},function(){n.textContent="Copy this address: "+u})}else{n.textContent="Copy this address: "+u}}})();</script><footer class="mf"><div class="mf-w"><div class="mf-grid" role="navigation" aria-label="Site map"><div class="mf-col"><p class="mf-h"><a href="../../calculators/">Calculators</a></p><ul><li><a href="../../calculators/electrical-fundamentals/">Electrical Fundamentals</a></li><li><a href="../../calculators/power-and-energy/">Power and Energy</a></li><li><a href="../../calculators/cable-engineering/">Cable Engineering</a></li><li><a href="../../calculators/motor-engineering/">Motor Engineering</a></li><li><a href="../../calculators/transformer-engineering/">Transformer Engineering</a></li><li><a href="../../calculators/electrical-protection/">Electrical Protection</a></li><li><a href="../../calculators/power-systems/">Power Systems</a></li><li><a href="../../calculators/earthing-and-grounding/">Earthing and Grounding</a></li><li><a href="../../calculators/renewable-energy/">Renewable Energy</a></li><li><a href="../../calculators/airport-agl-engineering/">Airport and AGL Engineering</a></li><li><a href="../../calculators/electronics-and-instrumentation/">Electronics and Instrumentation</a></li><li><a href="../../calculators/lighting-and-facilities/">Lighting and Facilities</a></li><li><a href="../../calculators/engineering-mathematics/">Engineering Mathematics</a></li></ul></div><div class="mf-col"><p class="mf-h"><a href="../../calculators/">Popular calculators</a></p><ul><li><a href="../../calculators/cable-size/">Cable Size</a></li><li><a href="../../calculators/voltage-drop/">Voltage Drop</a></li><li><a href="../../calculators/breaker-size/">Breaker Size</a></li><li><a href="../../calculators/motor-current/">Motor Current</a></li><li><a href="../../calculators/transformer-sizing/">Transformer Sizing</a></li><li><a href="../../calculators/earth-resistance/">Earth Resistance</a></li><li><a href="../../calculators/pf-correction-kvar/">Power Factor Correction</a></li><li><a href="../../calculators/generator-sizing/">Generator Sizing</a></li><li><a href="../../calculators/battery-bank-sizing/">Battery Bank Sizing</a></li><li><a href="../../calculators/pv-energy/">Solar PV Energy</a></li></ul></div><div class="mf-col"><p class="mf-h"><a href="../../converters/index.html">Conversions</a></p><ul><li><a href="../../pages/index.html">Electrical conversions</a></li><li><a href="../../pages/kw-to-amps.html">kW to Amps</a></li><li><a href="../../pages/amps-to-kw.html">Amps to kW</a></li><li><a href="../../pages/kva-to-kw.html">kVA to kW</a></li><li><a href="../../pages/watts-to-amps.html">Watts to Amps</a></li><li><a href="../../converters/length-converter.html">Length</a></li><li><a href="../../converters/power-converter.html">Power</a></li><li><a href="../../converters/energy-converter.html">Energy</a></li><li><a href="../../converters/temperature-converter.html">Temperature</a></li><li><a href="../../pages/wire-gauge.html">AWG to mm²</a></li></ul></div><div class="mf-col"><p class="mf-h"><a href="../../converters/index.html">Formulas</a></p><ul><li><a href="../../converters/ohms-law-formulas.html">Ohm’s Law formulas</a></li><li><a href="../../converters/kirchhoffs-laws.html">Kirchhoff’s laws</a></li><li><a href="../../converters/cable-sizing-formulas.html">Cable sizing formulas</a></li><li><a href="../../converters/circuit-breaker-formulas.html">Circuit breaker formulas</a></li><li><a href="../../converters/ac-circuit-formulas.html">AC circuit formulas</a></li><li><a href="../../converters/battery-formulas.html">Battery formulas</a></li></ul></div><div class="mf-col"><p class="mf-h">Elecmetric</p><ul><li><a href="../../calculators/basic-calculator/">Basic Calculator</a></li><li><a href="../../calculators/scientific-calculator/">Scientific Calculator</a></li><li><a href="../../index.html#verification">How it is verified</a></li><li><a href="../../privacy.html">Privacy</a></li><li><a href="../../terms.html">Terms</a></li><li><a href="../../technical-library/">Technical Library</a></li><li><a href="mailto:elecmetrics@gmail.com">Contact us</a></li></ul></div></div><div class="mf-legal">Results are computed by the same tested engine as the calculators in Elecmetric and are for estimating. Check design values against the standard and the equipment data you work to. Elecmetric results are not a substitute for a design review by a competent engineer.<br>Developed by Elecmetric. No independent technical review of the calculators has been carried out. Results are for estimating.<br>&copy; 2026 Elecmetric &middot; <a href="../../privacy.html">Privacy</a> &middot; <a href="../../terms.html">Terms</a></div></div><script>(function(){if(location.protocol!=="file:")return;document.addEventListener("click",function(e){if(e.defaultPrevented||e.button||e.metaKey||e.ctrlKey||e.shiftKey)return;var a=e.target.closest&&e.target.closest("a[href]");if(!a||a.target)return;var m=/^([^?#]*)(.*)$/.exec(a.getAttribute("href"));if(!m[1]||/^[a-z][a-z0-9+.-]*:/i.test(m[1])||!/[/]$/.test(m[1]))return;e.preventDefault();location.href=m[1]+"index.html"+m[2]})})();</script><button type="button" class="totop" id="totop" aria-label="Back to top" tabindex="-1">↑ Top</button><script>(function(){var b=document.getElementById("totop");if(!b)return;var t=0;function u(){t=0;var on=(window.pageYOffset||document.documentElement.scrollTop)>400,bar=document.getElementById("bar"),h=bar&&bar.offsetHeight?bar.offsetHeight:0;b.classList.toggle("on",on);b.tabIndex=on?0:-1;b.style.bottom=h?"calc("+(h+16)+"px + env(safe-area-inset-bottom,0px))":"";}function q(){if(!t)t=requestAnimationFrame(u)}window.addEventListener("scroll",q,{passive:true});window.addEventListener("resize",q);b.addEventListener("click",function(){var r=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;window.scrollTo({top:0,behavior:r?"auto":"smooth"})});u()})();</script></footer><script>/* Elecmetric Fraction Calculator: exact rational engine for Modes 01 to 06 (Fraction Arithmetic to Fractional Inch and Millimetre Converter). One file, no dependencies, no DOM.
+   A fraction is a pair of BigInt (numerator, denominator), the denominator always positive and the pair always reduced by the greatest
+   common divisor. No floating-point number is used anywhere, so results stay exact for any size of numerator and denominator.
+   Required by tests/fraction_test.js and inlined into the Fraction Arithmetic page by tools/fraction_page.js. */
+(function (root) {
+  'use strict';
+  var MAX_INPUT = 2000, MAX_DIGITS = 400, MAX_NODES = 200;
+  function abs(x) { return x < 0n ? -x : x; }
+  function gcd(a, b) { a = abs(a); b = abs(b); while (b) { var t = a % b; a = b; b = t; } return a; }
+  function lcm(a, b) { return a === 0n || b === 0n ? 0n : abs(a) / gcd(a, b) * abs(b); }
+  function make(n, d) { if (d === 0n) throw new Err('Denominator is zero.'); if (d < 0n) { n = -n; d = -d; } var g = gcd(n, d); if (g > 1n) { n /= g; d /= g; } return { n: n, d: d }; }
+  function Err(m) { this.message = m; }
+  function F(q) { return q.d === 1n ? String(q.n) : q.n + '/' + q.d; }
+  function raw(n, d) { return d === 1n ? String(n) : n + '/' + d; }
+  function add(a, b) { return make(a.n * b.d + b.n * a.d, a.d * b.d); }
+  function sub(a, b) { return make(a.n * b.d - b.n * a.d, a.d * b.d); }
+  function mul(a, b) { return make(a.n * b.n, a.d * b.d); }
+  function div(a, b) { if (b.n === 0n) throw new Err('Division by zero: you cannot divide by 0.'); return make(a.n * b.d, a.d * b.n); }
+  function cmp(a, b) { var x = a.n * b.d, y = b.n * a.d; return x < y ? -1 : x > y ? 1 : 0; }
+
+  /* ---------- output forms ---------- */
+  function mixed(q) {
+    if (q.d === 1n || abs(q.n) < q.d) return { whole: 0n, n: q.n, d: q.d, text: F(q), isMixed: false };
+    var neg = q.n < 0n, a = abs(q.n), w = a / q.d, r = a % q.d;
+    if (r === 0n) return { whole: neg ? -w : w, n: 0n, d: 1n, text: String(neg ? -w : w), isMixed: false };
+    return { whole: neg ? -w : w, n: r, d: q.d, text: (neg ? '-' : '') + w + ' ' + r + '/' + q.d, isMixed: true };
+  }
+  /* Decimal expansion by long division. exact: finite expansion; otherwise the repeating block is found by following remainders. */
+  function decimal(q, maxDigits) {
+    maxDigits = maxDigits || 40;
+    var neg = q.n < 0n, a = abs(q.n), d = q.d, ip = a / d, rem = a % d, s = (neg && a !== 0n ? '-' : '') + ip;
+    if (rem === 0n) return { text: s, exact: true, repeating: false, period: 0, digits: 0 };
+    var t = d, twos = 0, fives = 0; while (t % 2n === 0n) { t /= 2n; twos++; } while (t % 5n === 0n) { t /= 5n; fives++; }
+    var digs = [], seen = new Map(), at = -1, LIMIT = 5000;
+    if (t === 1n) { while (rem !== 0n) { rem *= 10n; digs.push(String(rem / d)); rem %= d; } return { text: s + '.' + digs.join(''), exact: true, repeating: false, period: 0, digits: digs.length }; }
+    while (rem !== 0n && digs.length < LIMIT) {
+      var key = String(rem); if (seen.has(key)) { at = seen.get(key); break; }
+      seen.set(key, digs.length); rem *= 10n; digs.push(String(rem / d)); rem %= d;
+    }
+    if (at >= 0) {
+      var pre = digs.slice(0, at).join(''), per = digs.slice(at).join('');
+      return { text: s + '.' + pre + '(' + per + ')', exact: false, repeating: true, period: per.length, preperiod: at, rounded: s + '.' + (pre + per.repeat(Math.ceil(maxDigits / per.length))).slice(0, maxDigits) + '\u2026', digits: digs.length };
+    }
+    return { text: s + '.' + digs.slice(0, maxDigits).join('') + '\u2026', exact: false, repeating: true, period: 0, longPeriod: true, digits: maxDigits };
+  }
+  function percent(q) { var p = make(q.n * 100n, q.d), r = decimal(p, 20); return { text: r.text + '%', exact: r.exact, repeating: r.repeating, period: r.period }; }
+
+  /* ---------- parser ---------- */
+  function tokenize(src) {
+    var s = src.replace(/(\d)_(?=\d)/g, '$1 ').replace(/[\u2212\u2013\u2014]/g, '-').replace(/[\u00d7\u00b7*xX]/g, '*').replace(/[\u00f7:]/g, '\u00f7').replace(/[\u2044\u2215]/g, '/').replace(/\u00a0/g, ' ');
+    var toks = [], i = 0, sp = false, m;
+    while (i < s.length) {
+      var c = s[i];
+      if (c === ' ' || c === '\t' || c === '\n' || c === '\r') { sp = true; i++; continue; }
+      if ((m = /^(\d+\.?\d*|\.\d+)/.exec(s.slice(i)))) {
+        if (m[1].replace('.', '').length > MAX_DIGITS) throw new Err('A number has more than ' + MAX_DIGITS + ' digits. Use a shorter number.');
+        toks.push({ t: 'num', v: m[1], dec: m[1].indexOf('.') >= 0, sp: sp, pos: i }); i += m[1].length; sp = false; continue;
+      }
+      if ('+-*\u00f7/()'.indexOf(c) >= 0) { toks.push({ t: c, sp: sp, pos: i }); i++; sp = false; continue; }
+      if (c === ',') throw new Err('Commas are not used here. Write 1000 instead of 1,000, and a decimal point for decimals.');
+      if (c === '^') throw new Err('Powers are not supported in this mode.');
+      throw new Err('Unexpected character \u2018' + c + '\u2019 at position ' + (i + 1) + '. Use digits, / for the fraction bar, + \u2212 \u00d7 \u00f7 and brackets.');
+    }
+    return toks;
+  }
+  function lit(v, dec) { // exact value of an integer or decimal token
+    if (!dec) return { n: BigInt(v), d: 1n };
+    var p = v.split('.'), f = p[1] || '', digits = (p[0] || '0') + f; return make(BigInt(digits), 10n ** BigInt(f.length));
+  }
+  function parse(src) {
+    var toks = tokenize(src), p = 0, nodes = 0;
+    function peek() { return toks[p]; }
+    function node(o) { if (++nodes > MAX_NODES) throw new Err('The expression is too long. Split it into smaller parts.'); return o; }
+    function expect(t, msg) { if (!peek() || peek().t !== t) throw new Err(msg); return toks[p++]; }
+    function number() {
+      var tk = peek();
+      if (!tk) throw new Err('The expression ends too early: a number is missing at the end.');
+      if (tk.t !== 'num') throw new Err('Expected a number at position ' + (tk.pos + 1) + ' but found \u2018' + (tk.t === '\u00f7' ? '\u00f7' : tk.t) + '\u2019.');
+      p++;
+      var nx = peek();
+      // mixed number: whole  numerator/denominator, the numerator separated from the whole by a space (or underscore)
+      if (!tk.dec && nx && nx.t === 'num' && !nx.dec && nx.sp && toks[p + 1] && toks[p + 1].t === '/') {
+        p++; p++; var sg = ''; if (peek() && (peek().t === '-' || peek().t === '+')) { sg = toks[p++].t === '-' ? '-' : ''; }
+        var dn = peek(); if (!dn || dn.t !== 'num' || dn.dec) throw new Err('A mixed number needs a whole-number denominator, as in 2 1/3.');
+        p++; var den = BigInt(dn.v); if (sg) den = -den; if (den === 0n) throw new Err('Denominator is zero in ' + tk.v + ' ' + nx.v + '/0.');
+        var num = BigInt(nx.v); if (den < 0n) { den = -den; }
+        var q = make(BigInt(tk.v) * den + num, den);
+        return node({ t: 'lit', q: q, kind: 'mixed', src: tk.v + ' ' + nx.v + '/' + den, w: BigInt(tk.v), pn: num, pd: den });
+      }
+      if (nx && nx.t === '/') {
+        p++; var s2 = false; if (peek() && (peek().t === '-' || peek().t === '+')) { s2 = toks[p++].t === '-'; }
+        var dt = peek(); if (!dt || dt.t !== 'num') throw new Err('A denominator is missing after the fraction bar /.');
+        p++; var a = lit(tk.v, tk.dec), b = lit(dt.v, dt.dec); if (s2) b = { n: -b.n, d: b.d };
+        if (b.n === 0n) throw new Err('Denominator is zero in ' + tk.v + '/' + dt.v + '. A fraction cannot have 0 as its denominator.');
+        var nxt = peek(); if (nxt && nxt.t === '/') throw new Err('Use \u00f7 (or a colon) to divide fractions, for example 1/2 \u00f7 1/4. A second / after a fraction is not read as division.');
+        var qq = div(a, b), plain = !tk.dec && !dt.dec;
+        return node({ t: 'lit', q: qq, kind: plain ? 'frac' : 'dec', src: tk.v + '/' + (s2 ? '-' : '') + dt.v, rn: plain ? BigInt(tk.v) : null, rd: plain ? (s2 ? -BigInt(dt.v) : BigInt(dt.v)) : null });
+      }
+      if (nx && nx.t === 'num' && nx.sp && !nx.dec && !tk.dec) throw new Err('Two numbers in a row at position ' + (nx.pos + 1) + '. For a mixed number write 2 1/3; otherwise put an operator between them.');
+      return node({ t: 'lit', q: lit(tk.v, tk.dec), kind: tk.dec ? 'dec' : 'int', src: tk.v });
+    }
+    function atom() {
+      var tk = peek();
+      if (tk && tk.t === '(') { p++; var e = expr(); expect(')', 'A closing bracket ) is missing.'); return e; }
+      return number();
+    }
+    function unary() {
+      var tk = peek();
+      if (tk && (tk.t === '-' || tk.t === '+')) {
+        p++; var a = unary();
+        if (tk.t === '+') return a;
+        if (a.t === 'lit') { var q = { n: -a.q.n, d: a.q.d }; var o = {}; for (var k in a) o[k] = a[k]; o.q = q; o.neg = !a.neg; o.src = (a.neg ? a.src.replace(/^-/, '') : '-' + a.src); return o; }
+        return node({ t: 'neg', a: a });
+      }
+      return atom();
+    }
+    function term() {
+      var l = unary();
+      while (peek() && (peek().t === '*' || peek().t === '\u00f7')) { var op = toks[p++].t; l = node({ t: 'op', op: op, a: l, b: unary() }); }
+      return l;
+    }
+    function expr() {
+      var l = term();
+      while (peek() && (peek().t === '+' || peek().t === '-')) { var op = toks[p++].t; l = node({ t: 'op', op: op, a: l, b: term() }); }
+      return l;
+    }
+    if (!toks.length) return null;
+    var tree = expr();
+    if (peek()) { var tk = peek(); throw new Err(tk.t === ')' ? 'A closing bracket ) has no matching opening bracket.' : 'Unexpected \u2018' + (tk.t === 'num' ? tk.v : tk.t) + '\u2019 at position ' + (tk.pos + 1) + '. Put an operator (+ \u2212 \u00d7 \u00f7) between the parts.'); }
+    return tree;
+  }
+
+  /* ---------- evaluation with working ---------- */
+  function sg(q) { return q.n < 0n ? '(' + F(q) + ')' : F(q); }
+  function litSteps(nd, st) {
+    var q = nd.q;
+    if (nd.kind === 'mixed') {
+      var imp = nd.w * nd.pd + nd.pn, sgn = nd.neg ? '-' : '';
+      st.push(sgn + nd.w + ' ' + nd.pn + '/' + nd.pd + ' as an improper fraction: whole \u00d7 denominator + numerator = ' + nd.w + ' \u00d7 ' + nd.pd + ' + ' + nd.pn + ' = ' + imp + ', so ' + sgn + imp + '/' + nd.pd + (gcd(imp, nd.pd) > 1n ? ' = ' + F(q) + ' in lowest terms' : '') + '.');
+    } else if (nd.kind === 'dec') {
+      var m = /^-?(\d*)\.?(\d*)$/.exec(nd.src.replace(/\s/g, ''));
+      if (m && nd.src.indexOf('/') < 0) { var f = m[2] || '', un = BigInt((m[1] || '0') + f), dn = 10n ** BigInt(f.length); st.push(nd.src + ' = ' + (nd.neg ? '-' : '') + un + '/' + dn + (gcd(un, dn) > 1n ? ' = ' + F(q) + ' in lowest terms' : '') + ' (a decimal is a fraction over a power of 10).'); }
+      else st.push(nd.src + ' = ' + F(q) + ' (decimal parts converted to exact fractions).');
+    } else if (nd.kind === 'frac') {
+      var g = gcd(nd.rn, nd.rd);
+      if (g > 1n) st.push(nd.src + ' is not in lowest terms: the greatest common divisor of ' + nd.rn + ' and ' + abs(nd.rd) + ' is ' + g + ', so it equals ' + F(q) + '.');
+    }
+  }
+  function evalNode(nd, st) {
+    if (nd.t === 'lit') { litSteps(nd, st); return nd.q; }
+    if (nd.t === 'neg') { var v = evalNode(nd.a, st), r = { n: -v.n, d: v.d }; st.push('Negate: \u2212(' + F(v) + ') = ' + F(r) + '.'); return r; }
+    var a = evalNode(nd.a, st), b = evalNode(nd.b, st), r2, A = F(a), B = sg(b);
+    if (nd.op === '+' || nd.op === '-') {
+      var L = lcm(a.d, b.d), x = a.n * (L / a.d), y = b.n * (L / b.d), tot = nd.op === '+' ? x + y : x - y; r2 = make(tot, L);
+      var head = A + (nd.op === '+' ? ' + ' : ' \u2212 ') + B + ': ';
+      if (a.d === b.d) st.push(head + 'the denominators are the same (' + a.d + '), so ' + (nd.op === '+' ? 'add' : 'subtract') + ' the numerators: ' + a.n + (nd.op === '+' ? ' + ' : ' \u2212 ') + sg({ n: b.n, d: 1n }) + ' = ' + tot + ', giving ' + raw(tot, L) + (gcd(tot, L) > 1n ? ' = ' + F(r2) + ' in lowest terms' : '') + '.');
+      else st.push(head + 'the least common denominator of ' + a.d + ' and ' + b.d + ' is ' + L + '. Rewrite as ' + raw(x, L) + (nd.op === '+' ? ' + ' : ' \u2212 ') + (b.n < 0n ? '(' + raw(y, L) + ')' : raw(y, L)) + ' = ' + raw(tot, L) + (gcd(tot, L) > 1n ? ' = ' + F(r2) + ' in lowest terms' : '') + '.');
+      return r2;
+    }
+    if (nd.op === '*') {
+      var g1 = gcd(a.n, b.d), g2 = gcd(b.n, a.d); if (a.n === 0n || b.n === 0n) { g1 = 1n; g2 = 1n; }
+      r2 = mul(a, b);
+      var h = A + ' \u00d7 ' + B + ': ';
+      if (g1 > 1n || g2 > 1n) {
+        var n1 = a.n / g1, d2 = b.d / g1, n2 = b.n / g2, d1 = a.d / g2;
+        st.push(h + 'cancel common factors first' + (g1 > 1n ? ' (' + g1 + ' between ' + a.n + ' and ' + b.d + ')' : '') + (g2 > 1n ? (g1 > 1n ? ' and' : '') + ' (' + g2 + ' between ' + b.n + ' and ' + a.d + ')' : '') + ', then multiply: (' + n1 + ' \u00d7 ' + sg({ n: n2, d: 1n }) + ') / (' + d1 + ' \u00d7 ' + d2 + ') = ' + F(r2) + '.');
+      } else st.push(h + 'multiply the numerators and the denominators: (' + a.n + ' \u00d7 ' + sg({ n: b.n, d: 1n }) + ') / (' + a.d + ' \u00d7 ' + b.d + ') = ' + raw(a.n * b.n, a.d * b.d) + (r2.d === 1n && a.d * b.d !== 1n ? ' = ' + F(r2) : '') + '.');
+      return r2;
+    }
+    // division
+    if (b.n === 0n) throw new Err('Division by zero: ' + A + ' \u00f7 0 is undefined.');
+    var rc = make(b.d, b.n); r2 = mul(a, rc);
+    st.push(A + ' \u00f7 ' + B + ': dividing by a fraction is multiplying by its reciprocal. The reciprocal of ' + F(b) + ' is ' + F(rc) + ', so ' + A + ' \u00d7 ' + sg(rc) + ' = ' + F(r2) + '.');
+    return r2;
+  }
+
+
+  /* ---------- Mode 02: simplifier ---------- */
+  /* Euclid's algorithm with every division recorded: [a, b, q, r] meaning a = b x q + r. */
+  function euclid(a, b) {
+    a = abs(a); b = abs(b); var rows = [];
+    if (a < b) { var t = a; a = b; b = t; }
+    if (b === 0n) return { g: a, rows: rows };
+    while (b !== 0n) { var q = a / b, r = a % b; rows.push([a, b, q, r]); a = b; b = r; }
+    return { g: a, rows: rows };
+  }
+  /* Prime factorisation by trial division, only while the work stays small. Returns null when the number is too large to factor here. */
+  function factor(n, budget) {
+    n = abs(n); budget = budget || 2000000; if (n < 2n) return n === 1n ? [] : null;
+    var out = [], p = 2n, steps = 0;
+    function put(x) { if (out.length && out[out.length - 1][0] === x) out[out.length - 1][1]++; else out.push([x, 1]); }
+    while (n % 2n === 0n) { put(2n); n /= 2n; }
+    p = 3n;
+    while (p * p <= n) {
+      if (++steps > budget) return null;
+      while (n % p === 0n) { put(p); n /= p; }
+      p += 2n;
+    }
+    if (n > 1n) put(n);
+    return out;
+  }
+  function fstr(f) { return f.map(function (x) { return x[1] > 1 ? x[0] + '^' + x[1] : String(x[0]); }).join(' \u00d7 '); }
+  function dstr(s) { return s; }
+  function intOf(s, name) { // an integer, or a plain decimal, from a text field: returns { n, k } meaning n / 10^k
+    s = String(s == null ? '' : s).trim().replace(/[\u2212\u2013\u2014]/g, '-').replace(/\u00a0/g, ' ');
+    if (!s) throw new Err('The ' + name + ' is empty.');
+    if (/,/.test(s)) throw new Err('Commas are not used here. Write 1000 instead of 1,000, and a decimal point for decimals.');
+    var m = /^([+-]?)(\d*)\.?(\d*)$/.exec(s); if (!m || (m[2] + m[3]).length === 0) throw new Err('The ' + name + ' \u2018' + s.slice(0, 30) + '\u2019 is not a number. Use digits, with a point for a decimal.');
+    if ((m[2] + m[3]).length > MAX_DIGITS) throw new Err('The ' + name + ' has more than ' + MAX_DIGITS + ' digits.');
+    var f = m[3] || '', v = BigInt((m[2] || '0') + f); if (m[1] === '-') v = -v;
+    return { n: v, k: f.length, dec: f.length > 0 };
+  }
+  /* simplify({ num, den }) or simplify({ expr: '18/24' }) -> lowest terms with the working */
+  function simplify(o) {
+    o = o || {}; var N, D, ns, ds;
+    try {
+      if (o.expr != null && o.num == null && o.den == null) {
+        var src = String(o.expr).trim(); if (!src) return { ok: false, empty: true, error: '' };
+        if (src.length > MAX_INPUT) return { ok: false, error: 'The input is longer than ' + MAX_INPUT + ' characters.' };
+        var s2 = src.replace(/[\u2044\u2215]/g, '/'), parts = s2.split('/');
+        if (parts.length === 1) { ns = parts[0]; ds = '1'; } else if (parts.length === 2) { ns = parts[0]; ds = parts[1]; }
+        else throw new Err('Enter one fraction such as 18/24. To work with several fractions use the Fraction Arithmetic mode.');
+        if (/\s/.test(ns.trim())) { // a mixed number such as 2 6/8
+          if (parts.length === 1) throw new Err('Two numbers with a space between them need a fraction bar. A mixed number is written like 2 6/8.');
+          var mm = /^\s*([-+]?)\s*(\d+)\s+(\d+)\s*$/.exec(ns.replace(/\u2212/g, '-'));
+          if (!mm || /\./.test(ns) || /\./.test(ds)) throw new Err('A mixed number is written like 2 6/8, whole numbers only.');
+          var den0 = BigInt(ds.trim() || '0'); if (den0 === 0n) throw new Err('A fraction cannot have 0 as its denominator.');
+          var t0 = BigInt(mm[2]) * den0 + BigInt(mm[3]); if (mm[1] === '-') t0 = -t0;
+          return finish(t0, den0, 0, 0, { mixedFrom: (mm[1] === '-' ? '-' : '') + mm[2] + ' ' + mm[3] + '/' + ds.trim(), whole: BigInt(mm[2]), pn: BigInt(mm[3]), neg: mm[1] === '-' });
+        }
+      } else { ns = o.num; ds = o.den; }
+      N = intOf(ns, 'numerator'); D = intOf(ds, 'denominator');
+    } catch (e) { if (e instanceof Err) return { ok: false, error: e.message }; throw e; }
+    if (D.n === 0n) return { ok: false, error: 'The denominator is 0. A fraction cannot have 0 as its denominator, so it cannot be simplified.' };
+    return finish(N.n, D.n, N.k, D.k, null);
+  }
+  function finish(n, d, kn, kd, mx) {
+    var st = [], n0 = n, d0 = d, scaled = null;
+    if (mx) st.push(mx.mixedFrom + ' as an improper fraction: whole \u00d7 denominator + numerator = ' + mx.whole + ' \u00d7 ' + d + ' + ' + mx.pn + ' = ' + abs(n) + ', so ' + raw(n, d) + '.');
+    if (kn || kd) { // decimals: multiply top and bottom by the same power of 10
+      var k = Math.max(kn, kd), sn = n * 10n ** BigInt(k - kn), sd = d * 10n ** BigInt(k - kd);
+      st.push('The numerator or denominator is a decimal. Multiply both by 10^' + k + ' (' + (10n ** BigInt(k)) + ') to get whole numbers: ' + raw(sn, sd) + '. The value does not change.'); scaled = { k: k }; n = sn; d = sd;
+    }
+    if (d < 0n) { st.push('The denominator ' + d + ' is negative. Move the sign to the numerator: ' + raw(n, d) + ' = ' + raw(-n, -d) + '.'); n = -n; d = -d; }
+    var neg = n < 0n, a = abs(n), ex = euclid(a, d), g = ex.g, res;
+    if (a === 0n) {
+      st.push('The numerator is 0, so the value is 0. Every number divides 0, and gcd(0, ' + d + ') = ' + d + ', which gives 0/' + d + ' = 0/1.');
+      return pack(0n, 1n, n0, d0, d, [], null, null, st, scaled, mx);
+    }
+    var gStep = 'Greatest common divisor by the Euclidean algorithm (divide, then repeat with the divisor and the remainder until the remainder is 0):';
+    var rows = ex.rows;
+    st.push(gStep + ' ' + rows.slice(0, 40).map(function (r) { return r[0] + ' = ' + r[1] + ' \u00d7 ' + r[2] + ' + ' + r[3]; }).join('; ') + (rows.length > 40 ? '; \u2026 (' + (rows.length - 40) + ' more divisions)' : '') + '. The remainder reaches 0, and the last divisor, ' + g + ', is the greatest common divisor.');
+    var fa = factor(a), fb = factor(d), fg = null;
+    var common = null;
+    if (fa && fb) {
+      st.push(abs(n) + ' = ' + (a === 1n ? '1' : fstr(fa)) + '; ' + d + ' = ' + (d === 1n ? '1' : fstr(fb)) + '. The common prime factors give the greatest common divisor.');
+      common = []; fa.forEach(function (x) { fb.forEach(function (y) { if (x[0] === y[0]) common.push([x[0], Math.min(x[1], y[1])]); }); });
+    } else st.push('The numbers are too large to factor quickly here, so the Euclidean working above is used. It is exact for any size.');
+    if (g === 1n) st.push('gcd(' + a + ', ' + d + ') = 1: the numerator and denominator share no common factor, so ' + raw(n, d) + ' is already in lowest terms.');
+    else {
+      st.push('gcd(' + a + ', ' + d + ') = ' + g + '. Divide the numerator and the denominator by ' + g + ': ' + n + ' \u00f7 ' + g + ' = ' + (n / g) + ' and ' + d + ' \u00f7 ' + g + ' = ' + (d / g) + '.');
+    }
+    var rn = n / g, rd = d / g;
+    st.push('Check: ' + n + ' \u00d7 ' + rd + ' = ' + (n * rd) + ' and ' + rn + ' \u00d7 ' + d + ' = ' + (rn * d) + '. The cross products are equal, so ' + raw(rn, rd) + ' has the same value as ' + raw(n, d) + '.');
+    return pack(rn, rd, n0, d0, d, rows, fa && fb ? { fa: fa, fb: fb, common: common, n: a, d: d } : null, g, st, scaled, mx, n);
+  }
+  function pack(rn, rd, n0, d0, dd, rows, fac, g, st, scaled, mx, nn) {
+    var q = make(rn, rd), m = mixed(q), eucl = rows || [];
+    return { ok: true, n0: n0, d0: d0, g: g === null || g === undefined ? (rn === 0n ? dd : 1n) : g, num: q.n, den: q.d, value: q, frac: F(q), mixed: m, decimal: decimal(q), percent: percent(q), euclid: eucl, factors: fac, steps: st, already: (n0 === q.n && d0 === q.d && !scaled && !mx), changed: !(n0 === q.n && d0 === q.d && !scaled && !mx), wasMixed: !!mx, scaled: !!scaled };
+  }
+
+  /* calc({ expr }) -> { ok, empty, error, value:{n,d}, frac, mixed, decimal, percent, steps, ... } */
+  function calc(o) {
+    var src = String((o && o.expr) == null ? '' : o.expr);
+    if (!src.trim()) return { ok: false, empty: true, error: '' };
+    if (src.length > MAX_INPUT) return { ok: false, error: 'The input is longer than ' + MAX_INPUT + ' characters.' };
+    try {
+      var tree = parse(src); if (!tree) return { ok: false, empty: true, error: '' };
+      var st = [], q = evalNode(tree, st), m = mixed(q);
+      return { ok: true, value: q, frac: F(q), mixed: m, decimal: decimal(q), percent: percent(q), steps: st, isInteger: q.d === 1n, sign: q.n < 0n ? -1 : q.n === 0n ? 0 : 1, single: tree.t === 'lit' };
+    } catch (e) {
+      if (e instanceof Err) return { ok: false, error: e.message };
+      throw e;
+    }
+  }
+  /* ---------- Mode 03: decimal and fraction converter ---------- */
+  function P10(k) { return 10n ** BigInt(k); }
+  function floorDiv(n, d) { var q = n / d; if (n % d !== 0n && (n < 0n) !== (d < 0n)) q -= 1n; return q; }
+  function ceilDiv(n, d) { return -floorDiv(-n, d); }
+  /* Round to p decimal places, halves away from zero. exact: nothing was cut off. A result that rounds to zero carries no minus sign. */
+  function roundDec(q, p) {
+    var a = abs(q.n), v = a * P10(p), fl = (2n * v + q.d) / (2n * q.d), s = String(fl);
+    if (p > 0) { while (s.length < p + 1) s = '0' + s; s = s.slice(0, s.length - p) + '.' + s.slice(s.length - p); }
+    return { text: (q.n < 0n && fl !== 0n ? '-' : '') + s, exact: v % q.d === 0n };
+  }
+  /* Scientific notation with sig significant digits (round half up), trailing zeros dropped: 1.756e-13. */
+  function sci(q, sig) {
+    if (q.n === 0n) return '0';
+    var a = abs(q.n), d = q.d, e = String(a).length - String(d).length;
+    if (e >= 0 ? a < d * P10(e) : a * P10(-e) < d) e--;
+    var sh = sig - 1 - e, num = sh >= 0 ? a * P10(sh) : a, den = sh >= 0 ? d : d * P10(-sh), m = (2n * num + den) / (2n * den);
+    if (m >= P10(sig)) { m /= 10n; e++; }
+    var ds = String(m).replace(/0+$/, '') || '0';
+    return (q.n < 0n ? '-' : '') + ds[0] + (ds.length > 1 ? '.' + ds.slice(1) : '') + 'e' + e;
+  }
+  /* Closest fraction whose denominator is at most M (continued-fraction convergents and the best semiconvergent), the same rule as Python's Fraction.limit_denominator. */
+  function limitDen(q, M) {
+    var neg = q.n < 0n, n = abs(q.n), d = q.d; if (d <= M) return q;
+    var p0 = 0n, q0 = 1n, p1 = 1n, q1 = 0n, N = n, D = d;
+    for (;;) {
+      var a = N / D, q2 = q0 + a * q1; if (q2 > M) break;
+      var np = p0 + a * p1; p0 = p1; q0 = q1; p1 = np; q1 = q2; var t = N - a * D; N = D; D = t;
+    }
+    var k = (M - q0) / q1, b1 = make(p0 + k * p1, q0 + k * q1), b2 = make(p1, q1), x = make(n, d), e1 = sub(b1, x), e2 = sub(b2, x);
+    var r = cmp({ n: abs(e2.n), d: e2.d }, { n: abs(e1.n), d: e1.d }) <= 0 ? b2 : b1;
+    return make(neg ? -r.n : r.n, r.d);
+  }
+  /* Fraction with the smallest denominator inside the closed interval [lo, hi] (lo <= hi), by continued fractions. */
+  function simplestIn(lo, hi) {
+    var terms = [], a = lo, b = hi;
+    for (;;) {
+      var c = ceilDiv(a.n, a.d);
+      if (cmp({ n: c, d: 1n }, b) <= 0) { terms.push(c); break; }
+      var f = c - 1n; terms.push(f);
+      var na = make(b.d, b.n - f * b.d), nb = make(a.d, a.n - f * a.d); a = na; b = nb;
+    }
+    var r = { n: terms[terms.length - 1], d: 1n };
+    for (var i = terms.length - 2; i >= 0; i--) r = make(terms[i] * r.n + r.d, r.n);
+    return r;
+  }
+  /* A typed decimal with k >= 3 places may be a rounded repeating decimal. Returns the fraction with the smallest denominator that rounds to it at k places
+     (denominator squared times 100 at most 10^k, so the match is not a coincidence), or null. */
+  function approxFor(x, k) {
+    if (k < 3 || x.n === 0n) return null;
+    var neg = x.n < 0n, ax = { n: abs(x.n), d: x.d }, h = make(1n, 2n * P10(k)), eps = make(1n, 4n * P10(2 * k));
+    var r = simplestIn(sub(ax, h), sub(add(ax, h), eps));
+    if (r.d * r.d * 100n > P10(k) || cmp(r, ax) === 0) return null;
+    return make(neg ? -r.n : r.n, r.d);
+  }
+  function digitsOk(s) { if (s.length > MAX_DIGITS) throw new Err('A number has more than ' + MAX_DIGITS + ' digits. Use a shorter number.'); }
+  var BAD = 'Type a decimal such as 0.125, a repeating decimal such as 0.(3), a fraction such as 3/8, a mixed number such as 2 1/3, or a percentage such as 37.5%.';
+  var DENZ = 'The denominator is 0. A fraction cannot have 0 as its denominator.';
+  /* One number in any of the accepted forms -> { q, kind, pct, base, ... } */
+  function parseConv(src) {
+    var s = src.replace(/[−–—]/g, '-').replace(/[⁄∕]/g, '/').replace(/ /g, ' ').trim(), pct = false, info = {}, q, kind, i;
+    if (/,/.test(s)) throw new Err('Commas are not used here. Write 1000 instead of 1,000, and a decimal point for decimals.');
+    if (/\.\.|…/.test(s)) throw new Err('Dots after the digits are not read as a repeating decimal. Put the repeating digits in brackets instead, as in 0.(3).');
+    if ((i = s.indexOf('%')) >= 0) {
+      if (i !== s.length - 1) throw new Err('A percent sign % is written once, after the number, as in 37.5%.');
+      s = s.slice(0, i).trim(); if (!s) throw new Err('A number is missing before the percent sign.'); pct = true;
+    }
+    var neg = false, sm = /^([+-])\s*([\s\S]*)$/.exec(s); if (sm) { neg = sm[1] === '-'; s = sm[2]; }
+    s = s.replace(/\s*\/\s*/g, '/');
+    if (!s) throw new Err('A number is missing after the sign.');
+    if (/[()]/.test(s)) {
+      if (s.indexOf('/') >= 0) throw new Err('Brackets are only used for a repeating block, as in 0.(3). They cannot enclose a fraction here.');
+      var rm = /^(\d*)\.(\d*)\((\d+)\)$/.exec(s);
+      if (!rm) throw new Err(s.indexOf('.') < 0 && s.indexOf('(') >= 0 ? 'A repeating decimal needs a decimal point before the bracket, as in 0.(3).' : 'Write the repeating digits in one pair of brackets at the end, as in 0.(3) or 0.58(3).');
+      var ip = rm[1], fp = rm[2], rp = rm[3]; digitsOk(ip + fp + rp);
+      var a = fp.length, b = rp.length, big = BigInt('0' + ip + fp + rp), small = BigInt('0' + ip + fp);
+      q = make(big - small, P10(a + b) - P10(a)); kind = 'repeating'; info.rep = { ip: ip, fp: fp, rp: rp, a: a, b: b, big: big, small: small };
+    } else if (s.indexOf('/') >= 0) {
+      var parts = s.split('/'); if (parts.length !== 2) throw new Err('Enter one fraction such as 3/8. Several operations belong in the Fraction Arithmetic mode.');
+      var top = parts[0], bot = parts[1], bneg = false; if (/^[+-]/.test(bot)) { bneg = bot[0] === '-'; bot = bot.slice(1); }
+      var mx = /^(\d+)\s+(\d+)$/.exec(top);
+      if (mx) {
+        if (!/^\d+$/.test(bot)) throw new Err(bot === '' ? 'A denominator is missing after the fraction bar /.' : 'A mixed number is written like 2 1/3, with whole numbers only.');
+        digitsOk(mx[1]); digitsOk(mx[2]); digitsOk(bot);
+        var den = BigInt(bot); if (den === 0n) throw new Err(DENZ);
+        if (bneg) den = -den;
+        var w = BigInt(mx[1]), nn = BigInt(mx[2]);
+        q = make(w * abs(den) + nn, den); kind = 'mixed'; info.mx = { w: w, n: nn, d: abs(den) };
+      } else {
+        if (/\s/.test(top) || /\s/.test(bot)) throw new Err('A mixed number is written like 2 1/3, with whole numbers only. Two numbers with a space between them need a fraction bar.');
+        if (!/\d/.test(top) || !/^\d*\.?\d*$/.test(top)) throw new Err(top === '' ? 'A numerator is missing before the fraction bar /.' : 'The numerator ‘' + top.slice(0, 30) + '’ is not a number. Use digits, with a point for a decimal.');
+        if (!/\d/.test(bot) || !/^\d*\.?\d*$/.test(bot)) throw new Err(bot === '' ? 'A denominator is missing after the fraction bar /.' : 'The denominator ‘' + bot.slice(0, 30) + '’ is not a number. Use digits, with a point for a decimal.');
+        digitsOk(top.replace('.', '')); digitsOk(bot.replace('.', ''));
+        var A = lit(top, top.indexOf('.') >= 0), B = lit(bot, bot.indexOf('.') >= 0);
+        if (B.n === 0n) throw new Err(DENZ);
+        if (bneg) B = { n: -B.n, d: B.d };
+        q = div(A, B); kind = 'fraction'; info.fr = { top: top, bot: (bneg ? '-' : '') + bot, plain: top.indexOf('.') < 0 && bot.indexOf('.') < 0, A: A, B: B };
+      }
+    } else {
+      if (/\s/.test(s)) throw new Err(/^\d+\s+\d+$/.test(s) ? 'Two numbers with a space between them need a fraction bar. A mixed number is written like 2 1/3.' : 'There is a space inside a number. ' + BAD);
+      var em = /^(\d*)(?:\.(\d*))?[eE]([+-]?\d+)$/.exec(s), pm = /^(\d*)(?:\.(\d*))?$/.exec(s), m = em || pm;
+      if (!m || !/\d/.test((m[1] || '') + (m[2] || ''))) throw new Err(/^[+-]/.test(s) ? 'Use one sign only, at the start.' : 'Unexpected input ‘' + s.slice(0, 30) + '’. ' + BAD);
+      var i2 = m[1] || '', f2 = m[2] || ''; digitsOk(i2 + f2);
+      var base = make(BigInt('0' + i2 + f2), P10(f2.length));
+      if (em) {
+        var es = em[3].replace(/^[+-]/, '').replace(/^0+/, ''); if (es.length > 3 || +es > 300) throw new Err('The exponent must be between −300 and 300.');
+        var ex = (em[3][0] === '-' ? -1 : 1) * (+es || 0);
+        q = ex >= 0 ? make(base.n * P10(ex), base.d) : make(base.n, base.d * P10(-ex)); kind = q.d === 1n ? 'integer' : 'decimal'; info.sci = { ip: i2, fp: f2, ex: ex };
+      } else { q = base; kind = f2.length ? 'decimal' : 'integer'; info.dec = { ip: i2, fp: f2, k: f2.length }; }
+    }
+    if (neg) q = { n: -q.n, d: q.d };
+    var out = { q: q, base: q, kind: kind, pct: pct, info: info, neg: neg };
+    if (pct) out.q = make(q.n, q.d * 100n);
+    return out;
+  }
+  /* Long division of |n| by d, every row recorded: [remainder, remainder x 10, digit, new remainder]. Stops when the remainder is 0, when a remainder comes back (cycleAt = the row where the block starts), or after CAP rows. */
+  function longDiv(q) {
+    var a = abs(q.n), d = q.d, rem = a % d, rows = [], seen = new Map(), CAP = 60, cycleAt = -1, done = false, cut = false;
+    for (;;) {
+      if (rem === 0n) { done = true; break; }
+      var key = String(rem); if (seen.has(key)) { cycleAt = seen.get(key); break; }
+      if (rows.length >= CAP) { cut = true; break; }
+      seen.set(key, rows.length); var r10 = rem * 10n; rows.push([rem, r10, r10 / d, r10 % d]); rem = r10 % d;
+    }
+    return { whole: a / d, rows: rows, cycleAt: cycleAt, done: done, cut: cut };
+  }
+  function pow10name(k) { return k === 1 ? '10' : k === 2 ? '100' : k === 3 ? '1000' : '10^' + k; }
+  function convSteps(P, r) {
+    var st = [], q = P.q, b = P.base, I = P.info, dig = function (x) { return F(x); }, nm = function (x) { return x.n < 0n ? '−' + F({ n: -x.n, d: x.d }) : F(x); };
+    var sgn = P.neg ? '-' : '';
+    if (I.dec) {
+      var k = I.dec.k, digs = (I.dec.ip + I.dec.fp).replace(/^0+(?=\d)/, ''), nn = BigInt('0' + I.dec.ip + I.dec.fp), dd = P10(k);
+      if (k === 0) st.push('The whole number ' + sgn + I.dec.ip + ' is itself a fraction with denominator 1: ' + sgn + nn + '/1.');
+      else {
+        st.push('The decimal ' + sgn + (I.dec.ip || '0') + '.' + I.dec.fp + ' has ' + k + (k === 1 ? ' digit' : ' digits') + ' after the decimal point, so write the digits as a whole number over ' + pow10name(k) + ': ' + sgn + nn + '/' + dd + '.');
+        var g = gcd(nn, dd);
+        if (nn === 0n) st.push('The numerator is 0, so the value is 0.');
+        else if (g > 1n) st.push('The greatest common divisor of ' + nn + ' and ' + dd + ' is ' + g + '. Divide the top and the bottom by ' + g + ': ' + sgn + nn / g + '/' + dd / g + '.');
+        else st.push('The greatest common divisor of ' + nn + ' and ' + dd + ' is 1, so ' + sgn + nn + '/' + dd + ' is already in lowest terms.');
+      }
+    } else if (I.sci) {
+      st.push('Scientific notation: ' + sgn + (I.sci.ip || '0') + (I.sci.fp ? '.' + I.sci.fp : '') + ' × 10^' + I.sci.ex + ' moves the decimal point ' + Math.abs(I.sci.ex) + (Math.abs(I.sci.ex) === 1 ? ' place ' : ' places ') + (I.sci.ex >= 0 ? 'to the right' : 'to the left') + '.');
+      st.push('As an exact fraction in lowest terms: ' + F(b) + '.');
+    } else if (I.rep) {
+      var R = I.rep, a = R.a, bl = R.b;
+      st.push('Let x = ' + sgn + (R.ip || '0') + '.' + R.fp + '(' + R.rp + '). There are ' + a + (a === 1 ? ' digit' : ' digits') + ' before the repeating block and the block ' + R.rp + ' has ' + bl + (bl === 1 ? ' digit' : ' digits') + '.');
+      st.push('Multiply x by 10^' + (a + bl) + ' = ' + P10(a + bl) + ' to move one full block to the left of the point: ' + P10(a + bl) + 'x = ' + R.big + '.(' + R.rp + '). ' + (a === 0 ? 'The block already starts right after the point, so x = ' + R.small + '.(' + R.rp + ') is used as it is.' : 'Multiply x by 10^' + a + ' = ' + P10(a) + ' to move only the digits before the block: ' + P10(a) + 'x = ' + R.small + '.(' + R.rp + ').'));
+      var coef = P10(a + bl) - P10(a), dif = R.big - R.small;
+      st.push('Subtract. The repeating parts cancel: (' + P10(a + bl) + ' − ' + P10(a) + ')x = ' + R.big + ' − ' + R.small + ', so ' + coef + 'x = ' + dif + ', x = ' + raw(dif, coef) + (gcd(dif, coef) > 1n ? ' = ' + F(b.n < 0n ? { n: -b.n, d: b.d } : b) + ' in lowest terms' : '') + '.' + (/^9+$/.test(R.rp) ? ' A block of nines is exactly the next whole step up: 0.(9) is exactly 1, not just close to it.' : '') + (/^0+$/.test(R.rp) ? ' A block of zeros adds nothing, so the decimal ends.' : ''));
+      if (P.neg) st.push('The number was negative, so the fraction is ' + nm(b) + '.');
+    } else if (I.mx) {
+      var imp = I.mx.w * I.mx.d + I.mx.n;
+      st.push(sgn + I.mx.w + ' ' + I.mx.n + '/' + I.mx.d + ' as an improper fraction: whole × denominator + numerator = ' + I.mx.w + ' × ' + I.mx.d + ' + ' + I.mx.n + ' = ' + imp + ', so ' + sgn + imp + '/' + I.mx.d + (gcd(imp, I.mx.d) > 1n ? ' = ' + nm(b) + ' in lowest terms' : '') + '.');
+    } else if (I.fr) {
+      var f = I.fr;
+      if (!f.plain) st.push('Decimals in a fraction are first made exact: ' + f.top + '/' + f.bot.replace(/^-/, '') + ' = ' + F(I.fr.A) + ' ÷ ' + F(I.fr.B.n < 0n ? { n: -I.fr.B.n, d: I.fr.B.d } : I.fr.B) + ' = ' + nm(b) + '.');
+      var g2 = gcd(b.n, b.d), tn = BigInt(f.top.replace('.', '') || '0');
+      if (f.plain) {
+        var den0 = BigInt(f.bot), gg = gcd(tn, den0);
+        if (f.bot[0] === '-') st.push('The denominator is negative. Move the sign to the numerator: ' + sgn + tn + '/' + f.bot + ' = ' + nm(make(P.neg ? -tn : tn, den0)) + '.');
+        if (gg > 1n && tn !== 0n) st.push(f.top + '/' + f.bot.replace(/^-/, '') + ' is not in lowest terms: the greatest common divisor of ' + tn + ' and ' + abs(den0) + ' is ' + gg + ', so it equals ' + nm(b) + '.');
+        else if (!f.bot.startsWith('-')) st.push(f.top + '/' + f.bot + ' is already a fraction' + (tn === 0n ? ': 0 over anything is 0.' : ' in lowest terms.'));
+      }
+    } else st.push('A whole number is a fraction with denominator 1: ' + sgn + b.n + '/1.');
+    if (P.pct) st.push('A percentage means "per 100": ' + (I.dec || I.sci || I.rep ? '' : '') + nm(b) + ' ÷ 100 = ' + nm(q) + '.');
+    /* decimal form */
+    var d = r.decimal;
+    if (q.d === 1n) st.push('The value is a whole number, so the decimal is ' + d.text + '.');
+    else {
+      var t = q.d, v2 = 0, v5 = 0; while (t % 2n === 0n) { t /= 2n; v2++; } while (t % 5n === 0n) { t /= 5n; v5++; }
+      var fac = factor(q.d, 200000), fs = fac && !(fac.length === 1 && fac[0][1] === 1) ? q.d + ' = ' + fstr(fac) : null, prime = fac && fac.length === 1 && fac[0][1] === 1, base2 = (v2 ? '2' + (v2 > 1 ? '^' + v2 : '') : '') + (v2 && v5 ? ' × ' : '') + (v5 ? '5' + (v5 > 1 ? '^' + v5 : '') : '');
+      if (d.exact) st.push('Decimal: divide ' + abs(q.n) + ' by ' + q.d + '. The denominator ' + (fs ? fs : q.d) + ' has no prime factor except 2 and 5, so the decimal ends after ' + Math.max(v2, v5) + (Math.max(v2, v5) === 1 ? ' digit' : ' digits') + ': ' + d.text + '.');
+      else st.push('Decimal: divide ' + abs(q.n) + ' by ' + q.d + '. The denominator ' + (fs ? fs : q.d) + (fs || prime ? '' : ' (after taking out ' + (base2 || 'no factors of 2 or 5') + ', what is left is ' + t + ')') + ' has a prime factor other than 2 and 5, so the decimal never ends; it repeats: ' + d.text + (d.period ? ' (' + (d.preperiod || 0) + (d.preperiod === 1 ? ' digit' : ' digits') + ' before the block, block length ' + d.period + ')' : ' (the block is longer than the digits shown)') + '.');
+    }
+    st.push('Percentage: multiply by 100. ' + F(q) + ' × 100 = ' + r.percent.text + (r.percent.exact ? '.' : ', a repeating percentage.'));
+    if (!r.rounded.exact) st.push('Rounded to ' + r.places + (r.places === 1 ? ' decimal place' : ' decimal places') + ' the decimal is ' + r.rounded.text + '. This is an approximation; the exact value is ' + (d.repeating ? d.text : F(q)) + '.');
+    return st;
+  }
+  /* convert({ expr, places, maxDen }) -> one value in every form, with the working. */
+  function convert(o) {
+    o = o || {}; var src = String(o.expr == null ? '' : o.expr);
+    if (!src.trim()) return { ok: false, empty: true, error: '' };
+    if (src.length > MAX_INPUT) return { ok: false, error: 'The input is longer than ' + MAX_INPUT + ' characters.' };
+    var pl = 6, M = null, ps = o.places == null ? '' : String(o.places).trim(), ms = o.maxDen == null ? '' : String(o.maxDen).trim();
+    if (ps !== '') { if (!/^\d{1,2}$/.test(ps) || +ps > 50) return { ok: false, field: 'places', error: 'Decimal places must be a whole number from 0 to 50.' }; pl = +ps; }
+    if (ms !== '') { if (!/^\d{1,15}$/.test(ms) || /^0+$/.test(ms)) return { ok: false, field: 'maxDen', error: 'The largest denominator must be a whole number of 1 or more, with up to 15 digits.' }; M = BigInt(ms); }
+    var P;
+    try { P = parseConv(src); } catch (e) { if (e instanceof Err) return { ok: false, error: e.message }; throw e; }
+    var q = P.q, r = { ok: true, src: src.trim(), kind: P.kind, pct: P.pct, headline: !P.pct && (P.kind === 'fraction' || P.kind === 'mixed') ? 'decimal' : 'fraction', value: q, frac: F(q), isInteger: q.d === 1n, sign: q.n < 0n ? -1 : q.n === 0n ? 0 : 1, mixed: mixed(q), decimal: decimal(q), percent: percent(q), places: pl };
+    r.rounded = roundDec(q, pl); r.roundedPct = roundDec(make(q.n * 100n, q.d), pl);
+    var ap = !P.pct && P.info.dec ? approxFor(q, P.info.dec.k) : null; r.approx = ap ? { frac: F(ap), n: ap.n, d: ap.d } : null;
+    r.limit = null;
+    if (M !== null) { var lm = limitDen(q, M), df = sub(q, lm); r.limit = { max: String(M), n: lm.n, d: lm.d, frac: F(lm), exact: df.n === 0n, diff: sci(df, 4), diffSign: df.n < 0n ? -1 : df.n === 0n ? 0 : 1 }; }
+    r.division = r.headline === 'decimal' && q.d > 1n ? longDiv(q) : null;
+    r.steps = convSteps(P, r);
+    return r;
+  }
+  /* ---------- Mode 04: mixed numbers ---------- */
+  /* One or two numbers, each a whole number, a fraction or a mixed number (sign at the front only), and one operation. Decimals and percentages
+     belong to Mode 03, longer expressions and brackets to Mode 01. The working reuses the Mode 01 text for the improper-fraction conversion and the
+     operation, then adds the improper-to-mixed division. */
+  function mxClean(src) {
+    return src.replace(/(\d)_(?=\d)/g, '$1 ').replace(/[\u2212\u2013\u2014]/g, '-').replace(/[\u00d7\u00b7*xX]/g, '*').replace(/[\u00f7:]/g, '\u00f7').replace(/[\u2044\u2215]/g, '/').replace(/\u00a0/g, ' ');
+  }
+  function mxOperand(txt, which) {
+    var s = txt.trim(), HOW = 'Use a whole number, a fraction such as 3/4 or a mixed number such as 2 1/3.';
+    if (!s) throw new Err('The ' + which + ' number is empty. ' + HOW);
+    if (s.indexOf('.') >= 0) throw new Err('Decimals are not used in this mode. Convert the decimal to a fraction with the Decimal & Fraction Converter (Mode 03) and enter the fraction here.');
+    if (s.indexOf(',') >= 0) throw new Err('Commas are not used here. Write 1000 instead of 1,000.');
+    if (s.indexOf('%') >= 0) throw new Err('Percentages are not used in this mode. Convert the percentage with the Decimal & Fraction Converter (Mode 03).');
+    var m = /^([+-])?\s*(?:(\d+)\s+(\d+)\s*\/\s*(\d+)|(\d+)\s*\/\s*(\d+)|(\d+))$/.exec(s);
+    if (!m) {
+      if (/\/\s*[+-]/.test(s)) throw new Err('Put the minus sign at the front of the number, as in \u22123/4, not after the fraction bar.');
+      if (/^[+-]?\s*\d+\s+\d+$/.test(s)) throw new Err('Two numbers with a space between them need a fraction bar. A mixed number is written like 2 1/3.');
+      if ((s.match(/\//g) || []).length > 1) throw new Err('A number can have only one fraction bar. Use \u00f7 or a colon to divide, and put one operation between two numbers.');
+      throw new Err('Cannot read \u2018' + s.slice(0, 30) + '\u2019 as a number. ' + HOW);
+    }
+    for (var k = 2; k <= 7; k++) if (m[k] !== undefined && m[k].length > MAX_DIGITS) throw new Err('A number has more than ' + MAX_DIGITS + ' digits. Use a shorter number.');
+    var neg = m[1] === '-', w = null, n, d, kind, text;
+    if (m[2] !== undefined) { w = BigInt(m[2]); n = BigInt(m[3]); d = BigInt(m[4]); kind = 'mixed'; text = w + ' ' + n + '/' + d; }
+    else if (m[5] !== undefined) { n = BigInt(m[5]); d = BigInt(m[6]); text = n + '/' + d; }
+    else { n = BigInt(m[7]); d = 1n; kind = 'whole'; text = String(n); }
+    if (d === 0n) throw new Err('Denominator is zero in ' + (neg ? '-' : '') + text + '. A fraction cannot have 0 as its denominator.');
+    if (!kind) kind = n >= d ? 'improper' : 'proper';
+    var top = w !== null ? w * d + n : n;
+    return { q: make(neg ? -top : top, d), neg: neg, w: w, n: n, d: d, kind: kind, text: (neg ? '-' : '') + text, oddFrac: kind === 'mixed' && n >= d };
+  }
+  function mxNode(o) {
+    var b = { t: 'lit', q: o.q, neg: o.neg, src: o.text };
+    if (o.kind === 'mixed') { b.kind = 'mixed'; b.w = o.w; b.pn = o.n; b.pd = o.d; }
+    else if (o.kind === 'whole') b.kind = 'int';
+    else { b.kind = 'frac'; b.rn = o.n; b.rd = o.d; }
+    return b;
+  }
+  function mxPub(o) {
+    return { text: o.text, kind: o.kind, sign: o.neg ? '-' : '', w: o.kind === 'whole' ? String(o.n) : o.w === null ? '' : String(o.w), n: o.kind === 'whole' ? '' : String(o.n), d: o.kind === 'whole' ? '' : String(o.d), value: F(o.q) };
+  }
+  function mixedCalc(o) {
+    var src = String((o && o.expr) == null ? '' : o.expr);
+    if (!src.trim()) return { ok: false, empty: true, error: '' };
+    if (src.length > MAX_INPUT) return { ok: false, error: 'The input is longer than ' + MAX_INPUT + ' characters.' };
+    try {
+      var s = mxClean(src);
+      if (/\/\s*[+-]/.test(s)) throw new Err('Put the minus sign at the front of the number, as in \u22123/4, not after the fraction bar.');
+      if (/[()]/.test(s)) throw new Err('Brackets are not used in this mode. For longer expressions and brackets use Fraction Arithmetic (Mode 01).');
+      var i0 = -1, seen = false, c;
+      for (var i = 0; i < s.length; i++) { c = s.charAt(i); if (/\d/.test(c)) seen = true; else if (seen && '+-*\u00f7'.indexOf(c) >= 0) { i0 = i; break; } }
+      var A, B = null, op = null;
+      if (i0 < 0) A = mxOperand(s, 'first');
+      else {
+        op = s.charAt(i0); var rest = s.slice(i0 + 1);
+        if (!rest.trim()) throw new Err('A number is missing after the ' + (op === '-' ? '\u2212' : op === '*' ? '\u00d7' : op) + ' sign.');
+        if (/[+\-*\u00f7]/.test(rest.replace(/^\s*[+-]/, ''))) throw new Err('Only one operation at a time here: two numbers and one operation sign. For longer expressions use Fraction Arithmetic (Mode 01).');
+        A = mxOperand(s.slice(0, i0), 'first'); B = mxOperand(rest, 'second');
+      }
+      var st = [];
+      [A, B].forEach(function (x) { if (x && x.oddFrac) st.push(x.text + ': the fraction part ' + x.n + '/' + x.d + ' is itself improper (the numerator is not smaller than the denominator). The number still means ' + x.w + ' + ' + x.n + '/' + x.d + '.'); });
+      var q;
+      if (B) q = evalNode({ t: 'op', op: op, a: mxNode(A), b: mxNode(B) }, st); else { q = A.q; litSteps(mxNode(A), st); }
+      var m = mixed(q), neg = q.n < 0n, a = abs(q.n), kind = q.d === 1n ? 'whole' : a < q.d ? 'proper' : 'improper';
+      if (kind === 'whole') st.push(B || A.kind !== 'whole' ? 'The result reduces to the whole number ' + F(q) + ': the numerator divides exactly by the denominator, so there is no fraction part.' : 'A whole number has no fraction part. As a fraction it is ' + F(q) + '/1.');
+      else if (kind === 'proper') st.push('The result ' + F(q) + ' is a proper fraction: the numerator is smaller than the denominator, so there is no whole part and the mixed form is the fraction itself.');
+      else st.push('Improper fraction to mixed number: divide the numerator by the denominator. ' + a + ' \u00f7 ' + q.d + ' = ' + (a / q.d) + ' remainder ' + (a % q.d) + ', so ' + a + '/' + q.d + ' = ' + (a / q.d) + ' ' + (a % q.d) + '/' + q.d + '.' + (neg ? ' The value is negative, so the minus sign goes in front of the whole mixed number: ' + m.text + '.' : ''));
+      return { ok: true, mode: B ? 'op' : 'convert', op: op, a: mxPub(A), b: B ? mxPub(B) : null, value: q, frac: F(q), mixed: m, decimal: decimal(q), percent: percent(q), steps: st, isInteger: q.d === 1n, resultKind: kind, sign: q.n < 0n ? -1 : q.n === 0n ? 0 : 1 };
+    } catch (e) {
+      if (e instanceof Err) return { ok: false, error: e.message };
+      throw e;
+    }
+  }
+
+  /* ---------- Mode 05: advanced fraction and ratio tools ---------- */
+  /* advCalc({ tool, expr, total }) with tool one of gcdlcm, lcd, compare, ratio, proportion. Whole-number lists are split on commas, semicolons and
+     spaces; fractions on commas and semicolons only (a space belongs to a mixed number); ratio terms on colons or the word "to". Every value is
+     read by the Mode 03 reader (parseConv), so decimals, mixed numbers and percentages work wherever a fraction does. */
+  var AD_MAX = 20, AD_CMP = 12, AD_RATIO = 8;
+  function adQ(item, idx) {
+    try { return parseConv(item).q; } catch (e) { if (e instanceof Err) throw new Err('Item ' + idx + ' (\u2018' + item.slice(0, 30) + '\u2019): ' + e.message); throw e; }
+  }
+  function adList(src, min, max, what) {
+    var parts = src.replace(/([,;])\s*\n\s*/g, '$1').replace(/\s*\n\s*/g, ',').split(/[,;]/).map(function (x) { return x.trim(); });
+    while (parts.length > 1 && parts[parts.length - 1] === '') parts.pop();
+    if (parts.some(function (x) { return x === ''; })) throw new Err('An item is empty. Separate the ' + what + ' with commas and leave nothing between two commas.');
+    if (parts.length < min) throw new Err('Enter at least ' + min + ' ' + what + ', separated by commas.');
+    if (parts.length > max) throw new Err('Enter at most ' + max + ' ' + what + '.');
+    return parts;
+  }
+  function adEuclidText(a, b) {
+    var r = euclid(a, b), rows = r.rows, t = rows.map(function (x) { return x[0] + ' = ' + x[2] + ' \u00d7 ' + x[1] + ' + ' + x[3]; });
+    if (t.length > 8) t = t.slice(0, 3).concat(['\u2026 (' + t.length + ' divisions in all)', t[t.length - 1]]);
+    return { g: r.g, text: t.join('; ') };
+  }
+  function adFactorMaps(nums) {
+    if (nums.some(function (n) { return String(n).length > 15; })) return null;
+    var fs = [];
+    for (var i = 0; i < nums.length; i++) { var f = factor(nums[i], 300000); if (f === null) return null; fs.push(f); }
+    return fs;
+  }
+  function adFactStr(map) {
+    var ps = Object.keys(map).map(function (k) { return BigInt(k); }).sort(function (a, b) { return a < b ? -1 : a > b ? 1 : 0; });
+    return ps.length ? ps.map(function (p) { var e = map[String(p)]; return e > 1 ? p + '^' + e : String(p); }).join(' \u00d7 ') : '1';
+  }
+  function adGcdLcm(src) {
+    var items = src.trim().split(/[,;\s]+/).filter(Boolean), nums = [], neg = false;
+    if (items.length < 2) throw new Err('Enter at least 2 whole numbers, separated by commas or spaces.');
+    if (items.length > AD_MAX) throw new Err('Enter at most ' + AD_MAX + ' numbers.');
+    items.forEach(function (s, i) {
+      s = s.replace(/[\u2212\u2013\u2014]/g, '-');
+      if (/^[+-]?\d*\.\d*$/.test(s) || s.indexOf('/') >= 0 || s.indexOf('%') >= 0) throw new Err('\u2018' + s.slice(0, 30) + '\u2019 is not a whole number. GCD and LCM need whole numbers. For fractions use the LCD tool.');
+      if (!/^[+-]?\d+$/.test(s)) throw new Err('Cannot read \u2018' + s.slice(0, 30) + '\u2019 as a whole number.');
+      if (s.replace(/^[+-]/, '').length > MAX_DIGITS) throw new Err('A number has more than ' + MAX_DIGITS + ' digits. Use a shorter number.');
+      var v = BigInt(s);
+      if (v === 0n) throw new Err('Zero is not allowed here: every number divides 0, so it has no useful GCD, and the LCM with 0 is 0 by convention. Enter whole numbers of 1 or more.');
+      if (v < 0n) { neg = true; v = -v; }
+      nums.push(v);
+    });
+    var st = [], n = nums.length, g = nums[0], l = nums[0], i;
+    if (neg) st.push('Signs are ignored: the GCD and the LCM are taken of the absolute values, ' + nums.join(', ') + '.');
+    for (i = 1; i < n; i++) {
+      var e = adEuclidText(g, nums[i]);
+      st.push((n === 2 ? 'Euclidean algorithm for gcd(' + g + ', ' + nums[i] + '): ' : 'gcd(' + g + ', ' + nums[i] + ') by the Euclidean algorithm: ') + e.text + '. The last non-zero remainder is ' + e.g + ', so gcd(' + g + ', ' + nums[i] + ') = ' + e.g + '.');
+      g = e.g;
+    }
+    for (i = 1; i < n; i++) { var g2 = gcd(l, nums[i]), l2 = l / g2 * nums[i]; st.push('lcm(' + l + ', ' + nums[i] + ') = ' + l + ' \u00f7 gcd(' + l + ', ' + nums[i] + ') \u00d7 ' + nums[i] + ' = ' + l + ' \u00f7 ' + g2 + ' \u00d7 ' + nums[i] + ' = ' + l2 + '.'); l = l2; }
+    if (n === 2) st.push('Check: GCD \u00d7 LCM = ' + g + ' \u00d7 ' + l + ' = ' + (g * l) + ' and ' + nums[0] + ' \u00d7 ' + nums[1] + ' = ' + (nums[0] * nums[1]) + '. For two numbers the two always agree.');
+    st.push(g === 1n ? (n === 2 ? 'The GCD is 1, so the two numbers are coprime (relatively prime): they share no factor except 1, and their LCM is their product.' : 'The GCD is 1: no factor greater than 1 divides all of the numbers.') : 'Every number is divisible by ' + g + ', and ' + g + ' is the largest such number.');
+    var fm = adFactorMaps(nums), table = null, fg = null, fl = null;
+    if (fm) {
+      var maps = fm.map(function (f) { var m = {}; f.forEach(function (x) { m[String(x[0])] = x[1]; }); return m; }), all = {};
+      maps.forEach(function (m) { Object.keys(m).forEach(function (k) { all[k] = 1; }); });
+      var mg = {}, ml = {};
+      Object.keys(all).forEach(function (k) { var lo = Infinity, hi = 0; maps.forEach(function (m) { var e = m[k] || 0; if (e < lo) lo = e; if (e > hi) hi = e; }); if (lo > 0) mg[k] = lo; ml[k] = hi; });
+      fg = adFactStr(mg); fl = adFactStr(ml);
+      table = { title: 'Prime factorisation', head: ['Number', 'Prime factors'], rows: nums.map(function (x, j) { return [String(x), adFactStr(maps[j])]; }).concat([['GCD (lowest power of each shared prime)', fg + ' = ' + g], ['LCM (highest power of every prime)', fl + ' = ' + l]]) };
+      st.push('Prime factors: the GCD takes the lowest power of each prime that all the numbers share (' + fg + ' = ' + g + ') and the LCM takes the highest power of every prime that appears (' + fl + ' = ' + l + ').');
+    }
+    return { ok: true, tool: 'gcdlcm', nums: nums.map(String), gcd: String(g), lcm: String(l), coprime: n === 2 && g === 1n, primes: fm ? { gcd: fg, lcm: fl } : null, big: 'GCD = ' + g + '   \u00b7   LCM = ' + l, results: [['Greatest common divisor (GCD)', String(g), ''], ['Least common multiple (LCM)', String(l), ''], ['How many numbers', String(n), '']], tables: table ? [table] : [], steps: st };
+  }
+  function adLcd(src) {
+    var items = adList(src, 2, AD_MAX, 'fractions'), qs = items.map(function (s, i) { return adQ(s, i + 1); }), st = [], i;
+    var ch = []; qs.forEach(function (q, j) { if (items[j] !== F(q)) ch.push(items[j] + ' = ' + F(q)); });
+    st.push(ch.length ? 'Write every value as a fraction in lowest terms first: ' + ch.join('; ') + (ch.length < qs.length ? '; the others are already in lowest terms.' : '.') : 'Every fraction is already in lowest terms.');
+    var dens = qs.map(function (q) { return q.d; });
+    st.push('The denominators are ' + dens.join(', ') + '.');
+    var L = dens[0];
+    if (dens.every(function (d) { return d === 1n; })) st.push('Every value is a whole number, so the least common denominator is 1.');
+    else {
+      var parts = []; for (i = 1; i < dens.length; i++) { var l2 = lcm(L, dens[i]); parts.push('lcm(' + L + ', ' + dens[i] + ') = ' + l2); L = l2; }
+      st.push('The least common denominator is the least common multiple of the denominators: ' + parts.join('; ') + '. So the LCD is ' + L + '.');
+    }
+    var rows = qs.map(function (q, j) { var m = L / q.d; st.push(F(q) + ': ' + L + ' \u00f7 ' + q.d + ' = ' + m + (m === 1n ? ', so it already has the denominator ' + L + '.' : ', so multiply the top and the bottom by ' + m + ': ' + q.n + ' \u00d7 ' + m + ' = ' + (q.n * m) + ' and ' + q.d + ' \u00d7 ' + m + ' = ' + L + ', giving ' + (q.n * m) + '/' + L + '.')); return [items[j], F(q), String(m), (q.n * m) + '/' + L]; });
+    return { ok: true, tool: 'lcd', lcd: String(L), count: qs.length, rows: rows.map(function (r) { return { src: r[0], lowest: r[1], mult: r[2], equiv: r[3] }; }), big: 'LCD = ' + L, results: [['Least common denominator (LCD)', String(L), ''], ['How many fractions', String(qs.length), '']], tables: [{ title: 'Equivalent fractions over the LCD', head: ['Fraction', 'Lowest terms', 'Multiply top and bottom by', 'Over the LCD'], rows: rows }], steps: st };
+  }
+  function adDecText(q) { var d = decimal(q, 12); return d.text.length <= 40 ? d.text : roundDec(q, 10).text + '\u2026'; }
+  function adCompare(src) {
+    var items = adList(src, 2, AD_CMP, 'values'), qs = items.map(function (s, i) { return adQ(s, i + 1); }), n = qs.length, i, j;
+    var idx = qs.map(function (q, k) { return k; }).sort(function (a, b) { return cmp(qs[a], qs[b]) || a - b; });
+    var rank = qs.map(function (q) { var r = 1; qs.forEach(function (o) { if (cmp(o, q) < 0) r++; }); return r; });
+    var chain = items[idx[0]]; for (i = 1; i < n; i++) chain += (cmp(qs[idx[i - 1]], qs[idx[i]]) === 0 ? ' = ' : ' < ') + items[idx[i]];
+    var lo = qs[idx[0]], hi = qs[idx[n - 1]], diff = sub(hi, lo), allEq = cmp(lo, hi) === 0, L = qs.reduce(function (a, q) { return lcm(a, q.d); }, 1n), st = [];
+    var ch = []; qs.forEach(function (q, k) { if (items[k] !== F(q)) ch.push(items[k] + ' = ' + F(q)); });
+    if (ch.length) st.push('Write every value as a fraction in lowest terms: ' + ch.join('; ') + '.');
+    if (n === 2) {
+      var a = qs[0], b = qs[1], x = a.n * b.d, y = b.n * a.d, sym = x < y ? '<' : x > y ? '>' : '=';
+      st.push('Cross-multiplication: compare ' + F(a) + ' and ' + F(b) + ' by multiplying each numerator by the other denominator (both denominators are positive). ' + a.n + ' \u00d7 ' + b.d + ' = ' + x + ' and ' + b.n + ' \u00d7 ' + a.d + ' = ' + y + '.');
+      st.push(x < y ? x + ' is less than ' + y + ', so ' + F(a) + ' < ' + F(b) + '.' : x > y ? x + ' is greater than ' + y + ', so ' + F(a) + ' > ' + F(b) + '.' : 'The two products are equal, so ' + F(a) + ' = ' + F(b) + ': they are the same value.');
+      chain = items[0] + ' ' + sym + ' ' + items[1];
+    }
+    if (n > 2 || L > 1n) st.push('Over the common denominator ' + L + ' the values are ' + qs.map(function (q) { return (q.n * (L / q.d)) + '/' + L; }).join(', ') + '. With the same denominator, the larger numerator is the larger fraction.');
+    st.push(allEq ? 'All the values are equal.' : 'In order from smallest to largest: ' + chain + '.');
+    if (!allEq) st.push('The difference between the largest (' + F(hi) + ') and the smallest (' + F(lo) + ') is ' + F(diff) + (diff.d > 1n ? ', or ' + mixed(diff).text + ' as a mixed number' : '') + '.');
+    var rows = idx.map(function (k) { var q = qs[k]; return [String(rank[k]), items[k], F(q), adDecText(q), (q.n * (L / q.d)) + '/' + L]; });
+    return { ok: true, tool: 'compare', order: idx.map(function (k) { return k; }), ranks: rank, sorted: idx.map(function (k) { return F(qs[k]); }), smallest: F(lo), largest: F(hi), allEqual: allEq, diff: F(diff), lcd: String(L), relation: n === 2 ? (cmp(qs[0], qs[1]) < 0 ? '<' : cmp(qs[0], qs[1]) > 0 ? '>' : '=') : null, big: chain, results: [['Smallest', F(lo), ''], ['Largest', F(hi), ''], ['Difference (largest \u2212 smallest)', F(diff), ''], ['Common denominator used', String(L), '']], tables: [{ title: 'Values in order, smallest first', head: ['Rank', 'You entered', 'Lowest terms', 'Decimal', 'Over the LCD'], rows: rows }], steps: st };
+  }
+  /* integers a : b : c in lowest terms from non-negative rational terms */
+  function adTerms(qs) {
+    var L = qs.reduce(function (a, q) { return lcm(a, q.d); }, 1n), ints = qs.map(function (q) { return q.n * (L / q.d); }), g = ints.reduce(function (a, x) { return gcd(a, x); }, 0n);
+    return { L: L, scaled: ints, g: g, ints: ints.map(function (x) { return x / g; }) };
+  }
+  function adRatio(src, totalSrc) {
+    var s = src.replace(/\s+to\s+/gi, ':'), items = s.split(':').map(function (x) { return x.trim(); }), i;
+    if (items.length < 2) throw new Err('A ratio needs at least two terms separated by a colon, as in 18 : 24.');
+    if (items.length > AD_RATIO) throw new Err('Enter at most ' + AD_RATIO + ' terms in a ratio.');
+    if (items.some(function (x) { return x === ''; })) throw new Err('A term is missing: write every term between the colons, as in 3 : 4 : 5.');
+    var qs = items.map(function (x, k) { var q = adQ(x, k + 1); if (q.n < 0n) throw new Err('Item ' + (k + 1) + ' (\u2018' + x.slice(0, 30) + '\u2019): ratio terms cannot be negative.'); return q; });
+    if (qs.every(function (q) { return q.n === 0n; })) throw new Err('At least one term must be greater than 0.');
+    var total = null, tt = (totalSrc == null ? '' : String(totalSrc)).trim();
+    if (tt) { try { total = parseConv(tt).q; } catch (e) { if (e instanceof Err) return { ok: false, field: 'total', error: 'The total \u2018' + tt.slice(0, 30) + '\u2019: ' + e.message }; throw e; } if (total.n <= 0n) return { ok: false, field: 'total', error: 'The total to share must be greater than 0.' }; }
+    var T = adTerms(qs), st = [], txt = T.ints.join(' : '), ch = [];
+    qs.forEach(function (q, k) { if (items[k] !== F(q)) ch.push(items[k] + ' = ' + F(q)); });
+    st.push('The ratio is ' + items.join(' : ') + '.' + (ch.length ? ' As fractions: ' + ch.join('; ') + '.' : ''));
+    if (T.L > 1n) st.push('Clear the fractions: multiply every term by ' + T.L + ', the least common multiple of the denominators ' + qs.map(function (q) { return q.d; }).join(', ') + '. This gives ' + T.scaled.join(' : ') + '.');
+    else st.push('Every term is already a whole number.');
+    st.push('Divide every term by the greatest common divisor of ' + T.scaled.join(', ') + ', which is ' + T.g + (T.g === 1n ? '. The ratio is already in lowest terms: ' : ': ') + txt + '.');
+    var sum = T.ints.reduce(function (a, x) { return a + x; }, 0n), shares = T.ints.map(function (x) { return make(x, sum); });
+    st.push('The parts add up to ' + T.ints.join(' + ') + ' = ' + sum + ', so each term is a share of the whole: ' + shares.map(function (q, k) { return T.ints[k] + '/' + sum + (F(q) !== T.ints[k] + '/' + sum ? ' = ' + F(q) : ''); }).join(', ') + '.');
+    var rows = shares.map(function (q, k) { var p = percent(q), r = [String(T.ints[k]), F(q), p.text + (p.exact ? '' : ' (repeating)')]; if (total) { var sh = mul(total, q); r.push(F(sh), adDecText(sh)); } return r; });
+    var head = ['Term', 'Share of the whole', 'Percentage'].concat(total ? ['Share of the total', 'Decimal'] : []);
+    if (total) st.push('Share ' + F(total) + ' in this ratio: each term gets (term \u00f7 ' + sum + ') \u00d7 ' + F(total) + '. ' + shares.map(function (q, k) { return T.ints[k] + '/' + sum + ' \u00d7 ' + F(total) + ' = ' + F(mul(total, q)); }).join('; ') + '. The shares add up to ' + F(total) + '.');
+    var res = [['Simplest ratio', txt, 'lowest terms'], ['Sum of the parts', String(sum), '']], unit = null;
+    if (qs[0].n !== 0n) { unit = qs.map(function (q) { return div(q, qs[0]); }); res.push(['Scaled so the first term is 1', unit.map(F).join(' : '), unit.map(function (q) { return adDecText(q); }).join(' : ')]); }
+    if (items.length === 2 && qs[1].n !== 0n) { var f = div(qs[0], qs[1]); res.push(['First term \u00f7 second term (the ratio as a fraction)', F(f), adDecText(f)]); }
+    return { ok: true, tool: 'ratio', ints: T.ints.map(String), ratio: txt, g: String(T.g), L: String(T.L), sum: String(sum), shares: shares.map(F), unit: unit ? unit.map(F) : null, totalShares: total ? shares.map(function (q) { return F(mul(total, q)); }) : null, big: txt, results: res, tables: [{ title: total ? 'Shares of ' + F(total) : 'Each term as a share of the whole', head: head, rows: rows }], steps: st };
+  }
+  function adProportion(src) {
+    var s = src.replace(/\s+to\s+/gi, ':'), sides = s.split('=');
+    if (sides.length !== 2) throw new Err('Write a proportion with one equals sign, as in 3 : 4 = 9 : x.');
+    var terms = sides[0].split(':').concat(sides[1].split(':')).map(function (x) { return x.trim(); });
+    if (sides[0].split(':').length !== 2 || sides[1].split(':').length !== 2) throw new Err('Each side of a proportion has exactly two terms, as in 3 : 4 = 9 : x.');
+    if (terms.some(function (x) { return x === ''; })) throw new Err('A term is missing: write all four terms, one of them x, as in 3 : 4 = 9 : x.');
+    var unk = -1, k;
+    for (k = 0; k < 4; k++) if (/^[xX?]$/.test(terms[k])) { if (unk >= 0) throw new Err('Only one term can be unknown. Use x for exactly one of the four terms.'); unk = k; }
+    if (unk < 0) throw new Err('Use x (or ?) for the unknown term, as in 3 : 4 = 9 : x.');
+    var q = [null, null, null, null];
+    for (k = 0; k < 4; k++) if (k !== unk) { q[k] = adQ(terms[k], k + 1); if (q[k].n === 0n) throw new Err('Item ' + (k + 1) + ' (\u2018' + terms[k] + '\u2019): a term of 0 cannot be used here, because x would not be determined.'); }
+    var a = q[0], b = q[1], c = q[2], d = q[3], x, formula, nm = ['a', 'b', 'c', 'd'];
+    if (unk === 3) { x = div(mul(b, c), a); formula = 'x = (b \u00d7 c) \u00f7 a'; }
+    else if (unk === 2) { x = div(mul(a, d), b); formula = 'x = (a \u00d7 d) \u00f7 b'; }
+    else if (unk === 1) { x = div(mul(a, d), c); formula = 'x = (a \u00d7 d) \u00f7 c'; }
+    else { x = div(mul(b, c), d); formula = 'x = (b \u00d7 c) \u00f7 d'; }
+    var full = q.slice(); full[unk] = x; var A = full[0], B = full[1], C = full[2], D = full[3], st = [], f = function (t) { return t === unk ? 'x' : F(q[t]); };
+    st.push('The proportion is ' + f(0) + ' : ' + f(1) + ' = ' + f(2) + ' : ' + f(3) + ', which means ' + f(0) + '/' + f(1) + ' = ' + f(2) + '/' + f(3) + '. Name the terms a : b = c : d.');
+    st.push('Cross-multiplication: a \u00d7 d = b \u00d7 c.');
+    var known = full.map(function (v, t) { return t === unk ? 'x' : F(v); });
+    st.push('Substitute: ' + known[0] + ' \u00d7 ' + known[3] + ' = ' + known[1] + ' \u00d7 ' + known[2] + '. Solve for the unknown (term ' + nm[unk] + '): ' + formula + '.');
+    var ls = unk === 3 ? [b, c, a] : unk === 2 ? [a, d, b] : unk === 1 ? [a, d, c] : [b, c, d];
+    st.push('x = (' + F(ls[0]) + ' \u00d7 ' + F(ls[1]) + ') \u00f7 ' + F(ls[2]) + ' = ' + F(mul(ls[0], ls[1])) + ' \u00f7 ' + F(ls[2]) + ' = ' + F(x) + (x.d > 1n ? ' (' + mixed(x).text + ', or ' + decimal(x).text + ' as a decimal)' : '') + '.');
+    var qa = A.n >= 0n && B.n >= 0n && C.n >= 0n && D.n >= 0n;
+    var left = qa ? adTerms([A, B]).ints.join(' : ') : F(div(A, B)) + ' (as a ratio value)', right = qa ? adTerms([C, D]).ints.join(' : ') : F(div(C, D));
+    st.push('Check: a \u00d7 d = ' + F(mul(A, D)) + ' and b \u00d7 c = ' + F(mul(B, C)) + (cmp(mul(A, D), mul(B, C)) === 0 ? ', which are equal. ' : ', which differ. ') + 'The left side simplifies to ' + left + ' and the right side to ' + right + '.');
+    return { ok: true, tool: 'proportion', unknown: nm[unk], value: x, x: F(x), mixed: mixed(x), decimal: decimal(x), percent: percent(x), terms: full.map(F), check: cmp(mul(A, D), mul(B, C)) === 0, big: 'x = ' + F(x), results: [['x (the unknown term ' + nm[unk] + ')', F(x), ''], ['As a mixed number', mixed(x).text, ''], ['As a decimal', decimal(x).text, decimal(x).exact ? 'exact' : 'repeating'], ['Completed proportion', F(A) + ' : ' + F(B) + ' = ' + F(C) + ' : ' + F(D), '']], tables: [], steps: st };
+  }
+
+  /* ---------- Continued fractions (Mode 05 tool): a number to [a0; a1, a2, ...] and back, with every convergent ---------- */
+  var CF_MAX = 3000, CF_SHOW = 30, CF_BUILD = 60;
+  function cfText(a) { return '[' + a[0] + (a.length > 1 ? '; ' + a.slice(1).join(', ') : '') + ']'; }
+  function cfConv(a) { // convergents h/k as BigInt pairs, by h(i) = a(i) h(i-1) + h(i-2)
+    var h1 = 1n, h2 = 0n, k1 = 0n, k2 = 1n, out = [];
+    a.forEach(function (x) { var h = x * h1 + h2, k = x * k1 + k2; out.push([h, k]); h2 = h1; h1 = h; k2 = k1; k1 = k; });
+    return out;
+  }
+  function cfExpand(q) {
+    var n = q.n, d = q.d, a = [], rows = [], k = 0;
+    while (true) {
+      var f = floorDiv(n, d), r = n - f * d; a.push(f); rows.push([n, d, f, r]);
+      if (r === 0n) break; n = d; d = r; k++;
+      if (a.length > CF_MAX) throw new Err('This number needs more than ' + CF_MAX + ' continued fraction terms. Use a shorter number.');
+    }
+    return { a: a, rows: rows };
+  }
+  function adContinued(src) {
+    var s = src.trim().replace(/[\u2212\u2013\u2014]/g, '-'), st = [], q, a, rows, build = false, i;
+    if (s.indexOf('[') >= 0 || s.indexOf(';') >= 0) {
+      build = true;
+      var m = /^\[\s*([^\]]*?)\s*\]$/.exec(s); if (!m) throw new Err('Write a continued fraction in square brackets, as in [3; 7, 15, 1]: the whole part, a semicolon, then the other terms separated by commas.');
+      var body = m[1], semi = body.indexOf(';'), head = semi >= 0 ? body.slice(0, semi) : body, rest = semi >= 0 ? body.slice(semi + 1) : '';
+      var parts = [head.trim()].concat(rest.trim() === '' ? [] : rest.split(',').map(function (x) { return x.trim(); }));
+      if (semi < 0 && parts[0].indexOf(',') >= 0) throw new Err('Put a semicolon after the first term, as in [3; 7, 15, 1].');
+      if (parts.length > CF_BUILD) throw new Err('Enter at most ' + CF_BUILD + ' terms.');
+      a = parts.map(function (x, j) {
+        if (!/^[+-]?\d+$/.test(x)) throw new Err('Term ' + (j + 1) + ' (\u2018' + x.slice(0, 30) + '\u2019) is not a whole number. Every term of a continued fraction is a whole number.');
+        if (x.replace(/^[+-]/, '').length > MAX_DIGITS) throw new Err('A term has more than ' + MAX_DIGITS + ' digits. Use a shorter number.');
+        var v = BigInt(x); if (j > 0 && v < 1n) throw new Err('Term ' + (j + 1) + ' (' + x + ') must be 1 or more. Only the first term can be zero or negative.'); return v;
+      });
+      var cv = cfConv(a), last = cv[cv.length - 1]; q = make(last[0], last[1]);
+      st.push('The continued fraction is ' + cfText(a) + '. Its value is a0 + 1/(a1 + 1/(a2 + \u2026)), which is built from the right.');
+      var acc = { n: a[a.length - 1], d: 1n }, lines = [];
+      if (a.length === 1) st.push('There is only one term, so the value is the whole number ' + a[0] + '.');
+      else {
+        lines.push('start with the last term ' + a[a.length - 1]);
+        for (i = a.length - 2; i >= 0; i--) { var inv = make(acc.d, acc.n); acc = add({ n: a[i], d: 1n }, inv); lines.push('add ' + a[i] + ' to the reciprocal: ' + a[i] + ' + ' + F(inv) + ' = ' + F(acc)); }
+        if (lines.length > 9) lines = lines.slice(0, 3).concat(['\u2026 (' + (a.length - 1) + ' steps in all)'], lines.slice(-2));
+        st.push('Working from the right: ' + lines.join('; ') + '.');
+      }
+      st.push('The value is ' + F(q) + (q.d > 1n ? ' (' + mixed(q).text + ', or ' + adDecText(q) + ' as a decimal).' : '.'));
+      var ex = cfExpand(q).a;
+      if (ex.length !== a.length || ex.some(function (x, j) { return x !== a[j]; })) st.push('Every rational number has two continued fractions, one ending in a term of 1 and one not. The standard form is the one whose last term is greater than 1: ' + cfText(ex) + '.');
+      a = ex; rows = cfExpand(q).rows;
+    } else {
+      q = adQ(s, 1); var E = cfExpand(q); a = E.a; rows = E.rows;
+      var ch = s !== F(q); st.push('Write ' + (ch ? s + ' as the fraction ' : '') + F(q) + (ch ? ' (read exactly).' : '.') + ' A continued fraction comes from the Euclidean algorithm: take the whole part, then invert what is left over and repeat until nothing is left.');
+      if (q.n < 0n) st.push('For a negative number the whole part is rounded down (towards \u2212\u221e), so the remainder is always positive and every later term is positive.');
+      var ln = rows.map(function (r) { return r[0] + ' \u00f7 ' + r[1] + ' = ' + r[2] + (r[3] === 0n ? ', no remainder' : ' remainder ' + r[3]); });
+      if (ln.length > 8) ln = ln.slice(0, 3).concat(['\u2026 (' + ln.length + ' divisions in all)'], ln.slice(-2));
+      st.push('Divide: ' + ln.join('; ') + '.');
+      st.push('The quotients are the terms: ' + cfText(a) + '.');
+    }
+    var C = cfConv(a), shown = Math.min(C.length, CF_SHOW), tr = [];
+    for (i = 0; i < shown; i++) { var c = make(C[i][0], C[i][1]), df = sub(q, c); tr.push([String(i), String(a[i]), F(c), adDecText(c), df.n === 0n ? '0 (exact)' : (df.n > 0n ? '+' : '\u2212') + sci({ n: df.n < 0n ? -df.n : df.n, d: df.d }, 3).replace('e', ' \u00d7 10^')]); }
+    st.push('Convergents are the fractions got by stopping after each term. They follow h(k) = a(k) \u00d7 h(k\u22121) + h(k\u22122) and the same rule for the denominators, starting from 1/0 and 0/1. ' + C.slice(0, Math.min(C.length, 6)).map(function (x, j) { return 'after term ' + j + ': ' + F(make(x[0], x[1])); }).join('; ') + (C.length > 6 ? '; \u2026' : '') + '.');
+    st.push('The convergents are the best rational approximations: no fraction with a smaller denominator gets closer in the sense of the smallest |denominator \u00d7 number \u2212 numerator|. They alternate below and above the number. The last one, ' + F(make(C[C.length - 1][0], C[C.length - 1][1])) + ', is the number itself.');
+    var res = [['Continued fraction', cfText(a), a.length === 1 ? 'a whole number' : (a.length - 1) + ' division' + (a.length === 2 ? '' : 's')], ['Value as a fraction', F(q), q.d > 1n ? mixed(q).text : ''], ['Decimal', adDecText(q), inFlag(q)], ['Number of terms', String(a.length), '']];
+    if (C.length > shown) st.push('Only the first ' + shown + ' of the ' + C.length + ' convergents are listed.');
+    return { ok: true, tool: 'continued', build: build, cf: cfText(a), terms: a.map(String), convergents: C.map(function (x) { return F(make(x[0], x[1])); }), value: F(q), big: cfText(a) + ' = ' + F(q), results: res, tables: [{ title: 'Convergents', head: ['k', 'Term', 'Convergent', 'Decimal', 'Number minus convergent'], rows: tr }], steps: st };
+  }
+  function advCalc(o) {
+    o = o || {}; var src = String(o.expr == null ? '' : o.expr), tool = String(o.tool || '');
+    if (!src.trim()) return { ok: false, empty: true, error: '' };
+    if (src.length > MAX_INPUT) return { ok: false, error: 'The input is longer than ' + MAX_INPUT + ' characters.' };
+    try {
+      if (tool === 'gcdlcm') return adGcdLcm(src);
+      if (tool === 'lcd') return adLcd(src);
+      if (tool === 'compare') return adCompare(src);
+      if (tool === 'ratio') return adRatio(src, o.total);
+      if (tool === 'proportion') return adProportion(src);
+      if (tool === 'continued') return adContinued(src);
+      return { ok: false, error: 'Unknown tool.' };
+    } catch (e) { if (e instanceof Err) return { ok: false, error: e.message }; throw e; }
+  }
+
+  /* ---------- Mode 06: fractional inches and millimetres ---------- */
+  /* One inch is exactly 25.4 mm = 127/5 mm (international inch, 1959), so inch to mm is an exact rational product and mm to inch is exact too, 5/127 of the
+     millimetre value. Only the final choice of a graduation (nearest 1/D inch, or the next one down or up) is a rounding, and its error is reported. */
+  var MMIN = { n: 127n, d: 5n }, IN_DENS = [2, 4, 8, 16, 32, 64, 128, 256], IN_PLACES = 20;
+  var RX_IN = /\s*(?:inches|inch|in|")$/i, RX_MM = /\s*(?:millimetres|millimeters|millimetre|millimeter|mm)$/i;
+  function inRead(src, dir) {
+    var s = src.replace(/[\u2212\u2013\u2014]/g, '-').replace(/[\u2033\u201d\u201c]/g, '"').replace(/\u00a0/g, ' ').trim(), mine = dir === 'in2mm' ? RX_IN : RX_MM, other = dir === 'in2mm' ? RX_MM : RX_IN;
+    if (other.test(s) && !mine.test(s)) throw new Err(dir === 'in2mm' ? 'This tab converts inches to millimetres. Remove the unit or switch to the millimetre to inch tab.' : 'This tab converts millimetres to inches. Remove the unit or switch to the inch to millimetre tab.');
+    s = s.replace(mine, '').trim();
+    var hm = /^([+-]?)\s*(\d+)\s*-\s*(\d+\s*\/\s*\d+)$/.exec(s); if (hm) s = hm[1] + hm[2] + ' ' + hm[3]; // drawing style 1-3/16
+    var P = parseConv(s);
+    if (P.pct) throw new Err('A percentage is not a length. Type a decimal, a fraction or a mixed number, such as 0.75, 3/4 or 1 3/16.');
+    return P;
+  }
+  function inShort(q) { var d = decimal(q, 12); return d.text.length <= 40 ? d.text : roundDec(q, 10).text + '\u2026'; }
+  function inFlag(q) { var d = decimal(q, 12); return d.exact ? 'Exact' : d.repeating && d.period ? 'Repeating decimal, so shown rounded and approximate' : 'Shown rounded and approximate'; }
+  /* Round to p places but keep a terminating decimal that already fits, without padding zeros: { text, exact } */
+  function trimRound(q, p) { var d = decimal(q, 12); if (d.exact && d.digits <= p) return { text: d.text, exact: true }; return roundDec(q, p); }
+  function sgn(q, t) { return q.n > 0n ? '+' + t : t; }
+  function inchCalc(o) {
+    o = o || {}; var src = String(o.expr == null ? '' : o.expr), dir = o.dir === 'mm2in' ? 'mm2in' : 'in2mm';
+    if (!src.trim()) return { ok: false, empty: true, error: '' };
+    if (src.length > MAX_INPUT) return { ok: false, error: 'The input is longer than ' + MAX_INPUT + ' characters.' };
+    var ps = o.places == null ? '' : String(o.places).trim(), pl = dir === 'in2mm' ? 3 : 5, ds = o.maxDen == null ? '64' : String(o.maxDen).trim() || '64', mode = o.round == null || o.round === '' ? 'nearest' : String(o.round);
+    if (ps !== '') { if (!/^\d{1,2}$/.test(ps) || +ps > IN_PLACES) return { ok: false, field: 'places', error: 'Decimal places must be a whole number from 0 to ' + IN_PLACES + '.' }; pl = +ps; }
+    if (!/^\d+$/.test(ds) || IN_DENS.indexOf(+ds) < 0) return { ok: false, field: 'maxDen', error: 'Choose a graduation of 1/2, 1/4, 1/8, 1/16, 1/32, 1/64, 1/128 or 1/256 inch.' };
+    if (['nearest', 'down', 'up'].indexOf(mode) < 0) return { ok: false, field: 'round', error: 'Rounding must be nearest, down or up.' };
+    var P; try { P = inRead(src, dir); } catch (e) { if (e instanceof Err) return { ok: false, error: e.message }; throw e; }
+    var q = P.q, D = +ds, st = [], res = [], tabs = [], r;
+    var intxt = F(q) + (q.d === 1n ? '' : ' (' + mixed(q).text + ')');
+    if (dir === 'in2mm') {
+      var mm = mul(q, MMIN), md = decimal(mm, 40), mr = trimRound(mm, pl), cm = div(mm, make(10n, 1n)), mil = mul(q, make(1000n, 1n)), pow2 = q.d <= 256n && (q.d & (q.d - 1n)) === 0n;
+      st.push('Read the length as ' + F(q) + ' in' + (P.kind === 'mixed' ? ', the improper fraction for ' + mixed(q).text + ' in' : '') + (P.kind === 'decimal' ? ' (a decimal, read exactly)' : '') + '.');
+      st.push('One inch is exactly 25.4 mm, which is 127/5 mm. Multiply: ' + F(q) + ' \u00d7 127/5 = ' + F(make(q.n * 127n, q.d * 5n)) + ' mm.');
+      st.push('Divide to get the decimal: ' + F(mm) + ' mm = ' + md.text + ' mm' + (md.exact ? ' (exact, the expansion ends).' : ' (the expansion repeats, so it is never exact in decimals).'));
+      st.push(mr.exact ? 'Rounded to ' + pl + ' decimal places the value is unchanged: ' + mr.text + ' mm.' : 'Rounded to ' + pl + ' decimal places (halves away from zero): ' + mr.text + ' mm. This is approximate; the exact value is ' + F(mm) + ' mm.');
+      st.push('Check: centimetres are mm \u00f7 10 = ' + decimal(cm).text + ' cm; thousandths of an inch (thou) are inches \u00d7 1000 = ' + decimal(mil).text + '.');
+      res.push(['Millimetres' + (mr.exact ? '' : ' (rounded to ' + pl + ' places)'), mr.text + ' mm', mr.exact ? 'Exact' : 'Rounded and approximate. Exact value: ' + (md.exact ? md.text : F(mm)) + ' mm']);
+      res.push(['Exact value', F(mm) + ' mm', md.exact ? 'Equals ' + md.text + ' mm, exact' : 'Repeating decimal: ' + inShort(mm) + ' mm']);
+      res.push(['Centimetres', inShort(cm) + ' cm', inFlag(cm)]);
+      res.push(['Inches as a decimal', inShort(q) + ' in', inFlag(q)]);
+      res.push(['Inches as a fraction', mixed(q).text + ' in', pow2 || q.d === 1n ? 'A standard rule graduation (denominator ' + q.d + ')' : 'Denominator ' + q.d + ' is not a power of 2, so it is not a mark on an inch rule']);
+      res.push(['Thousandths of an inch (thou)', inShort(mil), inFlag(mil)]);
+      r = { ok: true, dir: dir, kind: P.kind, inches: F(q), inchesMixed: mixed(q).text, mmExact: F(mm), mmDecimal: md.text, mmExactDecimal: md.exact, mmRounded: mr.text, mmRoundedExact: mr.exact, places: pl, cm: decimal(cm).text, thou: decimal(mil).text, standard: pow2 || q.d === 1n, value: mm,
+        big: mixed(q).text + ' in ' + (mr.exact ? '=' : '\u2248') + ' ' + mr.text + ' mm', results: res, tables: tabs, steps: st };
+      return r;
+    }
+    var inn = mul(q, make(5n, 127n)), idr = trimRound(inn, pl), id = decimal(inn, 12), Dq = make(BigInt(D), 1n), sc = mul(inn, Dq), k;
+    if (mode === 'nearest') { var a = abs(sc.n), kk = (2n * a + sc.d) / (2n * sc.d); k = sc.n < 0n ? -kk : kk; } else if (mode === 'down') k = floorDiv(sc.n, sc.d); else k = ceilDiv(sc.n, sc.d);
+    var fr = make(k, BigInt(D)), fmm = mul(fr, MMIN), em = sub(fmm, q), ei = sub(fr, inn), epl = Math.max(pl, 4), emr = trimRound(em, epl), eir = trimRound(ei, Math.max(pl, 5)), exact = em.n === 0n;
+    var mname = mode === 'nearest' ? 'nearest' : mode === 'down' ? 'next one not above the value' : 'next one not below the value';
+    st.push('Read the length as ' + F(q) + ' mm' + (P.kind === 'decimal' ? ' (a decimal, read exactly)' : '') + '.');
+    st.push('One inch is exactly 25.4 mm, so inches = mm \u00f7 25.4 = mm \u00d7 5/127. Multiply: ' + F(q) + ' \u00d7 5/127 = ' + F(inn) + ' in.');
+    st.push('As a decimal: ' + (id.exact ? id.text + ' in (exact).' : 'about ' + idr.text + ' in, rounded to ' + pl + ' places and approximate; the expansion repeats, so ' + F(inn) + ' is the exact value.'));
+    st.push('Rule graduation: 1/' + D + ' in. Multiply the inches by ' + D + ': ' + F(inn) + ' \u00d7 ' + D + ' = ' + F(sc) + ' (about ' + roundDec(sc, 4).text + '). Take the ' + mname + (mode === 'nearest' ? ' (halves away from zero)' : '') + ': ' + k + '.');
+    st.push(k + '/' + D + (fr.d === BigInt(D) ? ' is already in lowest terms.' : ' reduces to ' + F(fr) + ' (divide the top and the bottom by ' + (BigInt(D) / fr.d) + ').') + (mixed(fr).isMixed ? ' As a mixed number: ' + mixed(fr).text + ' in.' : ''));
+    st.push('Convert back to check: ' + F(fr) + ' \u00d7 25.4 = ' + decimal(fmm).text + ' mm. The difference from your value is ' + decimal(fmm).text + ' \u2212 ' + decimal(q, 12).text + ' = ' + (exact ? '0, so the fraction is exact.' : emr.text + ' mm' + (emr.exact ? '' : ' (rounded)') + ' (' + (em.n > 0n ? 'the fraction is longer' : 'the fraction is shorter') + ' than the value).'));
+    res.push(['Inches as a decimal' + (id.exact ? '' : ' (rounded to ' + pl + ' places)'), (id.exact ? id.text : idr.text) + ' in', id.exact ? 'Exact' : 'Rounded and approximate. Exact value: ' + F(inn) + ' in']);
+    res.push(['Fractional inch (1/' + D + ' graduation, ' + mode + ')', mixed(fr).text + ' in', exact ? 'Exact: no rounding was needed' : 'Rounded to a graduation, approximate']);
+    res.push(['Error of the fraction', exact ? '0 mm' : sgn(em, emr.text) + ' mm', exact ? 'The fraction equals the value exactly' : (em.n > 0n ? 'Fraction is larger than the value' : 'Fraction is smaller than the value') + ' (' + sgn(ei, eir.text) + ' in)']);
+    res.push(['Fraction converted back', decimal(fmm).text + ' mm', 'Exact: ' + F(fmm) + ' mm']);
+    res.push(['Exact value in inches', F(inn) + ' in', inShort(inn) + ' in']);
+    var rows = []; IN_DENS.forEach(function (d) {
+      if (d > D) return; var sd = mul(inn, make(BigInt(d), 1n)), kd; if (mode === 'nearest') { var ad = abs(sd.n), kn = (2n * ad + sd.d) / (2n * sd.d); kd = sd.n < 0n ? -kn : kn; } else if (mode === 'down') kd = floorDiv(sd.n, sd.d); else kd = ceilDiv(sd.n, sd.d);
+      var f = make(kd, BigInt(d)), m2 = mul(f, MMIN), e2 = sub(m2, q); rows.push([ '1/' + d, mixed(f).text, decimal(m2).text, e2.n === 0n ? '0' : sgn(e2, trimRound(e2, epl).text) ]);
+    });
+    tabs.push({ title: 'Same length at each graduation (' + mode + ')', head: ['Graduation', 'Fraction (in)', 'That fraction in mm', 'Difference from your value (mm)'], rows: rows });
+    r = { ok: true, dir: dir, kind: P.kind, mm: F(q), inches: F(inn), inchesDecimal: id.text, inchesExact: id.exact, inchesRounded: idr.text, places: pl, maxDen: D, round: mode, k: String(k), fraction: F(fr), fractionMixed: mixed(fr).text, fractionBack: F(fmm), fractionBackDecimal: decimal(fmm).text, errorMm: F(em), errorIn: F(ei), exact: exact, errorSign: em.n < 0n ? -1 : em.n === 0n ? 0 : 1, value: inn,
+      table: rows, big: decimal(q, 12).text.length > 40 ? mixed(fr).text + ' in' : (q.d === 1n || P.kind !== 'fraction' ? decimal(q).text.length <= 40 ? decimal(q).text : roundDec(q, 6).text : F(q)) + ' mm ' + (exact ? '=' : '\u2248') + ' ' + mixed(fr).text + ' in', results: res, tables: tabs, steps: st };
+    return r;
+  }
+
+  var api = { simplify: simplify, euclid: euclid, factor: factor, calc: calc, parse: parse, make: make, add: add, sub: sub, mul: mul, div: div, cmp: cmp, gcd: gcd, lcm: lcm, mixed: mixed, decimal: decimal, percent: percent, fmt: F, MAX_INPUT: MAX_INPUT, convert: convert, roundDec: roundDec, sci: sci, mixedCalc: mixedCalc, inchCalc: inchCalc, MM_PER_INCH: '127/5', limitDen: limitDen, advCalc: advCalc };
+  if (typeof module !== 'undefined' && module.exports) module.exports = api; else root.Fraction = api;
+})(typeof window !== 'undefined' ? window : this);
+
+/* Elecmetric Fraction Calculator: page script for Mode 05 (Advanced Fraction & Ratio Tools). Inlined by tools/fraction_adv_page.js after the engine. */
+(function () {
+  var $ = function (id) { return document.getElementById(id); }, FR = Fraction, E = $('ns-e'), T = $('ns-t'), err = $('ns-err'), out = $('ns-out'), stp = $('ns-steps'), hist = $('ns-hist'), KEY = 'elecmetric.fraction.adv.history', H = [], last = null, timer = 0;
+  var TOOLS = {
+    gcdlcm: { label: 'GCD & LCM', field: 'Whole numbers, separated by commas or spaces', ph: 'e.g. 48, 18, 30', def: '48, 18, 30', hint: 'Two to 20 whole numbers of 1 or more. You get the greatest common divisor and the least common multiple, the Euclidean algorithm and, for numbers that are small enough, the prime factors.' },
+    lcd: { label: 'LCD', field: 'Fractions, separated by commas', ph: 'e.g. 1/6, 3/4, 5/9', def: '1/6, 3/4, 5/9', hint: 'Two to 20 values separated by commas: fractions, mixed numbers such as 1 1/3, whole numbers or decimals. Each is reduced first, then the least common denominator is found.' },
+    compare: { label: 'Compare', field: 'Fractions to compare, separated by commas', ph: 'e.g. 3/4, 5/7', def: '3/4, 5/7', hint: 'Two to 12 values separated by commas: fractions, mixed numbers, decimals or percentages. They are put in order from smallest to largest and compared exactly.' },
+    ratio: { label: 'Ratio', field: 'Ratio, terms separated by a colon', ph: 'e.g. 18 : 24', def: '18 : 24', hint: 'Two to 8 terms separated by colons (or the word to). Fractions and decimals are allowed. Fill in the total to share a quantity in this ratio.' },
+    continued: { label: 'Continued fraction', field: 'A number, or a continued fraction in square brackets', ph: 'e.g. 355/113 or [3; 7, 15, 1]', def: '355/113', hint: 'Type a fraction, mixed number or decimal to get its continued fraction and every convergent, or type a continued fraction such as [3; 7, 15, 1] to get its value. Decimals are read exactly, so 3.14159 is 314159/100000, not pi.' },
+    proportion: { label: 'Proportion', field: 'Proportion with one unknown x', ph: 'e.g. 3 : 4 = 9 : x', def: '3 : 4 = 9 : x', hint: 'Two ratios with an equals sign and exactly one x, in any of the four places, as in 3 : 4 = 9 : x or x : 5 = 2 : 3.' }
+  }, ORDER = ['gcdlcm', 'lcd', 'compare', 'ratio', 'proportion', 'continued'], tool = 'gcdlcm', V = {}, TOT = '';
+  ORDER.forEach(function (k) { V[k] = TOOLS[k].def; });
+  function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
+  function disp(s) { return String(s).replace(/-(?=\d)/g, '\u2212'); }
+  function note(t) { $('ns-note').textContent = t; }
+  function copy(t) { var d = function () { note('Copied'); }; if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(t).then(d, d); else { var a = document.createElement('textarea'); a.value = t; document.body.appendChild(a); a.select(); try { document.execCommand('copy'); } catch (e) {} document.body.removeChild(a); d(); } }
+  function cp(t, l) { return '<button type="button" class="btn2" data-copy="' + esc(t) + '" aria-label="' + l + '">Copy</button>'; }
+  function loadH() { try { var s = JSON.parse(localStorage.getItem(KEY) || '[]'); if (Array.isArray(s)) H = s.filter(function (x) { return x && ORDER.indexOf(x.t) >= 0 && typeof x.e === 'string' && typeof x.r === 'string'; }).slice(0, 10); } catch (e) { H = []; } }
+  function saveH() { try { localStorage.setItem(KEY, JSON.stringify(H)); } catch (e) {} }
+  function drawH() {
+    if (!H.length) { hist.innerHTML = '<p class="note">Your last ten calculations appear here. They are kept only in this browser.</p>'; return; }
+    hist.innerHTML = '<ul class="fh">' + H.map(function (x, i) { return '<li><button type="button" class="chipb" data-h="' + i + '" aria-label="Use again: ' + esc(TOOLS[x.t].label + ' ' + x.e) + '">' + esc(TOOLS[x.t].label + ': ' + disp(x.e) + ' \u2192 ') + '<b>' + esc(disp(x.r)) + '</b></button></li>'; }).join('') + '</ul><button type="button" class="btn2" data-act="clearh">Clear history</button>';
+  }
+  function push(t, e, tot, r) { if (H.length && H[0].t === t && H[0].e === e && (H[0].tot || '') === tot) return; H.unshift({ t: t, e: e, tot: tot, r: r }); H = H.slice(0, 10); saveH(); drawH(); }
+  function mark(el, bad) { el.classList.toggle('bad', bad); el.setAttribute('aria-invalid', String(bad)); }
+  function table(head, rows) { return '<div class="tw" tabindex="0" role="region" aria-label="Scrollable table: ' + esc(head.join(', ')) + '"><table class="ns-t"><thead><tr>' + head.map(function (h) { return '<th>' + esc(h) + '</th>'; }).join('') + '</tr></thead><tbody>' + rows.join('') + '</tbody></table></div>'; }
+  function fail(r) {
+    err.textContent = r.empty ? '' : r.error; mark(E, !r.empty && r.field !== 'total'); mark(T, r.field === 'total');
+    out.innerHTML = ''; last = null; stp.innerHTML = '<p class="note">Enter values above to see the working.</p>';
+  }
+  function setTool(k, keep) {
+    if (!keep) V[tool] = E.value; tool = k; var c = TOOLS[k];
+    Array.prototype.forEach.call(document.querySelectorAll('#ns .advt button'), function (b) { b.setAttribute('aria-pressed', String(b.dataset.tool === k)); });
+    $('ns-lab').textContent = c.field; E.placeholder = c.ph; E.value = V[k]; $('ns-hint').textContent = c.hint; $('ns-tot').hidden = k !== 'ratio';
+    Array.prototype.forEach.call(document.querySelectorAll('#ns .ns-try'), function (g) { g.hidden = g.dataset.tool !== k; });
+    render();
+  }
+  function render() {
+    var r = FR.advCalc({ tool: tool, expr: E.value, total: tool === 'ratio' ? T.value : '' });
+    if (!r.ok) return fail(r);
+    mark(E, false); mark(T, false); err.textContent = '';
+    var rows = r.results.map(function (x, i) { return '<tr><td>' + esc(x[0]) + '</td><td class="r">' + esc(disp(x[1])) + (x[2] ? '<div class="fflag"><span class="ns-flag">' + esc(disp(x[2])) + '</span></div>' : '') + '</td></tr>'; });
+    var line = TOOLS[tool].label + ': ' + E.value.trim() + (tool === 'ratio' && T.value.trim() ? ' (total ' + T.value.trim() + ')' : '') + ' \u2192 ' + r.big;
+    out.innerHTML = '<div class="res"><div class="big">' + esc(disp(r.big)) + cp(r.big, 'Copy result') + '</div></div>' + table(['Result', 'Value'], rows) +
+      r.tables.map(function (t) { return '<h3 class="advh">' + esc(t.title) + '</h3>' + table(t.head, t.rows.map(function (row) { return '<tr>' + row.map(function (c) { return '<td class="r">' + esc(disp(c)) + '</td>'; }).join('') + '</tr>'; })); }).join('') +
+      '<div class="ns-act">' + cp(line, 'Copy the whole result').replace('>Copy<', '>Copy result line<') + '<button type="button" class="btn2" data-act="print">Print</button></div>';
+    last = { t: tool, e: E.value.trim(), tot: tool === 'ratio' ? T.value.trim() : '', r: r.big };
+    stp.innerHTML = '<ol class="steps">' + r.steps.map(function (s) { return '<li>' + esc(disp(s)) + '</li>'; }).join('') + '</ol>';
+    clearTimeout(timer); timer = setTimeout(function () { if (last) push(last.t, last.e, last.tot, last.r); }, 1500);
+  }
+  function commit() { clearTimeout(timer); render(); if (last) push(last.t, last.e, last.tot, last.r); }
+  $('ns').addEventListener('click', function (ev) {
+    var b = ev.target.closest('button'); if (!b) return;
+    if (b.dataset.tool) { if (b.dataset.tool !== tool) setTool(b.dataset.tool); return; }
+    if (b.dataset.copy) { copy(b.dataset.copy); return; }
+    if (b.dataset.h) { var x = H[+b.dataset.h]; if (x) { if (x.t !== tool) V[tool] = E.value; V[x.t] = x.e; T.value = x.tot || ''; if (x.t !== tool) setTool(x.t, true); else { E.value = x.e; render(); } } return; }
+    if (b.dataset.ex) { var o = JSON.parse(b.dataset.ex); E.value = o.v; T.value = o.tot || ''; render(); return; }
+    if (b.dataset.act === 'print') { window.print(); return; }
+    if (b.dataset.act === 'clearh') { H = []; saveH(); drawH(); return; }
+    if (b.dataset.act === 'reset') { ORDER.forEach(function (k) { V[k] = TOOLS[k].def; }); E.value = TOOLS[tool].def; T.value = ''; render(); E.focus(); }
+  });
+  E.addEventListener('input', render); T.addEventListener('input', render);
+  [E, T].forEach(function (el) { el.addEventListener('keydown', function (ev) { if (ev.key === 'Enter') commit(); }); });
+  loadH(); drawH();
+  var h = (location.hash || '').replace('#', ''); if (TOOLS[h]) tool = h;
+  setTool(tool, true);
+})();
+</script><script>try{if("serviceWorker"in navigator&&/^https?:/.test(location.protocol))navigator.serviceWorker.register("../../sw.js")}catch(e){}</script><script id="rp-js">/* Elecmetric Fraction Calculator, Phase 3: professional calculation report.
+   Shared by Modes 01 to 06. tools/fraction_report_install.js inlines CSS, card and script into each built page; the script reads the page's own
+   inputs, result, tables and working from the DOM, so every mode gets the same report without a second calculation path. Runs in the browser only. */
+(function () {
+  var root = document.getElementById('ns') || document.getElementById('nu'); if (!root) return;
+  var pre = root.id, card = document.getElementById('rp-card'); if (!card) return; root.appendChild(card);
+  var $ = function (id) { return document.getElementById(id); };
+  function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
+  function txt(el) { var c = el.cloneNode(true); Array.prototype.forEach.call(c.querySelectorAll('button,.sr-only'), function (b) { b.remove(); }); Array.prototype.forEach.call(c.querySelectorAll('div'), function (d) { var t = d.textContent.trim(); d.textContent = t ? ' (' + t + ')' : ''; }); return c.textContent.replace(/\s+/g, ' ').trim(); }
+  function label(el) {
+    var l = el.id && document.querySelector('label[for="' + el.id + '"]'), t, fs = el.closest('fieldset'), lg = fs && fs.querySelector('legend');
+    if (l) t = txt(l); else if (el.getAttribute('aria-label')) t = el.getAttribute('aria-label'); else { var p = el.closest('label'); t = p ? txt(p) : (el.id || 'Input'); }
+    if (lg) t = txt(lg).replace(/\s*\(.*$/, '') + ': ' + t.toLowerCase(); return t;
+  }
+  function gather() {
+    var out = $(pre + '-out'), res = out ? out.querySelector('.big') : null, inputs = [], sel = [], tables = [], steps = [];
+    var tc = root.querySelector('.ns-card') || root.querySelector('.card');
+    if (tc) {
+      Array.prototype.forEach.call(tc.querySelectorAll('[aria-pressed="true"]'), function (b) { sel.push(txt(b)); });
+      Array.prototype.forEach.call(tc.querySelectorAll('input,select,textarea'), function (el) {
+        if (el.type === 'hidden' || el.type === 'button' || el.type === 'checkbox' && false || el.closest('[hidden]') || (el.offsetParent === null && el.type !== 'radio')) return;
+        var v = el.tagName === 'SELECT' ? (el.options[el.selectedIndex] ? el.options[el.selectedIndex].text : '') : el.value; if (String(v).trim() === '') return;
+        inputs.push([label(el).replace(/\s*:\s*$/, ''), String(v).trim()]);
+      });
+    }
+    if (out) Array.prototype.forEach.call(out.querySelectorAll('table'), function (t) {
+      var h = t.previousElementSibling, title = h && /^H[2-4]$/.test(h.tagName) ? txt(h) : '';
+      if (!title && t.closest('.tw') && t.closest('.tw').previousElementSibling && /^H[2-4]$/.test(t.closest('.tw').previousElementSibling.tagName)) title = txt(t.closest('.tw').previousElementSibling);
+      tables.push({ title: title || (tables.length ? 'Table ' + (tables.length + 1) : 'Results'), head: Array.prototype.map.call(t.querySelectorAll('thead th'), txt), rows: Array.prototype.map.call(t.querySelectorAll('tbody tr'), function (r) { return Array.prototype.map.call(r.children, txt); }) });
+    });
+    var st = $(pre + '-steps'); if (st) Array.prototype.forEach.call(st.querySelectorAll('li'), function (li) { steps.push(txt(li)); });
+    return { ok: !!res && !(out.querySelector('.bad')), result: res ? txt(res) : '', inputs: inputs, sel: sel, tables: tables, steps: steps };
+  }
+  function hash(s) { var h = 2166136261; for (var i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 16777619) >>> 0; } return ('00000000' + h.toString(16)).slice(-8).toUpperCase(); }
+  function stamp(d) { function p(n) { return ('0' + n).slice(-2); } return d.getFullYear() + '-' + p(d.getMonth() + 1) + '-' + p(d.getDate()) + ' ' + p(d.getHours()) + ':' + p(d.getMinutes()); }
+  var meta = ['rp-proj', 'rp-by', 'rp-chk', 'rp-ref', 'rp-note'], KEY = 'elecmetric.fraction.report.meta';
+  function readMeta() { var o = {}; meta.forEach(function (k) { o[k] = $(k).value.trim(); }); return o; }
+  try { var sv = JSON.parse(localStorage.getItem(KEY) || '{}'); ['rp-proj', 'rp-by', 'rp-chk'].forEach(function (k) { if (typeof sv[k] === 'string') $(k).value = sv[k].slice(0, 120); }); } catch (e) {}
+  function saveMeta() { try { var m = readMeta(); localStorage.setItem(KEY, JSON.stringify({ 'rp-proj': m['rp-proj'], 'rp-by': m['rp-by'], 'rp-chk': m['rp-chk'] })); } catch (e) {} }
+  var cur = null;
+  function build() {
+    var g = gather(), m = readMeta(), now = new Date(); if (!g.ok) return null;
+    var key = g.sel.join('|') + '|' + g.inputs.map(function (x) { return x.join('=') }).join('|') + '|' + g.result;
+    var id = 'FR-' + stamp(now).replace(/[^0-9]/g, '').slice(0, 8) + '-' + hash(key);
+    return { g: g, m: m, id: id, when: stamp(now), title: (document.querySelector('main h1') || { textContent: 'Fraction Calculator' }).textContent.trim(), url: location.href.split('#')[0] };
+  }
+  function html(R) {
+    var g = R.g, m = R.m, h = '<header class="rp-h"><div class="rp-brand">ELECMETRIC</div><div class="rp-t"><h2>Calculation report</h2><p>' + esc(R.title) + '</p></div><div class="rp-id"><b>' + esc(R.id) + '</b><br>' + esc(R.when) + '</div></header>';
+    h += '<table class="rp-meta"><tbody><tr><th>Project</th><td>' + esc(m['rp-proj'] || '\u2014') + '</td><th>Reference</th><td>' + esc(m['rp-ref'] || '\u2014') + '</td></tr><tr><th>Prepared by</th><td>' + esc(m['rp-by'] || '\u2014') + '</td><th>Checked by</th><td>' + esc(m['rp-chk'] || '\u2014') + '</td></tr></tbody></table>';
+    h += '<h3>1. Input</h3><table class="rp-t1"><tbody>' + (g.sel.length ? '<tr><th>Tool</th><td>' + esc(g.sel.join(' \u00b7 ')) + '</td></tr>' : '') + g.inputs.map(function (x) { return '<tr><th>' + esc(x[0]) + '</th><td>' + esc(x[1]) + '</td></tr>'; }).join('') + '</tbody></table>';
+    h += '<h3>2. Result</h3><p class="rp-res">' + esc(g.result) + '</p>';
+    g.tables.forEach(function (t) { h += (t.title ? '<h4>' + esc(t.title) + '</h4>' : '') + '<table class="rp-t2"><thead><tr>' + t.head.map(function (c) { return '<th>' + esc(c) + '</th>'; }).join('') + '</tr></thead><tbody>' + t.rows.map(function (r) { return '<tr>' + r.map(function (c) { return '<td>' + esc(c) + '</td>'; }).join('') + '</tr>'; }).join('') + '</tbody></table>'; });
+    if (g.steps.length) h += '<h3>3. Working</h3><ol class="rp-steps">' + g.steps.map(function (s) { return '<li>' + esc(s) + '</li>'; }).join('') + '</ol>';
+    if (m['rp-note']) h += '<h3>' + (g.steps.length ? '4' : '3') + '. Notes</h3><p class="rp-notes">' + esc(m['rp-note']).replace(/\n/g, '<br>') + '</p>';
+    h += '<h3>Method and limits</h3><p class="rp-lim">All fraction arithmetic is exact: numerators and denominators are whole numbers of any length and no floating point is used, so a result is exact unless it is marked rounded or approximate. A decimal that is rounded for display is flagged and the exact value is listed. This sheet records a number; it does not establish engineering accuracy. A real dimension, ratio or rating also needs its units, tolerances and measurement precision, and a result used in design or documentation should be checked by a competent person.</p>';
+    h += '<footer class="rp-f"><span>Elecmetric Fraction Calculator \u00b7 ' + esc(R.url) + '</span><span>Report ' + esc(R.id) + ' \u00b7 calculated in the browser</span></footer>';
+    return h;
+  }
+  function plain(R) {
+    var g = R.g, m = R.m, L = ['ELECMETRIC CALCULATION REPORT', R.title, 'Report ' + R.id + '   ' + R.when, ''];
+    L.push('Project: ' + (m['rp-proj'] || '-') + '   Reference: ' + (m['rp-ref'] || '-')); L.push('Prepared by: ' + (m['rp-by'] || '-') + '   Checked by: ' + (m['rp-chk'] || '-')); L.push('', '1. INPUT');
+    if (g.sel.length) L.push('Tool: ' + g.sel.join(' / ')); g.inputs.forEach(function (x) { L.push(x[0] + ': ' + x[1]); });
+    L.push('', '2. RESULT', g.result);
+    g.tables.forEach(function (t) { L.push('', t.title || 'Table'); L.push(t.head.join(' | ')); t.rows.forEach(function (r) { L.push(r.join(' | ')); }); });
+    if (g.steps.length) { L.push('', '3. WORKING'); g.steps.forEach(function (s, i) { L.push((i + 1) + '. ' + s); }); }
+    if (m['rp-note']) L.push('', 'NOTES', m['rp-note']);
+    L.push('', 'Exact fraction arithmetic (whole numbers of any length, no floating point). This sheet records a number and does not establish engineering accuracy: units, tolerances and measurement precision still apply.', R.url);
+    return L.join('\n');
+  }
+  var sheet = document.createElement('div'); sheet.id = 'rp-sheet'; sheet.className = 'rp-sheet'; sheet.hidden = true; document.body.appendChild(sheet);
+  function msg(t) { $('rp-msg').textContent = t; }
+  function make() { saveMeta(); cur = build(); var pv = $('rp-prev'); if (!cur) { pv.innerHTML = ''; pv.hidden = true; msg('Enter a valid value in the calculator above first. A report needs a result.'); return null; } msg(''); pv.innerHTML = html(cur); pv.hidden = false; return cur; }
+  card.addEventListener('click', function (ev) {
+    var b = ev.target.closest('button'); if (!b) return; var a = b.dataset.rp; if (!a) return;
+    var R = make(); if (!R) return;
+    if (a === 'print') { sheet.innerHTML = html(R); sheet.hidden = false; document.body.classList.add('rp-printing'); var done = function () { document.body.classList.remove('rp-printing'); sheet.hidden = true; window.removeEventListener('afterprint', done); }; window.addEventListener('afterprint', done); window.print(); setTimeout(function () { if (document.body.classList.contains('rp-printing') && !window.matchMedia('print').matches) done(); }, 1500); }
+    else if (a === 'copy') { var t = plain(R), ok = function () { msg('Report copied as text.'); }; if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(t).then(ok, ok); else { var ta = document.createElement('textarea'); ta.value = t; document.body.appendChild(ta); ta.select(); try { document.execCommand('copy'); } catch (e) {} ta.remove(); ok(); } }
+    else if (a === 'save') { try { var bl = new Blob([plain(R) + '\n'], { type: 'text/plain;charset=utf-8' }), u = URL.createObjectURL(bl), l = document.createElement('a'); l.href = u; l.download = R.id + '.txt'; document.body.appendChild(l); l.click(); l.remove(); setTimeout(function () { URL.revokeObjectURL(u); }, 2000); msg('Saved ' + R.id + '.txt'); } catch (e) { msg('This browser could not save the file. Use Copy as text.'); } }
+  });
+  meta.forEach(function (k) { $(k).addEventListener('input', function () { if (!$('rp-prev').hidden) make(); }); });
+  window.__fractionReport = { gather: gather, plain: function () { var R = build(); return R ? plain(R) : null; } };
+})();
+</script></body></html>

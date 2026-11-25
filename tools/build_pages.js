@@ -234,15 +234,16 @@ function inputRows(def, raw, hide) {
 const socialImg = () => BASE ? '<meta property="og:image" content="' + BASE + '/og-image.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Elecmetric: electrical engineering calculators with formulas and working shown"><meta name="twitter:image" content="' + BASE + '/og-image.png">' : '';
 /* Content-Security-Policy as a meta tag (GitHub Pages cannot send headers). Nothing may leave the origin: no remote scripts, styles, fonts, images or requests. Inline script and style stay allowed because every page carries its own. */
 const CSP_META = "<meta http-equiv=\"Content-Security-Policy\" content=\"default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'\">";
+const TOOL_UX = require('./tool_ux.js');
 function page(slug, h1, desc, body, extraHead, tail, o) {
   o = o || {};
   const url = o.url !== undefined ? o.url : (BASE ? BASE + '/pages/' + slug + '.html' : ''), up = o.prefix !== undefined ? o.prefix : '../';
-  const title = h1 + ' | Elecmetric';
+  const title = o.title || (h1 + ' | Elecmetric');
   return '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">'+ CSP_META +
     '<title>' + esc(title) + '</title><meta name="description" content="' + esc(desc) + '">' + (url ? '<link rel="canonical" href="' + url + '">' : '') +
     '<meta property="og:title" content="' + esc(title) + '"><meta property="og:description" content="' + esc(desc) + '"><meta property="og:type" content="website"><meta property="og:site_name" content="Elecmetric">' + (url ? '<meta property="og:url" content="' + url + '">' + socialImg() : '') +
     '<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="' + esc(title) + '"><meta name="twitter:description" content="' + esc(desc) + '">' +
-    '<meta name="theme-color" content="#043B79"><link rel="icon" href="' + up + 'icon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="' + up + 'apple-touch-icon.png"><link rel="manifest" href="' + up + 'manifest.webmanifest">' + (extraHead || '') + '<style>' + CSS + '</style></head><body>' + body + (tail || '') + '<script>try{if("serviceWorker"in navigator&&/^https?:/.test(location.protocol))navigator.serviceWorker.register("' + up + 'sw.js")}catch(e){}</script></body></html>';
+    '<meta name="theme-color" content="#043B79"><link rel="icon" href="' + up + 'icon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="' + up + 'apple-touch-icon.png"><link rel="manifest" href="' + up + 'manifest.webmanifest">' + (extraHead || '') + '<style>' + CSS + TOOL_UX.CSS + '</style></head><body>' + body + (tail || '') + '<script>try{if("serviceWorker"in navigator&&/^https?:/.test(location.protocol))navigator.serviceWorker.register("' + up + 'sw.js")}catch(e){}</script></body></html>';
 }
 const CSS = '.fb textarea{width:100%;font:15px/1.5 var(--body);padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--field);color:var(--ink);resize:vertical}.fb textarea:focus{outline:2px solid var(--gold);outline-offset:1px}:root{--bg:#F1F6FC;--surface:#fff;--ink:#0A2347;--muted:#4B5F86;--line:#D3DFEF;--navy:#043B79;--on-navy:#FFFFFF;--gold:#B34A00;--gold-fill:#FFEFDC;--field:#F4F8FE;--err:#B3261E;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;--display:"Arial Narrow","Roboto Condensed",system-ui,sans-serif;--body:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--navy-2:#0A5BBB;--cyan:#0062DE;--num:#043B79;--orange:#FF7A00;--gold-grad:linear-gradient(135deg,#FFA43D 0%,#FF7A00 52%,#E85F00 100%);--hero:radial-gradient(1000px 360px at 90% -35%,rgba(0,98,222,.55),transparent 62%),radial-gradient(640px 240px at 0% 110%,rgba(255,122,0,.20),transparent 60%),linear-gradient(135deg,#032A58,#043B79 58%,#0A55A8);--r:14px;--sh-0:0 1px 2px rgba(4,35,80,.06);--sh-1:0 1px 2px rgba(4,35,80,.05),0 6px 18px rgba(4,35,80,.07);--sh-2:0 2px 4px rgba(4,35,80,.05),0 22px 44px -14px rgba(4,35,80,.24);--ring:0 0 0 3px rgba(0,98,222,.26);color-scheme:light dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}' +
   '@media(prefers-color-scheme:dark){:root{--bg:#04122B;--surface:#0A2046;--ink:#EAF2FF;--muted:#A0B5DA;--line:#183868;--navy:#031B3F;--on-navy:#EAF2FF;--gold:#FF9A3D;--gold-fill:#3D2410;--field:#071B3C;--err:#FF8A80;--navy-2:#0B4A98;--cyan:#4DA3FF;--orange:#FF8A1F;--num:#FFB066;--sh-0:0 1px 2px rgba(0,0,0,.4);--sh-1:0 1px 2px rgba(0,0,0,.35),0 8px 22px rgba(0,0,0,.35);--sh-2:0 2px 4px rgba(0,0,0,.4),0 24px 48px -14px rgba(0,0,0,.7);--ring:0 0 0 3px rgba(77,163,255,.34)}}' +
@@ -256,10 +257,12 @@ const CSS = '.fb textarea{width:100%;font:15px/1.5 var(--body);padding:10px 12px
   'code,pre,.f,td.n{font-family:var(--mono)}.f{background:var(--field);border:1px solid var(--line);padding:10px 12px;border-radius:4px;overflow-x:auto;white-space:pre-wrap}ol.steps{padding-left:22px;font-family:var(--mono);font-size:13px}ol.steps li{margin:4px 0}' +
   '.tw{overflow-x:auto}table{border-collapse:collapse;width:100%;background:var(--surface)}th,td{border:1px solid var(--line);padding:6px 10px;text-align:left}td.n{text-align:right}tr.me td{background:var(--gold-fill)}th{background:var(--field);font-weight:600}.note{color:var(--muted);font-size:13px}ul{padding-left:20px}footer{border-top:1px solid var(--line);color:var(--muted);font-size:13px;padding-block:16px}' +
   'h3{font:600 16px var(--body);margin:18px 0 4px}h3+p{margin:0;max-width:68ch}' +
+  '.tres .tact{flex:0 0 100%;display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}@media print{.tact{display:none}}' +
   '.tres .phasor{flex:0 0 100%;margin-top:12px}.phasor svg{display:block;width:100%;max-width:360px;height:auto;font:11px var(--body)}' +
+  '.arow{grid-column:1/-1;border:1px solid var(--line);border-radius:10px;padding:10px 12px 12px;margin:0}.arow[hidden]{display:none}.arow legend{font-weight:700;font-size:13px;padding:0 6px}.arow .tgrid{margin-top:2px}.arow-bar{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:8px;align-items:center}.arow-bar .note{margin:0}.arow .rm{margin-top:10px}.mgrid{margin-top:10px}.mgrid .mbody[hidden]{display:none}.mgrid .tgrid{margin-top:8px}.mgrid .fillm{margin-top:10px}.tres .rchart{flex:0 0 100%;margin-top:12px}.rchart svg{display:block;width:100%;height:auto;font:12px var(--body)}.rchart h3{margin:0 0 6px;font-size:14px}.tres .carry{flex:0 0 100%;margin-top:10px}.carry .chip{display:inline-block;margin:4px 6px 0 0}.arow .rm[hidden],#add-row[hidden]{display:none}@media print{.arow-bar,.arow .rm{display:none}}' +
   '.tgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px 16px}.tgrid label{display:block;font-weight:600;font-size:13px;margin-bottom:4px}.trow{display:flex;gap:6px}.trow input,.trow select,.tgrid>div>select{font:16px var(--body);color:var(--ink);background:var(--field);border:1px solid var(--line);border-radius:4px;padding:8px;min-height:40px}.trow input{flex:1;min-width:0}.tgrid>div>select{width:100%}.hint{color:var(--muted);font-size:12px;margin-top:3px}.err{color:var(--err)}.tres{display:flex;flex-wrap:wrap;gap:6px 28px;align-items:baseline}.tres .big small{display:block;font:500 13px var(--body);color:var(--muted)}' +
   fs.readFileSync(path.join(__dirname, 'premium_static.css'), 'utf8').replace(/\n/g, '');
-const HEAD = (rootPrefix) => '<header><div class="w"><a class="brand" href="' + rootPrefix + '"><img src="' + rootPrefix + 'logo.png" alt="Elecmetric" width="160" height="40"></a><nav><a href="index.html">All conversions</a><a href="' + rootPrefix + 'index.html#verification">How it is verified</a></nav></div></header>';
+const HEAD = (rootPrefix) => '<header><div class="w"><a class="brand" href="' + rootPrefix + '"><img src="' + rootPrefix + 'logo.png" alt="Elecmetric" width="160" height="40"></a><nav><a href="index.html">All conversions</a><a href="' + rootPrefix + 'converters/index.html">Conversion Centre</a><a href="' + rootPrefix + 'calculators/">Calculators</a><a href="' + rootPrefix + 'calculators/all-tools/">All Tools</a><a href="' + rootPrefix + 'index.html#verification">How it is verified</a></nav></div></header>';
 /* Site footer navigation: five link columns, then the disclaimer. `up` is the relative path back to the site root ('' , '../' or '../../').
    Every target below is a page the build writes, so the deploy guard still checks them. Calculator categories come from the same list as the hubs. */
 /* Opened straight from disk (file://), a link to a folder shows a directory listing instead of its index.html, so this script opens index.html for any link to a folder (logo, top nav, footer) in that case only. On a web server nothing changes. */
@@ -275,10 +278,10 @@ function megaFooter(up, extra) {
     col('Popular calculators', 'calculators/', [['cable-size', 'Cable Size'], ['voltage-drop', 'Voltage Drop'], ['breaker-size', 'Breaker Size'], ['motor-current', 'Motor Current'], ['transformer-sizing', 'Transformer Sizing'], ['earth-resistance', 'Earth Resistance'], ['pf-correction-kvar', 'Power Factor Correction'], ['generator-sizing', 'Generator Sizing'], ['battery-bank-sizing', 'Battery Bank Sizing'], ['pv-energy', 'Solar PV Energy']].map(([s, t]) => a('calculators/' + s + '/', t))) +
     col('Conversions', 'converters/index.html', [a('pages/index.html', 'Electrical conversions'), a('pages/kw-to-amps.html', 'kW to Amps'), a('pages/amps-to-kw.html', 'Amps to kW'), a('pages/kva-to-kw.html', 'kVA to kW'), a('pages/watts-to-amps.html', 'Watts to Amps'), a('converters/length-converter.html', 'Length'), a('converters/power-converter.html', 'Power'), a('converters/energy-converter.html', 'Energy'), a('converters/temperature-converter.html', 'Temperature'), a('pages/wire-gauge.html', 'AWG to mm\u00b2')]) +
     col('Formulas', 'converters/index.html', [a('converters/ohms-law-formulas.html', 'Ohm\u2019s Law formulas'), a('converters/kirchhoffs-laws.html', 'Kirchhoff\u2019s laws'), a('converters/cable-sizing-formulas.html', 'Cable sizing formulas'), a('converters/circuit-breaker-formulas.html', 'Circuit breaker formulas'), a('converters/ac-circuit-formulas.html', 'AC circuit formulas'), a('converters/battery-formulas.html', 'Battery formulas')]) +
-    col('Elecmetric', '', [a('calculators/basic-calculator/', 'Basic Calculator'), a('calculators/scientific-calculator/', 'Scientific Calculator'), a('index.html#verification', 'How it is verified'), a('privacy.html', 'Privacy'), a('terms.html', 'Terms'), mail]);
+    col('Elecmetric', '', [a('calculators/basic-calculator/', 'Basic Calculator'), a('calculators/scientific-calculator/', 'Scientific Calculator'), a('index.html#verification', 'How it is verified'), a('privacy.html', 'Privacy'), a('terms.html', 'Terms'), a('technical-library/', 'Technical Library'), mail]);
   return '<footer class="mf"><div class="mf-w"><div class="mf-grid" role="navigation" aria-label="Site map">' + grid + '</div><div class="mf-legal">' +
     'Results are computed by the same tested engine as the calculators in Elecmetric and are for estimating. Check design values against the standard and the equipment data you work to.' + (extra || '') +
-    '<br>' + attribution() + '<br>&copy; ' + (SITE_INFO.legal_updated ? esc(SITE_INFO.legal_updated.slice(0, 4)) + ' ' : '') + (SITE_INFO.operator_name ? esc(SITE_INFO.operator_name) + ' (Elecmetric)' : 'Elecmetric') + ' &middot; <a href="' + up + 'privacy.html">Privacy</a> &middot; <a href="' + up + 'terms.html">Terms</a></div></div>' + FOOT_FILE_JS + TOP_BTN + TOP_JS + '</footer>';
+    '<br>' + attribution() + '<br>&copy; ' + (SITE_INFO.legal_updated ? esc(SITE_INFO.legal_updated.slice(0, 4)) + ' ' : '') + (SITE_INFO.operator_name && SITE_INFO.operator_name.trim().toLowerCase() !== 'elecmetric' ? esc(SITE_INFO.operator_name) + ' (Elecmetric)' : 'Elecmetric') + ' &middot; <a href="' + up + 'privacy.html">Privacy</a> &middot; <a href="' + up + 'terms.html">Terms</a></div></div>' + FOOT_FILE_JS + TOP_BTN + TOP_JS + '</footer>';
 }
 const FOOT = (up) => feedbackBlock() + megaFooter(up);
 const table = (head, rows, hi, label) => '<div class="tw" tabindex="0" role="region" aria-label="Scrollable table: ' + (label ? esc(label) + ': ' : '') + head.map((h) => esc(h)).join(', ') + '"><table><thead><tr>' + head.map((h) => '<th>' + esc(h) + '</th>').join('') + '</tr></thead><tbody>' + rows.map((r, i) => '<tr' + (i === hi ? ' class="me"' : '') + '>' + r.map((c, j) => '<td' + (j ? ' class="n"' : ' class="n"') + '>' + esc(c) + '</td>').join('') + '</tr>').join('') + '</tbody></table></div>';
@@ -375,7 +378,7 @@ function pageLd(h1, slug, desc, faq) {
   return ldScript({ '@context': 'https://schema.org', '@graph': slug === 'index' ? [bc] : [bc, APP_LD(h1, BASE + '/pages/' + slug + '.html', desc)].concat(faq && faq.length ? [FAQ_LD(faq)] : []) });
 }
 /* The part of index.html's head that needs the site address. Kept between markers so the committed file is the same with or without BASE_URL. */
-const HOME_DESC = 'Electrical engineering calculators and design tools: cable sizing, motors, transformers, protection, earthing and solar PV, with formulas and working shown.';
+const HOME_DESC = 'Explore free online calculators and tools for engineering, mathematics, science and everyday calculations. Calculate, convert and understand results with formulas and worked examples.';
 function indexSeo() {
   if (!BASE) return '';
   const url = BASE + '/', d = HOME_DESC;
@@ -387,15 +390,73 @@ const BROWSE_RE = /<!--browse:start-->[\s\S]*?<!--browse:end-->/;
 const POPULAR = ['amps-to-kw', 'kva-to-kw', 'kw-to-amps', 'watts-to-amps', 'ohms-law', 'voltage-drop', 'power-factor', 'wire-gauge'];
 /* Pages with no shared unit to match on, linked by hand from the nearest topics. */
 const EXTRA_SIBS = { 'ohms-law': ['power-calculator'], 'watts-volts-amps-ohms': ['power-calculator'], 'power-factor': ['power-calculator'] };
-const MORE_TOOLS = [['calculators/basic-calculator/', 'Basic calculator'], ['calculators/scientific-calculator/', 'Scientific calculator'], ['converters/wire-gauge-converter.html', 'AWG and SWG wire gauge converter'], ['converters/number-base-converter.html', 'Number base converter'], ['converters/scientific-notation-converter.html', 'Scientific notation converter'], ['converters/dms-converter.html', 'DMS to decimal degrees converter'], ['converters/dbm-converter.html', 'dBm to watts converter'], ['converters/db-converter.html', 'dB to ratio converter'], ['converters/binary-calculator.html', 'Binary calculator'], ['converters/si-prefix-converter.html', 'SI prefix converter'], ['converters/resistor-color-code.html', 'Resistor color code calculator'], ['converters/ohms-law-formulas.html', 'Ohm\u2019s law formulas'], ['converters/coulombs-law.html', 'Coulomb\u2019s law calculator'], ['converters/kirchhoffs-laws.html', 'Kirchhoff\u2019s laws'], ['converters/electrical-symbols.html', 'Electrical symbols'], ['calculators/agl-ccr-loading/', 'AGL CCR loading calculator'], ['pages/energy-consumption.html', 'Energy consumption calculator']];
+/* Standalone digital-logic and code tools (Modes 03, 06, 09). Each page is built by its own script (tools/binlogic_page.js, codes_page.js, chars_page.js, rng_page.js), not by this generator, so build_pages.js only links to them and lists them in the sitemap. */
+/* The standalone calculators are registered once, in tools/site_pages.json (loader and checks: tools/site_pages.js); this list is derived from it. */
+const SITE = require('./site_pages.js');
+/* One source for every calculator total the site shows, so the figures on the home page, the calculator hub and All Tools cannot drift apart.
+   engine = calculators run by the engine (tools/master_register.json); own = those with their own calculator page; via = those reached through conversion pages;
+   standalone = tools with their own page script (tools/site_pages.json); calculators = engine + standalone (the All Tools figure). */
+const COUNTS = (() => {
+  const R = JSON.parse(fs.readFileSync(path.join(__dirname, 'master_register.json'), 'utf8'));
+  const engine = R.tools.length, own = R.tools.filter((t) => t.url.indexOf('/calculators/') === 0).length, standalone = SITE.pages.filter((p) => p.includeInAllTools).length;
+  return { engine, own, via: engine - own, standalone, calculators: engine + standalone };
+})();
+const STANDALONE_TOOLS = SITE.standalone.map((t) => [t.id, t.name]);
+/* Pages that replace a registry-generated page at the same address when the files are written (source kept in tools/standalone/, because the generated page lives at the output path). */
+const STANDALONE_OVERRIDES = ['matrix-calculator', 'quadratic-solver', 'logarithm', 'ratio-calculator'];
+const STANDALONE_SLUGS = STANDALONE_TOOLS.map((t) => t[0]);
+const MORE_TOOLS_BASE = [['calculators/basic-calculator/', 'Basic calculator'], ['calculators/scientific-calculator/', 'Scientific calculator'], ['converters/wire-gauge-converter.html', 'AWG and SWG wire gauge converter'], ['converters/number-base-converter.html', 'Number base converter'], ['converters/scientific-notation-converter.html', 'Scientific notation converter'], ['converters/dms-converter.html', 'DMS to decimal degrees converter'], ['converters/dbm-converter.html', 'dBm to watts converter'], ['converters/db-converter.html', 'dB to ratio converter'], ['converters/binary-calculator.html', 'Binary calculator'], ['converters/si-prefix-converter.html', 'SI prefix converter'], ['converters/resistor-color-code.html', 'Resistor color code calculator'], ['converters/ohms-law-formulas.html', 'Ohm\u2019s law formulas'], ['converters/coulombs-law.html', 'Coulomb\u2019s law calculator'], ['converters/kirchhoffs-laws.html', 'Kirchhoff\u2019s laws'], ['converters/electrical-symbols.html', 'Electrical symbols'], ['calculators/agl-ccr-loading/', 'AGL CCR loading calculator'], ['pages/energy-consumption.html', 'Energy consumption calculator']];
+/* Registered pages flagged homepageFeatured join the curated list when it does not already name them. */
+const MORE_TOOLS = MORE_TOOLS_BASE.concat(SITE.pages.filter((t) => t.homepageFeatured && !MORE_TOOLS_BASE.some((x) => x[0] === 'calculators/' + t.id + '/')).map((t) => ['calculators/' + t.id + '/', t.name]));
+/* Maths and number tools shown on the home page. Standalone pages in calculators/, so they must be linked by hand. */
+const MATHS_TOOLS = [['calculators/matrix-calculator/', 'Matrix Calculator'], ['calculators/fraction-arithmetic/', 'Fraction Arithmetic Calculator'], ['calculators/percentage-calculator/', 'Percentage Calculator'], ['calculators/random-number-generator/', 'Random Number Generator'], ['calculators/number-system-converter/', 'Universal Number System Converter'], ['calculators/engineering-mathematics/', 'All engineering maths tools']];
+const MATHS_GROUPS = [["Number systems and codes", [["hex-calculator", "Hex Calculator"], ["binary-arithmetic-calculator", "Binary Arithmetic Calculator"], ["bcd-converter", "BCD Converter"], ["gray-code-converter", "Gray Code Converter"], ["ascii-converter", "ASCII Converter"], ["unicode-converter", "Unicode Converter"]]], ["Fractions and ratios", [["fraction-arithmetic", "Fraction Arithmetic Calculator"], ["fraction-simplifier", "Fraction Simplifier"], ["decimal-fraction-converter", "Decimal and Fraction Converter"], ["mixed-number-calculator", "Mixed Number Calculator"], ["fraction-ratio-tools", "Advanced Fraction and Ratio Tools"], ["ratio-calculator", "Ratio Calculator"], ["proportion-calculator", "Proportion Calculator"], ["equivalent-ratio-calculator", "Equivalent Ratio Calculator"], ["gcf-calculator", "GCF Calculator"], ["gcf-prime-factorisation-calculator", "GCF by Prime Factorisation Calculator"], ["fractional-inch-converter", "Fractional Inch to mm Converter"]]], ["Percentages, errors and tolerance", [["basic-percentage-calculator", "Basic Percentage Calculator"], ["percentage-increase-decrease-calculator", "Percentage Increase and Decrease Calculator"], ["percentage-difference-calculator", "Percentage Difference Calculator"], ["percentage-error-calculator", "Percentage Error Calculator"], ["percent-error-calculator", "Percent Error Calculator"], ["signed-error-analysis", "Signed Error Calculator"], ["tolerance-verification", "Tolerance Verification Calculator"], ["batch-measurement-analysis", "Batch Measurement Analysis Calculator"], ["engineering-measurement-analysis", "Engineering Measurement Analysis Calculator"], ["engineering-percentage-calculator", "Engineering Percentage Calculator"], ["sequential-discount-markup-calculator", "Sequential Percentage, Discount and Markup Calculator"]]], ["Decay and half-life", [["half-life-calculator", "Half-Life Calculator"], ["decay-constant-calculator", "Decay Constant Calculator"], ["decay-percentage-calculator", "Decay Percentage Calculator"], ["decay-table-calculator", "Decay Table & Graph Calculator"]]], ["Quadratic equations", [["quadratic-solver", "Quadratic Formula Calculator"], ["discriminant-calculator", "Discriminant Calculator"], ["parabola-graph", "Parabola Graph & Vertex Calculator"], ["exact-roots", "Factoring and Vertex Form Calculator"], ["engineering-quadratic", "Engineering Quadratic Equation Solver"]]], ["Roots and radicals", [["square-root-calculator", "Square Root Calculator"], ["cube-root-calculator", "Cube Root Calculator"], ["nth-root-calculator", "nth Root Calculator"]]], ["Exponents and powers", [["exponent-calculator", "Exponent Calculator"], ["negative-fractional-exponents-calculator", "Negative and Fractional Exponents Calculator"], ["exponent-solver", "Exponent Solver"], ["exponent-laws-calculator", "Exponent Laws Calculator"], ["engineering-powers-scientific-notation", "Engineering Powers & Scientific Notation"]]], ["Logarithms", [["logarithm", "Log Calculator"], ["antilog-calculator", "Antilog Calculator"], ["log-solver", "Log Solver"], ["log-rules", "Logarithm Rules Calculator"]]], ["Large numbers", [["big-number-calculator", "Big Number Calculator"]]], ["Factors and number theory", [["factor-calculator", "Factor Calculator"]]], ["LCM and GCD", [["lcm-calculator", "LCM Calculator"]]], ["Rounding and precision", [["rounding-calculator", "Rounding Calculator"], ["rounding-sig-figs", "Rounding and Significant Figures"]]]];
 function browseHtml() {
   const a = (href, t) => '<a class="chip" href="' + href + '">' + esc(t) + '</a>';
-  return '<section class="browse" aria-labelledby="browse-h"><h2 id="browse-h">Electrical engineering calculators</h2>' +
-    '<p>Elecmetric is a set of tested electrical calculators for cable sizing, voltage drop, motors, transformers, protection, earthing, solar PV and airfield ground lighting. Each result shows its formula and working, and is checked against independent reference values.</p>' +
-    '<p>' + a('calculators/', 'All engineering calculators') + a('pages/index.html', 'All electrical conversions') + a('converters/index.html', 'Conversion Centre') + '</p>' +
-    '<h3>Browse by topic</h3><p>' + CATS.map((k) => a('calculators/' + k.slug + '/', k.name)).join('') + '</p>' +
-    '<h3>Popular conversions</h3><p>' + POPULAR.map((x) => a('pages/' + x + '.html', titleOf(x))).join('') + '</p>' +
-    '<h3>More tools</h3><p>' + MORE_TOOLS.map(([href, t]) => a(href, t)).join('') + '</p></section>';
+  const cat = (slugs) => CATS.filter((k) => slugs.indexOf(k.slug) >= 0).map((k) => a('calculators/' + k.slug + '/', k.name)).join('');
+  const links = (l) => l.map(([href, t]) => a(href, t)).join('');
+  const NUMSYS = MATHS_GROUPS.filter(([n]) => n === 'Number systems and codes');
+  const MATHS_REST = MATHS_GROUPS.filter(([n]) => n !== 'Number systems and codes');
+  const CONVERTERS = [['converters/index.html', 'Conversion Centre'], ['pages/index.html', 'All electrical conversions'], ['converters/wire-gauge-converter.html', 'AWG and SWG wire gauge converter'], ['converters/number-base-converter.html', 'Number base converter'], ['converters/scientific-notation-converter.html', 'Scientific notation converter'], ['converters/si-prefix-converter.html', 'SI prefix converter'], ['converters/dms-converter.html', 'DMS to decimal degrees converter'], ['converters/dbm-converter.html', 'dBm to watts converter'], ['converters/db-converter.html', 'dB to ratio converter']];
+  const shown = new Set(CONVERTERS.map((x) => x[0]).concat(['calculators/basic-calculator/', 'calculators/scientific-calculator/', 'converters/binary-calculator.html']));
+  const MORE_REST = MORE_TOOLS.filter(([href]) => !shown.has(href));
+  return '<details class="browse-d"><summary>About Elecmetric: categories, how results are checked and FAQs</summary><section class="browse" aria-labelledby="browse-h"><h2 id="browse-h">Explore Calculators by Category</h2>' +
+    '<p>Elecmetric is a collection of free online calculators and tools for engineering, mathematics, unit conversion and everyday calculations. Electrical engineering is its deepest subject area: cable sizing, voltage drop, motors, transformers, protection, earthing, solar PV and airfield ground lighting. Each result shows its formula and working, and runs built-in tests. Independent verification is shown per calculator.</p>' +
+    '<p>' + a('calculators/all-tools/', 'Search all tools') + a('calculators/', 'All engineering calculators') + a('technical-library/', 'Technical Library') + a('converters/index.html', 'Conversion Centre') + '</p>' +
+    '<h3>All 20 Calculator Categories</h3><p>' + a('categories/', 'All categories') + catData().map((c) => a('categories/' + c.s + '/', c.n)).join('') + '</p>' +
+    '<h3>Electrical &amp; Engineering Calculators</h3><p>' + cat(['electrical-fundamentals', 'power-and-energy', 'cable-engineering', 'motor-engineering', 'transformer-engineering', 'electrical-protection', 'power-systems', 'earthing-and-grounding', 'airport-agl-engineering', 'lighting-and-facilities']) + '</p>' +
+    '<h3>Mathematics &amp; Number Calculators</h3><p>' + links(MATHS_TOOLS) + a('calculators/basic-calculator/', 'Basic calculator') + a('calculators/scientific-calculator/', 'Scientific calculator') + '</p>' +
+    '<h3>Electronics &amp; Digital Logic Calculators</h3><p>' + cat(['electronics-and-instrumentation']) + a('converters/binary-calculator.html', 'Binary calculator') + NUMSYS.map(([n, l]) => l.map(([x, t]) => a('calculators/' + x + '/', t)).join('')).join('') + '</p>' +
+    '<h3>Unit Converters &amp; Conversion Tools</h3><p>' + links(CONVERTERS) + '</p>' +
+    '<h3>Energy &amp; Renewable Energy Calculators</h3><p>' + cat(['power-and-energy', 'renewable-energy']) + a('pages/energy-consumption.html', 'Energy consumption calculator') + '</p>' +
+    '<h3>Everyday Calculation Tools</h3><p>' + links([['calculators/basic-calculator/', 'Basic calculator'], ['calculators/percentage-calculator/', 'Percentage Calculator'], ['calculators/ratio-calculator/', 'Ratio Calculator'], ['calculators/random-number-generator/', 'Random Number Generator']]) + '</p>' +
+    '<h3>Coming Soon: More Calculator Categories</h3><p>Planned calculators for subjects beyond engineering and mathematics. These pages list what is planned and link to related tools that already work. No planned calculator is available yet.</p><p>' + FUTURE.HUBS.map((h) => a('calculators/' + h.slug + '/', h.name + ' (coming soon)')).join('') + '</p>' +
+    '<h2>Popular Online Calculators and Tools</h2><p>' + POPULAR.map((x) => a('pages/' + x + '.html', titleOf(x))).join('') + '</p>' +
+    '<h2>Engineering Calculators for Professional Applications</h2>' +
+    '<h3>Electrical Design Calculators</h3><p>' + cat(['electrical-fundamentals', 'lighting-and-facilities']) + '</p>' +
+    '<h3>Cable and Voltage Drop Calculators</h3><p>' + cat(['cable-engineering']) + a('pages/voltage-drop.html', 'DC Cable Voltage Drop') + '</p>' +
+    '<h3>Motor and Transformer Calculators</h3><p>' + cat(['motor-engineering', 'transformer-engineering']) + '</p>' +
+    '<h3>Power System and Fault Calculators</h3><p>' + cat(['power-systems', 'electrical-protection', 'earthing-and-grounding']) + '</p>' +
+    '<h3>Renewable Energy Calculators</h3><p>' + cat(['renewable-energy']) + '</p>' +
+    '<h3>Electronics and Instrumentation Calculators</h3><p>' + cat(['electronics-and-instrumentation']) + '</p>' +
+    '<h3>Airport and Airfield Engineering Calculators</h3><p>' + cat(['airport-agl-engineering']) + a('calculators/agl-ccr-loading/', 'AGL CCR loading calculator') + '</p>' +
+    '<h2>Mathematics and Scientific Calculators</h2>' + cat(['engineering-mathematics']).replace(/^/, '<p>') + '</p>' +
+    MATHS_REST.map(([n, l]) => '<h3>' + esc(n) + '</h3><p>' + l.map(([x, t]) => a('calculators/' + x + '/', t)).join('') + '</p>').join('') +
+    '<h2>Online Unit Converters</h2><p>' + links(CONVERTERS) + '</p>' +
+    '<h2>How Our Calculators Work</h2>' +
+    '<h3>Calculation Formulas and Methods</h3><p>Every calculator publishes the formula it uses, with the variables and units defined, so you can check the method before you rely on the result.</p>' +
+    '<h3>Step-by-Step Working and Worked Examples</h3><p>Results come with the working shown step by step, and each calculator page includes a worked example using its default values.</p>' +
+    '<h3>Assumptions, Limitations and Verification</h3><p>Each calculator lists its assumptions and limits. Built-in tests run in your browser, and the ' + '<a href="#verification">verification report</a> shows how far each calculator has been checked.</p>' +
+    '<h2>Learn, Explore and Improve Your Knowledge</h2>' +
+    '<h3>Technical Library and Formula Reference</h3><p>' + a('technical-library/', 'Technical Library') + a('converters/ohms-law-formulas.html', 'Ohm\u2019s law formulas') + a('converters/kirchhoffs-laws.html', 'Kirchhoff\u2019s laws') + a('converters/electrical-symbols.html', 'Electrical symbols') + '</p>' +
+    '<h2>More Calculators and Reference Tools</h2><p>' + links(MORE_REST) + '</p>' +
+    '<h2>Frequently Asked Questions</h2>' +
+    '<h3>Are Elecmetric calculators free to use?</h3><p>Yes. The calculators and conversion pages are free to use and run in your browser.</p>' +
+    '<h3>Can I use the calculators directly in my browser?</h3><p>Yes. The calculators and converters run in your browser and need no installation.</p>' +
+    '<h3>How are calculation formulas determined?</h3><p>Each calculator uses a standard, published relationship, such as Ohm\u2019s law or the power triangle. The page writes it out with its variables and units defined, so you can check the method before you rely on the result.</p>' +
+    '<h3>Do the calculators show step-by-step working?</h3><p>Yes. Each result shows its formula, the working step by step and the assumptions behind it.</p>' +
+    '<h3>Can I use the calculators for professional applications?</h3><p>They are built for engineers, technicians and students, but they use general, standard-neutral formulas and embed no standard tables. Check results against your own code, standard and manufacturer data before relying on them.</p>' +
+    '<h3>How is calculation accuracy verified?</h3><p>Each calculator runs built-in tests in your browser, and the verification report records the reference checks, standard review and independent review state for every calculator.</p></section></details>';
 }
 function indexHtml() {
   const f = path.join(__dirname, '..', 'index.html'), src = fs.readFileSync(f, 'utf8');
@@ -403,18 +464,38 @@ function indexHtml() {
   let out = src.replace(SEO_RE, () => '<!--seo:start-->' + indexSeo() + '<!--seo:end-->');
   if (!BROWSE_RE.test(out)) throw new Error('index.html is missing the <!--browse:start--><!--browse:end--> markers');
   out = out.replace(BROWSE_RE, () => '<!--browse:start-->' + browseHtml() + '<!--browse:end-->');
+  if (!CATDATA_RE.test(out)) throw new Error('index.html is missing the <!--catdata:start--><!--catdata:end--> markers');
+  out = out.replace(CATDATA_RE, () => '<!--catdata:start--><script>window.LL_CATS=' + JSON.stringify(catData()) + ';</script><!--catdata:end-->');
   if (!VDATA_RE.test(out)) throw new Error('index.html is missing the <!--vdata:start--><!--vdata:end--> markers');
   return out.replace(VDATA_RE, () => '<!--vdata:start--><script>window.LL_VERIF=' + JSON.stringify(verifData()) + ';</script><!--vdata:end-->');
 }
 /* Per-calculator verification facts for the app: independent vector counts come from tests/reference_vectors.json,
    reviews only from tools/review_records.json (empty until a review has really been done). */
 const VDATA_RE = /<!--vdata:start-->[\s\S]*?<!--vdata:end-->/;
+const CATDATA_RE = /<!--catdata:start-->[\s\S]*?<!--catdata:end-->/;
+/* The 20 subject categories for the home page, read from the Master Category Architecture so the home page, /categories/ and All Tools cannot disagree.
+   live = tools classified under the category today; planned = upcoming tools listed on its page (not tools, not counted anywhere). */
+function catData() {
+  const ARCH = require('./master_architecture.json'), { CATEGORY_CONTENT: CC } = require('./category_roadmap.js');
+  return ARCH.level1.map((c) => {
+    const x = CC[c.slug], mine = ARCH.tools.filter((t) => t.l1 === c.id);
+    return { s: c.slug, n: c.name, live: mine.length, plan: x.planned.length, d: x.scope,
+      subs: c.level2.filter((l) => l.existing).sort((a, b) => b.existing - a.existing).slice(0, 4).map((l) => [l.name, l.existing]),
+      subsAll: c.level2.length };
+  });
+}
 const PARTIAL_VECTORS = {};
+/* Built-in test totals are computed here, once per build, so the homepage does not have to run all calculator test suites on every visit. The verification report and each calculator page still run their own tests live. */
+function testSummary() {
+  let total = 0, passed = 0;
+  E.CALCS.forEach((c) => { const r = E.runTests(c); total += r.total; passed += r.passed; });
+  return { total, passed, calcs: E.CALCS.length, engine: E.VERSION };
+}
 function verifData() {
   const vec = {};
   JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'tests', 'reference_vectors.json'), 'utf8')).forEach((v) => { vec[v.id] = (vec[v.id] || 0) + 1; });
   const rec = JSON.parse(fs.readFileSync(path.join(__dirname, 'review_records.json'), 'utf8')).records || {};
-  return { vec, partial: PARTIAL_VECTORS, rec, teamApproval: null, stdNA: STD_NA, reg: REGISTER.reg, counts: REGISTER.counts, scope: Object.fromEntries(E.CALCS.map((c) => { const x = scopeFor(c.id); return [c.id, { checked: x.checked, notChecked: x.notChecked }]; })), credit: SITE_INFO.credit || '', contact: SITE_INFO.contact_email || '', total: E.CALCS.length };
+  return { cats: CATS.map((k) => ({ s: k.slug, n: k.name, d: k.desc, v: k.divisions, a: k.also })), vec, partial: PARTIAL_VECTORS, rec, tests: testSummary(), tools: COUNTS, teamApproval: null, stdNA: STD_NA, reg: REGISTER.reg, counts: REGISTER.counts, scope: Object.fromEntries(E.CALCS.map((c) => { const x = scopeFor(c.id); return [c.id, { checked: x.checked, notChecked: x.notChecked }]; })), credit: SITE_INFO.credit || '', contact: SITE_INFO.contact_email || '', total: E.CALCS.length };
 }
 
 /* ---------- F1: the form on each landing page ----------
@@ -596,9 +677,16 @@ function llCompute(E, cfg, vals) {
   const r = E.calculate(def, raw);
   if (!r.ok) return { ok: false, errors: r.errors.map(function (e) { return e.msg; }) };
   const res = {
-    ok: true, warnings: r.warnings,
+    ok: true, warnings: r.warnings, title: def.title, version: def.version,
+    all: r.outputs.map(function (o) { return { label: o.label, text: o.value == null || o.value !== o.value ? '' : String(Number((o.value / E.FACTOR[o.unit]).toPrecision(12))), unit: o.unit || o.prefix || '' }; }),
     items: cfg.heads.map(function (h) { const o = r.outputs.find(function (x) { return x.key === h[0]; }); return { label: h[2], text: E.show(o, h[1]) + (h[1] ? ' ' + h[1] : '') + h[3] }; })
   };
+  if (cfg.rows) {
+    const g = function (k) { const o = r.outputs.find(function (x) { return x.key === k; }); return o && o.value === o.value ? o.value / E.FACTOR[o.unit] : 0; };
+    const co = r.outputs.find(function (x) { return x.key === 'C1'; });
+    res.sym = (co && co.prefix) || ''; res.rowsData = [];
+    for (let i = 1; i <= cfg.rows; i++) if (r.inputs['P' + i] > 0) res.rowsData.push({ n: i, e: g('E' + i), c: g('C' + i), s: g('s' + i), m: r.inputs['m' + i] });
+  }
   if (cfg.diagram === 'phasor') {
     const val = function (k) { const o = r.outputs.find(function (x) { return x.key === k; }); return o ? o.value : 0 / 0; }, v = r.inputs;
     res.diagram = { op: v.op, z1: [v.a, v.b], z2: v.op === 0 ? null : [v.c, v.d], res: [val('re'), val('im')] };
@@ -621,10 +709,117 @@ function llCompute(E, cfg, vals) {
   }
   return res;
 }
+function llRowsChart(rows, names, sym) {
+  function esc(x) { return String(x).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
+  function num(x, d) { return Number(x).toLocaleString('en-US', { minimumFractionDigits: d, maximumFractionDigits: d }); }
+  const list = rows.filter(function (x) { return x.e > 0; }).sort(function (a, b) { return b.e - a.e; });
+  if (!list.length) return '';
+  const W = 640, lab = 150, rt = 150, H = 26, top = 6, max = list[0].e, bw = W - lab - rt;
+  let g = '', desc = [];
+  list.forEach(function (x, i) {
+    const nm = (names[x.n] || '').trim() || 'Appliance ' + x.n, short = nm.length > 22 ? nm.slice(0, 21) + '…' : nm, w = Math.max(2, bw * x.e / max), y = top + i * H;
+    desc.push(nm + ' ' + num(x.e, 1) + ' kWh');
+    g += '<text x="' + (lab - 8) + '" y="' + (y + 15) + '" text-anchor="end" fill="currentColor">' + esc(short) + '</text><rect x="' + lab + '" y="' + (y + 3) + '" width="' + w.toFixed(1) + '" height="' + (H - 8) + '" rx="3" style="fill:' + (i === 0 ? 'var(--gold)' : 'var(--cyan)') + '"/><text x="' + (lab + w + 6) + '" y="' + (y + 15) + '" fill="currentColor">' + num(x.e, 1) + ' kWh · ' + num(x.s, 1) + '%</text>';
+  });
+  return '<svg viewBox="0 0 ' + W + ' ' + (top * 2 + list.length * H) + '" role="img" aria-label="Energy per month by appliance, largest first: ' + esc(desc.join('; ')) + '">' + g + '</svg>';
+}
+function llDownloadCsv(E, cfg, r, form, doc) {
+  function cell(x) { x = String(x == null ? '' : x); return /[",\n]/.test(x) ? '"' + x.replace(/"/g, '""') + '"' : x; }
+  const rows = [['Elecmetric calculation report'], ['Calculator', r.title], ['Calculator ID', cfg.calc], ['Calculator version', r.version], ['Engine version', E.VERSION], ['Date', new Date().toISOString().slice(0, 10)], ['Note', 'Estimate only. Check the tariff values against your own tariff order.'], [], ['INPUTS', 'Value', 'Unit']];
+  cfg.fields.forEach(function (f) {
+    const inp = form.elements[f.key]; if (!inp) return;
+    if (f.opts) rows.push([f.label, inp.options[inp.selectedIndex].text, '']);
+    else { const us = form.elements[f.key + '_u']; rows.push([f.label, inp.value, us ? us.value : (f.unit || '')]); }
+  });
+  if (cfg.rows) { rows.push([], ['APPLIANCE NAMES (optional labels)']); for (let i = 1; i <= cfg.rows; i++) { const nm = form.elements['nm' + i]; if (nm && nm.value && form.elements['P' + i] && Number(form.elements['P' + i].value) > 0) rows.push(['Appliance ' + i, nm.value]); } }
+  rows.push([], ['OUTPUTS', 'Value', 'Unit']);
+  r.all.forEach(function (o) { rows.push([o.label, o.text, o.unit]); });
+  if (r.warnings.length) { rows.push([], ['WARNINGS']); r.warnings.forEach(function (w) { rows.push([w]); }); }
+  const text = '\ufeff' + rows.map(function (row) { return row.map(cell).join(','); }).join('\r\n') + '\r\n';
+  try { const a = doc.createElement('a'); a.href = URL.createObjectURL(new Blob([text], { type: 'text/csv' })); a.download = cfg.calc + '-calculation.csv'; doc.body.appendChild(a); a.click(); a.remove(); } catch (e) {}
+}
+function llDownloadPdf(E, cfg, r, form, doc) {
+  /* A plain-text PDF written here, so no library is loaded: A4, Courier 9 pt, Latin-1 only (the rupee sign and other symbols are written as Rs or ?). */
+  function clean(x) { return String(x == null ? '' : x).replace(/\u20b9/g, 'Rs ').replace(/\u2212/g, '-').replace(/[\u2013\u2014]/g, '-').replace(/\u00d7/g, 'x').replace(/\u00f7/g, '/').replace(/[\u2018\u2019]/g, "'").replace(/[\u201c\u201d]/g, '"').replace(/\u2026/g, '...').replace(/[^\x20-\x7e\u00a0-\u00ff]/g, '?'); }
+  const W = 88, lines = [];
+  function put(text, ind) { let t = clean(text); const pad = new Array((ind || 0) + 1).join(' '); if (!t) { lines.push(''); return; } while (t.length > W - pad.length) { let c = t.lastIndexOf(' ', W - pad.length); if (c < 20) c = W - pad.length; lines.push(pad + t.slice(0, c).replace(/\s+$/, '')); t = t.slice(c).replace(/^\s+/, ''); } lines.push(pad + t); }
+  function row(a, b, c) { let l = clean(a); const right = clean(b) + (c ? ' ' + clean(c) : ''); const room = W - right.length - 2; if (l.length > room) { put(l, 0); put(right, 4); } else lines.push(l + new Array(W - l.length - right.length + 1).join(' ') + right); }
+  put('ELECMETRIC CALCULATION REPORT'); put('Calculator: ' + r.title); put('Calculator version ' + r.version + ', engine ' + E.VERSION + ', ' + new Date().toISOString().slice(0, 10));
+  put('Estimate only. Check the tariff values against your own tariff order.'); put('');
+  put('INPUTS'); put('');
+  cfg.fields.forEach(function (f) {
+    const inp = form.elements[f.key]; if (!inp) return;
+    if (f.opts) row(f.label, inp.options[inp.selectedIndex].text, '');
+    else { const us = form.elements[f.key + '_u']; row(f.label, inp.value, us ? us.value : (f.unit || '')); }
+  });
+  if (cfg.rows) { let first = true; for (let i = 1; i <= cfg.rows; i++) { const nm = form.elements['nm' + i]; if (nm && nm.value && form.elements['P' + i] && Number(form.elements['P' + i].value) > 0) { if (first) { put(''); put('APPLIANCE NAMES'); first = false; } put('Appliance ' + i + ': ' + nm.value, 2); } } }
+  put(''); put('KEY RESULTS'); put('');
+  r.items.forEach(function (it) { row(it.label, it.text, ''); });
+  put(''); put('ALL OUTPUTS (8 significant digits; the CSV holds more)'); put('');
+  r.all.forEach(function (o) { const n = Number(o.text); row(o.label, o.text !== '' && isFinite(n) ? String(Number(n.toPrecision(8))) : o.text, o.unit); });
+  if (r.warnings.length) { put(''); put('WARNINGS'); put(''); r.warnings.forEach(function (w) { put('- ' + w, 0); }); }
+  const per = 62, pages = []; for (let i = 0; i < lines.length; i += per) pages.push(lines.slice(i, i + per));
+  const objs = []; const esc = function (x) { return x.replace(/\\/g, '\\\\').replace(/\(/g, '\\(').replace(/\)/g, '\\)'); };
+  objs[1] = '<< /Type /Catalog /Pages 2 0 R >>';
+  const kids = pages.map(function (x, i) { return (4 + i * 2) + ' 0 R'; }).join(' ');
+  objs[2] = '<< /Type /Pages /Kids [' + kids + '] /Count ' + pages.length + ' >>';
+  objs[3] = '<< /Type /Font /Subtype /Type1 /BaseFont /Courier /Encoding /WinAnsiEncoding >>';
+  pages.forEach(function (pl, i) {
+    let c = 'BT /F1 9 Tf 11 TL 50 800 Td\n'; pl.forEach(function (l, j) { c += '(' + esc(l) + ') Tj' + (j < pl.length - 1 ? ' T*' : '') + '\n'; }); c += 'ET\nBT /F1 8 Tf 50 30 Td (Elecmetric - page ' + (i + 1) + ' of ' + pages.length + ') Tj ET';
+    objs[4 + i * 2] = '<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents ' + (5 + i * 2) + ' 0 R >>';
+    objs[5 + i * 2] = '<< /Length ' + c.length + ' >>\nstream\n' + c + '\nendstream';
+  });
+  let out = '%PDF-1.4\n', off = [];
+  for (let n = 1; n < objs.length; n++) { off[n] = out.length; out += n + ' 0 obj\n' + objs[n] + '\nendobj\n'; }
+  const xr = out.length; out += 'xref\n0 ' + objs.length + '\n0000000000 65535 f \n';
+  for (let n = 1; n < objs.length; n++) out += ('0000000000' + off[n]).slice(-10) + ' 00000 n \n';
+  out += 'trailer\n<< /Size ' + objs.length + ' /Root 1 0 R >>\nstartxref\n' + xr + '\n%%EOF\n';
+  const bytes = new Uint8Array(out.length); for (let k = 0; k < out.length; k++) bytes[k] = out.charCodeAt(k) & 255;
+  try { const a = doc.createElement('a'); a.href = URL.createObjectURL(new Blob([bytes], { type: 'application/pdf' })); a.download = cfg.calc + '-calculation.pdf'; doc.body.appendChild(a); a.click(); a.remove(); } catch (e) {}
+}
 function llInit(E, cfg, doc) {
   E.setGrouping('intl');
   const box = doc.getElementById('try'), form = doc.getElementById('try-form'), out = doc.getElementById('try-out');
   function read() { const v = {}; Array.prototype.forEach.call(form.elements, function (el) { if (el.name) v[el.name] = el.value; }); return v; }
+  /* Numbers carried from another Elecmetric page arrive as ?key=value in the address. Only this page's own inputs are read, and each value goes through the normal validation. */
+  let qs0 = null;
+  try {
+    const qs = new URLSearchParams(doc.defaultView.location.search); qs0 = qs;
+    cfg.fields.forEach(function (f) {
+      const el0 = form.elements[f.key], u0 = form.elements[f.key + '_u'];
+      if (!el0 || !qs.has(f.key)) return;
+      const val = qs.get(f.key);
+      if (f.opts) { if (Array.prototype.some.call(el0.options, function (o) { return o.value === val; })) el0.value = val; }
+      else if (val.length < 20 && isFinite(Number(val))) { el0.value = val; if (u0 && qs.has(f.key + '_u') && Array.prototype.some.call(u0.options, function (o) { return o.value === qs.get(f.key + '_u'); })) u0.value = qs.get(f.key + '_u'); }
+    });
+  } catch (e) {}
+  if (cfg.rows && qs0 && qs0.has('P1') && qs0.get('P1') !== '' && isFinite(Number(qs0.get('P1')))) { for (let k = 2; k <= cfg.rows; k++) { const pk = form.elements['P' + k]; if (pk && !qs0.has('P' + k)) pk.value = '0'; } }
+  const rowEls = cfg.rows ? Array.prototype.slice.call(form.querySelectorAll('.arow')) : [], addBtn = doc.getElementById('add-row');
+  function rowHidden(f) { return f.hidden; }
+  function syncRows() {
+    if (!cfg.rows) return;
+    const shown = rowEls.filter(function (f) { return !rowHidden(f); });
+    rowEls.forEach(function (f) { const b = f.querySelector('.rm'); if (b) b.hidden = shown.length < 2; });
+    if (addBtn) { addBtn.hidden = shown.length >= rowEls.length; const c = doc.getElementById('row-count'); if (c) c.textContent = shown.length + ' of ' + rowEls.length + ' appliance rows in use'; }
+  }
+  if (cfg.rows) {
+    rowEls.forEach(function (f, k) { const p = form.elements['P' + (k + 1)]; if (k > 0 && p && Number(p.value) > 0) f.hidden = false; });
+    if (addBtn) addBtn.addEventListener('click', function () { const nx = rowEls.filter(rowHidden)[0]; if (nx) { nx.hidden = false; const first = nx.querySelector('input'); if (first) first.focus(); } syncRows(); render(); });
+    form.addEventListener('click', function (ev) {
+      const b = ev.target.closest ? ev.target.closest('.rm') : null; if (!b) return;
+      const f = b.closest('.arow'), k = rowEls.indexOf(f), p = form.elements['P' + (k + 1)];
+      if (p) p.value = '0'; f.hidden = true; syncRows(); render();
+    });
+    form.addEventListener('click', function (ev) {
+      const tg = ev.target.closest ? ev.target.closest('.tglm') : null;
+      if (tg) { const mb = tg.parentNode.querySelector('.mbody'); mb.hidden = !mb.hidden; tg.setAttribute('aria-expanded', mb.hidden ? 'false' : 'true'); return; }
+      const b = ev.target.closest ? ev.target.closest('.fillm') : null; if (!b) return;
+      const f = b.closest('.arow'), k = rowEls.indexOf(f) + 1, hh = form.elements['h' + k], u = form.elements['u' + k];
+      if (!hh) return; for (let m = 1; m <= 12; m++) { const x = form.elements['g' + k + 'm' + m]; if (x) x.value = hh.value; }
+      if (u) u.value = '1'; render();
+    });
+    syncRows();
+  }
   function el(tag, cls, text) { const x = doc.createElement(tag); if (cls) x.className = cls; if (text != null) x.textContent = text; return x; }
   function render() {
     const r = llCompute(E, cfg, read());
@@ -633,7 +828,28 @@ function llInit(E, cfg, doc) {
     r.items.forEach(function (it) { const d = el('div', 'big', it.text); d.appendChild(el('small', '', it.label)); out.appendChild(d); });
     const dfn = cfg.diagram === 'phasor-rlc' ? (typeof llPhasorRLCSvg === 'function' ? llPhasorRLCSvg : null) : cfg.diagram === 'phasor-vi' ? (typeof llPhasorVISvg === 'function' ? llPhasorVISvg : null) : cfg.diagram === 'phasor-sum' ? (typeof llPhasorSumSvg === 'function' ? llPhasorSumSvg : null) : (typeof llPhasorSvg === 'function' ? llPhasorSvg : null);
     if (r.diagram && dfn) { const svg = dfn(r.diagram); if (svg) { const wrap = el('div', 'phasor'); wrap.innerHTML = svg; out.appendChild(wrap); } }
+    if (r.rowsData && typeof llRowsChart === 'function') {
+      const names = {}; r.rowsData.forEach(function (x) { const nm = form.elements['nm' + x.n]; names[x.n] = nm ? nm.value : ''; });
+      const svg = llRowsChart(r.rowsData, names, r.sym);
+      if (svg) { const wrap = el('div', 'rchart'); wrap.appendChild(el('h3', '', 'Energy per month by appliance')); const holder = el('div'); holder.innerHTML = svg; wrap.appendChild(holder); out.appendChild(wrap); }
+    }
     r.warnings.forEach(function (w) { out.appendChild(el('p', 'note', w)); });
+    if (cfg.carry) {
+      const v = read(), hd = Number(v.h) / (v.per === '1' ? 7 : v.per === '2' ? 365 / 12 : 1), q = function (pairs) { return pairs.filter(function (p) { return p[1] !== '' && p[1] != null; }).map(function (p) { return p[0] + '=' + encodeURIComponent(p[1]); }).join('&'); };
+      const cw = el('div', 'carry'); cw.appendChild(el('strong', '', 'Use these numbers next: '));
+      const a1 = el('a', 'chip', 'Add more appliances'), a2 = el('a', 'chip', 'Turn the units into a bill');
+      a1.href = '../multiple-appliance-cost/?' + q([['P1', v.P], ['P1_u', v.P_u], ['n1', '1'], ['h1', String(Number(hd.toPrecision(6)))], ['d1', v.cap], ['days', Number(v.d) >= 1 && Number(v.d) <= 31 ? v.d : ''], ['tar', v.t], ['cur', v.cur]]) + '#try';
+      a2.href = '../electricity-bill-calculator/?' + q([['prev', '0'], ['cur', r.all[0].text], ['mf', '1'], ['cur2', v.cur]]) + '#try';
+      cw.appendChild(a1); cw.appendChild(a2); out.appendChild(cw);
+    }
+    if (cfg.exportable) {
+      const bar = el('div', 'tact'), b1 = el('button', 'btn', 'Download CSV'), b3 = el('button', 'btn', 'Download PDF'), b2 = el('button', 'btn', 'Print');
+      b1.type = 'button'; b2.type = 'button'; b3.type = 'button';
+      b1.onclick = function () { llDownloadCsv(E, cfg, r, form, doc); };
+      b3.onclick = function () { llDownloadPdf(E, cfg, r, form, doc); };
+      b2.onclick = function () { window.print(); };
+      bar.appendChild(b1); bar.appendChild(b3); bar.appendChild(b2); out.appendChild(bar);
+    }
   }
   function fill(ev) {
     const t = ev.target;
@@ -652,6 +868,9 @@ function llInit(E, cfg, doc) {
   render();
 }
 
+/* Electricity calculators whose standalone pages get Download CSV and Print / PDF buttons. */
+const ELEC_EXPORT = new Set(['energy-cost', 'multi-appliance-cost', 'electricity-bill-slabs', 'electricity-bill-meter', 'replacement-savings', 'load-energy-cost', 'tou-demand-bill', 'electricity-cost-planner']);
+
 /* Which inputs a page offers: everything the worked example uses, except engineering-mode inputs (they keep their defaults unless the intent lists them in showEng) and any the intent hides. */
 function formFor(n, def, raw) {
   if (n.kind === 'unit') {
@@ -660,7 +879,7 @@ function formFor(n, def, raw) {
     cfg.fields = [{ key: 'v', label: 'Value in ' + n.fromU, val: String(n.val) }];
     return { cfg, html };
   }
-  const hide = n.formHide || n.hide || [], fields = [], parts = [];
+  const hide = n.formHide || n.hide || [], fields = [], parts = [], pkeys = [];
   const heads = (n.kind === 'awg' ? [['d', 'mm'], ['A', 'mm²']] : n.head).map(([k, u]) => { const full = def.outputs.find((x) => x.key === k).label; return [k, u, full.split(' (')[0], (/%/.test(full) ? '%' : '') + (/degrees/.test(full) ? '°' : '') + lightUnit(full)]; });
   def.inputs.forEach((s) => {
     if (hide.indexOf(s.key) >= 0 || (s.mode === 'engineering' && (n.showEng || []).indexOf(s.key) < 0)) return;
@@ -668,7 +887,7 @@ function formFor(n, def, raw) {
     if (s.type === 'enum') {
       const opts = (n.formOpts && n.formOpts[s.key]) || s.options, cur = Number(raw[s.key]);
       fields.push({ key: s.key, label, opts: opts.slice(), val: String(cur) });
-      parts.push('<div><label for="' + id + '">' + esc(label) + '</label><select id="' + id + '" name="' + s.key + '">' + opts.map((o) => '<option value="' + o + '"' + (o === cur ? ' selected' : '') + '>' + esc(s.labels[o]) + '</option>').join('') + '</select></div>');
+      pkeys.push(s.key); parts.push('<div><label for="' + id + '">' + esc(label) + '</label><select id="' + id + '" name="' + s.key + '">' + opts.map((o) => '<option value="' + o + '"' + (o === cur ? ' selected' : '') + '>' + esc(s.labels[o]) + '</option>').join('') + '</select></div>');
       return;
     }
     const cur = raw[s.key];
@@ -676,17 +895,46 @@ function formFor(n, def, raw) {
     if (s.dim === 'coulomb' && Number(v) === EE && u === 'C') { v = 1; u = 'e'; }
     const units = Object.keys(E.UNITS[s.dim].units).filter(Boolean);
     fields.push({ key: s.key, label, unit: s.unit, val: v === '' || v == null ? '' : String(v), unitSel: u });
-    parts.push('<div><label for="' + id + '">' + esc(label) + '</label><div class="trow"><input id="' + id + '" name="' + s.key + '" inputmode="decimal" autocomplete="off" value="' + esc(v === '' || v == null ? '' : v) + '">' +
+    pkeys.push(s.key); parts.push('<div><label for="' + id + '">' + esc(label) + '</label><div class="trow"><input id="' + id + '" name="' + s.key + '" inputmode="decimal" autocomplete="off" value="' + esc(v === '' || v == null ? '' : v) + '">' +
       (units.length > 1 ? '<select name="' + s.key + '_u" aria-label="' + esc(label) + ' unit">' + units.map((x) => '<option' + (x === u ? ' selected' : '') + '>' + esc(x) + '</option>').join('') + '</select>' : (s.unit ? '<span class="note" style="align-self:center">' + esc(s.unit) + '</span>' : '')) + '</div>' +
-      (s.presets ? '<label class="hint" for="' + id + '-pre">Typical appliance (indicative watts, edit after choosing)</label><select id="' + id + '-pre" data-fill="' + s.key + '" aria-label="Typical appliance"><option value="">Choose to fill the load</option>' + s.presets.map((p) => '<option value="' + p.W + '">' + esc(p.name + ' (about ' + p.W + ' W)') + '</option>').join('') + '</select>' : '') + (s.optional ? '<div class="hint">Leave blank to solve for it</div>' : '') + (s.hint ? '<div class="hint">' + esc(s.hint) + '</div>' : '') + '</div>');
+      (s.presets ? '<label class="hint" for="' + id + '-pre">Typical appliance (indicative watts, edit after choosing)</label><select id="' + id + '-pre" data-fill="' + s.key + '" aria-label="Typical appliance"><option value="">Choose to fill the load</option>' + s.presets.map((p) => '<option value="' + p.W + '">' + esc(p.name + ' (about ' + p.W + ' W)') + '</option>').join('') + '</select>' : '') + (s.optional ? '<div class="hint">Leave blank to solve for it</div>' : '') + TOOL_UX.hintHtml(s.hint, esc) + '</div>');
   });
-  return { cfg: Object.assign({ calc: def.id, raw, fields, heads }, def.id === 'complex-number' ? { diagram: 'phasor' } : def.id === 'phasor-sum' ? { diagram: 'phasor-sum' } : def.id === 'ac-ohms-law' ? { diagram: 'phasor-vi' } : def.id === 'impedance-rlc' ? { diagram: 'phasor-rlc' } : {}), html: parts.join('') };
+  let html = parts.join('');
+  const rowCfg = {};
+  if (def.id === 'multi-appliance-cost') {
+    const common = [], rowsH = {};
+    const gH = {}; pkeys.forEach((k, i) => { const m = /^([Pnhdmo])(\d+)$/.exec(k), g = /^(?:u(\d+)|g(\d+)m\d+)$/.exec(k); if (m) (rowsH[m[2]] = rowsH[m[2]] || []).push(parts[i]); else if (g) { const rr = g[1] || g[2]; (gH[rr] = gH[rr] || []).push(parts[i]); } else common.push(parts[i]); });
+    const nR = Object.keys(rowsH).length;
+    html = common.join('') + Object.keys(rowsH).map((r) => {
+      const pv = raw['P' + r], on = Number(Array.isArray(pv) ? pv[0] : pv) > 0 || r === '1';
+      return '<fieldset class="arow" data-row="' + r + '"' + (on ? '' : ' hidden') + '><legend>Appliance ' + r + '</legend><div class="tgrid"><div><label for="f-nm' + r + '">Name (optional, used in the chart)</label><div class="trow"><input id="f-nm' + r + '" name="nm' + r + '" type="text" maxlength="40" autocomplete="off" placeholder="Appliance ' + r + '"></div></div>' + rowsH[r].join('') + '</div><div class="mgrid"><button type="button" class="btn tglm" aria-expanded="false">Different hours in each month (optional)</button><div class="mbody" hidden><div class="tgrid">' + (gH[r] || []).join('') + '</div><button type="button" class="btn fillm">Fill all twelve months with the hours per day above</button></div></div><button type="button" class="btn rm">Remove this appliance</button></fieldset>';
+    }).join('') + '<div class="arow-bar"><button type="button" class="btn" id="add-row">Add an appliance</button><span class="note" id="row-count"></span></div>';
+    rowCfg.rows = nR;
+  }
+  if (n.slug === 'electricity-cost' && def.id === 'energy-cost') rowCfg.carry = true;
+  return { cfg: Object.assign({ calc: def.id, raw, fields, heads }, rowCfg, ELEC_EXPORT.has(def.id) ? { exportable: true } : {}, def.id === 'complex-number' ? { diagram: 'phasor' } : def.id === 'phasor-sum' ? { diagram: 'phasor-sum' } : def.id === 'ac-ohms-law' ? { diagram: 'phasor-vi' } : def.id === 'impedance-rlc' ? { diagram: 'phasor-rlc' } : {}), html };
 }
 function formBlock(f) {
   return '<section id="try" hidden><h2>Try your own numbers</h2><form id="try-form" class="card" autocomplete="off" novalidate><div class="tgrid">' + f.html + '</div></form>' +
     '<div id="try-out" class="card ans tres" aria-live="polite"></div></section>';
 }
-const formScript = (cfg, up) => '<script defer src="' + (up || '../') + 'engine.js"></script><script>' + (cfg.diagram === 'phasor' ? llPhasorSvg.toString() + '\n' : cfg.diagram === 'phasor-sum' ? llPhasorSumSvg.toString() + '\n' : cfg.diagram === 'phasor-vi' ? llPhasorVISvg.toString() + '\n' : cfg.diagram === 'phasor-rlc' ? llPhasorRLCSvg.toString() + '\n' : '') + llCompute.toString() + '\n' + llInit.toString() + '\ndocument.addEventListener("DOMContentLoaded", function () { llInit(Engine, ' + JSON.stringify(cfg).replace(/</g, '\\u003c') + ', document); var sa = document.getElementById("static-ans"), tr = document.getElementById("try"); if (sa && tr && !tr.hidden) sa.hidden = true; function op() { var t = document.getElementById(location.hash.slice(1)); if (t && t.tagName === "DETAILS") t.open = true; } window.addEventListener("hashchange", op); op(); window.addEventListener("beforeprint", function () { Array.prototype.forEach.call(document.querySelectorAll("details.more"), function (d) { d.open = true; }); }); });</script>';
+/* Phones: the result sits below a long form, so a slim bar at the bottom of the screen repeats the headline figures while the real result card is out of view. */
+function llMini() {
+  var o = document.getElementById('try-out'); if (!o || !('IntersectionObserver' in window)) return;
+  var m = document.createElement('a'), seen = true; m.id = 'mini-res'; m.href = '#try-out'; m.hidden = true; m.setAttribute('aria-label', 'Result: go to the full result'); document.body.appendChild(m);
+  function sync() {
+    var b = o.querySelectorAll('.big'), i, s, v, sm; while (m.firstChild) m.removeChild(m.firstChild);
+    for (i = 0; i < b.length && i < 3; i++) {
+      s = document.createElement('span'); v = document.createElement('b'); v.textContent = b[i].firstChild ? b[i].firstChild.textContent : ''; s.appendChild(v);
+      sm = b[i].querySelector('small'); if (sm) { var t = document.createElement('small'); t.textContent = sm.textContent; s.appendChild(t); }
+      m.appendChild(s);
+    }
+    m.hidden = seen || !b.length;
+  }
+  new IntersectionObserver(function (e) { seen = e[0].isIntersecting; sync(); }).observe(o);
+  new MutationObserver(sync).observe(o, { childList: true, subtree: true, characterData: true }); sync();
+}
+const formScript = (cfg, up) => '<script defer src="' + (up || '../') + 'engine.js"></script><script>' + (cfg.diagram === 'phasor' ? llPhasorSvg.toString() + '\n' : cfg.diagram === 'phasor-sum' ? llPhasorSumSvg.toString() + '\n' : cfg.diagram === 'phasor-vi' ? llPhasorVISvg.toString() + '\n' : cfg.diagram === 'phasor-rlc' ? llPhasorRLCSvg.toString() + '\n' : '') + llCompute.toString() + '\n' + (cfg.rows ? llRowsChart.toString() + '\n' : '') + llDownloadCsv.toString() + '\n' + llDownloadPdf.toString() + '\n' + llInit.toString() + '\n' + llMini.toString() + '\ndocument.addEventListener("DOMContentLoaded", function () { llMini(); llInit(Engine, ' + JSON.stringify(cfg).replace(/</g, '\\u003c') + ', document); var sa = document.getElementById("static-ans"), tr = document.getElementById("try"); if (sa && tr && !tr.hidden) sa.hidden = true; function op() { var t = document.getElementById(location.hash.slice(1)); if (t && t.tagName === "DETAILS") t.open = true; } window.addEventListener("hashchange", op); op(); window.addEventListener("beforeprint", function () { Array.prototype.forEach.call(document.querySelectorAll("details.more"), function (d) { d.open = true; }); }); });</script>';
 
 
 /* ---------- Issue 4: dedicated calculator landing pages (/calculators/<slug>/) ----------
@@ -694,14 +942,16 @@ const formScript = (cfg, up) => '<script defer src="' + (up || '../') + 'engine.
    Each page is written to calculators/<slug>/index.html, so the clean URL is BASE/calculators/<slug>/. */
 const CALC_HAND = require('./calc_pages_data.js');
 const CATS = require('./category_hubs.js');
+const FUTURE = require('./future_hubs.js');
+const DH = require('./disc_hub_ui.js');
 /* One page per calculator: hand-written pages first, then pages generated from the registry (tools/calc_pages_auto.js) for every calculator
    whose search intent no hand-written page or conversion page already serves. */
 const CALC_DATA = CALC_HAND.concat(require('./calc_pages_auto.js').autoPages(E, CALC_HAND, new Set(INTENTS.map((n) => n.calc)), new Set(CATS.map((k) => k.slug).concat(['index'], CALC_HAND.map((h) => h.slug))), CATS));
 const catOfDef = (def) => { const k = CATS.find((x) => x.divisions.indexOf(def.division.slice(0, 2)) >= 0); if (!k) throw new Error(def.id + ': division "' + def.division + '" belongs to no category hub (tools/category_hubs.js)'); return k; };
 const VEC = (() => { const c = {}; JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'tests', 'reference_vectors.json'), 'utf8')).forEach((v) => { c[v.id] = (c[v.id] || 0) + 1; }); return c; })();
 const calcUrl = (slug) => BASE + '/calculators/' + (slug === 'index' ? '' : slug + '/');
-const HEADC = '<header><div class="w"><a class="brand" href="../../"><img src="../../logo.png" alt="Elecmetric" width="160" height="40"></a><nav><a href="../">All engineering calculators</a><a href="../../pages/index.html">Conversions</a><a href="../../index.html#verification">How it is verified</a></nav></div></header>';
-const HEADH = '<header><div class="w"><a class="brand" href="../"><img src="../logo.png" alt="Elecmetric" width="160" height="40"></a><nav><a href="../pages/index.html">Conversions</a><a href="../index.html#verification">How it is verified</a></nav></div></header>';
+const HEADC = '<header><div class="w"><a class="brand" href="../../"><img src="../../logo.png" alt="Elecmetric" width="160" height="40"></a><nav><a href="../">Calculators</a><a href="../all-tools/">All Tools</a><a href="../../converters/index.html">Conversion Centre</a><a href="../../pages/index.html">Conversions</a><a href="../../technical-library/">Technical Library</a><a href="../../index.html#verification">How it is verified</a></nav></div></header>';
+const HEADH = '<header><div class="w"><a class="brand" href="../"><img src="../logo.png" alt="Elecmetric" width="160" height="40"></a><nav><a href="all-tools/">All Tools</a><a href="../converters/index.html">Conversion Centre</a><a href="../pages/index.html">Conversions</a><a href="../technical-library/">Technical Library</a><a href="../index.html#verification">How it is verified</a></nav></div></header>';
 const FOOTC = (up) => feedbackBlock() + megaFooter(up, ' Elecmetric results are not a substitute for a design review by a competent engineer.');
 function calcLd(h1, slug, desc, faq) {
   if (!BASE) return '';
@@ -710,12 +960,69 @@ function calcLd(h1, slug, desc, faq) {
   return ldScript({ '@context': 'https://schema.org', '@graph': slug === 'index' ? [bc] : [bc, APP_LD(h1, calcUrl(slug), desc)].concat(faq && faq.length ? [FAQ_LD(faq)] : []) });
 }
 
-function catLd(h1, slug, desc, items) {
+/* Standalone pages built by their own scripts (STANDALONE_TOOLS above) are read from calculators/<slug>/index.html. Without BASE_URL they pass through unchanged,
+   so the committed page equals the page the tool script wrote. With BASE_URL this adds what every other tool page gets: canonical, og:url, social image,
+   and one JSON-LD graph with BreadcrumbList, WebApplication and (when the page shows a FAQ) a FAQPage of the same questions. */
+/* Adds the registry's approved related tools (tools/site_pages.json) to a standalone page's own Related section. A tool the page already links is not added
+   again, so running the build over its own output changes nothing. The registry only fills the section up to MAX_RELATED links; a page whose own hand-picked links already reach that is left alone. The page's own wording and its hand-picked links stay as they are. */
+function withRelated(slug, h) {
+  const t = SITE.bySlug[slug]; if (!t) return h;
+  const m = /<section id="related">([\s\S]*?)<\/section>/.exec(h);
+  if (!m) throw new Error(slug + ': a standalone page needs <section id="related"> to receive its related tools');
+  const norm = (x) => path.posix.normalize(x).replace(/index\.html$/, '').replace(/^(calculators\/[^/]+)$/, '$1/');
+  const have = new Set([...m[1].matchAll(/href="([^"#]+)/g)].map((x) => norm(path.posix.join('calculators', slug, x[1]))));
+  const nameOf = (r) => { const s = /^calculators\/([^/]+)\/$/.exec(r); if (!s) return SITE.LABELS[r]; return (SITE.bySlug[s[1]] || CALC_DATA.find((c) => c.slug === s[1]) || {}).name; };
+  const room = Math.max(0, SITE.MAX_RELATED - have.size);
+  const add = t.related.filter((r) => !have.has(r)).slice(0, room).map((r) => { const n = nameOf(r); if (!n) throw new Error(slug + ': related target ' + r + ' is not a registered page'); return '<a class="chip" href="' + path.posix.relative('calculators/' + slug, r).replace(/^$/, '.') + (/\/$/.test(r) ? '/' : '') + '">' + esc(n) + '</a>'; });
+  if (!add.length) return h;
+  const i = m.index + m[0].lastIndexOf('</p>');
+  const at = i > m.index ? i : m.index + m[0].length - '</section>'.length;
+  return h.slice(0, at) + add.join('') + h.slice(at);
+}
+function standalonePage(slug, src) {
+  const file = src || path.join(__dirname, '..', 'calculators', slug, 'index.html');
+  let h = withRelated(slug, fs.readFileSync(file, 'utf8'));
+  if (!BASE) return h.replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/g, '');
+  const url = calcUrl(slug), unesc = (s) => s.replace(/<[^>]+>/g, '').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&#0?39;/g, "'").replace(/&amp;/g, '&');
+  const title = unesc((h.match(/<h1[^>]*>([\s\S]*?)<\/h1>/) || [, slug])[1]).trim(), desc = unesc((h.match(/<meta name="description" content="([^"]*)">/) || [, ''])[1]);
+  const fs0 = h.indexOf('<section id="faq">'), faqHtmlSrc = fs0 >= 0 ? h.slice(fs0, h.indexOf('</section>', fs0)) : '';
+  const faq = [...faqHtmlSrc.matchAll(/<h3>([\s\S]*?)<\/h3><p>([\s\S]*?)<\/p>/g)].map((m) => [unesc(m[1]), unesc(m[2])]);
+  const crumbs = [['Elecmetric', BASE + '/'], ['Engineering calculators', calcUrl('index')], [title, url]];
+  const bc = { '@type': 'BreadcrumbList', itemListElement: crumbs.map(([name, item], i) => ({ '@type': 'ListItem', position: i + 1, name, item })) };
+  const ld = ldScript({ '@context': 'https://schema.org', '@graph': [bc, APP_LD(title, url, desc)].concat(faq.length ? [FAQ_LD(faq)] : []) });
+  h = h.replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/, '');
+  h = h.replace(/(<meta name="description" content="[^"]*">)/, '$1<link rel="canonical" href="' + url + '">');
+  h = h.replace(/(<meta property="og:site_name" content="Elecmetric">)/, '$1<meta property="og:url" content="' + url + '">' + socialImg());
+  return h.replace('</head>', ld + '</head>');
+}
+
+function catLd(h1, slug, desc, items, faq) {
   if (!BASE) return '';
   const crumbs = [['Elecmetric', BASE + '/'], ['Engineering calculators', calcUrl('index')], [h1, calcUrl(slug)]];
   const bc = { '@type': 'BreadcrumbList', itemListElement: crumbs.map(([name, item], i) => ({ '@type': 'ListItem', position: i + 1, name, item })) };
   const cp = { '@type': 'CollectionPage', name: h1, url: calcUrl(slug), description: desc, mainEntity: { '@type': 'ItemList', numberOfItems: items.length, itemListElement: items.map((it, i) => ({ '@type': 'ListItem', position: i + 1, name: it.title, url: BASE + '/#' + it.id })) } };
-  return ldScript({ '@context': 'https://schema.org', '@graph': [bc, cp] });
+  return ldScript({ '@context': 'https://schema.org', '@graph': [bc, cp].concat(faq && faq.length ? [FAQ_LD(faq)] : []) });
+}
+/* Registered standalone pages a category hub lists: its own primary ones first, then those that name it as a secondary home. The Scientific Calculator already has its own chip on every hub. */
+const hubTools = (k) => SITE.pages.filter((t) => t.id !== 'scientific-calculator' && t.primaryCategory === k.slug).concat(SITE.pages.filter((t) => t.id !== 'scientific-calculator' && t.primaryCategory !== k.slug && (t.secondaryCategories || []).indexOf(k.slug) >= 0));
+/* Mathematics landing page sections (tools/math_hub.js): one H2 per group and one H3 per tool, each with its one-line purpose. */
+const unentH = (t) => t.replace(/&amp;/g, '&').replace(/&quot;/g, '"').replace(/&#0?39;/g, "'").replace(/&lt;/g, '<').replace(/&gt;/g, '>');
+function mathTool(id, href2) {
+  if (E.BY_ID[id]) { const c = E.BY_ID[id]; return { title: c.title.replace(/\s*\(.*$/, ''), href: href2(id), why: c.purpose.replace(/\s+/g, ' ').trim() }; }
+  const t = SITE.pages.find((x) => x.id === id);
+  if (!t) throw new Error('math hub: unknown tool ' + id);
+  const f = path.join(__dirname, '..', 'calculators', id, 'index.html');
+  if (!fs.existsSync(f)) throw new Error('math hub: no page for ' + id);
+  const m = /<meta name="description" content="([^"]*)"/.exec(fs.readFileSync(f, 'utf8'));
+  return { title: t.name.replace(/\s*\(.*$/, ''), href: '../' + id + '/', why: m ? unentH(m[1]).replace(/\s+/g, ' ').trim() : '' };
+}
+function mathSections(MH, href2) {
+  return MH.SECTIONS.map((g) => '<h2>' + esc(g.h2) + '</h2>' + g.ids.map((id) => { const t = mathTool(id, href2); return '<h3><a href="' + t.href + '">' + esc(t.title) + '</a></h3>' + (t.why ? '<p>' + esc(t.why) + '</p>' : ''); }).join('')).join('');
+}
+function mathFormulasFaq(MH) {
+  MH.FORMULAS.forEach(([f]) => { if (!fs.existsSync(path.join(__dirname, '..', 'converters', f))) throw new Error('math hub: missing formula page ' + f); });
+  return '<h2>Mathematics Formulas and Worked Examples</h2><p class="note">Each reference page states the formulas with their variables and works through examples you can check by hand.</p><p>' + MH.FORMULAS.map(([f, n]) => '<a class="chip" href="../../converters/' + f + '">' + esc(n) + '</a>').join('') + '</p>' +
+    '<h2>Frequently Asked Questions</h2>' + MH.FAQ.map(([q, a]) => '<h3>' + esc(q) + '</h3><p>' + esc(a) + '</p>').join('');
 }
 function buildCategoryHubs(bySlug) {
   const pages = {}, meta = [], seen = {};
@@ -729,7 +1036,8 @@ function buildCategoryHubs(bySlug) {
     const all = prim.concat(k.also.map((id) => E.BY_ID[id]));
     k.start.forEach(([id]) => { if (!all.some((c) => c.id === id)) throw new Error(k.slug + ': where-to-start item ' + id + ' is not listed in this category'); });
     k.related.forEach((r) => { if (!CATS.some((x) => x.slug === r) || r === k.slug) throw new Error(k.slug + ': bad related category ' + r); });
-    const h1 = k.name + ' Calculators';
+    const MH = k.math ? require('./math_hub.js') : null;
+    const h1 = MH ? MH.TITLE_H1 : k.name + ' Calculators';
     if ((h1 + ' | Elecmetric').length > 60) throw new Error(k.slug + ': title too long');
     if (k.desc.length < 50 || k.desc.length > 160) throw new Error(k.slug + ': description length ' + k.desc.length);
     if (prim.length + k.also.length < 3) throw new Error(k.slug + ': a hub needs at least 3 calculators so it is not thin');
@@ -738,13 +1046,28 @@ function buildCategoryHubs(bySlug) {
     const divs = []; prim.forEach((c) => { const n = c.division.replace(/^\d+ /, ''); let g = divs.find((x) => x[0] === n); if (!g) divs.push(g = [n, []]); g[1].push(c); });
     const nv = all.filter((c) => (VEC[c.id] || 0) > 0).length, tv = all.reduce((a, c) => a + (VEC[c.id] || 0), 0);
     const verify = 'Cross-check: ' + (nv === all.length ? 'all ' + all.length : nv + ' of ' + all.length) + ' calculators listed here are compared with ' + tv.toLocaleString('en-US') + ' reference calculations written separately from the engine. This confirms the arithmetic and selection rules. It does not confirm that a standard table or convention matches your standard or manufacturer data.';
-    const body = HEADC + '<main class="w"><h1>' + esc(h1) + '</h1><p class="lede">' + esc(k.desc) + '</p><p class="lede">' + esc(k.intro) + '</p>' +
-      '<h2>Where to start</h2><ol class="steps">' + k.start.map(([id, why]) => '<li><a href="' + href2(id) + '">' + esc(E.BY_ID[id].title) + '</a>: ' + esc(why) + '</li>').join('') + '</ol>' +
-      '<h2>' + (prim.length === 1 ? 'The calculator in this category' : 'All ' + prim.length + ' calculators in this category') + '</h2>' + divs.map(([n, cs]) => '<h3>' + esc(n) + '</h3><ul>' + cs.map(li).join('') + '</ul>').join('') +
-      (k.also.length ? '<h2>Also useful here</h2><p class="note">These sit in other categories but apply to the same work.</p><ul>' + k.also.map((id) => li(E.BY_ID[id])).join('') + '</ul>' : '') +
+    const ci = CATS.indexOf(k);
+    const mk = (c, di, hint) => DH.card({ k: 'd' + di, s: [c.title, c.id.replace(/-/g, ' '), first(c.purpose), hint, k.name].join(' '), h: DH.hue(ci) + di * 23, badge: DH.ini(c.title), href: href2(c.id), title: c.title, sub: first(c.purpose), hint, app: pageOf[c.id] ? '../../index.html#' + c.id : '' });
+    const cards = divs.map(([n, cs], di) => cs.map((c) => mk(c, di, n)).join('')).join('');
+    const alsoCards = k.also.map((id) => mk(E.BY_ID[id], divs.length, 'Also useful here: ' + E.BY_ID[id].division.replace(/^\d+ /, ''))).join('') +
+      (k.tools || []).map(([h, t, why]) => DH.card({ k: 'd' + divs.length, s: t + ' ' + why + ' ' + k.name, h: DH.hue(ci) + 11, badge: DH.ini(t), href: '../../' + h, title: t, sub: why + '.', hint: 'Also useful here' })).join('');
+    const tabs = [['all', 'All']].concat(divs.map(([n], di) => ['d' + di, n]));
+    const verified = E.CALCS.filter((c) => (VEC[c.id] || 0) > 0).length;
+    const body = HEADC + '<main class="w dh"><p class="dh-crumb"><a href="../">All engineering calculators</a> &rsaquo; ' + esc(k.name) + '</p><h1>' + esc(h1) + '</h1><p class="lede">' + esc(k.desc) + '</p>' +
+      '<ul class="dh-stats"><li><b>' + all.length + '</b> calculator' + (all.length === 1 ? '' : 's') + '</li><li><b>' + nv + ' of ' + all.length + '</b> with independent reference values</li><li>Formula, worked steps and limits on every page</li></ul>' +
+      '<nav class="dh-sw" aria-label="Engineering disciplines">' + CATS.map((x) => '<a href="../' + x.slug + '/"' + (x === k ? ' aria-current="page"' : '') + '>' + esc(x.name) + '</a>').join('') + '</nav>' +
+      '<div class="dh-pop"><h2>' + (MH ? 'Popular Mathematics Calculators' : 'Where to start') + '</h2>' + k.start.map(([id, why]) => '<a class="chip" title="' + esc(why) + '" href="' + href2(id) + '">' + esc(E.BY_ID[id].title) + '</a>').join('') + '</div>' +
+      (MH ? mathSections(MH, href2) : '') +
+      '<h2>' + (prim.length === 1 ? 'The calculator in this category' : 'All ' + prim.length + ' calculators in this category') + '</h2>' +
+      (prim.length > 6 ? DH.finder('Search ' + k.name.toLowerCase() + ' calculators', 'Search this category', tabs) : '') + '<div class="dh-g">' + cards + '</div>' +
+      ((k.also.length || (k.tools || []).length) ? '<h2>Also useful here</h2><p class="note">These sit in other categories but apply to the same work.</p><div class="dh-g">' + alsoCards + '</div>' : '') +
+      '<h2>How these calculators work together</h2><p class="lede">' + esc(k.intro) + '</p>' +
       '<h2>What these calculators do not cover</h2><div class="card"><p style="margin:0">' + esc(k.limits) + '</p></div><p class="note">' + esc(verify) + '</p>' +
-      '<h2>Related categories</h2><p>' + k.related.map((r) => '<a class="chip" href="../' + r + '/">' + esc(CATS.find((x) => x.slug === r).name) + '</a>').join('') + '<a class="chip" href="../scientific-calculator/">Scientific Calculator</a><a class="chip" href="../">All engineering calculators</a><a class="chip" href="../../converters/index.html">Conversion Centre</a></p></main>' + FOOTC('../../');
-    pages[k.slug] = page(k.slug, h1, k.desc, body, catLd(h1, k.slug, k.desc, all), '', { url: BASE ? calcUrl(k.slug) : '', prefix: '../../' });
+      (hubTools(k).length ? '<h2>Standalone calculators and converters</h2><p class="note">Tools with their own page that belong in this category: ' + (k.slug === 'engineering-mathematics' ? 'the arithmetic, fraction, percentage, error and statistics tools sit here, and the digital-code tools are listed where they also apply.' : 'registered in the site page register with this category as primary or as a genuine secondary home.') + '</p><p>' + hubTools(k).map((t) => '<a class="chip" href="../' + t.id + '/">' + esc(t.name) + '</a>').join('') + '</p>' : '') +
+      (MH ? mathFormulasFaq(MH) : '') +
+      '<h2>Related categories</h2><div class="dh-g dh-cat">' + k.related.map((r) => { const x = CATS.find((y) => y.slug === r); return DH.card({ k: 'x', s: x.name, h: DH.hue(CATS.indexOf(x)), badge: DH.ini(x.name), href: '../' + r + '/', title: x.name, sub: x.desc, hint: x.divisions.length ? '' : '' }); }).join('') + '</div>' +
+      '<p style="margin-top:14px"><a class="chip" href="../scientific-calculator/">Scientific Calculator</a><a class="chip" href="../">Calculators</a><a class="chip" href="../all-tools/">Search all tools</a><a class="chip" href="../../converters/index.html">Conversion Centre</a></p></main>' + FOOTC('../../');
+    pages[k.slug] = page(k.slug, h1, k.desc, body, catLd(h1, k.slug, k.desc, all, MH && MH.FAQ) + DH.STYLE, prim.length > 6 ? DH.filterJs : '', { url: BASE ? calcUrl(k.slug) : '', prefix: '../../' });
     meta.push({ slug: k.slug, name: k.name, title: h1 + ' | Elecmetric', desc: k.desc, count: all.length, primary: prim.length, vectors: tv });
   });
   return { pages, meta };
@@ -769,7 +1092,7 @@ function variablesBlock(def, hide) {
 }
 const methodBlock = () => '<h2>How it is calculated</h2><p>Each input is converted to the base unit of its quantity, the formula above is applied in the order shown in the worked example, and each result is shown in the unit you choose. Results are held at full precision and rounded only for display, except where a step selects a standard size, as the worked example shows. A value outside its allowed range is refused with a message instead of giving a result.</p>';
 function refsBlock(def) {
-  const k = catOfDef(def), r = REFS[k.slug];
+  const k = catOfDef(def), own = CALC_DATA.find((x) => x.calc === def.id), r = (own && require('./calc_refs_by_page.js')[own.slug]) || REFS[k.slug];
   if (!r) throw new Error(k.slug + ': no entry in tools/calc_refs.js');
   return '<h2>Standards and further reading</h2>' + (r.refs.length ? '<ul>' + r.refs.map((x) => '<li>' + esc(x) + '</li>').join('') + '</ul>' : '') + '<p class="note">' + esc(r.note) + (r.refs.length ? ' These are named as background reading. Elecmetric does not embed clause text or rating tables, and the reviewer record for this calculator is separate from this list.' : '') + '</p>';
 }
@@ -778,7 +1101,7 @@ function refsBlock(def) {
    A related calculator is linked to its own page, or to its conversion page when that page serves the search intent (28 calculators),
    and only as a last resort to the app. */
 const RELATED = require('./calc_related.js');
-const REL_GRAPH = RELATED.buildRelated(E, CALC_HAND, (d) => catOfDef(d).slug, CATS);
+const REL_GRAPH = RELATED.buildRelated(E, CALC_HAND, (d) => catOfDef(d).slug, CATS, CALC_DATA.map((c) => c.calc));
 function relatedTarget(id, fromCalcPage) {
   const own = CALC_DATA.find((x) => x.calc === id), def = E.BY_ID[id];
   const blurb = (def.purpose || '').trim().replace(/\s+/g, ' ');
@@ -790,17 +1113,29 @@ function relatedTarget(id, fromCalcPage) {
   return { href: (fromCalcPage ? '../../' : '../') + 'index.html#' + id, name: def.title + ' in Elecmetric', blurb: short, app: true };
 }
 const REL_GROUPS = [['Next steps', ['next', 'hand']], ['Usually done before this', ['back']], ['Also related', ['recip', 'division', 'category', 'sibling', 'any']]];
+/* A standalone tool (tools/site_pages.json) can ask to be offered from named calculator pages (`inboundFrom`). Those links are part of the page's limit, not on top of it:
+   the page keeps its strongest engine relationships and gives up the weakest ones, so the section never exceeds RELATED.MAX. At most MAX - MIN such links per page. */
+const STANDALONE_OFFERS = {};
+SITE.pages.forEach((t) => (t.inboundFrom || []).forEach((s) => { (STANDALONE_OFFERS[s] = STANDALONE_OFFERS[s] || []).push(t); }));
+Object.keys(STANDALONE_OFFERS).forEach((s) => { if (STANDALONE_OFFERS[s].length > RELATED.MAX - RELATED.MIN) throw new Error(s + ': offers ' + STANDALONE_OFFERS[s].length + ' standalone tools; at most ' + (RELATED.MAX - RELATED.MIN) + ' fit under the related-link limit'); });
 function relatedBlock(def, c) {
-  const list = REL_GRAPH[def.id], seen = new Set(), out = ['<h2>Related calculators</h2>'];
+  const offers = (c && STANDALONE_OFFERS[c.slug]) || [], list = REL_GRAPH[def.id].slice(0, RELATED.limitOf(def.id) - offers.length), seen = new Set(), out = ['<h2>Related calculators</h2>'];
   REL_GROUPS.forEach(([head, kinds]) => {
     const rows = list.filter((e) => kinds.indexOf(e.kind) >= 0);
-    if (!rows.length) return;
+    const extra = head === 'Also related' ? offers : [];
+    if (!rows.length && !extra.length) return;
     out.push('<p><strong>' + head + '</strong></p><ul>' + rows.map((e) => {
       const t = relatedTarget(e.id, true);
       return '<li><a href="' + t.href + '">' + esc(t.name) + '</a>' + (t.blurb ? ': ' + esc(t.blurb) : '') + '</li>';
-    }).join('') + '</ul>');
+    }).concat(extra.map((t) => '<li><a href="../' + t.id + '/">' + esc(t.name) + '</a>: ' + esc(standaloneBlurb(t)) + '</li>')).join('') + '</ul>');
   });
   return out.join('');
+}
+/* One short line for a standalone tool offered from a calculator page: its own page's meta description, first sentence. */
+function standaloneBlurb(t) {
+  const f = path.join(__dirname, '..', 'calculators', t.id, 'index.html'), h = fs.existsSync(f) ? fs.readFileSync(f, 'utf8') : '', m = /<meta name="description" content="([^"]*)"/.exec(h);
+  const d = (m ? m[1] : t.name).replace(/&amp;/g, '&').replace(/&#0?39;/g, "'").replace(/\s+/g, ' ').trim(), first = (d.split(/(?<=[a-z0-9)])\.\s/)[0] || d).replace(/\.$/, '');
+  return first.length > 110 ? first.slice(0, 110).replace(/[ ,;:(]+[^ ]*$/, '') + '…' : first;
 }
 const nextCalcs = (n) => (n.kind === 'unit' || n.kind === 'awg' ? [] : (REL_GRAPH[n.calc] || []).filter((e) => e.kind === 'next' || e.kind === 'hand').slice(0, 4));
 
@@ -835,45 +1170,68 @@ function buildCalcPages() {
     const answer = '<div class="card ans"><div>' + esc(sum) + ' gives</div><div class="big">' + heads.map((h, i) => esc((heads.length > 1 ? labels[i].split(' (')[0] + ': ' : '') + h.text + (/%/.test(labels[i]) ? '%' : '')).replace(/^/, '')).join(' · ') + '</div></div>';
     const [vk, vu, vals] = c.vary, spec = def.inputs.find((x) => x.key === vk);
     const rows = vals.map((v) => { const rr = run(def, Object.assign({}, raw, { [vk]: [v, vu] }), c.slug); return [E.fmt(v, 6)].concat(c.head.map(([k, u]) => outVal(rr, k, u, c.slug).num)); });
-    const form = formFor({ head: c.head, hide: c.hide, formHide: c.formHide, formOpts: c.formOpts }, def, raw); forms[c.slug] = form.cfg;
+    const form = formFor({ slug: c.slug, head: c.head, hide: c.hide, formHide: c.formHide, formOpts: c.formOpts }, def, raw); forms[c.slug] = form.cfg;
     const n = VEC[def.id] || 0;
     const verify = n ? 'Cross-check: ' + n + ' reference cases, calculated from textbook formulas coded separately from the engine by the same author, agree with this calculator. This is not an independent review.' : 'Cross-check: not yet. This calculator is covered by the built-in tests only, so its results have not been compared with separately coded reference values.';
     const faq = [['What do I need to enter?', 'Enter ' + form.cfg.fields.map((f) => f.label.charAt(0).toLowerCase() + f.label.slice(1)).join(', ').replace(/, ([^,]*)$/, ' and $1') + '. Change the unit of a value with its selector and the result stays the same.']].concat(c.faq, [['How accurate are the results?', 'Every figure comes from the same tested engine as the Elecmetric calculators and is meant for estimating. ' + verify.replace('Cross-check: ', '') + ' Check design values against the standard and the equipment data you work to.']]); faqs[c.slug] = faq;
-    const body = HEADC + '<main class="w"><h1>' + esc(h1) + '</h1><p class="lede">' + esc(c.desc) + '</p>' + formBlock(form) + answer.replace('<div class="card ans">', '<div id="static-ans" class="card ans">') +
-      '<p class="note" id="results-note"><strong>Estimate only.</strong> Not engineering or safety advice. Check the result against the applicable standard and the equipment data, and have a competent engineer review it before it is relied on. <a href="../../terms.html">Terms of use</a>.</p>' +
-      '<p><a class="btn" href="' + appLink(def, raw, '../../') + '">Open in the calculator with these values</a></p>' +
-      '<nav class="jump" aria-label="On this page"><a class="chip" href="#about">About</a><a class="chip" href="#verification">Verification</a><a class="chip" href="#formula">Formula</a><a class="chip" href="#example">Worked example</a><a class="chip" href="#inputs">Inputs and results</a><a class="chip" href="#faq">FAQ</a><a class="chip" href="#related">Related</a>' + (GUIDES.forCalc(def.id).length ? '<a class="chip" href="#guides">Guides</a>' : '') + '</nav>' +
+    const vreg = REGISTER.reg[def.id];
+    const body = HEADC + '<main class="w calc"><h1>' + esc(h1) + '</h1><p class="lede">' + esc(c.desc) + '</p><a class="calc-vb" href="#verification">' + esc(vreg.label) + (n ? ', ' + n + ' reference cases' : ', built-in tests only') + '</a>' + formBlock(form) + answer.replace('<div class="card ans">', '<div id="static-ans" class="card ans">') +
+      '<section class="calc-limit"><h2>Limits of this calculator</h2><p>' + esc(c.caveat) + '</p></section>' +
+      '<div class="calc-act"><a class="btn" href="' + appLink(def, raw, '../../') + '">Open in the calculator with these values</a><p class="note" id="results-note"><strong>Estimate only.</strong> Not engineering or safety advice. Check the result against the applicable standard and the equipment data, and have a competent engineer review it before it is relied on. <a href="../../terms.html">Terms of use</a>.</p></div>' +
+      '<div class="cref"><nav class="jump" aria-label="On this page"><a class="chip" href="#about">About</a><a class="chip" href="#verification">Verification</a><a class="chip" href="#formula">Formula</a><a class="chip" href="#example">Worked example</a><a class="chip" href="#inputs">Inputs and results</a><a class="chip" href="#faq">FAQ</a><a class="chip" href="#related">Related</a>' + (GUIDES.forCalc(def.id).length ? '<a class="chip" href="#guides">Guides</a>' : '') + '</nav>' +
       '<section id="about"><h2>About this calculator</h2><p>' + esc(c.intro) + '</p></section>' +
-      '<h2>Limits of this calculator</h2><div class="card"><p style="margin:0">' + esc(c.caveat) + '</p></div><p class="note">' + esc(verify) + '</p>' + verifBlock(def) +
+      verifBlock(def).replace(/^<section id="verification"><h2>(.*?)<\/h2>/, (m, t) => '<details class="more" id="verification"><summary><h2>' + t + '</h2></summary><p class="note">' + esc(verify) + '</p>').replace(/<\/section>$/, '</details>') +
       '<section id="formula">' + '<h2>Formula</h2><div class="f">' + esc(def.formula) + '</div>' + '</section>' +
       '<section id="example">' + '<h2>Worked example</h2>' + table(['Input', 'Value'], inputRows(def, raw, c.hide)) + '<ol class="steps">' + r.steps.map((x) => '<li>' + esc(x) + '</li>').join('') + '</ol>' + '</section>' +
       '<h2>Assumptions</h2><ul>' + (def.assumptions || []).map((a) => '<li>' + esc(a) + '</li>').join('') + '</ul>' + (def.notes ? '<p class="note">' + esc(def.notes) + '</p>' : '') +
       det(variablesBlock(def, c.hide), 'inputs') + det(methodBlock(), 'method') + det('<h2>' + (c.auto ? 'How the result changes with ' + esc(spec.label.replace(/ \(used when[^)]*\)/, '').toLowerCase()) : 'Typical values') + '</h2>' + table([spec.label + (vu ? ' (' + vu + ')' : '')].concat(labels.map((l, i) => l.split(' (')[0] + (c.head[i][1] ? ' (' + c.head[i][1] + ')' : ''))), rows) + '<p class="note">Other inputs are the same as in the worked example above.</p>', 'typical') + det(refsBlock(def), 'standards') +
       '<section id="faq">' + faqHtml(faq) + '</section>' +
-      '<section id="related">' + relatedBlock(def, c) + '</section>' + guidesBlock(GUIDES.forCalc(def.id)) + '<p>' + '<a class=\"chip\" href=\"../' + catOfDef(def).slug + '/\">More ' + esc(catOfDef(def).name) + ' calculators</a>' + '<a class=\"chip\" href=\"../\">All engineering calculators</a><a class=\"chip\" href=\"../../index.html#' + def.id + '\">' + esc(def.title) + ' in Elecmetric</a></p></main>' + FOOTC('../../');
+      '<section id="related">' + relatedBlock(def, c) + '</section>' + guidesBlock(GUIDES.forCalc(def.id)) + '<p>' + '<a class=\"chip\" href=\"../' + catOfDef(def).slug + '/\">More ' + esc(catOfDef(def).name) + ' calculators</a>' + '<a class=\"chip\" href=\"../\">Calculators</a><a class=\"chip\" href=\"../../index.html#' + def.id + '\">' + esc(def.title) + ' in Elecmetric</a></p></div></main>' + FOOTC('../../');
     pages[c.slug] = page(c.slug, h1, c.desc, body, calcLd(h1, c.slug, c.desc, faq), formScript(form.cfg, '../../'), { url: BASE ? calcUrl(c.slug) : '', prefix: '../../' });
     meta.push({ slug: c.slug, title: h1 + ' | Elecmetric', desc: c.desc, calc: def.id, group: c.group, vectors: n });
   });
   /* ---------- Issue 8: category hubs (/calculators/<category>/) ---------- */
   /* The Scientific Calculator is a standalone tool, not a registry calculator: its own engine (tools/scicalc_engine.js) and tests (tests/scicalc_vectors.json). */
   const sci = require('./scicalc_page.js').build({ page, esc, table, faqHtml, calcLd, HEADC, FOOTC, calcUrl, BASE });
-  pages[sci.slug] = sci.html;
+  pages[sci.slug] = withRelated(sci.slug, sci.html);
   /* The Basic Calculator is a second standalone tool on the same engine (tools/basiccalc_page.js, tools/basiccalc_client.js). */
   const basic = require('./basiccalc_page.js').build({ page, esc, table, faqHtml, calcLd, HEADC, FOOTC, calcUrl, BASE });
-  pages[basic.slug] = basic.html;
+  pages[basic.slug] = withRelated(basic.slug, basic.html);
+  /* Standalone digital-logic and code tools (Modes 03, 06, 09), built by their own scripts. */
+  STANDALONE_SLUGS.forEach((s) => { pages[s] = standalonePage(s); });
   const cats = buildCategoryHubs(bySlug), catMeta = cats.meta;
   Object.keys(cats.pages).forEach((k) => { pages[k] = cats.pages[k]; });
   const groups = []; CALC_DATA.forEach((c) => { let g = groups.find((x) => x[0] === c.group); if (!g) groups.push(g = [c.group, []]); g[1].push(c.slug); });
   const hubDesc = 'Engineering calculators for motors, transformers, cables, short circuit, earthing, generators, solar PV, batteries and airfield lighting.';
-  const hub = HEADH + '<main class="w"><h1>Electrical engineering calculators</h1><p class="lede">' + esc(hubDesc) + ' Each page states what the calculator does not cover, and whether independent reference values back it.</p>' +
-    '<p>These calculators are built for electrical engineers, technicians, estimators and students. Every page shows the formula, a worked example with the steps written out, a table of typical values and the assumptions behind the result, so you can check the working against your standard or design basis. Results come from one tested engine, and you can open any calculator with your own values and print a calculation sheet.</p>' +
-    '<p>Start with a category below, or pick a calculator by task. For simple unit changes such as kW to HP or psi to kPa, use the <a href="../converters/index.html">Conversion Centre</a>. For quick everyday formulas such as amps to kW or Ohm\'s law, see the <a href="../pages/index.html">electrical conversions</a>.</p>' +
-    '<h2>Browse by category</h2><p>' + catMeta.map((m) => '<a class="chip" href="' + m.slug + '/">' + esc(m.name) + ' (' + m.count + ')</a>').join('') + '</p>' +
-    groups.map(([g, ss]) => '<h2>' + esc(g) + '</h2><p>' + ss.map((s) => '<a class="chip" href="' + s + '/">' + esc(bySlug[s].name) + '</a>').join('') + '</p>').join('') +
-    '<h2>General tools</h2><p><a class="chip" href="basic-calculator/">Basic Calculator</a><a class="chip" href="scientific-calculator/">Scientific Calculator (standard and engineering, with complex numbers and phasors)</a></p>' +
-    '<h2>More</h2><p><a class="chip" href="../pages/index.html">Electrical conversions</a><a class="chip" href="../">All calculators in Elecmetric</a></p></main>' + FOOTC('../');
-  pages['index'] = page('index', 'Electrical engineering calculators', hubDesc, hub, calcLd('Electrical engineering calculators', 'index', ''), '', { url: BASE ? calcUrl('index') : '', prefix: '../' });
-  return { pages, meta, forms, faqs, groups, cats: catMeta, sci: { slug: sci.slug, name: sci.name, title: sci.title, desc: sci.desc }, basic: { slug: basic.slug, name: basic.name, title: basic.title, desc: basic.desc, defaultText: basic.defaultText } };
+  const byCat = {}; CATS.forEach((k) => { byCat[k.slug] = []; });
+  CALC_DATA.forEach((c) => { const d = E.BY_ID[c.calc]; if (d && bySlug[c.slug]) byCat[catOfDef(d).slug].push(c); });
+  const pickData = CATS.map((k) => ({ s: k.slug, n: k.name, c: byCat[k.slug].map((c) => [c.slug, bySlug[c.slug].name]) })).filter((x) => x.c.length);
+  const MOSTC = ['cable-size-vd', 'breaker-size', 'motor-current', 'transformer-sizing', 'fault-current', 'earth-rod-resistance', 'pf-correction-kvar', 'maximum-demand', 'generator-kva', 'battery-bank-size', 'pv-string-size', 'cable-derating'].map((id) => CALC_DATA.find((c) => c.calc === id)).filter(Boolean);
+  const oneLine = (t) => (t || '').replace(/\s+/g, ' ').trim();
+  const secHtml = CATS.map((k, ci) => byCat[k.slug].length ? '<section class="dh-sec" data-k="' + k.slug + '"><h2><a href="' + k.slug + '/">' + esc(k.name) + '</a> <small>(' + byCat[k.slug].length + ')</small></h2><p>' + byCat[k.slug].map((c) => '<a class="chip" data-s="' + esc((bySlug[c.slug].name + ' ' + c.slug.replace(/-/g, ' ') + ' ' + k.name).toLowerCase()) + '" href="' + c.slug + '/">' + esc(bySlug[c.slug].name) + '</a>').join('') + '</p></section>' : '').join('');
+  const hubTabs = [['all', 'All']].concat(CATS.filter((k) => byCat[k.slug].length).map((k) => [k.slug, k.name]));
+  const hub = HEADH + '<main class="w dh"><h1>Electrical engineering calculators</h1><p class="lede">' + esc(hubDesc) + ' Each page states what the calculator does not cover, and whether independent reference values back it.</p>' +
+    '<p class="note">Formulas, worked examples and limits are on each calculator\'s page. For unit changes use the <a href="../converters/index.html">Conversion Centre</a>; for quick amps, kW and Ohm\'s law formulas see the <a href="../pages/index.html">electrical conversions</a>.</p>' +
+    '<h2>Pick a calculator</h2>' + DH.picker +
+    '<h2>Most used</h2><div class="dh-most">' + MOSTC.map((c) => '<a class="dh-m" href="' + c.slug + '/"><b>' + esc(bySlug[c.slug].name) + '</b><small>' + esc(oneLine(E.BY_ID[c.calc].purpose)) + '</small><em>' + esc(catOfDef(E.BY_ID[c.calc]).name) + '</em></a>').join('') + '</div>' +
+    '<h2>All ' + CALC_DATA.length + ' calculators</h2><p class="note">' + CALC_DATA.length + ' calculators have their own page here. ' + COUNTS.via + ' more of the ' + COUNTS.engine + ' engine calculators are reached through the <a href="../pages/index.html">conversion pages</a>, so a discipline page can list more than its share. With ' + COUNTS.standalone + ' standalone tools (maths, number systems, fractions, percentages and decay), that is ' + COUNTS.calculators + ' calculators in <a href="all-tools/">All Tools</a>.</p>' + DH.finder('Search: cable size, motor current, earth resistance, solar, battery…', 'Search engineering calculators', hubTabs) + secHtml +
+    '<h2>Browse by engineering discipline</h2><div class="dh-g dh-cat">' + catMeta.map((m, ci) => DH.card({ k: 'x', s: m.name, h: DH.hue(ci), badge: DH.ini(m.name), href: m.slug + '/', title: m.name, sub: m.desc, hint: m.primary + ' calculator' + (m.primary === 1 ? '' : 's') + ' \u2192' })).join('') + '</div>' +
+    '<h2>More tools</h2><p><a class="chip" href="all-tools/">All Tools</a><a class="chip" href="../technical-library/">Technical Library</a><a class="chip" href="../converters/index.html">Conversion Centre</a><a class="chip" href="../pages/index.html">Electrical conversions</a><a class="chip" href="basic-calculator/">Basic Calculator</a><a class="chip" href="scientific-calculator/">Scientific Calculator</a>' + STANDALONE_TOOLS.map((t) => '<a class="chip" href="' + t[0] + '/">' + esc(t[1]) + '</a>').join('') + '<a class="chip" href="../">All calculators in Elecmetric</a></p></main>' + FOOTC('../');
+  pages['index'] = page('index', 'Electrical engineering calculators', hubDesc, hub, calcLd('Electrical engineering calculators', 'index', '') + DH.STYLE, DH.pickerJs(pickData) + DH.filterJs, { url: BASE ? calcUrl('index') : '', prefix: '../' });
+  /* Redirect pages at the old addresses of calculators whose page moved to the URL the CEO note asks for (SLUG_OVERRIDES). They are noindex, point at the
+     new page with a canonical link and a meta refresh, and are not in the sitemap. The deploy guard recognises them by the data-redirect marker. */
+  const redirects = {};
+  const SO = require('./calc_pages_auto.js').SLUG_OVERRIDES;
+  /* The note's /appliance-energy-consumption/ address has no calculator of its own: the energy in kWh is a result of the Electricity Cost page, so the address leads there. */
+  const TARGET = Object.assign({}, SO, { 'appliance-energy-consumption': 'electricity-cost' });
+  /* v1.99.78: the two simple calculators whose engine definitions were retired. Their old addresses lead to the newer standalone pages, which are not in CALC_DATA, so the name is given here. */
+  const RETIRED_NAMES = { 'percent-error-calculator': 'Percent Error', 'fraction-arithmetic': 'Fraction Arithmetic', 'binary-arithmetic-calculator': 'Binary Arithmetic' };
+  Object.assign(TARGET, { 'percentage-error': 'percent-error-calculator', 'fraction-calculator': 'fraction-arithmetic', 'binary-logic-calculator': 'binary-arithmetic-calculator' });
+  Object.keys(TARGET).forEach((id) => {
+    const to = calcUrl(TARGET[id]), rel = '../' + TARGET[id] + '/', nm = (CALC_DATA.find((c) => c.slug === TARGET[id]) || {}).name || RETIRED_NAMES[TARGET[id]] || TARGET[id];
+    redirects[id] = '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>' + esc(nm) + ' moved | Elecmetric</title><meta name="robots" content="noindex"><meta name="description" content="This calculator has moved to ' + esc(rel) + '."><link rel="canonical" href="' + (BASE ? to : rel) + '"><meta http-equiv="refresh" content="0; url=' + rel + '" data-redirect="' + TARGET[id] + '"></head><body><p>This calculator has moved: <a href="' + rel + '">' + esc(nm) + ' Calculator</a>.</p></body></html>\n';
+  });
+  return { pages, meta, redirects, forms, faqs, groups, cats: catMeta, sci: { slug: sci.slug, name: sci.name, title: sci.title, desc: sci.desc }, basic: { slug: basic.slug, name: basic.name, title: basic.title, desc: basic.desc, defaultText: basic.defaultText } };
 }
 
 /* build({ base }) : base '' gives the committed, deploy-independent output; the default is the BASE_URL environment variable. */
@@ -943,41 +1301,89 @@ function build(opts) {
       (n.kind === 'awg' ? '' : '<h2>Worked example</h2>' + (exTable || '') + '<ol class="steps">' + steps.map((s) => '<li>' + esc(s) + '</li>').join('') + '</ol>') +
             '<h2>' + (n.kind === 'awg' ? 'AWG chart' : 'Typical values') + '</h2>' + varyTable + '<p class="note">' + esc(varyNote) + '</p>' +
       '<h2>Assumptions</h2><ul>' + (n._assump || []).map((a) => '<li>' + esc(a) + '</li>').join('') + '</ul>' + (n.kind || !def.notes ? '' : '<p class="note">' + esc(def.notes) + '</p>') + faqHtml(faq) +
-      '<h2>Related</h2><p>' + (nextCalcs(n).length ? 'Next steps in a design: ' + nextCalcs(n).map((e) => { const t = relatedTarget(e.id, false); return '<a class=\"chip\" href=\"' + t.href + '\">' + esc(t.name) + '</a>'; }).join('') + '<br>' : '') + (rev ? 'Opposite direction: ' + linkTo(rev.slug) + '<br>' : '') + (sibs(n, rev).length ? 'Also see: ' + sibs(n, rev).map(linkTo).join(' ') + '<br>' : '') + guidesRow(n.kind === 'awg' ? GUIDES.forSlug(n.slug, n.calc) : GUIDES.forSlug(n.slug, n.calc)) + (n.slug === 'electricity-bill' ? 'Cost of one appliance: ' + linkTo('energy-cost') + '<br>' : '') + (n.slug === 'energy-cost' || n.slug === 'energy-consumption' ? 'Whole bill with slabs and tax: ' + linkTo('electricity-bill') + '<br>' : '') + '<a class="chip" href="index.html">All ' + INTENTS.length + ' conversions</a><a class="chip" href="../index.html#' + def.id + '">' + esc(def.title) + ' in Elecmetric</a>' + (n.slug === 'ohms-law' || n.slug === 'watts-volts-amps-ohms' ? '<a class="chip" href="../index.html#ac-ohms-law">AC Ohm\'s law (phasors) in Elecmetric</a>' : '') + '</p></main>' + FOOT('../');
+      '<h2>Related</h2><p>' + (nextCalcs(n).length ? 'Next steps in a design: ' + nextCalcs(n).map((e) => { const t = relatedTarget(e.id, false); return '<a class=\"chip\" href=\"' + t.href + '\">' + esc(t.name) + '</a>'; }).join('') + '<br>' : '') + (rev ? 'Opposite direction: ' + linkTo(rev.slug) + '<br>' : '') + (sibs(n, rev).length ? 'Also see: ' + sibs(n, rev).map(linkTo).join(' ') + '<br>' : '') + guidesRow(n.kind === 'awg' ? GUIDES.forSlug(n.slug, n.calc) : GUIDES.forSlug(n.slug, n.calc)) + (n.slug === 'electricity-bill' ? 'Cost of one appliance: ' + linkTo('energy-cost') + '<br>' : '') + (n.slug === 'energy-cost' || n.slug === 'energy-consumption' ? 'Whole bill with slabs and tax: ' + linkTo('electricity-bill') + '<br>' : '') + (n.slug === 'energy-cost' ? 'The four steps of electricity cost (one appliance, a list of appliances, a bill from meter readings, replacement savings): <a class=\"chip\" href=\"../calculators/electricity-cost/\">Electricity Cost Calculator</a><br>' : '') + '<a class="chip" href="index.html">All ' + INTENTS.length + ' conversions</a><a class="chip" href="../index.html#' + def.id + '">' + esc(def.title) + ' in Elecmetric</a>' + (n.slug === 'ohms-law' || n.slug === 'watts-volts-amps-ohms' ? '<a class="chip" href="../index.html#ac-ohms-law">AC Ohm\'s law (phasors) in Elecmetric</a>' : '') + '</p></main>' + FOOT('../');
     pages[n.slug + '.html'] = page(n.slug, h1, desc, body, pageLd(h1, n.slug, desc, faq), formScript(form.cfg));
     meta.push({ slug: n.slug, title: h1 + ' | Elecmetric', desc, calc: def.id, rev: n.rev });
   });
-  const hub = HEAD('../') + '<main class="w"><h1>Electrical conversion calculators</h1><p class="lede">One page for each common conversion, each with the formula, a worked example and a table of typical values. Every number is computed by the tested Elecmetric engine.</p>' +
-    GROUPS.map(([g, ss]) => '<h2>' + esc(g) + '</h2><p>' + ss.map(linkTo).join('') + '</p>').join('') + '<h2>Conversion Centre</h2><p><a class="chip" href="../converters/index.html">Unit converters for power, energy, voltage, current, resistance, frequency and more</a></p><h2>Reference and worked examples</h2><p><a class="chip" href="../converters/resistor-color-code.html">Resistor color code calculator</a><a class="chip" href="../converters/ohms-law-formulas.html">Ohm\u2019s law formulas</a><a class="chip" href="../converters/kirchhoffs-laws.html">Kirchhoff\u2019s laws</a><a class="chip" href="../converters/coulombs-law.html">Coulomb\u2019s law calculator</a><a class="chip" href="../converters/electrical-symbols.html">Electrical symbols</a><a class="chip" href="../converters/1000-watts-to-amps.html">1,000 watts to amps</a><a class="chip" href="../converters/100-amps-to-watts.html">100 amps to watts</a></p><h2>Engineering calculators</h2><p><a class="chip" href="../calculators/">Motors, transformers, cables, earthing, solar PV and more</a></p></main>' + FOOT('../');
-  pages['index.html'] = page('index', 'Electrical conversion calculators', 'Electrical conversion calculators: amps, kW, kVA, volts, watts, kWh, joules, mAh and more, each with formula, worked example and typical values.', hub, pageLd('Electrical conversion calculators', 'index', ''));
+  /* v2 hub: from/to picker, most-used shortcuts, then every conversion in a searchable, filterable grid. All links stay plain HTML. */
+  const MOSTI = ['amps-to-kw', 'kw-to-amps', 'kva-to-kw', 'kw-to-kva', 'kva-to-amps', 'amps-to-kva', 'watts-to-amps', 'amps-to-watts', 'hp-to-amps', 'kw-to-kwh', 'volts-to-amps', 'power-factor'].filter((x) => bySlug[x]);
+  const GTAB = [['all', 'All'], ['0', 'Current & power'], ['1', 'Voltage'], ['2', 'Energy & cost'], ['3', 'Joules & batteries'], ['4', 'Ohms'], ['5', 'Lighting'], ['6', 'Circuit laws']];
+  const GSHORT = ['Current, power and apparent power', 'Voltage', 'Energy and cost', 'Joules, electron-volts and batteries', 'Ohms and resistance', 'Lighting', 'Circuit laws and design'];
+  const pairs = {}; INTENTS.forEach((n) => { const m = /^(.+)-to-(.+)$/.exec(n.slug); if (m && NAME[m[1]] && NAME[m[2]]) { (pairs[m[1]] = pairs[m[1]] || []).push(m[2]); } });
+  const pairLabels = {}; Object.keys(pairs).forEach((k) => { pairLabels[k] = NAME[k]; pairs[k].forEach((t) => { pairLabels[t] = NAME[t]; }); });
+  const hubStyle = '<style>main.w.cc{max-width:1080px}.cc .lede{max-width:70ch}.cc h2{margin-top:28px}' +
+    '.ec-pick{display:grid;grid-template-columns:1fr auto 1fr auto;gap:10px;align-items:end;padding:16px;border:1px solid var(--line);border-radius:16px;background:var(--surface);box-shadow:0 1px 3px rgba(5,20,50,.08)}.ec-pick label{display:block;font:600 12px var(--body);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}.ec-pick select{width:100%;font:16px var(--body);padding:11px 12px;border:1px solid var(--line);border-radius:10px;background:var(--field);color:var(--ink)}.ec-pick .arr{font-size:22px;color:var(--gold);padding-bottom:8px}.ec-pick .btn{padding:12px 20px;font-size:15px;cursor:pointer}.ec-pick-n{margin:8px 0 0;font-size:13px;color:var(--muted);min-height:1.3em}' +
+    '.ec-most{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px;margin-top:10px}.ec-m{display:block;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:var(--surface);color:var(--ink);text-decoration:none;transition:border-color .15s,transform .15s}.ec-m:hover,.ec-m:focus-visible{border-color:var(--gold);transform:translateY(-1px);outline:none}.ec-m b{display:block;font-size:15px}.ec-m small{color:var(--muted);font-size:12.5px}' +
+    '.cc-bar{position:sticky;top:0;z-index:5;background:var(--bg);padding:10px 0 8px}.cc-s{position:relative}.cc-s input{width:100%;font:16px var(--body);padding:13px 16px 13px 44px;border:1px solid var(--line);border-radius:14px;background:var(--surface);color:var(--ink)}.cc-s input:focus{outline:2px solid var(--gold);outline-offset:1px}.cc-s svg{position:absolute;left:15px;top:50%;transform:translateY(-50%);color:var(--muted)}' +
+    '.cc-t{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}.cc-t button{font:600 13px var(--body);padding:6px 13px;border:1px solid var(--line);border-radius:999px;background:var(--surface);color:var(--ink);cursor:pointer}.cc-t button[aria-pressed="true"]{background:var(--navy);color:var(--on-navy);border-color:var(--navy)}.cc-t button:hover{border-color:var(--gold)}.cc-n{font-size:13px;color:var(--muted);margin:8px 0 0}.cc-n:empty{display:none}' +
+    '.ec-g{border:1px solid var(--line);border-radius:14px;background:var(--surface);padding:6px 16px 14px;margin-top:12px}.ec-g[hidden]{display:none}.ec-g h2{font-size:15px;margin:12px 0 8px}.ec-g .chip[hidden]{display:none}' +
+    '.ec-link{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px;margin-top:10px}.ec-link a{display:block;padding:14px;border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:12px;background:var(--surface);color:var(--ink);text-decoration:none}.ec-link a:hover{border-color:var(--gold)}.ec-link b{display:block}.ec-link small{color:var(--muted)}' +
+    '@media (max-width:640px){.ec-pick{grid-template-columns:minmax(0,1fr)}.ec-pick .arr{display:none}.cc-bar{position:static}.ec-most{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}</style>';
+  const hubJs = '<script>(function(){var P=' + JSON.stringify(pairs).replace(/</g, '\\u003c') + ',L=' + JSON.stringify(pairLabels).replace(/</g, '\\u003c') + ',f=document.getElementById("ec-f"),t=document.getElementById("ec-t"),go=document.getElementById("ec-go"),pn=document.getElementById("ec-pn");if(f){var fk=Object.keys(P);f.innerHTML=fk.map(function(k){return"<option value=\\""+k+"\\">"+L[k]+"</option>"}).join("");function fill(){var o=P[f.value]||[];t.innerHTML=o.map(function(k){return"<option value=\\""+k+"\\">"+L[k]+"</option>"}).join("");pn.textContent=o.length+" conversion"+(o.length===1?"":"s")+" from "+L[f.value]}f.value="amps"in P?"amps":fk[0];fill();f.addEventListener("change",fill);window.addEventListener("pageshow",function(){var o=P[f.value]||[];pn.textContent=o.length+" conversion"+(o.length===1?"":"s")+" from "+L[f.value]});go.addEventListener("click",function(){location.href=f.value+"-to-"+t.value+".html"})}' +
+    'var q=document.getElementById("cc-q"),tabs=document.getElementById("cc-t"),n=document.getElementById("cc-n");if(!q)return;var gs=[].slice.call(document.querySelectorAll(".ec-g")),k="all";function run(){var w=q.value.toLowerCase().split(/\\s+/).filter(Boolean),c=0;gs.forEach(function(g){var gv=0,gk=k==="all"||g.dataset.g===k;[].forEach.call(g.querySelectorAll(".chip"),function(x){var ok=gk&&w.every(function(y){return x.dataset.s.indexOf(y)>=0});x.hidden=!ok;if(ok){gv++;c++}});g.hidden=!gv});n.textContent=(w.length||k!=="all")?(c?c+" calculator"+(c===1?"":"s")+" shown":"No match. Try amps, kW, kVA, lux or a unit symbol."):""}q.addEventListener("input",run);tabs.addEventListener("click",function(e){var b=e.target.closest("button");if(!b)return;k=b.dataset.k;[].forEach.call(tabs.children,function(x){x.setAttribute("aria-pressed",x===b?"true":"false")});run()});document.addEventListener("keydown",function(e){if(e.key==="/"&&!/^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement.tagName)){e.preventDefault();q.focus()}})})();</script>';
+  const groupHtml = GROUPS.map(([g, ss], gi) => '<section class="ec-g" data-g="' + gi + '"><h2>' + esc(g) + ' <small>(' + ss.length + ')</small></h2><p>' + ss.map((x) => '<a class="chip" data-s="' + esc((titleOf(x) + ' ' + x.replace(/-/g, ' ') + ' ' + g).toLowerCase()) + '" href="' + x + '.html">' + esc(titleOf(x)) + '</a>').join('') + '</p></section>').join('');
+  const hub = HEAD('../') + '<main class="w cc"><h1>Electrical conversion calculators</h1><p class="lede">One page for each common conversion, each with the formula, a worked example and a table of typical values. Every number is computed by the tested Elecmetric engine.</p>' +
+    '<h2>Pick a conversion</h2><div class="ec-pick" role="group" aria-label="Choose a conversion"><div><label for="ec-f">I have</label><select id="ec-f"></select></div><span class="arr" aria-hidden="true">&rarr;</span><div><label for="ec-t">I want</label><select id="ec-t"></select></div><button type="button" class="btn" id="ec-go">Open calculator</button></div><p class="ec-pick-n" id="ec-pn" aria-live="polite"></p>' +
+    '<h2>Most used</h2><div class="ec-most">' + MOSTI.map((x) => '<a class="ec-m" href="' + x + '.html"><b>' + esc(titleOf(x)) + '</b><small>' + esc(x === 'power-factor' ? 'PF, kW and kVA' : x.indexOf('-to-') > 0 ? 'formula and worked example' : '') + '</small></a>').join('') + '</div>' +
+    '<h2>All ' + INTENTS.length + ' conversions</h2><div class="cc-bar" role="search"><div class="cc-s"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="8" cy="8" r="5.5"/><path d="M12.5 12.5L16 16"/></svg><input id="cc-q" type="search" autocomplete="off" placeholder="Search: amps, kVA, lux, battery, hp…" aria-label="Search conversions"></div><div class="cc-t" id="cc-t" role="group" aria-label="Filter by group">' + GTAB.map(([k, t], i) => '<button type="button" data-k="' + k + '" aria-pressed="' + (i === 0 ? 'true' : 'false') + '">' + esc(t) + '</button>').join('') + '</div><p class="cc-n" id="cc-n" aria-live="polite"></p></div>' + groupHtml +
+    '<h2>More tools</h2><div class="ec-link"><a href="../converters/index.html"><b>Conversion Centre &rarr;</b><small>Unit converters for power, energy, voltage, current, pressure, temperature and more</small></a><a href="../calculators/"><b>Engineering calculators &rarr;</b><small>Motors, transformers, cables, earthing, solar PV and more</small></a><a href="../calculators/all-tools/"><b>All Tools &rarr;</b><small>Search and filter the whole catalogue</small></a><a href="../converters/resistor-color-code.html"><b>Resistor color code &rarr;</b><small>Bands to ohms and back</small></a><a href="../converters/ohms-law-formulas.html"><b>Ohm\u2019s law formulas &rarr;</b><small>Quick reference</small></a><a href="../converters/kirchhoffs-laws.html"><b>Kirchhoff\u2019s laws &rarr;</b><small>Current and voltage laws</small></a><a href="../converters/coulombs-law.html"><b>Coulomb\u2019s law &rarr;</b><small>Force between charges</small></a><a href="../converters/electrical-symbols.html"><b>Electrical symbols &rarr;</b><small>Circuit symbol reference</small></a><a href="../converters/1000-watts-to-amps.html"><b>1,000 watts to amps &rarr;</b><small>Worked example</small></a></div></main>' + FOOT('../');
+  pages['index.html'] = page('index', 'Electrical conversion calculators', 'Electrical conversion calculators: amps, kW, kVA, volts, watts, kWh, joules, mAh and more, each with formula, worked example and typical values.', hub, pageLd('Electrical conversion calculators', 'index', '') + hubStyle, hubJs);
   /* Files that belong at the site root, not in pages/. robots.txt is always written; sitemap.xml needs BASE_URL. */
   const root = { 'robots.txt': 'User-agent: *\nAllow: /\n' + (BASE ? 'Sitemap: ' + BASE + '/sitemap.xml\n' : '') };
   const calc = buildCalcPages();
   const conv = require('./build_converters.js').build({ page, esc, FOOT, table, ldScript, APP_LD, FAQ_LD, faqHtml, base: BASE });
+  const lib = require('./build_library.js').build({ page, esc, FOOT, base: BASE, calcs: CALC_DATA.map((c) => ({ name: c.name, slug: c.slug, href: '../../calculators/' + c.slug + '/' })) });
+  /* Phase 3: the All Tools catalogue (calculators/all-tools/). Built last because it reads the titles of the generated converter and conversion pages. */
+  { const at = require('./build_all_tools.js').build({ COUNTS, E, page, esc, FOOTC, calcUrl, ldScript, BASE, convPages: conv.pages, introPages: pages,
+      calcSlugs: new Set(Object.keys(calc.pages).filter((k) => k !== 'index')), calcPages: calc.pages, hubs: CATS });
+    if (calc.pages['all-tools'] || CALC_DATA.some((c) => c.slug === 'all-tools') || CATS.some((k) => k.slug === 'all-tools')) throw new Error('all-tools: the slug collides with another calculators/ page');
+    root['search-index.js'] = '/* Generated by tools/build_pages.js from the All Tools catalogue. Do not edit. */\nwindow.LL_SEARCH=' + JSON.stringify(at.search) + ';\n';
+    /* Home page data: just enough of the registry (id, title, division, and the purpose line of the popular cards) for the home page, sidebar and discipline cards to render without engine.js. */
+    { const POP = ['three-phase-current', 'voltage-drop', 'cable-size-vd', 'breaker-size', 'motor-current', 'transformer-sizing', 'earth-rod-resistance', 'pf-correction-kvar', 'fault-types', 'maximum-demand', 'generator-kva', 'agl-ccr-loading'];
+      const rows = E.CALCS.map((c) => POP.indexOf(c.id) >= 0 ? [c.id, c.title, c.division, String(c.purpose || '').replace(/\s+/g, ' ')] : [c.id, c.title, c.division]);
+      root['home-data.js'] = '/* Generated by tools/build_pages.js from engine.js. Do not edit. */\nwindow.LL_HOME=' + JSON.stringify({ version: E.VERSION, calcs: rows }) + ';\n'; }
+    COUNTS.catalogue = at.counts.total;
+    calc.pages['all-tools'] = at.html; calc.allTools = { title: at.title, desc: at.desc, counts: at.counts, items: at.items.length }; }
+  /* Category landing pages (/categories/): built here so the sitemap can list the indexable ones. */
+  const cats = require('./build_categories.js').build({ page, esc, FOOTC, ldScript, BASE });
   if (BASE) {
-    const urls = [BASE + '/'].concat(['index'].concat(INTENTS.map((n) => n.slug)).map((u) => BASE + '/pages/' + u + '.html')).concat(['index'].concat(CALC_DATA.map((c) => c.slug)).concat(CATS.map((k) => k.slug)).concat(['basic-calculator', 'scientific-calculator']).map(calcUrl)).concat(conv.slugs.map((u) => BASE + '/converters/' + u + '.html'));
-    /* lastmod only when the build is given a real date (the workflow passes the last commit date); a made-up "today" on every build would tell crawlers pages changed when they did not. */
+    const urls = [BASE + '/'].concat(['index'].concat(INTENTS.map((n) => n.slug)).map((u) => BASE + '/pages/' + u + '.html')).concat(['index'].concat(CALC_DATA.map((c) => c.slug)).concat(CATS.map((k) => k.slug)).concat(['basic-calculator', 'scientific-calculator'].concat(STANDALONE_SLUGS).concat(['all-tools'])).map(calcUrl)).concat(conv.slugs.map((u) => BASE + '/converters/' + u + '.html')).concat(lib.indexable.map((u) => BASE + u)).concat([BASE + '/categories/'], cats.meta.filter((m) => m.indexable).map((m) => BASE + '/categories/' + m.slug + '/'));
+    /* lastmod only when the build is given a real date; a made-up "today" on every build would tell crawlers pages changed when they did not. This single date stamps every URL alike, so the production workflow does not use it: it runs tools/add_lastmod.js, which dates each URL from its own last commit. */
     const lm = String((opts && opts.lastmod) || process.env.SITE_LASTMOD || ''), lmTag = /^\d{4}-\d{2}-\d{2}$/.test(lm) ? '<lastmod>' + lm + '</lastmod>' : '';
     root['sitemap.xml'] = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + urls.map((u) => '  <url><loc>' + u + '</loc>' + lmTag + '</url>').join('\n') + '\n</urlset>\n';
     /* A real 404 page for the host to serve. Absolute links, because it is shown at any address. noindex so it never competes in search. */
     root['404.html'] = page('404', 'Page not found', 'This page does not exist. Go to the Elecmetric electrical calculators.',
-      '<header><div class="w"><a class="brand" href="' + BASE + '/"><img src="' + BASE + '/logo.png" alt="Elecmetric" width="160" height="40"></a></div></header><main class="w"><h1>Page not found</h1><p class="lede">That address does not exist. Try one of these.</p><p><a class="chip" href="' + BASE + '/">Elecmetric calculators</a><a class="chip" href="' + BASE + '/calculators/">All engineering calculators</a><a class="chip" href="' + BASE + '/pages/index.html">Electrical conversions</a><a class="chip" href="' + BASE + '/converters/index.html">Conversion Centre</a></p></main>' + FOOT(BASE + '/'),
+      '<header><div class="w"><a class="brand" href="' + BASE + '/"><img src="' + BASE + '/logo.png" alt="Elecmetric" width="160" height="40"></a></div></header><main class="w"><h1>Page not found</h1><p class="lede">That address does not exist. Try one of these.</p><p><a class="chip" href="' + BASE + '/">Elecmetric calculators</a><a class="chip" href="' + BASE + '/calculators/">Calculators</a><a class="chip" href="' + BASE + '/pages/index.html">Electrical conversions</a><a class="chip" href="' + BASE + '/converters/index.html">Conversion Centre</a></p></main>' + FOOT(BASE + '/'),
       '<meta name="robots" content="noindex">', '', { url: '', prefix: BASE + '/' });
   }
   root['index.html'] = indexHtml();
-  return { pages, meta, GROUPS, root, forms, faqs, calc, conv, legal: legalPages() };
+  /* Coming-soon category hubs (tools/future_hubs.js): noindex, not in the sitemap, not in All Tools or the registry. Kept apart from calc.pages so no calculator count includes them. */
+  const future = require('./future_hubs.js').build({ page, esc, HEADC, FOOTC, calcUrl, ldScript, BASE });
+  [calc.pages, pages, conv.pages].forEach((m) => { Object.keys(future.pages).forEach((k) => { if (m[k]) throw new Error(k + ': coming-soon hub slug collides with an existing page'); }); });
+  CALC_DATA.concat(CATS).forEach((c) => { if (future.pages[c.slug]) throw new Error(c.slug + ': coming-soon hub slug collides with a calculator or category'); });
+  /* Heading standard (Global SEO Heading Strategy): wording of the H2 headings, applied to what the generator returns so a rebuild reproduces it. */
+  const HS = require('./heading_standard.js');
+  Object.keys(pages).forEach((f) => { if (/\.html$/.test(f)) pages[f] = HS.standardise('pages/' + f, pages[f]); });
+  Object.keys(calc.pages).forEach((k) => { calc.pages[k] = HS.standardise('calculators/' + (k === 'index' ? '' : k + '/') + 'index.html', calc.pages[k]); });
+  Object.keys(conv.pages).forEach((f) => { if (/\.html$/.test(f)) conv.pages[f] = HS.standardise('converters/' + f, conv.pages[f]); });
+  Object.keys(future.pages).forEach((k) => { future.pages[k] = HS.standardise('calculators/' + k + '/index.html', future.pages[k]); });
+  /* Breadcrumbs (Home > Category > Subcategory > Tool) on every registered tool page, from the same registry as the category pages. */
+  const BC = require('./breadcrumbs.js');
+  Object.keys(pages).forEach((f) => { if (/\.html$/.test(f)) pages[f] = BC.inject(pages[f], '/pages/' + f, BASE); });
+  Object.keys(calc.pages).forEach((k) => { if (k !== 'index') calc.pages[k] = BC.inject(calc.pages[k], '/calculators/' + k + '/', BASE); });
+  return { pages, meta, GROUPS, root, forms, faqs, calc, conv, lib, future, cats, legal: legalPages() };
 }
 
 /* Privacy notice and terms of use, written to match what the app really does (no analytics, no accounts, nothing sent to a server).
    Draft text for a lawyer to review. Contact and dates come from tools/site_info.json. */
 function legalPages() {
   const L = SITE_INFO, mail = L.contact_email ? '<a href="mailto:' + esc(L.contact_email) + '">' + esc(L.contact_email) + '</a>' : '', law = esc(L.governing_law || 'India'), courts = esc(L.courts_city || 'Delhi, India'), upd = esc(L.legal_updated || '');
-  const op = L.operator_name ? esc(L.operator_name) : '', opLine = op ? '<p>Elecmetric is operated by ' + op + (L.operator_location ? ', ' + esc(L.operator_location) : '') + '.</p>' : '';
+  const op = L.operator_name ? esc(L.operator_name) : '', projectOnly = !L.operator_name || L.operator_name.trim().toLowerCase() === 'elecmetric', locShown = L.operator_location && !/not publicly disclosed/i.test(L.operator_location), opLine = projectOnly ? '<p>Elecmetric is an independent project. No individual operator is named on this site.</p>' : '<p>Elecmetric is operated by ' + op + (locShown ? ', ' + esc(L.operator_location) : '') + '.</p>';
   const contact = mail ? '<h2>Contact</h2>' + opLine + '<p>Questions, error reports and requests: ' + mail + '.</p>' : '';
   const shell = (slug, h1, desc, inner) => page(slug, h1, desc, '<header><div class="w"><a class="brand" href="./"><img src="logo.png" alt="Elecmetric" width="160" height="40"></a><nav><a href="./">Calculators</a><a href="pages/index.html">Conversions</a></nav></div></header><main class="w"><h1>' + esc(h1) + '</h1><p class="note">Last updated ' + upd + '</p>' + inner + '</main>' + FOOT(''), '', '', { url: BASE ? BASE + '/' + slug + '.html' : '', prefix: '' });
-  const privacy = '<!-- DRAFT: have a lawyer review before publishing -->' +
+  const privacy = '' +
     '<p class="lede">Elecmetric runs in your browser. It has no accounts and does not send what you type to any server.</p>' +
-    '<h2>What stays on your device</h2><p>The values you enter and the results are processed in your browser and are not stored. Elecmetric saves the following in your browser storage so they are there next time: your settings (theme, number grouping, simple or engineering mode), your favourites and your recently used calculators, and the details you type into the calculation sheet form: project, sheet or reference, prepared by, checked by and revision. Those sheet details can include people\'s names, so do not enter them on a shared or public computer. They are used only to fill the next sheet and never leave your device. If you load standards tables into the Cable Selection Check, the table text you load (including the name you give as the person who entered it) is also kept in your browser storage and never leaves your device. It also keeps a cache of its own files so it can work offline. You can clear all of this in your browser settings (clear site data for this website).</p>' +
+    '<h2>What stays on your device</h2><p>The values you enter and the results are processed in your browser and are not sent anywhere. Most calculators do not keep them. The percentage, percent error, tolerance, fraction, half-life and decay, binary, hex, number-system and similar calculators keep a short history of your recent calculations (the numbers you entered, the settings and the results) in your browser storage so you can use them again; each of those calculators has a Clear history button, and the history never leaves your device. Elecmetric also saves the following in your browser storage so they are there next time: your settings (theme, number grouping, simple or engineering mode), your favourites and your recently used calculators, and the details you type into the calculation sheet form: project, sheet or reference, prepared by, checked by and revision. Those sheet details can include people\'s names, so do not enter them on a shared or public computer. They are used only to fill the next sheet and never leave your device. If you load standards tables into the Cable Selection Check, the table text you load (including the name you give as the person who entered it) is also kept in your browser storage and never leaves your device. It also keeps a cache of its own files so it can work offline. You can clear all of this in your browser settings (clear site data for this website).</p>' +
     '<h2>What we do not use</h2><p>No analytics, advertising or tracking cookies, no user accounts, and no fonts or scripts loaded from other companies\' servers.</p>' +
     '<h2>Hosting</h2><p>The site files are delivered by a hosting provider (for example GitHub Pages). Like any web host, it may log technical data such as your IP address and browser type under its own privacy policy. Elecmetric does not receive or use those logs. The host is a United States company, so those logs may be processed outside India.</p>' +
     '<h2>Shared links</h2><p>A shared calculator link carries its input values in the part of the web address after the # sign. Your browser does not send that part to the web server, so the values stay between you and the people you give the link to. Anyone who opens the link sees those values, and they can show up in your browser history, chat apps and emails where you paste the link. Do not put confidential project data into links you share.</p>' +
@@ -985,7 +1391,7 @@ function legalPages() {
     '<h2>Your rights</h2><p>Because nothing you enter is sent to us, we hold no profile about you. For the emails we hold, you can ask us to access, correct or delete them using the contact address below, and we will reply within 30 days. Under the Digital Personal Data Protection Act, 2023 of India you may also ask for a response to a grievance, and you may complain to the Data Protection Board of India once it is operating. Visitors outside India may have additional rights under their local law, for example the GDPR in the European Economic Area and the UK.</p>' +
     '<h2>Changes</h2><p>If Elecmetric later adds accounts, saved projects or analytics, this notice will be updated before that starts and will explain what is collected, why, and how to withdraw consent.</p>' + contact +
     '<p class="note">This notice is governed by the laws of ' + law + '.</p>';
-  const terms = '<!-- DRAFT: have a lawyer review before publishing -->' +
+  const terms = '' +
     '<p class="lede">Elecmetric is a set of electrical calculators for estimating. These terms apply when you use the site. If you do not accept them, do not use the results.</p>' +
     '<h2>1. Estimating tool, not professional advice</h2><p>Results are design assistance. They are not engineering, legal or safety advice and do not create an engineer-client relationship. You are responsible for checking every result against the applicable standard, the equipment data and local regulations, and for having a competent engineer review any design before it is built, installed or relied on. Do not rely on Elecmetric alone for safety-critical work.</p>' +
     '<h2>2. Standards</h2><p>Elecmetric does not contain the text or tables of any standard and does not claim that a result complies with one. Calculation bases (IEC, IS, BS, AS/NZS, NEC style) use selected method constants only. Names of standards and organisations are used to identify them. Elecmetric is not affiliated with or endorsed by their owners. Some calculation constants are provisional and have not been checked against the latest edition of the named standard; the verification section on each page says so where it applies. If you load standards tables or other third-party data into a calculator, you must have the right to use and enter it. Elecmetric does not supply licensed standards content and does not check your right to use it.</p>' +
@@ -1003,14 +1409,19 @@ function legalPages() {
     'terms.html': shell('terms', 'Terms of use', 'Terms of use for Elecmetric electrical calculators: estimating tool, no warranty, limits of liability.', terms)
   };
 }
-module.exports = { legalPages, INTENTS, GROUPS, CALC_DATA, CALC_HAND, CATS, build, titleOf, llCompute, llPhasorSvg, llPhasorSumSvg, llPhasorVISvg, llPhasorRLCSvg };
+module.exports = { STANDALONE_OVERRIDES, standalonePage, legalPages, INTENTS, GROUPS, CALC_DATA, CALC_HAND, CATS, build, titleOf, llCompute, llPhasorSvg, llPhasorSumSvg, llPhasorVISvg, llPhasorRLCSvg };
 if (require.main === module) {
   const out = path.join(__dirname, '..', 'pages'); fs.mkdirSync(out, { recursive: true });
-  const { pages, root, calc, conv, legal } = build(); const top = path.join(__dirname, '..');
+  const { pages, root, calc, conv, lib, legal, future, cats } = build(); const top = path.join(__dirname, '..');
   Object.keys(pages).forEach((f) => fs.writeFileSync(path.join(out, f), pages[f]));
   Object.keys(calc.pages).forEach((k) => { const d = k === 'index' ? path.join(top, 'calculators') : path.join(top, 'calculators', k); fs.mkdirSync(d, { recursive: true }); fs.writeFileSync(path.join(d, 'index.html'), calc.pages[k]); });
+  STANDALONE_OVERRIDES.forEach((k) => { fs.writeFileSync(path.join(top, 'calculators', k, 'index.html'), require('./breadcrumbs.js').inject(require('./heading_standard.js').standardise('calculators/' + k + '/index.html', standalonePage(k, path.join(__dirname, 'standalone', k + '.html'))), '/calculators/' + k + '/', BASE)); });
+  Object.keys(future.pages).forEach((k) => { const d = path.join(top, 'calculators', k); fs.mkdirSync(d, { recursive: true }); fs.writeFileSync(path.join(d, 'index.html'), future.pages[k]); });
+  Object.keys(cats.pages).forEach((k) => { const d = k === 'index' ? path.join(top, 'categories') : path.join(top, 'categories', k); fs.mkdirSync(d, { recursive: true }); fs.writeFileSync(path.join(d, 'index.html'), cats.pages[k]); });
+  Object.keys(calc.redirects).forEach((k) => { const d = path.join(top, 'calculators', k); fs.mkdirSync(d, { recursive: true }); fs.writeFileSync(path.join(d, 'index.html'), calc.redirects[k]); });
   const cdir = path.join(top, 'converters'); fs.mkdirSync(cdir, { recursive: true });
   Object.keys(conv.pages).forEach((f) => fs.writeFileSync(path.join(cdir, f), conv.pages[f]));
+  Object.keys(lib.pages).forEach((k) => { const f = path.join(top, 'technical-library', k); fs.mkdirSync(path.dirname(f), { recursive: true }); fs.writeFileSync(f, lib.pages[k]); });
   Object.keys(root).forEach((f) => fs.writeFileSync(path.join(top, f), root[f]));
   Object.keys(legal).forEach((f) => fs.writeFileSync(path.join(top, f), legal[f]));
   if (process.env.BASE_URL && !SITE_INFO.contact_email) console.warn('WARNING: tools/site_info.json has no contact_email, so the privacy and terms pages show no contact address.');

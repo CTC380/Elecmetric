@@ -1,0 +1,505 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><style data-crumbs>.crumbs{font-size:13px;color:var(--muted);margin:0 0 10px}.crumbs ol{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:2px 0}.crumbs li+li::before{content:"\203A";margin:0 7px;opacity:.7}.crumbs a{color:inherit}.crumbs [aria-current]{color:var(--ink)}</style><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'"><title>Number Sequence Calculator | Find Patterns, Next Terms &amp; nth Term</title><meta name="description" content="Free number sequence calculator. Identify arithmetic, geometric, Fibonacci, quadratic and polynomial patterns. Find the next term, nth term, sequence formula and series sum with step-by-step solutions."><meta property="og:title" content="Number Sequence Calculator | Find Patterns, Next Terms &amp; nth Term"><meta property="og:description" content="Free number sequence calculator. Identify arithmetic, geometric, Fibonacci, quadratic and polynomial patterns. Find the next term, nth term, sequence formula and series sum with step-by-step solutions."><meta property="og:type" content="website"><meta property="og:site_name" content="Elecmetric"><meta name="twitter:card" content="summary_large_image"><meta name="theme-color" content="#043B79"><link rel="icon" href="../../icon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="../../apple-touch-icon.png"><link rel="manifest" href="../../manifest.webmanifest">
+<style>.fb textarea{width:100%;font:15px/1.5 var(--body);padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--field);color:var(--ink);resize:vertical}.fb textarea:focus{outline:2px solid var(--gold);outline-offset:1px}:root{--bg:#F1F6FC;--surface:#fff;--ink:#0A2347;--muted:#4B5F86;--line:#D3DFEF;--navy:#043B79;--on-navy:#FFFFFF;--gold:#B34A00;--gold-fill:#FFEFDC;--field:#F4F8FE;--err:#B3261E;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;--display:"Arial Narrow","Roboto Condensed",system-ui,sans-serif;--body:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--navy-2:#0A5BBB;--cyan:#0062DE;--num:#043B79;--orange:#FF7A00;--gold-grad:linear-gradient(135deg,#FFA43D 0%,#FF7A00 52%,#E85F00 100%);--hero:radial-gradient(1000px 360px at 90% -35%,rgba(0,98,222,.55),transparent 62%),radial-gradient(640px 240px at 0% 110%,rgba(255,122,0,.20),transparent 60%),linear-gradient(135deg,#032A58,#043B79 58%,#0A55A8);--r:14px;--sh-0:0 1px 2px rgba(4,35,80,.06);--sh-1:0 1px 2px rgba(4,35,80,.05),0 6px 18px rgba(4,35,80,.07);--sh-2:0 2px 4px rgba(4,35,80,.05),0 22px 44px -14px rgba(4,35,80,.24);--ring:0 0 0 3px rgba(0,98,222,.26);color-scheme:light dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}@media(prefers-color-scheme:dark){:root{--bg:#04122B;--surface:#0A2046;--ink:#EAF2FF;--muted:#A0B5DA;--line:#183868;--navy:#031B3F;--on-navy:#EAF2FF;--gold:#FF9A3D;--gold-fill:#3D2410;--field:#071B3C;--err:#FF8A80;--navy-2:#0B4A98;--cyan:#4DA3FF;--orange:#FF8A1F;--num:#FFB066;--sh-0:0 1px 2px rgba(0,0,0,.4);--sh-1:0 1px 2px rgba(0,0,0,.35),0 8px 22px rgba(0,0,0,.35);--sh-2:0 2px 4px rgba(0,0,0,.4),0 24px 48px -14px rgba(0,0,0,.7);--ring:0 0 0 3px rgba(77,163,255,.34)}}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 var(--body)}a{color:inherit}header{background:var(--navy);color:var(--on-navy);border-bottom:3px solid var(--gold)}.w{max-width:860px;margin:0 auto;padding:0 max(16px,env(safe-area-inset-left,0px))}header .w{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-block:12px;flex-wrap:wrap}header a{text-decoration:none;font:600 20px var(--display);letter-spacing:.04em;text-transform:uppercase}header nav a{font:500 13px var(--body);text-transform:none;letter-spacing:0;margin-left:14px;opacity:.9}main{padding-block:24px 56px}h1{font:600 32px/1.1 var(--display);margin:0 0 8px;text-wrap:balance}h2{font:600 20px var(--display);letter-spacing:.02em;margin:28px 0 8px;text-transform:uppercase}.lede{color:var(--muted);margin:0 0 16px;max-width:62ch}.card{background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:16px 18px;margin:12px 0}.ans{border-left:4px solid var(--gold);display:flex;flex-wrap:wrap;gap:6px 24px;align-items:baseline;justify-content:space-between}.big{font:600 28px var(--display)}.jump{margin:8px 0 4px}details.more{border:1px solid var(--line);border-radius:12px;background:var(--surface);margin:14px 0;padding:0 16px;box-shadow:var(--sh-0)}details.more>summary{cursor:pointer;list-style:none}details.more>summary::-webkit-details-marker{display:none}details.more>summary h2{margin:14px 0}details.more>summary h2::after{content:"+";margin-left:auto;color:var(--gold)}details.more[open]>summary h2::after{content:"\2212"}details.more[open]{padding-bottom:12px}@media print{.jump{display:none}}.btn{display:inline-block;background:var(--navy);color:var(--on-navy);padding:9px 16px;border-radius:4px;text-decoration:none;font-weight:600;border:1px solid var(--gold)}.chip{display:inline-block;margin:3px 6px 3px 0;padding:5px 12px;border:1px solid var(--line);border-radius:999px;background:var(--surface);text-decoration:none;font-size:14px}.chip:hover{border-color:var(--gold)}main li>a:only-child{display:inline-block;padding:3px 0}code,pre,.f,td.n{font-family:var(--mono)}.f{background:var(--field);border:1px solid var(--line);padding:10px 12px;border-radius:4px;overflow-x:auto;white-space:pre-wrap}ol.steps{padding-left:22px;font-family:var(--mono);font-size:13px}ol.steps li{margin:4px 0}.tw{overflow-x:auto}table{border-collapse:collapse;width:100%;background:var(--surface)}th,td{border:1px solid var(--line);padding:6px 10px;text-align:left}td.n{text-align:right}tr.me td{background:var(--gold-fill)}th{background:var(--field);font-weight:600}.note{color:var(--muted);font-size:13px}ul{padding-left:20px}footer{border-top:1px solid var(--line);color:var(--muted);font-size:13px;padding-block:16px}h3{font:600 16px var(--body);margin:18px 0 4px}h3+p{margin:0;max-width:68ch}.tres .tact{flex:0 0 100%;display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}@media print{.tact{display:none}}.tres .phasor{flex:0 0 100%;margin-top:12px}.phasor svg{display:block;width:100%;max-width:360px;height:auto;font:11px var(--body)}.arow{grid-column:1/-1;border:1px solid var(--line);border-radius:10px;padding:10px 12px 12px;margin:0}.arow[hidden]{display:none}.arow legend{font-weight:700;font-size:13px;padding:0 6px}.arow .tgrid{margin-top:2px}.arow-bar{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:8px;align-items:center}.arow-bar .note{margin:0}.arow .rm{margin-top:10px}.mgrid{margin-top:10px}.mgrid .mbody[hidden]{display:none}.mgrid .tgrid{margin-top:8px}.mgrid .fillm{margin-top:10px}.tres .rchart{flex:0 0 100%;margin-top:12px}.rchart svg{display:block;width:100%;height:auto;font:12px var(--body)}.rchart h3{margin:0 0 6px;font-size:14px}.tres .carry{flex:0 0 100%;margin-top:10px}.carry .chip{display:inline-block;margin:4px 6px 0 0}.arow .rm[hidden],#add-row[hidden]{display:none}@media print{.arow-bar,.arow .rm{display:none}}.tgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px 16px}.tgrid label{display:block;font-weight:600;font-size:13px;margin-bottom:4px}.trow{display:flex;gap:6px}.trow input,.trow select,.tgrid>div>select{font:16px var(--body);color:var(--ink);background:var(--field);border:1px solid var(--line);border-radius:4px;padding:8px;min-height:40px}.trow input{flex:1;min-width:0}.tgrid>div>select{width:100%}.hint{color:var(--muted);font-size:12px;margin-top:3px}.err{color:var(--err)}.tres{display:flex;flex-wrap:wrap;gap:6px 28px;align-items:baseline}.tres .big small{display:block;font:500 13px var(--body);color:var(--muted)}::selection{background:color-mix(in srgb,var(--gold) 30%,transparent)}body{background-image:radial-gradient(900px 520px at 100% -8%,color-mix(in srgb,var(--cyan) 10%,transparent),transparent 62%),radial-gradient(700px 420px at -5% 0%,color-mix(in srgb,var(--gold) 8%,transparent),transparent 60%);background-attachment:fixed;-webkit-font-smoothing:antialiased}header{position:relative;overflow:hidden;background:var(--hero);border-bottom:0;box-shadow:0 10px 30px -14px rgba(5,14,34,.6)}header::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);background-size:34px 34px;-webkit-mask-image:linear-gradient(100deg,#000,transparent 70%);mask-image:linear-gradient(100deg,#000,transparent 70%);pointer-events:none}header::after{content:"";position:absolute;left:0;right:0;bottom:0;height:18px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44 14'%3E%3Cpath d='M0 12.5H8L14 2l7 10.5 5-6 4 6H44' fill='none' stroke='%23FF7A00' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat right 36px bottom 3px/44px 14px,linear-gradient(90deg,#FF7A00,#FFA43D 55%,#FF7A00) no-repeat bottom/100% 4px;pointer-events:none}header .w{position:relative;z-index:1;padding-block:8px 10px}header .w>a.brand{display:block;line-height:0;letter-spacing:0;text-transform:none;background:#fff;border-radius:10px;padding:4px 10px;box-shadow:0 2px 12px rgba(2,16,42,.4),0 0 0 1px rgba(255,255,255,.5)}header .w>a.brand img{display:block;height:34px;width:auto}@media(max-width:600px){header .w>a.brand img{height:30px}}header a:focus-visible{outline-color:#FFB066}header nav a{color:#DCE5F5;opacity:1;padding:6px 12px;border-radius:999px;margin-left:6px;transition:background .15s,color .15s}header nav a:hover{background:rgba(255,255,255,.12);color:#FFB066}main.w{padding-top:36px;padding-bottom:64px}h1{font-size:36px;letter-spacing:.005em}h1::after{content:"";display:block;width:56px;height:3px;border-radius:3px;background:var(--gold-grad);margin-top:12px}h2{display:flex;align-items:center;gap:10px}h2::before{content:"";width:4px;height:.95em;border-radius:2px;background:var(--gold-grad);flex:none}h3{color:var(--gold)}.card{border-radius:14px;box-shadow:var(--sh-1)}.ans{position:relative;overflow:hidden;border-left:1px solid var(--line);padding-left:24px;background:linear-gradient(135deg,color-mix(in srgb,var(--gold) 12%,var(--surface)),var(--surface) 65%);border-color:color-mix(in srgb,var(--gold) 40%,var(--line));box-shadow:var(--sh-2)}.ans::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--gold-grad)}.big{color:var(--num);font-weight:700}.btn{border-radius:10px;border:0;background:var(--gold-grad);color:#0A2347;font-weight:700;box-shadow:var(--sh-1);transition:transform .15s,box-shadow .15s,filter .15s}.btn:hover{transform:translateY(-1px);box-shadow:var(--sh-2);filter:brightness(1.06)}.chip{box-shadow:var(--sh-0);transition:border-color .15s,background .15s,transform .15s,box-shadow .15s}.chip:hover{transform:translateY(-1px);box-shadow:var(--sh-1);border-color:var(--orange);background:color-mix(in srgb,var(--orange) 8%,var(--surface))}.f{border-radius:12px;border-left:3px solid var(--cyan)}.tw{border:1px solid var(--line);border-radius:12px;box-shadow:var(--sh-0)}.tw table{border:0}table{border-collapse:separate;border-spacing:0}th,td{border:0;border-bottom:1px solid var(--line)}tr:last-child td{border-bottom:0}th{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);background:var(--field)}tbody tr:hover td{background:color-mix(in srgb,var(--cyan) 7%,transparent)}tr.me td{background:var(--gold-fill)}.trow input,.trow select,.tgrid>div>select{border-radius:10px;transition:border-color .15s,box-shadow .15s}.trow select{background-color:color-mix(in srgb,var(--navy) 5%,var(--field))}.trow input:focus,.trow select:focus,.tgrid>div>select:focus{outline:0;border-color:var(--cyan);box-shadow:var(--ring)}.tgrid label{color:var(--ink)}a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--cyan);outline-offset:2px}footer{padding-block:20px}footer.mf{margin-top:24px;padding:0;border-top:0;background:var(--hero);color:#DCE5F5;font-size:13px;position:relative}footer.mf::before{content:"";display:block;height:4px;background:linear-gradient(90deg,#FF7A00,#FFA43D 55%,#FF7A00)}.mf-w{max-width:1100px;margin:0 auto;padding:36px max(16px,env(safe-area-inset-left,0px)) calc(24px + env(safe-area-inset-bottom,0px))}.mf-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:28px 24px}.mf-h{display:block;margin:0 0 12px;padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,.18);font:600 14px var(--display);letter-spacing:.06em;text-transform:uppercase;color:#FFB066}.mf-col ul{list-style:none;margin:0;padding:0}.mf-col li{margin:0}.mf-col a{display:inline-block;padding:4px 0;color:#DCE5F5;text-decoration:none}.mf-h a{padding:0;color:inherit}.mf-col a:hover,.mf-legal a:hover{color:#FFB066;text-decoration:underline}.mf a:focus-visible{outline:2px solid #FFB066;outline-offset:2px;border-radius:2px}.mf-legal{margin-top:28px;padding-top:18px;border-top:1px solid rgba(255,255,255,.18);color:#A9BADB;max-width:80ch}.mf-legal a{color:#DCE5F5}@media(max-width:980px){.mf-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(max-width:600px){.mf-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.mf-col a{padding:7px 0}}@media print{footer.mf{background:none;color:inherit}footer.mf::before,.mf-grid{display:none}.mf-legal{border:0;color:inherit}}@media(prefers-reduced-motion:reduce){.btn,.chip{transition:none;transform:none!important}}@media print{header{background:none;box-shadow:none}header::before,header::after,.ans::before,h1::after,h2::before{display:none}header .w>a.brand{box-shadow:none;padding:0}body{background-image:none}.card,.ans,.tw{box-shadow:none}.ans{padding-left:18px}}.totop{position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:60;min-height:44px;padding:0 18px;border:0;border-radius:999px;background:linear-gradient(135deg,#FFA43D,#FF7A00 52%,#E85F00);color:#0A2347;font:700 14px system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;box-shadow:0 2px 4px rgba(4,35,80,.2),0 14px 30px -8px rgba(4,35,80,.45);cursor:pointer;opacity:0;transform:translateY(12px);pointer-events:none;transition:opacity .2s,transform .2s,bottom .2s}.totop.on{opacity:1;transform:none;pointer-events:auto}.totop:hover{filter:brightness(1.06)}.totop:focus-visible{outline:2px solid #fff;outline-offset:2px;box-shadow:0 0 0 4px #0062DE}@media(prefers-reduced-motion:reduce){.totop{transition:none}}@media print{.totop{display:none}}.vstat{padding:12px 16px;border-left:4px solid var(--muted,#6b7a90)}.vstat.v-verified{border-left-color:#1f9d57}.vstat.v-reference{border-left-color:#2a7fd4}.vstat.v-indicative{border-left-color:#c98a10}[hidden]{display:none!important}header{position:sticky;top:0;z-index:30}header .w{max-width:1120px;flex-wrap:nowrap;gap:16px;padding-block:8px}header .brand{flex:0 0 auto}header::after{height:3px;background:linear-gradient(90deg,#FF7A00,#FFA43D 55%,#FFC37A)}header nav{display:flex;gap:2px;overflow-x:auto;white-space:nowrap;scrollbar-width:none;min-width:0}header nav::-webkit-scrollbar{display:none}header nav a{margin-left:0;padding:8px 11px;border-radius:8px;opacity:.92}header nav a:hover,header nav a:focus-visible{background:rgba(255,255,255,.14);opacity:1;outline:none}main.calc{max-width:1120px;padding-top:18px}.calc h1{font-size:28px;margin-bottom:4px}.calc .lede{margin:0 0 10px;max-width:70ch}.calc-vb{display:inline-flex;align-items:center;gap:7px;margin:0 0 14px;padding:4px 11px;border:1px solid var(--line);border-radius:999px;background:var(--surface);font:600 12.5px var(--body);color:var(--ink);text-decoration:none}.calc-vb::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--gold)}.calc-vb:hover,.calc-vb:focus-visible{border-color:var(--gold);outline:none}.calc #try{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(290px,1fr);gap:0 20px;align-items:start}.calc #try>h2{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;margin:0}.calc #try>form{grid-column:1;margin:0}.calc #try>#try-out{grid-column:2;grid-row:1;position:sticky;top:64px;margin:0;flex-direction:column;align-items:stretch;gap:12px}.calc .tgrid{grid-template-columns:repeat(auto-fill,minmax(210px,1fr));align-items:start}.hd{margin-top:4px}.hd summary{cursor:pointer;font-size:12px;color:var(--muted);list-style:none}.hd summary::-webkit-details-marker{display:none}.hd summary::before{content:"\24D8  "}.hd[open]{font-size:12px;line-height:1.45}.hd[open] summary{margin-bottom:3px}.calc-limit{margin:14px 0 0;padding:10px 14px;border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:8px;background:var(--surface);font-size:14px}.calc-limit h2{font:700 13px var(--body);margin:0 0 2px;letter-spacing:0;text-transform:none}.calc-limit h2::before{display:none}.calc-limit p{margin:0}.calc-act{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;margin:12px 0 4px}.calc-act .btn{margin:0}.calc-act .note{margin:0;flex:1 1 340px;font-size:12px}.calc .cref{max-width:860px;margin-top:6px}.calc .jump{position:sticky;top:52px;z-index:10;display:flex;gap:6px;overflow-x:auto;white-space:nowrap;scrollbar-width:none;background:var(--bg);padding:8px 0;margin:10px 0 4px;border-bottom:1px solid var(--line)}.calc .jump::-webkit-scrollbar{display:none}.calc .jump .chip{flex:0 0 auto;margin:0}@media (max-width:980px){.calc #try{grid-template-columns:minmax(0,1fr)}.calc #try>#try-out{grid-column:1;grid-row:auto;position:static;margin-top:12px}}#mini-res{position:fixed;left:0;right:0;bottom:0;z-index:40;display:flex;flex-wrap:wrap;gap:2px 18px;padding:8px 16px calc(8px + env(safe-area-inset-bottom,0px));background:var(--surface);color:var(--ink);border-top:3px solid var(--gold);box-shadow:0 -8px 20px -10px rgba(5,20,50,.5);text-decoration:none}#mini-res span{display:block}#mini-res b{display:block;font:600 19px/1.2 var(--display)}#mini-res small{display:block;font-size:11px;color:var(--muted)}@media (min-width:981px){#mini-res{display:none!important}}@media (max-width:640px){main.calc{padding-top:12px}.calc h1{font-size:24px}.calc .jump{top:0}header{position:static}header .w{flex-wrap:wrap;gap:4px 8px;padding-block:8px 4px}header nav{flex:1 1 100%;-webkit-mask-image:linear-gradient(90deg,#000 90%,transparent);mask-image:linear-gradient(90deg,#000 90%,transparent)}}</style><style>.chip{display:inline-block;margin:3px 6px 3px 0;padding:5px 12px;border:1px solid var(--line);border-radius:999px;background:var(--surface);text-decoration:none;font-size:13px}
+.chip.on{border-color:var(--gold);background:var(--gold-fill)}
+.chip.soon{color:var(--muted);border-style:dashed;cursor:default}
+.jump{margin:8px 0 4px}
+#nsq .ns-grid{display:grid;gap:12px;grid-template-columns:1fr 1fr 1fr}
+#nsq .ns-l{display:block;font-weight:600;font-size:13px;margin:0 0 4px}
+#nsq .ns-in,#nsq .ns-sel,#nsq textarea{display:block;width:100%;font:500 18px/1.3 var(--mono);padding:10px 12px;min-height:48px;border-radius:8px;border:1px solid var(--line);background:var(--field);color:var(--ink)}
+#nsq textarea{resize:vertical;min-height:84px}
+#nsq .ns-sel{font:500 15px var(--body)}
+#nsq .ns-in:focus,#nsq .ns-sel:focus,#nsq textarea:focus{outline:2px solid var(--gold);outline-offset:1px}
+#nsq .bad{border-color:var(--err)}
+#nsq .ns-msg{min-height:1.4em;margin:8px 0 4px;color:var(--err)}
+#nsq .btn2,#nsq .chipb{font:600 13px var(--body);color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:8px 12px;min-height:38px;cursor:pointer}
+#nsq .btn2:hover,#nsq .chipb:hover{background:var(--field)}
+#nsq .chipb{border-radius:999px;padding:5px 12px;min-height:32px;font-weight:500;margin:3px 4px 3px 0}
+#nsq .btn2:focus-visible,#nsq .chipb:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+#nsq .ns-act{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 4px}
+#nsq .ns-try{margin:10px 0 0}
+#nsq .ans{border-left:4px solid var(--gold);display:flex;flex-wrap:wrap;gap:6px 24px;align-items:center;justify-content:space-between}
+#nsq .kind{font:600 13px var(--body);text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+#nsq .big{font:700 34px/1.2 var(--mono);color:var(--num);word-break:break-all}
+#nsq .sub{color:var(--muted);font-size:14px}
+#nsq .ns-flag{font:600 12px var(--body);border-radius:999px;padding:2px 10px;border:1px solid var(--gold);color:var(--gold);white-space:nowrap}
+#nsq .ns-flag.q{border-color:var(--line);color:var(--muted)}
+#nsq table{border-collapse:collapse;width:100%;margin:8px 0}
+#nsq th,#nsq td{border-bottom:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+#nsq th{font:600 13px var(--body);color:var(--muted);white-space:nowrap}
+#nsq td.r{font:600 15px var(--mono);color:var(--num);word-break:break-word}
+#nsq td small{display:block;font:500 12px var(--body);color:var(--muted)}
+#nsq .dt th,#nsq .dt td{text-align:right;font:500 14px var(--mono)}
+#nsq .dt th:first-child,#nsq .dt td:first-child{text-align:left}
+#nsq .tw{overflow-x:auto}
+#nsq ul.warn{margin:10px 0;padding:10px 12px 10px 30px;border:1px solid var(--gold);border-radius:8px;background:var(--gold-fill)}
+#nsq ol.steps{font:14px/1.6 var(--mono);padding-left:26px}
+#nsq .alt{border:1px solid var(--line);border-radius:8px;padding:10px 12px;margin:8px 0;background:var(--field)}
+#nsq .alt b.f{font:600 15px var(--mono);color:var(--num)}
+#nsq svg{width:100%;height:auto;display:block}
+#nsq .gax{stroke:var(--line)}
+#nsq .gst{stroke:var(--navy-2);stroke-width:2}
+#nsq .gpt{fill:var(--num)}
+#nsq .gpr{fill:var(--surface);stroke:var(--gold);stroke-width:2.5}
+#nsq .gps{stroke:var(--gold);stroke-width:2;stroke-dasharray:4 3}
+#nsq .gtx{fill:var(--muted);font:11px var(--mono)}
+.sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+[hidden]{display:none!important}
+code{font-family:var(--mono)}
+.mf{background:var(--navy);color:var(--on-navy);border-top:3px solid var(--gold);padding:18px 0;font-size:13px}
+.mf a{margin-right:14px;opacity:.9}
+#nsq table.an th{white-space:normal;width:34%}
+@media(max-width:600px){#nsq table.an,#nsq table.an tbody,#nsq table.an tr,#nsq table.an th,#nsq table.an td{display:block;width:100%}
+#nsq table.an th{border-bottom:0;padding-bottom:0}}
+@media(max-width:700px){#nsq .ns-grid{grid-template-columns:1fr 1fr}
+#nsq .ns-f:first-child{grid-column:1/-1}
+#nsq .big{font-size:28px}}
+@media print{.jump,.ns-act,.ns-try,header nav{display:none}}</style><style>.fb button,.fb .btn,.totop{margin-top:0}.fb .btn{background:var(--gold-grad);color:#0A2347;border:0;border-radius:10px;font-weight:700;padding:9px 16px}.jump .chip[aria-current=page]{background:var(--gold-fill);border-color:var(--gold);font-weight:700}main.w{padding-top:36px;padding-bottom:64px}.mf-legal a,.mf-col a{font:inherit}.mf a{color:#DCE5F5}</style></head><body>
+<header><div class="w"><a class="brand" href="../../"><img src="../../logo.png" alt="Elecmetric" width="160" height="40"></a><nav><a href="../">Calculators</a><a href="../all-tools/">All Tools</a><a href="../../converters/index.html">Conversion Centre</a><a href="../../pages/index.html">Conversions</a><a href="../../technical-library/">Technical Library</a><a href="../../index.html#verification">How it is verified</a></nav></div></header>
+<main class="w"><nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="../../">Home</a></li><li><a href="../../categories/mathematics/">Mathematics</a></li><li><a href="../../categories/mathematics/#algebra">Algebra</a></li><li><span aria-current="page">Number Sequence Calculator: Find the Pattern, Next Term and nth Term</span></li></ol></nav><h1>Number Sequence Calculator: Find the Pattern, Next Term and nth Term</h1>
+<p class="lede">Type a list of numbers. The calculator tests it for constant, arithmetic, geometric, quadratic, cubic and higher polynomial, Fibonacci-type, repeating and named patterns, then gives the rule, the next terms, any term you ask for and the series sum, with the working shown. Discover. Calculate. Visualise.</p>
+<nav class="jump" aria-label="On this page"><a class="chip" href="#examples">Examples</a><a class="chip" href="#method">How it decides</a><a class="chip" href="#ambiguity">One list, several rules</a><a class="chip" href="#formulas">The formulas</a><a class="chip" href="#rules">Rules and limits</a><a class="chip" href="#faq">FAQ</a><a class="chip" href="#related">Related</a></nav>
+
+<div id="nsq">
+<!-- MODE STRIP: replace the dashed spans with links when Modes 02-06 exist -->
+<nav class="fmodes" aria-label="Number Sequence Calculator modes"><span class="ns-l">Number Sequence Calculator</span>
+<a class="chip on" href="../number-sequence-pattern-finder/" aria-current="page">Mode 01 · Automatic Pattern Finder</a><span class="chip soon" title="Coming next">Mode 02 · Arithmetic Sequence &amp; Series</span><span class="chip soon" title="Coming next">Mode 03 · Geometric Sequence &amp; Series</span><span class="chip soon" title="Coming next">Mode 04 · Fibonacci &amp; Recurrence</span><span class="chip soon" title="Coming next">Mode 05 · Polynomial &amp; Finite Differences</span><span class="chip soon" title="Coming next">Mode 06 · Generator &amp; Visualiser</span></nav>
+
+<section class="card" aria-label="Sequence pattern finder">
+<label class="ns-l" for="nsq-in">Sequence (integers, decimals or fractions, separated by commas, spaces or new lines)</label>
+<textarea id="nsq-in" spellcheck="false" autocomplete="off" autocapitalize="off" autocorrect="off" aria-describedby="nsq-err" placeholder="2, 6, 12, 20, 30">2, 6, 12, 20, 30</textarea>
+<div class="ns-grid" style="margin-top:12px">
+<div class="ns-f"><label class="ns-l" for="nsq-n">Find term number n</label><input id="nsq-n" class="ns-in" type="text" inputmode="numeric" autocomplete="off" value="10" aria-describedby="nsq-err"></div>
+<div class="ns-f"><label class="ns-l" for="nsq-n0">Index of the first term</label><input id="nsq-n0" class="ns-in" type="text" inputmode="numeric" autocomplete="off" value="1" aria-describedby="nsq-err"></div>
+<div class="ns-f"><label class="ns-l" for="nsq-cnt">Next terms to show</label><select id="nsq-cnt" class="ns-sel"><option value="3">3</option><option value="5" selected>5</option><option value="10">10</option><option value="20">20</option></select></div></div>
+<p class="note ns-msg" id="nsq-err" role="status"></p>
+<div class="ns-act"><button type="button" class="btn2" id="nsq-go">Find pattern</button><button type="button" class="btn2" id="nsq-clr">Clear</button></div>
+<div class="ns-try" id="examples"><span class="ns-l">Load an example</span><span id="nsq-ex"></span></div>
+</section>
+
+<div id="nsq-out" aria-live="polite"></div>
+</div>
+
+<section id="method"><h2>How the pattern finder decides</h2>
+<p>Every number you enter is read exactly (a decimal such as 0.1 is the fraction 1/10, never a rounded binary number), so the tests below are exact equalities, not tolerances.</p>
+<ul><li><b>Finite differences.</b> If the k-th differences are all equal, the sequence is a polynomial of degree k: constant (k = 0), arithmetic (1), quadratic (2), cubic (3) and so on. The formula comes from the Newton forward-difference form, then is expanded.</li><li><b>Ratios.</b> Equal ratios of consecutive terms give a geometric sequence. A ratio of 0 and a ratio of 1 are handled separately, so there is no 0 ÷ 0 and no division by the sum formula&rsquo;s zero denominator.</li><li><b>Exponential plus constant.</b> If the first differences are themselves geometric, the rule is A·ρⁿ + C (for example 2ⁿ + 1).</li><li><b>Recurrences and named sequences.</b> Second-order recurrences aₙ = p·aₙ₋₁ + q·aₙ₋₂ are solved from the terms; Fibonacci, Lucas, prime, factorial, Catalan, square, cube, triangular and similar numbers are matched anywhere in their run.</li><li><b>Other shapes.</b> Alternating signs on a simple pattern, repeating cycles and two interleaved sequences.</li></ul>
+<p>A rule is only reported when it is supported by more terms than it needs to define itself, or when it exactly matches a named sequence. The page shows how many terms checked the rule.</p></section>
+
+<section id="ambiguity"><h2>One list, several rules</h2>
+<p>A finite list never fixes its own continuation. The list <code>1, 2, 4</code> is geometric (next term 8) and also fits the quadratic (n² − n + 2)/2 (next term 7). Both reproduce the three numbers, so the calculator lists both, ranks the better supported first and marks a rule that no term has independently checked as <b>not validated</b>.</p>
+<p><button type="button" class="chipb" id="nsq-amb">Try 1, 2, 4</button> Adding terms removes false rules: <button type="button" class="chipb" id="nsq-amb2">Try 1, 2, 4, 8, 16, 31</button></p></section>
+
+<section id="formulas"><h2>The formulas</h2>
+<ul><li>Differences: Δaₙ = aₙ₊₁ − aₙ; Δ²aₙ = Δaₙ₊₁ − Δaₙ; Δᵏ is the same step repeated. For a polynomial of degree k, Δᵏ is constant.</li><li>Newton form with the first term at index n₀: aₙ = Σ C(n − n₀, j)·Δʲa<sub>n₀</sub>, summed from j = 0 to k.</li><li>Arithmetic: aₙ = a<sub>n₀</sub> + (n − n₀)d; sum of N terms Sₙ = (N/2)[2a<sub>n₀</sub> + (N − 1)d].</li><li>Geometric: aₙ = a<sub>n₀</sub>·rⁿ⁻ⁿ⁰; Sₙ = a(1 − rᴺ)/(1 − r) for r ≠ 1, Sₙ = Na for r = 1; infinite sum a/(1 − r) when |r| &lt; 1.</li><li>Recurrence: aₙ = p·aₙ₋₁ + q·aₙ₋₂ from two starting values.</li></ul></section>
+
+<section id="rules"><h2>Rules and limits</h2><ul>
+<li><b>Indexing.</b> The index of your first term is shown and can be set to 0, 1 or any whole number from −1000 to 1000. The formula and the nth term follow that choice.</li>
+<li><b>Sequence versus series.</b> The result rows keep them apart: the terms are the sequence; the “series sum” row adds the terms from the first index up to n.</li>
+<li><b>Exact arithmetic, no tolerance.</b> Integers, decimals and fractions are held as exact fractions. Because nothing is rounded, no tolerance is needed. The consequence: measured data that has been rounded (0.333, 0.667, 1.0) is not an exact pattern and will not be recognised; use a fitting tool for measurements.</li>
+<li><b>Limits.</b> 2 to 60 terms. Polynomial, arithmetic and geometric terms are computed directly for n up to 1,000,000,000 (very large geometric terms are shown as an approximation, not computed in full). Recurrence and named sequences are computed exactly up to about 5,000 steps. Series sums for other rules are exact up to 20,000 terms.</li>
+<li><b>Prediction, not forecasting.</b> This finds the exact rule behind a list of numbers. It is not statistical time-series forecasting and says nothing about noisy data.</li>
+<li><b>Privacy.</b> The calculation runs in your browser; nothing you type is sent anywhere.</li></ul></section>
+
+<section id="faq"><h2>Questions</h2>
+<h3>How do I find the next number in a sequence?</h3><p>Enter the numbers. The calculator tests for a constant difference, a constant ratio, constant higher differences, a recurrence and named sequences, and gives the next terms of the best supported rule. For 2, 6, 12, 20, 30 the second differences are all 2, so the rule is n² + n and the next term is 42.</p>
+<h3>How do I find the nth term formula?</h3><p>For an arithmetic sequence use a<sub>n₀</sub> + (n − n₀)d. For a polynomial sequence use the Newton difference form and expand it. The calculator does both and shows the working under the result.</p>
+<h3>Why does it show more than one pattern?</h3><p>Because more than one rule can reproduce the same finite list. The ranking prefers the rule that more terms agree with, and the alternatives are shown so you can check which one you mean.</p>
+<h3>What counts as a validated pattern?</h3><p>A rule with p parameters needs p terms to be defined. Terms beyond those p are independent checks. A degree-k polynomial fitted to exactly k + 1 terms always fits and so proves nothing; it is shown as an exact fit and marked not validated.</p>
+<h3>What is the difference between a sequence and a series?</h3><p>A sequence is the list of terms; a series is their sum. For 2, 5, 8, 11, 14 the 5th term is 14 and the series sum of the first five terms is 40.</p>
+<h3>Can I use fractions and negative numbers?</h3><p>Yes. Enter 1/2, 1, 3/2, 2 or 10, 7, 4, 1 or 2, -4, 8, -16. Fractions stay exact in the result.</p></section>
+
+<section id="related"><h2>Related Calculators and Tools</h2><p><a class="chip" href="../fraction-arithmetic/">Fraction Calculator</a><a class="chip" href="../exact-roots/">Exact Roots</a><a class="chip" href="../exponent-laws-calculator/">Exponent Laws</a><a class="chip" href="../random-number-generator/">Random Number Generator</a><a class="chip" href="../engineering-mathematics/">Engineering Mathematics</a><a class="chip" href="../../converters/index.html">Conversion Centre</a><a class="chip" href="../gcf-calculator/">GCF Calculator (Multiple Number GCF, Mode 01)</a><a class="chip" href="../ratio-calculator/">Ratio Calculator</a><a class="chip" href="../percentage-calculator/">Percentage Calculator</a></p></section>
+</main><section class="w fb" aria-labelledby="fb-h"><h2 id="fb-h">Tell us how to improve this page</h2><textarea id="fb-t" rows="4" maxlength="1500" placeholder="Your message ..." aria-label="Tell us how to improve this page"></textarea><p><button type="button" class="btn" id="fb-b">Email your suggestion</button> <button type="button" class="btn" id="sh-b">Share this page</button> <span class="note" id="fb-n">This opens your email app. Nothing is sent until you press send.</span></p></section><script>(function(){var b=document.getElementById("fb-b");if(!b)return;b.onclick=function(){var t=document.getElementById("fb-t").value.trim(),n=document.getElementById("fb-n");if(!t){n.textContent="Please write a message first.";return}location.assign("mailto:"+"elecmetrics@gmail.com"+"?subject="+encodeURIComponent("Elecmetric feedback: "+document.title)+"&body="+encodeURIComponent(t+"\n\nPage: "+location.href))}})();</script><script>(function(){var s=document.getElementById("sh-b");if(!s)return;s.onclick=function(){var u=location.href,t=document.title,n=document.getElementById("fb-n");if(navigator.share){navigator.share({title:t,url:u}).catch(function(){});return}if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(u).then(function(){n.textContent="Link copied."},function(){n.textContent="Copy this address: "+u})}else{n.textContent="Copy this address: "+u}}})();</script><footer class="mf"><div class="mf-w"><div class="mf-grid" role="navigation" aria-label="Site map"><div class="mf-col"><p class="mf-h"><a href="../../calculators/">Calculators</a></p><ul><li><a href="../../calculators/electrical-fundamentals/">Electrical Fundamentals</a></li><li><a href="../../calculators/power-and-energy/">Power and Energy</a></li><li><a href="../../calculators/cable-engineering/">Cable Engineering</a></li><li><a href="../../calculators/motor-engineering/">Motor Engineering</a></li><li><a href="../../calculators/transformer-engineering/">Transformer Engineering</a></li><li><a href="../../calculators/electrical-protection/">Electrical Protection</a></li><li><a href="../../calculators/power-systems/">Power Systems</a></li><li><a href="../../calculators/earthing-and-grounding/">Earthing and Grounding</a></li><li><a href="../../calculators/renewable-energy/">Renewable Energy</a></li><li><a href="../../calculators/airport-agl-engineering/">Airport and AGL Engineering</a></li><li><a href="../../calculators/electronics-and-instrumentation/">Electronics and Instrumentation</a></li><li><a href="../../calculators/lighting-and-facilities/">Lighting and Facilities</a></li><li><a href="../../calculators/engineering-mathematics/">Engineering Mathematics</a></li></ul></div><div class="mf-col"><p class="mf-h"><a href="../../calculators/">Popular calculators</a></p><ul><li><a href="../../calculators/cable-size/">Cable Size</a></li><li><a href="../../calculators/voltage-drop/">Voltage Drop</a></li><li><a href="../../calculators/breaker-size/">Breaker Size</a></li><li><a href="../../calculators/motor-current/">Motor Current</a></li><li><a href="../../calculators/transformer-sizing/">Transformer Sizing</a></li><li><a href="../../calculators/earth-resistance/">Earth Resistance</a></li><li><a href="../../calculators/pf-correction-kvar/">Power Factor Correction</a></li><li><a href="../../calculators/generator-sizing/">Generator Sizing</a></li><li><a href="../../calculators/battery-bank-sizing/">Battery Bank Sizing</a></li><li><a href="../../calculators/pv-energy/">Solar PV Energy</a></li></ul></div><div class="mf-col"><p class="mf-h"><a href="../../converters/index.html">Conversions</a></p><ul><li><a href="../../pages/index.html">Electrical conversions</a></li><li><a href="../../pages/kw-to-amps.html">kW to Amps</a></li><li><a href="../../pages/amps-to-kw.html">Amps to kW</a></li><li><a href="../../pages/kva-to-kw.html">kVA to kW</a></li><li><a href="../../pages/watts-to-amps.html">Watts to Amps</a></li><li><a href="../../converters/length-converter.html">Length</a></li><li><a href="../../converters/power-converter.html">Power</a></li><li><a href="../../converters/energy-converter.html">Energy</a></li><li><a href="../../converters/temperature-converter.html">Temperature</a></li><li><a href="../../pages/wire-gauge.html">AWG to mm²</a></li></ul></div><div class="mf-col"><p class="mf-h"><a href="../../converters/index.html">Formulas</a></p><ul><li><a href="../../converters/ohms-law-formulas.html">Ohm’s Law formulas</a></li><li><a href="../../converters/kirchhoffs-laws.html">Kirchhoff’s laws</a></li><li><a href="../../converters/cable-sizing-formulas.html">Cable sizing formulas</a></li><li><a href="../../converters/circuit-breaker-formulas.html">Circuit breaker formulas</a></li><li><a href="../../converters/ac-circuit-formulas.html">AC circuit formulas</a></li><li><a href="../../converters/battery-formulas.html">Battery formulas</a></li></ul></div><div class="mf-col"><p class="mf-h">Elecmetric</p><ul><li><a href="../../calculators/basic-calculator/">Basic Calculator</a></li><li><a href="../../calculators/scientific-calculator/">Scientific Calculator</a></li><li><a href="../../index.html#verification">How it is verified</a></li><li><a href="../../privacy.html">Privacy</a></li><li><a href="../../terms.html">Terms</a></li><li><a href="../../technical-library/">Technical Library</a></li><li><a href="mailto:elecmetrics@gmail.com">Contact us</a></li></ul></div></div><div class="mf-legal">Results are computed by the same tested engine as the calculators in Elecmetric and are for estimating. Check design values against the standard and the equipment data you work to. Elecmetric results are not a substitute for a design review by a competent engineer.<br>Developed by Elecmetric. No independent technical review of the calculators has been carried out. Results are for estimating.<br>&copy; 2026 Elecmetric &middot; <a href="../../privacy.html">Privacy</a> &middot; <a href="../../terms.html">Terms</a></div></div><script>(function(){if(location.protocol!=="file:")return;document.addEventListener("click",function(e){if(e.defaultPrevented||e.button||e.metaKey||e.ctrlKey||e.shiftKey)return;var a=e.target.closest&&e.target.closest("a[href]");if(!a||a.target)return;var m=/^([^?#]*)(.*)$/.exec(a.getAttribute("href"));if(!m[1]||/^[a-z][a-z0-9+.-]*:/i.test(m[1])||!/[/]$/.test(m[1]))return;e.preventDefault();location.href=m[1]+"index.html"+m[2]})})();</script><button type="button" class="totop" id="totop" aria-label="Back to top" tabindex="-1">↑ Top</button><script>(function(){var b=document.getElementById("totop");if(!b)return;var t=0;function u(){t=0;var on=(window.pageYOffset||document.documentElement.scrollTop)>400,bar=document.getElementById("bar"),h=bar&&bar.offsetHeight?bar.offsetHeight:0;b.classList.toggle("on",on);b.tabIndex=on?0:-1;b.style.bottom=h?"calc("+(h+16)+"px + env(safe-area-inset-bottom,0px))":"";}function q(){if(!t)t=requestAnimationFrame(u)}window.addEventListener("scroll",q,{passive:true});window.addEventListener("resize",q);b.addEventListener("click",function(){var r=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;window.scrollTo({top:0,behavior:r?"auto":"smooth"})});u()})();</script></footer>
+
+<script>
+/* Elecmetric Number Sequence Calculator, Mode 01: Automatic Sequence Pattern Finder, engine.
+   Exact rational arithmetic on BigInt (no floating-point tolerance anywhere). Works in a browser (window.NSeq) and in Node (require). */
+(function (root, factory) { if (typeof module === 'object' && module.exports) module.exports = factory(); else root.NSeq = factory(); })(typeof self !== 'undefined' ? self : this, function () {
+'use strict';
+var B = BigInt;
+/* ---------- rationals ---------- */
+function gcd(a, b) { a = a < 0n ? -a : a; b = b < 0n ? -b : b; while (b) { var t = a % b; a = b; b = t; } return a; }
+function lcm(a, b) { return a / gcd(a, b) * b; }
+function Q(n, d) { n = B(n); d = d === undefined ? 1n : B(d); if (d === 0n) throw new Error('division by zero'); if (d < 0n) { n = -n; d = -d; } var g = gcd(n, d); if (g > 1n) { n /= g; d /= g; } return { n: n, d: d }; }
+var add = function (a, b) { return Q(a.n * b.d + b.n * a.d, a.d * b.d); };
+var sub = function (a, b) { return Q(a.n * b.d - b.n * a.d, a.d * b.d); };
+var mul = function (a, b) { return Q(a.n * b.n, a.d * b.d); };
+var div = function (a, b) { return Q(a.n * b.d, a.d * b.n); };
+var isZ = function (a) { return a.n === 0n; };
+var eq = function (a, b) { return a.n === b.n && a.d === b.d; };
+function powQ(a, k) { var r = Q(1), b = a, e = B(k); while (e > 0n) { if (e & 1n) r = mul(r, b); b = mul(b, b); e >>= 1n; } return r; }
+function binom(m, j) { var r = 1n; for (var i = 0n; i < B(j); i++) r = r * (B(m) - i) / (i + 1n); return r; }
+var SUP = '⁰¹²³⁴⁵⁶⁷⁸⁹', SUB = '₀₁₂₃₄₅₆₇₈₉';
+function sup(k) { return String(k).split('').map(function (c) { return SUP[+c]; }).join(''); }
+function supInt(e) { return (e < 0 ? '⁻' : '') + sup(Math.abs(e)); }
+function sub_(k) { return String(k).split('').map(function (c) { return SUB[+c]; }).join(''); }
+function logBig(x) { var s = (x < 0n ? -x : x).toString(); if (s.length <= 15) return Math.log10(Number(s)); return Math.log10(Number(s.slice(0, 15))) + (s.length - 15); }
+function sciQ(a, sig) {
+  sig = sig || 10; if (a.n === 0n) return '0';
+  var sg = a.n < 0n ? '−' : '', N = a.n < 0n ? -a.n : a.n, D = a.d, ln = N.toString().length, ld = D.toString().length, sh = sig + 2 - (ln - ld), num = N, den = D;
+  if (sh >= 0) num = N * 10n ** B(sh); else den = D * 10n ** B(-sh);
+  var qs = (num / den).toString(), e = qs.length - 1 - sh;
+  return sg + qs[0] + (sig > 1 ? '.' + qs.slice(1, sig) : '') + '×10' + supInt(e);
+}
+function terminating(d) { while (d % 2n === 0n) d /= 2n; while (d % 5n === 0n) d /= 5n; return d === 1n; }
+function decStr(a, places) { /* exact decimal of a terminating fraction, or rounded to `places` */
+  var sg = a.n < 0n ? '-' : '', N = a.n < 0n ? -a.n : a.n, scale = 10n ** B(places), v = (N * scale * 2n + a.d) / (a.d * 2n), s = v.toString();
+  while (s.length <= places) s = '0' + s;
+  var ip = s.slice(0, s.length - places), fp = s.slice(s.length - places).replace(/0+$/, '');
+  return sg + ip + (fp ? '.' + fp : '');
+}
+function fmtQ(a, style, o) {
+  o = o || {}; var big = o.maxDigits || 60, sg = a.n < 0n ? '−' : '';
+  if (a.d === 1n) { var s = (a.n < 0n ? -a.n : a.n).toString(); if (s.length > big) return sciQ(a, 12) + ' (' + s.length + ' digits)'; return sg + s; }
+  var nl = (a.n < 0n ? -a.n : a.n).toString().length, dl = a.d.toString().length;
+  if (nl > big || dl > big) return sciQ(a, 12);
+  var frac = sg + (a.n < 0n ? -a.n : a.n) + '/' + a.d;
+  if (style === 'fraction') return frac;
+  if (terminating(a.d)) return decStr(a, termPlaces(a.d)).replace('-', '−');
+  return o.plain ? decStr(a, 12).replace('-', '−') : frac + ' (≈ ' + decStr(a, 8).replace('-', '−') + ')';
+}
+function termPlaces(d) { var c2 = 0, c5 = 0; while (d % 2n === 0n) { d /= 2n; c2++; } while (d % 5n === 0n) { d /= 5n; c5++; } return Math.max(c2, c5); }
+function fmtCSV(a) { if (a.d === 1n) return a.n.toString(); if (terminating(a.d)) return decStr(a, termPlaces(a.d)); return decStr(a, 12); }
+/* ---------- parsing ---------- */
+function parseTok(tok) {
+  if (tok.length > 48) return null; var m = /^([+-]?)(\d+)\/(\d+)$/.exec(tok);
+  if (m) { if (/^0+$/.test(m[3])) return { err: 'A fraction has a zero denominator: ' + tok }; return Q((m[1] === '-' ? -1n : 1n) * B(m[2]), B(m[3])); }
+  m = /^([+-]?)(\d*)(?:\.(\d*))?(?:[eE]([+-]?\d+))?$/.exec(tok); if (!m) return null;
+  var ip = m[2] || '', fp = m[3] || ''; if (!ip && !fp) return null;
+  var v = Q((m[1] === '-' ? -1n : 1n) * B((ip + fp) || '0'), 10n ** B(fp.length)), e = m[4] ? parseInt(m[4], 10) : 0;
+  if (Math.abs(e) > 30) return { err: 'Exponent too large in ' + tok };
+  return e >= 0 ? mul(v, Q(10n ** B(e))) : div(v, Q(10n ** B(-e)));
+}
+function parseTerms(text) {
+  var t = String(text == null ? '' : text).replace(/[−–—]/g, '-').replace(/…/g, '...').replace(/ /g, ' ').replace(/\.{2,}\s*$/, '').trim();
+  if (!t) return { error: 'Enter at least two terms, separated by commas, spaces or new lines.' };
+  var toks = t.split(/[\s,;]+/).filter(Boolean), out = [], frac = false, dec = false;
+  if (toks.length > 60) return { error: 'Enter at most 60 terms (you entered ' + toks.length + ').' };
+  for (var i = 0; i < toks.length; i++) {
+    var v = parseTok(toks[i]);
+    if (v === null) return { error: '“' + toks[i].slice(0, 30) + '” is not a number. Use integers, decimals (2.5) or fractions (1/2), separated by commas, spaces or new lines.' };
+    if (v.err) return { error: v.err };
+    if (toks[i].indexOf('/') >= 0) frac = true; if (/[.eE]/.test(toks[i])) dec = true; out.push(v);
+  }
+  return { terms: out, style: frac && !dec ? 'fraction' : (dec && !frac ? 'decimal' : (frac ? 'fraction' : 'integer')) };
+}
+/* ---------- differences, polynomials ---------- */
+function diffLevels(T) { var L = [T.slice()], cur = T; while (cur.length > 1) { var nx = []; for (var i = 0; i + 1 < cur.length; i++) nx.push(sub(cur[i + 1], cur[i])); L.push(nx); cur = nx; } return L; }
+function allEqual(a) { for (var i = 1; i < a.length; i++) if (!eq(a[i], a[0])) return false; return true; }
+function pmul(p, q) { var r = []; for (var i = 0; i < p.length + q.length - 1; i++) r.push(Q(0)); for (i = 0; i < p.length; i++) for (var j = 0; j < q.length; j++) r[i + j] = add(r[i + j], mul(p[i], q[j])); return r; }
+function newtonToMonomial(c) { /* c[j] = Δʲ a₀  ->  coefficients of m^i (i = 0..k) */
+  var k = c.length - 1, res = []; for (var i = 0; i <= k; i++) res.push(Q(0));
+  var Bj = [Q(1)];
+  for (var j = 0; j <= k; j++) { for (i = 0; i < Bj.length; i++) res[i] = add(res[i], mul(c[j], Bj[i])); Bj = pmul(Bj, [Q(-B(j)), Q(1)]); Bj = Bj.map(function (x) { return div(x, Q(B(j + 1))); }); }
+  return res;
+}
+function shiftPoly(cm, h) { /* P(x + h) */
+  var k = cm.length - 1, out = []; for (var i = 0; i <= k; i++) out.push(Q(0));
+  for (var j = 0; j <= k; j++) for (i = 0; i <= j; i++) out[i] = add(out[i], mul(cm[j], mul(Q(binom(j, i)), powQ(h, B(j - i)))));
+  return out;
+}
+function evalPoly(c, x) { var r = Q(0); for (var i = c.length - 1; i >= 0; i--) r = add(mul(r, x), c[i]); return r; }
+function polyText(c, v) {
+  v = v || 'n'; var D = 1n, i; for (i = 0; i < c.length; i++) D = lcm(D, c[i].d);
+  var nums = c.map(function (x) { return x.n * (D / x.d); }), g = D; nums.forEach(function (x) { g = gcd(g, x); }); if (g === 0n) g = 1n;
+  nums = nums.map(function (x) { return x / g; }); D = D / g;
+  var parts = []; for (i = nums.length - 1; i >= 0; i--) if (nums[i] !== 0n) parts.push([nums[i], i]);
+  if (!parts.length) return '0';
+  var s = ''; parts.forEach(function (p, idx) {
+    var a = p[0], j = p[1], ab = a < 0n ? -a : a, body = j === 0 ? ab.toString() : (ab === 1n ? '' : ab.toString()) + (j === 1 ? v : v + sup(j));
+    s += idx === 0 ? (a < 0n ? '−' : '') + body : ' ' + (a < 0n ? '−' : '+') + ' ' + body;
+  });
+  if (D === 1n) return s; if (parts.length === 1) return s + '/' + D; return '(' + s + ')/' + D;
+}
+function polyModel(seq) { /* minimal-degree polynomial in m (0-based position) through all terms */
+  var L = diffLevels(seq), k = 0; while (!allEqual(L[k])) k++;
+  var cm = newtonToMonomial(L.slice(0, k + 1).map(function (l) { return l[0]; }));
+  return { k: k, levels: L, cm: cm };
+}
+function nameDegree(k) { return ['constant', 'arithmetic (linear)', 'quadratic', 'cubic', 'quartic', 'quintic'][k] || 'degree-' + k + ' polynomial'; }
+function ord(k) { return ['', 'first', 'second', 'third', 'fourth', 'fifth', 'sixth', 'seventh', 'eighth'][k] || k + 'th'; }
+/* ---------- known sequences ---------- */
+var _cache = {};
+function fibAt(k) { var a = 0n, b = 1n; for (var i = 0; i < k; i++) { var t = a + b; a = b; b = t; } return a; }
+function lucasAt(k) { var a = 2n, b = 1n; for (var i = 0; i < k; i++) { var t = a + b; a = b; b = t; } return a; }
+function factAt(k) { var r = 1n; for (var i = 2n; i <= B(k); i++) r *= i; return r; }
+function catalanAt(k) { var c = 1n; for (var i = 0n; i < B(k); i++) c = c * 2n * (2n * i + 1n) / (i + 2n); return c; }
+function primeList(cnt) { if (_cache.primes && _cache.primes.length >= cnt) return _cache.primes; var lim = Math.max(200, Math.ceil(cnt * (Math.log(cnt + 2) + Math.log(Math.log(cnt + 3)) + 2))), s = new Uint8Array(lim + 1), p = [], i, j; for (i = 2; i <= lim; i++) { if (!s[i]) { p.push(i); for (j = i * i; j <= lim; j += i) s[j] = 1; } } _cache.primes = p; return p; }
+function primeAt(k) { return B(primeList(k + 1)[k]); }
+var KNOWN = [
+  { key: 'fib', name: 'Fibonacci numbers', tag: 'F', at: fibAt, rule: 'aₙ = aₙ₋₁ + aₙ₋₂', max: 5000, scan: 400 },
+  { key: 'lucas', name: 'Lucas numbers', tag: 'L', at: lucasAt, rule: 'aₙ = aₙ₋₁ + aₙ₋₂ (starting 2, 1)', max: 5000, scan: 400 },
+  { key: 'prime', name: 'Prime numbers', tag: 'p', at: primeAt, rule: 'aₙ is the n-th prime', max: 9000, scan: 400 },
+  { key: 'fact', name: 'Factorials', tag: '', at: factAt, rule: 'aₙ = n!', max: 3000, scan: 170 },
+  { key: 'cat', name: 'Catalan numbers', tag: 'C', at: catalanAt, rule: 'Cₖ = (2k)! / ((k + 1)! k!)', max: 3000, scan: 150 }
+];
+var NAMED_POLY = [
+  { name: 'Square numbers', f: function (k) { return k * k; }, form: 'k²' },
+  { name: 'Cube numbers', f: function (k) { return k * k * k; }, form: 'k³' },
+  { name: 'Triangular numbers', f: function (k) { return k * (k + 1) / 2; }, form: 'k(k + 1)/2' },
+  { name: 'Pronic (oblong) numbers', f: function (k) { return k * (k + 1); }, form: 'k(k + 1)' },
+  { name: 'Tetrahedral numbers', f: function (k) { return k * (k + 1) * (k + 2) / 6; }, form: 'k(k + 1)(k + 2)/6' },
+  { name: 'Square pyramidal numbers', f: function (k) { return k * (k + 1) * (2 * k + 1) / 6; }, form: 'k(k + 1)(2k + 1)/6' },
+  { name: 'Pentagonal numbers', f: function (k) { return k * (3 * k - 1) / 2; }, form: 'k(3k − 1)/2' },
+  { name: 'Hexagonal numbers', f: function (k) { return k * (2 * k - 1); }, form: 'k(2k − 1)' },
+  { name: 'Fourth powers', f: function (k) { return k * k * k * k; }, form: 'k⁴' },
+  { name: 'Fifth powers', f: function (k) { return k * k * k * k * k; }, form: 'k⁵' }
+];
+function windowStart(T, gen, scan) { for (var s = 0; s + T.length <= scan; s++) { var ok = true; for (var i = 0; i < T.length; i++) if (gen(s + i) !== T[i]) { ok = false; break; } if (ok) return s; } return -1; }
+/* ---------- candidates ---------- */
+var TYPE_ORDER = { constant: 0, arithmetic: 1, geometric: 2, polynomial: 3, known: 4, expconst: 5, recurrence: 6, alternating: 7, periodic: 8, interleaved: 9 };
+function geoParts(T) { /* returns {r} when T is geometric with a0 != 0 and r != 1, else null */
+  if (isZ(T[0])) return null; var r = div(T[1], T[0]); if (eq(r, Q(1))) return null;
+  for (var i = 0; i + 1 < T.length; i++) if (!eq(T[i + 1], mul(T[i], r))) return null; return { r: r };
+}
+function geoF(a0, r) { return function (m) { if (isZ(r)) return m === 0n ? a0 : Q(0); return mul(a0, powQ(r, m)); }; }
+function expText(n0) { return n0 === 0 ? 'n' : (n0 > 0 ? 'n − ' + n0 : 'n + ' + (-n0)); }
+function baseText(r) { return r.d === 1n && r.n > 0n ? r.n.toString() : '(' + fmtQ(r, 'fraction') + ')'; }
+function simpleFit(S) { /* constant / arithmetic / geometric for a subsequence; returns {f, desc} or null */
+  if (S.length < 3) return null; var L = diffLevels(S);
+  if (allEqual(S)) return { f: function () { return S[0]; }, desc: 'constant ' + fmtQ(S[0], 'fraction') };
+  if (allEqual(L[1])) { var d = L[1][0]; return { f: function (m) { return add(S[0], mul(d, Q(m))); }, desc: 'arithmetic, first term ' + fmtQ(S[0], 'fraction') + ', difference ' + fmtQ(d, 'fraction') }; }
+  var g = geoParts(S); if (g) return { f: geoF(S[0], g.r), desc: 'geometric, first term ' + fmtQ(S[0], 'fraction') + ', ratio ' + fmtQ(g.r, 'fraction') };
+  return null;
+}
+function analyse(text, opts) {
+  opts = opts || {};
+  var n0 = opts.n0 === undefined ? 1 : opts.n0, findN = opts.findN === undefined ? 10 : opts.findN, nextCount = opts.nextCount || 5;
+  if (!Number.isInteger(n0) || Math.abs(n0) > 1000) return { ok: false, error: 'The index of the first term must be a whole number between −1000 and 1000.' };
+  if (!Number.isInteger(findN) || findN < n0 || findN > 1000000000) return { ok: false, error: 'The term number n must be a whole number from ' + n0 + ' (the first term) up to 1,000,000,000.' };
+  var P = parseTerms(text); if (P.error) return { ok: false, error: P.error };
+  var T = P.terms, n = T.length, style = P.style === 'integer' ? 'decimal' : P.style;
+  if (n < 2) return { ok: false, error: 'Enter at least two terms. A pattern cannot be found from a single number.' };
+  var L = diffLevels(T), cands = [], H = Q(-B(n0));
+  function expl(c) { return c.f; }
+  function add_(c) { /* self-check: the candidate must reproduce every supplied term */
+    for (var i = 0; i < n; i++) { if (!eq(c.f(B(i)), T[i])) return; } c.n0 = n0; cands.push(c); }
+  /* polynomial family: constant, arithmetic, quadratic, cubic ... */
+  var pm = polyModel(T), k = pm.k, validated = n - k >= 2;
+  var cn = shiftPoly(pm.cm, H), cmf = function (m) { return evalPoly(pm.cm, Q(m)); };
+  if (k === 0) {
+    add_({ type: 'constant', label: 'Constant sequence', params: 1, support: n - 1, f: cmf, formula: 'aₙ = ' + fmtQ(T[0], style), steps: ['Every term equals ' + fmtQ(T[0], style) + ', so the first differences are all 0.'], closed: true });
+  } else if (k === 1) {
+    var d = L[1][0];
+    add_({ type: 'arithmetic', label: 'Arithmetic sequence', params: 2, support: n - 2, f: cmf, d: d, formula: 'aₙ = ' + polyText(cn), closed: true,
+      steps: ['First differences: ' + L[1].map(function (x) { return fmtQ(x, style); }).join(', ') + '. They are all equal, so the common difference is d = ' + fmtQ(d, style) + '.',
+        'aₙ = a' + sub_(n0) + ' + (n − ' + (n0 < 0 ? '(' + n0 + ')' : n0) + ')d = ' + fmtQ(T[0], style) + ' + (n − ' + (n0 < 0 ? '(' + n0 + ')' : n0) + ')·' + fmtQ(d, style) + ' = ' + polyText(cn) + '.'] });
+  } else if (validated || (n - 1 === k && k >= 2)) {
+    var steps = [];
+    for (var lv = 1; lv <= k; lv++) steps.push(ord(lv)[0].toUpperCase() + ord(lv).slice(1) + ' differences: ' + L[lv].map(function (x) { return fmtQ(x, style); }).join(', ') + (lv === k ? (validated ? '. They are all equal (constant), so the rule is a polynomial of degree ' + k + '.' : '. Only one value, so the degree-' + k + ' polynomial is fitted exactly but nothing checks it.') : '.'));
+    var nt = []; for (var j = 0; j <= k; j++) nt.push((eq(L[j][0], Q(1)) && j > 0 ? '' : fmtQ(L[j][0], style) + (j > 0 ? '·' : '')) + (j === 0 ? '' : 'C(n − ' + (n0 < 0 ? '(' + n0 + ')' : n0) + ', ' + j + ')'));
+    steps.push('Newton forward-difference form: aₙ = ' + nt.join(' + ').replace(/ \+ -/g, ' − ') + ' = ' + polyText(cn) + '.');
+    add_({ type: 'polynomial', degree: k, label: (validated ? '' : '') + nameDegree(k)[0].toUpperCase() + nameDegree(k).slice(1) + ' sequence' + (validated ? '' : ' (exact fit)'), params: k + 1, support: n - k - 1, f: cmf, formula: 'aₙ = ' + polyText(cn), coeffs: cn, steps: steps, closed: true });
+    var pc = cands[cands.length - 1];
+    if (pc && n >= 4) for (var q = 0; q < NAMED_POLY.length; q++) {
+      var np = NAMED_POLY[q], s = windowStart(T.map(function (x) { return x.d === 1n ? x.n : null; }), function (kk) { return B(np.f(kk)); }, 60);
+      if (s >= 0 && T.every(function (x) { return x.d === 1n; })) { pc.name = np.name; pc.nameForm = np.form; pc.nameStart = s; pc.named = true; pc.support = Math.max(pc.support, n - 1); pc.steps.push('These terms are the ' + np.name.toLowerCase() + ', ' + np.form + ', taken from k = ' + s + '.'); break; }
+    }
+    if (pc && !validated) { if (n > 4 && cands.length === 1) { /* keep: it is the only candidate so far; may be removed later if others exist */ } pc.unvalidatedPoly = true; }
+  }
+  /* geometric */
+  var g = geoParts(T);
+  if (g) {
+    var r = g.r, rz = isZ(r), lab = rz ? 'Geometric sequence (ratio 0)' : eq(r, Q(-1)) ? 'Geometric sequence (alternating, r = −1)' : 'Geometric sequence';
+    var gt = rz ? 'aₙ = ' + fmtQ(T[0], style) + ' at n = ' + n0 + ' and 0 afterwards' : 'aₙ = ' + (eq(T[0], Q(1)) ? '' : (T[0].d === 1n ? fmtQ(T[0], style) : '(' + fmtQ(T[0], style) + ')') + '·') + baseText(r) + '^(' + expText(n0) + ')';
+    var cgd = { type: 'geometric', label: lab, params: 2, support: n - 2, f: geoF(T[0], r), r: r, formula: gt, closed: true,
+      steps: ['Ratios of consecutive terms: ' + T.slice(1).map(function (x, i) { return isZ(T[i]) ? '0 ÷ 0 (undefined)' : fmtQ(div(x, T[i]), style); }).join(', ') + '. They are all equal, so r = ' + fmtQ(r, style) + '.', rz ? 'With r = 0 every term after the first is 0 (0 is a special case: the formula a·rⁿ⁻¹ is not used).' : 'aₙ = a' + sub_(n0) + '·r^(n − ' + (n0 < 0 ? '(' + n0 + ')' : n0) + ') = ' + gt.slice(5) + '.'] };
+    if (!rz && Math.abs(Number(r.n)) < Number(r.d) && (r.n < 0n ? -r.n : r.n) < r.d) { cgd.infSum = div(T[0], sub(Q(1), r)); cgd.steps.push('Since |r| < 1 the infinite series converges: S∞ = a/(1 − r) = ' + fmtQ(T[0], style) + '/(1 − ' + fmtQ(r, 'fraction') + ') = ' + fmtQ(cgd.infSum, style) + '.'); }
+    else if (!rz) cgd.steps.push('Since |r| ≥ 1 the infinite series does not converge.');
+    add_(cgd);
+  }
+  /* exponential plus constant */
+  if (n >= 4) {
+    var D1 = L[1]; if (D1.every(function (x) { return !isZ(x); })) {
+      var rho = div(D1[1], D1[0]); if (!eq(rho, Q(1))) { var okE = true; for (var e = 0; e + 1 < D1.length; e++) if (!eq(D1[e + 1], mul(D1[e], rho))) { okE = false; break; }
+        if (okE) { var A = div(D1[0], sub(rho, Q(1))), C = sub(T[0], A);
+          if (!isZ(C)) { var A0 = A; add_({ type: 'expconst', label: 'Exponential plus constant', params: 3, support: n - 3, f: function (m) { return add(mul(A0, powQ(rho, m)), C); }, formula: 'aₙ = ' + (function () { var co = mul(A0, powQ(rho, -B(n0) < 0n ? 0n : 0n)); var ex = n0 >= 0 ? div(A0, powQ(rho, B(n0))) : mul(A0, powQ(rho, B(-n0))); return (eq(ex, Q(1)) ? '' : (ex.d === 1n ? fmtQ(ex, 'fraction') : '(' + fmtQ(ex, 'fraction') + ')') + '·') + baseText(rho) + '^n'; })() + ' ' + (C.n < 0n ? '− ' + fmtQ(Q(-C.n, C.d), 'fraction') : '+ ' + fmtQ(C, 'fraction')), closed: true,
+            steps: ['First differences: ' + D1.map(function (x) { return fmtQ(x, style); }).join(', ') + '. They are not constant, but their ratios are all ' + fmtQ(rho, style) + ' (the differences form a geometric sequence).', 'So aₙ = A·ρ^(n − ' + n0 + ') + C with ρ = ' + fmtQ(rho, style) + ', A = d₁/(ρ − 1) = ' + fmtQ(A0, style) + ' and C = a' + sub_(n0) + ' − A = ' + fmtQ(C, style) + '.'] }); } } }
+    }
+  }
+  /* order-2 linear recurrence aₙ = p·aₙ₋₁ + q·aₙ₋₂ */
+  if (n >= 5) {
+    var pq = null;
+    for (var i1 = 2; i1 < n - 1 && !pq; i1++) for (var i2 = i1 + 1; i2 < n && !pq; i2++) {
+      var x1 = T[i1 - 1], y1 = T[i1 - 2], x2 = T[i2 - 1], y2 = T[i2 - 2], det = sub(mul(x1, y2), mul(x2, y1));
+      if (!isZ(det)) pq = { p: div(sub(mul(T[i1], y2), mul(T[i2], y1)), det), q: div(sub(mul(x1, T[i2]), mul(x2, T[i1])), det) };
+    }
+    if (pq) { var okR = true; for (var i = 2; i < n; i++) if (!eq(T[i], add(mul(pq.p, T[i - 1]), mul(pq.q, T[i - 2])))) { okR = false; break; }
+      var small = [pq.p, pq.q].every(function (x) { var a = x.n < 0n ? -x.n : x.n; return a <= 1000n && x.d <= 1000n; });
+      if (okR && small && !isZ(pq.q) && !(eq(pq.p, Q(2)) && eq(pq.q, Q(-1)))) {
+        var rp = pq.p, rq = pq.q, isFib = eq(rp, Q(1)) && eq(rq, Q(1));
+        add_({ type: 'recurrence', label: isFib ? 'Fibonacci-type recurrence' : 'Second-order linear recurrence', params: 4, support: n - 4, iter: true,
+          f: function (m) { var a = T[0], b = T[1]; if (m === 0n) return a; for (var s = 1n; s < m; s++) { var t = add(mul(rp, b), mul(rq, a)); a = b; b = t; } return b; },
+          formula: 'aₙ = ' + (eq(rp, Q(1)) ? '' : fmtQ(rp, 'fraction') + '·') + 'aₙ₋₁ ' + (rq.n < 0n ? '− ' + (eq(Q(-rq.n, rq.d), Q(1)) ? '' : fmtQ(Q(-rq.n, rq.d), 'fraction') + '·') : '+ ' + (eq(rq, Q(1)) ? '' : fmtQ(rq, 'fraction') + '·')) + 'aₙ₋₂, with a' + sub_(n0) + ' = ' + fmtQ(T[0], style) + ' and a' + sub_(n0 + 1) + ' = ' + fmtQ(T[1], style),
+          steps: ['Write aₙ = p·aₙ₋₁ + q·aₙ₋₂ and solve two of the supplied terms for p and q: p = ' + fmtQ(rp, style) + ', q = ' + fmtQ(rq, style) + '.', 'The remaining terms all satisfy this relation, so it is a supported rule.'] }); }
+    }
+  }
+  /* known non-polynomial sequences (integers only, at least 4 terms) */
+  if (n >= 4 && T.every(function (x) { return x.d === 1n; })) {
+    var TI = T.map(function (x) { return x.n; });
+    KNOWN.forEach(function (K) {
+      var st = windowStart(TI, function (kk) { return K.at(kk); }, K.scan); if (st < 0) return;
+      var kk0 = st; if (K.key === 'prime' && TI.some(function (x) { return x < 2n; })) return;
+      var cOff = kk0 - n0, cTxt = cOff === 0 ? 'n' : (cOff > 0 ? 'n + ' + cOff : 'n − ' + (-cOff));
+      var label = K.name + (K.key === 'prime' ? '' : (K.tag ? ' (from ' + K.tag + sub_(st) + ')' : ''));
+      var ftxt = K.key === 'prime' ? 'aₙ = the ' + (cOff + 1 === 0 ? 'n' : '(n ' + (cOff + 1 >= 0 ? '+ ' + (cOff + 1) : '− ' + (-(cOff + 1))) + ')') + '-th prime' : K.key === 'fact' ? 'aₙ = (' + cTxt + ')!' : K.key === 'cat' ? 'aₙ = C(' + cTxt + '), where C(k) = (2k)! / ((k + 1)! k!)' : K.rule + ', first supplied term = ' + K.tag + sub_(kk0);
+      if (K.key === 'prime' && cOff + 1 === 0) ftxt = 'aₙ = the n-th prime'; if (K.key === 'fact' && cOff === 0) ftxt = 'aₙ = n!';
+      add_({ type: 'known', label: label, name: K.name, params: 0, support: n - 1, named: true, iter: false, maxIdx: K.max, f: function (m) { var idx = kk0 + Number(m); if (idx > K.max) throw new Error('limit'); return Q(K.at(idx)); },
+        formula: ftxt,
+        steps: ['The supplied terms match the ' + K.name.toLowerCase() + ' exactly, starting at ' + (K.key === 'prime' ? 'the ' + (kk0 + 1) + (kk0 === 0 ? 'st' : kk0 === 1 ? 'nd' : kk0 === 2 ? 'rd' : 'th') + ' prime' : K.key === 'fact' ? kk0 + '!' : K.tag + sub_(kk0)) + '.', 'A named sequence has no free parameters, so a match over ' + n + ' terms is strong evidence.'] });
+    });
+  }
+  /* alternating signs times a simple pattern */
+  if (n >= 5 && T.every(function (x) { return !isZ(x); }) && T.every(function (x, i) { return i === 0 || (x.n < 0n) !== (T[i - 1].n < 0n); })) {
+    var AP = T.map(function (x, i) { return i % 2 ? Q(-x.n, x.d) : x; }), pa = polyModel(AP);
+    if (pa.k >= 1 && pa.k <= 3 && n >= pa.k + 3) {
+      var cnA = shiftPoly(pa.cm, H), cmA = pa.cm;
+      add_({ type: 'alternating', label: 'Alternating signs × ' + nameDegree(pa.k).replace(' (linear)', '') + ' pattern', params: pa.k + 2, support: n - pa.k - 2, closed: true, f: function (m) { var v = evalPoly(cmA, Q(m)); return m % 2n === 0n ? v : Q(-v.n, v.d); },
+        formula: 'aₙ = (−1)^(' + expText(n0) + ')·' + (/[ +−]/.test(polyText(cnA).replace(/^−/, '')) ? '(' + polyText(cnA) + ')' : polyText(cnA)), steps: ['The signs alternate. Removing the alternation (multiplying every other term by −1) gives ' + AP.map(function (x) { return fmtQ(x, style); }).join(', ') + ', which is a ' + nameDegree(pa.k) + ' sequence.'] });
+    }
+  }
+  /* repeating cycle */
+  for (var per = 2; per <= Math.floor(n / 2); per++) {
+    var okP = true; for (var ii = 0; ii + per < n; ii++) if (!eq(T[ii], T[ii + per])) { okP = false; break; }
+    if (okP && !allEqual(T)) { var cyc = T.slice(0, per); add_({ type: 'periodic', label: 'Repeating cycle of ' + per + ' terms', params: per, support: n - per, closed: true, f: function (m) { return cyc[Number(m % B(cyc.length))]; }, formula: 'aₙ repeats the cycle ' + cyc.map(function (x) { return fmtQ(x, style); }).join(', '), steps: ['Every term equals the term ' + per + ' places earlier.'] }); break; }
+  }
+  /* two interleaved sequences */
+  if (n >= 6) {
+    var O = T.filter(function (x, i) { return i % 2 === 0; }), Ev = T.filter(function (x, i) { return i % 2 === 1; }), fo = simpleFit(O), fe = simpleFit(Ev);
+    if (fo && fe) add_({ type: 'interleaved', label: 'Two interleaved sequences', params: 4, support: n - 4, closed: true, f: function (m) { return m % 2n === 0n ? fo.f(m / 2n) : fe.f((m - 1n) / 2n); },
+      formula: 'terms 1, 3, 5, … : ' + fo.desc + '; terms 2, 4, 6, … : ' + fe.desc, steps: ['The terms in odd positions and the terms in even positions each follow their own simple rule.'] });
+  }
+  /* evaluate predictions, rank, merge duplicates */
+  var preds = function (c) { var out = []; try { for (var s = 0; s < 6; s++) out.push(c.f(B(n + s))); } catch (e) { return null; } return out; };
+  cands.forEach(function (c) { c.pred = preds(c); c.key = c.pred ? c.pred.map(function (x) { return x.n + '/' + x.d; }).join('|') : 'x' + Math.random(); });
+  var hasValidated = cands.some(function (c) { return c.support > 0; });
+  cands = cands.filter(function (c) { return !(c.unvalidatedPoly && c.support === 0 && ((hasValidated && n > 4) || false)); });
+  cands.sort(function (a, b) { return (b.support - a.support) || (a.params - b.params) || (TYPE_ORDER[a.type] - TYPE_ORDER[b.type]); });
+  var seen = {}, out = [];
+  cands.forEach(function (c) { var h = seen[c.key]; if (h) { if (c.type === 'known' || (c.type === 'recurrence' && (h.type === 'known'))) { h.aka = h.aka || []; if (h.aka.indexOf(c.label) < 0) h.aka.push(c.label); } } else { seen[c.key] = c; c.aka = c.aka || []; out.push(c); } });
+  cands = out;
+  cands.forEach(function (c) {
+    c.confidence = c.named ? (n >= 5 ? 'Strong' : 'Moderate') : (c.support >= 3 ? 'Strong' : c.support === 2 ? 'Moderate' : c.support === 1 ? 'Weak' : 'Not validated');
+    c.evidence = c.named ? 'Matches a named sequence over all ' + n + ' terms (no free parameters).' : c.support > 0 ? 'The rule is fixed by ' + c.params + ' of your ' + n + ' terms; the other ' + c.support + ' agree with it.' : 'The rule is fixed exactly by all ' + n + ' terms, so nothing independent has checked it.';
+    c.next = (c.pred || []).slice(0, nextCount);
+  });
+  /* output pieces */
+  var res = { ok: true, terms: T, n: n, n0: n0, style: style, levels: L, candidates: cands, primary: cands[0] || null, warnings: [], findN: findN };
+  if (n < 4) res.warnings.push('Only ' + n + ' terms were entered. Very few terms leave many rules possible; add more terms for a reliable result.');
+  if (cands.length > 1) res.warnings.push('More than one rule reproduces these terms. The first is the best supported, not the only possible one. Compare the alternatives before relying on the next term.');
+  if (!cands.length) res.warnings.push('No arithmetic, geometric, polynomial, recurrence or named pattern was found that is supported by more terms than it needs. Try more terms.');
+  else if (cands[0].support === 0 && !cands[0].named) res.warnings.push('The best candidate is fitted exactly by all the terms you gave, so no term independently confirms it. Add more terms to test it.');
+  res.warnings.push('A finite list of numbers does not uniquely determine its continuation. The result is a supported candidate, not a proof.');
+  if (res.primary) { res.nth = evalAt(res.primary, findN, n0, style); res.sumN = sumTo(res.primary, findN, n0, style); res.nextText = res.primary.next.map(function (x) { return fmtQ(x, style); }); }
+  res.diffRows = []; for (var rI = 0; rI < n; rI++) { var row = { n: n0 + rI, term: T[rI], d: [] }; for (var lI = 1; lI < L.length; lI++) if (L[lI][rI] !== undefined) row.d.push(L[lI][rI]); res.diffRows.push(row); }
+  return res;
+}
+/* term and sum evaluation with size guards */
+function evalAt(c, nAbs, n0, style) {
+  var m = B(nAbs - n0);
+  try {
+    if (c.iter && m > 5000n) return { text: 'Recurrence terms are computed exactly up to n = ' + (n0 + 5000) + '.', err: true };
+    var geo = c.type === 'geometric' || c.type === 'expconst';
+    if (geo) { var rr = c.r || null; /* size guard */
+      var ratio = c.type === 'geometric' ? c.r : null; if (c.type === 'expconst') { var f1 = c.f(1n), f2 = c.f(2n), f0 = c.f(0n); ratio = div(sub(f2, f1), sub(f1, f0)); }
+      if (ratio && !isZ(ratio)) { var lg = (logBig(ratio.n) - logBig(ratio.d)); if (Math.abs(lg) * Number(m) > 4000) { var l0 = logBig(c.f(0n).n) - logBig(c.f(0n).d); var tot = l0 + lg * Number(m), sgn = (c.f(0n).n < 0n) !== (ratio.n < 0n && m % 2n === 1n) ? '−' : ''; if (lg < 0) return { text: '≈ 0 (about ' + sgn + '10' + supInt(Math.floor(tot)) + ')', approx: true }; var ex = Math.floor(tot), mant = Math.pow(10, tot - ex); return { text: '≈ ' + sgn + mant.toFixed(6) + '×10' + supInt(ex), approx: true }; } } }
+    if (c.type === 'polynomial' || c.type === 'arithmetic' || c.type === 'constant' || c.type === 'alternating') { /* size is small: degree × log */ }
+    var v = c.f(m); return { q: v, text: fmtQ(v, style) };
+  } catch (e) { return { text: 'This index is beyond the limit for this rule.', err: true }; }
+}
+function sumTo(c, N, n0, style) {
+  var cnt = B(N - n0 + 1); if (cnt < 1n) return { text: '—' };
+  try {
+    if (c.type === 'constant') { var s0 = mul(c.f(0n), Q(cnt)); return { q: s0, text: fmtQ(s0, style) }; }
+    if (c.type === 'arithmetic') { var a0 = c.f(0n), a1 = c.f(1n), dd = sub(a1, a0), s = mul(Q(cnt, 2n), add(mul(Q(2), a0), mul(Q(cnt - 1n), dd))); return { q: s, text: fmtQ(s, style) }; }
+    if (c.type === 'geometric') { var r = c.r, ag = c.f(0n); if (isZ(r)) return { q: ag, text: fmtQ(ag, style) }; var lg = logBig(r.n) - logBig(r.d); if (Math.abs(lg) * Number(cnt) > 4000 && lg > 0) return { text: 'too large to show exactly (about 10' + supInt(Math.floor(logBig(ag.n) - logBig(ag.d) + lg * Number(cnt))) + ')', approx: true }; var sg = mul(ag, div(sub(Q(1), powQ(r, cnt)), sub(Q(1), r))); return { q: sg, text: fmtQ(sg, style) }; }
+    if (cnt > 20000n) return { text: 'Sums are computed exactly for up to 20,000 terms for this rule.', err: true };
+    var acc = Q(0); for (var i = 0n; i < cnt; i++) acc = add(acc, c.f(i)); return { q: acc, text: fmtQ(acc, style) };
+  } catch (e) { return { text: 'This sum is beyond the limit for this rule.', err: true }; }
+}
+return { analyse: analyse, parseTerms: parseTerms, fmtQ: fmtQ, fmtCSV: fmtCSV, Q: Q, polyText: polyText, evalAt: evalAt, sumTo: sumTo, diffLevels: diffLevels, VERSION: '1.0.0-mode01' };
+});
+
+</script>
+<script>
+(function () {
+'use strict';
+var N = window.NSeq, $ = function (id) { return document.getElementById(id); }, last = null, tmr;
+var EX = [['Arithmetic', '2, 5, 8, 11, 14'], ['Quadratic', '2, 6, 12, 20, 30'], ['Geometric', '3, 6, 12, 24, 48'], ['Fibonacci', '0, 1, 1, 2, 3, 5, 8'], ['Cubes', '1, 8, 27, 64, 125'], ['Decreasing', '10, 7, 4, 1'], ['Negative ratio', '2, -4, 8, -16'], ['Convergent', '12, 6, 3, 1.5'], ['Constant', '5, 5, 5, 5'], ['Ambiguous', '1, 2, 4'], ['Fractions', '1/2, 1, 3/2, 2'], ['Triangular', '1, 3, 6, 10, 15'], ['Factorial', '1, 2, 6, 24, 120'], ['Primes', '2, 3, 5, 7, 11'], ['2ⁿ + 1', '3, 5, 9, 17, 33'], ['Cycle', '1, 2, 3, 1, 2, 3'], ['Alternating', '1, -2, 3, -4, 5']];
+function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+function ex() { $('nsq-ex').innerHTML = EX.map(function (e, i) { return '<button type="button" class="chipb" data-i="' + i + '">' + esc(e[0]) + '</button>'; }).join(''); $('nsq-ex').addEventListener('click', function (ev) { var b = ev.target.closest('button'); if (!b) return; var e = EX[+b.getAttribute('data-i')]; $('nsq-in').value = e[1]; $('nsq-n0').value = '1'; run(); }); }
+function whole(s) { s = String(s).trim().replace(/[,\s_]/g, '').replace('−', '-'); return /^-?\d+$/.test(s) ? parseInt(s, 10) : NaN; }
+function list(a, st) { return a.map(function (x) { return N.fmtQ(x, st); }).join(', '); }
+function nm(c) { return c.label + (c.name && c.label.indexOf(c.name) < 0 ? ' — ' + c.name : ''); }
+function sub(n) { return String(n).replace(/-/g, '₋').replace(/\d/g, function (d) { return '₀₁₂₃₄₅₆₇₈₉'[+d]; }); }
+function short(x) { if (x === 0) return '0'; var a = Math.abs(x); if (a >= 1e6 || a < 1e-3) return x.toExponential(2); return String(parseFloat(x.toPrecision(4))); }
+function plot(r) {
+  var p = r.primary, pts = r.terms.map(function (t) { return Number(t.n) / Number(t.d); }), pr = p ? p.pred.slice(0, 5).map(function (t) { return Number(t.n) / Number(t.d); }) : [];
+  var all = pts.concat(pr); if (!all.every(isFinite) || all.some(function (v) { return Math.abs(v) > 1e15; })) return '<p class="note">The graph is not drawn because the values are too large to plot.</p>';
+  var W = 640, H = 250, L = 58, R = 14, T = 14, Bm = 34, lo = Math.min(0, Math.min.apply(null, all)), hi = Math.max(0, Math.max.apply(null, all)); if (hi === lo) { hi = lo + 1; }
+  var pad = (hi - lo) * .06; hi += pad; if (lo < 0) lo -= pad;
+  var X = function (i) { return L + (all.length === 1 ? 0 : i * (W - L - R) / (all.length - 1)); }, Y = function (v) { return T + (hi - v) * (H - T - Bm) / (hi - lo); }, s = '<svg viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="Stem plot of the entered terms (filled) and the predicted next terms (hollow)">';
+  for (var g = 0; g <= 4; g++) { var gv = lo + (hi - lo) * g / 4, gy = Y(gv); s += '<line class="gax" x1="' + L + '" x2="' + (W - R) + '" y1="' + gy + '" y2="' + gy + '"/><text class="gtx" x="' + (L - 6) + '" y="' + (gy + 4) + '" text-anchor="end">' + short(gv) + '</text>'; }
+  s += '<line x1="' + L + '" x2="' + (W - R) + '" y1="' + Y(0) + '" y2="' + Y(0) + '" stroke="currentColor" stroke-opacity=".55"/>';
+  var every = Math.ceil(all.length / 14);
+  all.forEach(function (v, i) { var pred = i >= pts.length, x = X(i), y = Y(v); s += '<line class="' + (pred ? 'gps' : 'gst') + '" x1="' + x + '" x2="' + x + '" y1="' + Y(0) + '" y2="' + y + '"/><circle class="' + (pred ? 'gpr' : 'gpt') + '" cx="' + x + '" cy="' + y + '" r="4.5"/>'; if (i % every === 0) s += '<text class="gtx" x="' + x + '" y="' + (H - 12) + '" text-anchor="middle">' + (r.n0 + i) + '</text>'; });
+  return s + '<text class="gtx" x="' + L + '" y="' + (H - 1) + '">n →</text></svg><p class="note">Discrete points (stems), not a continuous curve. Filled: your terms. Hollow, dashed: predicted by the first rule' + (r.candidates.length > 1 ? ' (other rules would continue differently)' : '') + '.</p>';
+}
+function row(k, v, small) { return '<tr><th scope="row">' + k + '</th><td class="r">' + v + (small ? '<small>' + small + '</small>' : '') + '</td></tr>'; }
+function render(r) {
+  var st = r.style, p = r.primary, h = '', i, K = r.findN - r.n0 + 1;
+  if (!p) h += '<div class="card ans"><div><span class="kind">Result</span><div class="big">No supported pattern</div><div class="sub">Nothing is supported by more terms than it needs.</div></div></div>';
+  else h += '<div class="card ans"><div><span class="kind">' + esc(nm(p)) + '</span><div class="big">' + esc(p.next.length ? N.fmtQ(p.next[0], st) : '—') + '</div><div class="sub">Predicted next term, a' + sub(r.n0 + r.n) + ', if the rule continues</div></div><span class="ns-flag ' + (p.support === 0 && !p.named ? 'q' : '') + '">Confidence: ' + esc(p.confidence) + '</span></div>';
+  h += '<ul class="warn">' + r.warnings.map(function (w) { return '<li>' + esc(w) + '</li>'; }).join('') + '</ul>';
+  h += '<div class="card"><h3 style="margin-top:0">Analysis</h3><div class="tw"><table class="an"><tbody>' + row('Input terms (index ' + r.n0 + ' to ' + (r.n0 + r.n - 1) + ')', esc(list(r.terms, st)));
+  var shown = 2; if (p && p.degree > 2) shown = Math.min(p.degree, 5);
+  for (i = 1; i <= shown && r.levels[i] && r.levels[i].length; i++) row;
+  for (i = 1; i <= shown && r.levels[i] && r.levels[i].length; i++) h += row((['', 'First', 'Second', 'Third', 'Fourth', 'Fifth'][i]) + ' differences', esc(list(r.levels[i], st)));
+  if (p) {
+    h += row('Sequence type', esc(nm(p))); h += row('General formula', esc(p.formula), 'Index of the first term: n = ' + r.n0 + (p.type === 'polynomial' && !p.support ? '. Exact fit only.' : ''));
+    h += row('Next terms', esc(r.nextText.join(', ')), 'for n = ' + (r.n0 + r.n) + ' onwards');
+    h += row('Term a' + sub(r.findN) + ' (n = ' + r.findN + ')', esc(r.nth.text));
+    h += row('Series sum of the first ' + K + ' term' + (K === 1 ? '' : 's') + ' (n = ' + r.n0 + ' to ' + r.findN + ')', esc(r.sumN.text));
+    if (p.infSum) h += row('Infinite series (|r| &lt; 1, converges)', esc(N.fmtQ(p.infSum, st)));
+    if (p.aka && p.aka.length) h += row('Also recognised as', esc(p.aka.join('; ')));
+    h += row('Evidence', esc(p.evidence));
+  }
+  h += '</tbody></table></div></div>';
+  var dm = Math.min(r.levels.length - 1, Math.max(2, p && p.degree ? p.degree : 2), 5);
+  h += '<div class="card"><h3 style="margin-top:0">Difference table</h3><div class="tw"><table class="dt"><thead><tr><th scope="col">n</th><th scope="col">Term</th>' + (function () { var s = ''; for (var d = 1; d <= dm; d++) s += '<th scope="col">Δ' + (d === 1 ? '' : sup(d)) + '</th>'; return s; })() + '</tr></thead><tbody>' + r.diffRows.map(function (rw) { var s = '<tr><td>' + rw.n + '</td><td>' + esc(N.fmtQ(rw.term, st)) + '</td>'; for (var d = 0; d < dm; d++) s += '<td>' + (rw.d[d] !== undefined ? esc(N.fmtQ(rw.d[d], st)) : '') + '</td>'; return s + '</tr>'; }).join('') + '</tbody></table></div><p class="note">For a polynomial sequence of degree k, the k-th differences are constant.</p></div>';
+  if (r.candidates.length > 1) { h += '<div class="card"><h3 style="margin-top:0">Other rules that also fit these terms</h3>'; r.candidates.slice(1, 7).forEach(function (c) { h += '<div class="alt"><b>' + esc(nm(c)) + '</b> <span class="ns-flag q">' + esc(c.confidence) + '</span><br><b class="f">' + esc(c.formula) + '</b><br>Next terms: ' + esc(c.next.slice(0, 5).map(function (x) { return N.fmtQ(x, st); }).join(', ')) + '<br><span class="note">' + esc(c.evidence) + '</span></div>'; }); h += '</div>'; }
+  if (p) h += '<div class="card"><h3 style="margin-top:0">Step-by-step working</h3><ol class="steps">' + p.steps.concat(['Check: the rule gives all ' + r.n + ' of your terms exactly (verified with exact fractions).']).map(function (s) { return '<li>' + esc(s) + '</li>'; }).join('') + '</ol></div>';
+  h += '<div class="card"><h3 style="margin-top:0">Graph</h3>' + plot(r) + '</div>';
+  h += '<div class="ns-act"><button type="button" class="btn2" id="nsq-copy">Copy result</button><button type="button" class="btn2" id="nsq-csv">Download CSV</button></div><p class="note" id="nsq-cn" role="status"></p>';
+  $('nsq-out').innerHTML = h;
+  $('nsq-copy').onclick = copy; $('nsq-csv').onclick = csv;
+}
+function sup(n) { return String(n).replace(/\d/g, function (d) { return '⁰¹²³⁴⁵⁶⁷⁸⁹'[+d]; }); }
+function text(r) {
+  var st = r.style, p = r.primary, t = 'Elecmetric Number Sequence Calculator\nTerms (index ' + r.n0 + '): ' + list(r.terms, st) + '\n';
+  if (p) t += 'Pattern: ' + nm(p) + ' (' + p.confidence + ')\nFormula: ' + p.formula + '\nNext terms: ' + r.nextText.join(', ') + '\nTerm n = ' + r.findN + ': ' + r.nth.text + '\nSum, n = ' + r.n0 + ' to ' + r.findN + ': ' + r.sumN.text + '\n'; else t += 'No supported pattern.\n';
+  return t + r.warnings[r.warnings.length - 1] + '\n';
+}
+function note(m) { var n = $('nsq-cn'); if (n) n.textContent = m; }
+function copy() { if (!last) return; var t = text(last); if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(t).then(function () { note('Copied.'); }, function () { note('Copy failed. Select the result text and copy it.'); }); else note('Copy is not available here. Select the result text and copy it.'); }
+function csv() {
+  if (!last) return; var r = last, lines = ['n,term,predicted,' + (function () { var s = []; for (var d = 1; d < r.levels.length && d <= 5; d++) s.push('difference_' + d); return s.join(','); })()];
+  r.diffRows.forEach(function (rw) { var c = [rw.n, N.fmtCSV(rw.term), 'no']; for (var d = 0; d < Math.min(r.levels.length - 1, 5); d++) c.push(rw.d[d] !== undefined ? N.fmtCSV(rw.d[d]) : ''); lines.push(c.join(',')); });
+  if (r.primary) r.primary.pred.slice(0, 5).forEach(function (x, i) { lines.push([r.n0 + r.n + i, N.fmtCSV(x), 'yes'].join(',')); });
+  var blob = new Blob(['\ufeff' + lines.join('\r\n') + '\r\n'], { type: 'text/csv;charset=utf-8' }), a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'number-sequence.csv'; document.body.appendChild(a); a.click(); setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 500); note('CSV downloaded (opens in Excel; fractions are written as decimals).');
+}
+function run() {
+  clearTimeout(tmr); var n0 = whole($('nsq-n0').value), fn = whole($('nsq-n').value), err = $('nsq-err'); ['nsq-in', 'nsq-n', 'nsq-n0'].forEach(function (id) { $(id).classList.remove('bad'); });
+  if (isNaN(n0)) { err.textContent = 'The index of the first term must be a whole number, for example 1 or 0.'; $('nsq-n0').classList.add('bad'); $('nsq-out').innerHTML = ''; return; }
+  if (isNaN(fn)) { err.textContent = 'The term number n must be a whole number.'; $('nsq-n').classList.add('bad'); $('nsq-out').innerHTML = ''; return; }
+  var r = N.analyse($('nsq-in').value, { n0: n0, findN: fn, nextCount: +$('nsq-cnt').value });
+  if (!r.ok) { err.textContent = r.error; last = null; $((/term number/.test(r.error)) ? 'nsq-n' : (/index of the first/.test(r.error) ? 'nsq-n0' : 'nsq-in')).classList.add('bad'); $('nsq-out').innerHTML = ''; return; }
+  err.textContent = ''; last = r; render(r);
+}
+function sched() { clearTimeout(tmr); tmr = setTimeout(run, 220); }
+ex(); ['nsq-in', 'nsq-n', 'nsq-n0'].forEach(function (id) { $(id).addEventListener('input', sched); }); $('nsq-cnt').addEventListener('change', run);
+$('nsq-go').addEventListener('click', run); $('nsq-clr').addEventListener('click', function () { $('nsq-in').value = ''; $('nsq-n0').value = '1'; $('nsq-n').value = '10'; $('nsq-out').innerHTML = ''; $('nsq-err').textContent = ''; $('nsq-in').focus(); });
+$('nsq-amb').addEventListener('click', function () { $('nsq-in').value = '1, 2, 4'; $('nsq-n0').value = '1'; run(); $('nsq-in').scrollIntoView({ behavior: 'smooth', block: 'center' }); });
+$('nsq-amb2').addEventListener('click', function () { $('nsq-in').value = '1, 2, 4, 8, 16, 31'; $('nsq-n0').value = '1'; run(); $('nsq-in').scrollIntoView({ behavior: 'smooth', block: 'center' }); });
+run();
+})();
+</script></body></html>

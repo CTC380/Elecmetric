@@ -8,6 +8,22 @@
    - `desc` is 50 to 160 characters and unique; `name` + ' Calculator | Elecmetric' must stay within 60 characters. */
 module.exports = [
   {
+    slug: 'electricity-cost', calc: 'energy-cost', name: 'Electricity Cost', group: 'Power and energy',
+    desc: 'Calculate electricity costs from appliance power, operating hours and tariff. Estimate daily, monthly and annual kWh, electricity bills and savings.',
+    head: [['E', 'kWh'], ['cost', '']], vary: ['P', 'kW', [0.1, 0.5, 1, 1.5, 2, 5]],
+    raw: { P: [1.5, 'kW'], cap: 100, h: 8, per: 0, d: 30, t: 8 },
+    intro: 'This is the starting point for electricity cost. It works in four steps: cost one appliance (this calculator), add up a list of appliances for a home or building with Multiple Appliance Electricity Cost, turn the units on a meter into a bill with Electricity Bill from Meter Readings, and compare an existing load with a replacement with Equipment Replacement Energy Savings. For a three-phase machine entered as voltage, current and power factor, use Load Energy and Cost. For a tariff with peak and off-peak rates or a demand charge, use the Time-of-Use and Demand Bill. Every calculator on this page states its assumptions, and none embeds a utility tariff: you enter the rate from your own tariff order.',
+    caveat: 'This page costs one load at one flat rate per kWh, excluding fixed charges, slabs, duty, tax and demand charges. Connected load, rated input power, actual average power and maximum demand are different quantities: a compressor or thermostat-controlled load cycles, so enter a measured average power or reduce the run-at percentage rather than its nameplate power for 24 hours. For a whole bill use the bill calculators linked below.',
+    faq: [
+      ['How do I calculate electricity cost?', 'Energy in kWh is power in kW multiplied by hours of use. Cost is the energy multiplied by the tariff per kWh. Enter the power, the hours of use and the tariff, and the calculator gives the energy and cost per day, per average month, per year and over the number of days you choose.'],
+      ['Why does the monthly figure differ from my 30-day total?', 'The per-month result uses an average month of 365 divided by 12 days so that twelve months equal the year. The days-to-total result uses exactly the days you enter. For a bill that covers a billing period of a set number of days, use the days-to-total result.'],
+      ['Can I add several appliances?', 'Yes. Use Multiple Appliance Electricity Cost, which takes up to twelve appliances and shows each appliance cost, its share of the total and the largest user.'],
+      ['Does this give my actual electricity bill?', 'No. A real bill adds slab rates, fixed charges, duty and tax. Use Electricity Bill from Meter Readings, which supports telescopic and non-telescopic slabs, or the Time-of-Use and Demand Bill for demand and time-of-day tariffs.'],
+      ['How do I estimate the saving from a more efficient appliance?', 'Use Equipment Replacement Energy Savings. It compares the energy and cost of the existing and new equipment at the hours and tariff you enter and gives the saving, the simple payback and the net saving over the life you enter.']
+    ],
+    pages: ['energy-cost-analysis', 'multiple-appliance-cost', 'electricity-bill-calculator', 'electricity-savings-calculator', 'industrial-energy-cost', 'tou-demand-bill'], app: ['energy-audit', 'led-retrofit-payback']
+  },
+  {
     slug: 'motor-current', calc: 'motor-current', name: 'Motor Full-Load Current', group: 'Motors',
     desc: 'Estimate the full-load current of a three-phase or single-phase motor from kW, voltage, power factor and efficiency, with the formula and worked example.',
     head: [['I', 'A'], ['Pin', 'kW']], vary: ['P', 'kW', [5.5, 11, 22, 55, 110, 250, 400]],
@@ -44,7 +60,7 @@ module.exports = [
       ['Which standard sizes does it use?', 'The standard kVA series listed in the assumptions below, from 25 kVA up to 3,150 kVA. If your utility or supplier uses a different series, take the required rating and select from their list.'],
       ['What target loading should I enter?', 'It is a design choice. A lower figure leaves more headroom and lower losses at the cost of a larger unit. Enter the loading your specification or utility asks for.']
     ],
-    pages: ['transformer-fault-current', 'generator-sizing', 'cable-size', 'transformer-efficiency'], app: ['transformer-current', 'transformer-loading', 'transformer-efficiency']
+    pages: ['transformer-fault-current', 'generator-sizing', 'cable-size', 'transformer-efficiency'], app: ['transformer-current', 'transformer-loading', 'transformer-efficiency', 'transformer-regulation']
   },
   {
     slug: 'transformer-fault-current', calc: 'fault-current', name: 'Transformer Fault Current', group: 'Short circuit',

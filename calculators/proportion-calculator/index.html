@@ -1,0 +1,685 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><style data-crumbs>.crumbs{font-size:13px;color:var(--muted);margin:0 0 10px}.crumbs ol{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:2px 0}.crumbs li+li::before{content:"\203A";margin:0 7px;opacity:.7}.crumbs a{color:inherit}.crumbs [aria-current]{color:var(--ink)}</style><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'"><title>Proportion Calculator | Solve A:B = C:D with Steps</title><meta name="description" content="Solve a proportion A : B = C : D for the missing term by cross multiplication, with decimals and fractions, an exact answer, the working, checks and the simplest ratio."><meta property="og:title" content="Proportion Calculator | Solve A:B = C:D with Steps"><meta property="og:description" content="Solve a proportion A : B = C : D for the missing term by cross multiplication, with decimals and fractions, an exact answer, the working, checks and the simplest ratio."><meta property="og:type" content="website"><meta property="og:site_name" content="Elecmetric"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Proportion Calculator | Solve A:B = C:D with Steps"><meta name="twitter:description" content="Solve a proportion A : B = C : D for the missing term by cross multiplication, with decimals and fractions, an exact answer, the working, checks and the simplest ratio."><meta name="theme-color" content="#043B79"><link rel="icon" href="../../icon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="../../apple-touch-icon.png"><link rel="manifest" href="../../manifest.webmanifest"><style>#ns .ns-card{padding:16px 16px 18px}#ns .ns-grid{display:grid;gap:12px;grid-template-columns:2fr 1fr 1fr 1fr}#ns .ns-l,#ns label.ns-l{display:block;font-weight:600;font-size:13px;margin:0 0 4px}#ns .ns-in,#ns .ns-sel{display:block;width:100%;box-sizing:border-box;font:500 18px/1.3 var(--mono);padding:10px 12px;min-height:48px;border-radius:8px;border:1px solid var(--line);background:var(--field);color:var(--ink)}#ns .ns-sel{font:500 15px var(--body)}#ns .ns-in:focus,#ns .ns-sel:focus{outline:2px solid var(--gold);outline-offset:1px}#ns .ns-in.bad{border-color:var(--err)}#ns .ns-msg{min-height:1.4em;margin:8px 0 4px;color:var(--err)}#ns .ns-act{display:flex;flex-wrap:wrap;gap:8px;margin:4px 0 10px}#ns .btn2,#ns .chipb{font:600 13px var(--body);color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:8px 12px;min-height:38px;cursor:pointer}#ns .btn2:hover,#ns .chipb:hover{background:var(--field)}#ns .chipb{border-radius:999px;padding:5px 12px;min-height:32px;font-weight:500;margin:3px 4px 3px 0}#ns .btn2:focus-visible,#ns .chipb:focus-visible{outline:2px solid var(--gold);outline-offset:2px}#ns .ns-try{margin:0 0 12px}#ns .ns-t td.r{font:600 17px var(--mono);color:var(--num);word-break:break-all;text-align:left}#ns .ns-t td.r small{display:block;font:500 12px var(--mono);color:var(--muted)}#ns .ns-t tr.cu td{background:var(--gold-fill)}#ns .ns-flag{font:600 11px var(--body);border-radius:999px;padding:1px 8px;margin-left:6px;border:1px solid var(--line);color:var(--muted);vertical-align:middle}#ns .ns-flag.r{color:var(--gold);border-color:var(--gold)}#ns .ns-facts{margin:12px 0 0;display:flex;flex-wrap:wrap;gap:6px 18px;font-size:14px}#ns .ns-facts b{font-family:var(--mono)}#ns ol.steps{font:14px/1.5 var(--mono);padding-left:26px}#ns h3{margin:14px 0 4px}.sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}code{font-family:var(--mono)}[hidden]{display:none!important}@media(max-width:700px){#ns .ns-grid{grid-template-columns:1fr 1fr}#ns .ns-f:first-child{grid-column:1/-1}}#nu .ns-card{padding:16px}#nu .ns-grid,#nu .ns-l,#nu .ns-in,#nu .ns-sel,#nu .ns-msg,#nu .ns-act,#nu .btn2,#nu .chipb,#nu .ns-try,#nu .ns-facts{}#nu .ns-grid{display:grid;gap:12px;grid-template-columns:2fr 1fr 1fr 1fr}#nu .ns-l,#nu label.ns-l{display:block;font-weight:600;font-size:13px;margin:0 0 4px}#nu .ns-in,#nu .ns-sel{display:block;width:100%;box-sizing:border-box;font:500 18px/1.3 var(--mono);padding:10px 12px;min-height:48px;border-radius:8px;border:1px solid var(--line);background:var(--field);color:var(--ink)}#nu .ns-sel{font:500 15px var(--body)}#nu .ns-in:focus,#nu .ns-sel:focus{outline:2px solid var(--gold);outline-offset:1px}#nu .ns-in.bad{border-color:var(--err)}#nu .ns-msg{min-height:1.4em;margin:8px 0 4px;color:var(--err)}#nu .ns-act{display:flex;gap:8px;margin:4px 0 10px}#nu .btn2,#nu .chipb{font:600 13px var(--body);color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:8px 12px;min-height:38px;cursor:pointer}#nu .btn2:hover,#nu .chipb:hover{background:var(--field)}#nu .chipb{border-radius:999px;padding:5px 12px;min-height:32px;font-weight:500;margin:3px 4px 3px 0}#nu .btn2:focus-visible,#nu .chipb:focus-visible{outline:2px solid var(--gold);outline-offset:2px}#nu .ns-try{margin:0 0 12px}#nu td.r{font:600 15px var(--mono);color:var(--num);word-break:break-all}#nu td small{display:block;font:500 12px var(--mono);color:var(--muted)}#nu .btn2{margin-left:8px;padding:2px 8px;min-height:28px}#nu tr.cu td{background:var(--gold-fill)}#nu .ns-flag{font:600 11px var(--body);border-radius:999px;padding:1px 8px;border:1px solid var(--gold);color:var(--gold)}#nu .ns-facts{margin:12px 0 0;display:flex;flex-wrap:wrap;gap:6px 18px;font-size:14px}#nu .ns-facts b{font-family:var(--mono)}#nu ol.steps{font:14px/1.5 var(--mono);padding-left:26px}#nu .bits{display:flex;flex-wrap:wrap;gap:4px;margin:14px 0 4px}#nu .bit{display:flex;flex-direction:column;align-items:center;min-width:40px;padding:4px 2px;border:1px solid var(--line);border-radius:6px;background:var(--field)}#nu .bit.sg{border-color:var(--gold);background:var(--gold-fill)}#nu .bit i{font:11px var(--mono);color:var(--muted);font-style:normal}#nu .bit b{font:700 20px var(--mono);color:var(--num)}#nu .bit em{font:10px var(--mono);color:var(--muted);font-style:normal}@media(max-width:700px){#nu .ns-grid{grid-template-columns:1fr 1fr}#nu .ns-f:first-child{grid-column:1/-1}}#nu .blg{grid-template-columns:2fr 1.4fr 2fr}#nu .blg2{grid-template-columns:1fr 1fr 1fr;margin-top:12px}#nu .nu-hist{list-style:none;margin:0 0 8px;padding:0}#nu pre.al{font:600 15px/1.6 var(--mono);background:var(--field);border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin:6px 0 12px;overflow-x:auto;color:var(--num)}#nu .res .big{font:700 28px/1.3 var(--mono);color:var(--num);word-break:break-all}#nu .res .big .btn2{vertical-align:middle}#nu .res .sub{color:var(--muted);margin:2px 0 8px}#nu .res table{max-width:420px}#nu td.r{font:600 15px var(--mono);color:var(--num)}#nu .fls{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}#nu .fl{border:1px solid var(--line);background:var(--field);border-radius:8px;padding:6px 10px;font-size:14px}#nu .fl.on{border-color:var(--gold);background:var(--gold-fill)}#nu .fl small{display:block;color:var(--muted);font-size:12px}#nu h3{margin:14px 0 4px}@media(max-width:700px){#nu .blg,#nu .blg2{grid-template-columns:1fr}}#nu .fpg{grid-template-columns:2fr 1.3fr 1.3fr 1.6fr}#nu .res .big{font:700 28px/1.3 var(--mono);color:var(--num);word-break:break-all}#nu .res .sub{color:var(--muted);margin:2px 0 8px}#nu .ns-t{max-width:640px}#nu td.r{font:600 15px var(--mono);color:var(--num);word-break:break-all}#nu td.r small{display:block;font:500 12px var(--mono);color:var(--muted)}#nu td.r .btn2{margin-left:8px;padding:2px 8px;min-height:28px}#nu .lng{display:block;max-height:7.5em;overflow:auto;font-size:13px}#nu .bg{display:flex;flex-wrap:wrap;gap:3px;margin:10px 0 4px}#nu .gap{width:10px}#nu .bit{min-width:30px;min-height:44px;border-radius:6px;border:1px solid var(--line);background:var(--field);color:var(--ink);cursor:pointer;font:600 15px var(--mono);padding:2px 0;line-height:1.1}#nu .bit small{display:block;font:500 9px var(--mono);color:var(--muted)}#nu .bit.s{border-color:#c0392b}#nu .bit.e{border-color:#2d7dd2}#nu .bit.f{border-color:var(--gold)}#nu .bit.on{background:var(--gold-fill);color:var(--num)}#nu .bit:focus-visible{outline:2px solid var(--gold);outline-offset:2px}#nu .lg{display:flex;gap:12px;font-size:12px;margin:2px 0 10px}#nu .k{border-left:10px solid;padding-left:6px}#nu .k.s{border-color:#c0392b}#nu .k.e{border-color:#2d7dd2}#nu .k.f{border-color:var(--gold)}#nu .fls{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}#nu .fl{border:1px solid var(--line);background:var(--field);border-radius:8px;padding:6px 10px;font-size:14px}#nu .fl.on{border-color:var(--gold);background:var(--gold-fill)}#nu .fl small{display:block;color:var(--muted);font-size:12px}#nu h3{margin:14px 0 4px}#faq p,#tenth td,#nu ol.steps li,#nu .sub{overflow-wrap:anywhere}@media(max-width:700px){#nu .fpg{grid-template-columns:1fr}#nu .bit{min-width:22px;font-size:13px}}#nu .res .big{font:700 28px/1.3 var(--mono);color:var(--num);word-break:break-word;overflow-wrap:anywhere}#nu .res .big.wd{font:600 22px/1.4 var(--body)}#nu .res .sub{color:var(--muted);margin:6px 0;overflow-wrap:anywhere}#nu .nwg{grid-template-columns:1.6fr 1.2fr 1.4fr 1.2fr}#nu .res .btn2{vertical-align:middle;margin-left:8px}#nu td.r{font:600 15px var(--mono);color:var(--num)}#nu ol.steps li{overflow-wrap:anywhere}#nu h3{margin:14px 0 4px}@media(max-width:700px){#nu .nwg{grid-template-columns:1fr}}@media print{header,.fb,#related,#faq,.ns-try,.ns-act,.ns-card,#scales,#examples,footer{display:none!important}#nu .card:first-child{display:block!important}#nu .card:first-child>*{display:none}#nu .card:first-child #nu-out{display:block}}#nu pre.al{font:600 15px/1.6 var(--mono);background:var(--field);border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin:6px 0 12px;overflow-x:auto;color:var(--num)}#ns [hidden]{display:none!important}.fmodes{display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px;margin:0 0 12px}.fmodes .ns-l{margin:0 4px 0 0}.fmodes .chip.on{background:var(--gold-fill);border-color:var(--gold);font-weight:700}.fmodes .chip.soon{opacity:.6;cursor:default}#ns .pq{font:600 20px/1.3 var(--mono);margin:0 0 10px;color:var(--num);overflow-wrap:anywhere;min-height:1.4em}#ns .rgrid{display:grid;grid-template-columns:minmax(0,1fr) 180px;gap:12px;margin:8px 0 6px}#ns .pgrid2{display:flex;flex-wrap:wrap;align-items:flex-end;gap:8px 10px;margin:0 0 4px}#ns .pair{display:flex;align-items:flex-end;gap:8px;flex:1 1 280px;min-width:0}#ns .pf{flex:1 1 0;min-width:0}#ns .sep{font:700 28px/1 var(--mono);padding-bottom:9px;color:var(--muted)}#ns ul.fh,#ns ul.vl{list-style:none;margin:0 0 10px;padding:0}#ns ul.fh{display:flex;flex-wrap:wrap;gap:4px}#ns ul.vl li{font:14px/1.5 var(--mono);padding:3px 0;overflow-wrap:anywhere}#ns .res .big{display:flex;flex-wrap:wrap;align-items:center;gap:6px;font:700 34px var(--mono);color:var(--num);word-break:break-word}#ns .res .sub{font:500 14px var(--mono);color:var(--muted);margin:6px 0 10px;overflow-wrap:anywhere}#ns ol.steps li{overflow-wrap:anywhere}#ns .ns-t{width:100%}#ns .ns-t td.r{word-break:normal;overflow-wrap:anywhere}#ns h3.rh{font-size:16px;margin:16px 0 6px}#ns .pbl{font:600 13px var(--mono);color:var(--muted);margin:6px 0 2px}#ns .rbar{display:flex;gap:2px;height:30px;margin:2px 0 8px;border-radius:8px;overflow:hidden}#ns .rseg{display:flex;align-items:center;justify-content:center;min-width:14px;color:#fff;font:700 13px var(--mono)}#ns .rseg.c0{background:#043B79}#ns .rseg.c1{background:#B34A00}@media(max-width:700px){#ns .rgrid{grid-template-columns:1fr}#ns .res .big{font-size:26px}#ns .eqs{width:100%;text-align:center;padding:0}}@media print{#ns .ns-try,#ns .ns-act,#ns .rgrid select{display:none}}</style><style>.fb textarea{width:100%;font:15px/1.5 var(--body);padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--field);color:var(--ink);resize:vertical}.fb textarea:focus{outline:2px solid var(--gold);outline-offset:1px}:root{--bg:#F1F6FC;--surface:#fff;--ink:#0A2347;--muted:#4B5F86;--line:#D3DFEF;--navy:#043B79;--on-navy:#FFFFFF;--gold:#B34A00;--gold-fill:#FFEFDC;--field:#F4F8FE;--err:#B3261E;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;--display:"Arial Narrow","Roboto Condensed",system-ui,sans-serif;--body:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--navy-2:#0A5BBB;--cyan:#0062DE;--num:#043B79;--orange:#FF7A00;--gold-grad:linear-gradient(135deg,#FFA43D 0%,#FF7A00 52%,#E85F00 100%);--hero:radial-gradient(1000px 360px at 90% -35%,rgba(0,98,222,.55),transparent 62%),radial-gradient(640px 240px at 0% 110%,rgba(255,122,0,.20),transparent 60%),linear-gradient(135deg,#032A58,#043B79 58%,#0A55A8);--r:14px;--sh-0:0 1px 2px rgba(4,35,80,.06);--sh-1:0 1px 2px rgba(4,35,80,.05),0 6px 18px rgba(4,35,80,.07);--sh-2:0 2px 4px rgba(4,35,80,.05),0 22px 44px -14px rgba(4,35,80,.24);--ring:0 0 0 3px rgba(0,98,222,.26);color-scheme:light dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}@media(prefers-color-scheme:dark){:root{--bg:#04122B;--surface:#0A2046;--ink:#EAF2FF;--muted:#A0B5DA;--line:#183868;--navy:#031B3F;--on-navy:#EAF2FF;--gold:#FF9A3D;--gold-fill:#3D2410;--field:#071B3C;--err:#FF8A80;--navy-2:#0B4A98;--cyan:#4DA3FF;--orange:#FF8A1F;--num:#FFB066;--sh-0:0 1px 2px rgba(0,0,0,.4);--sh-1:0 1px 2px rgba(0,0,0,.35),0 8px 22px rgba(0,0,0,.35);--sh-2:0 2px 4px rgba(0,0,0,.4),0 24px 48px -14px rgba(0,0,0,.7);--ring:0 0 0 3px rgba(77,163,255,.34)}}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 var(--body)}a{color:inherit}header{background:var(--navy);color:var(--on-navy);border-bottom:3px solid var(--gold)}.w{max-width:860px;margin:0 auto;padding:0 max(16px,env(safe-area-inset-left,0px))}header .w{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-block:12px;flex-wrap:wrap}header a{text-decoration:none;font:600 20px var(--display);letter-spacing:.04em;text-transform:uppercase}header nav a{font:500 13px var(--body);text-transform:none;letter-spacing:0;margin-left:14px;opacity:.9}main{padding-block:24px 56px}h1{font:600 32px/1.1 var(--display);margin:0 0 8px;text-wrap:balance}h2{font:600 20px var(--display);letter-spacing:.02em;margin:28px 0 8px;text-transform:uppercase}.lede{color:var(--muted);margin:0 0 16px;max-width:62ch}.card{background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:16px 18px;margin:12px 0}.ans{border-left:4px solid var(--gold);display:flex;flex-wrap:wrap;gap:6px 24px;align-items:baseline;justify-content:space-between}.big{font:600 28px var(--display)}.jump{margin:8px 0 4px}details.more{border:1px solid var(--line);border-radius:12px;background:var(--surface);margin:14px 0;padding:0 16px;box-shadow:var(--sh-0)}details.more>summary{cursor:pointer;list-style:none}details.more>summary::-webkit-details-marker{display:none}details.more>summary h2{margin:14px 0}details.more>summary h2::after{content:"+";margin-left:auto;color:var(--gold)}details.more[open]>summary h2::after{content:"\2212"}details.more[open]{padding-bottom:12px}@media print{.jump{display:none}}.btn{display:inline-block;background:var(--navy);color:var(--on-navy);padding:9px 16px;border-radius:4px;text-decoration:none;font-weight:600;border:1px solid var(--gold)}.chip{display:inline-block;margin:3px 6px 3px 0;padding:5px 12px;border:1px solid var(--line);border-radius:999px;background:var(--surface);text-decoration:none;font-size:14px}.chip:hover{border-color:var(--gold)}main li>a:only-child{display:inline-block;padding:3px 0}code,pre,.f,td.n{font-family:var(--mono)}.f{background:var(--field);border:1px solid var(--line);padding:10px 12px;border-radius:4px;overflow-x:auto;white-space:pre-wrap}ol.steps{padding-left:22px;font-family:var(--mono);font-size:13px}ol.steps li{margin:4px 0}.tw{overflow-x:auto}table{border-collapse:collapse;width:100%;background:var(--surface)}th,td{border:1px solid var(--line);padding:6px 10px;text-align:left}td.n{text-align:right}tr.me td{background:var(--gold-fill)}th{background:var(--field);font-weight:600}.note{color:var(--muted);font-size:13px}ul{padding-left:20px}footer{border-top:1px solid var(--line);color:var(--muted);font-size:13px;padding-block:16px}h3{font:600 16px var(--body);margin:18px 0 4px}h3+p{margin:0;max-width:68ch}.tres .tact{flex:0 0 100%;display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}@media print{.tact{display:none}}.tres .phasor{flex:0 0 100%;margin-top:12px}.phasor svg{display:block;width:100%;max-width:360px;height:auto;font:11px var(--body)}.arow{grid-column:1/-1;border:1px solid var(--line);border-radius:10px;padding:10px 12px 12px;margin:0}.arow[hidden]{display:none}.arow legend{font-weight:700;font-size:13px;padding:0 6px}.arow .tgrid{margin-top:2px}.arow-bar{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:8px;align-items:center}.arow-bar .note{margin:0}.arow .rm{margin-top:10px}.mgrid{margin-top:10px}.mgrid .mbody[hidden]{display:none}.mgrid .tgrid{margin-top:8px}.mgrid .fillm{margin-top:10px}.tres .rchart{flex:0 0 100%;margin-top:12px}.rchart svg{display:block;width:100%;height:auto;font:12px var(--body)}.rchart h3{margin:0 0 6px;font-size:14px}.tres .carry{flex:0 0 100%;margin-top:10px}.carry .chip{display:inline-block;margin:4px 6px 0 0}.arow .rm[hidden],#add-row[hidden]{display:none}@media print{.arow-bar,.arow .rm{display:none}}.tgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px 16px}.tgrid label{display:block;font-weight:600;font-size:13px;margin-bottom:4px}.trow{display:flex;gap:6px}.trow input,.trow select,.tgrid>div>select{font:16px var(--body);color:var(--ink);background:var(--field);border:1px solid var(--line);border-radius:4px;padding:8px;min-height:40px}.trow input{flex:1;min-width:0}.tgrid>div>select{width:100%}.hint{color:var(--muted);font-size:12px;margin-top:3px}.err{color:var(--err)}.tres{display:flex;flex-wrap:wrap;gap:6px 28px;align-items:baseline}.tres .big small{display:block;font:500 13px var(--body);color:var(--muted)}::selection{background:color-mix(in srgb,var(--gold) 30%,transparent)}body{background-image:radial-gradient(900px 520px at 100% -8%,color-mix(in srgb,var(--cyan) 10%,transparent),transparent 62%),radial-gradient(700px 420px at -5% 0%,color-mix(in srgb,var(--gold) 8%,transparent),transparent 60%);background-attachment:fixed;-webkit-font-smoothing:antialiased}header{position:relative;overflow:hidden;background:var(--hero);border-bottom:0;box-shadow:0 10px 30px -14px rgba(5,14,34,.6)}header::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);background-size:34px 34px;-webkit-mask-image:linear-gradient(100deg,#000,transparent 70%);mask-image:linear-gradient(100deg,#000,transparent 70%);pointer-events:none}header::after{content:"";position:absolute;left:0;right:0;bottom:0;height:18px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44 14'%3E%3Cpath d='M0 12.5H8L14 2l7 10.5 5-6 4 6H44' fill='none' stroke='%23FF7A00' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat right 36px bottom 3px/44px 14px,linear-gradient(90deg,#FF7A00,#FFA43D 55%,#FF7A00) no-repeat bottom/100% 4px;pointer-events:none}header .w{position:relative;z-index:1;padding-block:16px 22px}header .w>a.brand{display:block;line-height:0;letter-spacing:0;text-transform:none;background:#fff;border-radius:12px;padding:6px 14px;box-shadow:0 2px 12px rgba(2,16,42,.4),0 0 0 1px rgba(255,255,255,.5)}header .w>a.brand img{display:block;height:48px;width:auto}@media(max-width:600px){header .w>a.brand img{height:42px}}header a:focus-visible{outline-color:#FFB066}header nav a{color:#DCE5F5;opacity:1;padding:6px 12px;border-radius:999px;margin-left:6px;transition:background .15s,color .15s}header nav a:hover{background:rgba(255,255,255,.12);color:#FFB066}main.w{padding-top:36px;padding-bottom:64px}h1{font-size:36px;letter-spacing:.005em}h1::after{content:"";display:block;width:56px;height:3px;border-radius:3px;background:var(--gold-grad);margin-top:12px}h2{display:flex;align-items:center;gap:10px}h2::before{content:"";width:4px;height:.95em;border-radius:2px;background:var(--gold-grad);flex:none}h3{color:var(--gold)}.card{border-radius:14px;box-shadow:var(--sh-1)}.ans{position:relative;overflow:hidden;border-left:1px solid var(--line);padding-left:24px;background:linear-gradient(135deg,color-mix(in srgb,var(--gold) 12%,var(--surface)),var(--surface) 65%);border-color:color-mix(in srgb,var(--gold) 40%,var(--line));box-shadow:var(--sh-2)}.ans::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--gold-grad)}.big{color:var(--num);font-weight:700}.btn{border-radius:10px;border:0;background:var(--gold-grad);color:#0A2347;font-weight:700;box-shadow:var(--sh-1);transition:transform .15s,box-shadow .15s,filter .15s}.btn:hover{transform:translateY(-1px);box-shadow:var(--sh-2);filter:brightness(1.06)}.chip{box-shadow:var(--sh-0);transition:border-color .15s,background .15s,transform .15s,box-shadow .15s}.chip:hover{transform:translateY(-1px);box-shadow:var(--sh-1);border-color:var(--orange);background:color-mix(in srgb,var(--orange) 8%,var(--surface))}.f{border-radius:12px;border-left:3px solid var(--cyan)}.tw{border:1px solid var(--line);border-radius:12px;box-shadow:var(--sh-0)}.tw table{border:0}table{border-collapse:separate;border-spacing:0}th,td{border:0;border-bottom:1px solid var(--line)}tr:last-child td{border-bottom:0}th{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);background:var(--field)}tbody tr:hover td{background:color-mix(in srgb,var(--cyan) 7%,transparent)}tr.me td{background:var(--gold-fill)}.trow input,.trow select,.tgrid>div>select{border-radius:10px;transition:border-color .15s,box-shadow .15s}.trow select{background-color:color-mix(in srgb,var(--navy) 5%,var(--field))}.trow input:focus,.trow select:focus,.tgrid>div>select:focus{outline:0;border-color:var(--cyan);box-shadow:var(--ring)}.tgrid label{color:var(--ink)}a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--cyan);outline-offset:2px}footer{padding-block:20px}footer.mf{margin-top:24px;padding:0;border-top:0;background:var(--hero);color:#DCE5F5;font-size:13px;position:relative}footer.mf::before{content:"";display:block;height:4px;background:linear-gradient(90deg,#FF7A00,#FFA43D 55%,#FF7A00)}.mf-w{max-width:1100px;margin:0 auto;padding:36px max(16px,env(safe-area-inset-left,0px)) calc(24px + env(safe-area-inset-bottom,0px))}.mf-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:28px 24px}.mf-h{display:block;margin:0 0 12px;padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,.18);font:600 14px var(--display);letter-spacing:.06em;text-transform:uppercase;color:#FFB066}.mf-col ul{list-style:none;margin:0;padding:0}.mf-col li{margin:0}.mf-col a{display:inline-block;padding:4px 0;color:#DCE5F5;text-decoration:none}.mf-h a{padding:0;color:inherit}.mf-col a:hover,.mf-legal a:hover{color:#FFB066;text-decoration:underline}.mf a:focus-visible{outline:2px solid #FFB066;outline-offset:2px;border-radius:2px}.mf-legal{margin-top:28px;padding-top:18px;border-top:1px solid rgba(255,255,255,.18);color:#A9BADB;max-width:80ch}.mf-legal a{color:#DCE5F5}@media(max-width:980px){.mf-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(max-width:600px){.mf-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.mf-col a{padding:7px 0}}@media print{footer.mf{background:none;color:inherit}footer.mf::before,.mf-grid{display:none}.mf-legal{border:0;color:inherit}}@media(prefers-reduced-motion:reduce){.btn,.chip{transition:none;transform:none!important}}@media print{header{background:none;box-shadow:none}header::before,header::after,.ans::before,h1::after,h2::before{display:none}header .w>a.brand{box-shadow:none;padding:0}body{background-image:none}.card,.ans,.tw{box-shadow:none}.ans{padding-left:18px}}.totop{position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:60;min-height:44px;padding:0 18px;border:0;border-radius:999px;background:linear-gradient(135deg,#FFA43D,#FF7A00 52%,#E85F00);color:#0A2347;font:700 14px system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;box-shadow:0 2px 4px rgba(4,35,80,.2),0 14px 30px -8px rgba(4,35,80,.45);cursor:pointer;opacity:0;transform:translateY(12px);pointer-events:none;transition:opacity .2s,transform .2s,bottom .2s}.totop.on{opacity:1;transform:none;pointer-events:auto}.totop:hover{filter:brightness(1.06)}.totop:focus-visible{outline:2px solid #fff;outline-offset:2px;box-shadow:0 0 0 4px #0062DE}@media(prefers-reduced-motion:reduce){.totop{transition:none}}@media print{.totop{display:none}}.vstat{padding:12px 16px;border-left:4px solid var(--muted,#6b7a90)}.vstat.v-verified{border-left-color:#1f9d57}.vstat.v-reference{border-left-color:#2a7fd4}.vstat.v-indicative{border-left-color:#c98a10}</style><style id="em-ux1">.ns-f:has(>.mseg){grid-column:1/-1}main.w{max-width:1080px}.ns-card .mseg{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 4px}.ns-card .mseg button{flex:1 1 150px;font:600 14px var(--body);color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px;min-height:46px;cursor:pointer;text-align:center;transition:background .15s,border-color .15s}.ns-card .mseg button:hover{border-color:var(--orange);background:var(--field)}.ns-card .mseg button[aria-checked="true"]{background:var(--navy);color:var(--on-navy);border-color:var(--navy);box-shadow:inset 0 -3px 0 var(--orange)}.ns-card .mseg button:focus-visible,.ns-try .try-tabs button:focus-visible{outline:2px solid var(--cyan);outline-offset:2px}.ns-card .ns-try:not([role]){margin:14px 0 0;padding-top:12px;border-top:1px solid var(--line)}.ns-try .try-h{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;margin-bottom:6px}.ns-try .try-h .ns-l{margin:0}.ns-try .try-tabs{display:flex;flex-wrap:wrap;gap:6px}.ns-try .try-tabs button{font:600 12px var(--body);color:var(--muted);background:transparent;border:0;border-bottom:2px solid transparent;padding:6px 8px;cursor:pointer}.ns-try .try-tabs button[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--orange)}.ns-try .chipb[hidden]{display:none}@media(max-width:700px){.ns-card .mseg button{flex:1 1 calc(50% - 8px)}}</style></head><body><header><div class="w"><a class="brand" href="../../"><img src="../../logo.png" alt="Elecmetric" width="160" height="40"></a><nav><a href="../">All engineering calculators</a><a href="../../pages/index.html">Conversions</a><a href="../../index.html#verification">How it is verified</a></nav></div></header><main class="w"><nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="../../">Home</a></li><li><a href="../../categories/mathematics/">Mathematics</a></li><li><a href="../../categories/mathematics/#percentages-and-ratios">Percentages and Ratios</a></li><li><span aria-current="page">Proportion Calculator</span></li></ol></nav><h1>Proportion Calculator</h1><p class="lede">Enter three of the four terms of A : B = C : D and leave one blank. The calculator finds the missing term by cross multiplication, shows the working, and checks that both ratios reduce to the same simplest form. It reads whole numbers, decimals, fractions and mixed numbers exactly, and it tells you when the terms do not form a proportion or when a zero makes the answer undefined. Calculate. Convert. Understand.</p><nav class="jump" aria-label="On this page"><a class="chip" href="#how">How to solve a proportion</a><a class="chip" href="#formats">What you can type</a><a class="chip" href="#rules">Rules this calculator follows</a><a class="chip" href="#zero">When a term is zero</a><a class="chip" href="#examples">Worked examples</a><a class="chip" href="#engineering">Proportions in engineering</a><a class="chip" href="#faq">FAQ</a></nav><div id="ns"><nav class="fmodes" aria-label="Ratio Calculator modes"><span class="ns-l">Ratio Calculator</span><a class="chip" href="../ratio-calculator/">Mode 01 · Ratio Simplifier</a><a class="chip on" href="../proportion-calculator/" aria-current="page">Mode 02 · Proportion Solver</a><a class="chip" href="../equivalent-ratio-calculator/">Mode 03 · Equivalent Ratio Generator</a><span class="chip soon" aria-disabled="true">Mode 04 · Ratio Distribution (coming)</span><span class="chip soon" aria-disabled="true">Mode 05 · Engineering Ratio Analysis (coming)</span></nav><section class="card ns-card"><p class="pq" id="ns-q" aria-live="polite">Solve 3 : 4 = 9 : x</p><div class="pgrid2"><div class="pair"><div class="ns-f pf"><label for="ns-a" class="ns-l">Term A</label><input id="ns-a" class="ns-in" type="text" inputmode="text" autocomplete="off" autocorrect="off" spellcheck="false" aria-describedby="ns-err" value="3" placeholder="x"></div><span class="sep" aria-hidden="true">:</span><div class="ns-f pf"><label for="ns-b" class="ns-l">Term B</label><input id="ns-b" class="ns-in" type="text" inputmode="text" autocomplete="off" autocorrect="off" spellcheck="false" aria-describedby="ns-err" value="4" placeholder="x"></div></div><span class="sep eqs" aria-hidden="true">=</span><div class="pair"><div class="ns-f pf"><label for="ns-c" class="ns-l">Term C</label><input id="ns-c" class="ns-in" type="text" inputmode="text" autocomplete="off" autocorrect="off" spellcheck="false" aria-describedby="ns-err" value="9" placeholder="x"></div><span class="sep" aria-hidden="true">:</span><div class="ns-f pf"><label for="ns-d" class="ns-l">Term D</label><input id="ns-d" class="ns-in" type="text" inputmode="text" autocomplete="off" autocorrect="off" spellcheck="false" aria-describedby="ns-err" value="" placeholder="x"></div></div></div><div class="rgrid"><p class="note" style="margin:0;align-self:end">Leave one term blank, or type x, and it is solved. Fill all four to check whether they form a proportion.</p><div class="ns-f"><label for="ns-pl" class="ns-l">Decimal places</label><select id="ns-pl" class="ns-sel"><option value="auto" selected>Automatic</option><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="8">8</option><option value="10">10</option><option value="12">12</option></select></div></div><p class="note ns-msg" id="ns-err" role="status"></p><div class="ns-act"><button type="button" class="btn2" data-act="reset">Reset</button><button type="button" class="btn2" data-act="clearall">Clear all</button></div><div class="ns-try"><span class="ns-l">Try</span> <button type="button" class="chipb" data-ex="3|4|9|">3 : 4 = 9 : x</button><button type="button" class="chipb" data-ex="|4|9|12">x : 4 = 9 : 12</button><button type="button" class="chipb" data-ex="3||9|12">3 : x = 9 : 12</button><button type="button" class="chipb" data-ex="3|4||12">3 : 4 = x : 12</button><button type="button" class="chipb" data-ex="2|3|5|">2 : 3 = 5 : x</button><button type="button" class="chipb" data-ex="1.5|2.5|3|">1.5 : 2.5 = 3 : x</button><button type="button" class="chipb" data-ex="1/2|3/4|10|">1/2 : 3/4 = 10 : x</button><button type="button" class="chipb" data-ex="2 1/2|5|3|">2 1/2 : 5 = 3 : x</button><button type="button" class="chipb" data-ex="400|5|240|">400 : 5 = 240 : x</button><button type="button" class="chipb" data-ex="3|4|9|12">3 : 4 = 9 : 12</button><button type="button" class="chipb" data-ex="3|4|9|13">3 : 4 = 9 : 13</button><button type="button" class="chipb" data-ex="0|5|0|">0 : 5 = 0 : x</button></div><div id="ns-out" aria-live="polite"></div><p class="sr-only" id="ns-note" role="status" aria-live="polite"></p><noscript><p class="note">This tool needs JavaScript. Nothing is sent anywhere.</p></noscript></section><section class="card"><h2>Working</h2><div id="ns-steps"></div></section><section class="card"><h2>Checks</h2><div id="ns-verify"></div></section><section class="card"><h2>History</h2><div id="ns-hist"></div></section></div><section id="how"><h2>How to solve a proportion</h2><p>A proportion says that two ratios are equal. For A : B = C : D the cross products are equal as well: A × D = B × C. Put in the three known terms, then divide both sides by the number that multiplies the missing term. For 3 : 4 = 9 : x the working is:</p><ol class="steps"><li>Write the proportion with x for the missing term (term D): 3 : 4 = 9 : x.</li><li>In a proportion the cross products are equal: A × D = B × C. Here that is 3 × x = 4 × 9.</li><li>Put the known terms into the cross product. The side without x is B × C = 4 × 9 = 36.</li><li>So 3 × x = 36. Divide both sides by 3: x = 36 ÷ 3 = 12.</li><li>Check by putting 12 back in: 3 : 4 = 9 : 12. A × D = 36 and B × C = 36.</li><li>Simplest forms: 3 : 4 simplifies to 3 : 4 and 9 : 12 simplifies to 3 : 4, the same ratio.</li></ol></section><section id="formats"><h2>What you can type</h2><div class="tw" tabindex="0" role="region" aria-label="Scrollable table: You type, It is read as, Missing term"><table><thead><tr><th>You type</th><th>It is read as</th><th>Missing term</th></tr></thead><tbody><tr><td>3 : 4 = 9 : x</td><td>whole numbers</td><td>D = 12</td></tr><tr><td>1.5 : 2.5 = 3 : x</td><td>decimals, held exactly as 3/2 and 5/2</td><td>D = 5</td></tr><tr><td>1/2 : 3/4 = 10 : x</td><td>fractions</td><td>D = 15</td></tr><tr><td>2 1/2 : 5 = 3 : x</td><td>a mixed number, 2 + 1/2</td><td>D = 6</td></tr><tr><td>1e3 : 2e3 = 5 : x</td><td>scientific notation</td><td>D = 10</td></tr><tr><td>2 : 3 = 5 : x</td><td>an answer that is not a whole number</td><td>D = 15/2 (7.5)</td></tr><tr><td>x : 4 = 9 : 12</td><td>the missing term can be any of the four</td><td>A = 3</td></tr><tr><td>−3 : 4 = 9 : x</td><td>negative term</td><td>refused, see the rules below</td></tr></tbody></table></div><p class="note">Leave a box empty, or type x, ? or _, for the missing term. A comma is ignored, so 1,000 is read as 1000. Enter all four terms to check a proportion instead of solving it.</p></section><section id="rules"><h2>Rules this calculator follows</h2><ul><li><b>Cross multiplication.</b> A : B = C : D means A × D = B × C. The missing term is found as (the two terms on the other side of the equation, multiplied) ÷ (the term opposite the missing one).</li><li><b>Order is kept.</b> 2 : 3 = 4 : x is not the same as 3 : 2 = 4 : x. The terms are never sorted.</li><li><b>Terms are zero or positive.</b> A ratio compares sizes of like quantities, so a negative term is refused with a message, as in the Ratio Simplifier.</li><li><b>0 : 0 is not a ratio.</b> A pair of zeros is refused. If the term opposite the missing one is 0, the page reports either no solution or that any non-zero value works; it never divides by zero.</li><li><b>Exact arithmetic.</b> Terms are exact fractions held in whole-number (BigInt) arithmetic, with no floating-point rounding. The answer is given exactly, and as a decimal to the places you choose.</li><li><b>Checked every time.</b> The page puts the answer back into the proportion, compares the cross products exactly and reduces both ratios to their simplest form before it says the result is verified.</li></ul></section><section id="zero"><h2>When a term is zero</h2><div class="tw" tabindex="0" role="region" aria-label="Scrollable table: Proportion, Result, Why"><table><thead><tr><th>Proportion</th><th>Result</th><th>Why</th></tr></thead><tbody><tr><td>5 : 0 = 3 : x</td><td>D = 0 (3 : 0)</td><td>The first ratio is 1 : 0, so the second must also have a zero second term.</td></tr><tr><td>0 : 5 = 3 : x</td><td>No solution</td><td>The first ratio is 0 : 1, so its first term is 0, but 3 is not 0.</td></tr><tr><td>3 : 4 = 0 : x</td><td>No solution</td><td>The cross product forces x = 0, and 0 : 0 is not a ratio.</td></tr><tr><td>0 : 5 = 0 : x</td><td>Any non-zero value</td><td>Both ratios are 0 : something, so any non-zero x works and the answer is not fixed.</td></tr><tr><td>0 : 0 = 3 : x</td><td>refused</td><td>A ratio of 0 : 0 is not defined, so it cannot be one side of a proportion.</td></tr></tbody></table></div><p>These are decided from the definition: the two ratios are equal when the cross products are equal and neither ratio is 0 : 0.</p></section><section id="examples"><h2>Worked examples</h2><div class="tw" tabindex="0" role="region" aria-label="Scrollable table: Proportion, Missing term, Completed, Simplest ratio, Cross products"><table><thead><tr><th>Proportion</th><th>Missing term</th><th>Completed</th><th>Simplest ratio</th><th>Cross products</th></tr></thead><tbody><tr><td>3 : 4 = 9 : x</td><td>D = 12</td><td>3 : 4 = 9 : 12</td><td>3 : 4</td><td>36 = 36</td></tr><tr><td>x : 4 = 9 : 12</td><td>A = 3</td><td>3 : 4 = 9 : 12</td><td>3 : 4</td><td>36 = 36</td></tr><tr><td>3 : x = 9 : 12</td><td>B = 4</td><td>3 : 4 = 9 : 12</td><td>3 : 4</td><td>36 = 36</td></tr><tr><td>3 : 4 = x : 12</td><td>C = 9</td><td>3 : 4 = 9 : 12</td><td>3 : 4</td><td>36 = 36</td></tr><tr><td>2 : 3 = 5 : x</td><td>D = 15/2 (7.50)</td><td>2 : 3 = 5 : 15/2</td><td>2 : 3</td><td>15 = 15</td></tr><tr><td>1.5 : 2.5 = 3 : x</td><td>D = 5</td><td>3/2 : 5/2 = 3 : 5</td><td>3 : 5</td><td>15/2 = 15/2</td></tr><tr><td>1/2 : 3/4 = 10 : x</td><td>D = 15</td><td>1/2 : 3/4 = 10 : 15</td><td>2 : 3</td><td>15/2 = 15/2</td></tr><tr><td>2 1/2 : 5 = 3 : x</td><td>D = 6</td><td>5/2 : 5 = 3 : 6</td><td>1 : 2</td><td>15 = 15</td></tr><tr><td>400 : 5 = 240 : x</td><td>D = 3</td><td>400 : 5 = 240 : 3</td><td>80 : 1</td><td>1200 = 1200</td></tr></tbody></table></div><p class="note">Decimals are shown to two places here.</p></section><section id="engineering"><h2>Proportions in engineering</h2><div class="tw" tabindex="0" role="region" aria-label="Scrollable table: Engineering use, Proportion, Answer, Reading"><table><thead><tr><th>Engineering use</th><th>Proportion</th><th>Answer</th><th>Reading</th></tr></thead><tbody><tr><td>Current transformer, 400 A to 5 A, primary at 240 A</td><td>400 : 5 = 240 : x</td><td>x = 3 A</td><td>Ideal secondary current. The ratio is 80 : 1.</td></tr><tr><td>Voltage transformer, 11 kV to 110 V, primary at 6.6 kV</td><td>11000 : 110 = 6600 : x</td><td>x = 66 V</td><td>Ideal secondary voltage for a rated ratio of 100 to 1.</td></tr><tr><td>Gear teeth, 60 to 24, a larger gear of 35 teeth</td><td>60 : 24 = 35 : x</td><td>x = 14 teeth</td><td>A mating gear that keeps the same 5 : 2 ratio.</td></tr><tr><td>Drawing scale 1 : 50, a 3 cm line</td><td>1 : 50 = 3 : x</td><td>x = 150 cm</td><td>Real length of 3 cm on the drawing is 150 cm.</td></tr><tr><td>Mix 2 parts to 5 parts, 12 parts of the first</td><td>2 : 5 = 12 : x</td><td>x = 30</td><td>The second material needed to keep the same mix.</td></tr></tbody></table></div><p>These are ideal ratio calculations. A real current or voltage transformer also depends on polarity, burden, rated values, accuracy class and operating conditions, so a proportion does not show that an instrument transformer is suitable for a duty. Use the CT Burden calculator, the PT ratio calculator and the Transformer Turns Ratio calculator for those checks.</p></section><section id="direct"><h2>Direct and inverse proportion</h2><p>This calculator solves a direct proportion A : B = C : D, where the two ratios are equal. An inverse proportion is a different relation, where one quantity falls as the other rises, so the products are equal instead: A × B = C × D. If 4 workers take 6 days, 3 workers take 24 ÷ 3 = 8 days. Do not enter an inverse problem as a direct proportion.</p></section><section id="faq"><h2>Questions</h2><h3>How do I solve a proportion?</h3><p>Write the proportion as A : B = C : D, cross multiply to get A × D = B × C, put in the three known terms and divide by the number that multiplies the missing one. For 3 : 4 = 9 : x, 3x = 36, so x = 12.</p><h3>How do I find the missing value in a ratio?</h3><p>Leave the missing term blank, or type x, and enter the other three. The calculator works out the missing term in any of the four positions and shows the cross multiplication.</p><h3>Can I use decimals and fractions?</h3><p>Yes. Each term is read as an exact fraction, so 1.5 : 2.5 = 3 : x gives exactly 5 with no rounding. Mixed numbers such as 2 1/2 and fractions such as 3/4 also work.</p><h3>What if the answer is not a whole number?</h3><p>It is shown as an exact fraction and as a decimal. For 2 : 3 = 5 : x the answer is 15/2, or 7.5. A repeating decimal such as 14/3 is rounded to the places you choose and marked as approximate.</p><h3>Why does the calculator say there is no solution?</h3><p>A zero can make both sides of the cross product impossible to match. In 0 : 5 = 3 : x the left ratio has a first term of 0 and the right one does not, so no x works. In 3 : 4 = 0 : x the only candidate is x = 0, which would make 0 : 0.</p><h3>How do I check whether four numbers form a proportion?</h3><p>Enter all four terms. The calculator multiplies A × D and B × C exactly, compares them, shows the simplest form of each ratio, and says whether they are equal. For 3 : 4 = 9 : 13 they are not, and it suggests D = 12.</p><h3>Is anything sent to a server?</h3><p>No. The calculation runs in your browser. The history list is stored only in this browser and you can clear it.</p></section><section id="related"><h2>Related Calculators and Tools</h2><p><a class="chip" href="../ratio-calculator/">Ratio Calculator, Mode 01 (Ratio Simplifier)</a><a class="chip" href="../fraction-simplifier/">Fraction Simplifier</a><a class="chip" href="../gcf-calculator/">GCF Calculator</a><a class="chip" href="../fraction-arithmetic/">Fraction Arithmetic</a><a class="chip" href="../fraction-ratio-tools/">Advanced Fraction and Ratio Tools</a><a class="chip" href="../basic-percentage-calculator/">Basic Percentage Calculator</a><a class="chip" href="../transformer-turns-ratio/">Transformer Turns Ratio</a><a class="chip" href="../pt-ratio/">Voltage Transformer (PT) Ratio</a><a class="chip" href="../ct-burden/">CT Burden</a></p></section></main><section class="w fb" aria-labelledby="fb-h"><h2 id="fb-h">Tell us how to improve this page</h2><textarea id="fb-t" rows="4" maxlength="1500" placeholder="Your message ..." aria-label="Tell us how to improve this page"></textarea><p><button type="button" class="btn" id="fb-b">Email your suggestion</button> <button type="button" class="btn" id="sh-b">Share this page</button> <span class="note" id="fb-n">This opens your email app. Nothing is sent until you press send.</span></p></section><script>(function(){var b=document.getElementById("fb-b");if(!b)return;b.onclick=function(){var t=document.getElementById("fb-t").value.trim(),n=document.getElementById("fb-n");if(!t){n.textContent="Please write a message first.";return}location.assign("mailto:"+"elecmetrics@gmail.com"+"?subject="+encodeURIComponent("Elecmetric feedback: "+document.title)+"&body="+encodeURIComponent(t+"\n\nPage: "+location.href))}})();</script><script>(function(){var s=document.getElementById("sh-b");if(!s)return;s.onclick=function(){var u=location.href,t=document.title,n=document.getElementById("fb-n");if(navigator.share){navigator.share({title:t,url:u}).catch(function(){});return}if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(u).then(function(){n.textContent="Link copied."},function(){n.textContent="Copy this address: "+u})}else{n.textContent="Copy this address: "+u}}})();</script><footer class="mf"><div class="mf-w"><div class="mf-grid" role="navigation" aria-label="Site map"><div class="mf-col"><p class="mf-h"><a href="../../calculators/">Calculators</a></p><ul><li><a href="../../calculators/electrical-fundamentals/">Electrical Fundamentals</a></li><li><a href="../../calculators/power-and-energy/">Power and Energy</a></li><li><a href="../../calculators/cable-engineering/">Cable Engineering</a></li><li><a href="../../calculators/motor-engineering/">Motor Engineering</a></li><li><a href="../../calculators/transformer-engineering/">Transformer Engineering</a></li><li><a href="../../calculators/electrical-protection/">Electrical Protection</a></li><li><a href="../../calculators/power-systems/">Power Systems</a></li><li><a href="../../calculators/earthing-and-grounding/">Earthing and Grounding</a></li><li><a href="../../calculators/renewable-energy/">Renewable Energy</a></li><li><a href="../../calculators/airport-agl-engineering/">Airport and AGL Engineering</a></li><li><a href="../../calculators/electronics-and-instrumentation/">Electronics and Instrumentation</a></li><li><a href="../../calculators/lighting-and-facilities/">Lighting and Facilities</a></li><li><a href="../../calculators/engineering-mathematics/">Engineering Mathematics</a></li></ul></div><div class="mf-col"><p class="mf-h"><a href="../../calculators/">Popular calculators</a></p><ul><li><a href="../../calculators/cable-size/">Cable Size</a></li><li><a href="../../calculators/voltage-drop/">Voltage Drop</a></li><li><a href="../../calculators/breaker-size/">Breaker Size</a></li><li><a href="../../calculators/motor-current/">Motor Current</a></li><li><a href="../../calculators/transformer-sizing/">Transformer Sizing</a></li><li><a href="../../calculators/earth-resistance/">Earth Resistance</a></li><li><a href="../../calculators/pf-correction-kvar/">Power Factor Correction</a></li><li><a href="../../calculators/generator-sizing/">Generator Sizing</a></li><li><a href="../../calculators/battery-bank-sizing/">Battery Bank Sizing</a></li><li><a href="../../calculators/pv-energy/">Solar PV Energy</a></li></ul></div><div class="mf-col"><p class="mf-h"><a href="../../converters/index.html">Conversions</a></p><ul><li><a href="../../pages/index.html">Electrical conversions</a></li><li><a href="../../pages/kw-to-amps.html">kW to Amps</a></li><li><a href="../../pages/amps-to-kw.html">Amps to kW</a></li><li><a href="../../pages/kva-to-kw.html">kVA to kW</a></li><li><a href="../../pages/watts-to-amps.html">Watts to Amps</a></li><li><a href="../../converters/length-converter.html">Length</a></li><li><a href="../../converters/power-converter.html">Power</a></li><li><a href="../../converters/energy-converter.html">Energy</a></li><li><a href="../../converters/temperature-converter.html">Temperature</a></li><li><a href="../../pages/wire-gauge.html">AWG to mm²</a></li></ul></div><div class="mf-col"><p class="mf-h"><a href="../../converters/index.html">Formulas</a></p><ul><li><a href="../../converters/ohms-law-formulas.html">Ohm’s Law formulas</a></li><li><a href="../../converters/kirchhoffs-laws.html">Kirchhoff’s laws</a></li><li><a href="../../converters/cable-sizing-formulas.html">Cable sizing formulas</a></li><li><a href="../../converters/circuit-breaker-formulas.html">Circuit breaker formulas</a></li><li><a href="../../converters/ac-circuit-formulas.html">AC circuit formulas</a></li><li><a href="../../converters/battery-formulas.html">Battery formulas</a></li></ul></div><div class="mf-col"><p class="mf-h">Elecmetric</p><ul><li><a href="../../calculators/basic-calculator/">Basic Calculator</a></li><li><a href="../../calculators/scientific-calculator/">Scientific Calculator</a></li><li><a href="../../index.html#verification">How it is verified</a></li><li><a href="../../privacy.html">Privacy</a></li><li><a href="../../terms.html">Terms</a></li><li><a href="../../technical-library/">Technical Library</a></li><li><a href="mailto:elecmetrics@gmail.com">Contact us</a></li></ul></div></div><div class="mf-legal">Results are computed by the same tested engine as the calculators in Elecmetric and are for estimating. Check design values against the standard and the equipment data you work to. Elecmetric results are not a substitute for a design review by a competent engineer.<br>Developed by Elecmetric. No independent technical review of the calculators has been carried out. Results are for estimating.<br>&copy; 2026 Elecmetric &middot; <a href="../../privacy.html">Privacy</a> &middot; <a href="../../terms.html">Terms</a></div></div><script>(function(){if(location.protocol!=="file:")return;document.addEventListener("click",function(e){if(e.defaultPrevented||e.button||e.metaKey||e.ctrlKey||e.shiftKey)return;var a=e.target.closest&&e.target.closest("a[href]");if(!a||a.target)return;var m=/^([^?#]*)(.*)$/.exec(a.getAttribute("href"));if(!m[1]||/^[a-z][a-z0-9+.-]*:/i.test(m[1])||!/[/]$/.test(m[1]))return;e.preventDefault();location.href=m[1]+"index.html"+m[2]})})();</script><button type="button" class="totop" id="totop" aria-label="Back to top" tabindex="-1">↑ Top</button><script>(function(){var b=document.getElementById("totop");if(!b)return;var t=0;function u(){t=0;var on=(window.pageYOffset||document.documentElement.scrollTop)>400,bar=document.getElementById("bar"),h=bar&&bar.offsetHeight?bar.offsetHeight:0;b.classList.toggle("on",on);b.tabIndex=on?0:-1;b.style.bottom=h?"calc("+(h+16)+"px + env(safe-area-inset-bottom,0px))":"";}function q(){if(!t)t=requestAnimationFrame(u)}window.addEventListener("scroll",q,{passive:true});window.addEventListener("resize",q);b.addEventListener("click",function(){var r=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;window.scrollTo({top:0,behavior:r?"auto":"smooth"})});u()})();</script></footer><script>/* Elecmetric Quadratic Formula Calculator: exact engine for Mode 01 (Quadratic Equation Solver).
+   Every coefficient is held as an exact rational number (BigInt numerator and denominator), so the discriminant, its sign and the roots are decided exactly.
+   Roots come out as (u +/- v*sqrt(r))/w with r squarefree; they are verified by exact substitution in the field Q(sqrt(d)).
+   Works in Node (module.exports) and in the browser (global Quad). */
+(function (root) {
+  'use strict';
+  var MAXDIG = 60, MAXEXP = 300, TRIAL = 200000;
+  function babs(x) { return x < 0n ? -x : x; }
+  function gcd(a, b) { a = babs(a); b = babs(b); while (b) { var t = a % b; a = b; b = t; } return a; }
+  function isqrt(n) { if (n < 0n) throw new Error('isqrt of negative'); if (n < 2n) return n; var x = 1n << BigInt((n.toString(2).length + 1) >> 1); for (;;) { var y = (x + n / x) >> 1n; if (y >= x) return x; x = y; } }
+  function R(n, d) { if (d === undefined) d = 1n; if (d === 0n) throw new Error('zero denominator'); if (d < 0n) { n = -n; d = -d; } var g = gcd(n, d); if (g > 1n) { n /= g; d /= g; } return { n: n, d: d }; }
+  var ZERO = R(0n), ONE = R(1n);
+  function add(a, b) { return R(a.n * b.d + b.n * a.d, a.d * b.d); }
+  function sub(a, b) { return R(a.n * b.d - b.n * a.d, a.d * b.d); }
+  function mul(a, b) { return R(a.n * b.n, a.d * b.d); }
+  function div(a, b) { return R(a.n * b.d, a.d * b.n); }
+  function neg(a) { return { n: -a.n, d: a.d }; }
+  function isZero(a) { return a.n === 0n; }
+  function sgn(a) { return a.n === 0n ? 0 : a.n < 0n ? -1 : 1; }
+  function eq(a, b) { return a.n === b.n && a.d === b.d; }
+  function ri(n) { return R(BigInt(n), 1n); }
+  function rs(a) { return a.d === 1n ? String(a.n) : a.n + '/' + a.d; }
+
+  /* ---------- input parsing ---------- */
+  function parseDec(s) {
+    var m = /^([+-]?)(\d*)(?:\.(\d*))?(?:[eE]([+-]?\d+))?$/.exec(s);
+    if (!m || (m[2] === '' && (m[3] === undefined || m[3] === ''))) return null;
+    var ip = m[2] || '', fp = m[3] || '', ex = m[4] ? parseInt(m[4], 10) : 0;
+    if (ip.length + fp.length > MAXDIG) return { err: 'Too many digits: use at most ' + MAXDIG + '.' };
+    if (Math.abs(ex) > MAXEXP) return { err: 'Exponent too large: use between \u2212' + MAXEXP + ' and ' + MAXEXP + '.' };
+    var n = BigInt((ip + fp) || '0'), e = ex - fp.length;
+    var v = e >= 0 ? R(n * 10n ** BigInt(e), 1n) : R(n, 10n ** BigInt(-e));
+    return { v: m[1] === '-' ? neg(v) : v };
+  }
+  /* A coefficient: integer, decimal, scientific, fraction a/b (a and b may be decimals) or mixed number "2 1/3". */
+  function parseNum(text) {
+    var s = String(text === undefined || text === null ? '' : text).replace(/\u2212|\u2013|\u2014/g, '-').replace(/\u2044|\u2215/g, '/').replace(/,/g, '').trim();
+    if (s === '') return { empty: true, error: 'Enter a value.' };
+    var m = /^([+-]?)\s*(\d+)[ _]+(\d+)\s*\/\s*(\d+)$/.exec(s);
+    if (m) { var w = BigInt(m[2]), nn = BigInt(m[3]), dd = BigInt(m[4]); if (dd === 0n) return { error: 'The denominator cannot be zero.' }; var mv = R(w * dd + nn, dd); return { v: m[1] === '-' ? neg(mv) : mv }; }
+    if (s.indexOf('/') >= 0) {
+      var parts = s.split('/'); if (parts.length !== 2) return { error: 'Use one fraction bar, for example 3/4.' };
+      var a = parseDec(parts[0].trim()), b = parseDec(parts[1].trim());
+      if (!a || !b) return { error: 'Cannot read \u201c' + s + '\u201d. Use a number, a decimal or a fraction such as 3/4.' };
+      if (a.err || b.err) return { error: a.err || b.err };
+      if (isZero(b.v)) return { error: 'The denominator cannot be zero.' };
+      return { v: div(a.v, b.v) };
+    }
+    var d = parseDec(s);
+    if (!d) return { error: 'Cannot read \u201c' + s + '\u201d. Use a number, a decimal or a fraction such as 3/4.' };
+    if (d.err) return { error: d.err };
+    return { v: d.v };
+  }
+
+  /* ---------- radicals ---------- */
+  /* n >= 0 BigInt -> {s, r, full} with n = s^2 * r and r squarefree as far as trial division up to TRIAL reaches (full=false if a large unfactored part remains). */
+  function sqrtSplit(n) {
+    if (n === 0n) return { s: 0n, r: 0n, full: true };
+    var s = 1n, r = 1n, rest = n, p = 2n, lim = BigInt(TRIAL);
+    while (p * p <= rest && p <= lim) {
+      var e = 0; while (rest % p === 0n) { rest /= p; e++; }
+      if (e) { s *= p ** BigInt(e >> 1); if (e & 1) r *= p; }
+      p += p === 2n ? 1n : 2n;
+    }
+    var full = rest === 1n || p * p > rest;
+    if (rest > 1n) { var q = isqrt(rest); if (q * q === rest) { s *= q; full = true; } else r *= rest; }
+    return { s: s, r: r, full: full };
+  }
+
+  /* ---------- number field Q(sqrt(d)), d an integer that is not a perfect square: a + b*sqrt(d) ---------- */
+  function Fm(a, b, d) { return { a: a, b: b, d: d }; }
+  function fmul(x, y) { return Fm(add(mul(x.a, y.a), mul(mul(x.b, y.b), x.d)), add(mul(x.a, y.b), mul(x.b, y.a)), x.d); }
+  function fadd(x, y) { return Fm(add(x.a, y.a), add(x.b, y.b), x.d); }
+  function fscale(k, x) { return Fm(mul(k, x.a), mul(k, x.b), x.d); }
+
+  /* ---------- formatting ---------- */
+  function mn(s) { return String(s).replace(/-/g, '\u2212'); }
+  function coefTerm(c, pow, first) { /* c rational non-zero -> text of one term of a polynomial */
+    var neg_ = c.n < 0n, ab = neg_ ? { n: -c.n, d: c.d } : c, body;
+    var isOne = ab.n === 1n && ab.d === 1n, v = pow === 0 ? 'x'.slice(0, 0) : pow === 1 ? 'x' : 'x\u00b2';
+    if (pow === 0) body = rs(ab).indexOf('/') >= 0 ? '(' + rs(ab) + ')' : rs(ab);
+    else body = (isOne ? '' : (ab.d === 1n ? rs(ab) : '(' + rs(ab) + ')')) + v;
+    if (first) return (neg_ ? '\u2212' : '') + body;
+    return (neg_ ? ' \u2212 ' : ' + ') + body;
+  }
+  function equationText(A, B, C) {
+    var out = '', first = true;
+    [[A, 2], [B, 1], [C, 0]].forEach(function (t) { if (isZero(t[0])) return; out += coefTerm(t[0], t[1], first); first = false; });
+    if (first) out = '0';
+    return out + ' = 0';
+  }
+  function sciOf(q, sig) {
+    var n = q.n < 0n ? -q.n : q.n, d = q.d, e = n.toString().length - d.toString().length;
+    for (var tries = 0; tries < 4; tries++) {
+      var sc = e >= 0 ? R(n, d * 10n ** BigInt(e)) : R(n * 10n ** BigInt(-e), d);
+      if (sc.n >= sc.d * 10n) e++; else if (sc.n < sc.d) e--; else break;
+    }
+    var m = e >= 0 ? R(n, d * 10n ** BigInt(e)) : R(n * 10n ** BigInt(-e), d), P = 10n ** BigInt(sig - 1), v = (m.n * P * 2n + m.d) / (m.d * 2n);
+    if (v >= P * 10n) { v /= 10n; e++; }
+    var t = String(v), mant = t[0] + (t.length > 1 ? '.' + t.slice(1) : ''); mant = mant.replace(/(\.\d*?)0+$/, '$1').replace(/\.$/, '');
+    return (q.n < 0n ? '-' : '') + mant + 'e' + (e < 0 ? '\u2212' : '') + Math.abs(e);
+  }
+  /* Exact decimal of a rational: returns {text, exact}; terminating expansions are shown in full (up to 40 places), others are rounded to dp places. */
+  function decOfRational(q, dp) {
+    var n = q.n, d = q.d, neg_ = n < 0n; if (neg_) n = -n;
+    var t = d, twos = 0, fives = 0; while (t % 2n === 0n) { t /= 2n; twos++; } while (t % 5n === 0n) { t /= 5n; fives++; }
+    var terminating = t === 1n, places = Math.max(twos, fives);
+    var use = terminating && places <= 40 ? places : dp, S = 10n ** BigInt(use);
+    var scaled = (n * S * 2n + d) / (d * 2n);
+    var ip = scaled / S, fp = scaled % S, fs = String(fp); fs = use ? '0'.repeat(Math.max(0, use - fs.length)) + fs : '';
+    var text = String(ip) + (use ? '.' + fs : '');
+    if (terminating && places <= 40) text = text.replace(/(\.\d*?)0+$/, '$1').replace(/\.$/, '');
+    var isZero_ = /^0(\.0*)?$/.test(text);
+    if (isZero_ && n !== 0n) return { text: sciOf(q, 10), exact: false };
+    return { text: (neg_ && !isZero_ ? '-' : '') + text, exact: terminating && places <= 40 };
+  }
+  /* (u + sg*v*sqrt(r))/w, r > 0 integer -> decimal rounded to dp places. u, v, w BigInt; sg = +1 or -1. */
+  function decOfRadical(u, v, r, w, sg, dp) {
+    var G = dp + 12, S = 10n ** BigInt(G), root = isqrt(r * S * S); /* sqrt(r)*S, floor */
+    var num = u * S + BigInt(sg) * v * root, q = R(num, w * S);
+    var res = decOfRational(q, dp);
+    if (res.exact && !/\./.test(res.text) ) return { text: res.text, exact: false };
+    /* force fixed dp places for irrational values */
+    var qq = R(num, w * S), n = qq.n, d = qq.d, ng = n < 0n; if (ng) n = -n;
+    var P = 10n ** BigInt(dp), sc = (n * P * 2n + d) / (d * 2n), ip = sc / P, fp = String(sc % P); fp = '0'.repeat(Math.max(0, dp - fp.length)) + fp;
+    var tx = String(ip) + (dp ? '.' + fp : ''); if (/^0(\.0*)?$/.test(tx)) return { text: sciOf(R(num * (ng ? -1n : 1n) * (ng ? -1n : 1n) * (ng ? -1n : 1n), w * S), 10), exact: false }; if (ng) tx = '-' + tx;
+    return { text: tx, exact: false };
+  }
+  function radText(r) { return '\u221a' + r; }
+  /* exact text of (u + sg*v*sqrt(r)*[i])/w with w > 0 and gcd(u, v, w) = 1. imag: use i. */
+  function exactText(u, v, r, w, sg, imag) {
+    var rad = (imag ? 'i' : '') + (r === 1n ? '' : radText(r)), vs = v === 1n ? '' : String(v);
+    var core = vs + rad;
+    if (u === 0n) { var t0 = (sg < 0 ? '\u2212' : '') + core; return w === 1n ? t0 : (sg < 0 ? '\u2212' + core + '/' + w : core + '/' + w); }
+    var us = mn(String(u)), op = sg < 0 ? ' \u2212 ' : ' + ';
+    if (w === 1n) return us + op + core;
+    return '(' + us + op + core + ')/' + w;
+  }
+  function imagUnit(core) { return core; }
+
+  /* ---------- the solver ---------- */
+  function classify(D, perfect) {
+    if (D.n > 0n) return perfect ? 'Two distinct real roots (rational)' : 'Two distinct real roots (irrational)';
+    if (D.n === 0n) return 'One repeated real root (double root)';
+    return 'Two complex conjugate roots';
+  }
+  function solve(input) {
+    input = input || {};
+    var dp = input.dp === undefined ? 8 : Math.max(2, Math.min(15, input.dp | 0));
+    var pa = parseNum(input.a), pb = parseNum(input.b), pc = parseNum(input.c);
+    var errs = {}, anyEmpty = pa.empty && pb.empty && pc.empty;
+    if (pa.error) errs.a = pa.error; if (pb.error) errs.b = pb.error; if (pc.error) errs.c = pc.error;
+    if (pa.empty && !pa.error) errs.a = 'Enter A (type 0 if the x\u00b2 term is absent).';
+    if (pb.empty && !pb.error) errs.b = 'Enter B (type 0 if the x term is absent).';
+    if (pc.empty && !pc.error) errs.c = 'Enter C (type 0 if there is no constant).';
+    if (errs.a || errs.b || errs.c) return { ok: false, empty: anyEmpty, errors: errs, error: errs.a || errs.b || errs.c };
+    var A = pa.v, B = pb.v, C = pc.v, eqn = equationText(A, B, C), steps = [];
+    var res = { ok: true, A: A, B: B, C: C, a: rs(A), b: rs(B), c: rs(C), equation: eqn, dp: dp, steps: steps };
+    steps.push('Equation: ' + eqn + '. Coefficients: A = ' + rs(A) + ', B = ' + rs(B) + ', C = ' + rs(C) + '.');
+
+    /* degenerate cases */
+    if (isZero(A) && isZero(B)) {
+      if (isZero(C)) { res.kind = 'indeterminate'; res.label = 'Every real number is a solution'; res.degree = -1; steps.push('A = B = C = 0, so the equation reads 0 = 0, which is true for every x. It is an identity, not an equation to solve.'); res.roots = []; return res; }
+      res.kind = 'none'; res.label = 'No solution'; res.degree = 0; res.roots = []; steps.push('A = B = 0 leaves ' + rs(C) + ' = 0, which is never true because C is not zero. There is no value of x that satisfies the equation.'); return res;
+    }
+    if (isZero(A)) {
+      var x = neg(div(C, B));
+      res.kind = 'linear'; res.degree = 1; res.label = 'A = 0: the equation is linear, with one root';
+      res.roots = [{ exact: rs(x), dec: decOfRational(x, dp), q: x, real: true, field: null }];
+      steps.push('A = 0, so this is the linear equation ' + rs(B) + 'x + ' + rs(C) + ' = 0, not a quadratic. There is one root: x = \u2212C/B = \u2212(' + rs(C) + ')/(' + rs(B) + ') = ' + rs(x) + '.');
+      res.verify = [verifyRational(A, B, C, x)]; res.verifyOk = res.verify.every(function (v) { return v.ok; });
+      steps.push('Check: A\u00b7x\u00b2 + B\u00b7x + C at x = ' + rs(x) + ' gives ' + res.verify[0].value + '.');
+      return res;
+    }
+
+    /* quadratic */
+    res.degree = 2;
+    var B2 = mul(B, B), fAC = mul(ri(4), mul(A, C)), D = sub(B2, fAC);
+    res.D = D; res.discriminant = rs(D);
+    steps.push('Discriminant: \u0394 = B\u00b2 \u2212 4AC = (' + rs(B) + ')\u00b2 \u2212 4\u00b7(' + rs(A) + ')\u00b7(' + rs(C) + ') = ' + rs(B2) + ' \u2212 (' + rs(fAC) + ') = ' + rs(D) + '.');
+    var twoA = mul(ri(2), A), h = neg(div(B, twoA)), k = neg(div(D, mul(ri(4), A)));
+    res.vertex = { x: h, y: k }; res.axis = h; res.yint = C; res.sum = neg(div(B, A)); res.product = div(C, A);
+    res.opens = sgn(A) > 0 ? 'up' : 'down'; res.extremum = sgn(A) > 0 ? 'minimum' : 'maximum'; res.extremumValue = k;
+    var perfectSq = false, sq = null;
+    if (D.n >= 0n) { var pn = isqrt(D.n), qd = isqrt(D.d); perfectSq = pn * pn === D.n && qd * qd === D.d; if (perfectSq) sq = R(pn, qd); }
+    res.perfectSquare = perfectSq;
+    res.label = classify(D, perfectSq); res.rootCount = D.n < 0n ? 2 : D.n === 0n ? 1 : 2;
+    steps.push(D.n > 0n ? '\u0394 > 0: two distinct real roots' + (perfectSq ? '. \u0394 is a perfect square, so both roots are rational.' : '. \u0394 is not a perfect square, so the roots are irrational.') : D.n === 0n ? '\u0394 = 0: one repeated real root, the parabola just touches the x-axis.' : '\u0394 < 0: no real roots; the roots are a complex conjugate pair, shown below as a \u00b1 bi.');
+    steps.push('Quadratic formula: x = (\u2212B \u00b1 \u221a\u0394) / (2A) = (' + mn(rs(neg(B))) + ' \u00b1 \u221a(' + rs(D) + ')) / ' + rs(twoA) + '.');
+    var roots = [];
+    if (D.n === 0n) {
+      roots.push({ exact: rs(h), dec: decOfRational(h, dp), q: h, real: true });
+      res.kind = 'repeated'; steps.push('x = \u2212B/(2A) = ' + rs(h) + ' (repeated).');
+      res.roots = roots;
+    } else if (perfectSq) {
+      var r1 = div(sub(neg(B), sq), twoA), r2 = div(add(neg(B), sq), twoA);
+      var lo = sgn(sub(r1, r2)) <= 0 ? r1 : r2, hi = lo === r1 ? r2 : r1;
+      roots.push({ exact: rs(lo), dec: decOfRational(lo, dp), q: lo, real: true }, { exact: rs(hi), dec: decOfRational(hi, dp), q: hi, real: true });
+      res.kind = 'rational'; steps.push('\u221a\u0394 = \u221a(' + rs(D) + ') = ' + rs(sq) + ', so x = (' + mn(rs(neg(B))) + ' \u00b1 ' + rs(sq) + ') / ' + rs(twoA) + ', which gives x = ' + rs(lo) + ' and x = ' + rs(hi) + '.');
+      res.roots = roots;
+    } else {
+      /* radical: sqrt(|D|) = sqrt(p*q)/q for D = p/q  =>  x = (u +/- v*sqrt(r))/w */
+      var absD = D.n < 0n ? { n: -D.n, d: D.d } : D, m = absD.n * absD.d, sp = sqrtSplit(m);
+      var s = sp.s, r = sp.r, qd2 = absD.d;
+      /* x = (-B +/- (s*sqrt(r)/qd2)) / (2A), with B = Bn/Bd, 2A = An2/Ad2 */
+      var Bn = B.n, Bd = B.d, An = twoA.n, Ad = twoA.d;
+      /* x = [(-Bn/Bd) +/- s*sqrt(r)/qd2] * Ad/An = [(-Bn*qd2 +/- s*Bd*sqrt(r)) / (Bd*qd2)] * Ad/An */
+      var uu = -Bn * qd2 * Ad, vv = s * Bd * Ad, ww = Bd * qd2 * An;
+      if (ww < 0n) { ww = -ww; uu = -uu; vv = -vv; }
+      var gg = gcd(gcd(uu, vv), ww); if (gg > 1n) { uu /= gg; vv /= gg; ww /= gg; }
+      var vpos = vv < 0n ? -vv : vv; /* the two signs cover both roots, so v can be taken positive */
+      var imag = D.n < 0n;
+      res.radicand = r; res.radicandFull = sp.full; res.form = { u: uu, v: vpos, r: r, w: ww, imag: imag };
+      steps.push('Simplify the radical: ' + (imag ? '\u221a(\u2212\u0394) ' : '\u221a\u0394 ') + '= \u221a(' + rs(absD) + ') = ' + (function () { var sq2 = R(s, qd2); return (sq2.n === 1n && sq2.d === 1n ? '' : rs(sq2)) + '\u221a' + r; })() + (sp.full ? '' : ' (the radicand has a large factor that could not be tested for square parts)') + '.');
+      var mk = function (sg) {
+        var ex = exactText(uu, vpos, r, ww, sg, imag), re_, im_;
+        if (!imag) { var dc = decOfRadical(uu, vpos, r, ww, sg, dp); return { exact: ex, dec: dc, real: true, sg: sg }; }
+        var reQ = R(uu, ww), imQ = decOfRadical(0n, vpos, r, ww, 1, dp);
+        var reD = decOfRational(reQ, dp), reT = reD.exact ? reD.text : reD.text;
+        var imN = imQ.text.replace(/^-/, ''), imT = imN === '1' ? '' : imN, sign = sg < 0 ? '\u2212' : '+';
+        var dtext = (isZero(reQ) ? '' : reT + ' ') + (isZero(reQ) ? (sg < 0 ? '-' : '') : sign + ' ') + imT + 'i';
+        return { exact: ex, dec: { text: dtext, exact: false }, re: reD, im: { text: (sg < 0 ? '-' : '') + imN, exact: false }, real: false, sg: sg };
+      };
+      var m1 = mk(-1), m2 = mk(1);
+      if (!imag) { /* order: smaller root first. sign of 2A decides: x = (u + sg v sqrt r)/w with w > 0, so sg=-1 is smaller */ roots.push(m1, m2); }
+      else roots.push(m2, m1);
+      res.kind = imag ? 'complex' : 'irrational';
+      steps.push('x = ' + roots[0].exact + '  and  x = ' + roots[1].exact + '.');
+      res.roots = roots;
+      /* exact verification in Q(sqrt(d)) */
+      var dField = imag ? -r : r, Ft = function (sg) { return Fm(R(uu, ww), R(BigInt(sg) * vpos, ww), ri(dField)); };
+      var verify = [-1, 1].map(function (sg) {
+        var x = Ft(sg), t2 = fscale(A, fmul(x, x)), t1 = fscale(B, x), tot = fadd(fadd(t2, t1), Fm(C, ZERO, ri(dField)));
+        var ok = isZero(tot.a) && isZero(tot.b);
+        return { ok: ok, value: ok ? '0' : (rs(tot.a) + (isZero(tot.b) ? '' : ' + ' + rs(tot.b) + '\u221a' + dField)), root: roots[sg < 0 ? 0 : 1].exact };
+      });
+      res.verify = verify; res.verifyOk = verify.every(function (v) { return v.ok; });
+      steps.push('Check by substitution in exact arithmetic: A\u00b7x\u00b2 + B\u00b7x + C = ' + (res.verifyOk ? '0 for both roots.' : 'NOT zero (' + verify.map(function (v) { return v.value; }).join(' and ') + ').'));
+      return res;
+    }
+    res.verify = roots.map(function (rt) { return verifyRational(A, B, C, rt.q); });
+    res.verifyOk = res.verify.every(function (v) { return v.ok; });
+    res.verify.forEach(function (v, i) { v.root = roots[i].exact; });
+    steps.push('Check by substitution in exact arithmetic: A\u00b7x\u00b2 + B\u00b7x + C = ' + (res.verifyOk ? '0 for ' + (roots.length > 1 ? 'both roots.' : 'the root.') : 'NOT zero.'));
+    return res;
+  }
+  function verifyRational(A, B, C, x) {
+    var t = add(add(mul(A, mul(x, x)), mul(B, x)), C);
+    return { ok: isZero(t), value: rs(t), root: rs(x), parts: [rs(mul(A, mul(x, x))), rs(mul(B, x)), rs(C)] };
+  }
+
+  /* ---------- plain-text summary (copy / report) ---------- */
+  function summary(r) {
+    if (!r.ok) return '';
+    var L = ['Equation: ' + mn(r.equation), 'Result: ' + r.label];
+    if (r.degree === 2) { L.push('Discriminant: ' + mn(r.discriminant)); }
+    (r.roots || []).forEach(function (x, i) { L.push('x' + (r.roots.length > 1 ? (i + 1) : '') + ' = ' + mn(x.exact) + (x.exact !== x.dec.text && !(x.dec.exact) ? '  \u2248 ' + mn(x.dec.text) : (x.exact !== x.dec.text ? '  = ' + mn(x.dec.text) : ''))); });
+    if (r.degree === 2) { L.push('Vertex: (' + mn(rs(r.vertex.x)) + ', ' + mn(rs(r.vertex.y)) + ')'); L.push('Sum of roots: ' + mn(rs(r.sum)) + '; product of roots: ' + mn(rs(r.product))); }
+    if (r.verify) L.push('Verified by exact substitution: ' + (r.verifyOk ? 'yes' : 'NO'));
+    return L.join('\n');
+  }
+
+  var api = { parseNum: parseNum, solve: solve, summary: summary, equationText: equationText, rs: rs, mn: mn, gcd: gcd, isqrt: isqrt, sqrtSplit: sqrtSplit, decOfRational: decOfRational, R: R, ops: { add: add, sub: sub, mul: mul, div: div, neg: neg, sgn: sgn, isZero: isZero, eq: eq, ri: ri } };
+  if (typeof module !== 'undefined' && module.exports) module.exports = api; else root.Quad = api;
+})(typeof window !== 'undefined' ? window : this);
+
+/* Elecmetric Ratio Calculator: exact engine for Mode 01 (Ratio Simplifier).
+   A ratio is a list of two to twelve terms. Every term is read as an exact rational number (BigInt numerator and denominator): whole numbers, decimals,
+   scientific notation, fractions a/b and mixed numbers such as 2 1/2. The terms are scaled to whole numbers with the lowest common multiple of their
+   denominators, divided by their greatest common divisor, and the order of the terms is kept (2:3 and 3:2 are different ratios).
+   Terms must be zero or positive. A term of 0 is allowed (0:5 simplifies to 0:1) but at least one term must be non-zero.
+   Part-to-part (the ratio) and part-to-whole (share of the total) are always reported separately.
+   Works in Node (module.exports) and in the browser (global Ratio, after Quad). */
+(function (root) {
+  'use strict';
+  var Q = typeof require === 'function' && typeof module !== 'undefined' ? require('./quad_engine.js') : root.Quad;
+  var R = Q.R, O = Q.ops, rs = Q.rs, mn = Q.mn, gcd = Q.gcd;
+  var MAXTERMS = 12;
+
+  function lcm(a, b) { return a / gcd(a, b) * b; }
+  function ordinal(i) { return 'term ' + (i + 1); }
+  function empty(hint) { return { ok: false, empty: true, error: hint, hint: hint }; }
+  function fail(msg, idx) { return { ok: false, error: msg, termIndex: idx === undefined ? -1 : idx }; }
+
+  /* rational -> decimal text. places: 'auto' (exact when it terminates within 40 places, else 6 places) or an integer 0..12 (rounded half away from zero). */
+  function fixed(q, p) {
+    var n = q.n, d = q.d, neg = n < 0n; if (neg) n = -n;
+    var S = 10n ** BigInt(p);
+    var sc = (n * S * 2n + d) / (d * 2n), ip = sc / S, fp = String(sc % S);
+    fp = p ? '0'.repeat(Math.max(0, p - fp.length)) + fp : '';
+    var zero = sc === 0n;
+    return { text: (neg && !zero ? '-' : '') + String(ip) + (p ? '.' + fp : ''), exact: (n * S) % d === 0n };
+  }
+  function dec(q, places) {
+    if (places === 'auto' || places === undefined) return Q.decOfRational(q, 6);
+    return fixed(q, places);
+  }
+  function pct(q, places) { return dec(O.mul(q, O.ri(100)), places); }
+  function lead(r) { return r.exact ? '' : '\u2248 '; }
+
+  function parseTerms(text) {
+    var s = String(text === undefined || text === null ? '' : text).replace(/\u2236|\uff1a/g, ':').trim();
+    if (s === '') return empty('Enter the ratio with a colon between the terms, for example 12:18 or 2:3:4.');
+    var parts = s.split(':');
+    if (parts.length < 2) return empty('Add a colon and at least one more term, for example 12:18.');
+    if (parts.length > MAXTERMS) return fail('A ratio can have at most ' + MAXTERMS + ' terms. You entered ' + parts.length + '.');
+    var terms = [];
+    for (var i = 0; i < parts.length; i++) {
+      var t = parts[i].trim();
+      if (t === '') return fail('The ' + ordinal(i) + ' is empty. Put a number on each side of every colon.', i);
+      var p = Q.parseNum(t);
+      if (p.error) return fail('The ' + ordinal(i) + ' \u201c' + t + '\u201d: ' + p.error.replace(/^Enter a value\.$/, 'Enter a number.'), i);
+      if (O.sgn(p.v) < 0) return fail('Ratio terms cannot be negative: the ' + ordinal(i) + ' is ' + mn(t) + '. A ratio compares sizes of like quantities, so enter each size as a positive number (or 0).', i);
+      terms.push({ text: t, q: p.v });
+    }
+    return { ok: true, terms: terms };
+  }
+
+  /* The trace of the Euclidean algorithm for two whole numbers, as text lines (kept short). */
+  function euclid(a, b) {
+    var lines = [], x = a, y = b, k = 0;
+    if (x < y) { var t = x; x = y; y = t; }
+    if (y === 0n) return [];
+    while (y !== 0n && k < 12) { var qq = x / y, rr = x % y; lines.push(x + ' = ' + qq + ' \u00d7 ' + y + ' + ' + rr); x = y; y = rr; k++; }
+    return y === 0n ? lines : [];
+  }
+  function list(arr, sep) { return arr.join(sep === undefined ? ' : ' : sep); }
+
+  function simplify(input) {
+    input = input || {};
+    var places = input.places === undefined || input.places === '' || input.places === 'auto' ? 'auto' : Number(input.places);
+    if (places !== 'auto' && (!isFinite(places) || places !== Math.floor(places) || places < 0 || places > 12)) return fail('Decimal places must be a whole number from 0 to 12, or Automatic.');
+    var pt = parseTerms(input.ratio);
+    if (!pt.ok) return pt;
+    var T = pt.terms, n = T.length, i, j;
+    var allZero = T.every(function (t) { return O.isZero(t.q); });
+    if (allZero) return fail('At least one term must be greater than 0. A ratio of all zeros has no simplest form.');
+
+    var allInt = T.every(function (t) { return t.q.d === 1n; });
+    var L = 1n; T.forEach(function (t) { L = lcm(L, t.q.d); });
+    var W = T.map(function (t) { return t.q.n * (L / t.q.d); });
+    var g = 0n; W.forEach(function (w) { g = gcd(g, w); });
+    var S = W.map(function (w) { return w / g; });
+    var sum = 0n; S.forEach(function (s) { sum += s; });
+    var k = R(g, L); /* every entered term = k x simplified term */
+    var already = L === 1n && g === 1n;
+    var ratioText = list(S.map(String)), enteredText = list(T.map(function (t) { return t.text; }));
+    var equation = (already ? ratioText + ' (already in simplest form)' : enteredText + ' = ' + ratioText);
+    var eqShort = already ? ratioText : enteredText + ' = ' + ratioText;
+
+    /* ---------- working ---------- */
+    var steps = [];
+    steps.push('Read the ' + (n === 2 ? 'two' : n === 3 ? 'three' : String(n)) + ' terms in order: ' + enteredText + '.');
+    if (!allInt) {
+      steps.push('Write each term as an exact fraction: ' + T.map(function (t) { return t.text + ' = ' + rs(t.q); }).join('; ') + '.');
+      steps.push('The lowest common multiple of the denominators is ' + L + '. Multiplying every term by ' + L + ' gives whole numbers: ' + list(W.map(String)) + '.');
+    } else steps.push('All terms are whole numbers, so no scaling is needed.');
+    var gl = [];
+    if (n === 2) gl = euclid(W[0], W[1]);
+    steps.push('The greatest common divisor is GCD(' + list(W.map(String), ', ') + ') = ' + g + '.' + (gl.length ? ' Euclidean algorithm: ' + gl.join('; ') + '.' : ''));
+    if (g === 1n) steps.push('The GCD is 1, so the whole numbers ' + list(W.map(String)) + ' have no common factor to remove.');
+    else steps.push('Divide every term by ' + g + ': ' + W.map(function (w, x) { return w + ' \u00f7 ' + g + ' = ' + S[x]; }).join('; ') + '.');
+    steps.push('The simplest form is ' + ratioText + '. Check: GCD(' + list(S.map(String), ', ') + ') = 1.');
+    var distinct = false; for (i = 1; i < n; i++) if (T[i].q.n * T[0].q.d !== T[0].q.n * T[i].q.d) distinct = true;
+    if (distinct) steps.push('The order of the terms is kept: ' + ratioText + ' is not the same ratio as ' + list(S.slice().reverse().map(String)) + '.');
+
+    /* ---------- representations ---------- */
+    var shares = S.map(function (s) { return R(s, sum); });
+    var rows = [];
+    var two = n === 2;
+    var fracAB = null, aOfB = null, bOfA = null;
+    if (two) {
+      if (S[1] !== 0n) { fracAB = R(S[0], S[1]); aOfB = fracAB; }
+      if (S[0] !== 0n) bOfA = R(S[1], S[0]);
+    }
+    rows.push(['Ratio', ratioText, 'Simplest form, terms in the order entered']);
+    if (!already) rows.push(['Scale factor', L === 1n ? '\u00f7 ' + g : g === 1n ? '\u00d7 ' + L : '\u00d7 ' + L + ', then \u00f7 ' + g, 'Every entered term is ' + rs(k) + ' times the simplified term']);
+    if (two) {
+      if (fracAB) { var dA = dec(fracAB, places), pA = pct(fracAB, places); rows.push(['Fraction A/B', rs(fracAB), 'First term over second term']); rows.push(['Decimal A/B', lead(dA) + dA.text, 'First term divided by second term']); rows.push(['A as a percentage of B', lead(pA) + pA.text + '%', 'Part to part: A compared with B, not with the total']); }
+      else rows.push(['Fraction A/B', 'Undefined', 'The second term is 0, so A divided by B is undefined']);
+      if (bOfA) { var dB = dec(bOfA, places), pB = pct(bOfA, places); rows.push(['Decimal B/A', lead(dB) + dB.text, 'Second term divided by first term']); rows.push(['B as a percentage of A', lead(pB) + pB.text + '%', 'Part to part: B compared with A']); }
+    } else if (S[0] !== 0n) {
+      var rel = S.map(function (s) { return R(s, S[0]); }), relTxt = rel.map(function (q) { var d = dec(q, places); return lead(d) + d.text; });
+      rows.push(['First term as 1', list(relTxt), 'Each term divided by the first term']);
+    }
+    var shareRows = shares.map(function (q, x) {
+      var d = dec(q, places), p = pct(q, places);
+      return { term: 'Term ' + (x + 1), simplified: String(S[x]), fraction: rs(q), decimal: lead(d) + d.text, percent: lead(p) + p.text + '%', exactDec: d.exact, exactPct: p.exact };
+    });
+    var termRows = T.map(function (t, x) { return { term: 'Term ' + (x + 1), entered: t.text, asFraction: rs(t.q), whole: String(W[x]), simplified: String(S[x]) }; });
+
+    /* ---------- exact checks ---------- */
+    var verify = [], ok = true;
+    function chk(label, v) { verify.push([label, !!v]); if (!v) ok = false; }
+    var rebuilt = true; for (i = 0; i < n; i++) if (!O.eq(O.mul(k, O.ri(S[i])), T[i].q)) rebuilt = false;
+    chk('Every entered term equals ' + rs(k) + ' times its simplified term', rebuilt);
+    var cross = true; for (i = 0; i < n; i++) for (j = i + 1; j < n; j++) if (T[i].q.n * T[j].q.d * S[j] !== T[j].q.n * T[i].q.d * S[i]) cross = false;
+    chk('Cross-multiplying every pair of terms shows the entered and simplified ratios are equivalent', cross);
+    var g2 = 0n; S.forEach(function (s) { g2 = gcd(g2, s); });
+    chk('The simplified terms have no common factor (GCD = 1)', g2 === 1n);
+    var zpos = true; for (i = 0; i < n; i++) if ((S[i] === 0n) !== O.isZero(T[i].q)) zpos = false;
+    chk('Zero terms stay in the same positions and no term changed order', zpos);
+    var tot = shares.reduce(function (a, q) { return O.add(a, q); }, O.ri(0));
+    chk('The shares of the total add up to exactly 1 (100%)', O.eq(tot, O.ri(1)));
+
+    var sumText = 'Total of the simplified terms: ' + list(S.map(String), ' + ') + ' = ' + sum;
+    var notes = [];
+    notes.push(two ? 'The ratio ' + ratioText + ' compares the two parts with each other (part to part). The percentage of B that A makes up is not the same as A\u2019s share of the total, which is in the table of shares below.' : 'The ratio compares the parts with each other (part to part). A term\u2019s share of the total is a different quantity and is given in its own table.');
+    var warnings = [];
+    if (T.some(function (t) { return O.isZero(t.q); })) warnings.push('A term of 0 stays 0 in the simplified ratio. Check that a zero term is what you meant.');
+    if (!allInt) warnings.push('Decimals and fractions are read exactly, so 1.5 is held as 3/2 with no rounding.');
+
+    var sentence = eqShort;
+    var L2 = ['Ratio: ' + enteredText, 'Simplified: ' + ratioText, already ? 'Already in simplest form.' : 'Scale factor: each entered term = ' + rs(k) + ' x the simplified term'];
+    L2.push('Greatest common divisor of the whole-number form: ' + g);
+    L2.push('Shares of the total: ' + shareRows.map(function (r) { return r.fraction + ' (' + r.percent + ')'; }).join(', '));
+    if (two && fracAB) { var da = dec(fracAB, places); L2.push('A/B = ' + rs(fracAB) + ' = ' + lead(da) + da.text); }
+    var summary = L2.join('\n');
+
+    return {
+      ok: true, n: n, places: places, terms: termRows, shareRows: shareRows, ratioText: ratioText, enteredText: enteredText, equation: equation, sentence: sentence,
+      simplified: S.map(String), whole: W.map(String), allInteger: allInt, lcm: String(L), gcd: String(g), already: already, scale: rs(k), total: String(sum), sumText: sumText,
+      fraction: fracAB ? rs(fracAB) : null, rows: rows, steps: steps, verify: verify, verifyOk: ok, notes: notes, warnings: warnings, summary: summary
+    };
+  }
+
+  /* eqText: the colon text for history and chips */
+  function eqText(r) { return String(r || '').trim(); }
+
+  var api = { simplify: simplify, parseTerms: parseTerms, eqText: eqText, MAXTERMS: MAXTERMS, dec: dec, fixed: fixed };
+  if (typeof module !== 'undefined' && module.exports) module.exports = api; else root.Ratio = api;
+})(typeof self !== 'undefined' ? self : this);
+
+/* Elecmetric Ratio Calculator: exact engine for Mode 02 (Proportion Solver).
+   Solves A : B = C : D for the one missing term, or checks whether four given terms form a proportion.
+   Every term is an exact rational number (BigInt numerator and denominator) read by the Quadratic parser: whole numbers, decimals, scientific notation,
+   fractions a/b and mixed numbers such as 2 1/2. Terms must be zero or positive, as in Mode 01.
+   The proportion A : B = C : D holds when the cross products are equal, A x D = B x C, and neither ratio is 0 : 0.
+   For the unknown term X, with M its partner in the same ratio, N the other term of the other ratio and P the term opposite X in the cross product,
+   X x P = M x N. P not 0 gives X = M x N / P (and X = 0 with M = 0 is refused, because M : X would be 0 : 0). P = 0 gives no solution, or, when M = 0 as well,
+   every non-zero X.
+   Works in Node (module.exports) and in the browser (global Proportion, after Quad and Ratio). */
+(function (root) {
+  'use strict';
+  var Q = typeof require === 'function' && typeof module !== 'undefined' ? require('./quad_engine.js') : root.Quad;
+  var Rt = typeof require === 'function' && typeof module !== 'undefined' ? require('./ratio_engine.js') : root.Ratio;
+  var R = Q.R, O = Q.ops, rs = Q.rs;
+  var L = ['A', 'B', 'C', 'D'], OPP = [3, 2, 1, 0];
+
+  function fail(msg, idx) { return { ok: false, error: msg, termIndex: idx === undefined ? -1 : idx }; }
+  function hint(msg) { return { ok: false, empty: true, error: msg, hint: msg }; }
+  function isBlank(s) { s = String(s === undefined || s === null ? '' : s).trim(); return s === '' || /^(x|\?|_)$/i.test(s); }
+  function dec(q, places) { return Rt.dec(q, places); }
+  function lead(d) { return d.exact ? '' : '\u2248 '; }
+  /* simplest whole-number form of the pair, computed here (not through the text parser, so a result longer than 60 digits is still reduced) */
+  function simplestOf(qa, qb) {
+    var g0 = Q.gcd, L2 = qa.d / g0(qa.d, qb.d) * qb.d, wa = qa.n * (L2 / qa.d), wb = qb.n * (L2 / qb.d), g = g0(wa, wb);
+    return { ratioText: String(wa / g) + ' : ' + String(wb / g) };
+  }
+  function isInt(q) { return q.d === 1n; }
+  /* share of the first term in the total of the pair, in basis points (0 to 10000), for the ratio bar; null when both terms are 0 */
+  function bp(qa, qb) { var sm = O.add(qa, qb); if (O.isZero(sm)) return null; return Number(qa.n * sm.d * 10000n / (qa.d * sm.n)); }
+  function bars(q) { var x = bp(q[0], q[1]), y = bp(q[2], q[3]); return x === null || y === null ? null : [[x, 10000 - x], [y, 10000 - y]]; }
+
+  function readTerms(input) {
+    var T = [], u = [], i, bad = null;
+    for (i = 0; i < 4; i++) {
+      var raw = input[L[i].toLowerCase()];
+      raw = String(raw === undefined || raw === null ? '' : raw).trim();
+      if (isBlank(raw)) { T.push({ text: 'x', q: null }); u.push(i); continue; }
+      var p = Q.parseNum(raw);
+      if (p.error) { bad = bad || fail('Term ' + L[i] + ' \u201c' + raw + '\u201d: ' + String(p.error).replace(/^Enter a value\.$/, 'Enter a number.'), i); T.push({ text: raw, q: null }); continue; }
+      if (O.sgn(p.v) < 0) { bad = bad || fail('Proportion terms cannot be negative: term ' + L[i] + ' is ' + Q.mn(raw) + '. A ratio compares sizes of like quantities, so enter each size as a positive number (or 0).', i); T.push({ text: raw, q: null }); continue; }
+      T.push({ text: raw, q: p.v });
+    }
+    return { T: T, unknown: u, bad: bad };
+  }
+
+  function solve(input) {
+    input = input || {};
+    var places = input.places === undefined || input.places === '' || input.places === 'auto' ? 'auto' : Number(input.places);
+    if (places !== 'auto' && (!isFinite(places) || places !== Math.floor(places) || places < 0 || places > 12)) return fail('Decimal places must be a whole number from 0 to 12, or Automatic.');
+    var rd = readTerms(input);
+    if (rd.bad) return rd.bad;
+    var T = rd.T, unk = rd.unknown;
+    if (unk.length > 1) return hint('Enter three of the four terms and leave one blank (or type x) to solve for it. Enter all four to check whether they form a proportion.');
+    var allInt = T.every(function (t) { return t.q === null || isInt(t.q); });
+    var Z = function (i) { return O.isZero(T[i].q); };
+    var u = unk.length ? unk[0] : -1, i;
+
+    /* a ratio of two zeros is not a ratio: check every pair that is fully known */
+    if (u !== 0 && u !== 1 && Z(0) && Z(1)) return fail('Terms A and B are both 0. A ratio of 0 : 0 is not defined, so it cannot be one side of a proportion.', 0);
+    if (u !== 2 && u !== 3 && Z(2) && Z(3)) return fail('Terms C and D are both 0. A ratio of 0 : 0 is not defined, so it cannot be one side of a proportion.', 2);
+
+    var disp = function (k) { return k === u ? 'x' : T[k].text; };
+    var propText = function (v) { return (v === undefined ? [0, 1, 2, 3].map(disp) : [0, 1, 2, 3].map(function (k) { return k === u ? v : rs(T[k].q); })); };
+    var line = function (a) { return a[0] + ' : ' + a[1] + ' = ' + a[2] + ' : ' + a[3]; };
+    var steps = [], verify = [], ok = true, notes = [], warnings = [], rows = [];
+    function chk(label, v) { verify.push([label, !!v]); if (!v) ok = false; }
+    var termRows = T.map(function (t, k) { return { term: L[k], entered: k === u ? 'x (to find)' : t.text, asFraction: k === u ? '\u2014' : rs(t.q) }; });
+    steps.push('Write the proportion' + (u >= 0 ? ' with x for the missing term (term ' + L[u] + ')' : '') + ': ' + line(propText()) + '.');
+    if (!allInt) steps.push('Decimals, fractions and mixed numbers are read exactly: ' + T.filter(function (t) { return t.q !== null && !isInt(t.q); }).map(function (t) { return t.text + ' = ' + rs(t.q); }).join('; ') + '.');
+    steps.push('In a proportion the cross products are equal: A \u00d7 D = B \u00d7 C. Here that is ' + disp(0) + ' \u00d7 ' + disp(3) + ' = ' + disp(1) + ' \u00d7 ' + disp(2) + '.');
+    notes.push('A proportion says two ratios are equal. It is solved by cross multiplication, because A : B = C : D is the same statement as A \u00d7 D = B \u00d7 C. Mode 01 simplifies each side; this mode finds the term that makes them equal.');
+
+    /* ---------------- all four given: is it a proportion? ---------------- */
+    if (u < 0) {
+      var cl = O.mul(T[0].q, T[3].q), cr = O.mul(T[1].q, T[2].q), holds = O.eq(cl, cr);
+      steps.push('Multiply: A \u00d7 D = ' + T[0].text + ' \u00d7 ' + T[3].text + ' = ' + rs(cl) + ' and B \u00d7 C = ' + T[1].text + ' \u00d7 ' + T[2].text + ' = ' + rs(cr) + '.');
+      var s1 = simplestOf(T[0].q, T[1].q), s2 = simplestOf(T[2].q, T[3].q);
+      steps.push(holds ? 'The two cross products are equal, so ' + line(T.map(function (t) { return t.text; })) + ' is a true proportion.' : 'The two cross products are different, so ' + line(T.map(function (t) { return t.text; })) + ' is not a proportion: the two ratios are not equal.');
+      steps.push('Simplest forms: ' + T[0].text + ' : ' + T[1].text + ' simplifies to ' + s1.ratioText + (holds ? ', and ' : ', but ') + T[2].text + ' : ' + T[3].text + ' simplifies to ' + s2.ratioText + (holds ? '. They match.' : '. They are different.'));
+      rows.push(['Result', holds ? 'A true proportion' : 'Not a proportion', holds ? 'The cross products agree' : 'The cross products differ']);
+      rows.push(['Cross product A \u00d7 D', rs(cl), T[0].text + ' \u00d7 ' + T[3].text]);
+      rows.push(['Cross product B \u00d7 C', rs(cr), T[1].text + ' \u00d7 ' + T[2].text]);
+      rows.push(['Simplest form of A : B', s1.ratioText, 'Order of the terms kept']);
+      rows.push(['Simplest form of C : D', s2.ratioText, 'Order of the terms kept']);
+      var sug = null;
+      if (!holds && !Z(0)) { var dFix = O.div(O.mul(T[1].q, T[2].q), T[0].q); if (!(Z(2) && O.isZero(dFix))) sug = dFix; }
+      if (sug) { var ds = dec(sug, places); rows.push(['To make it a proportion', 'D = ' + rs(sug) + (isInt(sug) ? '' : ' (' + lead(ds) + ds.text + ')'), 'Keeping A, B and C as entered (B \u00d7 C \u00f7 A)']); }
+      chk('A \u00d7 D and B \u00d7 C are compared as exact whole-number products: ' + rs(cl) + ' and ' + rs(cr), true);
+      chk('A : B and C : D simplify to the same ratio exactly when the cross products are equal', (s1.ratioText === s2.ratioText) === holds);
+      chk('Neither ratio is 0 : 0', !(Z(0) && Z(1)) && !(Z(2) && Z(3)));
+      var kk = null; if (holds) { kk = !Z(0) ? O.div(T[2].q, T[0].q) : O.div(T[3].q, T[1].q); chk('Every term of C : D is ' + rs(kk) + ' times the matching term of A : B', O.eq(O.mul(kk, T[0].q), T[2].q) && O.eq(O.mul(kk, T[1].q), T[3].q)); }
+      if (!allInt) warnings.push('Decimals and fractions are read exactly, so no rounding decides the answer.');
+      var sentence0 = line(T.map(function (t) { return t.text; })) + (holds ? ' is a true proportion' : ' is not a proportion');
+      var sm0 = ['Proportion: ' + line(T.map(function (t) { return t.text; })), holds ? 'Result: a true proportion' : 'Result: not a proportion', 'Cross products: A x D = ' + rs(cl) + ', B x C = ' + rs(cr), 'Simplest forms: ' + s1.ratioText + ' and ' + s2.ratioText];
+      if (kk) sm0.push('Scale factor: C : D is ' + rs(kk) + ' times A : B');
+      return { ok: true, status: holds ? 'holds' : 'fails', unknown: null, label: null, valueExact: null, valueText: holds ? 'True proportion' : 'Not a proportion', valueSub: line(T.map(function (t) { return t.text; })), completed: T.map(function (t) { return t.text; }), completedText: line(T.map(function (t) { return t.text; })),
+        sentence: sentence0, terms: termRows, rows: rows, steps: steps, verify: verify, verifyOk: ok, notes: notes, warnings: warnings, summary: sm0.join('\n'), places: places, left: s1.ratioText, right: s2.ratioText, bars: bars([T[0].q, T[1].q, T[2].q, T[3].q]), scale: kk ? rs(kk) : null, crossLeft: rs(cl), crossRight: rs(cr), allInteger: allInt };
+    }
+
+    /* ---------------- one term missing ---------------- */
+    var partner = u < 2 ? 1 - u : 5 - u, oth = u < 2 ? [2, 3] : [0, 1], pI = OPP[u], nI = oth[0] === pI ? oth[1] : oth[0];
+    var Mq = T[partner].q, Nq = T[nI].q, Pq = T[pI].q;
+    var unkOnLeft = u === 0 || u === 3;
+    var knownProd = O.mul(Mq, Nq);
+    var sideA = disp(0) + ' \u00d7 ' + disp(3), sideB = disp(1) + ' \u00d7 ' + disp(2);
+    var label = L[u];
+    steps.push('Put the known terms into the cross product. The side without x is ' + (unkOnLeft ? 'B \u00d7 C' : 'A \u00d7 D') + ' = ' + (unkOnLeft ? sideB : sideA) + ' = ' + rs(knownProd) + '.');
+
+    var status, X = null, valueText, valueSub = '', completed = null;
+    if (!O.isZero(Pq)) {
+      X = O.div(knownProd, Pq);
+      steps.push('So ' + (unkOnLeft ? T[pI].text + ' \u00d7 x = ' + rs(knownProd) : rs(knownProd) + ' = ' + T[pI].text + ' \u00d7 x') + '. Divide both sides by ' + T[pI].text + ': x = ' + rs(knownProd) + ' \u00f7 ' + T[pI].text + ' = ' + rs(X) + '.');
+      if (O.isZero(Mq) && O.isZero(X)) {
+        status = 'none';
+        steps.push('But then term ' + L[partner] + ' and term ' + label + ' would both be 0, and ' + (u < 2 ? 'A : B' : 'C : D') + ' = 0 : 0 is not a ratio. No value of ' + label + ' works.');
+        valueText = 'No solution'; valueSub = 'x would be 0, which makes ' + (u < 2 ? 'A : B' : 'C : D') + ' equal to 0 : 0';
+        rows.push(['Result', 'No solution', 'The only value that balances the cross products is 0, and 0 : 0 is not a ratio']);
+      } else status = 'solved';
+    } else if (O.isZero(Mq)) {
+      status = 'any';
+      steps.push('The side with x is 0 \u00d7 x = 0, and the other side is also ' + rs(knownProd) + ', so the equation holds for every x. The ratio ' + (u < 2 ? 'A : B' : 'C : D') + ' is 0 : x, which needs x to be non-zero.');
+      valueText = 'Any non-zero value'; valueSub = 'The known terms do not fix ' + label;
+      rows.push(['Result', 'Any non-zero value', 'Both ratios are 0 : something, so the proportion does not fix the missing term']);
+    } else {
+      status = 'none';
+      steps.push('The side with x is ' + T[pI].text + ' \u00d7 x = 0 for every x, but the other side is ' + rs(knownProd) + ', which is not 0. The two sides can never be equal.');
+      valueText = 'No solution'; valueSub = 'The cross products cannot be equal';
+      rows.push(['Result', 'No solution', 'One side of the cross product is always 0 and the other is not']);
+    }
+
+    var q4s = null, s1b = null, s2b = null, kk2 = null, sentence, sm = [], crossL = null, crossR = null;
+    if (status === 'solved') {
+      var xd = dec(X, places);
+      completed = propText(rs(X));
+      var q4 = [0, 1, 2, 3].map(function (k) { return k === u ? X : T[k].q; }); q4s = q4;
+      steps.push('Check by putting ' + rs(X) + ' back in: ' + line(completed) + '. A \u00d7 D = ' + rs(O.mul(q4[0], q4[3])) + ' and B \u00d7 C = ' + rs(O.mul(q4[1], q4[2])) + '.');
+      s1b = simplestOf(q4[0], q4[1]); s2b = simplestOf(q4[2], q4[3]);
+      steps.push('Simplest forms: ' + rs(q4[0]) + ' : ' + rs(q4[1]) + ' simplifies to ' + s1b.ratioText + ' and ' + rs(q4[2]) + ' : ' + rs(q4[3]) + ' simplifies to ' + s2b.ratioText + (s1b.ratioText === s2b.ratioText ? ', the same ratio.' : ', which differ.'));
+      valueText = label + ' = ' + rs(X); valueSub = isInt(X) ? '' : lead(xd) + xd.text;
+      kk2 = !O.isZero(q4[0]) ? O.div(q4[2], q4[0]) : O.div(q4[3], q4[1]);
+      crossL = O.mul(q4[0], q4[3]); crossR = O.mul(q4[1], q4[2]);
+      rows.push(['Missing term ' + label, rs(X), 'Exact value (' + rs(knownProd) + ' \u00f7 ' + T[pI].text + ')']);
+      if (!isInt(X)) rows.push(['Decimal value', lead(xd) + xd.text, 'Missing term as a decimal']);
+      rows.push(['Completed proportion', line(completed), 'Cross products agree: ' + rs(crossL) + ' = ' + rs(crossR)]);
+      rows.push(['Simplest form', s1b.ratioText, 'Both sides reduce to this, order of the terms kept']);
+      var kd = dec(kk2, places);
+      rows.push(['Scale factor', '\u00d7 ' + rs(kk2) + (isInt(kk2) ? '' : ' (' + lead(kd) + kd.text + ')'), 'Each term of C : D is this multiple of the matching term of A : B']);
+      if (!O.isZero(q4[1])) { var rv = O.div(q4[0], q4[1]), rvd = dec(rv, places); rows.push(['Ratio A / B', rs(rv) + (isInt(rv) ? '' : ' (' + lead(rvd) + rvd.text + ')'), 'Part to part, the value both ratios share']); }
+      chk('Cross products are equal: A \u00d7 D = ' + rs(crossL) + ' and B \u00d7 C = ' + rs(crossR), O.eq(crossL, crossR));
+      chk('A : B and C : D reduce to the same simplest ratio (' + s1b.ratioText + ')', s1b.ratioText === s2b.ratioText);
+      chk('Every term of C : D is ' + rs(kk2) + ' times the matching term of A : B', O.eq(O.mul(kk2, q4[0]), q4[2]) && O.eq(O.mul(kk2, q4[1]), q4[3]));
+      chk('Neither ratio is 0 : 0, and the missing term is not negative', !(O.isZero(q4[0]) && O.isZero(q4[1])) && !(O.isZero(q4[2]) && O.isZero(q4[3])) && O.sgn(X) >= 0);
+      chk('The answer is unique: the term opposite x (' + T[pI].text + ') is not 0', !O.isZero(Pq));
+      if (O.isZero(X)) warnings.push('The missing term is 0. That is a valid proportion only because the partner term is not 0.');
+      if (!allInt) warnings.push('Decimals and fractions are read exactly, so 1.5 is held as 3/2 with no rounding.');
+      sentence = line(completed); sm = ['Proportion: ' + line(propText()), 'Missing term ' + label + ' = ' + rs(X) + (isInt(X) ? '' : ' (' + lead(xd) + xd.text + ')'), 'Completed: ' + line(completed), 'Cross multiplication: ' + (unkOnLeft ? T[pI].text + ' x x = ' + rs(knownProd) : rs(knownProd) + ' = ' + T[pI].text + ' x x'), 'Simplest form: ' + s1b.ratioText, 'Scale factor: x ' + rs(kk2)];
+    } else {
+      chk('The cross-multiplication equation was formed from exact products', true);
+      chk(status === 'any' ? 'The equation is 0 = 0 and the ratio needs the missing term to be non-zero' : 'No value of x makes both ratios valid and equal', true);
+      sentence = status === 'any' ? 'any non-zero ' + label + ' works' : 'no solution';
+      sm = ['Proportion: ' + line(propText()), status === 'any' ? 'Result: ' + label + ' can be any non-zero value' : 'Result: no solution'];
+    }
+    return { ok: true, status: status, unknown: label, unknownIndex: u, label: label, valueExact: status === 'solved' && X ? rs(X) : null, valueText: valueText, valueSub: valueSub, completed: completed, completedText: completed ? line(completed) : null, sentence: sentence,
+      terms: termRows, rows: rows, steps: steps, verify: verify, verifyOk: ok, notes: notes, warnings: warnings, summary: sm.join('\n'), places: places,
+      left: s1b ? s1b.ratioText : null, right: s2b ? s2b.ratioText : null, bars: status === 'solved' ? bars(q4s) : null, scale: kk2 ? rs(kk2) : null, crossLeft: crossL ? rs(crossL) : null, crossRight: crossR ? rs(crossR) : null, knownProduct: rs(knownProd), allInteger: allInt };
+  }
+
+  var api = { solve: solve, isBlank: isBlank, LABELS: L };
+  if (typeof module !== 'undefined' && module.exports) module.exports = api; else root.Proportion = api;
+})(typeof self !== 'undefined' ? self : this);
+
+/* Elecmetric Ratio Calculator: page script for Mode 02 (Proportion Solver). Inlined by tools/proportion_page.js after tools/quad_engine.js, tools/ratio_engine.js and tools/proportion_engine.js. */
+(function () {
+  var $ = function (id) { return document.getElementById(id); }, Pr = window.Proportion, F = [$('ns-a'), $('ns-b'), $('ns-c'), $('ns-d')], PL = $('ns-pl'), err = $('ns-err'), out = $('ns-out'), stp = $('ns-steps'), ver = $('ns-verify'), hist = $('ns-hist'), KEY = 'elecmetric.ratio.proportion.history';
+  var H = [], last = null, timer = 0, DEF = ['3', '4', '9', ''];
+  function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
+  function mn(s) { return String(s).replace(/(^|[^A-Za-z0-9])-(?=\d)/g, '$1\u2212'); } /* a typographic minus only in front of a number, so words such as non-zero keep their hyphen */
+  function note(t) { $('ns-note').textContent = t; }
+  function copy(t) { var d = function () { note('Copied'); }; if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(t).then(d, d); else { var a = document.createElement('textarea'); a.value = t; document.body.appendChild(a); a.select(); try { document.execCommand('copy'); } catch (e) {} document.body.removeChild(a); d(); } }
+  function cp(t, l, txt) { return '<button type="button" class="btn2" data-copy="' + esc(t) + '" aria-label="' + esc(l) + '">' + (txt || 'Copy') + '</button>'; }
+  function vals() { return F.map(function (f) { return f.value; }); }
+  function setVals(v) { for (var i = 0; i < 4; i++) F[i].value = v[i] === undefined ? '' : v[i]; }
+  function loadH() { try { var s = JSON.parse(localStorage.getItem(KEY) || '[]'); if (Array.isArray(s)) H = s.filter(function (x) { return x && typeof x.r === 'string' && typeof x.e === 'string'; }).slice(0, 10); } catch (e) { H = []; } }
+  function saveH() { try { localStorage.setItem(KEY, JSON.stringify(H)); } catch (e) {} }
+  function drawH() {
+    if (!H.length) { hist.innerHTML = '<p class="note">Your last ten proportions appear here. They are kept only in this browser.</p>'; return; }
+    hist.innerHTML = '<ul class="fh">' + H.map(function (x, i) { return '<li><button type="button" class="chipb" data-h="' + i + '" aria-label="Use again: ' + esc(x.e) + '">' + esc(mn(x.e)) + '</button></li>'; }).join('') + '</ul><button type="button" class="btn2" data-act="clearh">Clear history</button>';
+  }
+  function push(x) { if (H.length && H[0].r === x.r) return; H.unshift({ r: x.r, e: x.e }); H = H.slice(0, 10); saveH(); drawH(); }
+  function mark(i) { F.forEach(function (f, k) { var b = k === i; f.classList.toggle('bad', b); f.setAttribute('aria-invalid', String(b)); }); }
+  function table(head, rows) { return '<div class="tw" tabindex="0" role="region" aria-label="Scrollable table: ' + esc(head.join(', ')) + '"><table class="ns-t"><thead><tr>' + head.map(function (h) { return '<th>' + esc(h) + '</th>'; }).join('') + '</tr></thead><tbody>' + rows.join('') + '</tbody></table></div>'; }
+  function flag(t, hot) { return '<span class="ns-flag' + (hot ? ' r' : '') + '">' + esc(t) + '</span>'; }
+  function td(s, c) { return '<td' + (c ? ' class="' + c + '"' : '') + '>' + esc(mn(s)) + '</td>'; }
+  function preview(r) {
+    var v = vals().map(function (s) { return Pr.isBlank(s) ? 'x' : s.trim(); }), blanks = vals().filter(Pr.isBlank).length;
+    $('ns-q').textContent = (blanks === 1 ? 'Solve ' : blanks === 0 ? 'Check ' : 'Proportion ') + v[0] + ' : ' + v[1] + ' = ' + v[2] + ' : ' + v[3];
+  }
+  function fail(r) {
+    mark(r.empty ? -1 : r.termIndex); err.textContent = r.empty ? (r.hint || '') : r.error; err.classList.toggle('ns-hint', !!r.empty);
+    out.innerHTML = ''; ver.innerHTML = ''; last = null; stp.innerHTML = '<p class="note">Enter three of the four terms to see the working.</p>'; preview(r);
+  }
+  function bars(r) {
+    if (!r.bars) return '';
+    function one(label, b) { return '<div class="pbl">' + esc(label) + '</div><div class="rbar" role="img" aria-label="' + esc(label + ': first term ' + (b[0] / 100).toFixed(2) + '% of the pair, second term ' + (b[1] / 100).toFixed(2) + '%') + '"><span class="rseg c0" style="flex:' + Math.max(b[0], 1) + ' 1 0"><b>1</b></span><span class="rseg c1" style="flex:' + Math.max(b[1], 1) + ' 1 0"><b>2</b></span></div>'; }
+    return '<h3 class="rh">The two ratios side by side</h3><div class="pbars">' + one('A : B', r.bars[0]) + one('C : D', r.bars[1]) + '</div><p class="note">' + (r.status === 'holds' || r.status === 'solved' ? 'The bars are identical because the two ratios are equal. Each bar shows the first and second term as shares of that pair.' : 'The bars differ because the two ratios are different. Each bar shows the first and second term as shares of that pair.') + '</p>';
+  }
+  function render() {
+    var r = Pr.solve({ a: F[0].value, b: F[1].value, c: F[2].value, d: F[3].value, places: PL.value });
+    if (!r.ok) return fail(r);
+    mark(-1); err.textContent = ''; err.classList.remove('ns-hint'); preview(r);
+    var rows = r.rows.map(function (x) { return '<tr>' + td(x[0]) + td(x[1], 'r') + td(x[2]) + '</tr>'; });
+    var good = r.status === 'solved' || r.status === 'holds', flagText = { solved: 'solved', holds: 'true proportion', fails: 'not equal', any: 'not fixed', none: 'no solution' }[r.status];
+    var big = '<div class="res"><div class="big"><span class="rbig">' + esc(mn(r.valueText)) + '</span>' + flag(flagText, !good && r.status !== 'any') + (r.valueExact ? cp(r.valueExact, 'Copy the missing term') : '') + '</div><div class="sub">' + esc(mn((r.completedText && r.status === 'solved' ? r.completedText : r.valueSub) + (r.status === 'solved' && r.valueSub ? '  (' + r.valueSub + ')' : ''))) + '</div></div>';
+    var terms = table(['Term', 'Entered', 'As a fraction'], r.terms.map(function (t) { return '<tr>' + td(t.term) + td(t.entered) + td(t.asFraction, 'r') + '</tr>'; }));
+    out.innerHTML = big + (r.warnings.length ? '<p class="note ns-warn">' + r.warnings.map(esc).join(' ') + '</p>' : '') + table(['Quantity', 'Result', 'Note'], rows) + '<h3 class="rh">Your terms</h3>' + terms + bars(r) + '<p class="note">' + esc(r.notes[0]) + '</p>' +
+      '<div class="ns-act">' + cp(r.summary, 'Copy the whole result', 'Copy result') + '<button type="button" class="btn2" data-act="save">Save as .txt</button><button type="button" class="btn2" data-act="print">Print</button></div>';
+    stp.innerHTML = '<ol class="steps">' + r.steps.map(function (s) { return '<li>' + esc(mn(s)) + '</li>'; }).join('') + '</ol>';
+    ver.innerHTML = '<p>' + (r.verifyOk ? flag('Verified', false) + ' Every check below agrees with the result.' : flag('Check failed', true) + ' A check did not agree. Please report these inputs.') + '</p><ul class="vl">' + r.verify.map(function (v) { return '<li>' + (v[1] ? '\u2713 ' : '\u2717 ') + esc(v[0]) + '</li>'; }).join('') + '</ul>';
+    last = { r: vals().join('|'), e: r.status === 'solved' ? r.completedText : r.sentence, text: r.summary };
+    clearTimeout(timer); timer = setTimeout(function () { if (last) push(last); }, 1500);
+  }
+  function saveTxt() { if (!last) return; var b = new Blob([last.text + '\n\nCalculated exactly in the browser by Elecmetric Ratio Calculator (' + location.href.split('#')[0] + ').\n'], { type: 'text/plain;charset=utf-8' }), a = document.createElement('a'); a.href = URL.createObjectURL(b); a.download = 'proportion-solved.txt'; document.body.appendChild(a); a.click(); document.body.removeChild(a); setTimeout(function () { URL.revokeObjectURL(a.href); }, 1000); }
+  $('ns').addEventListener('click', function (e) {
+    var b = e.target.closest('button'); if (!b) return;
+    if (b.dataset.copy) { copy(b.dataset.copy); return; }
+    if (b.dataset.h) { var x = H[+b.dataset.h]; if (x) { setVals(x.r.split('|')); render(); } return; }
+    if (b.dataset.ex) { setVals(b.dataset.ex.split('|')); render(); return; }
+    if (b.dataset.act === 'print') { window.print(); return; }
+    if (b.dataset.act === 'save') { saveTxt(); return; }
+    if (b.dataset.act === 'clearh') { H = []; saveH(); drawH(); return; }
+    if (b.dataset.act === 'clearall') { setVals(['', '', '', '']); render(); F[0].focus(); return; }
+    if (b.dataset.act === 'reset') { setVals(DEF); PL.value = 'auto'; render(); F[0].focus(); }
+  });
+  F.forEach(function (f) { f.addEventListener('input', render); f.addEventListener('keydown', function (ev) { if (ev.key === 'Enter') { clearTimeout(timer); render(); if (last) push(last); } }); });
+  PL.addEventListener('change', render);
+  loadH(); drawH(); setVals(DEF); render();
+})();
+</script><script id="em-ux1-js">(function(IDS){var d=Object.getOwnPropertyDescriptor(HTMLSelectElement.prototype,"value"),di=Object.getOwnPropertyDescriptor(HTMLSelectElement.prototype,"selectedIndex"),first=null;
+IDS.forEach(function(id){var sel=document.getElementById(id);if(!sel||!sel.options.length)return;var seg=document.createElement("div");seg.className="mseg";seg.setAttribute("role","radiogroup");var lab=document.querySelector('label[for="'+id+'"]');if(lab){var sp=document.createElement("span");sp.className=lab.className;sp.id=id+"-lbl";sp.textContent=lab.textContent;lab.parentNode.replaceChild(sp,lab);seg.setAttribute("aria-labelledby",sp.id);sp.parentNode.insertBefore(seg,sel)}else sel.parentNode.insertBefore(seg,sel);
+var opts=[].slice.call(sel.options);opts.forEach(function(o){var b=document.createElement("button");b.type="button";b.setAttribute("role","radio");b.dataset.v=o.value;b.textContent=o.textContent;b.onclick=function(){if(d.get.call(sel)===o.value)return;d.set.call(sel,o.value);mark();sel.dispatchEvent(new Event("input",{bubbles:true}));sel.dispatchEvent(new Event("change",{bubbles:true}))};seg.appendChild(b)});
+seg.addEventListener("keydown",function(e){var k=e.key,i=sel.selectedIndex,n=k==="ArrowRight"||k==="ArrowDown"?i+1:k==="ArrowLeft"||k==="ArrowUp"?i-1:-1;if(n<0)return;e.preventDefault();n=(n+opts.length)%opts.length;seg.children[n].click();seg.children[n].focus()});
+sel.hidden=true;sel.tabIndex=-1;sel.setAttribute("aria-hidden","true");
+function mark(){var v=d.get.call(sel);[].forEach.call(seg.children,function(b){var on=b.dataset.v===v;b.setAttribute("aria-checked",on?"true":"false");b.tabIndex=on?0:-1});if(sel===first)tabs()}
+Object.defineProperty(sel,"value",{get:function(){return d.get.call(this)},set:function(v){d.set.call(this,v);mark()},configurable:true});Object.defineProperty(sel,"selectedIndex",{get:function(){return di.get.call(this)},set:function(v){di.set.call(this,v);mark()},configurable:true});sel.addEventListener("change",mark);if(!first)first=sel;mark()});
+var wrap=document.querySelector(".ns-try"),chips=wrap?[].slice.call(wrap.querySelectorAll(".chipb[data-ex]")):[],tb=null,groups=[];
+function tabs(){if(tb)sync()}
+if(first&&chips.length>=8){var key=null,vals=[].map.call(first.options,function(o){return o.value}),parsed=chips.map(function(c){try{return JSON.parse(c.dataset.ex)}catch(e){return {}}});["dir","op","mode","tool"].some(function(k){if(parsed.some(function(j){return vals.indexOf(j[k])>=0})){key=k;return true}});
+if(key){var def=vals[0];chips.forEach(function(c,i){var g=parsed[i][key];c.dataset.g=vals.indexOf(g)>=0?g:def});groups=vals.filter(function(v){return chips.some(function(c){return c.dataset.g===v})});
+if(groups.length>1){var h=document.createElement("div");h.className="try-h";var l=wrap.querySelector(".ns-l");if(l)h.appendChild(l);tb=document.createElement("div");tb.className="try-tabs";tb.setAttribute("role","tablist");groups.forEach(function(v){var b=document.createElement("button");b.type="button";b.setAttribute("role","tab");b.dataset.g=v;var o=[].filter.call(first.options,function(o){return o.value===v})[0];b.textContent=o?o.textContent:v;b.onclick=function(){show(v)};tb.appendChild(b)});h.appendChild(tb);wrap.insertBefore(h,wrap.firstChild);sync()}}}
+function show(g){[].forEach.call(tb.children,function(b){b.setAttribute("aria-selected",b.dataset.g===g?"true":"false")});chips.forEach(function(c){c.hidden=c.dataset.g!==g})}
+function sync(){var v=d.get.call(first);show(groups.indexOf(v)>=0?v:groups[0])}
+})(["nu-dir"]);</script><script>try{if("serviceWorker"in navigator&&/^https?:/.test(location.protocol))navigator.serviceWorker.register("../../sw.js")}catch(e){}</script></body></html>

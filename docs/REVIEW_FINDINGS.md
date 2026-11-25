@@ -113,7 +113,7 @@ No formula error found in any of the 124. Six small text issues and a few conven
 | water-heater-kw | Heater Power for Heating a Liquid | No issue found |  |
 | ir-temp-correction | Insulation Resistance Temperature Correction | No issue found |  |
 | insulation-pi-dar | Polarisation Index and Dielectric Absorption Ratio | No issue found |  |
-| agl-ccr-loading | AGL Series Circuit Load and CCR Size | OK; confirm sizes | Standard CCR sizes 4, 7.5, 10, 15, 20, 25, 30 kW match the usual FAA L-828 series. Confirm against the manufacturer range for your project. |
+| agl-ccr-loading | AGL Series Circuit Load and CCR Size | Corrected in v1.80.2 | Standard CCR sizes are 1, 2, 4, 7.5, 10, 15, 20, 25, 30 kW (FAA AC 150/5345-10H, clause 1.2.4). Earlier versions omitted 1 and 2 kW. |
 | agl-max-fittings | AGL Maximum Fittings on a CCR | No issue found |  |
 | agl-isolating-transformer | AGL Isolating Transformer Current and Loading | No issue found |  |
 | agl-ccr-input-energy | AGL CCR Input Power and Annual Energy | No issue found |  |

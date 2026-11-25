@@ -1,0 +1,715 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><style data-crumbs>.crumbs{font-size:13px;color:var(--muted);margin:0 0 10px}.crumbs ol{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:2px 0}.crumbs li+li::before{content:"\203A";margin:0 7px;opacity:.7}.crumbs a{color:inherit}.crumbs [aria-current]{color:var(--ink)}</style><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'"><title>Hex Calculator Online | Hexadecimal Addition, Subtraction &amp; Conversion</title><meta name="description" content="Free online hexadecimal calculator. Add, subtract, multiply and divide hex numbers. Convert hexadecimal to binary, decimal and octal, perform bitwise operations and calculate signed hexadecimal values."><meta property="og:title" content="Hex Calculator Online | Hexadecimal Addition, Subtraction &amp; Conversion"><meta property="og:description" content="Free online hexadecimal calculator. Add, subtract, multiply and divide hex numbers. Convert hexadecimal to binary, decimal and octal, perform bitwise operations and calculate signed hexadecimal values."><meta property="og:type" content="website"><meta property="og:site_name" content="Elecmetric"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Hex Calculator Online | Hexadecimal Addition, Subtraction &amp; Conversion"><meta name="twitter:description" content="Free online hexadecimal calculator. Add, subtract, multiply and divide hex numbers. Convert hexadecimal to binary, decimal and octal, perform bitwise operations and calculate signed hexadecimal values."><meta name="theme-color" content="#043B79"><link rel="icon" href="../../icon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="../../apple-touch-icon.png"><link rel="manifest" href="../../manifest.webmanifest"><style>#hx .ns-card{padding:16px}#hx .ns-grid{display:grid;gap:12px;grid-template-columns:1fr 1fr}#hx .ns-wide{grid-column:1/-1}#hx .ns-l,#hx label.ns-l{display:block;font-weight:600;font-size:13px;margin:0 0 4px}#hx .ns-in,#hx .ns-sel{display:block;width:100%;box-sizing:border-box;font:500 18px/1.3 var(--mono);padding:10px 12px;min-height:48px;border-radius:8px;border:1px solid var(--line);background:var(--field);color:var(--ink)}#hx textarea.ns-in{font-size:15px;min-height:76px;resize:vertical}#hx .ns-sel{font:500 15px var(--body)}#hx .ns-in:focus,#hx .ns-sel:focus{outline:2px solid var(--gold);outline-offset:1px}#hx .ns-in.bad{border-color:var(--err)}#hx .ns-msg{min-height:1.4em;margin:8px 0 4px;color:var(--err)}#hx .ns-act{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:4px 0 10px}#hx .btn2,#hx .chipb{font:600 13px var(--body);color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:8px 12px;min-height:38px;cursor:pointer}#hx .btn2:hover,#hx .chipb:hover{background:var(--field)}#hx .chipb{border-radius:999px;padding:5px 12px;min-height:32px;font-weight:500;margin:3px 4px 3px 0}#hx .btn2:focus-visible,#hx .chipb:focus-visible,#hx .tab:focus-visible{outline:2px solid var(--gold);outline-offset:2px}#hx .ns-try{margin:0 0 12px}#hx .chk{display:flex;align-items:center;gap:8px;font-size:14px;min-height:44px}#hx .chk input{width:20px;height:20px}#hx .tabs{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 14px;border-bottom:1px solid var(--line);padding-bottom:10px}#hx .tab{font:600 14px var(--body);color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:8px 14px;min-height:44px;cursor:pointer;text-align:left}#hx .tab small{display:block;font:500 11px var(--body);color:var(--muted)}#hx .tab[aria-selected=true]{background:var(--gold-fill);border-color:var(--gold)}#hx .hx-fmt{display:grid;gap:12px;grid-template-columns:1fr 1fr 1fr;align-items:end;margin:0 0 14px}#hx .hx-ops{display:grid;gap:10px;margin-top:12px}#hx .hx-row{display:flex;gap:8px;align-items:flex-end}#hx .hx-row .ns-f{flex:1;min-width:0}#hx .hx-kp{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 12px}#hx .kp{min-width:44px;min-height:44px;padding:4px 8px;font:700 17px var(--mono)}#hx .hx-dll{margin:0}#hx #hx-formwrap{margin-top:4px}#hx #hx-toolwrap{margin:0 0 12px}#hx pre.al{font:600 14px/1.6 var(--mono);background:var(--field);border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin:6px 0 12px;overflow-x:auto;color:var(--num);white-space:pre}#hx .res .big{font:700 26px/1.3 var(--mono);color:var(--num);word-break:break-all;margin:2px 0}#hx .res .big small{display:block;font:600 12px var(--body);color:var(--muted)}#hx .res .big .btn2,#hx .res .sub .btn2{vertical-align:middle;margin-left:8px;padding:2px 8px;min-height:28px;font-size:12px}#hx .res .sub{color:var(--muted);margin:4px 0 8px;word-break:break-all}#hx .res .sub b{color:var(--ink);font-family:var(--mono)}#hx .sw{width:96px;height:48px;border-radius:8px;border:1px solid var(--line);margin:8px 0}#hx .ns-t td.r{font:600 14px var(--mono);color:var(--num);word-break:break-all;text-align:left}#hx .ns-t tr.cu td,#hx .ns-t tr.cu th{background:var(--gold-fill)}#hx .ns-t th[scope=row]{text-align:left;white-space:nowrap}#hx .ns-facts{margin:12px 0;display:flex;flex-wrap:wrap;gap:6px 18px;font-size:14px}#hx .ns-facts b{font-family:var(--mono)}#hx .bitrows{margin:14px 0 4px;overflow-x:auto}#hx .bitrow{display:flex;align-items:center;gap:10px;margin:0 0 8px}#hx .bl{min-width:52px;font:600 12px var(--body);color:var(--muted)}#hx .bits{display:flex;flex-wrap:nowrap;gap:3px;align-items:stretch}#hx .gap{width:8px;flex:none}#hx .bit{display:flex;flex-direction:column;align-items:center;min-width:30px;padding:3px 2px;border:1px solid var(--line);border-radius:6px;background:var(--field);font:inherit;color:inherit}#hx button.bit{cursor:pointer}#hx button.bit:hover{border-color:var(--gold)}#hx button.bit:focus-visible{outline:2px solid var(--gold);outline-offset:1px}#hx .bit.sg{border-color:var(--gold);background:var(--gold-fill)}#hx .bit.on b{color:var(--num)}#hx .bit:not(.on) b{color:var(--muted);font-weight:500}#hx .bit.chg{border-color:var(--gold);box-shadow:inset 0 -3px 0 var(--gold)}#hx .bit i{font:10px var(--mono);color:var(--muted);font-style:normal}#hx .bit b{font:700 18px var(--mono)}#hx .bitrow.sm .bit{min-width:20px}#hx .bitrow.sm .bit b{font-size:14px}#hx h3{margin:14px 0 4px}#hx .hx-hist{list-style:none;margin:0 0 8px;padding:0}.sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}code{font-family:var(--mono)}[hidden]{display:none!important}@media(max-width:700px){#hx .ns-grid,#hx .hx-fmt{grid-template-columns:1fr}#hx .res .big{font-size:20px}#hx .tab{flex:1 1 40%}}</style><style>.fb textarea{width:100%;font:15px/1.5 var(--body);padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--field);color:var(--ink);resize:vertical}.fb textarea:focus{outline:2px solid var(--gold);outline-offset:1px}:root{--bg:#F1F6FC;--surface:#fff;--ink:#0A2347;--muted:#4B5F86;--line:#D3DFEF;--navy:#043B79;--on-navy:#FFFFFF;--gold:#B34A00;--gold-fill:#FFEFDC;--field:#F4F8FE;--err:#B3261E;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;--display:"Arial Narrow","Roboto Condensed",system-ui,sans-serif;--body:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--navy-2:#0A5BBB;--cyan:#0062DE;--num:#043B79;--orange:#FF7A00;--gold-grad:linear-gradient(135deg,#FFA43D 0%,#FF7A00 52%,#E85F00 100%);--hero:radial-gradient(1000px 360px at 90% -35%,rgba(0,98,222,.55),transparent 62%),radial-gradient(640px 240px at 0% 110%,rgba(255,122,0,.20),transparent 60%),linear-gradient(135deg,#032A58,#043B79 58%,#0A55A8);--r:14px;--sh-0:0 1px 2px rgba(4,35,80,.06);--sh-1:0 1px 2px rgba(4,35,80,.05),0 6px 18px rgba(4,35,80,.07);--sh-2:0 2px 4px rgba(4,35,80,.05),0 22px 44px -14px rgba(4,35,80,.24);--ring:0 0 0 3px rgba(0,98,222,.26);color-scheme:light dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}@media(prefers-color-scheme:dark){:root{--bg:#04122B;--surface:#0A2046;--ink:#EAF2FF;--muted:#A0B5DA;--line:#183868;--navy:#031B3F;--on-navy:#EAF2FF;--gold:#FF9A3D;--gold-fill:#3D2410;--field:#071B3C;--err:#FF8A80;--navy-2:#0B4A98;--cyan:#4DA3FF;--orange:#FF8A1F;--num:#FFB066;--sh-0:0 1px 2px rgba(0,0,0,.4);--sh-1:0 1px 2px rgba(0,0,0,.35),0 8px 22px rgba(0,0,0,.35);--sh-2:0 2px 4px rgba(0,0,0,.4),0 24px 48px -14px rgba(0,0,0,.7);--ring:0 0 0 3px rgba(77,163,255,.34)}}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 var(--body)}a{color:inherit}header{background:var(--navy);color:var(--on-navy);border-bottom:3px solid var(--gold)}.w{max-width:860px;margin:0 auto;padding:0 max(16px,env(safe-area-inset-left,0px))}header .w{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-block:12px;flex-wrap:wrap}header a{text-decoration:none;font:600 20px var(--display);letter-spacing:.04em;text-transform:uppercase}header nav a{font:500 13px var(--body);text-transform:none;letter-spacing:0;margin-left:14px;opacity:.9}main{padding-block:24px 56px}h1{font:600 32px/1.1 var(--display);margin:0 0 8px;text-wrap:balance}h2{font:600 20px var(--display);letter-spacing:.02em;margin:28px 0 8px;text-transform:uppercase}.lede{color:var(--muted);margin:0 0 16px;max-width:62ch}.card{background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:16px 18px;margin:12px 0}.ans{border-left:4px solid var(--gold);display:flex;flex-wrap:wrap;gap:6px 24px;align-items:baseline;justify-content:space-between}.big{font:600 28px var(--display)}.jump{margin:8px 0 4px}details.more{border:1px solid var(--line);border-radius:12px;background:var(--surface);margin:14px 0;padding:0 16px;box-shadow:var(--sh-0)}details.more>summary{cursor:pointer;list-style:none}details.more>summary::-webkit-details-marker{display:none}details.more>summary h2{margin:14px 0}details.more>summary h2::after{content:"+";margin-left:auto;color:var(--gold)}details.more[open]>summary h2::after{content:"\2212"}details.more[open]{padding-bottom:12px}@media print{.jump{display:none}}.btn{display:inline-block;background:var(--navy);color:var(--on-navy);padding:9px 16px;border-radius:4px;text-decoration:none;font-weight:600;border:1px solid var(--gold)}.chip{display:inline-block;margin:3px 6px 3px 0;padding:5px 12px;border:1px solid var(--line);border-radius:999px;background:var(--surface);text-decoration:none;font-size:14px}.chip:hover{border-color:var(--gold)}main li>a:only-child{display:inline-block;padding:3px 0}code,pre,.f,td.n{font-family:var(--mono)}.f{background:var(--field);border:1px solid var(--line);padding:10px 12px;border-radius:4px;overflow-x:auto;white-space:pre-wrap}ol.steps{padding-left:22px;font-family:var(--mono);font-size:13px}ol.steps li{margin:4px 0}.tw{overflow-x:auto}table{border-collapse:collapse;width:100%;background:var(--surface)}th,td{border:1px solid var(--line);padding:6px 10px;text-align:left}td.n{text-align:right}tr.me td{background:var(--gold-fill)}th{background:var(--field);font-weight:600}.note{color:var(--muted);font-size:13px}ul{padding-left:20px}footer{border-top:1px solid var(--line);color:var(--muted);font-size:13px;padding-block:16px}h3{font:600 16px var(--body);margin:18px 0 4px}h3+p{margin:0;max-width:68ch}.tres .tact{flex:0 0 100%;display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}@media print{.tact{display:none}}.tres .phasor{flex:0 0 100%;margin-top:12px}.phasor svg{display:block;width:100%;max-width:360px;height:auto;font:11px var(--body)}.arow{grid-column:1/-1;border:1px solid var(--line);border-radius:10px;padding:10px 12px 12px;margin:0}.arow[hidden]{display:none}.arow legend{font-weight:700;font-size:13px;padding:0 6px}.arow .tgrid{margin-top:2px}.arow-bar{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:8px;align-items:center}.arow-bar .note{margin:0}.arow .rm{margin-top:10px}.mgrid{margin-top:10px}.mgrid .mbody[hidden]{display:none}.mgrid .tgrid{margin-top:8px}.mgrid .fillm{margin-top:10px}.tres .rchart{flex:0 0 100%;margin-top:12px}.rchart svg{display:block;width:100%;height:auto;font:12px var(--body)}.rchart h3{margin:0 0 6px;font-size:14px}.tres .carry{flex:0 0 100%;margin-top:10px}.carry .chip{display:inline-block;margin:4px 6px 0 0}.arow .rm[hidden],#add-row[hidden]{display:none}@media print{.arow-bar,.arow .rm{display:none}}.tgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px 16px}.tgrid label{display:block;font-weight:600;font-size:13px;margin-bottom:4px}.trow{display:flex;gap:6px}.trow input,.trow select,.tgrid>div>select{font:16px var(--body);color:var(--ink);background:var(--field);border:1px solid var(--line);border-radius:4px;padding:8px;min-height:40px}.trow input{flex:1;min-width:0}.tgrid>div>select{width:100%}.hint{color:var(--muted);font-size:12px;margin-top:3px}.err{color:var(--err)}.tres{display:flex;flex-wrap:wrap;gap:6px 28px;align-items:baseline}.tres .big small{display:block;font:500 13px var(--body);color:var(--muted)}::selection{background:color-mix(in srgb,var(--gold) 30%,transparent)}body{background-image:radial-gradient(900px 520px at 100% -8%,color-mix(in srgb,var(--cyan) 10%,transparent),transparent 62%),radial-gradient(700px 420px at -5% 0%,color-mix(in srgb,var(--gold) 8%,transparent),transparent 60%);background-attachment:fixed;-webkit-font-smoothing:antialiased}header{position:relative;overflow:hidden;background:var(--hero);border-bottom:0;box-shadow:0 10px 30px -14px rgba(5,14,34,.6)}header::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);background-size:34px 34px;-webkit-mask-image:linear-gradient(100deg,#000,transparent 70%);mask-image:linear-gradient(100deg,#000,transparent 70%);pointer-events:none}header::after{content:"";position:absolute;left:0;right:0;bottom:0;height:18px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44 14'%3E%3Cpath d='M0 12.5H8L14 2l7 10.5 5-6 4 6H44' fill='none' stroke='%23FF7A00' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat right 36px bottom 3px/44px 14px,linear-gradient(90deg,#FF7A00,#FFA43D 55%,#FF7A00) no-repeat bottom/100% 4px;pointer-events:none}header .w{position:relative;z-index:1;padding-block:8px 10px}header .w>a.brand{display:block;line-height:0;letter-spacing:0;text-transform:none;background:#fff;border-radius:10px;padding:4px 10px;box-shadow:0 2px 12px rgba(2,16,42,.4),0 0 0 1px rgba(255,255,255,.5)}header .w>a.brand img{display:block;height:34px;width:auto}@media(max-width:600px){header .w>a.brand img{height:30px}}header a:focus-visible{outline-color:#FFB066}header nav a{color:#DCE5F5;opacity:1;padding:6px 12px;border-radius:999px;margin-left:6px;transition:background .15s,color .15s}header nav a:hover{background:rgba(255,255,255,.12);color:#FFB066}main.w{padding-top:36px;padding-bottom:64px}h1{font-size:36px;letter-spacing:.005em}h1::after{content:"";display:block;width:56px;height:3px;border-radius:3px;background:var(--gold-grad);margin-top:12px}h2{display:flex;align-items:center;gap:10px}h2::before{content:"";width:4px;height:.95em;border-radius:2px;background:var(--gold-grad);flex:none}h3{color:var(--gold)}.card{border-radius:14px;box-shadow:var(--sh-1)}.ans{position:relative;overflow:hidden;border-left:1px solid var(--line);padding-left:24px;background:linear-gradient(135deg,color-mix(in srgb,var(--gold) 12%,var(--surface)),var(--surface) 65%);border-color:color-mix(in srgb,var(--gold) 40%,var(--line));box-shadow:var(--sh-2)}.ans::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--gold-grad)}.big{color:var(--num);font-weight:700}.btn{border-radius:10px;border:0;background:var(--gold-grad);color:#0A2347;font-weight:700;box-shadow:var(--sh-1);transition:transform .15s,box-shadow .15s,filter .15s}.btn:hover{transform:translateY(-1px);box-shadow:var(--sh-2);filter:brightness(1.06)}.chip{box-shadow:var(--sh-0);transition:border-color .15s,background .15s,transform .15s,box-shadow .15s}.chip:hover{transform:translateY(-1px);box-shadow:var(--sh-1);border-color:var(--orange);background:color-mix(in srgb,var(--orange) 8%,var(--surface))}.f{border-radius:12px;border-left:3px solid var(--cyan)}.tw{border:1px solid var(--line);border-radius:12px;box-shadow:var(--sh-0)}.tw table{border:0}table{border-collapse:separate;border-spacing:0}th,td{border:0;border-bottom:1px solid var(--line)}tr:last-child td{border-bottom:0}th{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);background:var(--field)}tbody tr:hover td{background:color-mix(in srgb,var(--cyan) 7%,transparent)}tr.me td{background:var(--gold-fill)}.trow input,.trow select,.tgrid>div>select{border-radius:10px;transition:border-color .15s,box-shadow .15s}.trow select{background-color:color-mix(in srgb,var(--navy) 5%,var(--field))}.trow input:focus,.trow select:focus,.tgrid>div>select:focus{outline:0;border-color:var(--cyan);box-shadow:var(--ring)}.tgrid label{color:var(--ink)}a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--cyan);outline-offset:2px}footer{padding-block:20px}footer.mf{margin-top:24px;padding:0;border-top:0;background:var(--hero);color:#DCE5F5;font-size:13px;position:relative}footer.mf::before{content:"";display:block;height:4px;background:linear-gradient(90deg,#FF7A00,#FFA43D 55%,#FF7A00)}.mf-w{max-width:1100px;margin:0 auto;padding:36px max(16px,env(safe-area-inset-left,0px)) calc(24px + env(safe-area-inset-bottom,0px))}.mf-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:28px 24px}.mf-h{display:block;margin:0 0 12px;padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,.18);font:600 14px var(--display);letter-spacing:.06em;text-transform:uppercase;color:#FFB066}.mf-col ul{list-style:none;margin:0;padding:0}.mf-col li{margin:0}.mf-col a{display:inline-block;padding:4px 0;color:#DCE5F5;text-decoration:none}.mf-h a{padding:0;color:inherit}.mf-col a:hover,.mf-legal a:hover{color:#FFB066;text-decoration:underline}.mf a:focus-visible{outline:2px solid #FFB066;outline-offset:2px;border-radius:2px}.mf-legal{margin-top:28px;padding-top:18px;border-top:1px solid rgba(255,255,255,.18);color:#A9BADB;max-width:80ch}.mf-legal a{color:#DCE5F5}@media(max-width:980px){.mf-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(max-width:600px){.mf-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.mf-col a{padding:7px 0}}@media print{footer.mf{background:none;color:inherit}footer.mf::before,.mf-grid{display:none}.mf-legal{border:0;color:inherit}}@media(prefers-reduced-motion:reduce){.btn,.chip{transition:none;transform:none!important}}@media print{header{background:none;box-shadow:none}header::before,header::after,.ans::before,h1::after,h2::before{display:none}header .w>a.brand{box-shadow:none;padding:0}body{background-image:none}.card,.ans,.tw{box-shadow:none}.ans{padding-left:18px}}.totop{position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:60;min-height:44px;padding:0 18px;border:0;border-radius:999px;background:linear-gradient(135deg,#FFA43D,#FF7A00 52%,#E85F00);color:#0A2347;font:700 14px system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;box-shadow:0 2px 4px rgba(4,35,80,.2),0 14px 30px -8px rgba(4,35,80,.45);cursor:pointer;opacity:0;transform:translateY(12px);pointer-events:none;transition:opacity .2s,transform .2s,bottom .2s}.totop.on{opacity:1;transform:none;pointer-events:auto}.totop:hover{filter:brightness(1.06)}.totop:focus-visible{outline:2px solid #fff;outline-offset:2px;box-shadow:0 0 0 4px #0062DE}@media(prefers-reduced-motion:reduce){.totop{transition:none}}@media print{.totop{display:none}}.vstat{padding:12px 16px;border-left:4px solid var(--muted,#6b7a90)}.vstat.v-verified{border-left-color:#1f9d57}.vstat.v-reference{border-left-color:#2a7fd4}.vstat.v-indicative{border-left-color:#c98a10}[hidden]{display:none!important}header{position:sticky;top:0;z-index:30}header .w{max-width:1120px;flex-wrap:nowrap;gap:16px;padding-block:8px}header .brand{flex:0 0 auto}header::after{height:3px;background:linear-gradient(90deg,#FF7A00,#FFA43D 55%,#FFC37A)}header nav{display:flex;gap:2px;overflow-x:auto;white-space:nowrap;scrollbar-width:none;min-width:0}header nav::-webkit-scrollbar{display:none}header nav a{margin-left:0;padding:8px 11px;border-radius:8px;opacity:.92}header nav a:hover,header nav a:focus-visible{background:rgba(255,255,255,.14);opacity:1;outline:none}main.calc{max-width:1120px;padding-top:18px}.calc h1{font-size:28px;margin-bottom:4px}.calc .lede{margin:0 0 10px;max-width:70ch}.calc-vb{display:inline-flex;align-items:center;gap:7px;margin:0 0 14px;padding:4px 11px;border:1px solid var(--line);border-radius:999px;background:var(--surface);font:600 12.5px var(--body);color:var(--ink);text-decoration:none}.calc-vb::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--gold)}.calc-vb:hover,.calc-vb:focus-visible{border-color:var(--gold);outline:none}.calc #try{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(290px,1fr);gap:0 20px;align-items:start}.calc #try>h2{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;margin:0}.calc #try>form{grid-column:1;margin:0}.calc #try>#try-out{grid-column:2;grid-row:1;position:sticky;top:64px;margin:0;flex-direction:column;align-items:stretch;gap:12px}.calc .tgrid{grid-template-columns:repeat(auto-fill,minmax(210px,1fr));align-items:start}.hd{margin-top:4px}.hd summary{cursor:pointer;font-size:12px;color:var(--muted);list-style:none}.hd summary::-webkit-details-marker{display:none}.hd summary::before{content:"\24D8  "}.hd[open]{font-size:12px;line-height:1.45}.hd[open] summary{margin-bottom:3px}.calc-limit{margin:14px 0 0;padding:10px 14px;border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:8px;background:var(--surface);font-size:14px}.calc-limit h2{font:700 13px var(--body);margin:0 0 2px;letter-spacing:0;text-transform:none}.calc-limit h2::before{display:none}.calc-limit p{margin:0}.calc-act{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;margin:12px 0 4px}.calc-act .btn{margin:0}.calc-act .note{margin:0;flex:1 1 340px;font-size:12px}.calc .cref{max-width:860px;margin-top:6px}.calc .jump{position:sticky;top:52px;z-index:10;display:flex;gap:6px;overflow-x:auto;white-space:nowrap;scrollbar-width:none;background:var(--bg);padding:8px 0;margin:10px 0 4px;border-bottom:1px solid var(--line)}.calc .jump::-webkit-scrollbar{display:none}.calc .jump .chip{flex:0 0 auto;margin:0}@media (max-width:980px){.calc #try{grid-template-columns:minmax(0,1fr)}.calc #try>#try-out{grid-column:1;grid-row:auto;position:static;margin-top:12px}}#mini-res{position:fixed;left:0;right:0;bottom:0;z-index:40;display:flex;flex-wrap:wrap;gap:2px 18px;padding:8px 16px calc(8px + env(safe-area-inset-bottom,0px));background:var(--surface);color:var(--ink);border-top:3px solid var(--gold);box-shadow:0 -8px 20px -10px rgba(5,20,50,.5);text-decoration:none}#mini-res span{display:block}#mini-res b{display:block;font:600 19px/1.2 var(--display)}#mini-res small{display:block;font-size:11px;color:var(--muted)}@media (min-width:981px){#mini-res{display:none!important}}@media (max-width:640px){main.calc{padding-top:12px}.calc h1{font-size:24px}.calc .jump{top:0}header{position:static}header .w{flex-wrap:wrap;gap:4px 8px;padding-block:8px 4px}header nav{flex:1 1 100%;-webkit-mask-image:linear-gradient(90deg,#000 90%,transparent);mask-image:linear-gradient(90deg,#000 90%,transparent)}}</style></head><body><header><div class="w"><a class="brand" href="../../"><img src="../../logo.png" alt="Elecmetric" width="160" height="40"></a><nav><a href="../">Calculators</a><a href="../all-tools/">All Tools</a><a href="../../converters/index.html">Conversion Centre</a><a href="../../pages/index.html">Conversions</a><a href="../../technical-library/">Technical Library</a><a href="../../index.html#verification">How it is verified</a></nav></div></header><main class="w"><nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="../../">Home</a></li><li><a href="../../categories/engineering-technology/">Engineering &amp; Technology</a></li><li><a href="../../categories/engineering-technology/#electronics-engineering">Electronics Engineering</a></li><li><span aria-current="page">Hex Calculator: Add, Subtract, Multiply, Divide and Convert</span></li></ol></nav><h1>Hex Calculator: Add, Subtract, Multiply, Divide and Convert</h1><p class="lede">Add, subtract, multiply and divide hexadecimal numbers of any length, with carries, borrows, partial products and the quotient and remainder written out. Convert between hex, binary, decimal and octal, read signed values in two’s complement, apply bitwise operations, and decode registers, addresses, bytes and checksums. Calculate. Convert. Understand.</p><nav class="jump" aria-label="On this page"><a class="chip" href="#examples">Worked examples</a><a class="chip" href="#digits">Hex digits at a glance</a><a class="chip" href="#faq">FAQ</a><a class="chip" href="#related">Related</a></nav><div id="hx"><section class="card ns-card" aria-label="Hex calculator"><div class="tabs" role="tablist" aria-label="Hex calculator modes" id="hx-tabs"><button type="button" role="tab" class="tab" id="hx-tab-arith" data-mode="arith" aria-selected="true" aria-controls="hx-panel" tabindex="0"><small>Mode 01</small>Arithmetic</button><button type="button" role="tab" class="tab" id="hx-tab-convert" data-mode="convert" aria-selected="false" aria-controls="hx-panel" tabindex="-1"><small>Mode 02</small>Converter</button><button type="button" role="tab" class="tab" id="hx-tab-signed" data-mode="signed" aria-selected="false" aria-controls="hx-panel" tabindex="-1"><small>Mode 03</small>Signed Hex</button><button type="button" role="tab" class="tab" id="hx-tab-bitwise" data-mode="bitwise" aria-selected="false" aria-controls="hx-panel" tabindex="-1"><small>Mode 04</small>Bitwise</button><button type="button" role="tab" class="tab" id="hx-tab-tools" data-mode="tools" aria-selected="false" aria-controls="hx-panel" tabindex="-1"><small>Mode 05</small>Digital Electronics</button></div><div class="hx-fmt" role="group" aria-label="Hex display format"><div class="ns-f"><label for="hx-case" class="ns-l">Hex letters</label><select id="hx-case" class="ns-sel"><option value="upper">Uppercase (A–F)</option><option value="lower">Lowercase (a–f)</option></select></div><div class="ns-f"><label for="hx-group" class="ns-l">Group digits</label><select id="hx-group" class="ns-sel"><option value="0">No grouping</option><option value="2">Bytes (2)</option><option value="4">Every 4</option></select></div><div class="ns-f ns-chk"><label class="chk"><input type="checkbox" id="hx-prefix"> Show 0x prefix</label></div></div><div id="hx-panel" role="tabpanel" aria-label="Calculator inputs"><div id="hx-arith"><div class="ns-grid hxg"><div class="ns-f"><label for="hx-op" class="ns-l">Operation</label><select id="hx-op" class="ns-sel"><option value="add" selected>Addition (+)</option><option value="sub">Subtraction (−)</option><option value="mul">Multiplication (×)</option><option value="div">Division (÷)</option></select></div><div class="ns-f"><label for="hx-pad" class="ns-l">Show result as</label><select id="hx-pad" class="ns-sel"><option value="min">Shortest (no leading zeros)</option><option value="match">Match the longest number entered</option><option value="2">At least 2 digits (8-bit)</option><option value="4">At least 4 digits (16-bit)</option><option value="8">At least 8 digits (32-bit)</option><option value="16">At least 16 digits (64-bit)</option></select></div></div><div id="hx-ops" class="hx-ops"></div><div class="ns-act"><button type="button" class="btn2" id="hx-add" data-act="add">Add a number</button><button type="button" class="btn2" data-act="swap">Swap first two</button></div><div class="hx-kp" role="group" aria-label="Hex keypad: inserts into the field you last used"><button type="button" class="btn2 kp" data-k="0" aria-label="Insert 0">0</button><button type="button" class="btn2 kp" data-k="1" aria-label="Insert 1">1</button><button type="button" class="btn2 kp" data-k="2" aria-label="Insert 2">2</button><button type="button" class="btn2 kp" data-k="3" aria-label="Insert 3">3</button><button type="button" class="btn2 kp" data-k="4" aria-label="Insert 4">4</button><button type="button" class="btn2 kp" data-k="5" aria-label="Insert 5">5</button><button type="button" class="btn2 kp" data-k="6" aria-label="Insert 6">6</button><button type="button" class="btn2 kp" data-k="7" aria-label="Insert 7">7</button><button type="button" class="btn2 kp" data-k="8" aria-label="Insert 8">8</button><button type="button" class="btn2 kp" data-k="9" aria-label="Insert 9">9</button><button type="button" class="btn2 kp" data-k="A" aria-label="Insert A">A</button><button type="button" class="btn2 kp" data-k="B" aria-label="Insert B">B</button><button type="button" class="btn2 kp" data-k="C" aria-label="Insert C">C</button><button type="button" class="btn2 kp" data-k="D" aria-label="Insert D">D</button><button type="button" class="btn2 kp" data-k="E" aria-label="Insert E">E</button><button type="button" class="btn2 kp" data-k="F" aria-label="Insert F">F</button><button type="button" class="btn2 kp" data-k="-" aria-label="Change sign">±</button><button type="button" class="btn2 kp" data-k="back" aria-label="Delete last digit">⌫</button><button type="button" class="btn2 kp" data-k="clear" aria-label="Clear the field">Clear</button></div></div><div id="hx-formwrap" hidden><div id="hx-toolwrap" hidden><div class="ns-f"><label for="hx-tool" class="ns-l">Tool</label><select id="hx-tool" class="ns-sel"><option value="register">Register value decoder and bit editor</option><option value="memory">Memory address calculator</option><option value="bytes">Byte grouping and endianness</option><option value="ascii">ASCII and hex</option><option value="rgb">RGB and hex colour</option><option value="checksum">Checksums and CRC</option></select></div></div><div id="hx-form" class="ns-grid hxg"></div></div></div><p class="note ns-msg" id="hx-err" role="status"></p><div class="ns-act"><button type="button" class="btn2" data-act="reset">Reset</button><button type="button" class="btn2" data-act="save">Save to history</button></div><div class="ns-try" id="hx-try"></div><div id="hx-out" aria-live="polite"></div><div id="hx-dl" class="ns-act" hidden><span class="ns-l hx-dll">Copy and download</span><button type="button" class="btn2" data-act="copyall">Copy all values</button><button type="button" class="btn2" data-dl="txt">TXT</button><button type="button" class="btn2" data-dl="csv">CSV</button><button type="button" class="btn2" data-dl="json">JSON</button></div><p class="sr-only" id="hx-note" role="status" aria-live="polite"></p><noscript><p class="note">The calculator needs JavaScript. Nothing is sent anywhere.</p></noscript></section><section class="card"><h2>Working</h2><div id="hx-steps"></div></section><section class="card"><h2>History</h2><ul class="hx-hist" id="hx-hist"></ul><button type="button" class="btn2" id="hx-hclear" data-act="hclear" hidden>Clear history</button><p class="note">Kept only in this browser. Up to 10 calculations.</p></section></div><section id="examples"><h2>Worked examples</h2><h3>Arithmetic</h3><div class="tw" tabindex="0" role="region" aria-label="Scrollable table: Calculation, Hexadecimal result, Decimal"><table><thead><tr><th>Calculation</th><th>Hexadecimal result</th><th>Decimal</th></tr></thead><tbody><tr><td class="n">A + F</td><td class="n">19</td><td class="n">25</td></tr><tr><td class="n">1A − B</td><td class="n">F</td><td class="n">15</td></tr><tr><td class="n">A × 5</td><td class="n">32</td><td class="n">50</td></tr><tr><td class="n">64 ÷ 8</td><td class="n">C remainder 4</td><td class="n">12 remainder 4</td></tr><tr><td class="n">1A3 + 2F</td><td class="n">1D2</td><td class="n">466</td></tr><tr><td class="n">1A3 − 2F</td><td class="n">174</td><td class="n">372</td></tr><tr><td class="n">A + B + C</td><td class="n">21</td><td class="n">33</td></tr><tr><td class="n">2F − 1A3</td><td class="n">-174</td><td class="n">-372</td></tr><tr><td class="n">−FF ÷ 10</td><td class="n">-F remainder -F</td><td class="n">-15 remainder -15</td></tr></tbody></table></div><h3>Signed and unsigned readings</h3><div class="tw" tabindex="0" role="region" aria-label="Scrollable table: Pattern, Unsigned, Signed"><table><thead><tr><th>Pattern</th><th>Unsigned</th><th>Signed</th></tr></thead><tbody><tr><td class="n">FF (8-bit)</td><td class="n">255</td><td class="n">-1</td></tr><tr><td class="n">7F (8-bit)</td><td class="n">127</td><td class="n">127</td></tr><tr><td class="n">80 (8-bit)</td><td class="n">128</td><td class="n">-128</td></tr><tr><td class="n">FFFF (16-bit)</td><td class="n">65535</td><td class="n">-1</td></tr><tr><td class="n">AA (8-bit)</td><td class="n">170</td><td class="n">-86</td></tr></tbody></table></div><h3>Bitwise operations</h3><div class="tw" tabindex="0" role="region" aria-label="Scrollable table: Operation, Result (hex)"><table><thead><tr><th>Operation</th><th>Result (hex)</th></tr></thead><tbody><tr><td class="n">AA AND 0F</td><td class="n">0A</td></tr><tr><td class="n">AA OR 0F</td><td class="n">AF</td></tr><tr><td class="n">AA XOR 0F</td><td class="n">A5</td></tr><tr><td class="n">NOT AA (8-bit)</td><td class="n">55</td></tr><tr><td class="n">AA SHL 1 (8-bit)</td><td class="n">54</td></tr><tr><td class="n">AA SHR 1 (8-bit)</td><td class="n">55</td></tr><tr><td class="n">AA SAR 1 (8-bit)</td><td class="n">D5</td></tr><tr><td class="n">AA OR 01 (set bit 0)</td><td class="n">AB</td></tr></tbody></table></div><p class="note">Results calculated by this page’s engine and checked against independent Python integer arithmetic.</p></section><section id="digits"><h2>Hex digits at a glance</h2><div class="tw" tabindex="0" role="region" aria-label="Scrollable table: Hex, Decimal, Binary, Hex, Decimal, Binary"><table><thead><tr><th>Hex</th><th>Decimal</th><th>Binary</th><th>Hex</th><th>Decimal</th><th>Binary</th></tr></thead><tbody><tr><td class="n">0</td><td class="n">0</td><td class="n">0000</td><td class="n">8</td><td class="n">8</td><td class="n">1000</td></tr><tr><td class="n">1</td><td class="n">1</td><td class="n">0001</td><td class="n">9</td><td class="n">9</td><td class="n">1001</td></tr><tr><td class="n">2</td><td class="n">2</td><td class="n">0010</td><td class="n">A</td><td class="n">10</td><td class="n">1010</td></tr><tr><td class="n">3</td><td class="n">3</td><td class="n">0011</td><td class="n">B</td><td class="n">11</td><td class="n">1011</td></tr><tr><td class="n">4</td><td class="n">4</td><td class="n">0100</td><td class="n">C</td><td class="n">12</td><td class="n">1100</td></tr><tr><td class="n">5</td><td class="n">5</td><td class="n">0101</td><td class="n">D</td><td class="n">13</td><td class="n">1101</td></tr><tr><td class="n">6</td><td class="n">6</td><td class="n">0110</td><td class="n">E</td><td class="n">14</td><td class="n">1110</td></tr><tr><td class="n">7</td><td class="n">7</td><td class="n">0111</td><td class="n">F</td><td class="n">15</td><td class="n">1111</td></tr></tbody></table></div><p class="note">Every hex digit is exactly four bits, so AA = 1010 1010.</p></section><section id="faq"><h2>Questions</h2><h3>What is hexadecimal and why do engineers use it?</h3><p>Hexadecimal is base 16. It uses the digits 0 to 9 and the letters A to F, where A is 10 and F is 15. Every hex digit is exactly four binary bits (A = 1010, F = 1111), so a byte is always two hex digits. That makes hex the compact way to write register values, memory addresses, colours, MAC addresses and protocol bytes.</p><h3>How do you add hexadecimal numbers?</h3><p>Work from the right, one column at a time, as in decimal, but carry when a column reaches 16 instead of 10. A + F = 25 in decimal, which is 19 in hex: write 9 and carry 1. The calculator shows the carry row and each column, so 1A3 + 2F = 1D2 can be followed digit by digit.</p><h3>How does hexadecimal subtraction work, and what if the answer is negative?</h3><p>Subtract column by column from the right. When a column needs a bigger digit than it has, borrow 1 from the next column, which adds 16 to the current one. If B is larger than A, the calculator subtracts the smaller from the larger and puts a minus sign in front, so 2F − 1A3 = −174. That is sign-and-magnitude, not a two’s complement pattern.</p><h3>How are hex multiplication and division shown?</h3><p>Multiplication shows one partial product per digit of the multiplier, shifted left, then added. Division shows the long-division steps and reports both the quotient and the remainder, with the check Q × B + R = A. 64 ÷ 8 gives quotient C and remainder 4 (100 ÷ 8 = 12 remainder 4). Division truncates toward zero and the remainder takes the sign of the dividend.</p><h3>How large can the numbers be, and what is the difference between automatic width and a fixed width?</h3><p>Up to 1024 hex digits each, with up to 20 numbers for addition, subtraction and multiplication. The arithmetic is exact (arbitrary precision), so a long number never overflows or loses digits. Nothing is silently cut to 8, 16 or 32 bits. <strong class="sub">What is the difference between automatic width and a fixed width?</strong> Arithmetic mode never wraps: the result is as long as it needs to be. A fixed width models hardware. In Signed Hex and Bitwise you choose 8, 16, 32 or 64 bits, an operand that does not fit is refused, and two’s complement is applied only there. FF is 255 unsigned, but −1 in 8-bit two’s complement.</p><h3>How do I read a negative number in hexadecimal?</h3><p>Choose the width, then read the pattern as signed. If the top bit is 1 the value is negative: invert the bits, add 1, and read the result as the magnitude. 0xFF in 8 bits is −1, 0x80 is −128 and 0xFFFF in 16 bits is −1. The Signed Hex mode shows both readings, the minimum and maximum, and overflow and underflow warnings.</p><h3>Can I convert between hex, binary, decimal and octal?</h3><p>Yes. The converter shows all four at once, handles fractions (0.8 hex = 0.5 decimal) and negative numbers, and states when a fraction is cut because it does not end in the target base. If you type a number that could be in several bases, such as 11, it asks you to confirm the base instead of guessing.</p><h3>What do the bitwise operations do?</h3><p>AND keeps the bits set in both numbers, OR keeps bits set in either, XOR keeps bits that differ, and NOT flips every bit at the chosen width. Shifts move bits left or right; arithmetic right shift copies the sign bit, and rotates wrap the bits around. AA AND 0F = 0A is a mask that keeps the low nibble. AA OR 01 = AB sets bit 0.</p><h3>Which checksums are included?</h3><p>CRC-16/IBM (ARC), CRC-16/MODBUS, CRC-16/CCITT-FALSE and CRC-32, each with its polynomial, initial value, final XOR and reflection stated, plus a plain sum-8 and the two’s-complement sum (LRC) used by Intel HEX and Modbus ASCII. The sum is labelled as a sum: it is not a CRC. The standard check text 123456789 gives CBF43926 for CRC-32.</p><h3>Is anything sent to a server?</h3><p>No. The calculation runs in your browser, and the history list is stored only in your browser.</p></section><section id="related"><h2>Related Calculators and Tools</h2><p><a class="chip" href="../number-system-converter/">Number System Converter</a><a class="chip" href="../binary-arithmetic-calculator/">Binary Arithmetic Calculator</a><a class="chip" href="../../converters/number-base-converter.html">Number base converter</a><a class="chip" href="../ascii-converter/">ASCII Converter</a><a class="chip" href="../bcd-converter/">BCD Converter</a><a class="chip" href="../gray-code-converter/">Gray Code Converter</a><a class="chip" href="../boolean-logic/">Boolean Logic</a><a class="chip" href="../engineering-mathematics/">Engineering Mathematics</a><a class="chip" href="../../converters/index.html">Conversion Centre</a></p></section></main><section class="w fb" aria-labelledby="fb-h"><h2 id="fb-h">Tell us how to improve this page</h2><textarea id="fb-t" rows="4" maxlength="1500" placeholder="Your message ..." aria-label="Tell us how to improve this page"></textarea><p><button type="button" class="btn" id="fb-b">Email your suggestion</button> <button type="button" class="btn" id="sh-b">Share this page</button> <span class="note" id="fb-n">This opens your email app. Nothing is sent until you press send.</span></p></section><script>(function(){var b=document.getElementById("fb-b");if(!b)return;b.onclick=function(){var t=document.getElementById("fb-t").value.trim(),n=document.getElementById("fb-n");if(!t){n.textContent="Please write a message first.";return}location.assign("mailto:"+"elecmetrics@gmail.com"+"?subject="+encodeURIComponent("Elecmetric feedback: "+document.title)+"&body="+encodeURIComponent(t+"\n\nPage: "+location.href))}})();</script><script>(function(){var s=document.getElementById("sh-b");if(!s)return;s.onclick=function(){var u=location.href,t=document.title,n=document.getElementById("fb-n");if(navigator.share){navigator.share({title:t,url:u}).catch(function(){});return}if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(u).then(function(){n.textContent="Link copied."},function(){n.textContent="Copy this address: "+u})}else{n.textContent="Copy this address: "+u}}})();</script><footer class="mf"><div class="mf-w"><div class="mf-grid" role="navigation" aria-label="Site map"><div class="mf-col"><p class="mf-h"><a href="../../calculators/">Calculators</a></p><ul><li><a href="../../calculators/electrical-fundamentals/">Electrical Fundamentals</a></li><li><a href="../../calculators/power-and-energy/">Power and Energy</a></li><li><a href="../../calculators/cable-engineering/">Cable Engineering</a></li><li><a href="../../calculators/motor-engineering/">Motor Engineering</a></li><li><a href="../../calculators/transformer-engineering/">Transformer Engineering</a></li><li><a href="../../calculators/electrical-protection/">Electrical Protection</a></li><li><a href="../../calculators/power-systems/">Power Systems</a></li><li><a href="../../calculators/earthing-and-grounding/">Earthing and Grounding</a></li><li><a href="../../calculators/renewable-energy/">Renewable Energy</a></li><li><a href="../../calculators/airport-agl-engineering/">Airport and AGL Engineering</a></li><li><a href="../../calculators/electronics-and-instrumentation/">Electronics and Instrumentation</a></li><li><a href="../../calculators/lighting-and-facilities/">Lighting and Facilities</a></li><li><a href="../../calculators/engineering-mathematics/">Engineering Mathematics</a></li></ul></div><div class="mf-col"><p class="mf-h"><a href="../../calculators/">Popular calculators</a></p><ul><li><a href="../../calculators/cable-size/">Cable Size</a></li><li><a href="../../calculators/voltage-drop/">Voltage Drop</a></li><li><a href="../../calculators/breaker-size/">Breaker Size</a></li><li><a href="../../calculators/motor-current/">Motor Current</a></li><li><a href="../../calculators/transformer-sizing/">Transformer Sizing</a></li><li><a href="../../calculators/earth-resistance/">Earth Resistance</a></li><li><a href="../../calculators/pf-correction-kvar/">Power Factor Correction</a></li><li><a href="../../calculators/generator-sizing/">Generator Sizing</a></li><li><a href="../../calculators/battery-bank-sizing/">Battery Bank Sizing</a></li><li><a href="../../calculators/pv-energy/">Solar PV Energy</a></li></ul></div><div class="mf-col"><p class="mf-h"><a href="../../converters/index.html">Conversions</a></p><ul><li><a href="../../pages/index.html">Electrical conversions</a></li><li><a href="../../pages/kw-to-amps.html">kW to Amps</a></li><li><a href="../../pages/amps-to-kw.html">Amps to kW</a></li><li><a href="../../pages/kva-to-kw.html">kVA to kW</a></li><li><a href="../../pages/watts-to-amps.html">Watts to Amps</a></li><li><a href="../../converters/length-converter.html">Length</a></li><li><a href="../../converters/power-converter.html">Power</a></li><li><a href="../../converters/energy-converter.html">Energy</a></li><li><a href="../../converters/temperature-converter.html">Temperature</a></li><li><a href="../../pages/wire-gauge.html">AWG to mm²</a></li></ul></div><div class="mf-col"><p class="mf-h"><a href="../../converters/index.html">Formulas</a></p><ul><li><a href="../../converters/ohms-law-formulas.html">Ohm’s Law formulas</a></li><li><a href="../../converters/kirchhoffs-laws.html">Kirchhoff’s laws</a></li><li><a href="../../converters/cable-sizing-formulas.html">Cable sizing formulas</a></li><li><a href="../../converters/circuit-breaker-formulas.html">Circuit breaker formulas</a></li><li><a href="../../converters/ac-circuit-formulas.html">AC circuit formulas</a></li><li><a href="../../converters/battery-formulas.html">Battery formulas</a></li></ul></div><div class="mf-col"><p class="mf-h">Elecmetric</p><ul><li><a href="../../calculators/basic-calculator/">Basic Calculator</a></li><li><a href="../../calculators/scientific-calculator/">Scientific Calculator</a></li><li><a href="../../index.html#verification">How it is verified</a></li><li><a href="../../privacy.html">Privacy</a></li><li><a href="../../terms.html">Terms</a></li><li><a href="../../technical-library/">Technical Library</a></li><li><a href="mailto:elecmetrics@gmail.com">Contact us</a></li></ul></div></div><div class="mf-legal">Results are computed by the same tested engine as the calculators in Elecmetric and are for estimating. Check design values against the standard and the equipment data you work to. Elecmetric results are not a substitute for a design review by a competent engineer.<br>Developed by Elecmetric. No independent technical review of the calculators has been carried out. Results are for estimating.<br>&copy; 2026 Elecmetric &middot; <a href="../../privacy.html">Privacy</a> &middot; <a href="../../terms.html">Terms</a></div></div><script>(function(){if(location.protocol!=="file:")return;document.addEventListener("click",function(e){if(e.defaultPrevented||e.button||e.metaKey||e.ctrlKey||e.shiftKey)return;var a=e.target.closest&&e.target.closest("a[href]");if(!a||a.target)return;var m=/^([^?#]*)(.*)$/.exec(a.getAttribute("href"));if(!m[1]||/^[a-z][a-z0-9+.-]*:/i.test(m[1])||!/[/]$/.test(m[1]))return;e.preventDefault();location.href=m[1]+"index.html"+m[2]})})();</script><button type="button" class="totop" id="totop" aria-label="Back to top" tabindex="-1">↑ Top</button><script>(function(){var b=document.getElementById("totop");if(!b)return;var t=0;function u(){t=0;var on=(window.pageYOffset||document.documentElement.scrollTop)>400,bar=document.getElementById("bar"),h=bar&&bar.offsetHeight?bar.offsetHeight:0;b.classList.toggle("on",on);b.tabIndex=on?0:-1;b.style.bottom=h?"calc("+(h+16)+"px + env(safe-area-inset-bottom,0px))":"";}function q(){if(!t)t=requestAnimationFrame(u)}window.addEventListener("scroll",q,{passive:true});window.addEventListener("resize",q);b.addEventListener("click",function(){var r=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;window.scrollTo({top:0,behavior:r?"auto":"smooth"})});u()})();</script></footer><script>/* Elecmetric Hex Calculator: engine for all five modes. One file, no dependencies, no DOM.
+   Required by tests/hex_test.js and inlined into calculators/hex-calculator/index.html by tools/hex_page.js.
+   Ported from the TypeScript hex engine (constants, notation, bases, arithmetic, signed, bitwise, engineering) into this repository's single-file pattern.
+
+   Mode 01 arith()      Hexadecimal arithmetic. BigInt, arbitrary precision, 2 to 20 operands (divide takes two), sign and magnitude, carry and borrow rows,
+                        partial products, long division with quotient and remainder. Never narrowed: padding only ever widens the shown pattern.
+   Mode 02 convert()    Binary, octal, decimal and hexadecimal at once, integers and fractions, base detection that reports when it is ambiguous.
+   Mode 03 signed()     Fixed-width signed and unsigned reading of a bit pattern, or encoding of a decimal value, with overflow and underflow flags.
+                        Two's complement is applied only here, where a width is chosen (technical decision: automatic width and fixed width are separate).
+   Mode 04 bitwise()    AND, OR, XOR, NOT, NAND, NOR, XNOR, shifts (logical and arithmetic) and rotates, with per-bit rows.
+   Mode 05 tool()       Register decoder with set, clear and toggle, memory address, byte grouping and endianness, ASCII, RGB, named checksums.
+
+   Differences from the TypeScript source, all deliberate:
+   - Only the 0x prefix is a prefix in a hexadecimal field. In the source, 0B and 0D (common bytes) were read as the binary and decimal prefixes and refused.
+   - Negative results keep their sign in every base (the source dropped it from the hex, binary and octal strings).
+   - A bitwise operand wider than the chosen width is refused, not silently masked.
+   - Sum-8 is shown as 2 hex digits (the source padded it to 4). CRC-16/MODBUS and the two's-complement sum (LRC) are added.
+   - Base detection and conversion share one rule, and the page asks the user to confirm when it is ambiguous. */
+(function (root) {
+  'use strict';
+  var MAXD = 1024, MAXN = 20, PP_ROWS = 64, DIV_ROWS = 128, HEXD = '0123456789ABCDEF';
+  var OPS = [['add', '+', 'Addition'], ['sub', '-', 'Subtraction'], ['mul', '×', 'Multiplication'], ['div', '÷', 'Division']];
+  var PADS = ['min', 'match', '2', '4', '8', '16'];
+  var BN = { 2: 'binary', 8: 'octal', 10: 'decimal', 16: 'hexadecimal' }, PFX = { 2: '0b', 8: '0o', 10: '0d', 16: '0x' };
+  var DIG = { 2: '01', 8: '01234567', 10: '0123456789', 16: HEXD };
+  var HINT = { 2: 'Binary uses 0 and 1.', 8: 'Octal uses 0 to 7.', 10: 'Decimal uses 0 to 9.', 16: 'Hexadecimal uses 0 to 9 and A to F.' };
+
+  function lpad(s, n, c) { s = String(s); c = c || '0'; while (s.length < n) s = c + s; return s; }
+  function rpad(s, n) { s = String(s); while (s.length < n) s += ' '; return s; }
+  function absB(v) { return v < 0n ? -v : v; }
+  function up(s) { return String(s).toUpperCase(); }
+  function mask(w) { return (1n << BigInt(w)) - 1n; }
+  function blank(s) { var i = 0; while (i < s.length - 1 && s.charAt(i) === '0') i++; return lpad('', i, ' ') + s.slice(i); }
+  function popcount(s) { var n = 0, i; for (i = 0; i < s.length; i++) if (s.charAt(i) === '1') n++; return n; }
+  function fromDigits(s, b) { if (!s) return 0n; return b === 10 ? BigInt(s) : BigInt((b === 16 ? '0x' : b === 8 ? '0o' : '0b') + s); }
+  function toB(m, b) { return up(absB(m).toString(b)); }
+  function group(s, n) { if (!n || n >= s.length) return s; var o = [], e; for (e = s.length; e > 0; e -= n) o.unshift(s.slice(Math.max(0, e - n), e)); return o.join(' '); }
+  /* Hex text of a signed BigInt. o: { lower, prefix, group }. min: minimum digits. */
+  function H(m, o, min) {
+    o = o || {}; var s = toB(m, 16); if (min) s = lpad(s, min, '0'); s = group(s, o.group); if (o.lower) s = s.toLowerCase();
+    return (m < 0n ? '-' : '') + (o.prefix ? '0x' : '') + s;
+  }
+  function bin(m, w) { var s = absB(m).toString(2); return (m < 0n ? '-' : '') + (w ? lpad(s, w, '0') : s); }
+  function fmtOpts(o) { o = o || {}; return { lower: o.lower === true || o.hexCase === 'lower', prefix: !!o.prefix, group: Number(o.group) || 0 }; }
+  function fail(error, extra) { var r = { ok: false, error: error }; if (extra) for (var k in extra) r[k] = extra[k]; return r; }
+
+  /* ---------- parsing ---------- */
+  /* parseNum(text, base, { frac }): sign, only this base's own prefix, grouping characters, digits checked against the base.
+     Returns { ok, neg, int, frac, v (signed BigInt of the integer part), width } or { ok:false, empty?, error }. */
+  function parseNum(text, base, o) {
+    o = o || {};
+    var s = String(text == null ? '' : text).trim().replace(/[\s_,]/g, '');
+    if (!s) return { ok: false, empty: true, error: 'Enter a ' + BN[base] + ' number.' };
+    var neg = false, m = s.match(/^[+\-−]/);
+    if (m) { neg = m[0] !== '+'; s = s.slice(1); }
+    if (s.slice(0, 2).toLowerCase() === PFX[base]) s = s.slice(2);
+    if (!s) return { ok: false, error: 'Add ' + BN[base] + ' digits after the sign or prefix.' };
+    var ip = s, fp = '', d = s.indexOf('.');
+    if (d !== -1) {
+      if (!o.frac) return { ok: false, error: 'A point is not allowed here: this works on whole numbers.' };
+      if (s.indexOf('.', d + 1) !== -1) return { ok: false, error: 'Only one point is allowed.' };
+      ip = s.slice(0, d); fp = s.slice(d + 1);
+      if (!ip && !fp) return { ok: false, error: 'The number has no digits.' };
+    }
+    var all = up(ip + fp), i;
+    for (i = 0; i < all.length; i++) if (DIG[base].indexOf(all.charAt(i)) < 0) return { ok: false, error: '‘' + (ip + fp).charAt(i) + '’ is not a ' + BN[base] + ' digit. ' + HINT[base] };
+    if (all.length > MAXD) return { ok: false, error: 'The number has ' + all.length + ' digits. The limit is ' + MAXD + '.' };
+    ip = up(ip) || '0'; fp = up(fp).replace(/0+$/, '');
+    var mag = fromDigits(ip, base);
+    if (mag === 0n && !fp) neg = false;
+    return { ok: true, neg: neg, int: ip, frac: fp, v: neg ? -mag : mag, width: ip.length, base: base };
+  }
+  function parseHexU(text, what) {
+    var p = parseNum(text, 16);
+    if (!p.ok) return p;
+    if (p.neg) return { ok: false, error: (what || 'This value') + ' is a raw bit pattern, so it cannot be negative. Use the decimal-value input for negative numbers.' };
+    return p;
+  }
+
+  /* ---------- Mode 01: arithmetic ---------- */
+  function colAdd(a, b) {
+    var n = Math.max(a.length, b.length), x = lpad(a, n), y = lpad(b, n), c = 0, out = '', carry = '', cols = [], i;
+    for (i = n - 1; i >= 0; i--) {
+      carry = c + carry;
+      var va = HEXD.indexOf(x.charAt(i)), vb = HEXD.indexOf(y.charAt(i)), t = va + vb + c, d = t % 16, co = (t - d) / 16;
+      cols.push(x.charAt(i) + ' + ' + y.charAt(i) + ' + ' + c + ' = ' + t + ' → digit ' + HEXD.charAt(d) + ', carry ' + co);
+      out = HEXD.charAt(d) + out; c = co;
+    }
+    return { sum: c + out, carry: c + carry, n: n, x: x, y: y, cols: cols.reverse() };
+  }
+  function colSub(a, b) {
+    var n = a.length, x = a, y = lpad(b, n), bw = 0, out = '', row = '', cols = [], i;
+    for (i = n - 1; i >= 0; i--) {
+      row = bw + row;
+      var va = HEXD.indexOf(x.charAt(i)), vb = HEXD.indexOf(y.charAt(i)), t = va - vb - bw, nb = 0;
+      if (t < 0) { cols.push(x.charAt(i) + ' − ' + y.charAt(i) + ' − ' + bw + ': ' + va + ' < ' + (vb + bw) + ', borrow 1 → (16 + ' + va + ') − ' + (vb + bw) + ' = ' + (t + 16) + ' → digit ' + HEXD.charAt(t + 16)); t += 16; nb = 1; }
+      else cols.push(x.charAt(i) + ' − ' + y.charAt(i) + ' − ' + bw + ' = ' + t + ' → digit ' + HEXD.charAt(t));
+      out = HEXD.charAt(t) + out; bw = nb;
+    }
+    return { diff: out, borrow: row, n: n, x: x, y: y, final: bw, cols: cols.reverse() };
+  }
+  var PRE = '        ';
+  function row(label, s) { return lpad(label, PRE.length - 1, ' ') + ' ' + s; }
+  function check(got, want, what) { if (BigInt('0x' + got) !== want) throw new Error('internal check failed in ' + what); }
+
+  /* One signed pair, x + y. Same signs: add the magnitudes. Different signs: subtract the smaller magnitude from the larger and keep the larger one's sign. */
+  function pairSum(x, y, title, head) {
+    var ax = absB(x), ay = absB(y), sx = x < 0n, sy = y < 0n, a = toB(ax, 16), b = toB(ay, 16), t = [], res = x + y, W, rule;
+    if (head) t.push(head);
+    if (sx === sy) {
+      var r = colAdd(a, b); W = r.n + 1; rule = lpad('', W, '-'); check(r.sum, ax + ay, 'addition');
+      t.push(row('carry', r.carry), row('', blank(lpad(r.x, W))), row('+', blank(lpad(r.y, W))), row('', rule), row('=', blank(r.sum)));
+      if (sx) t.push('Both numbers are negative: add the magnitudes and keep the minus sign.');
+      t.push('', 'Column by column, right to left:'); r.cols.slice().reverse().forEach(function (c, k) { t.push('  16^' + k + ': ' + c); });
+    } else {
+      var big = ax >= ay ? a : b, small = ax >= ay ? b : a, s = colSub(big, small); W = s.n; rule = lpad('', W, '-'); check(s.diff, absB(ax - ay), 'subtraction');
+      t.push(row('borrow', s.borrow), row('', blank(s.x)), row('−', blank(s.y)), row('', rule), row('=', blank(s.diff)));
+      t.push('The signs differ: subtract the smaller magnitude from the larger' + (res < 0n ? ' and put a minus sign in front (the larger number is negative).' : '.'), '', 'Column by column, right to left:');
+      s.cols.slice().reverse().forEach(function (c, k) { t.push('  16^' + k + ': ' + c); });
+    }
+    return { title: title, text: t.join('\n'), val: res };
+  }
+  function pairMul(x, y, title) {
+    var ax = absB(x), ay = absB(y), a = toB(ax, 16), b = toB(ay, 16), t = [], prod = ax * ay, rows = [], i, k;
+    for (i = b.length - 1, k = 0; i >= 0; i--, k++) { var d = HEXD.indexOf(b.charAt(i)), raw = ax * BigInt(d); rows.push({ d: b.charAt(i), dv: d, shift: k, raw: toB(raw, 16), shifted: toB(raw * (16n ** BigInt(k)), 16) }); }
+    var W = Math.max(a.length, b.length + 2, toB(prod, 16).length, rows.length ? rows[rows.length - 1].shifted.length : 1) + 1;
+    t.push(row('', blank(lpad(a, W))), row('×', blank(lpad(b, W))), row('', lpad('', W, '-')));
+    rows.slice(0, PP_ROWS).forEach(function (r) { t.push(row('', blank(lpad(r.shifted, W)))); });
+    t.push(row('', lpad('', W, '-')), row('=', blank(lpad(toB(prod, 16), W))));
+    if (rows.length > PP_ROWS) t.push('Only the first ' + PP_ROWS + ' partial products are shown; the product is exact.');
+    t.push('', 'One partial product per digit of the multiplier, right to left:');
+    rows.slice(0, PP_ROWS).forEach(function (r) { t.push('  digit ' + r.d + ' (16^' + r.shift + '): ' + a + ' × ' + r.d + ' = ' + r.raw + (r.shift ? ', shifted left ' + r.shift + ' → ' + r.shifted : '')); });
+    if ((x < 0n) !== (y < 0n) && prod !== 0n) t.push('', 'The signs differ, so the product is negative.');
+    return { title: title, text: t.join('\n'), val: x * y, rows: rows.length };
+  }
+  function pairDiv(x, y, title) {
+    var ax = absB(x), ay = absB(y), a = toB(ax, 16), d = toB(ay, 16), t = [], q = x / y, r = x % y, rem = 0n, qs = '', i;
+    t.push(a + ' ÷ ' + d, '');
+    for (i = 0; i < a.length; i++) {
+      var part = rem * 16n + BigInt(HEXD.indexOf(a.charAt(i))), qd = part / ay; rem = part % ay; qs += HEXD.charAt(Number(qd));
+      if (i < DIV_ROWS) t.push('  bring down ' + a.charAt(i) + ': ' + toB(part, 16) + ' ÷ ' + d + ' = ' + HEXD.charAt(Number(qd)) + ' remainder ' + toB(rem, 16));
+    }
+    if (a.length > DIV_ROWS) t.push('  (only the first ' + DIV_ROWS + ' steps are shown)');
+    check(qs.replace(/^0+(?=.)/, ''), absB(q), 'division'); if (rem !== absB(r)) throw new Error('internal check failed in division remainder');
+    t.push('', 'Quotient ' + (q < 0n ? '−' : '') + toB(q, 16) + ', remainder ' + (r < 0n ? '−' : '') + toB(r, 16) + '.', 'Check: Q × B + R = ' + H(q) + ' × ' + H(y) + ' + ' + H(r) + ' = ' + H(q * y + r) + (q * y + r === x ? ' (matches the dividend).' : ' (mismatch).'));
+    if (x < 0n || y < 0n) t.push('Division truncates toward zero and the remainder takes the sign of the dividend, so A = Q × B + R always holds.');
+    return { title: title, text: t.join('\n'), q: q, r: r };
+  }
+  function num(m, o, w) { /* number record for a BigInt */
+    var a = absB(m), hx = toB(a, 16), bits = a.toString(2);
+    return { v: m, neg: m < 0n, zero: m === 0n, dec: m.toString(10), hex: H(m, o), hexPadded: H(m, o, w || 0), bin: bin(m), binGrouped: (m < 0n ? '-' : '') + group(lpad(bits, Math.ceil(bits.length / 4) * 4, '0'), 4), oct: (m < 0n ? '-' : '') + a.toString(8), bitLength: m === 0n ? 0 : bits.length, ones: popcount(bits), zeros: m === 0n ? 0 : bits.length - popcount(bits), digits: hx.length };
+  }
+  function placeValue(digits) {
+    if (digits.length < 2 || digits.length > 8) return '';
+    var parts = [], n = digits.length, i;
+    for (i = 0; i < n; i++) { var c = digits.charAt(i); if (c === '0') continue; var w = 16 ** (n - 1 - i); parts.push(w === 1 ? String(HEXD.indexOf(c)) : (c === '1' ? '' : HEXD.indexOf(c) + '×') + w); }
+    return parts.join(' + ');
+  }
+  function arith(inp) {
+    var op = inp.op, pad = inp.pad == null ? 'min' : String(inp.pad), raw = inp.operands || [], fo = fmtOpts(inp), def = OPS.filter(function (d) { return d[0] === op; })[0], p = [], i;
+    if (!def) return fail('Unknown operation.');
+    if (PADS.indexOf(pad) < 0) return fail('Unknown padding option.');
+    for (i = 0; i < raw.length; i++) {
+      var q = parseNum(raw[i], 16);
+      if (!q.ok) return fail(raw.length > 1 ? 'Number ' + 'ABCDEFGHIJKLMNOPQRST'.charAt(i) + ': ' + q.error : q.error, { field: i, empty: !!q.empty });
+      p.push(q);
+    }
+    if (p.length < 2) return fail('Enter at least two numbers.', { field: p.length, empty: true });
+    if (op === 'div' && p.length !== 2) return fail('Division takes exactly two numbers: dividend and divisor.');
+    if (p.length > MAXN) return fail('At most ' + MAXN + ' numbers can be used at once.');
+    if (p.some(function (q) { return q.frac; })) return fail('Arithmetic works on whole numbers. Use the converter for a fractional part.');
+    var v = p.map(function (q) { return q.v; }), steps = [], notes = [], total, rem = null, k, run;
+    var symbol = def[1] === '-' ? '−' : def[1];
+    if (op === 'div' && v[1] === 0n) return fail('Cannot divide by zero.', { field: 1 });
+    if (op === 'add' || op === 'sub') {
+      run = v[0]; total = v[0];
+      for (k = 1; k < v.length; k++) {
+        var y = op === 'add' ? v[k] : -v[k], head = op === 'sub' ? H(run) + ' − ' + H(v[k]) + ' = ' + H(run) + ' + (' + H(-v[k]) + ')' : H(run) + ' + ' + H(v[k]);
+        var st = pairSum(run, y, v.length > 2 ? 'Step ' + k + ': ' + head : def[2], v.length > 2 ? '' : (op === 'sub' ? head : ''));
+        steps.push({ title: st.title, text: st.text }); run = st.val;
+      }
+      total = run;
+    } else if (op === 'mul') {
+      run = v[0];
+      for (k = 1; k < v.length; k++) { var pm = pairMul(run, v[k], v.length > 2 ? 'Step ' + k + ': ' + H(run) + ' × ' + H(v[k]) : def[2]); steps.push({ title: pm.title, text: pm.text }); run = pm.val; }
+      total = run;
+    } else {
+      var dv = pairDiv(v[0], v[1], def[2]); steps.push({ title: dv.title, text: dv.text }); total = dv.q; rem = dv.r;
+      if (v[0] < 0n || v[1] < 0n) notes.push('Division truncates toward zero; the remainder takes the sign of the dividend.');
+    }
+    var longest = Math.max.apply(null, p.map(function (q) { return q.int.length; })), want = pad === 'min' ? 0 : pad === 'match' ? longest : Number(pad);
+    var wd = Math.max(want, 0), result = num(total, fo, wd), remainder = rem === null ? null : num(rem, fo, wd);
+    if (wd && absB(total).toString(16).length > wd) notes.push('The result needs more than ' + wd + ' hex digits, so it is shown in full. Nothing is truncated; for wrap-around at a fixed width use the Signed Hex mode.');
+    var operands = p.map(function (q, n) { var r = num(q.v, fo, q.int.length); r.typed = (q.neg ? '-' : '') + (fo.prefix ? '0x' : '') + q.int; r.leadingZeros = q.int.length - toB(q.v, 16).length; r.placeValue = placeValue(toB(q.v, 16)); r.hexPadded = (q.neg ? '-' : '') + (fo.prefix ? '0x' : '') + group(q.int, fo.group); if (fo.lower) r.hexPadded = r.hexPadded.toLowerCase(); return r; });
+    var res = { ok: true, mode: 'arith', op: op, symbol: symbol, operands: operands, result: result, remainder: remainder, steps: steps, notes: notes, pad: pad };
+    res.view = arithView(res, fo);
+    return res;
+  }
+  var LETS = 'ABCDEFGHIJKLMNOPQRST';
+  function arithView(r, fo) {
+    var rem = r.remainder, res = r.result, expr = r.operands.map(function (x) { return x.hexPadded; }).join(' ' + r.symbol + ' ');
+    var head = ['', 'Hexadecimal', 'Decimal', 'Binary', 'Octal'], rows = [];
+    r.operands.forEach(function (x, k) { rows.push([r.op === 'div' ? (k === 0 ? 'Dividend' : 'Divisor') : LETS.charAt(k), x.hexPadded + (x.placeValue && !x.zero ? ' (' + x.placeValue + ')' : ''), x.dec, x.binGrouped, x.oct]); });
+    rows.push([rem ? 'Quotient' : 'Result', res.hexPadded, res.dec, res.binGrouped, res.oct]);
+    if (rem) rows.push(['Remainder', rem.hexPadded, rem.dec, rem.binGrouped, rem.oct]);
+    var big = [{ label: rem ? 'Quotient (hex)' : 'Result (hex)', value: res.hexPadded }];
+    if (rem) big.push({ label: 'Remainder (hex)', value: rem.hexPadded });
+    var bitrows = res.bitLength && res.bitLength <= 64 ? [{ label: 'Result', bits: lpad(absB(res.v).toString(2), Math.ceil(res.bitLength / 4) * 4, '0'), neg: res.neg }] : [];
+    return {
+      title: 'Hexadecimal arithmetic', expr: expr, big: big,
+      sub: [{ label: 'Decimal', value: res.dec }, { label: 'Binary', value: res.binGrouped }, { label: 'Octal', value: res.oct }],
+      facts: [['Bit length', String(res.bitLength)], ['Hex digits', String(res.digits)], ['Ones', String(res.ones)], ['Zeros', String(res.zeros)], ['Sign', res.zero ? 'zero' : res.neg ? 'negative' : 'positive']],
+      bitrows: bitrows, tables: [{ title: 'Operands and result in four number systems', head: head, rows: rows, cur: rem ? [rows.length - 2, rows.length - 1] : [rows.length - 1] }], notes: r.notes, steps: r.steps
+    };
+  }
+
+  /* ---------- Mode 02: converter ---------- */
+  function detect(text) {
+    var s = String(text == null ? '' : text).trim().replace(/[\s_,]/g, '').replace(/^[+\-−]/, '');
+    if (!s) return { ok: false, empty: true, error: 'Enter a number.' };
+    var p = s.slice(0, 2).toLowerCase(), b;
+    for (b in PFX) if (PFX[b] === p) return { ok: true, base: Number(b), ambiguous: false, reason: 'The ' + PFX[b] + ' prefix names the base.', options: [Number(b)] };
+    var body = up(s.split('.').join(''));
+    if (/[A-F]/.test(body)) return { ok: true, base: 16, ambiguous: false, reason: 'Contains letters A to F, so it must be hexadecimal.', options: [16] };
+    var opts = [2, 8, 10, 16].filter(function (x) { return body.split('').every(function (c) { return DIG[x].indexOf(c) >= 0; }); });
+    return { ok: true, base: /^[01]*$/.test(body) ? 2 : 10, ambiguous: opts.length > 1, reason: 'Only digits ' + (/^[01]*$/.test(body) ? '0 and 1' : '0 to 9') + ': it could be ' + opts.map(function (x) { return BN[x]; }).join(', ') + '. Confirm the base.', options: opts };
+  }
+  function fracDigits(n, d, base, max) {
+    var out = '', i = 0, bb = BigInt(base);
+    for (; i < max && n !== 0n; i++) { var sc = n * bb; out += HEXD.charAt(Number(sc / d)); n = sc % d; }
+    return { digits: out, exact: n === 0n };
+  }
+  function fmtBase(intV, fr, base, o) {
+    var s = toB(intV, base); if (base === 16) { s = group(s, o.group); if (o.lower) s = s.toLowerCase(); } else if (o.group && base === 2) s = group(lpad(s, Math.ceil(s.length / 4) * 4, '0'), 4);
+    return s + (fr ? '.' + (base === 16 && o.lower ? fr.toLowerCase() : fr) : '');
+  }
+  function convert(inp) {
+    var fo = fmtOpts(inp), from = inp.from === undefined || inp.from === 'auto' ? 'auto' : Number(inp.from), det = null, maxF = Math.max(1, Math.min(64, Number(inp.maxFraction) || 16));
+    if (from === 'auto') { det = detect(inp.input); if (!det.ok) return fail(det.error, { empty: !!det.empty }); from = det.base; }
+    else if (!BN[from]) return fail('Unknown source base.');
+    var p = parseNum(inp.input, from, { frac: true });
+    if (!p.ok) return fail(p.error, { empty: !!p.empty });
+    var mag = absB(p.v), fn = fromDigits(p.frac, from), fd = p.frac ? BigInt(from) ** BigInt(p.frac.length) : 1n, sign = p.neg ? '-' : '', exact = true, rows = [], out = {}, notes = [];
+    [16, 10, 2, 8].forEach(function (b) {
+      var fr = fn === 0n ? { digits: '', exact: true } : fracDigits(fn, fd, b, maxF);
+      if (!fr.exact) exact = false;
+      var t = sign + (fo.prefix ? PFX[b] : '') + fmtBase(mag, fr.digits, b, fo);
+      out[b] = { text: t, exact: fr.exact, fraction: fr.digits };
+      rows.push([BN[b].charAt(0).toUpperCase() + BN[b].slice(1), t, fr.exact ? (fn === 0n ? '' : 'exact') : 'cut at ' + maxF + ' digits']);
+    });
+    if (!exact) notes.push('A fraction that does not end in the target base is cut at ' + maxF + ' fractional digits (not rounded). It is exact in the source base only.');
+    if (det) notes.unshift('Base detected: ' + BN[from] + '. ' + det.reason);
+    if (p.neg) notes.push('Negative numbers are shown as sign and magnitude. For a fixed-width two’s complement pattern use the Signed Hex mode.');
+    var steps = [], hx = toB(mag, 16), k;
+    if (from !== 10 && p.int.length <= 32) {
+      var terms = [], n = p.int.length;
+      for (k = 0; k < n; k++) terms.push(HEXD.indexOf(p.int.charAt(k)) + '×' + from + (n - 1 - k === 0 ? '⁰' : '^' + (n - 1 - k)));
+      steps.push({ title: 'Place values (' + BN[from] + ' to decimal)', text: p.int + ' = ' + terms.join(' + ') + ' = ' + mag.toString(10) });
+    }
+    if (from !== 16 && mag > 0n) {
+      var lines = [], q = mag;
+      for (k = 0; q > 0n && k < 40; k++) { lines.push(q.toString(10) + ' ÷ 16 = ' + (q / 16n).toString(10) + ' remainder ' + (q % 16n) + ' (' + HEXD.charAt(Number(q % 16n)) + ')'); q = q / 16n; }
+      if (q > 0n) lines.push('… (first 40 divisions shown)'); else lines.push('Read the remainders from the bottom up: ' + hx);
+      steps.push({ title: 'Divide by 16 (whole part to hexadecimal)', text: lines.join('\n') });
+    }
+    if (hx.length <= 32 || out[16].fraction) {
+      var hf = out[16].fraction.toUpperCase(), ml = [], seq = hx.split('').concat(hf ? ['.'].concat(hf.split('')) : []);
+      seq.slice(0, 40).forEach(function (c) { ml.push(c === '.' ? '. (point)' : c + '₁₆ = ' + lpad(HEXD.indexOf(c).toString(2), 4, '0') + '₂'); });
+      steps.push({ title: 'Each hex digit is exactly four bits', text: ml.join('\n') + '\n\nSo ' + hx + '₁₆ = ' + group(lpad(mag.toString(2), Math.ceil((mag.toString(2).length || 1) / 4) * 4, '0'), 4) + '₂' + (p.neg ? ' (magnitude)' : '') });
+    }
+    if (fn > 0n && from !== 16) {
+      var fl = [], nn = fn, mm;
+      for (k = 0; k < Math.min(16, maxF) && nn !== 0n; k++) { mm = nn * 16n; fl.push(nn + '/' + fd + ' × 16 = ' + mm + '/' + fd + ' → digit ' + HEXD.charAt(Number(mm / fd)) + ', fraction ' + (mm % fd) + '/' + fd); nn = mm % fd; }
+      steps.push({ title: 'Multiply by 16 (fraction to hexadecimal)', text: fl.join('\n') });
+    }
+    var res = { ok: true, mode: 'convert', from: from, detected: det, parsed: p, out: out, exact: exact, notes: notes, steps: steps };
+    res.view = {
+      title: 'Number system converter', expr: (fo.prefix ? PFX[from] : '') + (sign + p.int + (p.frac ? '.' + p.frac : '')) + ' (' + BN[from] + ')',
+      big: [{ label: 'Hexadecimal', value: out[16].text }], sub: [{ label: 'Decimal', value: out[10].text }, { label: 'Binary', value: out[2].text }, { label: 'Octal', value: out[8].text }],
+      facts: [['Source base', String(from)], ['Bit length (whole part)', String(mag === 0n ? 0 : mag.toString(2).length)], ['Hex digits (whole part)', String(hx.length)]],
+      bitrows: [], tables: [{ title: 'All four number systems', head: ['Base', 'Value', 'Fraction'], rows: rows, cur: [0] }], notes: notes, steps: steps, ambiguous: det && det.ambiguous ? det : null
+    };
+    return res;
+  }
+
+  /* ---------- Mode 03: signed hexadecimal ---------- */
+  function intWidth(w) { w = Number(w); return Number.isInteger(w) && w >= 2 && w <= 128 ? w : 0; }
+  function signedView(w, bits, fo, extra) {
+    var m = mask(w), neg = ((bits >> BigInt(w - 1)) & 1n) === 1n, sv = neg ? bits - (1n << BigInt(w)) : bits, hexW = Math.ceil(w / 4), bstr = lpad(bits.toString(2), w, '0');
+    var ones = (~bits) & m, twos = ((~bits) + 1n) & m, smin = -(1n << BigInt(w - 1)), smax = (1n << BigInt(w - 1)) - 1n, steps = [];
+    var info = { width: w, bits: bits, bitPattern: bstr, hex: H(bits, fo, hexW), oct: lpad(bits.toString(8), Math.ceil(w / 3), '0'), unsigned: bits.toString(10), signed: sv.toString(10), isNegative: neg, signBit: neg ? 1 : 0, onesComplement: H(ones, fo, hexW), twosComplement: H(twos, fo, hexW), minSigned: smin.toString(10), maxSigned: smax.toString(10), minUnsigned: '0', maxUnsigned: m.toString(10) };
+    if (neg) steps.push({ title: 'Two’s complement reading', text: 'Sign bit (bit ' + (w - 1) + ') is 1, so the value is negative.\nPattern     ' + bstr + '  (' + H(bits, {}, hexW) + ')\nInvert      ' + lpad(ones.toString(2), w, '0') + '  (' + H(ones, {}, hexW) + ')\nAdd 1       ' + lpad(twos.toString(2), w, '0') + '  (' + H(twos, {}, hexW) + ')\nMagnitude ' + twos.toString(10) + ', so the signed value is −' + twos.toString(10) + '.\nCheck: ' + bits.toString(10) + ' − 2^' + w + ' = ' + sv.toString(10) + '.' });
+    else steps.push({ title: 'Reading the pattern', text: 'Sign bit (bit ' + (w - 1) + ') is 0, so the signed and unsigned values agree: ' + sv.toString(10) + '.\nTo write the negative of this value, invert the bits and add 1: ' + H(twos, {}, hexW) + ' is ' + (bits === 0n ? '0' : '−' + bits.toString(10)) + '.' });
+    var wrows = [], k, ws = [8, 16, 32, 64];
+    ws.forEach(function (x) { if (bits >> BigInt(x) === 0n) { var sgn = ((bits >> BigInt(x - 1)) & 1n) === 1n ? bits - (1n << BigInt(x)) : bits; wrows.push([x + '-bit', H(bits, fo, x / 4), bits.toString(10), sgn.toString(10)]); } });
+    var tables = [{ title: 'Range at ' + w + ' bits', head: ['', 'Minimum', 'Maximum'], rows: [['Signed (two’s complement)', info.minSigned, info.maxSigned], ['Unsigned', '0', info.maxUnsigned]], cur: [] }];
+    if (wrows.length) tables.push({ title: 'The same pattern at other widths (zero-extended)', head: ['Width', 'Hex', 'Unsigned', 'Signed'], rows: wrows, cur: [] });
+    var v = {
+      title: 'Signed hexadecimal', expr: info.hex + ' as ' + w + '-bit', big: [{ label: 'Hex pattern (' + w + '-bit)', value: info.hex }, { label: 'Signed decimal', value: info.signed }], sub: [{ label: 'Unsigned', value: info.unsigned }, { label: 'Binary', value: group(bstr, 4) }, { label: 'Octal', value: info.oct }],
+      facts: [['Width', w + ' bits'], ['Sign bit', String(info.signBit)], ['One’s complement', info.onesComplement], ['Two’s complement (negated)', info.twosComplement]],
+      bitrows: w <= 64 ? [{ label: 'Bits', bits: bstr, sign: true }] : [], tables: tables, notes: [], steps: steps
+    };
+    return { info: info, view: v };
+  }
+  function signed(inp) {
+    var fo = fmtOpts(inp), w = intWidth(inp.width), mode = inp.mode === 'value' ? 'value' : 'pattern';
+    if (!w) return fail('Width must be a whole number of bits from 2 to 128.', { field: 'width' });
+    if (mode === 'pattern') {
+      var p = parseHexU(inp.text, 'A hex pattern');
+      if (!p.ok) return fail(p.error, { empty: !!p.empty });
+      var bits = p.v, mk = mask(w), notes = [];
+      if (bits > mk) {
+        if (!inp.truncate) return fail('The pattern ' + H(bits) + ' needs ' + bits.toString(2).length + ' bits but the width is ' + w + '. Choose a wider width, or tick “truncate to the width”.');
+        bits = bits & mk; notes.push('Truncated to the low ' + w + ' bits: ' + H(p.v) + ' → ' + H(bits, {}, Math.ceil(w / 4)) + '.');
+      }
+      var s = signedView(w, bits, fo); s.view.notes = notes.concat(s.view.notes);
+      return { ok: true, mode: 'signed', input: 'pattern', width: w, info: s.info, truncated: notes.length > 0, view: s.view, notes: notes, steps: s.view.steps };
+    }
+    var d = parseNum(inp.text, 10);
+    if (!d.ok) return fail(d.error, { empty: !!d.empty });
+    var val = d.v, smin = -(1n << BigInt(w - 1)), smax = (1n << BigInt(w - 1)) - 1n, over = val > smax, under = val < smin, mod = 1n << BigInt(w), pat = ((val % mod) + mod) % mod;
+    var sv = signedView(w, pat, fo), warn = [];
+    if (over) warn.push('Overflow: ' + val + ' is above the ' + w + '-bit signed maximum ' + smax + (val <= mask(w) ? ' (it fits as an unsigned value: ' + H(val, fo) + ').' : '.') + ' The pattern shown is the wrapped value and reads as ' + sv.info.signed + ' when signed.');
+    if (under) warn.push('Underflow: ' + val + ' is below the ' + w + '-bit signed minimum ' + smin + '. The pattern shown is the wrapped value and reads as ' + sv.info.signed + '.');
+    sv.view.notes = warn.concat(sv.view.notes); sv.view.expr = val + ' as ' + w + '-bit signed';
+    if (!over && !under) sv.view.steps.unshift({ title: 'Encoding the value', text: val >= 0n ? val + ' is non-negative: write it in binary and pad to ' + w + ' bits.' : val + ' is negative: ' + w + ' bits wrap modulo 2^' + w + ', so the pattern is 2^' + w + ' − ' + (-val) + ' = ' + pat + ' = ' + H(pat, {}, Math.ceil(w / 4)) + '.' });
+    return { ok: true, mode: 'signed', input: 'value', width: w, info: sv.info, overflow: over, underflow: under, fits: !over && !under, view: sv.view, notes: warn, steps: sv.view.steps };
+  }
+
+  /* ---------- Mode 04: bitwise ---------- */
+  var BOPS = [['and', 'AND', 2], ['or', 'OR', 2], ['xor', 'XOR', 2], ['nand', 'NAND', 2], ['nor', 'NOR', 2], ['xnor', 'XNOR', 2], ['not', 'NOT', 1], ['shl', 'Shift left (SHL)', 1], ['shr', 'Logical shift right (SHR)', 1], ['sar', 'Arithmetic shift right (SAR)', 1], ['rol', 'Rotate left (ROL)', 1], ['ror', 'Rotate right (ROR)', 1]];
+  function bitwise(inp) {
+    var fo = fmtOpts(inp), op = inp.op, def = BOPS.filter(function (d) { return d[0] === op; })[0];
+    if (!def) return fail('Unknown operation.');
+    var a = parseHexU(inp.a, 'A'); if (!a.ok) return fail(a.error, { field: 'a', empty: !!a.empty });
+    var b = null; if (def[2] === 2) { b = parseHexU(inp.b, 'B'); if (!b.ok) return fail(b.error, { field: 'b', empty: !!b.empty }); }
+    var w, auto = inp.width === undefined || inp.width === 'auto' || inp.width === '';
+    if (auto) { var nib = function (q) { return Math.max(q.int.length * 4, Math.ceil(Math.max(q.v.toString(2).length, 1) / 4) * 4); }; w = Math.max(nib(a), b ? nib(b) : 0); }
+    else { w = Number(inp.width); if (!Number.isInteger(w) || w < 1 || w > 256) return fail('Width must be a whole number of bits from 1 to 256.', { field: 'width' }); }
+    var m = mask(w);
+    if (a.v > m) return fail('A needs ' + a.v.toString(2).length + ' bits but the width is ' + w + '. Choose a wider width; operands are never silently cut.', { field: 'a' });
+    if (b && b.v > m) return fail('B needs ' + b.v.toString(2).length + ' bits but the width is ' + w + '. Choose a wider width; operands are never silently cut.', { field: 'b' });
+    var A = a.v, B = b ? b.v : 0n, R, n = 0, sh = def[0].match(/^(shl|shr|sar|rol|ror)$/);
+    if (sh) { n = inp.shift === undefined || inp.shift === '' ? 1 : Number(inp.shift); if (!Number.isInteger(n) || n < 0 || n > w) return fail('Shift amount must be a whole number from 0 to ' + w + '.', { field: 'shift' }); }
+    var bn = BigInt(n), sgn = ((A >> BigInt(w - 1)) & 1n) === 1n ? A - (1n << BigInt(w)) : A;
+    switch (op) {
+      case 'and': R = A & B; break; case 'or': R = A | B; break; case 'xor': R = A ^ B; break;
+      case 'nand': R = ~(A & B) & m; break; case 'nor': R = ~(A | B) & m; break; case 'xnor': R = ~(A ^ B) & m; break;
+      case 'not': R = ~A & m; break; case 'shl': R = (A << bn) & m; break; case 'shr': R = A >> bn; break; case 'sar': R = (sgn >> bn) & m; break;
+      case 'rol': R = ((A << bn) | (A >> (BigInt(w) - bn))) & m; break; case 'ror': R = ((A >> bn) | (A << (BigInt(w) - bn))) & m; break;
+    }
+    R &= m;
+    var hw = Math.ceil(w / 4), sr = ((R >> BigInt(w - 1)) & 1n) === 1n ? R - (1n << BigInt(w)) : R, bs = function (x) { return lpad(x.toString(2), w, '0'); };
+    var rows = [{ label: 'A', bits: bs(A) }]; if (b) rows.push({ label: 'B', bits: bs(B) }); rows.push({ label: 'Result', bits: bs(R), ref: bs(A) });
+    var sym = { and: 'AND', or: 'OR', xor: 'XOR', nand: 'NAND', nor: 'NOR', xnor: 'XNOR' }[op], hx = function (x) { return H(x, fo, hw); };
+    var expr = b ? hx(A) + ' ' + sym + ' ' + hx(B) : def[1].split(' ')[0] === 'NOT' ? 'NOT ' + hx(A) : hx(A) + ' ' + op.toUpperCase() + ' ' + n;
+    var notes = []; if (auto) notes.push('Width ' + w + ' bits chosen automatically from the longest operand (leading zeros count). Pick a fixed width to model a register.');
+    if (op === 'sar') notes.push('Arithmetic shift right copies the sign bit (bit ' + (w - 1) + ') in, so A is read as ' + sgn + ' and ' + sgn + ' >> ' + n + ' = ' + (sgn >> bn) + '.');
+    if (op === 'shr') notes.push('Logical shift right brings in zeros whatever the sign bit is.');
+    if (op === 'shl' && ((A << bn) & ~m) !== 0n) notes.push('Bits shifted out of the left end are lost (the result is cut to ' + w + ' bits, as in a register).');
+    var fx = [['Width', w + ' bits'], ['Result decimal (unsigned)', R.toString(10)], ['Result decimal (signed)', sr.toString(10)], ['Ones in result', String(popcount(bs(R)))]];
+    var res = { ok: true, mode: 'bitwise', op: op, width: w, shift: sh ? n : undefined, aHex: hx(A), bHex: b ? hx(B) : undefined, resultHex: hx(R), aBinary: bs(A), bBinary: b ? bs(B) : undefined, resultBinary: bs(R), resultDecimalUnsigned: R.toString(10), resultDecimalSigned: sr.toString(10), notes: notes };
+    res.view = { title: 'Hexadecimal bitwise', expr: expr, big: [{ label: 'Result (hex)', value: hx(R) }], sub: [{ label: 'Decimal', value: R.toString(10) }, { label: 'Signed', value: sr.toString(10) }, { label: 'Binary', value: group(bs(R), 4) }], facts: fx, bitrows: w <= 64 ? rows : [], tables: [], notes: notes, steps: [{ title: 'Bit by bit', text: bitText(rows, def, n) }] };
+    return res;
+  }
+  function bitText(rows, def, n) {
+    var t = rows.map(function (r) { return rpad(r.label, 7) + group(r.bits, 4); }); return t.join('\n') + (def[2] === 2 ? '\n\nEach result bit comes from the two bits above it in the same column (' + def[1] + ').' : '\n\nChanged bits are marked in the grid above.');
+  }
+
+  /* ---------- Mode 05: digital electronics and memory ---------- */
+  function mkView(title, expr, big, facts, tables, notes, steps, extra) { var v = { title: title, expr: expr, big: big, sub: [], facts: facts || [], bitrows: [], tables: tables || [], notes: notes || [], steps: steps || [] }; if (extra) for (var k in extra) v[k] = extra[k]; return v; }
+  function parseFields(text, width) {
+    var out = [], lines = String(text || '').split(/\r?\n/), i;
+    for (i = 0; i < lines.length; i++) {
+      var ln = lines[i].trim(); if (!ln) continue;
+      var m = ln.match(/^(.*?)[\s,=]*\[?\s*(\d+)\s*(?::\s*(\d+))?\s*\]?$/);
+      if (!m || !m[1].trim()) return { error: 'Line ' + (i + 1) + ': write a name and bits, for example “mode 7:4” or “enable 0”.' };
+      var msb = Number(m[2]), lsb = m[3] === undefined ? msb : Number(m[3]);
+      if (msb < lsb || msb >= width) return { error: 'Field “' + m[1].trim() + '” bits ' + msb + ':' + lsb + ' do not fit in ' + width + ' bits (msb must be ≥ lsb and below the width).' };
+      out.push({ name: m[1].trim(), msb: msb, lsb: lsb });
+    }
+    return { fields: out };
+  }
+  function register(v) {
+    var fo = fmtOpts(v), w = intWidth(v.width); if (!w) return fail('Width must be a whole number of bits from 2 to 128.');
+    var p = parseHexU(v.value, 'A register value'); if (!p.ok) return fail(p.error, { empty: !!p.empty });
+    if (p.v > mask(w)) return fail('The value needs ' + p.v.toString(2).length + ' bits but the width is ' + w + '. Choose a wider width.');
+    var pf = parseFields(v.fields, w); if (pf.error) return fail(pf.error);
+    var val = p.v, hw = Math.ceil(w / 4), ft = [], k;
+    pf.fields.forEach(function (f) { var fw = f.msb - f.lsb + 1, x = (val >> BigInt(f.lsb)) & mask(fw); ft.push([f.name, f.msb === f.lsb ? '[' + f.msb + ']' : '[' + f.msb + ':' + f.lsb + ']', H(x, fo), lpad(x.toString(2), fw, '0'), x.toString(10)]); });
+    var tables = []; if (ft.length) tables.push({ title: 'Bit fields', head: ['Field', 'Bits', 'Hex', 'Binary', 'Decimal'], rows: ft, cur: [] });
+    var notes = [], after = val, editRow = null;
+    if (v.edit && v.edit !== 'none') {
+      var ix = Number(v.index); if (!Number.isInteger(ix) || ix < 0 || ix >= w) return fail('Bit index must be a whole number from 0 to ' + (w - 1) + '.');
+      var mk = 1n << BigInt(ix);
+      after = v.edit === 'set' ? val | mk : v.edit === 'clear' ? val & ~mk & mask(w) : val ^ mk;
+      var opn = v.edit === 'set' ? 'OR ' + H(mk, {}, hw) : v.edit === 'clear' ? 'AND NOT ' + H(mk, {}, hw) + ' = AND ' + H(~mk & mask(w), {}, hw) : 'XOR ' + H(mk, {}, hw);
+      tables.push({ title: v.edit.charAt(0).toUpperCase() + v.edit.slice(1) + ' bit ' + ix, head: ['', 'Hex', 'Binary'], rows: [['Before', H(val, fo, hw), group(lpad(val.toString(2), w, '0'), 4)], ['Mask', H(mk, fo, hw), group(lpad(mk.toString(2), w, '0'), 4)], ['After', H(after, fo, hw), group(lpad(after.toString(2), w, '0'), 4)]], cur: [2] });
+      notes.push('Operation: ' + H(val, {}, hw) + ' ' + opn + ' = ' + H(after, {}, hw) + '.'); editRow = { label: 'After', bits: lpad(after.toString(2), w, '0'), ref: lpad(val.toString(2), w, '0') };
+    }
+    var rows = [{ label: 'Value', bits: lpad(val.toString(2), w, '0'), clickable: true }]; if (editRow) rows.push(editRow);
+    var res = { ok: true, mode: 'register', width: w, valueHex: H(val, fo, hw), afterHex: H(after, fo, hw), fields: ft, view: mkView('Register value decoder', H(val, fo, hw) + ' (' + w + '-bit)', [{ label: editRow ? 'After (hex)' : 'Value (hex)', value: H(after, fo, hw) }], [['Decimal (unsigned)', val.toString(10)], ['Ones', String(popcount(val.toString(2)))], ['Width', w + ' bits']], tables, notes, []) };
+    res.view.bitrows = w <= 64 ? rows : []; res.view.sub = [{ label: 'Decimal', value: after.toString(10) }, { label: 'Binary', value: group(lpad(after.toString(2), w, '0'), 4) }];
+    return res;
+  }
+  function memory(v) {
+    var fo = fmtOpts(v), b = parseHexU(v.base, 'The base address'); if (!b.ok) return fail(b.error, { empty: !!b.empty });
+    var off = 0n; if (String(v.offset || '').trim()) { var o = parseHexU(v.offset, 'The offset'); if (!o.ok) return fail(o.error); off = o.v; }
+    var ix = String(v.index == null || v.index === '' ? 0 : v.index).trim(), st = String(v.stride == null || v.stride === '' ? 1 : v.stride).trim();
+    if (!/^\d+$/.test(ix) || !/^\d+$/.test(st)) return fail('Index and stride must be whole numbers of 0 or more (decimal).');
+    var addr = b.v + off + BigInt(ix) * BigInt(st), aw = Number(v.addrWidth) || 0, notes = [];
+    if (aw && addr > mask(aw)) return fail('Address ' + H(addr) + ' does not fit in a ' + aw + '-bit address space (maximum ' + H(mask(aw)) + ').');
+    var hw = aw ? aw / 4 : 0, bytes = toB(addr, 16); if (bytes.length % 2) bytes = '0' + bytes; bytes = bytes.match(/../g);
+    var res = { ok: true, mode: 'memory', addressHex: toB(addr, 16), addressDecimal: addr.toString(10), addressBinary: addr.toString(2), bytes: bytes };
+    res.view = mkView('Memory address calculator', H(b.v, fo) + ' + ' + H(off, fo) + ' + ' + ix + ' × ' + st, [{ label: 'Address (hex)', value: H(addr, fo, hw) }], [['Decimal', addr.toString(10)], ['Binary', group(lpad(addr.toString(2), hw * 4, '0'), 4)], ['Bytes (big-endian)', bytes.join(' ')], ['Bytes (little-endian)', bytes.slice().reverse().join(' ')]], [], notes, [{ title: 'Working', text: 'address = base + offset + index × stride\n        = ' + H(b.v) + ' + ' + H(off) + ' + ' + ix + ' × ' + st + '\n        = ' + H(b.v) + ' + ' + H(off) + ' + ' + H(BigInt(ix) * BigInt(st)) + '\n        = ' + H(addr) }]);
+    return res;
+  }
+  function bytesTool(v) {
+    var fo = fmtOpts(v), p = parseHexU(v.value, 'The value'); if (!p.ok) return fail(p.error, { empty: !!p.empty });
+    var hx = toB(p.v, 16); if (hx.length % 2) hx = '0' + hx;
+    var nb = Number(v.bytes) || 0; if (nb) { if (hx.length > nb * 2) return fail('The value does not fit in ' + nb + ' bytes.'); hx = lpad(hx, nb * 2, '0'); }
+    var by = hx.match(/../g), tn = by.length, sizes = [['Byte', 1], ['Word', 2], ['Double word', 4], ['Quad word', 8]], rows = [];
+    sizes.forEach(function (s) { var pad = lpad(hx, Math.ceil(tn / s[1]) * s[1] * 2, '0'), gs = pad.match(new RegExp('.{' + s[1] * 2 + '}', 'g')); rows.push([s[0] + ' (' + s[1] + ')', gs.map(function (g) { return fo.lower ? g.toLowerCase() : g; }).join(' '), gs.map(function (g) { return BigInt('0x' + g).toString(10); }).join(' ')]); });
+    var le = by.slice().reverse().join(''), res = { ok: true, mode: 'bytes', bigEndianHex: by.join(''), littleEndianHex: le, bytes: by, groups: rows };
+    var L = function (s) { return fo.lower ? s.toLowerCase() : s; };
+    res.view = mkView('Byte grouping and endianness', L(by.join('')) + ' (' + tn + ' bytes)', [{ label: 'Big-endian (as written)', value: (fo.prefix ? '0x' : '') + L(by.join('')) }, { label: 'Little-endian (bytes swapped)', value: (fo.prefix ? '0x' : '') + L(le) }], [['Byte count', String(tn)], ['Memory order, big-endian', L(by.join(' '))], ['Memory order, little-endian', L(by.slice().reverse().join(' '))], ['Decimal (big-endian)', p.v.toString(10)], ['Decimal (little-endian)', BigInt('0x' + le).toString(10)]], [{ title: 'Grouping (most significant first)', head: ['Size', 'Hex groups', 'Decimal'], rows: rows, cur: [] }], tn > 1 ? [] : ['A single byte is the same in both byte orders.'], []);
+    return res;
+  }
+  function asciiTool(v) {
+    var enc = typeof TextEncoder !== 'undefined' ? new TextEncoder() : null;
+    if (v.dir === 'hex') {
+      var c = String(v.text || '').replace(/0x/gi, '').replace(/[\s,_]/g, ''); if (!c) return fail('Enter hex bytes.', { empty: true });
+      if (!/^[0-9A-Fa-f]+$/.test(c)) return fail('Hex bytes use 0 to 9 and A to F only.'); if (c.length % 2) return fail('Hex bytes need an even number of digits (two per byte).');
+      var arr = c.match(/../g).map(function (x) { return parseInt(x, 16); }), s, notes = [];
+      try { s = new TextDecoder('utf-8', { fatal: true }).decode(Uint8Array.from(arr)); } catch (e) { s = arr.map(function (x) { return String.fromCharCode(x); }).join(''); notes.push('The bytes are not valid UTF-8, so each byte is shown as one Latin-1 character.'); }
+      var dump = arr.map(function (x) { return x >= 32 && x < 127 ? String.fromCharCode(x) : '.'; }).join('');
+      return { ok: true, mode: 'ascii', text: s, view: mkView('Hex to ASCII', arr.length + ' bytes', [{ label: 'Text', value: s }], [['Printable view', dump], ['Bytes', String(arr.length)], ['Decimal', arr.join(' ')]], [], notes, []) };
+    }
+    if (!String(v.text || '').length) return fail('Enter some text.', { empty: true });
+    var bytes = Array.from(enc.encode(String(v.text))), fo = fmtOpts(v), hx = bytes.map(function (b) { var s2 = lpad(b.toString(16).toUpperCase(), 2, '0'); return fo.lower ? s2.toLowerCase() : s2; }).join(' ');
+    return { ok: true, mode: 'ascii', hex: hx, bytes: bytes, view: mkView('ASCII to hex', bytes.length + ' bytes (UTF-8)', [{ label: 'Hex bytes', value: hx }], [['Decimal', bytes.join(' ')], ['Binary', bytes.map(function (b) { return lpad(b.toString(2), 8, '0'); }).join(' ')], ['Bytes', String(bytes.length)]], [], bytes.some(function (b) { return b > 127; }) ? ['Characters outside ASCII are written as their UTF-8 bytes.'] : [], []) };
+  }
+  function rgbTool(v) {
+    var fo = fmtOpts(v);
+    if (v.dir === 'rgb') {
+      var vals = String(v.text || '').trim().split(/[\s,]+/).filter(Boolean); if (!vals.length) return fail('Enter red, green and blue (0 to 255).', { empty: true });
+      if (vals.length !== 3 || !vals.every(function (x) { return /^\d+$/.test(x) && Number(x) <= 255; })) return fail('Enter three whole numbers from 0 to 255, for example 170 187 204.');
+      var h = '#' + vals.map(function (x) { var s = lpad(Number(x).toString(16).toUpperCase(), 2, '0'); return fo.lower ? s.toLowerCase() : s; }).join('');
+      return { ok: true, mode: 'rgb', hex: h, view: mkView('RGB to hex', 'rgb(' + vals.map(Number).join(', ') + ')', [{ label: 'Hex colour', value: h }], [['Decimal', vals.join(', ')]], [], [], [], { swatch: h }) };
+    }
+    var c = String(v.text || '').trim().replace(/^#/, '').replace(/^0x/i, ''); if (!c) return fail('Enter a 3 or 6 digit hex colour.', { empty: true });
+    if (!/^[0-9A-Fa-f]{3}$|^[0-9A-Fa-f]{6}$/.test(c)) return fail('Expected a 3 or 6 digit hex colour such as #AABBCC or ABC.');
+    if (c.length === 3) c = c.split('').map(function (x) { return x + x; }).join('');
+    var r = parseInt(c.slice(0, 2), 16), g = parseInt(c.slice(2, 4), 16), b = parseInt(c.slice(4, 6), 16), hh = '#' + up(c);
+    return { ok: true, mode: 'rgb', r: r, g: g, b: b, view: mkView('Hex to RGB', hh, [{ label: 'RGB', value: r + ', ' + g + ', ' + b }], [['Hex colour', hh], ['Red', r + ' (' + lpad(r.toString(16).toUpperCase(), 2, '0') + ')'], ['Green', g + ' (' + lpad(g.toString(16).toUpperCase(), 2, '0') + ')'], ['Blue', b + ' (' + lpad(b.toString(16).toUpperCase(), 2, '0') + ')']], [], [], [], { swatch: hh }) };
+  }
+  /* Named checksums. Each states its polynomial, initial value, final XOR and reflection, so the result can be reproduced. */
+  function crc16Reflected(bytes, init, poly) { var crc = init, i, j; for (i = 0; i < bytes.length; i++) { crc ^= bytes[i]; for (j = 0; j < 8; j++) crc = crc & 1 ? (crc >>> 1) ^ poly : crc >>> 1; } return crc & 0xffff; }
+  function crc16Ccitt(bytes) { var crc = 0xffff, i, j; for (i = 0; i < bytes.length; i++) { crc ^= bytes[i] << 8; for (j = 0; j < 8; j++) crc = crc & 0x8000 ? ((crc << 1) ^ 0x1021) & 0xffff : (crc << 1) & 0xffff; } return crc; }
+  function crc32(bytes) { var crc = 0xffffffff, i, j; for (i = 0; i < bytes.length; i++) { crc ^= bytes[i]; for (j = 0; j < 8; j++) crc = crc & 1 ? (crc >>> 1) ^ 0xedb88320 : crc >>> 1; } return (crc ^ 0xffffffff) >>> 0; }
+  function sum8(bytes) { var s = 0, i; for (i = 0; i < bytes.length; i++) s = (s + bytes[i]) & 0xff; return s; }
+  var CRCS = [
+    ['CRC-16/IBM (ARC)', 2, function (b) { return crc16Reflected(b, 0, 0xa001); }, 'Poly 0x8005 (reflected 0xA001), init 0x0000, reflected, final XOR 0x0000'],
+    ['CRC-16/MODBUS', 2, function (b) { return crc16Reflected(b, 0xffff, 0xa001); }, 'Poly 0x8005 (reflected 0xA001), init 0xFFFF, reflected, final XOR 0x0000. On a Modbus RTU frame the low byte is sent first.'],
+    ['CRC-16/CCITT-FALSE', 2, crc16Ccitt, 'Poly 0x1021, init 0xFFFF, not reflected, final XOR 0x0000'],
+    ['CRC-32', 4, crc32, 'Poly 0x04C11DB7 (reflected 0xEDB88320), init 0xFFFFFFFF, reflected, final XOR 0xFFFFFFFF'],
+    ['Sum-8 (not a CRC)', 1, sum8, 'Plain additive checksum: the sum of all bytes modulo 256'],
+    ['Two’s-complement sum-8 (LRC)', 1, function (b) { return (256 - sum8(b)) & 0xff; }, 'Negated sum of all bytes modulo 256, as in Intel HEX records and Modbus ASCII; adding it to the byte sum gives 00']
+  ];
+  function checksumTool(v) {
+    var bytes, fo = fmtOpts(v);
+    if (v.kind === 'hex') {
+      var c = String(v.text || '').replace(/0x/gi, '').replace(/[\s,_]/g, ''); if (!c) return fail('Enter hex bytes.', { empty: true });
+      if (!/^[0-9A-Fa-f]+$/.test(c)) return fail('Hex bytes use 0 to 9 and A to F only.'); if (c.length % 2) return fail('Hex bytes need an even number of digits (two per byte).');
+      bytes = c.match(/../g).map(function (x) { return parseInt(x, 16); });
+    } else { if (!String(v.text || '').length) return fail('Enter some text.', { empty: true }); bytes = Array.from(new TextEncoder().encode(String(v.text))); }
+    var rows = [], out = {}; CRCS.forEach(function (d) { var x = d[2](bytes), s = lpad(x.toString(16).toUpperCase(), d[1] * 2, '0'); if (fo.lower) s = s.toLowerCase(); out[d[0]] = s; rows.push([d[0], (fo.prefix ? '0x' : '') + s, String(x), d[3]]); });
+    return { ok: true, mode: 'checksum', values: out, bytes: bytes.length, view: mkView('Checksums', bytes.length + ' bytes', [{ label: rows[0][0], value: rows[0][1] }, { label: rows[3][0], value: rows[3][1] }], [['Bytes', String(bytes.length)]], [{ title: 'Named algorithms and their parameters', head: ['Algorithm', 'Hex', 'Decimal', 'Parameters'], rows: rows, cur: [] }], ['Check value: the ASCII text 123456789 gives CRC-16/IBM BB3D, CRC-16/MODBUS 4B37, CRC-16/CCITT-FALSE 29B1 and CRC-32 CBF43926. A simple sum is not a CRC and is labelled as such.'], []) };
+  }
+  var TOOLS = { register: register, memory: memory, bytes: bytesTool, ascii: asciiTool, rgb: rgbTool, checksum: checksumTool };
+  function tool(name, vals) { var f = TOOLS[name]; if (!f) return fail('Unknown tool.'); try { return f(vals || {}); } catch (e) { return fail('That input could not be processed: ' + e.message); } }
+
+  /* ---------- exports ---------- */
+  function flat(res) { var v = res.view, o = []; (v.big || []).concat(v.sub || []).forEach(function (x) { o.push([x.label, x.value]); }); (v.facts || []).forEach(function (f) { o.push([f[0], f[1]]); }); return o; }
+  function exportTxt(res) {
+    var v = res.view, t = ['Elecmetric Hex Calculator: ' + v.title, v.expr, ''];
+    flat(res).forEach(function (x) { t.push(x[0] + ': ' + x[1]); });
+    (v.tables || []).forEach(function (tb) { t.push('', tb.title); t.push(tb.head.join(' | ')); tb.rows.forEach(function (r) { t.push(r.join(' | ')); }); });
+    (v.notes || []).forEach(function (n) { t.push('', n); });
+    (v.steps || []).forEach(function (s) { t.push('', s.title, s.text); });
+    return t.join('\n') + '\n';
+  }
+  function csvCell(c) { c = String(c); return /[",\n]/.test(c) ? '"' + c.replace(/"/g, '""') + '"' : c; }
+  function exportCsv(res) {
+    var v = res.view, t = [['item', 'value']].concat(flat(res));
+    (v.tables || []).forEach(function (tb) { t.push([]); t.push([tb.title]); t.push(tb.head); tb.rows.forEach(function (r) { t.push(r); }); });
+    return t.map(function (r) { return r.map(csvCell).join(','); }).join('\n') + '\n';
+  }
+  function exportJson(res) {
+    var v = res.view, results = {}; flat(res).forEach(function (x) { results[x[0]] = x[1]; });
+    return JSON.stringify({ calculator: 'Elecmetric Hex Calculator', mode: v.title, expression: v.expr, results: results, tables: (v.tables || []).map(function (tb) { return { title: tb.title, columns: tb.head, rows: tb.rows }; }), notes: v.notes || [], steps: (v.steps || []).map(function (s) { return { title: s.title, text: s.text }; }) }, null, 2);
+  }
+
+  root.HexCalc = { OPS: OPS, BOPS: BOPS, PADS: PADS, MAXD: MAXD, MAXN: MAXN, arith: arith, convert: convert, detect: detect, signed: signed, bitwise: bitwise, tool: tool, parseNum: parseNum, exportTxt: exportTxt, exportCsv: exportCsv, exportJson: exportJson };
+  if (typeof module !== 'undefined' && module.exports) module.exports = root.HexCalc;
+})(typeof globalThis !== 'undefined' ? globalThis : this);
+
+/* Elecmetric Hex Calculator: page script (five modes). Inlined by tools/hex_page.js after the engine (HexCalc). */
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var LET = 'ABCDEFGHIJKLMNOPQRST', HKEY = 'em-hex-history', hist = [], mode = 'arith', lastRes = null, lastFocus = null, tool = 'register';
+  var box = $('hx-ops'), opSel = $('hx-op'), padSel = $('hx-pad');
+  var DEF = { op: 'add', ops: ['1A3', '2F'], pad: 'min' };
+  function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
+  function say(t) { $('hx-note').textContent = t; }
+  function mix(a, b) { var o = {}, k; for (k in a) o[k] = a[k]; for (k in b) o[k] = b[k]; return o; }
+  function copy(t) { var d = function () { say('Copied ' + t); }; if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(t).then(d, d); else { var a = document.createElement('textarea'); a.value = t; document.body.appendChild(a); a.select(); try { document.execCommand('copy'); } catch (e) {} document.body.removeChild(a); d(); } }
+  function fmt() { return { hexCase: $('hx-case').value, prefix: $('hx-prefix').checked, group: $('hx-group').value }; }
+
+  /* ---------- mode definitions for the generic form (modes 2 to 5) ---------- */
+  var W4 = [['8', '8-bit'], ['16', '16-bit'], ['32', '32-bit'], ['64', '64-bit']];
+  var BOPT = HexCalc.BOPS.map(function (d) { return [d[0], d[1]]; });
+  var TOOLS = {
+    register: { label: 'Register value decoder and bit editor', fields: [
+      { id: 'value', label: 'Register value (hex)', kind: 'text', def: 'AA' }, { id: 'width', label: 'Register width', kind: 'select', opts: W4, def: '8' },
+      { id: 'fields', label: 'Bit fields (one per line: name msb:lsb, or name bit)', kind: 'area', def: 'high 7:4\nlow 3:0' },
+      { id: 'edit', label: 'Edit a bit', kind: 'select', opts: [['none', 'No edit'], ['set', 'Set bit'], ['clear', 'Clear bit'], ['toggle', 'Toggle bit']], def: 'none' }, { id: 'index', label: 'Bit index', kind: 'text', def: '0', show: function (v) { return v.edit !== 'none'; } }],
+      ex: [['AA, set bit 0 → AB', { value: 'AA', width: '8', edit: 'set', index: '0' }], ['AA, clear bit 1 → A8', { value: 'AA', width: '8', edit: 'clear', index: '1' }], ['AA, toggle bit 7', { value: 'AA', width: '8', edit: 'toggle', index: '7' }], ['0x4001 status register (16-bit)', { value: '4001', width: '16', fields: 'ready 0\nerror 1\nmode 7:4\nflags 15:8', edit: 'none' }]] },
+    memory: { label: 'Memory address calculator', fields: [
+      { id: 'base', label: 'Base address (hex)', kind: 'text', def: '1000' }, { id: 'offset', label: 'Byte offset (hex, optional)', kind: 'text', def: '' },
+      { id: 'index', label: 'Element index (decimal)', kind: 'text', def: '3' }, { id: 'stride', label: 'Element size in bytes (decimal)', kind: 'text', def: '4' },
+      { id: 'addrWidth', label: 'Address space', kind: 'select', opts: [['0', 'No limit'], ['16', '16-bit'], ['32', '32-bit'], ['64', '64-bit']], def: '0' }],
+      ex: [['1000 + 3 × 4 = 100C', { base: '1000', offset: '', index: '3', stride: '4' }], ['20000000 + 0x40 (32-bit)', { base: '20000000', offset: '40', index: '0', stride: '1', addrWidth: '32' }], ['FFF0 + 20 (overflows 16-bit)', { base: 'FFF0', offset: '20', index: '0', stride: '1', addrWidth: '16' }]] },
+    bytes: { label: 'Byte grouping and endianness', fields: [
+      { id: 'value', label: 'Value (hex)', kind: 'text', def: 'AABBCCDD' }, { id: 'bytes', label: 'Size', kind: 'select', opts: [['0', 'As typed'], ['1', '1 byte'], ['2', '2 bytes'], ['4', '4 bytes'], ['8', '8 bytes']], def: '0' }],
+      ex: [['AABBCCDD', { value: 'AABBCCDD', bytes: '0' }], ['FF as 4 bytes', { value: 'FF', bytes: '4' }], ['1234 as 2 bytes', { value: '1234', bytes: '2' }]] },
+    ascii: { label: 'ASCII and hex', fields: [
+      { id: 'dir', label: 'Direction', kind: 'select', opts: [['text', 'Text to hex'], ['hex', 'Hex to text']], def: 'text' }, { id: 'text', label: 'Input', kind: 'text', def: 'Hello' }],
+      ex: [['Hello → 48 65 6C 6C 6F', { dir: 'text', text: 'Hello' }], ['48 65 6C 6C 6F → text', { dir: 'hex', text: '48 65 6C 6C 6F' }]] },
+    rgb: { label: 'RGB and hex colour', fields: [
+      { id: 'dir', label: 'Direction', kind: 'select', opts: [['hex', 'Hex to RGB'], ['rgb', 'RGB to hex']], def: 'rgb' }, { id: 'text', label: 'Input', kind: 'text', def: '170 187 204' }],
+      ex: [['170 187 204 → #AABBCC', { dir: 'rgb', text: '170 187 204' }], ['#FF8800 → RGB', { dir: 'hex', text: '#FF8800' }], ['#0F0 → RGB', { dir: 'hex', text: '#0F0' }]] },
+    checksum: { label: 'Checksums and CRC', fields: [
+      { id: 'kind', label: 'Input is', kind: 'select', opts: [['text', 'Text (UTF-8 bytes)'], ['hex', 'Hex bytes']], def: 'text' }, { id: 'text', label: 'Data', kind: 'text', def: '123456789' }],
+      ex: [['“123456789” (standard check string)', { kind: 'text', text: '123456789' }], ['Hex bytes 01 03 00 00 00 0A', { kind: 'hex', text: '01 03 00 00 00 0A' }], ['Hex bytes 01 02 03', { kind: 'hex', text: '01 02 03' }]] }
+  };
+  var MODES = {
+    convert: { fields: [
+      { id: 'input', label: 'Number', kind: 'text', def: 'AA' }, { id: 'from', label: 'Input base', kind: 'select', opts: [['16', 'Hexadecimal'], ['auto', 'Auto-detect (asks if unclear)'], ['10', 'Decimal'], ['2', 'Binary'], ['8', 'Octal']], def: '16' },
+      { id: 'maxFraction', label: 'Fraction digits', kind: 'select', opts: [['8', '8'], ['16', '16'], ['32', '32'], ['64', '64']], def: '16' }],
+      run: function (v) { return HexCalc.convert(mix(v, fmt())); },
+      ex: [['AA hex', { input: 'AA', from: '16' }], ['255 decimal', { input: '255', from: '10' }], ['0.8 hex (fraction)', { input: '0.8', from: '16' }], ['0.1 decimal (does not end)', { input: '0.1', from: '10' }], ['−A hex', { input: '-A', from: '16' }], ['0xFF auto-detected', { input: '0xFF', from: 'auto' }], ['11 auto (ambiguous)', { input: '11', from: 'auto' }], ['10^30 decimal', { input: '1000000000000000000000000000000', from: '10' }]] },
+    signed: { fields: [
+      { id: 'mode', label: 'Input is', kind: 'select', opts: [['pattern', 'A hex bit pattern'], ['value', 'A signed decimal value']], def: 'pattern' }, { id: 'text', label: 'Value', kind: 'text', def: 'FF' },
+      { id: 'width', label: 'Width', kind: 'select', opts: W4.concat([['custom', 'Custom…']]), def: '8' }, { id: 'customWidth', label: 'Custom width (bits)', kind: 'text', def: '12', show: function (v) { return v.width === 'custom'; } },
+      { id: 'truncate', label: 'Truncate a longer pattern to the width', kind: 'check', def: false, show: function (v) { return v.mode === 'pattern'; } }],
+      run: function (v) { return HexCalc.signed(mix({ mode: v.mode, text: v.text, width: v.width === 'custom' ? v.customWidth : v.width, truncate: v.truncate }, fmt())); },
+      ex: [['FF as 8-bit = −1', { mode: 'pattern', text: 'FF', width: '8' }], ['80 as 8-bit = −128', { mode: 'pattern', text: '80', width: '8' }], ['FFFF as 16-bit', { mode: 'pattern', text: 'FFFF', width: '16' }], ['−1 as 8-bit', { mode: 'value', text: '-1', width: '8' }], ['128 as 8-bit (overflow)', { mode: 'value', text: '128', width: '8' }], ['−129 as 8-bit (underflow)', { mode: 'value', text: '-129', width: '8' }], ['FFFF as 8-bit (too wide)', { mode: 'pattern', text: 'FFFF', width: '8' }]] },
+    bitwise: { fields: [
+      { id: 'op', label: 'Operation', kind: 'select', opts: BOPT, def: 'and' }, { id: 'a', label: 'Hexadecimal A', kind: 'text', def: 'AA' },
+      { id: 'b', label: 'Hexadecimal B', kind: 'text', def: '0F', show: function (v) { return /^(and|or|xor|nand|nor|xnor)$/.test(v.op); } },
+      { id: 'shift', label: 'Shift or rotate by (bits)', kind: 'text', def: '1', show: function (v) { return /^(shl|shr|sar|rol|ror)$/.test(v.op); } },
+      { id: 'width', label: 'Width', kind: 'select', opts: [['auto', 'Auto']].concat(W4), def: 'auto' }],
+      run: function (v) { return HexCalc.bitwise(mix(v, fmt())); },
+      ex: [['AA AND 0F = 0A', { op: 'and', a: 'AA', b: '0F', width: 'auto' }], ['AA OR 0F = AF', { op: 'or', a: 'AA', b: '0F', width: 'auto' }], ['AA XOR 0F = A5', { op: 'xor', a: 'AA', b: '0F', width: 'auto' }], ['NOT AA (8-bit) = 55', { op: 'not', a: 'AA', width: '8' }], ['AA SHL 1 (8-bit)', { op: 'shl', a: 'AA', shift: '1', width: '8' }], ['AA SAR 1 = D5', { op: 'sar', a: 'AA', shift: '1', width: '8' }], ['AA ROL 1', { op: 'rol', a: 'AA', shift: '1', width: '8' }], ['Mask 0xFF000000 AND 12345678', { op: 'and', a: '12345678', b: 'FF000000', width: '32' }]] },
+    tools: { fields: null, run: null, ex: null }
+  };
+  function curDef() { return mode === 'tools' ? TOOLS[tool] : MODES[mode]; }
+
+  /* ---------- generic form ---------- */
+  var form = $('hx-form');
+  function fieldHtml(f, val) {
+    var id = 'hx-f-' + f.id, l = '<label for="' + id + '" class="ns-l">' + esc(f.label) + '</label>';
+    if (f.kind === 'select') return '<div class="ns-f" data-fid="' + f.id + '">' + l + '<select id="' + id + '" class="ns-sel">' + f.opts.map(function (o) { return '<option value="' + esc(o[0]) + '"' + (String(o[0]) === String(val) ? ' selected' : '') + '>' + esc(o[1]) + '</option>'; }).join('') + '</select></div>';
+    if (f.kind === 'area') return '<div class="ns-f ns-wide" data-fid="' + f.id + '">' + l + '<textarea id="' + id + '" class="ns-in" rows="3" spellcheck="false" autocomplete="off">' + esc(val) + '</textarea></div>';
+    if (f.kind === 'check') return '<div class="ns-f ns-chk" data-fid="' + f.id + '"><label class="chk"><input type="checkbox" id="' + id + '"' + (val ? ' checked' : '') + '> ' + esc(f.label) + '</label></div>';
+    return '<div class="ns-f" data-fid="' + f.id + '">' + l + '<input id="' + id + '" class="ns-in" type="text" inputmode="text" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" aria-describedby="hx-err" value="' + esc(val) + '"></div>';
+  }
+  function buildForm(defs, vals) { form.innerHTML = defs.map(function (f) { return fieldHtml(f, vals && vals[f.id] !== undefined ? vals[f.id] : f.def); }).join(''); applyShow(); }
+  function readForm(defs) { var v = {}; defs.forEach(function (f) { var e = $('hx-f-' + f.id); v[f.id] = e ? (f.kind === 'check' ? e.checked : e.value) : f.def; }); return v; }
+  function applyShow() { var defs = curDef().fields, v = readForm(defs); defs.forEach(function (f) { var w = form.querySelector('[data-fid="' + f.id + '"]'); if (w) w.hidden = f.show ? !f.show(v) : false; }); }
+  function setForm(vals) { var defs = curDef().fields; defs.forEach(function (f) { var e = $('hx-f-' + f.id); if (e && vals[f.id] !== undefined) { if (f.kind === 'check') e.checked = !!vals[f.id]; else e.value = vals[f.id]; } }); applyShow(); }
+
+  /* ---------- arithmetic operand rows ---------- */
+  function inputs() { return Array.prototype.slice.call(box.querySelectorAll('input.ns-in')); }
+  function values() { return inputs().map(function (i) { return i.value; }); }
+  function lab(k) { return opSel.value === 'div' ? (k === 0 ? 'Dividend A' : 'Divisor B') : 'Hexadecimal ' + LET.charAt(k); }
+  function setOps(vals) {
+    box.innerHTML = vals.map(function (v, k) {
+      return '<div class="hx-row"><div class="ns-f"><label for="hx-i' + k + '" class="ns-l">' + lab(k) + '</label><input id="hx-i' + k + '" class="ns-in" type="text" inputmode="text" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" aria-describedby="hx-err" value="' + esc(v) + '"></div>' +
+        (vals.length > 2 ? '<button type="button" class="btn2" data-rm="' + k + '" aria-label="Remove number ' + LET.charAt(k) + '">Remove</button>' : '') + '</div>';
+    }).join('');
+    $('hx-add').hidden = opSel.value === 'div' || vals.length >= HexCalc.MAXN;
+  }
+  function track() { var a = document.activeElement; if (a && a.classList && a.classList.contains('ns-in')) lastFocus = a; }
+
+  /* ---------- rendering ---------- */
+  function copyBtn(t, label) { return '<button type="button" class="btn2" data-copy="' + esc(t) + '" aria-label="Copy ' + esc(label) + '">Copy</button>'; }
+  function bitGrid(rows) {
+    return rows.map(function (r) {
+      var n = r.bits.length, i, cells = '', cls = n > 32 ? ' sm' : '';
+      for (i = 0; i < n; i++) {
+        var idx = n - 1 - i, c = r.bits.charAt(i), cl = 'bit' + (c === '1' ? ' on' : '') + (r.sign && i === 0 ? ' sg' : '') + (r.ref && r.ref.charAt(i) !== c ? ' chg' : '');
+        if (i > 0 && idx % 4 === 3) cells += '<span class="gap"></span>';
+        cells += r.clickable ? '<button type="button" class="' + cl + '" data-bit="' + idx + '" aria-label="Bit ' + idx + ' is ' + c + '. Press to toggle it."><i>' + idx + '</i><b>' + c + '</b></button>' : '<span class="' + cl + '"><i>' + idx + '</i><b>' + c + '</b></span>';
+      }
+      return '<div class="bitrow' + cls + '"><span class="bl">' + esc(r.label) + '</span><div class="bits" role="' + (r.clickable ? 'group' : 'img') + '" aria-label="' + esc(r.label) + ' bits, most significant first: ' + r.bits.split('').join(' ') + '">' + (r.neg ? '<span class="bit sg"><i>sign</i><b>−</b></span>' : '') + cells + '</div></div>';
+    }).join('');
+  }
+  function tableHtml(t) {
+    return '<h3>' + esc(t.title) + '</h3><div class="tw" tabindex="0" role="region" aria-label="Scrollable table: ' + esc(t.title) + '"><table class="ns-t"><thead><tr>' + t.head.map(function (h) { return '<th scope="col">' + esc(h) + '</th>'; }).join('') + '</tr></thead><tbody>' +
+      t.rows.map(function (r, k) { var cu = t.cur && t.cur.indexOf(k) >= 0; return '<tr' + (cu ? ' class="cu"' : '') + '>' + r.map(function (c, j) { return j === 0 ? '<th scope="row">' + esc(c) + '</th>' : '<td class="r">' + esc(c) + '</td>'; }).join('') + '</tr>'; }).join('') + '</tbody></table></div>';
+  }
+  function renderView(res) {
+    var v = res.view, h = '<div class="res"><p class="sub">' + esc(v.expr) + '</p>';
+    v.big.forEach(function (b) { h += '<div class="big"><small>' + esc(b.label) + '</small>' + esc(b.value) + copyBtn(b.value, b.label) + '</div>'; });
+    if (v.swatch) h += '<div class="sw" style="background:' + esc(v.swatch) + '" role="img" aria-label="Colour swatch ' + esc(v.swatch) + '"></div>';
+    if (v.sub && v.sub.length) h += '<p class="sub">' + v.sub.map(function (s) { return esc(s.label) + ' <b>' + esc(s.value) + '</b>' + copyBtn(s.value, s.label); }).join(' &nbsp; ') + '</p>';
+    h += '</div>';
+    if (v.bitrows && v.bitrows.length) h += '<div class="bitrows">' + bitGrid(v.bitrows) + '</div>';
+    if (v.facts && v.facts.length) h += '<p class="ns-facts">' + v.facts.map(function (f) { return '<span>' + esc(f[0]) + ' <b>' + esc(f[1]) + '</b></span>'; }).join('') + '</p>';
+    if (v.ambiguous) h += '<p class="note">This could be more than one base. Confirm: ' + v.ambiguous.options.map(function (b) { return '<button type="button" class="chipb" data-from="' + b + '">' + ({ 2: 'Binary', 8: 'Octal', 10: 'Decimal', 16: 'Hexadecimal' })[b] + '</button>'; }).join('') + '</p>';
+    (v.tables || []).forEach(function (t) { h += tableHtml(t); });
+    (v.notes || []).forEach(function (n) { h += '<p class="note">' + esc(n) + '</p>'; });
+    $('hx-out').innerHTML = h;
+    $('hx-steps').innerHTML = v.steps && v.steps.length ? v.steps.map(function (s) { return '<h3>' + esc(s.title) + '</h3><pre class="al" tabindex="0">' + esc(s.text) + '</pre>'; }).join('') : '<p class="note">This tool has no step-by-step working. The tables above show every value.</p>';
+  }
+  function compute() {
+    if (mode === 'arith') return HexCalc.arith(mix({ op: opSel.value, operands: values(), pad: padSel.value }, fmt()));
+    var d = curDef(); return mode === 'tools' ? HexCalc.tool(tool, mix(readForm(d.fields), fmt())) : d.run(readForm(d.fields));
+  }
+  function render() {
+    var r = compute(), err = $('hx-err');
+    if (mode === 'arith') inputs().forEach(function (e) { e.classList.remove('bad'); e.setAttribute('aria-invalid', 'false'); });
+    lastRes = null; $('hx-dl').hidden = true;
+    if (!r.ok) {
+      err.textContent = r.empty ? '' : r.error;
+      if (mode === 'arith' && r.field !== undefined) { var f = inputs()[r.field]; if (f && !r.empty) { f.classList.add('bad'); f.setAttribute('aria-invalid', 'true'); } }
+      $('hx-out').innerHTML = ''; $('hx-steps').innerHTML = '<p class="note">Enter valid values to see the working.</p>'; return;
+    }
+    err.textContent = ''; lastRes = r; renderView(r); $('hx-dl').hidden = false;
+  }
+
+  /* ---------- modes ---------- */
+  function chips() { var d = curDef(); $('hx-try').innerHTML = '<span class="ns-l">Try</span> ' + (mode === 'arith' ? ARITH_EX.map(function (e, k) { return '<button type="button" class="chipb" data-aex="' + k + '">' + esc(e[0]) + '</button>'; }).join('') : d.ex.map(function (e, k) { return '<button type="button" class="chipb" data-ex="' + k + '">' + esc(e[0]) + '</button>'; }).join('')); }
+  var ARITH_EX = [['1A3 + 2F', { op: 'add', ops: ['1A3', '2F'], pad: 'min' }], ['1A − B', { op: 'sub', ops: ['1A', 'B'], pad: 'min' }], ['A × 5', { op: 'mul', ops: ['A', '5'], pad: 'min' }], ['64 ÷ 8', { op: 'div', ops: ['64', '8'], pad: 'min' }], ['A + B + C', { op: 'add', ops: ['A', 'B', 'C'], pad: 'min' }], ['1A3 − 2F', { op: 'sub', ops: ['1A3', '2F'], pad: 'min' }], ['2F − 1A3 (negative)', { op: 'sub', ops: ['2F', '1A3'], pad: 'min' }], ['FFFF × FFFF', { op: 'mul', ops: ['FFFF', 'FFFF'], pad: 'min' }], ['−FF ÷ 10 (remainder)', { op: 'div', ops: ['-FF', '10'], pad: 'min' }], ['0D + 0B (leading zero)', { op: 'add', ops: ['0D', '0B'], pad: '2' }]];
+  function setArith(d) { opSel.value = d.op; padSel.value = d.pad || 'min'; setOps(d.ops); render(); }
+  function setMode(m) {
+    mode = m;
+    Array.prototype.forEach.call($('hx-tabs').querySelectorAll('button'), function (b) { var on = b.dataset.mode === m; b.setAttribute('aria-selected', on ? 'true' : 'false'); b.tabIndex = on ? 0 : -1; });
+    $('hx-arith').hidden = m !== 'arith'; $('hx-formwrap').hidden = m === 'arith'; $('hx-toolwrap').hidden = m !== 'tools';
+    if (m === 'arith') { if (!inputs().length) setArith(DEF); } else { var d = curDef(); buildForm(d.fields, null); }
+    chips(); render();
+  }
+  function setTool(t) { tool = t; buildForm(TOOLS[t].fields, null); chips(); render(); }
+
+  /* ---------- history ---------- */
+  function loadHist() { try { var s = localStorage.getItem(HKEY); hist = s ? JSON.parse(s) : []; if (!Array.isArray(hist)) hist = []; } catch (e) { hist = []; } }
+  function saveHist() { try { localStorage.setItem(HKEY, JSON.stringify(hist.slice(0, 10))); } catch (e) {} }
+  function drawHist() { $('hx-hist').innerHTML = hist.length ? hist.map(function (h, k) { return '<li><button type="button" class="chipb" data-h="' + k + '">' + esc(h.text) + '</button></li>'; }).join('') : '<li class="note">No saved calculations yet. Press Enter or Save to history.</li>'; $('hx-hclear').hidden = !hist.length; }
+  function keep() {
+    if (!lastRes) return; var v = lastRes.view, t = v.title + ': ' + v.expr + ' = ' + v.big[0].value, rec = { text: t, mode: mode, tool: tool };
+    if (mode === 'arith') { rec.op = opSel.value; rec.ops = values(); rec.pad = padSel.value; } else rec.vals = readForm(curDef().fields);
+    hist = hist.filter(function (h) { return h.text !== t; }); hist.unshift(rec); hist = hist.slice(0, 10); saveHist(); drawHist(); say('Saved to history');
+  }
+  function restore(h) {
+    if (h.mode === 'tools') tool = h.tool || 'register'; setMode(h.mode);
+    if (h.mode === 'arith') { setArith({ op: h.op, ops: h.ops, pad: h.pad }); return; }
+    if (h.mode === 'tools') $('hx-tool').value = tool; buildForm(curDef().fields, h.vals); chips(); render();
+  }
+  function download(name, mime, text) { var a = document.createElement('a'), u = URL.createObjectURL(new Blob([text], { type: mime })); a.href = u; a.download = name; document.body.appendChild(a); a.click(); document.body.removeChild(a); setTimeout(function () { URL.revokeObjectURL(u); }, 500); say('Downloaded ' + name); }
+  function insert(s) {
+    var f = lastFocus && document.body.contains(lastFocus) && box.contains(lastFocus) ? lastFocus : inputs()[0]; if (!f) return;
+    if (s === 'back') f.value = f.value.slice(0, -1); else if (s === 'clear') f.value = ''; else if (s === '-') f.value = f.value.charAt(0) === '-' ? f.value.slice(1) : '-' + f.value; else f.value += s;
+    f.focus(); render();
+  }
+
+  $('hx').addEventListener('click', function (e) {
+    var b = e.target.closest('button'); if (!b) return;
+    var d = b.dataset;
+    if (d.copy) { copy(d.copy); return; }
+    if (d.mode) { setMode(d.mode); return; }
+    if (d.aex !== undefined) { setArith(ARITH_EX[Number(d.aex)][1]); return; }
+    if (d.ex !== undefined) { setForm(curDef().ex[Number(d.ex)][1]); render(); return; }
+    if (d.k) { insert(d.k); return; }
+    if (d.from) { var fe = $('hx-f-from'); if (fe) { fe.value = d.from; render(); } return; }
+    if (d.bit !== undefined) { var ed = $('hx-f-edit'), ix = $('hx-f-index'); if (ed && ix) { ed.value = 'toggle'; ix.value = d.bit; applyShow(); render(); } return; }
+    if (d.rm !== undefined) { var v = values(); v.splice(Number(d.rm), 1); setOps(v); render(); return; }
+    if (d.h !== undefined) { var h = hist[Number(d.h)]; if (h) restore(h); return; }
+    if (d.act === 'add') { var w = values(); w.push(''); setOps(w); inputs()[w.length - 1].focus(); render(); }
+    if (d.act === 'swap') { var s = values(); var t = s[0]; s[0] = s[1]; s[1] = t; setOps(s); render(); }
+    if (d.act === 'reset') { if (mode === 'arith') { setArith(DEF); inputs()[0].focus(); } else { buildForm(curDef().fields, null); render(); } }
+    if (d.act === 'save') keep();
+    if (d.act === 'hclear') { hist = []; saveHist(); drawHist(); }
+    if (d.act === 'copyall' && lastRes) copy(HexCalc.exportTxt(lastRes));
+    if (d.dl && lastRes) { var n = 'hex-calculator'; if (d.dl === 'txt') download(n + '.txt', 'text/plain', HexCalc.exportTxt(lastRes)); if (d.dl === 'csv') download(n + '.csv', 'text/csv', HexCalc.exportCsv(lastRes)); if (d.dl === 'json') download(n + '.json', 'application/json', HexCalc.exportJson(lastRes)); }
+  });
+  $('hx-tabs').addEventListener('keydown', function (e) {
+    var ids = ['arith', 'convert', 'signed', 'bitwise', 'tools'], k = ids.indexOf(mode);
+    if (e.key === 'ArrowRight') k = (k + 1) % ids.length; else if (e.key === 'ArrowLeft') k = (k + ids.length - 1) % ids.length; else return;
+    e.preventDefault(); setMode(ids[k]); $('hx-tabs').querySelector('[data-mode="' + ids[k] + '"]').focus();
+  });
+  box.addEventListener('input', render); box.addEventListener('focusin', track);
+  form.addEventListener('input', function () { applyShow(); render(); }); form.addEventListener('change', function () { applyShow(); render(); });
+  $('hx').addEventListener('keydown', function (e) { if (e.key === 'Enter' && e.target.tagName === 'INPUT' && e.target.type === 'text') { e.preventDefault(); keep(); } });
+  opSel.addEventListener('change', function () {
+    var v = values(); if (opSel.value === 'div' && v.length > 2) v = v.slice(0, 2); setOps(v); render();
+  });
+  padSel.addEventListener('change', render);
+  $('hx-tool').addEventListener('change', function () { setTool(this.value); });
+  ['hx-case', 'hx-prefix', 'hx-group'].forEach(function (id) { $(id).addEventListener('change', render); });
+  document.addEventListener('focusin', track);
+  loadHist(); drawHist(); setArith(DEF); setMode('arith');
+})();
+</script><script>try{if("serviceWorker"in navigator&&/^https?:/.test(location.protocol))navigator.serviceWorker.register("../../sw.js")}catch(e){}</script></body></html>

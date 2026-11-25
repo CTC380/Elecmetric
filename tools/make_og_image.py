@@ -28,11 +28,11 @@ plate = [80, 90, 80 + lw + 60, 90 + lh + 56]
 d.rounded_rectangle(plate, radius=26, fill=WHITE)
 img.paste(logo, (plate[0] + 30, plate[1] + 28))
 y = plate[3] + 48
-d.text((80, y), 'Electrical engineering calculators', font=mid, fill=WHITE)
-d.text((80, y + 76), 'Cable sizing, motors, transformers, protection,', font=small, fill=SOFT)
-d.text((80, y + 118), 'earthing and solar PV. Formulas and working shown.', font=small, fill=SOFT)
+d.text((80, y), 'Free online calculators & tools', font=mid, fill=WHITE)
+d.text((80, y + 76), 'Engineering, mathematics, unit conversion and', font=small, fill=SOFT)
+d.text((80, y + 118), 'everyday calculations. Formulas and working shown.', font=small, fill=SOFT)
 d.rounded_rectangle([80, 520, 860, 584], radius=10, outline=ORANGE, width=3)
-d.text((104, 534), 'V = I × R    P = √3 · V · I · cos φ', font=mono, fill=(255, 176, 102))
+d.text((104, 534), 'Calculate.  Convert.  Understand.', font=mono, fill=(255, 176, 102))
 # pulse mark, echoing the logo underline
 x0, yb = 900, 552
 pts = [(x0, yb), (x0 + 70, yb), (x0 + 92, yb - 34), (x0 + 116, yb + 30), (x0 + 140, yb - 18), (x0 + 156, yb), (W - 60, yb)]

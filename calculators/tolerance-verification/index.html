@@ -1,0 +1,757 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><style data-crumbs>.crumbs{font-size:13px;color:var(--muted);margin:0 0 10px}.crumbs ol{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:2px 0}.crumbs li+li::before{content:"\203A";margin:0 7px;opacity:.7}.crumbs a{color:inherit}.crumbs [aria-current]{color:var(--ink)}</style><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'"><title>Tolerance Verification Calculator | Pass/Fail Check Against Limits</title><meta name="description" content="Check a reading against a tolerance. Enter observed and reference values and a percentage or absolute tolerance to get the limits, pass or fail, and margin."><meta property="og:title" content="Tolerance Verification Calculator | Pass/Fail Check Against Limits"><meta property="og:description" content="Check a reading against a tolerance. Enter observed and reference values and a percentage or absolute tolerance to get the limits, pass or fail, and margin."><meta property="og:type" content="website"><meta property="og:site_name" content="Elecmetric"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Tolerance Verification Calculator | Pass/Fail Check Against Limits"><meta name="twitter:description" content="Check a reading against a tolerance. Enter observed and reference values and a percentage or absolute tolerance to get the limits, pass or fail, and margin."><meta name="theme-color" content="#043B79"><link rel="icon" href="../../icon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="../../apple-touch-icon.png"><link rel="manifest" href="../../manifest.webmanifest"><style>#ns .ns-card{padding:16px 16px 18px}#ns .ns-grid{display:grid;gap:12px;grid-template-columns:2fr 1fr 1fr 1fr}#ns .ns-l,#ns label.ns-l{display:block;font-weight:600;font-size:13px;margin:0 0 4px}#ns .ns-in,#ns .ns-sel{display:block;width:100%;box-sizing:border-box;font:500 18px/1.3 var(--mono);padding:10px 12px;min-height:48px;border-radius:8px;border:1px solid var(--line);background:var(--field);color:var(--ink)}#ns .ns-sel{font:500 15px var(--body)}#ns .ns-in:focus,#ns .ns-sel:focus{outline:2px solid var(--gold);outline-offset:1px}#ns .ns-in.bad{border-color:var(--err)}#ns .ns-msg{min-height:1.4em;margin:8px 0 4px;color:var(--err)}#ns .ns-act{display:flex;flex-wrap:wrap;gap:8px;margin:4px 0 10px}#ns .btn2,#ns .chipb{font:600 13px var(--body);color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:8px 12px;min-height:38px;cursor:pointer}#ns .btn2:hover,#ns .chipb:hover{background:var(--field)}#ns .chipb{border-radius:999px;padding:5px 12px;min-height:32px;font-weight:500;margin:3px 4px 3px 0}#ns .btn2:focus-visible,#ns .chipb:focus-visible{outline:2px solid var(--gold);outline-offset:2px}#ns .ns-try{margin:0 0 12px}#ns .ns-t td.r{font:600 17px var(--mono);color:var(--num);word-break:break-all;text-align:left}#ns .ns-t td.r small{display:block;font:500 12px var(--mono);color:var(--muted)}#ns .ns-t tr.cu td{background:var(--gold-fill)}#ns .ns-flag{font:600 11px var(--body);border-radius:999px;padding:1px 8px;margin-left:6px;border:1px solid var(--line);color:var(--muted);vertical-align:middle}#ns .ns-flag.r{color:var(--gold);border-color:var(--gold)}#ns .ns-facts{margin:12px 0 0;display:flex;flex-wrap:wrap;gap:6px 18px;font-size:14px}#ns .ns-facts b{font-family:var(--mono)}#ns ol.steps{font:14px/1.5 var(--mono);padding-left:26px}#ns h3{margin:14px 0 4px}.sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}code{font-family:var(--mono)}[hidden]{display:none!important}@media(max-width:700px){#ns .ns-grid{grid-template-columns:1fr 1fr}#ns .ns-f:first-child{grid-column:1/-1}}#nu .ns-card{padding:16px}#nu .ns-grid,#nu .ns-l,#nu .ns-in,#nu .ns-sel,#nu .ns-msg,#nu .ns-act,#nu .btn2,#nu .chipb,#nu .ns-try,#nu .ns-facts{}#nu .ns-grid{display:grid;gap:12px;grid-template-columns:2fr 1fr 1fr 1fr}#nu .ns-l,#nu label.ns-l{display:block;font-weight:600;font-size:13px;margin:0 0 4px}#nu .ns-in,#nu .ns-sel{display:block;width:100%;box-sizing:border-box;font:500 18px/1.3 var(--mono);padding:10px 12px;min-height:48px;border-radius:8px;border:1px solid var(--line);background:var(--field);color:var(--ink)}#nu .ns-sel{font:500 15px var(--body)}#nu .ns-in:focus,#nu .ns-sel:focus{outline:2px solid var(--gold);outline-offset:1px}#nu .ns-in.bad{border-color:var(--err)}#nu .ns-msg{min-height:1.4em;margin:8px 0 4px;color:var(--err)}#nu .ns-act{display:flex;gap:8px;margin:4px 0 10px}#nu .btn2,#nu .chipb{font:600 13px var(--body);color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:8px 12px;min-height:38px;cursor:pointer}#nu .btn2:hover,#nu .chipb:hover{background:var(--field)}#nu .chipb{border-radius:999px;padding:5px 12px;min-height:32px;font-weight:500;margin:3px 4px 3px 0}#nu .btn2:focus-visible,#nu .chipb:focus-visible{outline:2px solid var(--gold);outline-offset:2px}#nu .ns-try{margin:0 0 12px}#nu td.r{font:600 15px var(--mono);color:var(--num);word-break:break-all}#nu td small{display:block;font:500 12px var(--mono);color:var(--muted)}#nu .btn2{margin-left:8px;padding:2px 8px;min-height:28px}#nu tr.cu td{background:var(--gold-fill)}#nu .ns-flag{font:600 11px var(--body);border-radius:999px;padding:1px 8px;border:1px solid var(--gold);color:var(--gold)}#nu .ns-facts{margin:12px 0 0;display:flex;flex-wrap:wrap;gap:6px 18px;font-size:14px}#nu .ns-facts b{font-family:var(--mono)}#nu ol.steps{font:14px/1.5 var(--mono);padding-left:26px}#nu .bits{display:flex;flex-wrap:wrap;gap:4px;margin:14px 0 4px}#nu .bit{display:flex;flex-direction:column;align-items:center;min-width:40px;padding:4px 2px;border:1px solid var(--line);border-radius:6px;background:var(--field)}#nu .bit.sg{border-color:var(--gold);background:var(--gold-fill)}#nu .bit i{font:11px var(--mono);color:var(--muted);font-style:normal}#nu .bit b{font:700 20px var(--mono);color:var(--num)}#nu .bit em{font:10px var(--mono);color:var(--muted);font-style:normal}@media(max-width:700px){#nu .ns-grid{grid-template-columns:1fr 1fr}#nu .ns-f:first-child{grid-column:1/-1}}#nu .blg{grid-template-columns:2fr 1.4fr 2fr}#nu .blg2{grid-template-columns:1fr 1fr 1fr;margin-top:12px}#nu pre.al{font:600 15px/1.6 var(--mono);background:var(--field);border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin:6px 0 12px;overflow-x:auto;color:var(--num)}#nu .res .big{font:700 28px/1.3 var(--mono);color:var(--num);word-break:break-all}#nu .res .big .btn2{vertical-align:middle}#nu .res .sub{color:var(--muted);margin:2px 0 8px}#nu .res table{max-width:420px}#nu td.r{font:600 15px var(--mono);color:var(--num)}#nu .fls{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}#nu .fl{border:1px solid var(--line);background:var(--field);border-radius:8px;padding:6px 10px;font-size:14px}#nu .fl.on{border-color:var(--gold);background:var(--gold-fill)}#nu .fl small{display:block;color:var(--muted);font-size:12px}#nu h3{margin:14px 0 4px}@media(max-width:700px){#nu .blg,#nu .blg2{grid-template-columns:1fr}}#nu .fpg{grid-template-columns:2fr 1.3fr 1.3fr 1.6fr}#nu .res .big{font:700 28px/1.3 var(--mono);color:var(--num);word-break:break-all}#nu .res .sub{color:var(--muted);margin:2px 0 8px}#nu .ns-t{max-width:640px}#nu td.r{font:600 15px var(--mono);color:var(--num);word-break:break-all}#nu td.r small{display:block;font:500 12px var(--mono);color:var(--muted)}#nu td.r .btn2{margin-left:8px;padding:2px 8px;min-height:28px}#nu .lng{display:block;max-height:7.5em;overflow:auto;font-size:13px}#nu .bg{display:flex;flex-wrap:wrap;gap:3px;margin:10px 0 4px}#nu .gap{width:10px}#nu .bit{min-width:30px;min-height:44px;border-radius:6px;border:1px solid var(--line);background:var(--field);color:var(--ink);cursor:pointer;font:600 15px var(--mono);padding:2px 0;line-height:1.1}#nu .bit small{display:block;font:500 9px var(--mono);color:var(--muted)}#nu .bit.s{border-color:#c0392b}#nu .bit.e{border-color:#2d7dd2}#nu .bit.f{border-color:var(--gold)}#nu .bit.on{background:var(--gold-fill);color:var(--num)}#nu .bit:focus-visible{outline:2px solid var(--gold);outline-offset:2px}#nu .lg{display:flex;gap:12px;font-size:12px;margin:2px 0 10px}#nu .k{border-left:10px solid;padding-left:6px}#nu .k.s{border-color:#c0392b}#nu .k.e{border-color:#2d7dd2}#nu .k.f{border-color:var(--gold)}#nu .fls{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}#nu .fl{border:1px solid var(--line);background:var(--field);border-radius:8px;padding:6px 10px;font-size:14px}#nu .fl.on{border-color:var(--gold);background:var(--gold-fill)}#nu .fl small{display:block;color:var(--muted);font-size:12px}#nu h3{margin:14px 0 4px}#faq p,#tenth td,#nu ol.steps li,#nu .sub{overflow-wrap:anywhere}@media(max-width:700px){#nu .fpg{grid-template-columns:1fr}#nu .bit{min-width:22px;font-size:13px}}#nu .res .big{font:700 28px/1.3 var(--mono);color:var(--num);word-break:break-word;overflow-wrap:anywhere}#nu .res .big.wd{font:600 22px/1.4 var(--body)}#nu .res .sub{color:var(--muted);margin:6px 0;overflow-wrap:anywhere}#nu .nwg{grid-template-columns:1.6fr 1.2fr 1.4fr 1.2fr}#nu .res .btn2{vertical-align:middle;margin-left:8px}#nu td.r{font:600 15px var(--mono);color:var(--num)}#nu ol.steps li{overflow-wrap:anywhere}#nu h3{margin:14px 0 4px}@media(max-width:700px){#nu .nwg{grid-template-columns:1fr}}@media print{header,.fb,#related,#faq,.ns-try,.ns-act,.ns-card,#scales,#examples,footer{display:none!important}#nu .card:first-child{display:block!important}#nu .card:first-child>*{display:none}#nu .card:first-child #nu-out{display:block}}#nu pre.al{font:600 15px/1.6 var(--mono);background:var(--field);border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin:6px 0 12px;overflow-x:auto;color:var(--num)}.fmodes{display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px;margin:0 0 12px}.fmodes .ns-l{margin:0 4px 0 0}.fmodes .chip.on{background:var(--gold-fill);border-color:var(--gold);font-weight:700}.fmodes .chip.soon{opacity:.6;cursor:default}#ns [hidden]{display:none!important}#ns .pq{font:600 20px/1.3 var(--sans,inherit);margin:6px 0 10px;color:var(--text,inherit);overflow-wrap:anywhere}#ns .pcrow{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px 14px;margin:0 0 10px}#ns .pcpl{max-width:320px}#ns .tolrow{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px 14px;margin:0 0 10px}#ns select.ns-in{width:100%}#ns .chipb.on{background:var(--gold-fill);border-color:var(--gold);font-weight:700}#ns ul.fh{list-style:none;margin:0 0 10px;padding:0;display:flex;flex-wrap:wrap;gap:4px}#ns .res .big{display:flex;align-items:center;gap:12px;flex-wrap:wrap;font:700 34px var(--mono);color:var(--num);word-break:break-all}#ns .res .sub{font:500 15px var(--mono);color:var(--muted);margin:4px 0 10px;word-break:break-all}#ns .pf{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:8px 16px;margin:6px 0 10px}#ns .fp,p.fp{font:500 15px/1.6 var(--mono);overflow-wrap:anywhere}#ns .ns-warn{margin:6px 0 10px}#ns .ns-hint{color:var(--muted)}#ns td.r{font:600 15px var(--mono);word-break:break-all}#ns ol.steps li,#ns .tw td{overflow-wrap:anywhere}#ns .res .big{font-size:26px;word-break:normal;overflow-wrap:break-word}#ns .res .sub{word-break:normal;overflow-wrap:break-word}#ns .ns-t td.r{word-break:normal;overflow-wrap:break-word}@media print{#ns .ns-try,#ns .ns-act,#ns .fmodes,#ns #ns-pair input,#ns .pcpl{display:none}}</style><style>.fb textarea{width:100%;font:15px/1.5 var(--body);padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--field);color:var(--ink);resize:vertical}.fb textarea:focus{outline:2px solid var(--gold);outline-offset:1px}:root{--bg:#F1F6FC;--surface:#fff;--ink:#0A2347;--muted:#4B5F86;--line:#D3DFEF;--navy:#043B79;--on-navy:#FFFFFF;--gold:#B34A00;--gold-fill:#FFEFDC;--field:#F4F8FE;--err:#B3261E;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;--display:"Arial Narrow","Roboto Condensed",system-ui,sans-serif;--body:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--navy-2:#0A5BBB;--cyan:#0062DE;--num:#043B79;--orange:#FF7A00;--gold-grad:linear-gradient(135deg,#FFA43D 0%,#FF7A00 52%,#E85F00 100%);--hero:radial-gradient(1000px 360px at 90% -35%,rgba(0,98,222,.55),transparent 62%),radial-gradient(640px 240px at 0% 110%,rgba(255,122,0,.20),transparent 60%),linear-gradient(135deg,#032A58,#043B79 58%,#0A55A8);--r:14px;--sh-0:0 1px 2px rgba(4,35,80,.06);--sh-1:0 1px 2px rgba(4,35,80,.05),0 6px 18px rgba(4,35,80,.07);--sh-2:0 2px 4px rgba(4,35,80,.05),0 22px 44px -14px rgba(4,35,80,.24);--ring:0 0 0 3px rgba(0,98,222,.26);color-scheme:light dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}@media(prefers-color-scheme:dark){:root{--bg:#04122B;--surface:#0A2046;--ink:#EAF2FF;--muted:#A0B5DA;--line:#183868;--navy:#031B3F;--on-navy:#EAF2FF;--gold:#FF9A3D;--gold-fill:#3D2410;--field:#071B3C;--err:#FF8A80;--navy-2:#0B4A98;--cyan:#4DA3FF;--orange:#FF8A1F;--num:#FFB066;--sh-0:0 1px 2px rgba(0,0,0,.4);--sh-1:0 1px 2px rgba(0,0,0,.35),0 8px 22px rgba(0,0,0,.35);--sh-2:0 2px 4px rgba(0,0,0,.4),0 24px 48px -14px rgba(0,0,0,.7);--ring:0 0 0 3px rgba(77,163,255,.34)}}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 var(--body)}a{color:inherit}header{background:var(--navy);color:var(--on-navy);border-bottom:3px solid var(--gold)}.w{max-width:860px;margin:0 auto;padding:0 max(16px,env(safe-area-inset-left,0px))}header .w{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-block:12px;flex-wrap:wrap}header a{text-decoration:none;font:600 20px var(--display);letter-spacing:.04em;text-transform:uppercase}header nav a{font:500 13px var(--body);text-transform:none;letter-spacing:0;margin-left:14px;opacity:.9}main{padding-block:24px 56px}h1{font:600 32px/1.1 var(--display);margin:0 0 8px;text-wrap:balance}h2{font:600 20px var(--display);letter-spacing:.02em;margin:28px 0 8px;text-transform:uppercase}.lede{color:var(--muted);margin:0 0 16px;max-width:62ch}.card{background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:16px 18px;margin:12px 0}.ans{border-left:4px solid var(--gold);display:flex;flex-wrap:wrap;gap:6px 24px;align-items:baseline;justify-content:space-between}.big{font:600 28px var(--display)}.jump{margin:8px 0 4px}details.more{border:1px solid var(--line);border-radius:12px;background:var(--surface);margin:14px 0;padding:0 16px;box-shadow:var(--sh-0)}details.more>summary{cursor:pointer;list-style:none}details.more>summary::-webkit-details-marker{display:none}details.more>summary h2{margin:14px 0}details.more>summary h2::after{content:"+";margin-left:auto;color:var(--gold)}details.more[open]>summary h2::after{content:"\2212"}details.more[open]{padding-bottom:12px}@media print{.jump{display:none}}.btn{display:inline-block;background:var(--navy);color:var(--on-navy);padding:9px 16px;border-radius:4px;text-decoration:none;font-weight:600;border:1px solid var(--gold)}.chip{display:inline-block;margin:3px 6px 3px 0;padding:5px 12px;border:1px solid var(--line);border-radius:999px;background:var(--surface);text-decoration:none;font-size:14px}.chip:hover{border-color:var(--gold)}main li>a:only-child{display:inline-block;padding:3px 0}code,pre,.f,td.n{font-family:var(--mono)}.f{background:var(--field);border:1px solid var(--line);padding:10px 12px;border-radius:4px;overflow-x:auto;white-space:pre-wrap}ol.steps{padding-left:22px;font-family:var(--mono);font-size:13px}ol.steps li{margin:4px 0}.tw{overflow-x:auto}table{border-collapse:collapse;width:100%;background:var(--surface)}th,td{border:1px solid var(--line);padding:6px 10px;text-align:left}td.n{text-align:right}tr.me td{background:var(--gold-fill)}th{background:var(--field);font-weight:600}.note{color:var(--muted);font-size:13px}ul{padding-left:20px}footer{border-top:1px solid var(--line);color:var(--muted);font-size:13px;padding-block:16px}h3{font:600 16px var(--body);margin:18px 0 4px}h3+p{margin:0;max-width:68ch}.tres .tact{flex:0 0 100%;display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}@media print{.tact{display:none}}.tres .phasor{flex:0 0 100%;margin-top:12px}.phasor svg{display:block;width:100%;max-width:360px;height:auto;font:11px var(--body)}.arow{grid-column:1/-1;border:1px solid var(--line);border-radius:10px;padding:10px 12px 12px;margin:0}.arow[hidden]{display:none}.arow legend{font-weight:700;font-size:13px;padding:0 6px}.arow .tgrid{margin-top:2px}.arow-bar{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:8px;align-items:center}.arow-bar .note{margin:0}.arow .rm{margin-top:10px}.mgrid{margin-top:10px}.mgrid .mbody[hidden]{display:none}.mgrid .tgrid{margin-top:8px}.mgrid .fillm{margin-top:10px}.tres .rchart{flex:0 0 100%;margin-top:12px}.rchart svg{display:block;width:100%;height:auto;font:12px var(--body)}.rchart h3{margin:0 0 6px;font-size:14px}.tres .carry{flex:0 0 100%;margin-top:10px}.carry .chip{display:inline-block;margin:4px 6px 0 0}.arow .rm[hidden],#add-row[hidden]{display:none}@media print{.arow-bar,.arow .rm{display:none}}.tgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px 16px}.tgrid label{display:block;font-weight:600;font-size:13px;margin-bottom:4px}.trow{display:flex;gap:6px}.trow input,.trow select,.tgrid>div>select{font:16px var(--body);color:var(--ink);background:var(--field);border:1px solid var(--line);border-radius:4px;padding:8px;min-height:40px}.trow input{flex:1;min-width:0}.tgrid>div>select{width:100%}.hint{color:var(--muted);font-size:12px;margin-top:3px}.err{color:var(--err)}.tres{display:flex;flex-wrap:wrap;gap:6px 28px;align-items:baseline}.tres .big small{display:block;font:500 13px var(--body);color:var(--muted)}::selection{background:color-mix(in srgb,var(--gold) 30%,transparent)}body{background-image:radial-gradient(900px 520px at 100% -8%,color-mix(in srgb,var(--cyan) 10%,transparent),transparent 62%),radial-gradient(700px 420px at -5% 0%,color-mix(in srgb,var(--gold) 8%,transparent),transparent 60%);background-attachment:fixed;-webkit-font-smoothing:antialiased}header{position:relative;overflow:hidden;background:var(--hero);border-bottom:0;box-shadow:0 10px 30px -14px rgba(5,14,34,.6)}header::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);background-size:34px 34px;-webkit-mask-image:linear-gradient(100deg,#000,transparent 70%);mask-image:linear-gradient(100deg,#000,transparent 70%);pointer-events:none}header::after{content:"";position:absolute;left:0;right:0;bottom:0;height:18px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44 14'%3E%3Cpath d='M0 12.5H8L14 2l7 10.5 5-6 4 6H44' fill='none' stroke='%23FF7A00' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat right 36px bottom 3px/44px 14px,linear-gradient(90deg,#FF7A00,#FFA43D 55%,#FF7A00) no-repeat bottom/100% 4px;pointer-events:none}header .w{position:relative;z-index:1;padding-block:16px 22px}header .w>a.brand{display:block;line-height:0;letter-spacing:0;text-transform:none;background:#fff;border-radius:12px;padding:6px 14px;box-shadow:0 2px 12px rgba(2,16,42,.4),0 0 0 1px rgba(255,255,255,.5)}header .w>a.brand img{display:block;height:48px;width:auto}@media(max-width:600px){header .w>a.brand img{height:42px}}header a:focus-visible{outline-color:#FFB066}header nav a{color:#DCE5F5;opacity:1;padding:6px 12px;border-radius:999px;margin-left:6px;transition:background .15s,color .15s}header nav a:hover{background:rgba(255,255,255,.12);color:#FFB066}main.w{padding-top:36px;padding-bottom:64px}h1{font-size:36px;letter-spacing:.005em}h1::after{content:"";display:block;width:56px;height:3px;border-radius:3px;background:var(--gold-grad);margin-top:12px}h2{display:flex;align-items:center;gap:10px}h2::before{content:"";width:4px;height:.95em;border-radius:2px;background:var(--gold-grad);flex:none}h3{color:var(--gold)}.card{border-radius:14px;box-shadow:var(--sh-1)}.ans{position:relative;overflow:hidden;border-left:1px solid var(--line);padding-left:24px;background:linear-gradient(135deg,color-mix(in srgb,var(--gold) 12%,var(--surface)),var(--surface) 65%);border-color:color-mix(in srgb,var(--gold) 40%,var(--line));box-shadow:var(--sh-2)}.ans::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--gold-grad)}.big{color:var(--num);font-weight:700}.btn{border-radius:10px;border:0;background:var(--gold-grad);color:#0A2347;font-weight:700;box-shadow:var(--sh-1);transition:transform .15s,box-shadow .15s,filter .15s}.btn:hover{transform:translateY(-1px);box-shadow:var(--sh-2);filter:brightness(1.06)}.chip{box-shadow:var(--sh-0);transition:border-color .15s,background .15s,transform .15s,box-shadow .15s}.chip:hover{transform:translateY(-1px);box-shadow:var(--sh-1);border-color:var(--orange);background:color-mix(in srgb,var(--orange) 8%,var(--surface))}.f{border-radius:12px;border-left:3px solid var(--cyan)}.tw{border:1px solid var(--line);border-radius:12px;box-shadow:var(--sh-0)}.tw table{border:0}table{border-collapse:separate;border-spacing:0}th,td{border:0;border-bottom:1px solid var(--line)}tr:last-child td{border-bottom:0}th{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);background:var(--field)}tbody tr:hover td{background:color-mix(in srgb,var(--cyan) 7%,transparent)}tr.me td{background:var(--gold-fill)}.trow input,.trow select,.tgrid>div>select{border-radius:10px;transition:border-color .15s,box-shadow .15s}.trow select{background-color:color-mix(in srgb,var(--navy) 5%,var(--field))}.trow input:focus,.trow select:focus,.tgrid>div>select:focus{outline:0;border-color:var(--cyan);box-shadow:var(--ring)}.tgrid label{color:var(--ink)}a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--cyan);outline-offset:2px}footer{padding-block:20px}footer.mf{margin-top:24px;padding:0;border-top:0;background:var(--hero);color:#DCE5F5;font-size:13px;position:relative}footer.mf::before{content:"";display:block;height:4px;background:linear-gradient(90deg,#FF7A00,#FFA43D 55%,#FF7A00)}.mf-w{max-width:1100px;margin:0 auto;padding:36px max(16px,env(safe-area-inset-left,0px)) calc(24px + env(safe-area-inset-bottom,0px))}.mf-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:28px 24px}.mf-h{display:block;margin:0 0 12px;padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,.18);font:600 14px var(--display);letter-spacing:.06em;text-transform:uppercase;color:#FFB066}.mf-col ul{list-style:none;margin:0;padding:0}.mf-col li{margin:0}.mf-col a{display:inline-block;padding:4px 0;color:#DCE5F5;text-decoration:none}.mf-h a{padding:0;color:inherit}.mf-col a:hover,.mf-legal a:hover{color:#FFB066;text-decoration:underline}.mf a:focus-visible{outline:2px solid #FFB066;outline-offset:2px;border-radius:2px}.mf-legal{margin-top:28px;padding-top:18px;border-top:1px solid rgba(255,255,255,.18);color:#A9BADB;max-width:80ch}.mf-legal a{color:#DCE5F5}@media(max-width:980px){.mf-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(max-width:600px){.mf-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.mf-col a{padding:7px 0}}@media print{footer.mf{background:none;color:inherit}footer.mf::before,.mf-grid{display:none}.mf-legal{border:0;color:inherit}}@media(prefers-reduced-motion:reduce){.btn,.chip{transition:none;transform:none!important}}@media print{header{background:none;box-shadow:none}header::before,header::after,.ans::before,h1::after,h2::before{display:none}header .w>a.brand{box-shadow:none;padding:0}body{background-image:none}.card,.ans,.tw{box-shadow:none}.ans{padding-left:18px}}.totop{position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:60;min-height:44px;padding:0 18px;border:0;border-radius:999px;background:linear-gradient(135deg,#FFA43D,#FF7A00 52%,#E85F00);color:#0A2347;font:700 14px system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;box-shadow:0 2px 4px rgba(4,35,80,.2),0 14px 30px -8px rgba(4,35,80,.45);cursor:pointer;opacity:0;transform:translateY(12px);pointer-events:none;transition:opacity .2s,transform .2s,bottom .2s}.totop.on{opacity:1;transform:none;pointer-events:auto}.totop:hover{filter:brightness(1.06)}.totop:focus-visible{outline:2px solid #fff;outline-offset:2px;box-shadow:0 0 0 4px #0062DE}@media(prefers-reduced-motion:reduce){.totop{transition:none}}@media print{.totop{display:none}}.vstat{padding:12px 16px;border-left:4px solid var(--muted,#6b7a90)}.vstat.v-verified{border-left-color:#1f9d57}.vstat.v-reference{border-left-color:#2a7fd4}.vstat.v-indicative{border-left-color:#c98a10}</style><style id="em-ux1">.ns-f:has(>.mseg){grid-column:1/-1}main.w{max-width:1080px}.ns-card .mseg{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 4px}.ns-card .mseg button{flex:1 1 150px;font:600 14px var(--body);color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px;min-height:46px;cursor:pointer;text-align:center;transition:background .15s,border-color .15s}.ns-card .mseg button:hover{border-color:var(--orange);background:var(--field)}.ns-card .mseg button[aria-checked="true"]{background:var(--navy);color:var(--on-navy);border-color:var(--navy);box-shadow:inset 0 -3px 0 var(--orange)}.ns-card .mseg button:focus-visible,.ns-try .try-tabs button:focus-visible{outline:2px solid var(--cyan);outline-offset:2px}.ns-card .ns-try:not([role]){margin:14px 0 0;padding-top:12px;border-top:1px solid var(--line)}.ns-try .try-h{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;margin-bottom:6px}.ns-try .try-h .ns-l{margin:0}.ns-try .try-tabs{display:flex;flex-wrap:wrap;gap:6px}.ns-try .try-tabs button{font:600 12px var(--body);color:var(--muted);background:transparent;border:0;border-bottom:2px solid transparent;padding:6px 8px;cursor:pointer}.ns-try .try-tabs button[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--orange)}.ns-try .chipb[hidden]{display:none}@media(max-width:700px){.ns-card .mseg button{flex:1 1 calc(50% - 8px)}}</style><style id="rp-css">#rp-card .rp-form{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px 12px;margin:0 0 8px}#rp-card textarea.ns-in{width:100%;box-sizing:border-box;font:inherit}.rp-sheet{font-size:14px;line-height:1.45}.rp-prev{border:1px solid var(--line,#ccc);border-radius:8px;padding:14px;margin-top:10px;background:#fff;color:#111}.rp-sheet h2,.rp-sheet h3,.rp-sheet h4,.rp-sheet p{color:#111}.rp-sheet h3{font-size:15px;margin:14px 0 4px;border-bottom:1px solid #1B3A6B;padding-bottom:2px}.rp-sheet h4{font-size:13px;margin:10px 0 4px}.rp-h{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;border-bottom:3px solid #C9A84C;padding-bottom:8px;margin-bottom:8px}.rp-brand{font-weight:800;letter-spacing:.12em;color:#1B3A6B}.rp-fl{font-size:12px;margin:0 0 4px;color:#1B3A6B}.rp-t h2{margin:0;font-size:20px}.rp-t p{margin:2px 0 0}.rp-id{text-align:right;font-size:12px}.rp-sheet table{width:100%;border-collapse:collapse;margin:4px 0}.rp-sheet th,.rp-sheet td{border:1px solid #bbb;padding:4px 7px;text-align:left;vertical-align:top;color:#111;background:#fff;font-size:13px;overflow-wrap:anywhere}.rp-sheet th{background:#eef1f7;width:22%}.rp-t2 th{width:auto}.rp-res{font-size:20px;font-weight:700;margin:4px 0;overflow-wrap:anywhere}.rp-steps{padding-left:20px;margin:4px 0}.rp-steps li{margin:3px 0;overflow-wrap:anywhere}.rp-lim,.rp-notes{font-size:12px}.rp-f{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;border-top:1px solid #bbb;margin-top:14px;padding-top:6px;font-size:11px;color:#444}#rp-sheet{display:none}@media print{body.rp-printing>*:not(#rp-sheet){display:none!important}body.rp-printing #rp-sheet{display:block!important;padding:0;margin:0}.rp-sheet th{-webkit-print-color-adjust:exact;print-color-adjust:exact}.rp-h{-webkit-print-color-adjust:exact;print-color-adjust:exact}}</style></head><body><header><div class="w"><a class="brand" href="../../"><img src="../../logo.png" alt="Elecmetric" width="160" height="40"></a><nav><a href="../">All engineering calculators</a><a href="../../pages/index.html">Conversions</a><a href="../../index.html#verification">How it is verified</a></nav></div></header><main class="w"><nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="../../">Home</a></li><li><a href="../../categories/engineering-technology/">Engineering &amp; Technology</a></li><li><a href="../../categories/engineering-technology/#electrical-engineering">Electrical Engineering</a></li><li><span aria-current="page">Tolerance Verification Calculator</span></li></ol></nav><h1>Tolerance Verification Calculator</h1><p class="lede">Enter an observed (measured) value, a reference value and the tolerance you want to check against. The page gives the lower and upper limits, whether the reading is within them, the margin to each limit and how much of the tolerance the error uses. The tolerance can be a percentage of the reference or an absolute value, the same on both sides or different. Every answer is exact. Calculate. Convert. Understand.</p><nav class="jump" aria-label="On this page"><a class="chip" href="#formula">The tolerance formulas</a><a class="chip" href="#verdicts">Within, on a limit and outside</a><a class="chip" href="#worked">Worked example</a><a class="chip" href="#cases">More worked cases</a><a class="chip" href="#negative">Negative and zero references</a><a class="chip" href="#faq">FAQ</a><a class="chip" href="#related">Related</a></nav><div id="ns"><nav class="fmodes" aria-label="Percent Error Calculator modes"><span class="ns-l">Percent Error Calculator</span><a class="chip" href="../percent-error-calculator/">Mode 01 · Absolute Percent Error</a><a class="chip" href="../signed-error-analysis/">Mode 02 · Signed Error Analysis</a><a class="chip on" href="../tolerance-verification/" aria-current="page">Mode 03 · Tolerance Verification</a><a class="chip" href="../batch-measurement-analysis/">Mode 04 · Batch Measurement Analysis</a><a class="chip" href="../engineering-measurement-analysis/">Mode 05 · Engineering Measurement Analysis</a><a class="chip" href="../percentage-error-calculator/">Percentage Calculator, Mode 04 (reverse and tolerance)</a></nav><section class="card ns-card"><p class="pq" id="ns-q" aria-live="polite">Is an observed value of 225 V within a tolerance of ±5% of a reference of 230 V?</p><div class="pcrow" id="ns-pair"><div class="ns-f"><label id="ns-lx" for="ns-x" class="ns-l">Observed / measured value</label><input id="ns-x" class="ns-in" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" aria-describedby="ns-err" value="225" placeholder="225"></div><div class="ns-f"><label id="ns-ly" for="ns-y" class="ns-l">Accepted / reference value</label><input id="ns-y" class="ns-in" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" aria-describedby="ns-err" value="230" placeholder="230"></div><div class="ns-f"><label for="ns-u" class="ns-l">Unit (label only)</label><input id="ns-u" class="ns-in" type="text" list="ns-ul" maxlength="16" autocomplete="off" spellcheck="false" aria-describedby="ns-err" value="V" placeholder="V"><datalist id="ns-ul"><option value="V"><option value="mV"><option value="kV"><option value="A"><option value="mA"><option value="Ω"><option value="kΩ"><option value="W"><option value="kW"><option value="kVA"><option value="kWh"><option value="Hz"><option value="lx"><option value="cd"><option value="%"><option value="°C"><option value="m"><option value="mm"></datalist></div></div><div class="tolrow"><div class="ns-f"><label for="ns-basis" class="ns-l">Tolerance basis</label><select id="ns-basis" class="ns-in"><option value="pct" selected>Percentage of the reference</option><option value="abs">Absolute value, in the unit of the readings</option></select></div><div class="ns-f"><label for="ns-shape" class="ns-l">Tolerance shape</label><select id="ns-shape" class="ns-in"><option value="sym" selected>Symmetrical, plus and minus the same</option><option value="asym">Asymmetrical, lower and upper tolerance</option></select></div><div class="ns-f" id="ns-gt"><label id="ns-lt" for="ns-t" class="ns-l">Tolerance, ± percent of the reference</label><input id="ns-t" class="ns-in" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" aria-describedby="ns-err" value="5" placeholder="5"></div><div class="ns-f" id="ns-gl" hidden><label id="ns-ll" for="ns-tl" class="ns-l">Lower tolerance, percent below the reference</label><input id="ns-tl" class="ns-in" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" aria-describedby="ns-err" value="" placeholder="6"></div><div class="ns-f" id="ns-gu" hidden><label id="ns-lu" for="ns-tu" class="ns-l">Upper tolerance, percent above the reference</label><input id="ns-tu" class="ns-in" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" aria-describedby="ns-err" value="" placeholder="10"></div></div><div class="ns-f pcpl"><label for="ns-pl" class="ns-l">Decimal places (percentages)</label><select id="ns-pl" class="ns-in"><option value="auto" selected>Automatic</option><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="8">8</option><option value="10">10</option></select></div><p class="note ns-msg" id="ns-err" role="status"></p><div class="ns-act"><button type="button" class="btn2" data-act="reset">Reset</button></div><div class="ns-try"><span class="ns-l">Try</span> <button type="button" class="chipb" data-ex="{&quot;x&quot;:&quot;225&quot;,&quot;y&quot;:&quot;230&quot;,&quot;u&quot;:&quot;V&quot;,&quot;t&quot;:&quot;5&quot;,&quot;b&quot;:&quot;pct&quot;,&quot;s&quot;:&quot;sym&quot;,&quot;tl&quot;:&quot;&quot;,&quot;tu&quot;:&quot;&quot;}">225 V, 230 V ±5%</button><button type="button" class="chipb" data-ex="{&quot;x&quot;:&quot;242&quot;,&quot;y&quot;:&quot;230&quot;,&quot;u&quot;:&quot;V&quot;,&quot;t&quot;:&quot;5&quot;,&quot;b&quot;:&quot;pct&quot;,&quot;s&quot;:&quot;sym&quot;,&quot;tl&quot;:&quot;&quot;,&quot;tu&quot;:&quot;&quot;}">242 V, 230 V ±5% (fails)</button><button type="button" class="chipb" data-ex="{&quot;x&quot;:&quot;241.5&quot;,&quot;y&quot;:&quot;230&quot;,&quot;u&quot;:&quot;V&quot;,&quot;t&quot;:&quot;5&quot;,&quot;b&quot;:&quot;pct&quot;,&quot;s&quot;:&quot;sym&quot;,&quot;tl&quot;:&quot;&quot;,&quot;tu&quot;:&quot;&quot;}">241.5 V, on the limit</button><button type="button" class="chipb" data-ex="{&quot;x&quot;:&quot;9.87&quot;,&quot;y&quot;:&quot;10&quot;,&quot;u&quot;:&quot;kΩ&quot;,&quot;t&quot;:&quot;1&quot;,&quot;b&quot;:&quot;pct&quot;,&quot;s&quot;:&quot;sym&quot;,&quot;tl&quot;:&quot;&quot;,&quot;tu&quot;:&quot;&quot;}">9.87 kΩ, 10 kΩ ±1%</button><button type="button" class="chipb" data-ex="{&quot;x&quot;:&quot;9.8&quot;,&quot;y&quot;:&quot;10&quot;,&quot;u&quot;:&quot;kW&quot;,&quot;b&quot;:&quot;abs&quot;,&quot;s&quot;:&quot;sym&quot;,&quot;t&quot;:&quot;0.5&quot;,&quot;tl&quot;:&quot;&quot;,&quot;tu&quot;:&quot;&quot;}">9.8 kW, 10 kW ±0.5 kW</button><button type="button" class="chipb" data-ex="{&quot;x&quot;:&quot;255&quot;,&quot;y&quot;:&quot;230&quot;,&quot;u&quot;:&quot;V&quot;,&quot;b&quot;:&quot;pct&quot;,&quot;s&quot;:&quot;asym&quot;,&quot;t&quot;:&quot;&quot;,&quot;tl&quot;:&quot;6&quot;,&quot;tu&quot;:&quot;10&quot;}">255 V, 230 V −6% / +10%</button><button type="button" class="chipb" data-ex="{&quot;x&quot;:&quot;0.2&quot;,&quot;y&quot;:&quot;0&quot;,&quot;u&quot;:&quot;V&quot;,&quot;b&quot;:&quot;abs&quot;,&quot;s&quot;:&quot;sym&quot;,&quot;t&quot;:&quot;0.5&quot;,&quot;tl&quot;:&quot;&quot;,&quot;tu&quot;:&quot;&quot;}">0.2 V, reference 0 V, ±0.5 V</button></div><div id="ns-out" aria-live="polite"></div><p class="sr-only" id="ns-note" role="status" aria-live="polite"></p><noscript><p class="note">This tool needs JavaScript. Nothing is sent anywhere.</p></noscript></section><section class="card"><h2>Working</h2><div id="ns-steps"></div></section><section class="card"><h2>History</h2><div id="ns-hist"></div></section></div><section id="result"><h2>What the calculator returns, for 225 V against 230 V with a tolerance of ±5%</h2><div class="tw" tabindex="0" role="region" aria-label="Scrollable table: Parameter, Result"><table><thead><tr><th>Parameter</th><th>Result</th></tr></thead><tbody><tr><td>Observed value</td><td>225 V</td></tr><tr><td>Reference value</td><td>230 V</td></tr><tr><td>Tolerance entered</td><td>Percentage of reference: ±5%</td></tr><tr><td>Permitted deviation</td><td>±5% of the reference</td></tr><tr><td>Lower limit</td><td>218.5 V</td></tr><tr><td>Upper limit</td><td>241.5 V</td></tr><tr><td>Permitted range</td><td>218.5 V to 241.5 V</td></tr><tr><td>Signed error</td><td>−5 V</td></tr><tr><td>Measured deviation</td><td>≈ −2.173913%</td></tr><tr><td>Assessment</td><td>Within the entered tolerance</td></tr><tr><td>Margin to lower limit</td><td>+6.5 V</td></tr><tr><td>Margin to upper limit</td><td>+16.5 V</td></tr><tr><td>Nearest limit</td><td>Lower limit, margin +6.5 V</td></tr><tr><td>Tolerance used</td><td>≈ 43.478261%</td></tr><tr><td>Scope of this result</td><td>Entered tolerance only</td></tr></tbody></table></div><p>The permitted range is 218.5 V to 241.5 V. The reading of 225 V is inside it, with +6.5 V to spare above the lower limit. The measured deviation is ≈ −2.173913% against a permitted deviation of ±5%.</p></section><section id="entered"><h2>The tolerance is the one you enter</h2><p>This page checks a reading against the limits you type in. It does not know any standard, datasheet or procedure, so it does not say that an instrument or a product is compliant, calibrated or approved. A pass means the reading is inside the tolerance entered above, nothing more. Take the tolerance from the document that applies to your work, for example the instrument specification or the acceptance criteria of the test procedure.</p></section><section id="formula"><h2>The tolerance formulas</h2><p class="fp">Lower limit L = Reference − lower tolerance</p><p class="fp">Upper limit U = Reference + upper tolerance</p><p class="fp">Accepted when L ≤ Observed ≤ U</p><p>With a percentage tolerance, each tolerance is the percentage of the size of the reference: |Reference| × Tolerance% ÷ 100. With an absolute tolerance it is the value you enter, in the same unit as the readings. For a symmetrical tolerance the lower and upper tolerances are equal. The limits are included: a reading exactly on a limit is accepted. The margin to the lower limit is Observed − L and the margin to the upper limit is U − Observed. A negative margin means the reading is beyond that limit. The tolerance used is the size of the signed error divided by the tolerance on the side of the reference where the error lies, so anything above 100% is outside.</p></section><section id="verdicts"><h2>Within, on a limit and outside</h2><div class="tw" tabindex="0" role="region" aria-label="Scrollable table: Observed, Reference and tolerance, Permitted range, Assessment, Margin to nearest limit"><table><thead><tr><th>Observed</th><th>Reference and tolerance</th><th>Permitted range</th><th>Assessment</th><th>Margin to nearest limit</th></tr></thead><tbody><tr><td>225 V</td><td>230 V, ±5%</td><td>218.5 V to 241.5 V</td><td>Within the entered tolerance</td><td>+6.5 V</td></tr><tr><td>241.5 V</td><td>230 V, ±5%</td><td>218.5 V to 241.5 V</td><td>Within the entered tolerance (on a limit)</td><td>0 V</td></tr><tr><td>242 V</td><td>230 V, ±5%</td><td>218.5 V to 241.5 V</td><td>Outside the entered tolerance: above the upper limit</td><td>−0.5 V</td></tr></tbody></table></div><p>A reading on a limit passes, because the limits are included. One smallest step beyond a limit fails. If your procedure treats the limit as a fail, enter a slightly smaller tolerance or compare the margin to zero yourself.</p></section><section id="worked"><h2>Worked example: 225 V against a reference of 230 V, ±5%</h2><div class="tw" tabindex="0" role="region" aria-label="Scrollable table: Step, Working"><table><thead><tr><th>Step</th><th>Working</th></tr></thead><tbody><tr><td>Step 1</td><td>The signed error is the observed value minus the reference: 225 − 230 = −5 V.</td></tr><tr><td>Step 2</td><td>The tolerance is 5% of the reference: 230 × 5 ÷ 100 = 11.5 V, in both directions.</td></tr><tr><td>Step 3</td><td>The lower limit is 230 − 11.5 = 218.5 V and the upper limit is 230 + 11.5 = 241.5 V. The permitted range is 218.5 V to 241.5 V.</td></tr><tr><td>Step 4</td><td>Compare: 218.5 V ≤ 225 V ≤ 241.5 V is true (the limits are included), so the observed value is within the entered tolerance.</td></tr><tr><td>Step 5</td><td>The measured deviation is (−5) ÷ 230 × 100 = ≈ −2.173913% against a permitted deviation of ±5% of the reference.</td></tr><tr><td>Step 6</td><td>The margin to the lower limit is +6.5 V and to the upper limit +16.5 V (positive is inside the limit, negative is beyond it). The error uses ≈ 43.478261% of the tolerance on its side of the reference.</td></tr></tbody></table></div></section><section id="cases"><h2>More worked cases</h2><div class="tw" tabindex="0" role="region" aria-label="Scrollable table: Case, Permitted range, Assessment, Tolerance used"><table><thead><tr><th>Case</th><th>Permitted range</th><th>Assessment</th><th>Tolerance used</th></tr></thead><tbody><tr><td>9.87 kΩ against 10 kΩ, ±1%</td><td>9.9 kΩ to 10.1 kΩ</td><td>Outside the entered tolerance: below the lower limit</td><td>130%</td></tr><tr><td>9.9 kΩ against 10 kΩ, ±1%</td><td>9.9 kΩ to 10.1 kΩ</td><td>Within the entered tolerance (on a limit)</td><td>100%</td></tr><tr><td>9.8 kW against 10 kW, ±0.5 kW (absolute)</td><td>9.5 kW to 10.5 kW</td><td>Within the entered tolerance</td><td>40%</td></tr><tr><td>255 V against 230 V, −6% / +10%</td><td>216.2 V to 253 V V</td><td>Outside the entered tolerance: above the upper limit</td><td>≈ 108.695652%</td></tr><tr><td>0.2 V against 0 V, ±0.5 V (absolute)</td><td>−0.5 V to 0.5 V</td><td>Within the entered tolerance</td><td>40%</td></tr><tr><td>−9 V against −10 V, ±20%</td><td>−12 V to −8 V V</td><td>Within the entered tolerance</td><td>50%</td></tr><tr><td>5 V against 0 V, ±5%</td><td>not defined</td><td>a percentage tolerance needs a reference that is not 0</td><td>—</td></tr></tbody></table></div><p class="note">The unit is a label. Nothing is converted, so enter the readings, the reference and an absolute tolerance in the same unit.</p></section><section id="asym"><h2>Symmetrical and asymmetrical tolerances</h2><p>A symmetrical tolerance is the same below and above the reference, such as ±5%. An asymmetrical tolerance has a different size on each side, such as −6% / +10%. Enter the two sizes without a sign: the lower tolerance is how far below the reference the limit lies, the upper tolerance how far above. A one-sided tolerance, such as 0% below and 5% above, is an asymmetrical tolerance with a size of 0 on one side. A tolerance of 0 accepts only a value equal to the reference on that side.</p></section><section id="negative"><h2>Negative and zero references</h2><p>With a percentage tolerance the page uses the size of the reference. For −10 V and ±20% the tolerance is 2 V, so the range is −12 V to −8 V V and −9 V is inside it. A percentage tolerance needs a reference that is not 0, because a percentage of 0 has no size. For a reading that should be zero, such as an offset, use an absolute tolerance: the limits are the reference minus and plus the value, and the percentage deviation is shown as not defined.</p></section><section id="engineering"><h2>Where engineers use a tolerance check</h2><div class="tw" tabindex="0" role="region" aria-label="Scrollable table: Engineering use, Reading, reference and tolerance, Assessment"><table><thead><tr><th>Engineering use</th><th>Reading, reference and tolerance</th><th>Assessment</th></tr></thead><tbody><tr><td>Supply voltage against nominal</td><td>225 V, 230 V, ±5%</td><td>Within the entered tolerance</td></tr><tr><td>Resistor against its marked value</td><td>9.87 kΩ, 10 kΩ, ±1%</td><td>Outside the entered tolerance: below the lower limit</td></tr><tr><td>Power meter against a reference load</td><td>9.8 kW, 10 kW, ±0.5 kW</td><td>Within the entered tolerance</td></tr><tr><td>Voltage with a wider upper band</td><td>255 V, 230 V, −6% / +10%</td><td>Outside the entered tolerance: above the upper limit</td></tr><tr><td>Zero offset of an instrument</td><td>0.2 V, 0 V, ±0.5 V</td><td>Within the entered tolerance</td></tr><tr><td>Clamp meter against a calibrated source</td><td>98.5 A, 100 A, ±1%</td><td>Outside the entered tolerance: below the lower limit</td></tr><tr><td>Lux meter against a standard lamp</td><td>480 lx, 500 lx, ±5%</td><td>Within the entered tolerance</td></tr></tbody></table></div><p>These are plain arithmetic on the numbers you enter. The page does not know what a quantity is and applies no standard.</p></section><section id="notaccuracy"><h2>Tolerance is not error, uncertainty or accuracy</h2><div class="tw" tabindex="0" role="region" aria-label="Scrollable table: Term, Meaning, Where it comes from"><table><thead><tr><th>Term</th><th>Meaning</th><th>Where it comes from</th></tr></thead><tbody><tr><td>Measurement error</td><td>Observed value minus reference value</td><td>The readings (Modes 01 and 02)</td></tr><tr><td>Tolerance</td><td>The permitted limits around a reference</td><td>A specification, datasheet, procedure or your own requirement. You enter it here</td></tr><tr><td>Measurement uncertainty</td><td>The dispersion of values that could reasonably be attributed to the measurand</td><td>The measurement process. Not applied on this page</td></tr><tr><td>Accuracy, repeatability, conformity</td><td>Closeness of agreement, spread of repeated readings, and a statement that a requirement is met</td><td>Defined criteria and a defined method</td></tr></tbody></table></div><p>A pass here does not mean that the measurement was made with a stated uncertainty, and a reading close to a limit may not be decisive once the uncertainty of the measurement is considered. Some procedures apply a guard band for that reason. This page does not, and it does not say what uncertainty applies to your reading. A tolerance used of 43% does not mean 43% accuracy.</p></section><section id="faq"><h2>Questions</h2><h3>What is a tolerance check?</h3><p>It compares an observed value with limits set around a reference value. For 225 V against 230 V with ±5% the limits are 218.5 V to 241.5 V, so the reading passes.</p><h3>How are the limits calculated?</h3><p>With a percentage tolerance, the lower limit is the reference minus its percentage and the upper limit is the reference plus its percentage. For 230 V and 5%: 230 ± 230 × 5 ÷ 100 = 218.5 V to 241.5 V. With an absolute tolerance the value you enter is added and subtracted.</p><h3>Is a reading exactly on the limit a pass?</h3><p>Yes. The limits are included, so 241.5 V against 230 V ±5% is within the tolerance and is flagged as on a limit.</p><h3>Does a pass mean the instrument is compliant or calibrated?</h3><p>No. A pass means the reading is inside the tolerance you entered. The page does not read any standard or datasheet and does not apply measurement uncertainty.</p><h3>What is the margin?</h3><p>The margin to a limit is the distance from the reading to that limit, positive when the reading is inside and negative when it is beyond. The nearest limit is the one with the smaller margin.</p><h3>What does tolerance used mean?</h3><p>It is the size of the error divided by the tolerance on the side where the error lies, as a percentage. For 225 V against 230 V ±5% the error of 5 V is ≈ 43.478261% of the 11.5 V tolerance.</p><h3>Can I enter a different tolerance below and above, or as a value instead of a percentage?</h3><p>Yes. Choose the asymmetrical shape and enter the lower and upper tolerance as sizes, without a minus sign. <strong class="sub">Can I enter the tolerance as a value instead of a percentage?</strong> Yes. Choose the absolute basis and enter the tolerance in the unit of the readings. The page shows the same tolerance as a percentage of the reference.</p><h3>What if the reference is 0?</h3><p>A percentage tolerance is refused, because a percentage of 0 has no size. An absolute tolerance is accepted, and the percentage deviation is not shown.</p><h3>Does the unit change the answer?</h3><p>No. The unit is a label shown beside the values. The page does not convert between units, so enter everything in the same unit.</p><h3>Is anything sent to a server?</h3><p>No. Everything runs in your browser. The history of your last ten calculations is kept only in this browser and can be cleared with one button.</p></section><section id="related"><h2>Related Calculators and Tools</h2><p><a class="chip" href="../percent-error-calculator/">Percent Error Calculator, Mode 01 (absolute percent error)</a><a class="chip" href="../signed-error-analysis/">Percent Error Calculator, Mode 02 (signed error analysis)</a><a class="chip" href="../percentage-error-calculator/">Percentage Calculator, Mode 04 (find the reading or the reference, tolerance)</a><a class="chip" href="../calibration-error/">Calibration error</a><a class="chip" href="../batch-measurement-analysis/">Batch Measurement Analysis Calculator</a><a class="chip" href="../engineering-percentage-calculator/">Engineering Percentage Calculator</a><a class="chip" href="../measurement-uncertainty/">Measurement Uncertainty Calculator</a></p></section><!--rp:start--><section class="card" id="rp-card" aria-labelledby="rp-h"><h2 id="rp-h">Calculation report</h2><p class="note">Turn the current result into a printable sheet with the input, the result, the formula, the working, the reference quantity and a report number. Fill in the details you want on it, then print or save it as a PDF, copy it as text or save a text file. Nothing is sent anywhere.</p><div class="rp-form"><div><label class="ns-l" for="rp-proj">Project</label><input id="rp-proj" class="ns-in" type="text" maxlength="120" autocomplete="off"></div><div><label class="ns-l" for="rp-ref">Document reference</label><input id="rp-ref" class="ns-in" type="text" maxlength="120" autocomplete="off"></div><div><label class="ns-l" for="rp-by">Prepared by</label><input id="rp-by" class="ns-in" type="text" maxlength="120" autocomplete="off"></div><div><label class="ns-l" for="rp-chk">Checked by</label><input id="rp-chk" class="ns-in" type="text" maxlength="120" autocomplete="off"></div></div><div><label class="ns-l" for="rp-note">Notes</label><textarea id="rp-note" class="ns-in" rows="2" maxlength="1000"></textarea></div><div class="ns-act"><button type="button" class="btn2" data-rp="print">Print or save as PDF</button><button type="button" class="btn2" data-rp="copy">Copy as text</button><button type="button" class="btn2" data-rp="save">Save as .txt</button></div><p class="note ns-msg" id="rp-msg" role="status" aria-live="polite"></p><div id="rp-prev" class="rp-sheet rp-prev" hidden></div></section><!--rp:end--></main><section class="w fb" aria-labelledby="fb-h"><h2 id="fb-h">Tell us how to improve this page</h2><textarea id="fb-t" rows="4" maxlength="1500" placeholder="Your message ..." aria-label="Tell us how to improve this page"></textarea><p><button type="button" class="btn" id="fb-b">Email your suggestion</button> <button type="button" class="btn" id="sh-b">Share this page</button> <span class="note" id="fb-n">This opens your email app. Nothing is sent until you press send.</span></p></section><script>(function(){var b=document.getElementById("fb-b");if(!b)return;b.onclick=function(){var t=document.getElementById("fb-t").value.trim(),n=document.getElementById("fb-n");if(!t){n.textContent="Please write a message first.";return}location.assign("mailto:"+"elecmetrics@gmail.com"+"?subject="+encodeURIComponent("Elecmetric feedback: "+document.title)+"&body="+encodeURIComponent(t+"\n\nPage: "+location.href))}})();</script><script>(function(){var s=document.getElementById("sh-b");if(!s)return;s.onclick=function(){var u=location.href,t=document.title,n=document.getElementById("fb-n");if(navigator.share){navigator.share({title:t,url:u}).catch(function(){});return}if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(u).then(function(){n.textContent="Link copied."},function(){n.textContent="Copy this address: "+u})}else{n.textContent="Copy this address: "+u}}})();</script><footer class="mf"><div class="mf-w"><div class="mf-grid" role="navigation" aria-label="Site map"><div class="mf-col"><p class="mf-h"><a href="../../calculators/">Calculators</a></p><ul><li><a href="../../calculators/electrical-fundamentals/">Electrical Fundamentals</a></li><li><a href="../../calculators/power-and-energy/">Power and Energy</a></li><li><a href="../../calculators/cable-engineering/">Cable Engineering</a></li><li><a href="../../calculators/motor-engineering/">Motor Engineering</a></li><li><a href="../../calculators/transformer-engineering/">Transformer Engineering</a></li><li><a href="../../calculators/electrical-protection/">Electrical Protection</a></li><li><a href="../../calculators/power-systems/">Power Systems</a></li><li><a href="../../calculators/earthing-and-grounding/">Earthing and Grounding</a></li><li><a href="../../calculators/renewable-energy/">Renewable Energy</a></li><li><a href="../../calculators/airport-agl-engineering/">Airport and AGL Engineering</a></li><li><a href="../../calculators/electronics-and-instrumentation/">Electronics and Instrumentation</a></li><li><a href="../../calculators/lighting-and-facilities/">Lighting and Facilities</a></li><li><a href="../../calculators/engineering-mathematics/">Engineering Mathematics</a></li></ul></div><div class="mf-col"><p class="mf-h"><a href="../../calculators/">Popular calculators</a></p><ul><li><a href="../../calculators/cable-size/">Cable Size</a></li><li><a href="../../calculators/voltage-drop/">Voltage Drop</a></li><li><a href="../../calculators/breaker-size/">Breaker Size</a></li><li><a href="../../calculators/motor-current/">Motor Current</a></li><li><a href="../../calculators/transformer-sizing/">Transformer Sizing</a></li><li><a href="../../calculators/earth-resistance/">Earth Resistance</a></li><li><a href="../../calculators/pf-correction-kvar/">Power Factor Correction</a></li><li><a href="../../calculators/generator-sizing/">Generator Sizing</a></li><li><a href="../../calculators/battery-bank-sizing/">Battery Bank Sizing</a></li><li><a href="../../calculators/pv-energy/">Solar PV Energy</a></li></ul></div><div class="mf-col"><p class="mf-h"><a href="../../converters/index.html">Conversions</a></p><ul><li><a href="../../pages/index.html">Electrical conversions</a></li><li><a href="../../pages/kw-to-amps.html">kW to Amps</a></li><li><a href="../../pages/amps-to-kw.html">Amps to kW</a></li><li><a href="../../pages/kva-to-kw.html">kVA to kW</a></li><li><a href="../../pages/watts-to-amps.html">Watts to Amps</a></li><li><a href="../../converters/length-converter.html">Length</a></li><li><a href="../../converters/power-converter.html">Power</a></li><li><a href="../../converters/energy-converter.html">Energy</a></li><li><a href="../../converters/temperature-converter.html">Temperature</a></li><li><a href="../../pages/wire-gauge.html">AWG to mm²</a></li></ul></div><div class="mf-col"><p class="mf-h"><a href="../../converters/index.html">Formulas</a></p><ul><li><a href="../../converters/ohms-law-formulas.html">Ohm’s Law formulas</a></li><li><a href="../../converters/kirchhoffs-laws.html">Kirchhoff’s laws</a></li><li><a href="../../converters/cable-sizing-formulas.html">Cable sizing formulas</a></li><li><a href="../../converters/circuit-breaker-formulas.html">Circuit breaker formulas</a></li><li><a href="../../converters/ac-circuit-formulas.html">AC circuit formulas</a></li><li><a href="../../converters/battery-formulas.html">Battery formulas</a></li></ul></div><div class="mf-col"><p class="mf-h">Elecmetric</p><ul><li><a href="../../calculators/basic-calculator/">Basic Calculator</a></li><li><a href="../../calculators/scientific-calculator/">Scientific Calculator</a></li><li><a href="../../index.html#verification">How it is verified</a></li><li><a href="../../privacy.html">Privacy</a></li><li><a href="../../terms.html">Terms</a></li><li><a href="../../technical-library/">Technical Library</a></li><li><a href="mailto:elecmetrics@gmail.com">Contact us</a></li></ul></div></div><div class="mf-legal">Results are computed by the same tested engine as the calculators in Elecmetric and are for estimating. Check design values against the standard and the equipment data you work to. Elecmetric results are not a substitute for a design review by a competent engineer.<br>Developed by Elecmetric. No independent technical review of the calculators has been carried out. Results are for estimating.<br>&copy; 2026 Elecmetric &middot; <a href="../../privacy.html">Privacy</a> &middot; <a href="../../terms.html">Terms</a></div></div><script>(function(){if(location.protocol!=="file:")return;document.addEventListener("click",function(e){if(e.defaultPrevented||e.button||e.metaKey||e.ctrlKey||e.shiftKey)return;var a=e.target.closest&&e.target.closest("a[href]");if(!a||a.target)return;var m=/^([^?#]*)(.*)$/.exec(a.getAttribute("href"));if(!m[1]||/^[a-z][a-z0-9+.-]*:/i.test(m[1])||!/[/]$/.test(m[1]))return;e.preventDefault();location.href=m[1]+"index.html"+m[2]})})();</script><button type="button" class="totop" id="totop" aria-label="Back to top" tabindex="-1">↑ Top</button><script>(function(){var b=document.getElementById("totop");if(!b)return;var t=0;function u(){t=0;var on=(window.pageYOffset||document.documentElement.scrollTop)>400,bar=document.getElementById("bar"),h=bar&&bar.offsetHeight?bar.offsetHeight:0;b.classList.toggle("on",on);b.tabIndex=on?0:-1;b.style.bottom=h?"calc("+(h+16)+"px + env(safe-area-inset-bottom,0px))":"";}function q(){if(!t)t=requestAnimationFrame(u)}window.addEventListener("scroll",q,{passive:true});window.addEventListener("resize",q);b.addEventListener("click",function(){var r=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;window.scrollTo({top:0,behavior:r?"auto":"smooth"})});u()})();</script></footer><script>/* Elecmetric Percentage Calculator: exact rational engine for Mode 01 (Basic Percentage). One file, no dependencies, no DOM.
+   A value is a pair of BigInt (numerator, denominator), the denominator always positive and the pair always reduced, so no floating-point
+   number is used anywhere and results are exact for numbers of any size (up to 400 digits each). Rounding for display is half away from zero.
+   Required by tests/percent_basic_test.js and inlined into calculators/basic-percentage-calculator/ by tools/percent_basic_page.js. */
+(function (root) {
+  'use strict';
+  var MAX_DIGITS = 400, MAX_PLACES = 12;
+  function Err(m) { this.message = m; }
+  function abs(x) { return x < 0n ? -x : x; }
+  function gcd(a, b) { a = abs(a); b = abs(b); while (b) { var t = a % b; a = b; b = t; } return a; }
+  function mk(n, d) { if (d === 0n) throw new Err('Division by zero.'); if (d < 0n) { n = -n; d = -d; } var g = gcd(n, d); if (g > 1n) { n /= g; d /= g; } return { n: n, d: d }; }
+  function mul(a, b) { return mk(a.n * b.n, a.d * b.d); }
+  function div(a, b) { if (b.n === 0n) throw new Err('Division by zero.'); return mk(a.n * b.d, a.d * b.n); }
+  function sub(a, b) { return mk(a.n * b.d - b.n * a.d, a.d * b.d); }
+  function P10(k) { return 10n ** BigInt(k); }
+  var HUNDRED = { n: 100n, d: 1n };
+
+  /* ---------- reading numbers ---------- */
+  /* A plain decimal number: optional sign, digits, optional decimal point. A trailing % is accepted only where opts.pct is set. */
+  function parseNum(src, label, opts) {
+    opts = opts || {};
+    var s = String(src == null ? '' : src).replace(/[\u2212\u2013\u2014]/g, '-').replace(/\u00a0/g, ' ').trim();
+    if (s === '') return { empty: true };
+    var pc = false;
+    if (/%$/.test(s)) { if (!opts.pct) throw new Err(label + ' is not a percentage here: remove the % sign.'); s = s.slice(0, -1).trim(); pc = true; }
+    if (/,/.test(s)) throw new Err('Commas are not used here. Write 1000 instead of 1,000, and a decimal point for decimals (' + label + ').');
+    if (/[eE]/.test(s) && /^[+-]?[\d.]+[eE]/.test(s)) throw new Err(label + ': write the number in full, without e or exponent notation.');
+    var m = /^([+-]?)(\d*)(?:\.(\d*))?$/.exec(s);
+    if (!m || (m[2] === '' && (m[3] === undefined || m[3] === ''))) throw new Err(label + ' is not a number. Use digits, an optional minus sign and a decimal point, for example 12.5 or -3.');
+    var ip = m[2].replace(/^0+(?=\d)/, ''), fp = m[3] || '';
+    if (ip === '') ip = '0';
+    if ((ip + fp).length > MAX_DIGITS) throw new Err(label + ' has more than ' + MAX_DIGITS + ' digits. Use a shorter number.');
+    var n = BigInt(ip + fp), neg = m[1] === '-' && n !== 0n;
+    return { q: mk(neg ? -n : n, P10(fp.length)), text: (neg ? '-' : '') + ip + (fp ? '.' + fp : ''), pct: pc };
+  }
+
+  /* ---------- output forms ---------- */
+  function roundText(q, p) { // half away from zero, exactly p decimal places
+    var neg = q.n < 0n, a = abs(q.n) * P10(p), r = (2n * a + q.d) / (2n * q.d), s = r.toString();
+    if (p > 0) { while (s.length <= p) s = '0' + s; s = s.slice(0, s.length - p) + '.' + s.slice(s.length - p); }
+    return (neg && r !== 0n ? '-' : '') + s;
+  }
+  function termDigits(d) { var t = d, a = 0, b = 0; while (t % 2n === 0n) { t /= 2n; a++; } while (t % 5n === 0n) { t /= 5n; b++; } return t === 1n ? Math.max(a, b) : -1; }
+  function fmt(q, places) { // { text, exact }
+    if (places === undefined || places === null || places === 'auto' || places === '') {
+      var k = termDigits(q.d);
+      if (k >= 0 && k <= 60) return { text: roundText(q, k), exact: true };
+      return { text: roundText(q, 6), exact: false };
+    }
+    var p = Number(places); if (!(p >= 0 && p <= MAX_PLACES && Math.floor(p) === p)) throw new Err('Decimal places must be a whole number from 0 to ' + MAX_PLACES + ', or auto.');
+    return { text: roundText(q, p), exact: (q.n * P10(p)) % q.d === 0n };
+  }
+  function F(q) { return q.d === 1n ? String(q.n) : q.n + '/' + q.d; }
+  function dv(q) { var k = termDigits(q.d); return k >= 0 && k <= 40 ? roundText(q, k) : F(q); } // an exact decimal when it ends, otherwise the exact fraction
+  function sg(t) { return t.charAt(0) === '-' ? '(' + t + ')' : t; }
+  function pct(t) { return t + '%'; }
+
+  function opt(places) { if (places === undefined || places === null || places === '' || places === 'auto') return 'auto'; var p = Number(places); if (!(p >= 0 && p <= MAX_PLACES && Math.floor(p) === p)) throw new Err('Decimal places must be a whole number from 0 to ' + MAX_PLACES + ', or auto.'); return p; }
+
+  function finish(base, q, places, unit) {
+    var f = fmt(q, places), pl = places === 'auto' ? 'auto' : places;
+    base.ok = true; base.num = String(q.n); base.den = String(q.d); base.exact = f.exact; base.text = f.text; base.unit = unit || ''; base.frac = F(q); base.places = pl;
+    base.big = (f.exact ? '' : '\u2248 ') + f.text + (unit || '');
+    return base;
+  }
+  function sentence(t, res) { var v = res.big; if (t.indexOf(' = @') >= 0) return t.replace(' = @', ' ' + (res.exact ? '=' : '\u2248') + ' ' + v.replace(/^\u2248 /, '')); return t.replace('@', v); }
+  function fail(e) { if (e instanceof Err) return { ok: false, error: e.message, empty: false }; throw e; }
+  function emptyR(hint) { return { ok: false, empty: true, error: '', hint: hint }; }
+
+  /* ---------- the three percentage questions ---------- */
+  function calc(o) {
+    try {
+      o = o || {}; var kind = o.kind, places = opt(o.places);
+      if (kind !== 'of' && kind !== 'what' && kind !== 'whole') throw new Err('Choose one of the three questions.');
+      var lx = kind === 'of' ? 'The percentage (X)' : kind === 'what' ? 'The first number (X)' : 'The number (X)', ly = kind === 'of' ? 'The number (Y)' : kind === 'what' ? 'The second number (Y)' : 'The percentage (Y)';
+      var X = parseNum(o.x, lx, { pct: kind === 'of' }), Y = parseNum(o.y, ly, { pct: kind === 'whole' });
+      if (X.empty || Y.empty) return emptyR(kind === 'of' ? 'Enter the percentage X and the number Y.' : kind === 'what' ? 'Enter the numbers X and Y.' : 'Enter the number X and the percentage Y.');
+      var x = X.q, y = Y.q, xt = X.text, yt = Y.text, steps = [], rows = [], warn = [], r, res;
+      if (kind === 'of') {
+        var dec = div(x, HUNDRED); r = mul(dec, y);
+        steps.push('Write ' + pct(xt) + ' as a decimal: divide by 100. ' + xt + ' \u00f7 100 = ' + dv(dec) + '.');
+        steps.push('Multiply the decimal by ' + yt + ': ' + sg(dv(dec)) + ' \u00d7 ' + sg(yt) + ' = ' + dv(r) + '.');
+        steps.push('Check: ' + dv(r) + ' \u00f7 ' + sg(yt) + ' \u00d7 100 = ' + (y.n === 0n ? 'not defined because Y is 0, but the result of 0 is correct' : dv(mul(div(r, y), HUNDRED)) + '%, the percentage you entered') + '.');
+        res = finish({ kind: kind, formula: 'Result = (X \u00f7 100) \u00d7 Y', subst: '(' + xt + ' \u00f7 100) \u00d7 ' + sg(yt) + ' = ' + dv(r), sentence: pct(xt) + ' of ' + yt + ' = ' + '@' }, r, places, '');
+        rows.push(['Percentage (X)', pct(xt), '']); rows.push(['Number (Y)', yt, '']); rows.push(['X as a decimal', dv(dec), 'X \u00f7 100']);
+        rows.push(['Result: X% of Y', res.big, res.exact ? 'Exact' : 'Rounded: the exact value is ' + F(r)]);
+        if (r.d !== 1n) rows.push(['Exact value as a fraction', F(r), '']);
+        rows.push(['The rest of Y (Y \u2212 result)', dv(sub(y, r)), 'Y minus X% of Y, which is ' + dv(sub(HUNDRED, x)) + '% of Y']);
+        if (x.n < 0n) warn.push('A negative percentage gives a result with the opposite sign to Y. That is correct mathematically; check that a negative percentage is what you meant.');
+      } else if (kind === 'what') {
+        if (y.n === 0n) throw new Err('Y is 0, so X cannot be written as a percentage of Y. Dividing by 0 is not defined.');
+        var ratio = div(x, y); r = mul(ratio, HUNDRED);
+        steps.push('Divide X by Y: ' + sg(xt) + ' \u00f7 ' + sg(yt) + ' = ' + dv(ratio) + '.');
+        steps.push('Multiply by 100 to turn the ratio into a percentage: ' + sg(dv(ratio)) + ' \u00d7 100 = ' + dv(r) + '%.');
+        steps.push('Check: ' + dv(r) + '% of ' + yt + ' = ' + dv(mul(div(r, HUNDRED), y)) + ', the X you entered.');
+        res = finish({ kind: kind, formula: 'Percentage = (X \u00f7 Y) \u00d7 100', subst: '(' + sg(xt) + ' \u00f7 ' + sg(yt) + ') \u00d7 100 = ' + dv(r) + '%', sentence: xt + ' is @ of ' + yt }, r, places, '%');
+        rows.push(['First number (X)', xt, '']); rows.push(['Second number (Y)', yt, '']); rows.push(['Ratio X \u00f7 Y', dv(ratio), '']);
+        rows.push(['X as a percentage of Y', res.big, res.exact ? 'Exact' : 'Rounded: the exact value is ' + F(r) + '%']);
+        if (r.d !== 1n) rows.push(['Exact value as a fraction', F(r) + '%', '']);
+        if (x.n !== 0n && (x.n < 0n) !== (y.n < 0n)) warn.push('X and Y have opposite signs, so the percentage is negative.');
+        else if (abs(x.n) * y.d > abs(y.n) * x.d) warn.push('X is larger than Y, so the percentage is above 100%. That is correct: X is more than the whole Y.');
+      } else {
+        if (y.n === 0n) throw new Err(x.n === 0n ? 'Y is 0%. Zero is 0% of every number, so the whole cannot be found.' : 'Y is 0%, so no number has X as 0% of it. Enter a percentage other than 0.');
+        var yd = div(y, HUNDRED); r = div(x, yd);
+        steps.push('Write ' + pct(yt) + ' as a decimal: divide by 100. ' + yt + ' \u00f7 100 = ' + dv(yd) + '.');
+        steps.push('Divide X by the decimal: ' + sg(xt) + ' \u00f7 ' + sg(dv(yd)) + ' = ' + dv(r) + '.');
+        steps.push('Check: ' + yt + '% of ' + dv(r) + ' = ' + dv(mul(yd, r)) + ', the X you entered.');
+        res = finish({ kind: kind, formula: 'Whole = X \u00f7 (Y \u00f7 100)', subst: sg(xt) + ' \u00f7 (' + sg(yt) + ' \u00f7 100) = ' + dv(r), sentence: xt + ' is ' + pct(yt) + ' of @' }, r, places, '');
+        rows.push(['Part (X)', xt, '']); rows.push(['Percentage (Y)', pct(yt), '']); rows.push(['Y as a decimal', dv(yd), 'Y \u00f7 100']);
+        rows.push(['The whole', res.big, res.exact ? 'Exact' : 'Rounded: the exact value is ' + F(r)]);
+        if (r.d !== 1n) rows.push(['Exact value as a fraction', F(r), '']);
+        if (y.n < 0n) warn.push('A negative percentage gives a whole with the opposite sign to X. Check that a negative percentage is what you meant.');
+      }
+      res.sentence = sentence(res.sentence, res);
+      res.steps = steps; res.rows = rows; res.warnings = warn; res.x = xt; res.y = yt;
+      return res;
+    } catch (e) { return fail(e); }
+  }
+
+  /* ---------- conversions: percent, decimal and fraction ---------- */
+  function convert(o) {
+    try {
+      o = o || {}; var dir = o.dir, places = opt(o.places);
+      if (['p2d', 'd2p', 'f2p', 'p2f'].indexOf(dir) < 0) throw new Err('Choose a conversion.');
+      var steps = [], rows = [], warn = [], r, res, V;
+      if (dir === 'f2p') {
+        var raw = String(o.v == null ? '' : o.v).replace(/[\u2044\u2215]/g, '/').trim();
+        if (raw === '') return emptyR('Enter a fraction such as 3/4.');
+        var parts = raw.split('/');
+        if (parts.length !== 2) throw new Err('Enter one fraction with a single slash, for example 3/4. For a decimal, use the Decimal to percent conversion.');
+        var A = parseNum(parts[0], 'The numerator'), B = parseNum(parts[1], 'The denominator');
+        if (A.empty || B.empty) throw new Err('A fraction needs a numerator and a denominator, for example 3/4.');
+        if (B.q.n === 0n) throw new Err('The denominator is 0. A fraction cannot have 0 on the bottom.');
+        var val = div(A.q, B.q); r = mul(val, HUNDRED);
+        steps.push('Divide the numerator by the denominator: ' + sg(A.text) + ' \u00f7 ' + sg(B.text) + ' = ' + dv(val) + '.');
+        steps.push('Multiply by 100: ' + sg(dv(val)) + ' \u00d7 100 = ' + dv(r) + '%.');
+        res = finish({ kind: dir, formula: 'Percentage = (numerator \u00f7 denominator) \u00d7 100', subst: '(' + sg(A.text) + ' \u00f7 ' + sg(B.text) + ') \u00d7 100 = ' + dv(r) + '%', sentence: A.text + '/' + B.text + ' = @' }, r, places, '%');
+        rows.push(['Fraction', A.text + '/' + B.text, '']); rows.push(['Decimal value', dv(val), '']); rows.push(['Percentage', res.big, res.exact ? 'Exact' : 'Rounded: the exact value is ' + F(r) + '%']);
+        if (val.d !== 1n) rows.push(['Fraction in lowest terms', F(val), '']);
+      } else {
+        V = parseNum(o.v, dir === 'd2p' ? 'The decimal' : 'The percentage', { pct: dir !== 'd2p' });
+        if (V.empty) return emptyR(dir === 'd2p' ? 'Enter a decimal such as 0.75.' : 'Enter a percentage such as 25.');
+        var v = V.q, vt = V.text;
+        if (dir === 'p2d') {
+          r = div(v, HUNDRED);
+          steps.push('Divide the percentage by 100: ' + sg(vt) + ' \u00f7 100 = ' + dv(r) + '. Moving the decimal point two places to the left does the same.');
+          res = finish({ kind: dir, formula: 'Decimal = percentage \u00f7 100', subst: sg(vt) + ' \u00f7 100 = ' + dv(r), sentence: pct(vt) + ' = @' }, r, places, '');
+          rows.push(['Percentage', pct(vt), '']); rows.push(['Decimal', res.big, res.exact ? 'Exact' : 'Rounded: the exact value is ' + F(r)]); rows.push(['Fraction in lowest terms', F(r), '']);
+        } else if (dir === 'd2p') {
+          r = mul(v, HUNDRED);
+          steps.push('Multiply the decimal by 100: ' + sg(vt) + ' \u00d7 100 = ' + dv(r) + '. Moving the decimal point two places to the right does the same.');
+          res = finish({ kind: dir, formula: 'Percentage = decimal \u00d7 100', subst: sg(vt) + ' \u00d7 100 = ' + dv(r) + '%', sentence: vt + ' = @' }, r, places, '%');
+          rows.push(['Decimal', vt, '']); rows.push(['Percentage', res.big, res.exact ? 'Exact' : 'Rounded: the exact value is ' + F(r) + '%']); rows.push(['Decimal as a fraction', F(v), 'in lowest terms']);
+        } else {
+          r = div(v, HUNDRED);
+          steps.push('Write the percentage over 100: ' + sg(vt) + '/100 (a decimal percentage is scaled by a power of 10 first).');
+          steps.push('Reduce to lowest terms by dividing top and bottom by their greatest common divisor: ' + F(r) + '.');
+          res = finish({ kind: dir, formula: 'Fraction = percentage \u00f7 100, reduced', subst: sg(vt) + '/100 = ' + F(r), sentence: pct(vt) + ' = @' }, r, places, '');
+          res.big = F(r); res.text = F(r); res.exact = true;
+          rows.push(['Percentage', pct(vt), '']); rows.push(['Fraction in lowest terms', F(r), '']); rows.push(['Decimal', dv(r), '']);
+        }
+        if (v.n < 0n) warn.push('A negative value is kept with its sign. A negative percentage is unusual, so check that it is intended.');
+      }
+      res.sentence = sentence(res.sentence, res);
+      res.steps = steps; res.rows = rows; res.warnings = warn;
+      return res;
+    } catch (e) { return fail(e); }
+  }
+
+  var api = { calc: calc, convert: convert, parseNum: parseNum, roundText: roundText, fmt: fmt, make: mk, MAX_DIGITS: MAX_DIGITS, MAX_PLACES: MAX_PLACES };
+  if (typeof module !== 'undefined' && module.exports) module.exports = api; else root.Percent = api;
+})(typeof window !== 'undefined' ? window : this);
+
+/* Elecmetric Percentage Calculator: exact rational engine for Mode 04 (Percentage Error). One file, no DOM, no floating point.
+   Built only on the public API of tools/percent_engine.js (parseNum, make, fmt, roundText), so Modes 01 to 03 are untouched. Three questions:
+     err  percentage error of a measured value M against a reference R = |M - R| / |R| x 100            (R = 0 refused)
+          also the signed deviation (M - R) / |R| x 100, the relative error, the accuracy, and an optional tolerance (+/- % of R)
+     val  the measured value for a reference R and a signed percentage error p: M = R + |R| x p / 100    (R = 0 refused)
+     ref  the reference for a measured value M and a signed percentage error p: R = M / (1 + p / 100) for M > 0, M / (1 - p / 100) for M < 0
+          (the reference is taken to have the same sign as M; M = 0 refused)
+   Required by tests/percent_error_test.js and inlined into calculators/percentage-error-calculator/ by tools/percent_error_page.js. */
+(function (root) {
+  'use strict';
+  var P = (typeof module !== 'undefined' && module.exports) ? require('./percent_engine.js') : root.Percent;
+  var mk = P.make;
+  function Err(m) { this.message = m; }
+  function abs(x) { return x < 0n ? -x : x; }
+  function add(a, b) { return mk(a.n * b.d + b.n * a.d, a.d * b.d); }
+  function sub(a, b) { return mk(a.n * b.d - b.n * a.d, a.d * b.d); }
+  function mul(a, b) { return mk(a.n * b.n, a.d * b.d); }
+  function div(a, b) { return mk(a.n * b.d, a.d * b.n); }
+  function qa(a) { return { n: abs(a.n), d: a.d }; }
+  var HUNDRED = { n: 100n, d: 1n }, TWO = { n: 2n, d: 1n }, ONE = { n: 1n, d: 1n };
+  function termDigits(d) { var t = d, a = 0, b = 0; while (t % 2n === 0n) { t /= 2n; a++; } while (t % 5n === 0n) { t /= 5n; b++; } return t === 1n ? Math.max(a, b) : -1; }
+  function F(q) { return q.d === 1n ? String(q.n) : q.n + '/' + q.d; }
+  function dv(q) { var k = termDigits(q.d); return k >= 0 && k <= 40 ? P.roundText(q, k) : F(q); }
+  function sg(t) { return t.charAt(0) === '-' ? '(' + t + ')' : t; }
+  function pc(t) { return t + '%'; }
+  function dvp(q) { var k = termDigits(q.d); return k >= 0 && k <= 40 ? P.roundText(q, k) + '%' : '\u2248 ' + P.roundText(q, 6) + '%'; }
+  function dvm(q) { var k = termDigits(q.d); return k >= 0 && k <= 40 ? P.roundText(q, k) : '\u2248 ' + P.roundText(q, 6); }
+  function cap(s) { return s.charAt(0).toUpperCase() + s.slice(1); }
+  function opt(places) { if (places === undefined || places === null || places === '' || places === 'auto') return 'auto'; var p = Number(places); if (!(p >= 0 && p <= P.MAX_PLACES && Math.floor(p) === p)) throw new Err('Decimal places must be a whole number from 0 to ' + P.MAX_PLACES + ', or auto.'); return p; }
+  function fail(e) { if (e && typeof e.message === 'string' && !(e instanceof Error)) return { ok: false, error: e.message, empty: false }; throw e; }
+  function emptyR(hint) { return { ok: false, empty: true, error: '', hint: hint }; }
+  function finish(base, q, places, unit) {
+    var f = P.fmt(q, places);
+    base.ok = true; base.num = String(q.n); base.den = String(q.d); base.exact = f.exact; base.text = f.text; base.unit = unit || ''; base.frac = F(q); base.places = places;
+    base.big = (f.exact ? '' : '\u2248 ') + f.text + (unit || '');
+    return base;
+  }
+  function shownPct(q, places) { var f = P.fmt(q, places); return (f.exact ? '' : '\u2248 ') + f.text + '%'; }
+  var KINDS = ['err', 'val', 'ref'];
+  var LAB = { err: ['The reference value', 'The measured value', 'The tolerance'], val: ['The reference value', 'The percentage error'], ref: ['The measured value', 'The percentage error'] };
+  var HINT = { err: 'Enter the reference value and the measured value.', val: 'Enter the reference value and the percentage error, for example -2.5 for a reading 2.5% low.', ref: 'Enter the measured value and the percentage error, for example 2.5 for a reading 2.5% high.' };
+  var UNIT = { err: '%', val: '', ref: '' };
+
+  function calc(o) {
+    try {
+      o = o || {}; var kind = o.kind, places = opt(o.places);
+      if (KINDS.indexOf(kind) < 0) throw new Err('Choose one of the three questions.');
+      var X = P.parseNum(o.x, LAB[kind][0], {}), Y = P.parseNum(o.y, LAB[kind][1], { pct: kind !== 'err' });
+      if (X.empty || Y.empty) return emptyR(HINT[kind]);
+      var x = X.q, y = Y.q, xt = X.text, yt = Y.text, steps = [], rows = [], warn = [], res, r;
+      if (kind === 'err') {
+        var Z = P.parseNum(o.z, LAB.err[2], { pct: true }), t = Z.empty ? null : Z.q;
+        var R = x, M = y, aR = qa(R), rneg = R.n < 0n;
+        if (R.n === 0n) throw new Err('The reference value is 0, so a percentage error is not defined: the error is a share of the reference, and nothing is a share of 0. Enter the reference value, or use the amount of the error instead.');
+        if (t && t.n < 0n) throw new Err('The tolerance cannot be negative. Enter its size, for example 2 for a tolerance of \u00b12%.');
+        var e = sub(M, R), ae = qa(e), rel = div(e, aR), pe = mul(rel, HUNDRED), ape = qa(pe), up = e.n > 0n, zero = e.n === 0n;
+        var dir = zero ? 'equal' : up ? 'above' : 'below', rd = rneg ? '|' + xt.replace('-', '') + '|' : xt;
+        steps.push('Find the error: measured \u2212 reference = ' + sg(yt) + ' \u2212 ' + sg(xt) + ' = ' + dv(e) + '.');
+        steps.push('Take its size, the absolute error: |' + dv(e) + '| = ' + dv(ae) + '.');
+        steps.push('Divide the error by the ' + (rneg ? 'size of the reference' : 'reference') + ': ' + sg(dv(e)) + ' \u00f7 ' + rd + ' = ' + dv(rel) + '. This is the relative error; it is negative when the reading is below the reference.');
+        steps.push('Multiply by 100: ' + sg(dv(rel)) + ' \u00d7 100 = ' + dv(pe) + '%. ' + (zero ? 'The measured value equals the reference.' : 'The measured value is ' + dv(ape) + '% ' + dir + ' the reference, so the percentage error is ' + dv(ape) + '%.'));
+        steps.push('Check: reference + ' + sg(dv(pe)) + '% of ' + (rneg ? 'its size ' : '') + rd + ' = ' + dv(add(R, mul(aR, div(pe, HUNDRED)))) + ', the measured value you entered.');
+        var within = null, lo = null, hi = null;
+        if (t) {
+          lo = sub(R, mul(aR, div(t, HUNDRED))); hi = add(R, mul(aR, div(t, HUNDRED))); within = ape.n * t.d <= t.n * ape.d;
+          steps.push('Tolerance: \u00b1' + dv(t) + '% of ' + (rneg ? 'the size of ' : '') + 'the reference allows ' + dv(lo) + ' to ' + dv(hi) + '. The error of ' + dv(ape) + '% is ' + (within ? 'within' : 'outside') + ' the tolerance of ' + dv(t) + '%.');
+        }
+        res = finish({ kind: kind, formula: rneg ? 'Percentage error = |Measured \u2212 Reference| \u00f7 |Reference| \u00d7 100' : 'Percentage error = |Measured \u2212 Reference| \u00f7 Reference \u00d7 100', subst: '|' + yt + ' \u2212 ' + sg(xt) + '| \u00f7 ' + rd + ' \u00d7 100 = ' + dv(ape) + '%' }, ape, places, '%');
+        res.dir = dir; res.within = within; res.tolFlag = within === null ? '' : within ? 'within tolerance' : 'outside tolerance';
+        var shown = shownPct(ape, places), tolS = t ? ', ' + (within ? 'within' : 'outside') + ' the \u00b1' + dv(t) + '% tolerance' : '';
+        res.sentence = zero ? 'A measured value of ' + yt + ' equals the reference ' + xt + ' (0% error)' + tolS : 'A measured value of ' + yt + ' against a reference of ' + xt + ' is ' + shown + ' ' + (up ? 'above' : 'below') + ' the reference' + tolS;
+        rows.push(['Reference value', xt, '']); rows.push(['Measured value', yt, '']);
+        rows.push(['Error (measured \u2212 reference)', dv(e), up ? 'Positive: the reading is above the reference' : zero ? 'No error' : 'Negative: the reading is below the reference']);
+        rows.push(['Absolute error', dv(ae), 'The size of the error, in the unit of the values']);
+        rows.push(['Relative error (error \u00f7 |reference|)', dv(rel), 'A plain ratio, not yet a percentage']);
+        rows.push(['Percentage error', res.big, res.exact ? 'Exact. The size of the error as a percentage of the reference' : 'Rounded: the exact value is ' + F(ape) + '%']);
+        if (ape.d !== 1n) rows.push(['Exact value as a fraction', F(ape) + '%', '']);
+        rows.push(['Signed deviation', dvp(pe), 'Positive above the reference, negative below it']);
+        rows.push(['Direction', cap(dir), '']);
+        rows.push(['Accuracy (100% \u2212 percentage error)', ape.n <= 100n * ape.d ? dvp(sub(HUNDRED, ape)) : 'not meaningful', ape.n <= 100n * ape.d ? 'Only meaningful while the error is 100% or less' : 'The error is more than 100% of the reference']);
+        if (t) {
+          rows.push(['Tolerance (\u00b1% of the reference)', pc(dv(t)), '']); rows.push(['Permitted range', dv(lo) + ' to ' + dv(hi), 'Reference \u00b1 tolerance']);
+          rows.push(['Within tolerance', within ? 'Yes' : 'No', '']);
+          rows.push(['Margin to the limit', dvm(qa(sub(t, ape))) + ' percentage points ' + (within ? 'spare' : 'over'), within ? (ape.n * t.d === t.n * ape.d ? 'Exactly on the limit' : 'Room left before the limit') : 'By how much the error passes the limit']);
+        }
+        rows.push(['Measured as a percentage of the reference', dvp(mul(div(M, R), HUNDRED)), 'Measured \u00f7 reference \u00d7 100']);
+        rows.push(['Percentage difference (no reference)', dvp(mul(div(ae, div(add(qa(M), aR), TWO)), HUNDRED)), 'Treats the two values equally. This is the Mode 03 question, a different one']);
+        rows.push(['Error as a share of the measured value', M.n === 0n ? 'not defined' : dvp(mul(div(ae, qa(M)), HUNDRED)), 'Divides by the reading instead of the reference, so it is not the percentage error']);
+        if (rneg) warn.push('The reference value is negative, so the error is divided by its size. That way a reading above the reference always has a positive deviation. Check that this suits your data.');
+        if ((R.n > 0n && M.n < 0n) || (R.n < 0n && M.n > 0n)) warn.push('The reference and the measured value have opposite signs, so the error is larger than the reference itself.');
+        else if (M.n === 0n) warn.push('The measured value is 0, so the error is the whole reference: 100% below it.');
+        else if (ape.n > 100n * ape.d) warn.push('The error is larger than the reference value itself. Check that the reference is the value you meant.');
+      } else if (kind === 'val') {
+        var Rv = x, p = y, aRv = qa(Rv), rneg2 = Rv.n < 0n, rd2 = rneg2 ? '|' + xt.replace('-', '') + '|' : xt;
+        if (Rv.n === 0n) throw new Err('The reference value is 0, so a percentage error from it is not defined: any error would be an infinite percentage of 0. Enter the reference value, or work with the amount of error instead.');
+        var ev = mul(aRv, div(p, HUNDRED)), Mv = add(Rv, ev), upv = p.n > 0n, zv = p.n === 0n, dirv = zv ? 'equal' : upv ? 'above' : 'below';
+        steps.push('Find the error as a share of the ' + (rneg2 ? 'size of the reference' : 'reference') + ': ' + sg(yt) + '% of ' + rd2 + ' = ' + sg(yt) + ' \u00f7 100 \u00d7 ' + rd2 + ' = ' + dv(ev) + '.');
+        steps.push('Add the error to the reference (a negative percentage error lowers it): ' + sg(xt) + ' + ' + sg(dv(ev)) + ' = ' + dv(Mv) + '.');
+        steps.push('Check: (' + dv(Mv) + ' \u2212 ' + sg(xt) + ') \u00f7 ' + rd2 + ' \u00d7 100 = ' + dv(mul(div(sub(Mv, Rv), aRv), HUNDRED)) + '%, the percentage error you entered.');
+        res = finish({ kind: kind, formula: 'Measured = Reference + (Percentage error \u00f7 100) \u00d7 ' + (rneg2 ? '|Reference|' : 'Reference'), subst: sg(xt) + ' + (' + sg(yt) + ' \u00f7 100) \u00d7 ' + rd2 + ' = ' + dv(Mv) }, Mv, places, '');
+        res.dir = dirv; res.within = null; res.tolFlag = '';
+        res.sentence = zv ? 'A reading with no error equals the reference ' + xt : 'A reading ' + dv(qa(p)) + '% ' + dirv + ' a reference of ' + xt + ' is ' + (res.exact ? '' : '\u2248 ') + res.text;
+        rows.push(['Reference value', xt, '']); rows.push(['Percentage error (signed)', pc(yt), 'Positive above the reference, negative below it']);
+        rows.push(['Error (measured \u2212 reference)', dv(ev), zv ? 'No error' : upv ? 'Positive: the reading is above the reference' : 'Negative: the reading is below the reference']);
+        rows.push(['Absolute error', dv(qa(ev)), 'The size of the error']);
+        rows.push(['Measured value', res.big, res.exact ? 'Exact' : 'Rounded: the exact value is ' + F(Mv)]);
+        rows.push(['Direction', cap(dirv), '']);
+        rows.push(['Measured as a percentage of the reference', dvp(mul(div(Mv, Rv), HUNDRED)), 'Measured \u00f7 reference \u00d7 100']);
+        if (rneg2) warn.push('The reference value is negative, so the error is taken from its size: a positive percentage error moves the reading up, towards zero.');
+        if (Mv.n === 0n) warn.push('This percentage error makes the measured value exactly 0.');
+        else if ((Rv.n > 0n && Mv.n < 0n) || (Rv.n < 0n && Mv.n > 0n)) warn.push('This percentage error puts the measured value on the other side of zero from the reference. Check the size and the sign of the percentage error.');
+      } else {
+        var Mr = x, pr = y, sM = Mr.n > 0n ? 1n : -1n;
+        if (Mr.n === 0n) throw new Err('The measured value is 0, so the reference cannot be found from a percentage error: the reference would have to be a value whose error is exactly the whole of it. Enter a measured value that is not 0.');
+        var den = add(ONE, mul(div(pr, HUNDRED), { n: sM, d: 1n }));
+        if (den.n <= 0n) throw new Err('A percentage error of ' + yt + '% would put the measured value at 0 or on the opposite side of zero from its reference, which does not fit this measured value. Check the sign of the percentage error: negative means the reading is below the reference.');
+        var Rr = div(Mr, den), er = sub(Mr, Rr), upr = er.n > 0n, zr = er.n === 0n, dirr = zr ? 'equal' : upr ? 'above' : 'below', mneg = sM < 0n, aRr = qa(Rr);
+        var pm = mneg ? ' \u2212 ' : ' + ';
+        steps.push('Write the measured value as the reference plus its error: measured = reference ' + (mneg ? '\u2212' : '+') + ' (percentage error \u00f7 100) \u00d7 reference, so measured = reference \u00d7 (1' + pm + sg(yt) + ' \u00f7 100).');
+        steps.push('Work out the bracket: 1' + pm + sg(yt) + ' \u00f7 100 = ' + dv(den) + '.');
+        steps.push('Divide the measured value by the bracket: ' + xt.replace(/^-/, '\u2212') + ' \u00f7 ' + dv(den) + ' = ' + dv(Rr) + '. The reference is taken to have the same sign as the measured value.');
+        steps.push('Check: (' + sg(xt) + ' \u2212 ' + sg(dv(Rr)) + ') \u00f7 ' + (mneg ? '|' + dv(Rr).replace('-', '') + '|' : dv(Rr)) + ' \u00d7 100 = ' + dv(mul(div(er, aRr), HUNDRED)) + '%, the percentage error you entered.');
+        res = finish({ kind: kind, formula: mneg ? 'Reference = Measured \u00f7 (1 \u2212 Percentage error \u00f7 100)   (measured value below zero)' : 'Reference = Measured \u00f7 (1 + Percentage error \u00f7 100)', subst: sg(xt) + ' \u00f7 (1' + pm + sg(yt) + ' \u00f7 100) = ' + dv(Rr) }, Rr, places, '');
+        res.dir = dirr; res.within = null; res.tolFlag = '';
+        res.sentence = zr ? 'A reading of ' + xt + ' with no error has the reference ' + xt : 'A reading of ' + xt + ' that is ' + dv(qa(pr)) + '% ' + dirr + ' its reference means the reference is ' + (res.exact ? '' : '\u2248 ') + res.text;
+        rows.push(['Measured value', xt, '']); rows.push(['Percentage error (signed)', pc(yt), 'Positive above the reference, negative below it']);
+        rows.push(['Reference value', res.big, (res.exact ? 'Exact' : 'Rounded: the exact value is ' + F(Rr)) + '. Taken to have the same sign as the measured value']);
+        rows.push(['Error (measured \u2212 reference)', dv(er), zr ? 'No error' : upr ? 'Positive: the reading is above the reference' : 'Negative: the reading is below the reference']);
+        rows.push(['Absolute error', dv(qa(er)), 'The size of the error']);
+        rows.push(['Direction', cap(dirr), '']);
+        rows.push(['Measured as a percentage of the reference', dvp(mul(div(Mr, Rr), HUNDRED)), 'Measured \u00f7 reference \u00d7 100']);
+        if (mneg) warn.push('The measured value is negative, so the reference is taken to be negative too and the percentage error is measured from its size.');
+      }
+      res.steps = steps; res.rows = rows; res.warnings = warn; res.x = xt; res.y = yt;
+      return res;
+    } catch (e) { return fail(e); }
+  }
+
+  var api = { calc: calc, KINDS: KINDS, LABELS: LAB, UNITS: UNIT };
+  if (typeof module !== 'undefined' && module.exports) module.exports = api; else root.PercentError = api;
+})(typeof window !== 'undefined' ? window : this);
+
+/* Elecmetric Percent Error Calculator, Mode 01 (Absolute Percent Error). One file, no DOM, no floating point.
+   A thin layer over tools/percent_error_engine.js (exact rational arithmetic, kind 'err'), which stays unchanged. This layer adds what the standalone
+   measurement tool needs: the observed value comes first, an optional unit label, the result table in the order of the product brief
+   (observed, reference, signed error, absolute error, relative error magnitude, percentage error, measurement direction), and observed-value wording.
+   calc({ x: observed, y: reference, unit, places }) -> { ok, ... } | { ok: false, error } | { ok: false, empty: true, hint }
+   The unit is a label only: nothing is converted, and both values are taken to be in the same unit. A reference of 0 is refused.
+   Required by tests/pe_test.js and inlined into calculators/percent-error-calculator/ by tools/pe_page.js. */
+(function (root) {
+  'use strict';
+  var isNode = typeof module !== 'undefined' && module.exports;
+  var PE = isNode ? require('./percent_error_engine.js') : root.PercentError, P = isNode ? require('./percent_engine.js') : root.Percent;
+  var HINT = 'Enter the observed (measured) value and the reference (accepted) value.';
+  function ren(s) { return String(s).replace(/Measured/g, 'Observed').replace(/measured/g, 'observed'); }
+  function unitOf(u) {
+    if (u === undefined || u === null) return { ok: true, text: '' };
+    var t = String(u).trim();
+    if (t.length > 16) return { ok: false, error: 'The unit label can be at most 16 characters, for example V, A, kW, \u03a9 or lx.' };
+    if (/[\u0000-\u001f\u007f<>]/.test(t)) return { ok: false, error: 'The unit label can contain letters, digits and symbols such as \u03a9, \u00b5, \u00b0, % and /, but not control characters, < or >.' };
+    return { ok: true, text: t };
+  }
+  function withUnit(v, u) { return u ? v + (u === '%' || u.charAt(0) === '\u00b0' ? '' : ' ') + u : v; }
+  function stripSign(t) { return String(t).replace(/^[-\u2212]/, ''); }
+  function termDigits(d) { var t = d, a = 0, b = 0; while (t % 2n === 0n) { t /= 2n; a++; } while (t % 5n === 0n) { t /= 5n; b++; } return t === 1n ? Math.max(a, b) : -1; }
+  /* The relative error magnitude as a plain ratio: the percentage divided by 100. Exact decimal when it ends (up to 40 places), otherwise 8 places with an approximate sign. */
+  function ratio(num, den) {
+    var q = P.make(BigInt(num), BigInt(den) * 100n), k = termDigits(q.d);
+    return k >= 0 && k <= 40 ? P.roundText(q, k) : '\u2248 ' + P.roundText(q, 8);
+  }
+  function find(rows, re) { for (var i = 0; i < rows.length; i++) if (re.test(rows[i][0])) return rows[i]; return null; }
+  function calc(o) {
+    o = o || {};
+    var un = unitOf(o.unit); if (!un.ok) return { ok: false, error: un.error, empty: false };
+    var u = un.text;
+    var r = PE.calc({ kind: 'err', x: o.y, y: o.x, z: '', places: o.places });
+    if (!r.ok) { if (r.empty) return { ok: false, empty: true, error: '', hint: HINT }; return { ok: false, empty: false, error: ren(r.error) }; }
+    var rows = r.rows, eRow = find(rows, /^Error \(measured/), aRow = find(rows, /^Absolute error/), rRow = find(rows, /^Relative error/), sRow = find(rows, /^Signed deviation/);
+    var obs = r.y, ref = r.x, signed = eRow[1], abs = aRow[1], rel = ratio(r.num, r.den);
+    var dirWord = r.dir === 'equal' ? 'Equal to reference' : r.dir === 'above' ? 'Above reference' : 'Below reference';
+    var out = {
+      ok: true, kind: 'abs', unit: u, observed: obs, reference: ref, signed: signed, abs: abs, rel: rel, pct: r.text, pctUnit: '%',
+      num: r.num, den: r.den, exact: r.exact, text: r.text, frac: r.frac, dir: r.dir, places: r.places,
+      big: r.big, x: obs, y: ref
+    };
+    out.formula = ren(r.formula); out.subst = ren(r.subst);
+    var shown = (r.exact ? '' : '\u2248 ') + r.text + '%';
+    out.sentence = r.dir === 'equal' ? 'An observed value of ' + withUnit(obs, u) + ' equals the reference ' + withUnit(ref, u) + ' (0% error)'
+      : 'An observed value of ' + withUnit(obs, u) + ' against a reference of ' + withUnit(ref, u) + ' is ' + shown + ' ' + r.dir + ' the reference';
+    out.steps = r.steps.map(ren);
+    out.steps.push('The error is ' + withUnit(abs, u) + ' ' + r.dir + ' the reference ' + withUnit(ref, u) + (r.dir === 'equal' ? '' : ', which is ' + shown + ' of the size of the reference') + '.');
+    out.rows = [
+      ['Observed value', withUnit(obs, u), 'The reading, test result or calculated value being checked'],
+      ['Reference value', withUnit(ref, u), 'The accepted, rated, nominal or true value. The base of the percentage'],
+      ['Signed error', withUnit(signed, u), 'Observed \u2212 reference. Positive above the reference, negative below it'],
+      ['Absolute error', withUnit(abs, u), 'The size of the error, in the unit of the values'],
+      ['Relative error magnitude', rel, 'The absolute error divided by the size of the reference: a plain ratio'],
+      ['Percentage error', r.big, r.exact ? 'Exact. The relative error magnitude \u00d7 100' : 'Rounded: the exact value is ' + r.frac + '%'],
+      ['Measurement direction', dirWord, r.dir === 'equal' ? 'No error' : 'Signed deviation ' + sRow[1] + ' (negative below the reference)']
+    ];
+    if (!r.exact) out.rows.splice(6, 0, ['Exact value as a fraction', r.frac + '%', '']);
+    out.warnings = r.warnings.map(ren);
+    return out;
+  }
+  var api = { calc: calc, HINT: HINT };
+  if (typeof module !== 'undefined' && module.exports) module.exports = api; else root.PercentErrorMode01 = api;
+})(typeof window !== 'undefined' ? window : this);
+
+/* Elecmetric Percent Error Calculator, Mode 02 (Signed Error Analysis). One file, no DOM, no floating point.
+   A thin layer over tools/pe_engine.js (Mode 01), which stays unchanged, so the two modes can never disagree on the size of the error.
+   Convention (BIPM VIM: measurement error = measured value minus reference value):
+     signed error e = observed - reference;  signed percentage deviation = e / |reference| x 100  (the denominator is the SIZE of the reference)
+   A reading above the reference is always positive and one below it negative, also when the reference is negative. A reference of 0 is refused.
+   Adds: explicit + and - signs, the signed relative error, the correction (reference - observed) and the sign convention in the result.
+   calc({ x: observed, y: reference, unit, places }) -> { ok, ... } | { ok: false, error } | { ok: false, empty: true, hint }
+   Required by tests/pe_signed_test.js and inlined into calculators/signed-error-analysis/ by tools/pe_signed_page.js. */
+(function (root) {
+  'use strict';
+  var isNode = typeof module !== 'undefined' && module.exports;
+  var M1 = isNode ? require('./pe_engine.js') : root.PercentErrorMode01;
+  var M = '\u2212';
+  function zeroText(t) { return /^[0.]*$/.test(String(t).replace(/^\u2248 /, '')); }
+  function plus(t) { return t.charAt(0) === '-' || t === '0' ? t : '+' + t; }
+  function neg(t) { return t === '0' ? t : t.charAt(0) === '-' ? t.slice(1) : '-' + t; }
+  function sg(t) { return t.charAt(0) === '-' ? '(' + t + ')' : t; }
+  function withUnit(v, u) { return u ? v + (u === '%' || u.charAt(0) === '\u00b0' ? '' : ' ') + u : v; }
+  function calc(o) {
+    var r = M1.calc(o); if (!r.ok) return r;
+    var u = r.unit, dir = r.dir, below = dir === 'below', sign = dir === 'equal' ? 0 : below ? -1 : 1;
+    var se = plus(r.signed), ce = plus(neg(r.signed)), neg0 = below && !zeroText(r.text) ? '-' : dir === 'above' && !zeroText(r.text) ? '+' : '';
+    var pctS = neg0 + r.text, shown = (r.exact ? '' : '\u2248 ') + pctS + '%';
+    var relMag = r.rel.replace(/^\u2248 /, ''), relS = (zeroText(relMag) ? '' : below ? '-' : dir === 'above' ? '+' : '') + relMag; if (r.rel.charAt(0) === '\u2248') relS = '\u2248 ' + relS;
+    var refNeg = r.reference.charAt(0) === '-', rd = refNeg ? '|' + r.reference.slice(1) + '|' : r.reference;
+    var out = { ok: true, kind: 'signed', unit: u, observed: r.observed, reference: r.reference, signed: se, abs: r.abs, rel: relS, correction: ce, pct: pctS, absPct: r.text,
+      num: r.num, den: r.den, sign: sign, exact: r.exact, text: r.text, dir: dir, places: r.places, x: r.observed, y: r.reference, big: shown,
+      frac: (below ? '-' : '') + r.frac };
+    out.formula = 'Signed deviation = (Observed ' + M + ' Reference) \u00f7 ' + (refNeg ? '|Reference|' : 'Reference') + ' \u00d7 100';
+    out.subst = '(' + r.observed + ' ' + M + ' ' + sg(r.reference) + ') \u00f7 ' + rd + ' \u00d7 100 = ' + shown;
+    out.sentence = dir === 'equal' ? 'An observed value of ' + withUnit(r.observed, u) + ' equals the reference ' + withUnit(r.reference, u) + ' (signed deviation 0%)'
+      : 'An observed value of ' + withUnit(r.observed, u) + ' against a reference of ' + withUnit(r.reference, u) + ' has a signed deviation of ' + shown + ' (' + dir + ' the reference)';
+    out.steps = [r.steps[0].replace(/\.$/, '') + ', keeping the sign. The signed error is ' + withUnit(se, u) + '.',
+      dir === 'equal' ? 'The sign is zero: the observed value equals the reference.' : 'The sign gives the direction: ' + (below ? 'negative, so the observed value is below the reference.' : 'positive, so the observed value is above the reference.'),
+      r.steps[2].replace('. This is the relative error; it is negative when the reading is below the reference.', '. This is the signed relative error.'),
+      r.steps[3].split('%. ')[0] + '%. The signed percentage deviation is ' + shown + '.',
+      r.steps[4]];
+    out.steps.push(dir === 'equal' ? 'The observed value equals the reference, so no correction is needed.' : 'The observed value is ' + withUnit(r.abs, u) + ' ' + dir + ' the reference, a deviation of ' + shown + '. To bring it back to the reference, apply a correction of ' + withUnit(ce, u) + '.');
+    out.rows = [
+      ['Observed value', withUnit(r.observed, u), 'The reading, test result or calculated value being checked'],
+      ['Reference value', withUnit(r.reference, u), 'The accepted, rated, nominal or true value. The base of the percentage'],
+      ['Signed error', withUnit(se, u), 'Observed ' + M + ' reference. Positive above the reference, negative below it'],
+      ['Absolute error', withUnit(r.abs, u), 'The size of the signed error'],
+      ['Signed relative error', relS, 'Signed error \u00f7 |reference|: a plain ratio that keeps the sign'],
+      ['Signed percentage deviation', shown, r.exact ? 'Exact. The signed relative error \u00d7 100' : 'Rounded: the exact value is ' + out.frac + '%'],
+      ['Measurement direction', dir === 'equal' ? 'Equal to reference' : dir === 'above' ? 'Above reference' : 'Below reference', 'Set by the sign of the signed error'],
+      ['Correction (reference ' + M + ' observed)', withUnit(ce, u), 'The opposite sign to the signed error: what to add to the observed value to reach the reference'],
+      ['Sign convention', 'Observed ' + M + ' reference', 'Divided by the size of the reference, so a reading above the reference is always positive']];
+    if (!r.exact) out.rows.splice(6, 0, ['Exact value as a fraction', out.frac + '%', '']);
+    out.warnings = r.warnings.slice();
+    return out;
+  }
+  var api = { calc: calc, HINT: M1.HINT };
+  if (isNode) module.exports = api; else root.PercentErrorMode02 = api;
+})(typeof window !== 'undefined' ? window : this);
+
+/* Elecmetric Percent Error Calculator, Mode 03 (Tolerance Verification). One file, no DOM, no floating point (exact BigInt rational arithmetic).
+   Built on the public API of tools/percent_engine.js (reading numbers, rounding) and on Mode 02 (tools/pe_signed_engine.js, unchanged) for the signed deviation,
+   so Modes 02 and 03 can never disagree on the size or sign of a deviation.
+   Question: is an observed value within a tolerance that the user has entered around a reference value?
+     basis 'pct': tolerance is a percentage of the SIZE of the reference (|reference|); basis 'abs': tolerance is a value in the unit of the readings.
+     shape 'sym': one tolerance, plus and minus; shape 'asym': a lower tolerance (below the reference) and an upper tolerance (above it). Tolerances are entered as sizes, without a sign.
+     lower limit L = reference - lower tolerance;  upper limit U = reference + upper tolerance;  the reading is accepted when L <= observed <= U (limits included).
+     margin to the lower limit = observed - L;  margin to the upper limit = U - observed  (positive inside the limit, negative beyond it).
+     tolerance used = |signed error| / (tolerance on that side of the reference) x 100.
+   The tolerance is whatever the user entered. The engine does not know any standard, datasheet or acceptance criterion, ignores measurement uncertainty, and never says "compliant".
+   A percentage tolerance needs a reference that is not 0; an absolute tolerance accepts a reference of 0 (the percentage deviation is then not defined and is not shown).
+   calc({ x: observed, y: reference, unit, basis, shape, t, tl, tu, places }) -> { ok, ... } | { ok: false, error } | { ok: false, empty: true, hint }
+   Required by tests/pe_tol_test.js and inlined into calculators/tolerance-verification/ by tools/pe_tol_page.js. */
+(function (root) {
+  'use strict';
+  var isNode = typeof module !== 'undefined' && module.exports;
+  var P = isNode ? require('./percent_engine.js') : root.Percent, M2 = isNode ? require('./pe_signed_engine.js') : root.PercentErrorMode02;
+  var MN = '\u2212', HINT = 'Enter the observed value, the reference value and the tolerance.', HUNDRED = { n: 100n, d: 1n };
+  function Err(m) { this.message = m; }
+  var mk = P.make;
+  function add(a, b) { return mk(a.n * b.d + b.n * a.d, a.d * b.d); }
+  function sub(a, b) { return mk(a.n * b.d - b.n * a.d, a.d * b.d); }
+  function mul(a, b) { return mk(a.n * b.n, a.d * b.d); }
+  function div(a, b) { return mk(a.n * b.d, a.d * b.n); }
+  function cmp(a, b) { var x = a.n * b.d, y = b.n * a.d; return x < y ? -1 : x > y ? 1 : 0; }
+  function abs(a) { return a.n < 0n ? mk(-a.n, a.d) : a; }
+  function zero(a) { return a.n === 0n; }
+  function termDigits(d) { var t = d, a = 0, b = 0; while (t % 2n === 0n) { t /= 2n; a++; } while (t % 5n === 0n) { t /= 5n; b++; } return t === 1n ? Math.max(a, b) : -1; }
+  function dec(q) { var k = termDigits(q.d); return k >= 0 ? P.roundText(q, k) : '\u2248 ' + P.roundText(q, 8); } // an exact decimal (every value built from decimals ends); the guard is for safety only
+  function plus(t) { return t.charAt(0) === '-' || /^[0.]*$/.test(t) ? t : '+' + t; }
+  function sg(t) { return t.charAt(0) === '-' ? '(' + t + ')' : t; }
+  function withUnit(v, u) { return u ? v + (u === '%' || u.charAt(0) === '\u00b0' ? '' : ' ') + u : v; }
+  function unitOf(u) {
+    if (u === undefined || u === null) return '';
+    var t = String(u).trim();
+    if (t.length > 16) throw new Err('The unit label can be at most 16 characters, for example V, A, kW, \u03a9 or lx.');
+    if (/[\u0000-\u001f\u007f<>]/.test(t)) throw new Err('The unit label can contain letters, digits and symbols such as \u03a9, \u00b5, \u00b0, % and /, but not control characters, < or >.');
+    return t;
+  }
+  function pctText(q, places) { var f = P.fmt(q, places); return { text: f.text, exact: f.exact, shown: (f.exact ? '' : '\u2248 ') + f.text + '%' }; }
+  function tolIn(src, label, pctOk) {
+    var r = P.parseNum(src, label, { pct: pctOk });
+    if (r.empty) return r;
+    if (r.q.n < 0n) throw new Err(label + ' is the size of the permitted band, so enter it without a minus sign (for a lower tolerance of 3, enter 3 and not -3).');
+    return r;
+  }
+  function run(o) {
+    var u = unitOf(o.unit);
+    var basis = o.basis === undefined || o.basis === null || o.basis === '' ? 'pct' : o.basis, shape = o.shape === undefined || o.shape === null || o.shape === '' ? 'sym' : o.shape;
+    if (basis !== 'pct' && basis !== 'abs') throw new Err('The tolerance basis must be pct (percentage of the reference) or abs (absolute value).');
+    if (shape !== 'sym' && shape !== 'asym') throw new Err('The tolerance shape must be sym (plus and minus the same) or asym (a lower and an upper tolerance).');
+    P.fmt(mk(0n, 1n), o.places); // validates the decimal places
+    var places = o.places === undefined || o.places === null || o.places === '' || o.places === 'auto' ? 'auto' : Number(o.places);
+    var pc = basis === 'pct', obs = P.parseNum(o.x, 'The observed value'), ref = P.parseNum(o.y, 'The reference value'), tl, tu;
+    if (shape === 'sym') { tl = tu = tolIn(o.t, 'The tolerance', pc); } else { tl = tolIn(o.tl, 'The lower tolerance', pc); tu = tolIn(o.tu, 'The upper tolerance', pc); }
+    if (obs.empty || ref.empty || tl.empty || tu.empty) return { ok: false, empty: true, error: '', hint: HINT };
+    var O = obs.q, R = ref.q, aR = abs(R), refZero = zero(R);
+    if (pc && refZero) throw new Err('The reference value is 0, so a percentage tolerance has no size. Enter an absolute tolerance instead.');
+    var TL = pc ? mul(mk(tl.q.n, tl.q.d * 100n), aR) : tl.q, TU = pc ? mul(mk(tu.q.n, tu.q.d * 100n), aR) : tu.q;
+    var L = sub(R, TL), U = add(R, TU), e = sub(O, R), cl = cmp(O, L), cu = cmp(O, U);
+    var status = cl < 0 ? 'below' : cu > 0 ? 'above' : 'within', pass = status === 'within', onLimit = pass && (cl === 0 || cu === 0);
+    var mL = sub(O, L), mU = sub(U, O), side = cmp(mL, mU), nearest = side <= 0 ? mL : mU;
+    var eSide = e.n > 0n ? TU : e.n < 0n ? TL : null, usedQ = null, used = null, usedExact = true;
+    if (e.n === 0n) { used = '0%'; } else if (!zero(eSide)) { usedQ = mul(div(abs(e), eSide), HUNDRED); var ut = pctText(usedQ, places); used = ut.shown; usedExact = ut.exact; }
+    var dev = null, devPct = null, devFrac = null, devExact = true, warnings = [];
+    if (!refZero) {
+      var d = M2.calc({ x: obs.text, y: ref.text, unit: u, places: places });
+      if (!d.ok) throw new Err(d.error);
+      dev = d.big; devPct = d.pct; devFrac = d.frac; devExact = d.exact; warnings = d.warnings.slice();
+    }
+    // wording of the tolerance and of the permitted deviation
+    var sym = shape === 'sym', TLs = dec(TL), TUs = dec(TU), unitTol = function (t) { return withUnit(t, u); };
+    var tolText = pc ? (sym ? '\u00b1' + tl.text + '%' : '-' + tl.text + '% / +' + tu.text + '%') : (sym ? '\u00b1' + unitTol(tl.text) : '-' + unitTol(tl.text) + ' / +' + unitTol(tu.text));
+    var permitted = tolText;
+    if (pc) permitted = tolText + ' of the reference';
+    else if (!refZero) {
+      var pl = pctText(mul(div(TL, aR), HUNDRED), places), pu = pctText(mul(div(TU, aR), HUNDRED), places), sd = function (x, s) { return (x.exact ? '' : '\u2248 ') + s + x.text + '%'; };
+      permitted = (sym ? sd(pl, '\u00b1') : sd(pl, '-') + ' / ' + sd(pu, '+')) + ' of the reference';
+    }
+    var Ls = dec(L), Us = dec(U), es = plus(dec(e)), mLs = plus(dec(mL)), mUs = plus(dec(mU)), nearS = plus(dec(nearest));
+    var label = status === 'within' ? 'Within the entered tolerance' + (onLimit ? ' (on a limit)' : '') : 'Outside the entered tolerance: ' + status + ' the ' + (status === 'above' ? 'upper' : 'lower') + ' limit';
+    var nearWhich = side === 0 ? 'Equally close to both limits' : side < 0 ? 'Lower limit' : 'Upper limit';
+    var range = withUnit(Ls, u) + ' to ' + withUnit(Us, u);
+    var beyond = status === 'above' ? withUnit(dec(sub(O, U)), u) + ' above the upper limit ' + withUnit(Us, u) : status === 'below' ? withUnit(dec(sub(L, O)), u) + ' below the lower limit ' + withUnit(Ls, u) : '';
+    var out = { ok: true, kind: 'tol', unit: u, observed: obs.text, reference: ref.text, basis: basis, shape: shape, lower: Ls, upper: Us, tolLower: TLs, tolUpper: TUs, signed: es, status: status, pass: pass, onLimit: onLimit,
+      marginLower: mLs, marginUpper: mUs, nearest: nearS, used: used, usedExact: usedExact, usedNum: usedQ ? String(usedQ.n) : null, usedDen: usedQ ? String(usedQ.d) : null,
+      dev: dev, devPct: devPct, devFrac: devFrac, devExact: devExact, exact: devExact && usedExact, places: places, x: obs.text, y: ref.text, big: label, label: label, tolText: tolText, permitted: permitted, range: range };
+    var refTerm = R.n < 0n ? '|Reference|' : 'Reference';
+    out.formula = pc ? (sym ? 'Limits = Reference \u00b1 ' + refTerm + ' \u00d7 Tolerance% \u00f7 100' : 'Lower limit = Reference ' + MN + ' ' + refTerm + ' \u00d7 Lower% \u00f7 100; upper limit = Reference + ' + refTerm + ' \u00d7 Upper% \u00f7 100')
+      : (sym ? 'Limits = Reference \u00b1 Tolerance' : 'Lower limit = Reference ' + MN + ' Lower tolerance; upper limit = Reference + Upper tolerance');
+    var rd = R.n < 0n ? '|' + ref.text.slice(1) + '|' : ref.text;
+    out.subst = (pc ? (sym ? sg(ref.text) + ' \u00b1 ' + rd + ' \u00d7 ' + tl.text + ' \u00f7 100' : sg(ref.text) + ' ' + MN + ' ' + rd + ' \u00d7 ' + tl.text + ' \u00f7 100; ' + sg(ref.text) + ' + ' + rd + ' \u00d7 ' + tu.text + ' \u00f7 100')
+      : (sym ? sg(ref.text) + ' \u00b1 ' + tl.text : sg(ref.text) + ' ' + MN + ' ' + tl.text + '; ' + sg(ref.text) + ' + ' + tu.text)) + ' = ' + range + '; ' + obs.text + (pass ? ' is inside' : ' is outside');
+    out.sentence = 'An observed value of ' + withUnit(obs.text, u) + ' against a reference of ' + withUnit(ref.text, u) + ' with an entered tolerance of ' + tolText + ' (permitted range ' + range + ') is ' +
+      (pass ? 'within the entered tolerance' + (onLimit ? ', on a limit' : '') : 'outside the entered tolerance: ' + beyond);
+    var s2 = pc ? (sym ? 'The tolerance is ' + tl.text + '% of the ' + (R.n < 0n ? 'size of the reference' : 'reference') + ': ' + rd + ' \u00d7 ' + tl.text + ' \u00f7 100 = ' + withUnit(TLs, u) + ', in both directions.'
+        : 'The lower tolerance is ' + rd + ' \u00d7 ' + tl.text + ' \u00f7 100 = ' + withUnit(TLs, u) + ' and the upper tolerance is ' + rd + ' \u00d7 ' + tu.text + ' \u00f7 100 = ' + withUnit(TUs, u) + '.')
+      : (sym ? 'The tolerance is entered as an absolute value: ' + withUnit(TLs, u) + ' in both directions.' : 'The tolerances are entered as absolute values: ' + withUnit(TLs, u) + ' below the reference and ' + withUnit(TUs, u) + ' above it.');
+    out.steps = ['The signed error is the observed value minus the reference: ' + sg(obs.text) + ' ' + MN + ' ' + sg(ref.text) + ' = ' + withUnit(es, u) + '.', s2,
+      'The lower limit is ' + sg(ref.text) + ' ' + MN + ' ' + sg(TLs) + ' = ' + withUnit(Ls, u) + ' and the upper limit is ' + sg(ref.text) + ' + ' + sg(TUs) + ' = ' + withUnit(Us, u) + '. The permitted range is ' + range + '.',
+      'Compare: ' + withUnit(Ls, u) + ' \u2264 ' + withUnit(obs.text, u) + ' \u2264 ' + withUnit(Us, u) + ' is ' + (pass ? 'true' : 'false') + ' (the limits are included), so the observed value is ' + (pass ? 'within the entered tolerance' + (onLimit ? ', on a limit' : '') + '.' : 'outside it: ' + beyond + '.'),
+      refZero ? 'A percentage deviation is not defined because the reference is 0, so only the values in ' + (u || 'the unit of the readings') + ' are compared.' : 'The measured deviation is ' + sg(es) + ' \u00f7 ' + (R.n < 0n ? '|' + ref.text.slice(1) + '|' : ref.text) + ' \u00d7 100 = ' + dev + ' against a permitted deviation of ' + permitted + '.',
+      'The margin to the lower limit is ' + withUnit(mLs, u) + ' and to the upper limit ' + withUnit(mUs, u) + ' (positive is inside the limit, negative is beyond it). ' +
+        (e.n === 0n ? 'The observed value equals the reference, so none of the tolerance is used.' : used === null ? 'The tolerance on that side of the reference is 0, so any error on that side is beyond it.' : 'The error uses ' + used + ' of the tolerance on its side of the reference.')];
+    out.rows = [
+      ['Observed value', withUnit(obs.text, u), 'The reading, test result or calculated value being checked'],
+      ['Reference value', withUnit(ref.text, u), 'The accepted, rated, nominal or true value the tolerance is set around'],
+      ['Tolerance entered', (pc ? 'Percentage of reference: ' : 'Absolute: ') + tolText, 'A limit that you entered. It is not read from any standard or datasheet'],
+      ['Permitted deviation', permitted, pc ? 'The percentage as entered' : 'The absolute tolerance expressed against the size of the reference'],
+      ['Lower limit', withUnit(Ls, u), 'Reference ' + MN + ' lower tolerance'],
+      ['Upper limit', withUnit(Us, u), 'Reference + upper tolerance'],
+      ['Permitted range', range, 'Limits included: a value on a limit is accepted'],
+      ['Signed error', withUnit(es, u), 'Observed ' + MN + ' reference. Positive above the reference, negative below it'],
+      ['Measured deviation', dev === null ? 'Not defined' : dev, dev === null ? 'The reference is 0, so there is no percentage' : 'Signed error \u00f7 |reference| \u00d7 100, as in Mode 02'],
+      ['Assessment', label, 'Against the tolerance entered above and nothing else'],
+      ['Margin to lower limit', withUnit(mLs, u), 'Observed ' + MN + ' lower limit. Negative: below the lower limit'],
+      ['Margin to upper limit', withUnit(mUs, u), 'Upper limit ' + MN + ' observed. Negative: above the upper limit'],
+      ['Nearest limit', nearWhich + ', margin ' + withUnit(nearS, u), 'The smaller of the two margins'],
+      ['Tolerance used', used === null ? 'Not defined' : used, used === null ? 'The tolerance on that side of the reference is 0' : 'Size of the error \u00f7 the tolerance on its side of the reference. Over 100% is outside'],
+      ['Scope of this result', 'Entered tolerance only', 'Measurement uncertainty is not applied and no standard is checked']];
+    if (!devExact) out.rows.splice(9, 0, ['Exact deviation as a fraction', devFrac + '%', '']);
+    var extra = [];
+    if (!refZero && cmp(L, mk(0n, 1n)) < 0 && cmp(U, mk(0n, 1n)) > 0) extra.push('The permitted range crosses zero, so readings with the opposite sign to the reference are also accepted.');
+    if (zero(TL) || zero(TU)) extra.push('A tolerance of 0 accepts only a value equal to the reference on that side.');
+    out.warnings = warnings.concat(extra);
+    return out;
+  }
+  function calc(o) {
+    try { return run(o || {}); } catch (e) { if (e && typeof e.message === 'string' && !(e instanceof Error)) return { ok: false, error: e.message, empty: false }; throw e; }
+  }
+  var api = { calc: calc, HINT: HINT };
+  if (isNode) module.exports = api; else root.PercentErrorMode03 = api;
+})(typeof window !== 'undefined' ? window : this);
+
+/* Elecmetric Percent Error Calculator: page script for Mode 03 (Tolerance Verification). Inlined by tools/pe_tol_page.js after the engines
+   (tools/percent_engine.js, percent_error_engine.js, pe_engine.js, pe_signed_engine.js and pe_tol_engine.js). */
+(function () {
+  var $ = function (id) { return document.getElementById(id); }, PC = PercentErrorMode03, X = $('ns-x'), Y = $('ns-y'), U = $('ns-u'), PL = $('ns-pl'), B = $('ns-basis'), SH = $('ns-shape'), T = $('ns-t'), TLo = $('ns-tl'), TUp = $('ns-tu'), err = $('ns-err'), out = $('ns-out'), stp = $('ns-steps'), hist = $('ns-hist'), KEY = 'elecmetric.pe.tol.history';
+  var H = [], last = null, timer = 0;
+  var DEF = { x: '225', y: '230', u: 'V', b: 'pct', s: 'sym', t: '5', tl: '', tu: '' };
+  function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
+  function disp(s) { return String(s).replace(/-(?=[\d.(])/g, '\u2212'); }
+  function note(t) { $('ns-note').textContent = t; }
+  function copy(t) { var d = function () { note('Copied'); }; if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(t).then(d, d); else { var a = document.createElement('textarea'); a.value = t; document.body.appendChild(a); a.select(); try { document.execCommand('copy'); } catch (e) {} document.body.removeChild(a); d(); } }
+  function cp(t, l, w) { return '<button type="button" class="btn2" data-copy="' + esc(t) + '" aria-label="' + esc(l) + '">' + (w || 'Copy') + '</button>'; }
+  function loadH() { try { var s = JSON.parse(localStorage.getItem(KEY) || '[]'); if (Array.isArray(s)) H = s.filter(function (x) { return x && typeof x.e === 'string' && typeof x.r === 'string' && x.s && typeof x.s === 'object'; }).slice(0, 10); } catch (e) { H = []; } }
+  function saveH() { try { localStorage.setItem(KEY, JSON.stringify(H)); } catch (e) {} }
+  function drawH() {
+    if (!H.length) { hist.innerHTML = '<p class="note">Your last ten calculations appear here. They are kept only in this browser.</p>'; return; }
+    hist.innerHTML = '<ul class="fh">' + H.map(function (x, i) { return '<li><button type="button" class="chipb" data-h="' + i + '" aria-label="Use again: ' + esc(x.e) + '">' + esc(disp(x.e)) + '</button></li>'; }).join('') + '</ul><button type="button" class="btn2" data-act="clearh">Clear history</button>';
+  }
+  function push(e, r, s) { if (H.length && H[0].e === e) return; H.unshift({ e: e, r: r, s: s }); H = H.slice(0, 10); saveH(); drawH(); }
+  function mark(bad, ubad) { [X, Y, T, TLo, TUp].forEach(function (el) { el.classList.toggle('bad', bad && !ubad); el.setAttribute('aria-invalid', String(bad && !ubad)); }); U.classList.toggle('bad', !!ubad); U.setAttribute('aria-invalid', String(!!ubad)); }
+  function table(head, rows) { return '<div class="tw" tabindex="0" role="region" aria-label="Scrollable table: ' + esc(head.join(', ')) + '"><table class="ns-t"><thead><tr>' + head.map(function (h) { return '<th>' + esc(h) + '</th>'; }).join('') + '</tr></thead><tbody>' + rows.join('') + '</tbody></table></div>'; }
+  function withU(v, u) { return u ? v + (u === '%' || u.charAt(0) === '\u00b0' ? '' : ' ') + u : v; }
+  function tolWords() {
+    var pc = B.value === 'pct', u = U.value.trim().slice(0, 16), f = function (v) { v = v.trim() || '?'; return pc ? v.replace(/%$/, '') + '%' : withU(v, u); };
+    return SH.value === 'sym' ? '\u00b1' + f(T.value) : '-' + f(TLo.value) + ' / +' + f(TUp.value);
+  }
+  function question() { var u = U.value.trim().slice(0, 16); return 'Is an observed value of ' + withU(X.value.trim() || 'O', u) + ' within a tolerance of ' + tolWords() + (B.value === 'pct' ? ' of' : ' around') + ' a reference of ' + withU(Y.value.trim() || 'R', u) + '?'; }
+  function run() { return PC.calc({ x: X.value, y: Y.value, unit: U.value, basis: B.value, shape: SH.value, t: T.value, tl: TLo.value, tu: TUp.value, places: PL.value }); }
+  function state() { return { x: X.value, y: Y.value, u: U.value, p: PL.value, b: B.value, s: SH.value, t: T.value, tl: TLo.value, tu: TUp.value }; }
+  function layout() {
+    var pc = B.value === 'pct', sym = SH.value === 'sym';
+    $('ns-gt').hidden = !sym; $('ns-gl').hidden = sym; $('ns-gu').hidden = sym;
+    $('ns-lt').textContent = pc ? 'Tolerance, \u00b1 percent of the reference' : 'Tolerance, \u00b1 value in the unit';
+    $('ns-ll').textContent = pc ? 'Lower tolerance, percent below the reference' : 'Lower tolerance, value below the reference';
+    $('ns-lu').textContent = pc ? 'Upper tolerance, percent above the reference' : 'Upper tolerance, value above the reference';
+  }
+  function fail(r) { err.textContent = r.empty ? (r.hint || '') : r.error; err.classList.toggle('ns-hint', !!r.empty); mark(!r.empty, !r.empty && /^The unit label/.test(r.error)); out.innerHTML = ''; last = null; stp.innerHTML = '<p class="note">Enter the values to see the working.</p>'; $('ns-q').textContent = question(); }
+  function plain(r) {
+    var L = [$('ns-q').textContent, r.sentence, '', 'Formula: ' + r.formula, 'Substituted: ' + r.subst, '', 'Working:'];
+    r.steps.forEach(function (s, i) { L.push((i + 1) + '. ' + s); });
+    if (r.warnings.length) { L.push('', 'Note: ' + r.warnings.join(' ')); }
+    if (r.devFrac && !r.devExact) L.push('', 'Exact measured deviation: ' + r.devFrac + '%');
+    L.push('', 'The tolerance is the one entered above. It is not read from a standard or datasheet, and measurement uncertainty is not applied.', 'Calculated exactly in the browser by Elecmetric (' + location.href.split('#')[0] + ').');
+    return disp(L.join('\n'));
+  }
+  function render() {
+    var r = run(); $('ns-q').textContent = question();
+    if (!r.ok) return fail(r);
+    mark(false, false); err.textContent = ''; err.classList.remove('ns-hint');
+    var flag = '<span class="ns-flag' + (r.pass ? '' : ' r') + '">' + (r.pass ? 'pass' : 'fail') + '</span>';
+    var dirFlag = r.onLimit ? '<span class="ns-flag">on a limit</span>' : '';
+    var rows = r.rows.map(function (x) { return '<tr><td>' + esc(disp(x[0])) + '</td><td class="r">' + esc(disp(x[1])) + '</td><td>' + esc(disp(x[2])) + '</td></tr>'; });
+    out.innerHTML = '<div class="res"><div class="big">' + esc(disp(r.big)) + flag + dirFlag + cp(disp(r.big), 'Copy the result') + '</div><div class="sub">' + esc(disp(r.sentence)) + '</div></div>' +
+      '<div class="pf"><div><span class="ns-l">Formula</span><div class="fp">' + esc(r.formula) + '</div></div><div><span class="ns-l">With your numbers</span><div class="fp">' + esc(disp(r.subst)) + '</div></div></div>' +
+      (r.warnings.length ? '<p class="note ns-warn">' + r.warnings.map(function (w) { return esc(w); }).join(' ') + '</p>' : '') +
+      table(['Parameter', 'Result', 'Note'], rows) +
+      '<div class="ns-act">' + cp(disp(r.sentence), 'Copy the sentence', 'Copy sentence') + cp(plain(r), 'Copy the whole calculation with working', 'Copy with working') + '<button type="button" class="btn2" data-act="csv">Save as .csv</button><button type="button" class="btn2" data-act="save">Save as .txt</button><button type="button" class="btn2" data-act="print">Print</button></div>';
+    stp.innerHTML = '<ol class="steps">' + r.steps.map(function (s) { return '<li>' + esc(disp(s)) + '</li>'; }).join('') + '<li>Result: ' + esc(disp(r.big)) + '.</li></ol>';
+    last = { e: r.sentence, r: r.big, s: state(), t: plain(r), rows: r.rows };
+    clearTimeout(timer); timer = setTimeout(function () { if (last) push(last.e, last.r, last.s); }, 1500);
+  }
+  function apply(s) { X.value = s.x == null ? '' : s.x; Y.value = s.y == null ? '' : s.y; U.value = s.u == null ? '' : s.u; B.value = s.b === 'abs' ? 'abs' : 'pct'; SH.value = s.s === 'asym' ? 'asym' : 'sym'; T.value = s.t == null ? '' : s.t; TLo.value = s.tl == null ? '' : s.tl; TUp.value = s.tu == null ? '' : s.tu; PL.value = s.p == null ? 'auto' : s.p; if (!PL.value) PL.value = 'auto'; layout(); render(); }
+  function defaults() { X.value = DEF.x; Y.value = DEF.y; U.value = DEF.u; B.value = DEF.b; SH.value = DEF.s; T.value = DEF.t; TLo.value = DEF.tl; TUp.value = DEF.tu; layout(); }
+  function download(text, name, type) { var b = new Blob([text], { type: type }), a = document.createElement('a'); a.href = URL.createObjectURL(b); a.download = name; document.body.appendChild(a); a.click(); document.body.removeChild(a); setTimeout(function () { URL.revokeObjectURL(a.href); }, 500); note('Saved ' + name); }
+  function csvCell(s) { s = disp(String(s)); if (/^[=+\-@\t\r]/.test(s)) s = "'" + s; return '"' + s.replace(/"/g, '""') + '"'; }
+  function saveCsv() { if (!last) return; var L = ['Parameter,Result,Note'].concat(last.rows.map(function (x) { return x.map(csvCell).join(','); })); download('\ufeff' + L.join('\r\n') + '\r\n', 'tolerance-verification.csv', 'text/csv;charset=utf-8'); }
+  function saveTxt() { if (!last) return; download(last.t + '\n', 'tolerance-verification.txt', 'text/plain;charset=utf-8'); }
+  $('ns').addEventListener('click', function (e) {
+    var b = e.target.closest('button'); if (!b) return;
+    if (b.dataset.copy) { copy(b.dataset.copy); return; }
+    if (b.dataset.h) { var x = H[+b.dataset.h]; if (x) apply(x.s); return; }
+    if (b.dataset.ex) { apply(JSON.parse(b.dataset.ex)); return; }
+    if (b.dataset.act === 'print') { window.print(); return; }
+    if (b.dataset.act === 'save') { saveTxt(); return; }
+    if (b.dataset.act === 'csv') { saveCsv(); return; }
+    if (b.dataset.act === 'clearh') { H = []; saveH(); drawH(); return; }
+    if (b.dataset.act === 'reset') { defaults(); PL.value = 'auto'; render(); X.focus(); }
+  });
+  [X, Y, U, T, TLo, TUp].forEach(function (el) { el.addEventListener('input', render); el.addEventListener('keydown', function (e) { if (e.key === 'Enter') { clearTimeout(timer); render(); if (last) push(last.e, last.r, last.s); } }); });
+  PL.addEventListener('change', render); [B, SH].forEach(function (el) { el.addEventListener('change', function () { layout(); render(); }); });
+  loadH(); drawH(); defaults(); render();
+})();
+</script><script id="em-ux1-js">(function(IDS){var d=Object.getOwnPropertyDescriptor(HTMLSelectElement.prototype,"value"),di=Object.getOwnPropertyDescriptor(HTMLSelectElement.prototype,"selectedIndex"),first=null;
+IDS.forEach(function(id){var sel=document.getElementById(id);if(!sel||!sel.options.length)return;var seg=document.createElement("div");seg.className="mseg";seg.setAttribute("role","radiogroup");var lab=document.querySelector('label[for="'+id+'"]');if(lab){var sp=document.createElement("span");sp.className=lab.className;sp.id=id+"-lbl";sp.textContent=lab.textContent;lab.parentNode.replaceChild(sp,lab);seg.setAttribute("aria-labelledby",sp.id);sp.parentNode.insertBefore(seg,sel)}else sel.parentNode.insertBefore(seg,sel);
+var opts=[].slice.call(sel.options);opts.forEach(function(o){var b=document.createElement("button");b.type="button";b.setAttribute("role","radio");b.dataset.v=o.value;b.textContent=o.textContent;b.onclick=function(){if(d.get.call(sel)===o.value)return;d.set.call(sel,o.value);mark();sel.dispatchEvent(new Event("input",{bubbles:true}));sel.dispatchEvent(new Event("change",{bubbles:true}))};seg.appendChild(b)});
+seg.addEventListener("keydown",function(e){var k=e.key,i=sel.selectedIndex,n=k==="ArrowRight"||k==="ArrowDown"?i+1:k==="ArrowLeft"||k==="ArrowUp"?i-1:-1;if(n<0)return;e.preventDefault();n=(n+opts.length)%opts.length;seg.children[n].click();seg.children[n].focus()});
+sel.hidden=true;sel.tabIndex=-1;sel.setAttribute("aria-hidden","true");
+function mark(){var v=d.get.call(sel);[].forEach.call(seg.children,function(b){var on=b.dataset.v===v;b.setAttribute("aria-checked",on?"true":"false");b.tabIndex=on?0:-1});if(sel===first)tabs()}
+Object.defineProperty(sel,"value",{get:function(){return d.get.call(this)},set:function(v){d.set.call(this,v);mark()},configurable:true});Object.defineProperty(sel,"selectedIndex",{get:function(){return di.get.call(this)},set:function(v){di.set.call(this,v);mark()},configurable:true});sel.addEventListener("change",mark);if(!first)first=sel;mark()});
+var wrap=document.querySelector(".ns-try"),chips=wrap?[].slice.call(wrap.querySelectorAll(".chipb[data-ex]")):[],tb=null,groups=[];
+function tabs(){if(tb)sync()}
+if(first&&chips.length>=8){var key=null,vals=[].map.call(first.options,function(o){return o.value}),parsed=chips.map(function(c){try{return JSON.parse(c.dataset.ex)}catch(e){return {}}});["dir","op","mode","tool"].some(function(k){if(parsed.some(function(j){return vals.indexOf(j[k])>=0})){key=k;return true}});
+if(key){var def=vals[0];chips.forEach(function(c,i){var g=parsed[i][key];c.dataset.g=vals.indexOf(g)>=0?g:def});groups=vals.filter(function(v){return chips.some(function(c){return c.dataset.g===v})});
+if(groups.length>1){var h=document.createElement("div");h.className="try-h";var l=wrap.querySelector(".ns-l");if(l)h.appendChild(l);tb=document.createElement("div");tb.className="try-tabs";tb.setAttribute("role","tablist");groups.forEach(function(v){var b=document.createElement("button");b.type="button";b.setAttribute("role","tab");b.dataset.g=v;var o=[].filter.call(first.options,function(o){return o.value===v})[0];b.textContent=o?o.textContent:v;b.onclick=function(){show(v)};tb.appendChild(b)});h.appendChild(tb);wrap.insertBefore(h,wrap.firstChild);sync()}}}
+function show(g){[].forEach.call(tb.children,function(b){b.setAttribute("aria-selected",b.dataset.g===g?"true":"false")});chips.forEach(function(c){c.hidden=c.dataset.g!==g})}
+function sync(){var v=d.get.call(first);show(groups.indexOf(v)>=0?v:groups[0])}
+})(["nu-dir"]);</script><script>try{if("serviceWorker"in navigator&&/^https?:/.test(location.protocol))navigator.serviceWorker.register("../../sw.js")}catch(e){}</script><script id="rp-js">/* Elecmetric Percentage Calculator: professional calculation report card.
+   Shared by Modes 01 to 05. tools/percent_report_install.js inlines CSS, card and script into each built page; the script reads the page's own
+   inputs, result, tables and working from the DOM, so every mode gets the same report without a second calculation path. Runs in the browser only.
+   Adapted from tools/fraction_report.js; the sheet also carries the statement, the formula with the user's numbers, the reference quantity (Mode 05), the direction and tolerance flags, and any note the calculator showed. */
+(function () {
+  var root = document.getElementById('ns') || document.getElementById('nu'); if (!root) return;
+  var pre = root.id, card = document.getElementById('rp-card'); if (!card) return; root.appendChild(card);
+  var $ = function (id) { return document.getElementById(id); };
+  function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
+  function txt(el) { var c = el.cloneNode(true); Array.prototype.forEach.call(c.querySelectorAll('button,.sr-only'), function (b) { b.remove(); }); Array.prototype.forEach.call(c.querySelectorAll('div'), function (d) { var t = d.textContent.trim(); d.textContent = t ? ' (' + t + ')' : ''; }); return c.textContent.replace(/\s+/g, ' ').trim(); }
+  function label(el) {
+    var l = el.id && document.querySelector('label[for="' + el.id + '"]'), t, fs = el.closest('fieldset'), lg = fs && fs.querySelector('legend');
+    if (l) t = txt(l); else if (el.getAttribute('aria-label')) t = el.getAttribute('aria-label'); else { var p = el.closest('label'); t = p ? txt(p) : (el.id || 'Input'); }
+    if (lg) t = txt(lg).replace(/\s*\(.*$/, '') + ': ' + t.toLowerCase(); return t;
+  }
+  function gather() {
+    var out = $(pre + '-out'), res = out ? out.querySelector('.big') : null, inputs = [], sel = [], tables = [], steps = [];
+    var tc = root.querySelector('.ns-card') || root.querySelector('.card');
+    if (tc) {
+      Array.prototype.forEach.call(tc.querySelectorAll('[aria-pressed="true"]'), function (b) { sel.push(txt(b)); });
+      Array.prototype.forEach.call(tc.querySelectorAll('input,select,textarea'), function (el) {
+        if (el.type === 'hidden' || el.type === 'button' || el.type === 'checkbox' && false || el.closest('[hidden]') || (el.offsetParent === null && el.type !== 'radio')) return;
+        var v = el.tagName === 'SELECT' ? (el.options[el.selectedIndex] ? el.options[el.selectedIndex].text : '') : el.value; if (String(v).trim() === '') return;
+        inputs.push([label(el).replace(/\s*:\s*$/, ''), String(v).trim()]);
+      });
+    }
+    if (out) Array.prototype.forEach.call(out.querySelectorAll('table'), function (t) {
+      var h = t.previousElementSibling, title = h && /^H[2-4]$/.test(h.tagName) ? txt(h) : '';
+      if (!title && t.closest('.tw') && t.closest('.tw').previousElementSibling && /^H[2-4]$/.test(t.closest('.tw').previousElementSibling.tagName)) title = txt(t.closest('.tw').previousElementSibling);
+      tables.push({ title: title || (tables.length ? 'Table ' + (tables.length + 1) : 'Results'), head: Array.prototype.map.call(t.querySelectorAll('thead th'), txt), rows: Array.prototype.map.call(t.querySelectorAll('tbody tr'), function (r) { return Array.prototype.map.call(r.children, txt); }) });
+    });
+    var st = $(pre + '-steps'); if (st) Array.prototype.forEach.call(st.querySelectorAll('li'), function (li) { steps.push(txt(li)); });
+    var all = function (sel2) { return out ? Array.prototype.slice.call(out.querySelectorAll(sel2)) : []; }, subs = all('.sub').map(txt), fps = all('.fp').map(txt);
+    var first = res && res.firstChild ? res.firstChild.textContent.trim() : '';
+    return { ok: !!res && !(out.querySelector('.bad')), result: first, flags: res ? Array.prototype.map.call(res.querySelectorAll('.ns-flag'), txt) : [], statement: subs[0] || '', reference: subs[1] || '', formula: fps[0] || '', subst: fps[1] || '', warnings: all('.ns-warn').map(txt), inputs: inputs, sel: sel, tables: tables, steps: steps };
+  }
+  function hash(s) { var h = 2166136261; for (var i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 16777619) >>> 0; } return ('00000000' + h.toString(16)).slice(-8).toUpperCase(); }
+  function stamp(d) { function p(n) { return ('0' + n).slice(-2); } return d.getFullYear() + '-' + p(d.getMonth() + 1) + '-' + p(d.getDate()) + ' ' + p(d.getHours()) + ':' + p(d.getMinutes()); }
+  var meta = ['rp-proj', 'rp-by', 'rp-chk', 'rp-ref', 'rp-note'], KEY = 'elecmetric.percent.report.meta';
+  function readMeta() { var o = {}; meta.forEach(function (k) { o[k] = $(k).value.trim(); }); return o; }
+  try { var sv = JSON.parse(localStorage.getItem(KEY) || '{}'); ['rp-proj', 'rp-by', 'rp-chk'].forEach(function (k) { if (typeof sv[k] === 'string') $(k).value = sv[k].slice(0, 120); }); } catch (e) {}
+  function saveMeta() { try { var m = readMeta(); localStorage.setItem(KEY, JSON.stringify({ 'rp-proj': m['rp-proj'], 'rp-by': m['rp-by'], 'rp-chk': m['rp-chk'] })); } catch (e) {} }
+  var cur = null;
+  function build() {
+    var g = gather(), m = readMeta(), now = new Date(); if (!g.ok) return null;
+    var key = g.sel.join('|') + '|' + g.inputs.map(function (x) { return x.join('=') }).join('|') + '|' + g.result;
+    var id = 'PR-' + stamp(now).replace(/[^0-9]/g, '').slice(0, 8) + '-' + hash(key);
+    return { g: g, m: m, id: id, when: stamp(now), title: (document.querySelector('main h1') || { textContent: 'Percentage Calculator' }).textContent.trim(), url: location.href.split('#')[0] };
+  }
+  var LIM = 'All percentage arithmetic is exact: values are whole numbers and fractions of any length and no floating point is used, so a result is exact unless it is marked rounded. A value rounded for display is flagged and the exact value is listed. A percentage is only meaningful against a stated reference, which is named on this sheet where the calculator names it. A change in percentage points is not the same as a relative percentage change. This sheet records a number; it does not establish engineering accuracy. A real measurement or rating also needs its units, tolerances and measurement precision, and limits from a standard, regulation or manufacturer data still apply. A result used in design or documentation should be checked by a competent person.';
+  function html(R) {
+    var g = R.g, m = R.m, n = 0, h = '<div class="rp-h"><div class="rp-brand">ELECMETRIC</div><div class="rp-t"><h2>Calculation report</h2><p>' + esc(R.title) + '</p></div><div class="rp-id"><b>' + esc(R.id) + '</b><br>' + esc(R.when) + '</div></div>';
+    h += '<table class="rp-meta"><tbody><tr><th>Project</th><td>' + esc(m['rp-proj'] || '\u2014') + '</td><th>Document reference</th><td>' + esc(m['rp-ref'] || '\u2014') + '</td></tr><tr><th>Prepared by</th><td>' + esc(m['rp-by'] || '\u2014') + '</td><th>Checked by</th><td>' + esc(m['rp-chk'] || '\u2014') + '</td></tr></tbody></table>';
+    h += '<h3>' + (++n) + '. Input</h3><table class="rp-t1"><tbody>' + (g.sel.length ? '<tr><th>Calculation</th><td>' + esc(g.sel.join(' \u00b7 ')) + '</td></tr>' : '') + g.inputs.map(function (x) { return '<tr><th>' + esc(x[0]) + '</th><td>' + esc(x[1]) + '</td></tr>'; }).join('') + '</tbody></table>';
+    h += '<h3>' + (++n) + '. Result</h3><p class="rp-res">' + esc(g.result) + '</p>' + (g.flags.length ? '<p class="rp-fl">' + esc(g.flags.join(' \u00b7 ')) + '</p>' : '') + (g.statement ? '<p>' + esc(g.statement) + '</p>' : '') + (g.reference ? '<p><b>' + esc(g.reference) + '</b></p>' : '');
+    if (g.formula) h += '<h3>' + (++n) + '. Formula</h3><table class="rp-t1"><tbody><tr><th>Formula</th><td>' + esc(g.formula) + '</td></tr><tr><th>With your numbers</th><td>' + esc(g.subst) + '</td></tr></tbody></table>';
+    g.tables.forEach(function (t) { h += (t.title ? '<h4>' + esc(t.title) + '</h4>' : '') + '<table class="rp-t2"><thead><tr>' + t.head.map(function (c) { return '<th>' + esc(c) + '</th>'; }).join('') + '</tr></thead><tbody>' + t.rows.map(function (r) { return '<tr>' + r.map(function (c) { return '<td>' + esc(c) + '</td>'; }).join('') + '</tr>'; }).join('') + '</tbody></table>'; });
+    if (g.steps.length) h += '<h3>' + (++n) + '. Working</h3><ol class="rp-steps">' + g.steps.map(function (s) { return '<li>' + esc(s) + '</li>'; }).join('') + '</ol>';
+    if (g.warnings.length) h += '<h3>' + (++n) + '. Checks raised by the calculator</h3><p class="rp-notes">' + esc(g.warnings.join(' ')) + '</p>';
+    if (m['rp-note']) h += '<h3>' + (++n) + '. Notes</h3><p class="rp-notes">' + esc(m['rp-note']).replace(/\n/g, '<br>') + '</p>';
+    h += '<h3>Method and limits</h3><p class="rp-lim">' + esc(LIM) + '</p>';
+    h += '<div class="rp-f"><span>Elecmetric Percentage Calculator \u00b7 ' + esc(R.url) + '</span><span>Report ' + esc(R.id) + ' \u00b7 calculated in the browser</span></div>';
+    return h;
+  }
+  function plain(R) {
+    var g = R.g, m = R.m, n = 0, L = ['ELECMETRIC CALCULATION REPORT', R.title, 'Report ' + R.id + '   ' + R.when, ''];
+    L.push('Project: ' + (m['rp-proj'] || '-') + '   Document reference: ' + (m['rp-ref'] || '-')); L.push('Prepared by: ' + (m['rp-by'] || '-') + '   Checked by: ' + (m['rp-chk'] || '-')); L.push('', (++n) + '. INPUT');
+    if (g.sel.length) L.push('Calculation: ' + g.sel.join(' / ')); g.inputs.forEach(function (x) { L.push(x[0] + ': ' + x[1]); });
+    L.push('', (++n) + '. RESULT', g.result + (g.flags.length ? '   [' + g.flags.join(', ') + ']' : '')); if (g.statement) L.push(g.statement); if (g.reference) L.push(g.reference);
+    if (g.formula) L.push('', (++n) + '. FORMULA', 'Formula: ' + g.formula, 'With your numbers: ' + g.subst);
+    g.tables.forEach(function (t) { L.push('', t.title || 'Table'); L.push(t.head.join(' | ')); t.rows.forEach(function (r) { L.push(r.join(' | ')); }); });
+    if (g.steps.length) { L.push('', (++n) + '. WORKING'); g.steps.forEach(function (s, i) { L.push((i + 1) + '. ' + s); }); }
+    if (g.warnings.length) L.push('', (++n) + '. CHECKS RAISED BY THE CALCULATOR', g.warnings.join(' '));
+    if (m['rp-note']) L.push('', (++n) + '. NOTES', m['rp-note']);
+    L.push('', 'METHOD AND LIMITS', LIM, R.url);
+    return L.join('\n');
+  }
+  var sheet = document.createElement('div'); sheet.id = 'rp-sheet'; sheet.className = 'rp-sheet'; sheet.hidden = true; document.body.appendChild(sheet);
+  function msg(t) { $('rp-msg').textContent = t; }
+  function make() { saveMeta(); cur = build(); var pv = $('rp-prev'); if (!cur) { pv.innerHTML = ''; pv.hidden = true; msg('Enter a valid value in the calculator above first. A report needs a result.'); return null; } msg(''); pv.innerHTML = html(cur); pv.hidden = false; return cur; }
+  card.addEventListener('click', function (ev) {
+    var b = ev.target.closest('button'); if (!b) return; var a = b.dataset.rp; if (!a) return;
+    var R = make(); if (!R) return;
+    if (a === 'print') { sheet.innerHTML = html(R); sheet.hidden = false; document.body.classList.add('rp-printing'); var done = function () { document.body.classList.remove('rp-printing'); sheet.hidden = true; window.removeEventListener('afterprint', done); }; window.addEventListener('afterprint', done); window.print(); setTimeout(function () { if (document.body.classList.contains('rp-printing') && !window.matchMedia('print').matches) done(); }, 1500); }
+    else if (a === 'copy') { var t = plain(R), ok = function () { msg('Report copied as text.'); }; if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(t).then(ok, ok); else { var ta = document.createElement('textarea'); ta.value = t; document.body.appendChild(ta); ta.select(); try { document.execCommand('copy'); } catch (e) {} ta.remove(); ok(); } }
+    else if (a === 'save') { try { var bl = new Blob([plain(R) + '\n'], { type: 'text/plain;charset=utf-8' }), u = URL.createObjectURL(bl), l = document.createElement('a'); l.href = u; l.download = R.id + '.txt'; document.body.appendChild(l); l.click(); l.remove(); setTimeout(function () { URL.revokeObjectURL(u); }, 2000); msg('Saved ' + R.id + '.txt'); } catch (e) { msg('This browser could not save the file. Use Copy as text.'); } }
+  });
+  meta.forEach(function (k) { $(k).addEventListener('input', function () { if (!$('rp-prev').hidden) make(); }); });
+  window.__percentReport = { gather: gather, plain: function () { var R = build(); return R ? plain(R) : null; } };
+})();
+</script></body></html>

@@ -1,0 +1,281 @@
+Level,ID,Parent ID,Level 1 main category,Level 2 subcategory,Level 3 topic,Slug path,Target tools (long-term),Existing tools,Reserved capacity,Status,Child nodes,Reference topics (strategy) / note
+1,A01,,Engineering & Technology,,,engineering-technology,600,207,393,Live,6,
+2,A01.01,A01,Engineering & Technology,Electrical Engineering,,engineering-technology/electrical-engineering,,156,,Live,74,Electrical Fundamentals; AC and DC Circuits; Single-Phase and Three-Phase Systems; Power and Energy; Power Factor and Reactive Power; Cable and Wire Engineering; Voltage Drop and Cable Sizing; Electrical Protection; Short-Circuit Analysis; Earthing and Grounding; Transformers; Motors and Drives; Generators; Batteries and UPS; Electrical Testing and Measurement; Switchgear and Busbar Engineering; Lighting and Illumination (added: not in the strategy list)
+3,A01.01.01,A01.01,Engineering & Technology,Electrical Engineering,"Ohm's Law, Resistance & Resistivity",,,4,,Live,0,Legacy subcategory C01-S01
+3,A01.01.02,A01.01,Engineering & Technology,Electrical Engineering,"Component Networks (R, L, C)",,,7,,Live,0,Legacy subcategory C01-S02
+3,A01.01.03,A01.01,Engineering & Technology,Electrical Engineering,"AC Circuits, Reactance & Impedance",,,7,,Live,0,Legacy subcategory C01-S03
+3,A01.01.04,A01.01,Engineering & Technology,Electrical Engineering,Three-Phase Circuits,,,2,,Live,0,Legacy subcategory C01-S04
+3,A01.01.05,A01.01,Engineering & Technology,Electrical Engineering,Network Theorems & Circuit Solvers,,,4,,Live,0,Legacy subcategory C01-S05
+3,A01.01.06,A01.01,Engineering & Technology,Electrical Engineering,"RLC, Resonance & Transients",,,3,,Live,0,Legacy subcategory C01-S06
+3,A01.01.07,A01.01,Engineering & Technology,Electrical Engineering,Electromagnetics & Magnetic Circuits,,,6,,Live,0,Legacy subcategory C01-S07
+3,A01.01.08,A01.01,Engineering & Technology,Electrical Engineering,Waveforms & Harmonic Analysis,,,2,,Live,0,Legacy subcategory C01-S08
+3,A01.01.09,A01.01,Engineering & Technology,Electrical Engineering,Power & Current Relationships,,,2,,Live,0,Legacy subcategory C02-S01
+3,A01.01.10,A01.01,Engineering & Technology,Electrical Engineering,Power Factor & Reactive Power,,,3,,Live,0,Legacy subcategory C02-S02
+3,A01.01.11,A01.01,Engineering & Technology,Electrical Engineering,"Energy, Power & Time",,,1,,Live,0,Legacy subcategory C02-S03
+3,A01.01.12,A01.01,Engineering & Technology,Electrical Engineering,Maximum Demand & Load Factor,,,2,,Live,0,Legacy subcategory C02-S04
+3,A01.01.13,A01.01,Engineering & Technology,Electrical Engineering,Electricity Billing & Tariffs,,,3,,Live,0,Legacy subcategory C02-S05
+3,A01.01.14,A01.01,Engineering & Technology,Electrical Engineering,"Energy Cost, Audit & Savings",,,7,,Live,0,Legacy subcategory C02-S06
+3,A01.01.15,A01.01,Engineering & Technology,Electrical Engineering,Cable Sizing & Selection,,,1,,Live,0,Legacy subcategory C03-S01
+3,A01.01.16,A01.01,Engineering & Technology,Electrical Engineering,Ampacity & Derating,,,1,,Live,0,Legacy subcategory C03-S02
+3,A01.01.17,A01.01,Engineering & Technology,Electrical Engineering,Voltage Drop,,,4,,Live,0,Legacy subcategory C03-S03
+3,A01.01.18,A01.01,Engineering & Technology,Electrical Engineering,Short-Circuit Withstand,,,1,,Live,0,Legacy subcategory C03-S04
+3,A01.01.19,A01.01,Engineering & Technology,Electrical Engineering,Conductor Resistance & Wire Gauge,,,2,,Live,0,Legacy subcategory C03-S05
+3,A01.01.20,A01.01,Engineering & Technology,Electrical Engineering,Parallel Cables & Material Comparison,,,2,,Live,0,Legacy subcategory C03-S06
+3,A01.01.21,A01.01,Engineering & Technology,Electrical Engineering,"Conduit, Raceway & Cable Tray",,,1,,Live,0,Legacy subcategory C03-S07
+3,A01.01.22,A01.01,Engineering & Technology,Electrical Engineering,Cable Losses & Charging Current,,,1,,Live,0,Legacy subcategory C03-S09
+3,A01.01.23,A01.01,Engineering & Technology,Electrical Engineering,Motor Current & Nameplate,,,2,,Live,0,Legacy subcategory C04-S01
+3,A01.01.24,A01.01,Engineering & Technology,Electrical Engineering,Motor Sizing & Selection,,,1,,Live,0,Legacy subcategory C04-S02
+3,A01.01.25,A01.01,Engineering & Technology,Electrical Engineering,"Torque, Speed & Slip",,,2,,Live,0,Legacy subcategory C04-S03
+3,A01.01.26,A01.01,Engineering & Technology,Electrical Engineering,Motor Starting,,,3,,Live,0,Legacy subcategory C04-S04
+3,A01.01.27,A01.01,Engineering & Technology,Electrical Engineering,Motor Efficiency & Losses,,,2,,Live,0,Legacy subcategory C04-S05
+3,A01.01.28,A01.01,Engineering & Technology,Electrical Engineering,VFD & Speed Control,,,1,,Live,0,Legacy subcategory C04-S06
+3,A01.01.29,A01.01,Engineering & Technology,Electrical Engineering,Synchronous & DC Machines,,,2,,Live,0,Legacy subcategory C04-S07
+3,A01.01.30,A01.01,Engineering & Technology,Electrical Engineering,Transformer Sizing & Selection,,,1,,Live,0,Legacy subcategory C05-S01
+3,A01.01.31,A01.01,Engineering & Technology,Electrical Engineering,Transformer Loading & Current,,,2,,Live,0,Legacy subcategory C05-S02
+3,A01.01.32,A01.01,Engineering & Technology,Electrical Engineering,"Efficiency, Losses & Regulation",,,2,,Live,0,Legacy subcategory C05-S03
+3,A01.01.33,A01.01,Engineering & Technology,Electrical Engineering,Transformer Testing,,,1,,Live,0,Legacy subcategory C05-S04
+3,A01.01.34,A01.01,Engineering & Technology,Electrical Engineering,Parallel Operation,,,1,,Live,0,Legacy subcategory C05-S05
+3,A01.01.35,A01.01,Engineering & Technology,Electrical Engineering,Vector Groups & Turns Ratio,,,2,,Live,0,Legacy subcategory C05-S06
+3,A01.01.36,A01.01,Engineering & Technology,Electrical Engineering,Inrush Current,,,1,,Live,0,Legacy subcategory C05-S07
+3,A01.01.37,A01.01,Engineering & Technology,Electrical Engineering,Short-Circuit & Fault Analysis,,,4,,Live,0,Legacy subcategory C06-S01
+3,A01.01.38,A01.01,Engineering & Technology,Electrical Engineering,Per-Unit Systems,,,2,,Live,0,Legacy subcategory C06-S02
+3,A01.01.39,A01.01,Engineering & Technology,Electrical Engineering,Load Flow & Network Modelling,,,1,,Live,0,Legacy subcategory C06-S03
+3,A01.01.40,A01.01,Engineering & Technology,Electrical Engineering,Symmetrical Components,,,1,,Live,0,Legacy subcategory C06-S04
+3,A01.01.41,A01.01,Engineering & Technology,Electrical Engineering,"Power Quality, Harmonics & Unbalance",,,3,,Live,0,Legacy subcategory C06-S05
+3,A01.01.42,A01.01,Engineering & Technology,Electrical Engineering,Reliability & Supply Indices,,,1,,Live,0,Legacy subcategory C06-S06
+3,A01.01.43,A01.01,Engineering & Technology,Electrical Engineering,"Circuit Breaker, Fuse & Device Selection",,,2,,Live,0,Legacy subcategory C07-S01
+3,A01.01.44,A01.01,Engineering & Technology,Electrical Engineering,Overcurrent Relays & Settings,,,1,,Live,0,Legacy subcategory C07-S02
+3,A01.01.45,A01.01,Engineering & Technology,Electrical Engineering,Protection Coordination & Selectivity,,,2,,Live,0,Legacy subcategory C07-S03
+3,A01.01.46,A01.01,Engineering & Technology,Electrical Engineering,CT & PT / Instrument Transformers,,,2,,Live,0,Legacy subcategory C07-S04
+3,A01.01.47,A01.01,Engineering & Technology,Electrical Engineering,Busbars & Switchgear,,,1,,Live,0,Legacy subcategory C07-S05
+3,A01.01.48,A01.01,Engineering & Technology,Electrical Engineering,Earth Resistance & Electrodes,,,2,,Live,0,Legacy subcategory C08-S01
+3,A01.01.49,A01.01,Engineering & Technology,Electrical Engineering,Earth Grids,,,1,,Live,0,Legacy subcategory C08-S02
+3,A01.01.50,A01.01,Engineering & Technology,Electrical Engineering,Earthing Conductors,,,1,,Live,0,Legacy subcategory C08-S03
+3,A01.01.51,A01.01,Engineering & Technology,Electrical Engineering,Neutral Earthing,,,1,,Live,0,Legacy subcategory C08-S04
+3,A01.01.52,A01.01,Engineering & Technology,Electrical Engineering,Generator Sizing,,,1,,Live,0,Legacy subcategory C09-S01
+3,A01.01.53,A01.01,Engineering & Technology,Electrical Engineering,Genset Fuel & Autonomy,,,1,,Live,0,Legacy subcategory C09-S02
+3,A01.01.54,A01.01,Engineering & Technology,Electrical Engineering,Alternators & Droop,,,1,,Live,0,Legacy subcategory C09-S03
+3,A01.01.55,A01.01,Engineering & Technology,Electrical Engineering,UPS & Standby Systems,,,1,,Live,0,Legacy subcategory C09-S04
+3,A01.01.56,A01.01,Engineering & Technology,Electrical Engineering,Battery Sizing & Banks,,,2,,Live,0,Legacy subcategory C10-S01
+3,A01.01.57,A01.01,Engineering & Technology,Electrical Engineering,Charging & Discharging,,,1,,Live,0,Legacy subcategory C10-S02
+3,A01.01.58,A01.01,Engineering & Technology,Electrical Engineering,BESS Energy & Power,,,1,,Live,0,Legacy subcategory C10-S03
+3,A01.01.59,A01.01,Engineering & Technology,Electrical Engineering,Illuminance & Lumen Method,,,4,,Live,0,Legacy subcategory C16-S01
+3,A01.01.60,A01.01,Engineering & Technology,Electrical Engineering,"Photometric Units (cd, lm, lux)",,,3,,Live,0,Legacy subcategory C16-S02
+3,A01.01.61,A01.01,Engineering & Technology,Electrical Engineering,Luminous Efficacy & Lighting Power,,,1,,Live,0,Legacy subcategory C16-S03
+3,A01.01.62,A01.01,Engineering & Technology,Electrical Engineering,Uniformity & Layout,,,2,,Live,0,Legacy subcategory C16-S04
+3,A01.01.63,A01.01,Engineering & Technology,Electrical Engineering,LED Retrofit & Lighting Economics,,,1,,Live,0,Legacy subcategory C16-S05
+3,A01.01.64,A01.01,Engineering & Technology,Electrical Engineering,Plant Load Schedules & Load Flow,,,2,,Live,0,Legacy subcategory C18-S01
+3,A01.01.65,A01.01,Engineering & Technology,Electrical Engineering,Equipment Losses,,,1,,Live,0,Legacy subcategory C18-S02
+3,A01.01.66,A01.01,Engineering & Technology,Electrical Engineering,Pumps & Fans,,,2,,Live,0,Legacy subcategory C18-S03
+3,A01.01.67,A01.01,Engineering & Technology,Electrical Engineering,Heating & Thermal Loads,,,2,,Live,0,Legacy subcategory C18-S04
+3,A01.01.68,A01.01,Engineering & Technology,Electrical Engineering,PUE & Facility Efficiency,,,1,,Live,0,Legacy subcategory C20-S01
+3,A01.01.69,A01.01,Engineering & Technology,Electrical Engineering,Rack Power & Cooling,,,1,,Live,0,Legacy subcategory C20-S02
+3,A01.01.70,A01.01,Engineering & Technology,Electrical Engineering,Insulation Resistance Testing,,,2,,Live,0,Legacy subcategory C22-S01
+3,A01.01.71,A01.01,Engineering & Technology,Electrical Engineering,Contact Resistance,,,1,,Live,0,Legacy subcategory C22-S02
+3,A01.01.72,A01.01,Engineering & Technology,Electrical Engineering,Calibration & Measurement Uncertainty,,,8,,Live,0,Legacy subcategory C22-S03
+3,A01.01.73,A01.01,Engineering & Technology,Electrical Engineering,Power & Energy Measurement,,,2,,Live,0,Legacy subcategory C22-S04
+3,A01.01.74,A01.01,Engineering & Technology,Electrical Engineering,Earth Fault Loop & Disconnection,,,1,,Live,0,Legacy subcategory C23-S01
+2,A01.02,A01,Engineering & Technology,Electronics Engineering,,engineering-technology/electronics-engineering,,39,,Live,15,Analog Electronics; Digital Electronics; Semiconductor Components; Power Electronics; Sensors and Instrumentation; Control Systems; PLC and Automation
+3,A01.02.01,A01.02,Engineering & Technology,Electronics Engineering,DC-DC Converters,,,1,,Live,0,Legacy subcategory C13-S01
+3,A01.02.02,A01.02,Engineering & Technology,Electronics Engineering,Rectifiers & Power Supplies,,,2,,Live,0,Legacy subcategory C13-S02
+3,A01.02.03,A01.02,Engineering & Technology,Electronics Engineering,Inverters & PWM,,,1,,Live,0,Legacy subcategory C13-S03
+3,A01.02.04,A01.02,Engineering & Technology,Electronics Engineering,Switching & Semiconductor Losses,,,2,,Live,0,Legacy subcategory C13-S04
+3,A01.02.05,A01.02,Engineering & Technology,Electronics Engineering,General Power Converters,,,1,,Live,0,Legacy subcategory C13-S05
+3,A01.02.06,A01.02,Engineering & Technology,Electronics Engineering,"Diodes, Zener & Transistors",,,3,,Live,0,Legacy subcategory C14-S01
+3,A01.02.07,A01.02,Engineering & Technology,Electronics Engineering,SCR & Thyristors,,,1,,Live,0,Legacy subcategory C14-S02
+3,A01.02.08,A01.02,Engineering & Technology,Electronics Engineering,"Op-Amps, Filters & Analogue Circuits",,,5,,Live,0,Legacy subcategory C14-S03
+3,A01.02.09,A01.02,Engineering & Technology,Electronics Engineering,"Dividers, LEDs & Passive Networks",,,2,,Live,0,Legacy subcategory C14-S04
+3,A01.02.10,A01.02,Engineering & Technology,Electronics Engineering,Digital Electronics,,,11,,Live,0,Legacy subcategory C14-S05
+3,A01.02.11,A01.02,Engineering & Technology,Electronics Engineering,Heat Sinks & Thermal Design,,,1,,Live,0,Legacy subcategory C14-S06
+3,A01.02.12,A01.02,Engineering & Technology,Electronics Engineering,"Sensors, Transmitters & Signal Scaling",,,3,,Live,0,Legacy subcategory C15-S01
+3,A01.02.13,A01.02,Engineering & Technology,Electronics Engineering,ADC & Data Acquisition,,,1,,Live,0,Legacy subcategory C15-S02
+3,A01.02.14,A01.02,Engineering & Technology,Electronics Engineering,Control Systems & Tuning,,,4,,Live,0,Legacy subcategory C15-S03
+3,A01.02.15,A01.02,Engineering & Technology,Electronics Engineering,PLC & Ladder Logic,,,1,,Live,0,Legacy subcategory C15-S04
+2,A01.03,A01,Engineering & Technology,Mechanical Engineering,,engineering-technology/mechanical-engineering,,0,,Planned,0,Engineering Mechanics; Machine Design; Fluid Mechanics; Thermodynamics; Heat Transfer; Pumps and Compressors; HVAC Engineering; Material Strength
+2,A01.04,A01,Engineering & Technology,Civil and Structural Engineering,,engineering-technology/civil-and-structural-engineering,,0,,Planned,0,Structural Analysis; Beam and Column Design; Concrete Engineering; Steel Structures; Geotechnical Engineering; Surveying and Measurements; Building Material Quantities
+2,A01.05,A01,Engineering & Technology,Industrial and Manufacturing Engineering,,engineering-technology/industrial-and-manufacturing-engineering,,0,,Planned,0,Production Engineering; Manufacturing Calculations; Quality Control; Tolerance and Fits; Reliability Engineering; Maintenance Engineering
+2,A01.06,A01,Engineering & Technology,Airport and Aviation Engineering,,engineering-technology/airport-and-aviation-engineering,,12,,Live,6,Airport Ground Lighting (AGL); AGL Series Circuit Calculations; CCR Loading and Sizing; AGL Cable Engineering; Isolating Transformer Engineering; Runway and Taxiway Lighting; Photometric Calculations; PAPI and Approach Lighting Engineering
+3,A01.06.01,A01.06,Engineering & Technology,Airport and Aviation Engineering,Series Circuit Loading & CCR Sizing,,,5,,Live,0,Legacy subcategory C17-S01
+3,A01.06.02,A01.06,Engineering & Technology,Airport and Aviation Engineering,Isolating Transformers,,,1,,Live,0,Legacy subcategory C17-S02
+3,A01.06.03,A01.06,Engineering & Technology,Airport and Aviation Engineering,AGL Series Cable,,,2,,Live,0,Legacy subcategory C17-S03
+3,A01.06.04,A01.06,Engineering & Technology,Airport and Aviation Engineering,AGL Photometry,,,2,,Live,0,Legacy subcategory C17-S04
+3,A01.06.05,A01.06,Engineering & Technology,Airport and Aviation Engineering,Signage,,,1,,Live,0,Legacy subcategory C17-S05
+3,A01.06.06,A01.06,Engineering & Technology,Airport and Aviation Engineering,Lamps & Lamp Life,,,1,,Live,0,Legacy subcategory C17-S06
+1,A02,,Mathematics,,,mathematics,400,64,336,Live,14,
+2,A02.01,A02,Mathematics,Arithmetic and Number Calculations,,mathematics/arithmetic-and-number-calculations,,9,,Live,1,
+3,A02.01.01,A02.01,Mathematics,Arithmetic and Number Calculations,Everyday Numeric Tools,,,9,,Live,0,Legacy subcategory C24-S07
+2,A02.02,A02,Mathematics,Fractions and Decimals,,mathematics/fractions-and-decimals,,5,,Live,1,
+3,A02.02.01,A02.02,Mathematics,Fractions and Decimals,Everyday Numeric Tools,,,5,,Live,0,Legacy subcategory C24-S07
+2,A02.03,A02,Mathematics,Percentages and Ratios,,mathematics/percentages-and-ratios,,9,,Live,1,
+3,A02.03.01,A02.03,Mathematics,Percentages and Ratios,Everyday Numeric Tools,,,9,,Live,0,Legacy subcategory C24-S07
+2,A02.04,A02,Mathematics,Algebra,,mathematics/algebra,,15,,Live,1,
+3,A02.04.01,A02.04,Mathematics,Algebra,Algebra & Equations,,,15,,Live,0,Legacy subcategory C24-S01
+2,A02.05,A02,Mathematics,Equations and Inequalities,,mathematics/equations-and-inequalities,,5,,Live,1,
+3,A02.05.01,A02.05,Mathematics,Equations and Inequalities,Algebra & Equations,,,5,,Live,0,Legacy subcategory C24-S01
+2,A02.06,A02,Mathematics,Geometry,,mathematics/geometry,,7,,Live,1,
+3,A02.06.01,A02.06,Mathematics,Geometry,Geometry & Trigonometry,,,7,,Live,0,Legacy subcategory C24-S03
+2,A02.07,A02,Mathematics,Trigonometry,,mathematics/trigonometry,,1,,Live,1,
+3,A02.07.01,A02.07,Mathematics,Trigonometry,Geometry & Trigonometry,,,1,,Live,0,Legacy subcategory C24-S03
+2,A02.08,A02,Mathematics,Calculus,,mathematics/calculus,,6,,Live,1,
+3,A02.08.01,A02.08,Mathematics,Calculus,"Calculus, Differential Equations & Transforms",,,6,,Live,0,Legacy subcategory C24-S02
+2,A02.09,A02,Mathematics,Differential Equations,,mathematics/differential-equations,,2,,Live,1,
+3,A02.09.01,A02.09,Mathematics,Differential Equations,"Calculus, Differential Equations & Transforms",,,2,,Live,0,Legacy subcategory C24-S02
+2,A02.10,A02,Mathematics,Linear Algebra and Matrices,,mathematics/linear-algebra-and-matrices,,2,,Live,1,
+3,A02.10.01,A02.10,Mathematics,Linear Algebra and Matrices,"Matrices, Vectors & Complex Numbers",,,2,,Live,0,Legacy subcategory C24-S06
+2,A02.11,A02,Mathematics,Complex Numbers,,mathematics/complex-numbers,,1,,Live,1,
+3,A02.11.01,A02.11,Mathematics,Complex Numbers,"Matrices, Vectors & Complex Numbers",,,1,,Live,0,Legacy subcategory C24-S06
+2,A02.12,A02,Mathematics,Numerical Methods,,mathematics/numerical-methods,,1,,Live,1,
+3,A02.12.01,A02.12,Mathematics,Numerical Methods,Everyday Numeric Tools,,,1,,Live,0,Legacy subcategory C24-S07
+2,A02.13,A02,Mathematics,Discrete Mathematics,,mathematics/discrete-mathematics,,1,,Live,1,
+3,A02.13.01,A02.13,Mathematics,Discrete Mathematics,Probability & Combinatorics,,,1,,Live,0,Legacy subcategory C24-S05
+2,A02.14,A02,Mathematics,Applied and Engineering Mathematics,,mathematics/applied-and-engineering-mathematics,,0,,Planned,0,
+1,A03,,Finance & Money,,,finance-money,250,0,250,Planned,12,
+2,A03.01,A03,Finance & Money,Loan and EMI Calculators,,finance-money/loan-and-emi-calculators,,0,,Planned,0,
+2,A03.02,A03,Finance & Money,Interest Calculators,,finance-money/interest-calculators,,0,,Planned,0,
+2,A03.03,A03,Finance & Money,Mortgage Calculators,,finance-money/mortgage-calculators,,0,,Planned,0,
+2,A03.04,A03,Finance & Money,Investment and Returns,,finance-money/investment-and-returns,,0,,Planned,0,
+2,A03.05,A03,Finance & Money,Compound Interest and Savings,,finance-money/compound-interest-and-savings,,0,,Planned,0,
+2,A03.06,A03,Finance & Money,Tax Calculators,,finance-money/tax-calculators,,0,,Planned,0,
+2,A03.07,A03,Finance & Money,Salary and Payroll,,finance-money/salary-and-payroll,,0,,Planned,0,
+2,A03.08,A03,Finance & Money,Retirement Planning,,finance-money/retirement-planning,,0,,Planned,0,
+2,A03.09,A03,Finance & Money,Budget and Expenses,,finance-money/budget-and-expenses,,0,,Planned,0,
+2,A03.10,A03,Finance & Money,Credit and Debt,,finance-money/credit-and-debt,,0,,Planned,0,
+2,A03.11,A03,Finance & Money,Insurance Calculations,,finance-money/insurance-calculations,,0,,Planned,0,
+2,A03.12,A03,Finance & Money,Inflation Calculators,,finance-money/inflation-calculators,,0,,Planned,0,
+1,A04,,Unit Conversion & Measurement,,,unit-conversion-measurement,200,16,184,Live,11,
+2,A04.01,A04,Unit Conversion & Measurement,Length,,unit-conversion-measurement/length,,1,,Live,1,
+3,A04.01.01,A04.01,Unit Conversion & Measurement,Length,Engineering Unit Conversions,,,1,,Live,0,Legacy subcategory C24-S08
+2,A04.02,A04,Unit Conversion & Measurement,Area,,unit-conversion-measurement/area,,0,,Planned,0,
+2,A04.03,A04,Unit Conversion & Measurement,Volume,,unit-conversion-measurement/volume,,0,,Planned,0,
+2,A04.04,A04,Unit Conversion & Measurement,Mass,,unit-conversion-measurement/mass,,0,,Planned,0,
+2,A04.05,A04,Unit Conversion & Measurement,Temperature,,unit-conversion-measurement/temperature,,0,,Planned,0,
+2,A04.06,A04,Unit Conversion & Measurement,Pressure,,unit-conversion-measurement/pressure,,0,,Planned,0,
+2,A04.07,A04,Unit Conversion & Measurement,Energy,,unit-conversion-measurement/energy,,0,,Planned,0,
+2,A04.08,A04,Unit Conversion & Measurement,Power,,unit-conversion-measurement/power,,0,,Planned,0,
+2,A04.09,A04,Unit Conversion & Measurement,Data,,unit-conversion-measurement/data,,0,,Planned,0,
+2,A04.10,A04,Unit Conversion & Measurement,SI Prefixes,,unit-conversion-measurement/si-prefixes,,0,,Planned,0,
+2,A04.11,A04,Unit Conversion & Measurement,Electrical Units,,unit-conversion-measurement/electrical-units,,15,,Live,6,Power Conversion; Current and Apparent Power; Energy and Capacity; Wire Gauge (added: named in strategy section 5)
+3,A04.11.01,A04.11,Unit Conversion & Measurement,Electrical Units,Power & Current Relationships,,,6,,Live,0,Legacy subcategory C02-S01
+3,A04.11.02,A04.11,Unit Conversion & Measurement,Electrical Units,Power Factor & Reactive Power,,,2,,Live,0,Legacy subcategory C02-S02
+3,A04.11.03,A04.11,Unit Conversion & Measurement,Electrical Units,"Energy, Power & Time",,,1,,Live,0,Legacy subcategory C02-S03
+3,A04.11.04,A04.11,Unit Conversion & Measurement,Electrical Units,Power & Energy Unit Conversions,,,3,,Live,0,Legacy subcategory C02-S07
+3,A04.11.05,A04.11,Unit Conversion & Measurement,Electrical Units,Conductor Resistance & Wire Gauge,,,2,,Live,0,Legacy subcategory C03-S05
+3,A04.11.06,A04.11,Unit Conversion & Measurement,Electrical Units,Battery Capacity Units,,,1,,Live,0,Legacy subcategory C10-S04
+1,A05,,Physics & Applied Science,,,physics-applied-science,160,0,160,Planned,6,
+2,A05.01,A05,Physics & Applied Science,Mechanics,,physics-applied-science/mechanics,,0,,Planned,0,
+2,A05.02,A05,Physics & Applied Science,Optics,,physics-applied-science/optics,,0,,Planned,0,
+2,A05.03,A05,Physics & Applied Science,Waves,,physics-applied-science/waves,,0,,Planned,0,
+2,A05.04,A05,Physics & Applied Science,Thermodynamics,,physics-applied-science/thermodynamics,,0,,Planned,0,
+2,A05.05,A05,Physics & Applied Science,Electricity,,physics-applied-science/electricity,,0,,Planned,0,
+2,A05.06,A05,Physics & Applied Science,Acoustics,,physics-applied-science/acoustics,,0,,Planned,0,
+1,A06,,Computer Science & IT,,,computer-science-it,160,0,160,Planned,6,
+2,A06.01,A06,Computer Science & IT,Programming,,computer-science-it/programming,,0,,Planned,0,
+2,A06.02,A06,Computer Science & IT,Algorithms,,computer-science-it/algorithms,,0,,Planned,0,
+2,A06.03,A06,Computer Science & IT,Networking,,computer-science-it/networking,,0,,Planned,0,
+2,A06.04,A06,Computer Science & IT,Data Storage,,computer-science-it/data-storage,,0,,Planned,0,
+2,A06.05,A06,Computer Science & IT,Web Development,,computer-science-it/web-development,,0,,Planned,0,
+2,A06.06,A06,Computer Science & IT,Databases,,computer-science-it/databases,,0,,Planned,0,
+1,A07,,Business & Economics,,,business-economics,150,0,150,Planned,7,
+2,A07.01,A07,Business & Economics,Profit,,business-economics/profit,,0,,Planned,0,
+2,A07.02,A07,Business & Economics,Margin,,business-economics/margin,,0,,Planned,0,
+2,A07.03,A07,Business & Economics,Pricing,,business-economics/pricing,,0,,Planned,0,
+2,A07.04,A07,Business & Economics,Marketing,,business-economics/marketing,,0,,Planned,0,
+2,A07.05,A07,Business & Economics,Inventory,,business-economics/inventory,,0,,Planned,0,
+2,A07.06,A07,Business & Economics,Project Management,,business-economics/project-management,,0,,Planned,0,
+2,A07.07,A07,Business & Economics,Economics,,business-economics/economics,,0,,Planned,0,
+1,A08,,Construction & Architecture,,,construction-architecture,140,6,134,Live,6,
+2,A08.01,A08,Construction & Architecture,Materials,,construction-architecture/materials,,0,,Planned,0,
+2,A08.02,A08,Construction & Architecture,Flooring,,construction-architecture/flooring,,0,,Planned,0,
+2,A08.03,A08,Construction & Architecture,Roofing,,construction-architecture/roofing,,0,,Planned,0,
+2,A08.04,A08,Construction & Architecture,Concrete,,construction-architecture/concrete,,6,,Live,1,
+3,A08.04.01,A08.04,Construction & Architecture,Concrete,Building Loads & Demand,,,6,,Live,0,Legacy subcategory C19-S01
+2,A08.05,A08,Construction & Architecture,Quantity Estimation,,construction-architecture/quantity-estimation,,0,,Planned,0,
+2,A08.06,A08,Construction & Architecture,Building Costs,,construction-architecture/building-costs,,0,,Planned,0,
+1,A09,,Statistics & Data Analysis,,,statistics-data-analysis,130,9,121,Live,6,
+2,A09.01,A09,Statistics & Data Analysis,Probability,,statistics-data-analysis/probability,,2,,Live,1,
+3,A09.01.01,A09.01,Statistics & Data Analysis,Probability,Probability & Combinatorics,,,2,,Live,0,Legacy subcategory C24-S05
+2,A09.02,A09,Statistics & Data Analysis,Distributions,,statistics-data-analysis/distributions,,1,,Live,1,
+3,A09.02.01,A09.02,Statistics & Data Analysis,Distributions,Probability & Combinatorics,,,1,,Live,0,Legacy subcategory C24-S05
+2,A09.03,A09,Statistics & Data Analysis,Regression,,statistics-data-analysis/regression,,1,,Live,1,
+3,A09.03.01,A09.03,Statistics & Data Analysis,Regression,Statistics & Regression,,,1,,Live,0,Legacy subcategory C24-S04
+2,A09.04,A09,Statistics & Data Analysis,Sampling,,statistics-data-analysis/sampling,,0,,Planned,0,
+2,A09.05,A09,Statistics & Data Analysis,Hypothesis Testing,,statistics-data-analysis/hypothesis-testing,,0,,Planned,0,
+2,A09.06,A09,Statistics & Data Analysis,Data Analysis,,statistics-data-analysis/data-analysis,,5,,Live,1,
+3,A09.06.01,A09.06,Statistics & Data Analysis,Data Analysis,Statistics & Regression,,,5,,Live,0,Legacy subcategory C24-S04
+1,A10,,Energy & Environment,,,energy-environment,130,7,123,Live,6,
+2,A10.01,A10,Energy & Environment,Solar,,energy-environment/solar,,6,,Live,4,
+3,A10.01.01,A10.01,Energy & Environment,Solar,Solar PV Strings & Arrays,,,2,,Live,0,Legacy subcategory C11-S01
+3,A10.01.02,A10.01,Energy & Environment,Solar,PV Energy Yield & Performance,,,2,,Live,0,Legacy subcategory C11-S02
+3,A10.01.03,A10.01,Energy & Environment,Solar,Solar Inverters & DC/AC Ratio,,,1,,Live,0,Legacy subcategory C11-S03
+3,A10.01.04,A10.01,Energy & Environment,Solar,Hybrid Systems & Microgrids,,,1,,Live,0,Legacy subcategory C11-S05
+2,A10.02,A10,Energy & Environment,Wind,,energy-environment/wind,,1,,Live,1,
+3,A10.02.01,A10.02,Energy & Environment,Wind,Wind Energy,,,1,,Live,0,Legacy subcategory C11-S04
+2,A10.03,A10,Energy & Environment,Batteries,,energy-environment/batteries,,0,,Planned,0,
+2,A10.04,A10,Energy & Environment,Energy Efficiency,,energy-environment/energy-efficiency,,0,,Planned,0,
+2,A10.05,A10,Energy & Environment,Carbon Footprint,,energy-environment/carbon-footprint,,0,,Planned,0,
+2,A10.06,A10,Energy & Environment,Environmental Calculations,,energy-environment/environmental-calculations,,0,,Planned,0,
+1,A11,,Health & Fitness,,,health-fitness,100,2,98,Live,5,
+2,A11.01,A11,Health & Fitness,BMI,,health-fitness/bmi,,2,,Live,1,
+3,A11.01.01,A11.01,Health & Fitness,BMI,Everyday Numeric Tools,,,2,,Live,0,Legacy subcategory C24-S07
+2,A11.02,A11,Health & Fitness,Nutrition,,health-fitness/nutrition,,0,,Planned,0,
+2,A11.03,A11,Health & Fitness,Exercise,,health-fitness/exercise,,0,,Planned,0,
+2,A11.04,A11,Health & Fitness,Body Measurements,,health-fitness/body-measurements,,0,,Planned,0,
+2,A11.05,A11,Health & Fitness,Fitness and Wellness,,health-fitness/fitness-and-wellness,,0,,Planned,0,
+1,A12,,Automotive & Transportation,,,automotive-transportation,100,5,95,Live,5,
+2,A12.01,A12,Automotive & Transportation,Fuel Consumption,,automotive-transportation/fuel-consumption,,0,,Planned,0,
+2,A12.02,A12,Automotive & Transportation,Vehicle Performance,,automotive-transportation/vehicle-performance,,0,,Planned,0,
+2,A12.03,A12,Automotive & Transportation,EV Charging,,automotive-transportation/ev-charging,,4,,Live,3,
+3,A12.03.01,A12.03,Automotive & Transportation,EV Charging,EV Charging Time,,,1,,Live,0,Legacy subcategory C12-S01
+3,A12.03.02,A12.03,Automotive & Transportation,EV Charging,EV Energy & Range,,,2,,Live,0,Legacy subcategory C12-S02
+3,A12.03.03,A12.03,Automotive & Transportation,EV Charging,Charging Infrastructure & Site Load,,,1,,Live,0,Legacy subcategory C12-S03
+2,A12.04,A12,Automotive & Transportation,Transport and Logistics,,automotive-transportation/transport-and-logistics,,0,,Planned,0,
+2,A12.05,A12,Automotive & Transportation,Rail Electrification,,automotive-transportation/rail-electrification,,1,,Live,1,(added: not in the strategy list)
+3,A12.05.01,A12.05,Automotive & Transportation,Rail Electrification,Railway Backup & Standby Power,,,1,,Live,0,Legacy subcategory C21-S01
+1,A13,,Everyday Life & Home,,,everyday-life-home,100,2,98,Live,5,
+2,A13.01,A13,Everyday Life & Home,Time,,everyday-life-home/time,,0,,Planned,0,
+2,A13.02,A13,Everyday Life & Home,Date,,everyday-life-home/date,,2,,Live,1,
+3,A13.02.01,A13.02,Everyday Life & Home,Date,Everyday Numeric Tools,,,2,,Live,0,Legacy subcategory C24-S07
+2,A13.03,A13,Everyday Life & Home,Household Costs,,everyday-life-home/household-costs,,0,,Planned,0,
+2,A13.04,A13,Everyday Life & Home,Home Planning,,everyday-life-home/home-planning,,0,,Planned,0,
+2,A13.05,A13,Everyday Life & Home,Personal Utilities,,everyday-life-home/personal-utilities,,0,,Planned,0,
+1,A14,,Chemistry,,,chemistry,90,0,90,Planned,6,
+2,A14.01,A14,Chemistry,Stoichiometry,,chemistry/stoichiometry,,0,,Planned,0,
+2,A14.02,A14,Chemistry,Molarity,,chemistry/molarity,,0,,Planned,0,
+2,A14.03,A14,Chemistry,Solutions,,chemistry/solutions,,0,,Planned,0,
+2,A14.04,A14,Chemistry,Concentration,,chemistry/concentration,,0,,Planned,0,
+2,A14.05,A14,Chemistry,pH,,chemistry/ph,,0,,Planned,0,
+2,A14.06,A14,Chemistry,Chemical Reactions,,chemistry/chemical-reactions,,0,,Planned,0,
+1,A15,,Biology & Life Sciences,,,biology-life-sciences,70,0,70,Planned,5,
+2,A15.01,A15,Biology & Life Sciences,Genetics,,biology-life-sciences/genetics,,0,,Planned,0,
+2,A15.02,A15,Biology & Life Sciences,Population,,biology-life-sciences/population,,0,,Planned,0,
+2,A15.03,A15,Biology & Life Sciences,Ecology,,biology-life-sciences/ecology,,0,,Planned,0,
+2,A15.04,A15,Biology & Life Sciences,Physiology,,biology-life-sciences/physiology,,0,,Planned,0,
+2,A15.05,A15,Biology & Life Sciences,Biological Measurements,,biology-life-sciences/biological-measurements,,0,,Planned,0,
+1,A16,,Education & Exams,,,education-exams,70,0,70,Planned,5,
+2,A16.01,A16,Education & Exams,GPA,,education-exams/gpa,,0,,Planned,0,
+2,A16.02,A16,Education & Exams,Grades,,education-exams/grades,,0,,Planned,0,
+2,A16.03,A16,Education & Exams,Marks,,education-exams/marks,,0,,Planned,0,
+2,A16.04,A16,Education & Exams,Exam Scores,,education-exams/exam-scores,,0,,Planned,0,
+2,A16.05,A16,Education & Exams,Academic Performance,,education-exams/academic-performance,,0,,Planned,0,
+1,A17,,Food & Agriculture,,,food-agriculture,60,0,60,Planned,5,
+2,A17.01,A17,Food & Agriculture,Recipe Scaling,,food-agriculture/recipe-scaling,,0,,Planned,0,
+2,A17.02,A17,Food & Agriculture,Cooking,,food-agriculture/cooking,,0,,Planned,0,
+2,A17.03,A17,Food & Agriculture,Crop Yield,,food-agriculture/crop-yield,,0,,Planned,0,
+2,A17.04,A17,Food & Agriculture,Irrigation,,food-agriculture/irrigation,,0,,Planned,0,
+2,A17.05,A17,Food & Agriculture,Agricultural Planning,,food-agriculture/agricultural-planning,,0,,Planned,0,
+1,A18,,Sports & Recreation,,,sports-recreation,40,0,40,Planned,4,
+2,A18.01,A18,Sports & Recreation,Running,,sports-recreation/running,,0,,Planned,0,
+2,A18.02,A18,Sports & Recreation,Cycling,,sports-recreation/cycling,,0,,Planned,0,
+2,A18.03,A18,Sports & Recreation,Sports Statistics,,sports-recreation/sports-statistics,,0,,Planned,0,
+2,A18.04,A18,Sports & Recreation,Performance,,sports-recreation/performance,,0,,Planned,0,
+1,A19,,Geography & Astronomy,,,geography-astronomy,40,0,40,Planned,4,
+2,A19.01,A19,Geography & Astronomy,Coordinates,,geography-astronomy/coordinates,,0,,Planned,0,
+2,A19.02,A19,Geography & Astronomy,Distance,,geography-astronomy/distance,,0,,Planned,0,
+2,A19.03,A19,Geography & Astronomy,Mapping,,geography-astronomy/mapping,,0,,Planned,0,
+2,A19.04,A19,Geography & Astronomy,Astronomy and Orbital Calculations,,geography-astronomy/astronomy-and-orbital-calculations,,0,,Planned,0,
+1,A20,,"Design, Media & Photography",,,design-media-photography,30,0,30,Planned,5,
+2,A20.01,A20,"Design, Media & Photography",Image Dimensions,,design-media-photography/image-dimensions,,0,,Planned,0,
+2,A20.02,A20,"Design, Media & Photography",Aspect Ratios,,design-media-photography/aspect-ratios,,0,,Planned,0,
+2,A20.03,A20,"Design, Media & Photography",Printing,,design-media-photography/printing,,0,,Planned,0,
+2,A20.04,A20,"Design, Media & Photography",Typography,,design-media-photography/typography,,0,,Planned,0,
+2,A20.05,A20,"Design, Media & Photography",Audio and Video,,design-media-photography/audio-and-video,,0,,Planned,0,

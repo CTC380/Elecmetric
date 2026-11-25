@@ -1,6 +1,21 @@
-# Verification register (v1.73.5)
+# Verification register (v1.99.90)
 
 Automated tests, a public standards-scope screen and independent engineering approval are different activities. The register records these states separately for every calculator.
+
+## Current position (v1.99.90)
+
+| Measure | Count |
+|---|---:|
+| Calculators | 246 |
+| Standards scope screened | 62 |
+| Justified as Not applicable | 184 |
+| Licensed clause reviews completed | 0 |
+| Individual professional approvals | 0 |
+| **Verified** | **0** |
+| Engineering reference | 210 |
+| Indicative | 36 |
+
+The sections below keep the figures from the release they describe (157 calculators at v1.73.0). The table above is the current position.
 
 ## Classification
 
@@ -12,7 +27,7 @@ Automated tests, a public standards-scope screen and independent engineering app
 
 ## Stage 3: standard applicability
 
-The v1.73.0 Stage 3 review classifies all **157 calculators** (classification carried forward in v1.73.1):
+The v1.73.0 Stage 3 review classified all **157 calculators** (carried forward in v1.73.1; the registry has since grown to 246, with 62 scope screened and 184 not applicable):
 
 - **50 Scope screened:** relevant standards and published edition/scope metadata identified from official or publisher catalogue information. Each record is in `tools/review_records.json` with `review_status: scope_screened` and a limitation note.
 - **107 Not applicable:** the implemented equation is a generic identity, conversion, simplified estimate or user-defined commercial calculation for which no single electrical standard governs the method. Reasons are in `tools/standard_applicability.json`.
@@ -22,12 +37,12 @@ The v1.73.0 Stage 3 review classifies all **157 calculators** (classification ca
 
 ## Stage 5: team-level reviewer designation and individual sign-off
 
-A team-level reviewer designation is recorded for all **157 calculators** in `tools/team_review_approval.json`:
+A team-level reviewer designation is recorded for the **157 calculators** present on 12 November 2026 in `tools/team_review_approval.json`. The 85 calculators added since are not covered unless the owner directs it:
 
-- **Reviewer:** Rahul Sharma (self-designation, not independent)
+- **Reviewer:** Elecmetric project team (self-designation, not independent)
 - **Record date:** 12 November 2026
 - **Basis:** recorded at the user's explicit direction
-- **Scope:** all 157 calculators
+- **Scope:** the 157 calculators present on that date
 
 This completes the requested **team-level reviewer approval designation**. It is an administrative team record. It does **not** claim that a named individual or an independent qualified engineer has reviewed every formula, assumption, manufacturer limit or standard clause. No personal qualification is asserted.
 
@@ -37,8 +52,8 @@ A separate individual professional sign-off remains available in `tools/review_r
 
 | Field | Source | Required for Verified |
 |---|---|---|
-| Calculation author | `calculation_author` in `tools/site_info.json` (currently Rahul Sharma (author)), or `reference.author` | Yes |
-| Technical review label (public pages) | `technical_reviewer` in `tools/site_info.json` (currently Rahul Sharma (author)); displayed separately from approval | No, attribution alone is not approval |
+| Calculation author | `calculation_author` in `tools/site_info.json` (currently Elecmetric project (author)), or `reference.author` | Yes |
+| Technical review label (public pages) | `technical_reviewer` in `tools/site_info.json` (currently Elecmetric project (author)); displayed separately from approval | No, attribution alone is not approval |
 | Team-level reviewer designation | `tools/team_review_approval.json` | Visible as a team record; not sufficient for Verified |
 | Individual professional approval | `approved.reviewer`, `approved.qualification`, `approved.date` in `tools/review_records.json` | Yes |
 | Standard and edition | `standard.name`, `standard.edition` | Yes, unless Not applicable is justified |
@@ -60,7 +75,7 @@ See `docs/STANDARD_APPLICABILITY_REVIEW_v1.73.0.md` for the calculator-by-calcul
 
 
 ## Individual review record (v1.73.5)
-No individual technical review is recorded for any calculator (v1.73.6). Only the user-directed Rahul Sharma (author) designation (`tools/team_review_approval.json`) is on record, and it is not an individual or independent sign-off. Add an `approved` record in `tools/review_records.json` only when a named, qualified reviewer has reviewed the calculator and the signed worksheets are on file.
+No individual technical review is recorded for any calculator (v1.73.6). Only the user-directed Elecmetric project (author) designation (`tools/team_review_approval.json`) is on record, and it is not an individual or independent sign-off. Add an `approved` record in `tools/review_records.json` only when a named, qualified reviewer has reviewed the calculator and the signed worksheets are on file.
 
 - It is an individual review of the formula, assumptions and worked examples. It is **not** a clause-by-clause review against licensed standard text; the 50 standards-based calculators remain `scope_screened`.
 - No calculator is **Verified** yet. Verified also needs an exact formula reference (`reference.formula_source`, `reference.exact`) and, where a standard applies, a `clause_reviewed` standard record.

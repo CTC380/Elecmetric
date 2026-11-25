@@ -1,0 +1,54 @@
+[
+  {
+    "id": "articles", "name": "Technical Articles", "slug": "technical-articles", "status": "live", "idPrefix": "TL", "order": 1,
+    "short": "In-depth engineering articles and design methods, each linked to the calculator that does the arithmetic."
+  },
+  {
+    "id": "formulas", "name": "Formula Library", "slug": "formula-library", "status": "planned", "idPrefix": "FL", "order": 2,
+    "short": "Every working formula in one searchable place, with variables, units and where it applies.",
+    "description": "A searchable reference of the formulas behind the Elecmetric calculators and articles. Each entry states the equation, defines every variable with its unit, notes the assumptions and limits, and links to the calculator that applies it.",
+    "will": ["Formulas grouped by division, searchable by name, symbol or quantity", "Variable table with SI unit and typical range for every symbol", "Assumptions, limits of validity and common mistakes for each formula", "A link to the calculator and the technical article that use it"],
+    "fields": ["Formula name and ID", "Equation and variable definitions", "Units and typical ranges", "Assumptions and limits", "Related calculator, article and standard"],
+    "related": [["Formula articles in the Conversion Centre", "converters/index.html"], ["All engineering calculators", "calculators/"]]
+  },
+  {
+    "id": "diagrams", "name": "Diagram Library", "slug": "diagram-library", "status": "planned", "idPrefix": "DL", "order": 3,
+    "short": "Clear single-line, circuit, phasor and schematic diagrams you can read, copy and cite.",
+    "description": "A library of engineering diagrams drawn in one consistent style: single-line diagrams, circuit and phasor diagrams, control schematics and equipment layouts. Each diagram has a plain-language caption, a legend and a link to the topic it explains.",
+    "will": ["Single-line, circuit, phasor, control and layout diagrams in one visual style", "Every diagram readable in light and dark themes and on a phone", "Legend, symbol key and a plain-language caption for each diagram", "Download as SVG or PNG with credit to Elecmetric"],
+    "fields": ["Diagram title and ID", "Diagram type and symbol standard", "Legend and caption", "Related article and calculator", "Download formats"],
+    "related": [["Technical Articles", "technical-library/technical-articles/"], ["Engineering calculators", "calculators/"]]
+  },
+  {
+    "id": "case-studies", "name": "Case Studies", "slug": "case-studies", "status": "planned", "idPrefix": "CS", "order": 4,
+    "short": "Real design and fault problems worked end to end, with the numbers, the decision and the lesson.",
+    "description": "Worked engineering cases from design, commissioning and fault investigation. Each case states the problem, the data, the calculation route, the decision made and what to check next time.",
+    "will": ["Design, commissioning and fault-finding cases with real-world numbers", "The full calculation route with links to the calculators used", "The decision, the alternatives rejected and why", "A short lessons-learned checklist"],
+    "fields": ["Case title and ID", "Problem and site conditions", "Data and assumptions", "Calculation route and result", "Decision and lessons learned"],
+    "related": [["Technical Articles", "technical-library/technical-articles/"], ["Engineering calculators", "calculators/"]]
+  },
+  {
+    "id": "mcq", "name": "MCQ Centre", "slug": "mcq-centre", "status": "planned", "idPrefix": "MCQ", "order": 5,
+    "short": "Practice questions with worked answers, by topic and difficulty, for students and exam candidates.",
+    "description": "Multiple-choice practice by division and difficulty. Every question has a worked answer, the formula used and a link to the matching calculator or article, so a wrong answer turns into a lesson.",
+    "will": ["Questions grouped by division, topic and difficulty", "Instant marking with a worked explanation for every option", "Timed sets and topic quizzes for exam practice", "Progress kept on your own device only"],
+    "fields": ["Question and ID", "Four options and the correct answer", "Worked explanation", "Topic, difficulty and exam relevance", "Related formula, article and calculator"],
+    "related": [["Technical Articles", "technical-library/technical-articles/"], ["Engineering calculators", "calculators/"]]
+  },
+  {
+    "id": "worked-examples", "name": "Worked Examples", "slug": "worked-examples", "status": "planned", "idPrefix": "WE", "order": 6,
+    "short": "Short, numbered calculations you can follow line by line and check against the calculators.",
+    "description": "Compact worked problems with every step shown: given values, formula, substitution and result. Each one can be opened in the matching calculator to try your own numbers.",
+    "will": ["One problem per page with each step numbered", "Given values, formula, substitution and checked result", "Open the same problem in the calculator with your own numbers", "Graded from basic to advanced"],
+    "fields": ["Problem and ID", "Given values and units", "Step-by-step solution", "Checked result", "Calculator link with prefilled values"],
+    "related": [["Worked-example pages in the Conversion Centre", "converters/index.html"], ["Engineering calculators", "calculators/"]]
+  },
+  {
+    "id": "glossary", "name": "Glossary", "slug": "glossary", "status": "planned", "idPrefix": "GL", "order": 7,
+    "short": "Plain-language definitions of electrical terms, symbols and abbreviations, with the standard they come from.",
+    "description": "Definitions of electrical engineering terms, symbols and abbreviations in plain language. Each term gives the unit or symbol, a short example and links to the formula, article or calculator where it is used.",
+    "will": ["Terms, symbols and abbreviations searchable from A to Z", "A one-line definition and a short example for each term", "Unit and symbol for every quantity", "Links to the related formula, article and calculator"],
+    "fields": ["Term and ID", "Definition and example", "Symbol and unit", "Source standard where one applies", "Related entries"],
+    "related": [["Technical Articles", "technical-library/technical-articles/"], ["Engineering calculators", "calculators/"]]
+  }
+]

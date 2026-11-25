@@ -1,0 +1,468 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><style data-crumbs>.crumbs{font-size:13px;color:var(--muted);margin:0 0 10px}.crumbs ol{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:2px 0}.crumbs li+li::before{content:"\203A";margin:0 7px;opacity:.7}.crumbs a{color:inherit}.crumbs [aria-current]{color:var(--ink)}</style><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'"><title>Decay Constant Calculator | Half-Life, Mean Lifetime and Decay Constant Converter</title><meta name="description" content="Free decay constant calculator with step-by-step working. Convert between half-life, decay constant and mean lifetime in any time unit, with the three values shown together and checked."><meta property="og:title" content="Decay Constant Calculator | Half-Life, Mean Lifetime and Decay Constant Converter"><meta property="og:description" content="Free decay constant calculator with step-by-step working. Convert between half-life, decay constant and mean lifetime in any time unit, with the three values shown together and checked."><meta property="og:type" content="website"><meta property="og:site_name" content="Elecmetric"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Decay Constant Calculator | Half-Life, Mean Lifetime and Decay Constant Converter"><meta name="twitter:description" content="Free decay constant calculator with step-by-step working. Convert between half-life, decay constant and mean lifetime in any time unit, with the three values shown together and checked."><meta name="theme-color" content="#043B79"><link rel="icon" href="../../icon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="../../apple-touch-icon.png"><link rel="manifest" href="../../manifest.webmanifest"><style>.fmodes{display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px;margin:0 0 12px}.fmodes .ns-l{margin:0 4px 0 0}.fmodes .chip.on{background:var(--gold-fill);border-color:var(--gold);font-weight:700}.fmodes .chip.soon{opacity:.6;cursor:default}#dc .ns-card{padding:16px}#dc .ns-grid{display:grid;gap:12px;margin-bottom:12px}#dc .dc3{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}#dc .dc4{grid-template-columns:repeat(auto-fit,minmax(185px,1fr))}#dc .ns-l,#dc label.ns-l{display:block;font-weight:600;font-size:13px;margin:0 0 4px}#dc .ns-in,#dc .ns-sel{display:block;width:100%;box-sizing:border-box;font:500 18px/1.3 var(--mono);padding:10px 12px;min-height:48px;border-radius:8px;border:1px solid var(--line);background:var(--field);color:var(--ink)}#dc .ns-sel{font:500 15px var(--body)}#dc .ns-in:focus,#dc .ns-sel:focus{outline:2px solid var(--gold);outline-offset:1px}#dc .ns-in.bad{border-color:var(--err)}#dc .ns-in.solved{background:var(--gold-fill);border-color:var(--gold);font-weight:700}#dc .ns-in::placeholder{color:var(--muted);opacity:1}#dc .ns-msg{min-height:1.4em;margin:4px 0 8px;color:var(--err)}#dc .ns-msg.hint{color:var(--muted)}#dc .ns-act{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:4px 0 10px}#dc .btn2,#dc .chipb{font:600 13px var(--body);color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:8px 12px;min-height:38px;cursor:pointer}#dc .btn2:hover,#dc .chipb:hover{background:var(--field)}#dc .chipb{border-radius:999px;padding:5px 12px;min-height:32px;font-weight:500;margin:3px 4px 3px 0}#dc .btn2:focus-visible,#dc .chipb:focus-visible{outline:2px solid var(--gold);outline-offset:2px}#dc .ns-try{margin:0 0 12px}#dc .dc-dll{margin:0}#dc pre.al{font:600 15px/1.6 var(--mono);background:var(--field);border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin:6px 0 12px;overflow-x:auto;color:var(--num);white-space:pre-wrap;overflow-wrap:anywhere}#dc .res .big{font:700 26px/1.4 var(--mono);color:var(--num);word-break:break-all}#dc .res .big .sym{color:var(--muted);font-weight:600}#dc .res .big.src{background:var(--gold-fill);border-radius:6px;padding:0 6px}#dc .res .big .btn2{vertical-align:middle;margin-left:8px;padding:2px 8px;min-height:28px}#dc .res .sub{color:var(--muted);margin:2px 0 8px}#dc .ns-t td.r{font:600 15px var(--mono);color:var(--num);text-align:left;word-break:break-all}#dc .ns-t tr.cu td,#dc .ns-t tr.cu th{background:var(--gold-fill)}#dc .ns-t th[scope=row]{text-align:left;text-transform:none;letter-spacing:normal}#dc .ns-facts{margin:12px 0;display:flex;flex-wrap:wrap;gap:6px 18px;font-size:14px}#dc .ns-facts b{font-family:var(--mono)}#dc .note.warn{color:var(--ink);border-left:3px solid var(--gold);padding-left:10px}#dc h3{margin:14px 0 4px}#dc .dc-hist{list-style:none;margin:0 0 8px;padding:0}td.n{font-family:var(--mono)}.sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}code{font-family:var(--mono)}[hidden]{display:none!important}@media(max-width:700px){#dc .res .big{font-size:20px}}@media print{#dc .ns-act,#dc .ns-try,#dc .fmodes{display:none}}</style><style>.fb textarea{width:100%;font:15px/1.5 var(--body);padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--field);color:var(--ink);resize:vertical}.fb textarea:focus{outline:2px solid var(--gold);outline-offset:1px}:root{--bg:#F1F6FC;--surface:#fff;--ink:#0A2347;--muted:#4B5F86;--line:#D3DFEF;--navy:#043B79;--on-navy:#FFFFFF;--gold:#B34A00;--gold-fill:#FFEFDC;--field:#F4F8FE;--err:#B3261E;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;--display:"Arial Narrow","Roboto Condensed",system-ui,sans-serif;--body:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--navy-2:#0A5BBB;--cyan:#0062DE;--num:#043B79;--orange:#FF7A00;--gold-grad:linear-gradient(135deg,#FFA43D 0%,#FF7A00 52%,#E85F00 100%);--hero:radial-gradient(1000px 360px at 90% -35%,rgba(0,98,222,.55),transparent 62%),radial-gradient(640px 240px at 0% 110%,rgba(255,122,0,.20),transparent 60%),linear-gradient(135deg,#032A58,#043B79 58%,#0A55A8);--r:14px;--sh-0:0 1px 2px rgba(4,35,80,.06);--sh-1:0 1px 2px rgba(4,35,80,.05),0 6px 18px rgba(4,35,80,.07);--sh-2:0 2px 4px rgba(4,35,80,.05),0 22px 44px -14px rgba(4,35,80,.24);--ring:0 0 0 3px rgba(0,98,222,.26);color-scheme:light dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}@media(prefers-color-scheme:dark){:root{--bg:#04122B;--surface:#0A2046;--ink:#EAF2FF;--muted:#A0B5DA;--line:#183868;--navy:#031B3F;--on-navy:#EAF2FF;--gold:#FF9A3D;--gold-fill:#3D2410;--field:#071B3C;--err:#FF8A80;--navy-2:#0B4A98;--cyan:#4DA3FF;--orange:#FF8A1F;--num:#FFB066;--sh-0:0 1px 2px rgba(0,0,0,.4);--sh-1:0 1px 2px rgba(0,0,0,.35),0 8px 22px rgba(0,0,0,.35);--sh-2:0 2px 4px rgba(0,0,0,.4),0 24px 48px -14px rgba(0,0,0,.7);--ring:0 0 0 3px rgba(77,163,255,.34)}}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 var(--body)}a{color:inherit}header{background:var(--navy);color:var(--on-navy);border-bottom:3px solid var(--gold)}.w{max-width:860px;margin:0 auto;padding:0 max(16px,env(safe-area-inset-left,0px))}header .w{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-block:12px;flex-wrap:wrap}header a{text-decoration:none;font:600 20px var(--display);letter-spacing:.04em;text-transform:uppercase}header nav a{font:500 13px var(--body);text-transform:none;letter-spacing:0;margin-left:14px;opacity:.9}main{padding-block:24px 56px}h1{font:600 32px/1.1 var(--display);margin:0 0 8px;text-wrap:balance}h2{font:600 20px var(--display);letter-spacing:.02em;margin:28px 0 8px;text-transform:uppercase}.lede{color:var(--muted);margin:0 0 16px;max-width:62ch}.card{background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:16px 18px;margin:12px 0}.ans{border-left:4px solid var(--gold);display:flex;flex-wrap:wrap;gap:6px 24px;align-items:baseline;justify-content:space-between}.big{font:600 28px var(--display)}.jump{margin:8px 0 4px}details.more{border:1px solid var(--line);border-radius:12px;background:var(--surface);margin:14px 0;padding:0 16px;box-shadow:var(--sh-0)}details.more>summary{cursor:pointer;list-style:none}details.more>summary::-webkit-details-marker{display:none}details.more>summary h2{margin:14px 0}details.more>summary h2::after{content:"+";margin-left:auto;color:var(--gold)}details.more[open]>summary h2::after{content:"\2212"}details.more[open]{padding-bottom:12px}@media print{.jump{display:none}}.btn{display:inline-block;background:var(--navy);color:var(--on-navy);padding:9px 16px;border-radius:4px;text-decoration:none;font-weight:600;border:1px solid var(--gold)}.chip{display:inline-block;margin:3px 6px 3px 0;padding:5px 12px;border:1px solid var(--line);border-radius:999px;background:var(--surface);text-decoration:none;font-size:14px}.chip:hover{border-color:var(--gold)}main li>a:only-child{display:inline-block;padding:3px 0}code,pre,.f,td.n{font-family:var(--mono)}.f{background:var(--field);border:1px solid var(--line);padding:10px 12px;border-radius:4px;overflow-x:auto;white-space:pre-wrap}ol.steps{padding-left:22px;font-family:var(--mono);font-size:13px}ol.steps li{margin:4px 0}.tw{overflow-x:auto}table{border-collapse:collapse;width:100%;background:var(--surface)}th,td{border:1px solid var(--line);padding:6px 10px;text-align:left}td.n{text-align:right}tr.me td{background:var(--gold-fill)}th{background:var(--field);font-weight:600}.note{color:var(--muted);font-size:13px}ul{padding-left:20px}footer{border-top:1px solid var(--line);color:var(--muted);font-size:13px;padding-block:16px}h3{font:600 16px var(--body);margin:18px 0 4px}h3+p{margin:0;max-width:68ch}.tres .tact{flex:0 0 100%;display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}@media print{.tact{display:none}}.tres .phasor{flex:0 0 100%;margin-top:12px}.phasor svg{display:block;width:100%;max-width:360px;height:auto;font:11px var(--body)}.arow{grid-column:1/-1;border:1px solid var(--line);border-radius:10px;padding:10px 12px 12px;margin:0}.arow[hidden]{display:none}.arow legend{font-weight:700;font-size:13px;padding:0 6px}.arow .tgrid{margin-top:2px}.arow-bar{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:8px;align-items:center}.arow-bar .note{margin:0}.arow .rm{margin-top:10px}.mgrid{margin-top:10px}.mgrid .mbody[hidden]{display:none}.mgrid .tgrid{margin-top:8px}.mgrid .fillm{margin-top:10px}.tres .rchart{flex:0 0 100%;margin-top:12px}.rchart svg{display:block;width:100%;height:auto;font:12px var(--body)}.rchart h3{margin:0 0 6px;font-size:14px}.tres .carry{flex:0 0 100%;margin-top:10px}.carry .chip{display:inline-block;margin:4px 6px 0 0}.arow .rm[hidden],#add-row[hidden]{display:none}@media print{.arow-bar,.arow .rm{display:none}}.tgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px 16px}.tgrid label{display:block;font-weight:600;font-size:13px;margin-bottom:4px}.trow{display:flex;gap:6px}.trow input,.trow select,.tgrid>div>select{font:16px var(--body);color:var(--ink);background:var(--field);border:1px solid var(--line);border-radius:4px;padding:8px;min-height:40px}.trow input{flex:1;min-width:0}.tgrid>div>select{width:100%}.hint{color:var(--muted);font-size:12px;margin-top:3px}.err{color:var(--err)}.tres{display:flex;flex-wrap:wrap;gap:6px 28px;align-items:baseline}.tres .big small{display:block;font:500 13px var(--body);color:var(--muted)}::selection{background:color-mix(in srgb,var(--gold) 30%,transparent)}body{background-image:radial-gradient(900px 520px at 100% -8%,color-mix(in srgb,var(--cyan) 10%,transparent),transparent 62%),radial-gradient(700px 420px at -5% 0%,color-mix(in srgb,var(--gold) 8%,transparent),transparent 60%);background-attachment:fixed;-webkit-font-smoothing:antialiased}header{position:relative;overflow:hidden;background:var(--hero);border-bottom:0;box-shadow:0 10px 30px -14px rgba(5,14,34,.6)}header::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);background-size:34px 34px;-webkit-mask-image:linear-gradient(100deg,#000,transparent 70%);mask-image:linear-gradient(100deg,#000,transparent 70%);pointer-events:none}header::after{content:"";position:absolute;left:0;right:0;bottom:0;height:18px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44 14'%3E%3Cpath d='M0 12.5H8L14 2l7 10.5 5-6 4 6H44' fill='none' stroke='%23FF7A00' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat right 36px bottom 3px/44px 14px,linear-gradient(90deg,#FF7A00,#FFA43D 55%,#FF7A00) no-repeat bottom/100% 4px;pointer-events:none}header .w{position:relative;z-index:1;padding-block:16px 22px}header .w>a.brand{display:block;line-height:0;letter-spacing:0;text-transform:none;background:#fff;border-radius:12px;padding:6px 14px;box-shadow:0 2px 12px rgba(2,16,42,.4),0 0 0 1px rgba(255,255,255,.5)}header .w>a.brand img{display:block;height:48px;width:auto}@media(max-width:600px){header .w>a.brand img{height:42px}}header a:focus-visible{outline-color:#FFB066}header nav a{color:#DCE5F5;opacity:1;padding:6px 12px;border-radius:999px;margin-left:6px;transition:background .15s,color .15s}header nav a:hover{background:rgba(255,255,255,.12);color:#FFB066}main.w{padding-top:36px;padding-bottom:64px}h1{font-size:36px;letter-spacing:.005em}h1::after{content:"";display:block;width:56px;height:3px;border-radius:3px;background:var(--gold-grad);margin-top:12px}h2{display:flex;align-items:center;gap:10px}h2::before{content:"";width:4px;height:.95em;border-radius:2px;background:var(--gold-grad);flex:none}h3{color:var(--gold)}.card{border-radius:14px;box-shadow:var(--sh-1)}.ans{position:relative;overflow:hidden;border-left:1px solid var(--line);padding-left:24px;background:linear-gradient(135deg,color-mix(in srgb,var(--gold) 12%,var(--surface)),var(--surface) 65%);border-color:color-mix(in srgb,var(--gold) 40%,var(--line));box-shadow:var(--sh-2)}.ans::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--gold-grad)}.big{color:var(--num);font-weight:700}.btn{border-radius:10px;border:0;background:var(--gold-grad);color:#0A2347;font-weight:700;box-shadow:var(--sh-1);transition:transform .15s,box-shadow .15s,filter .15s}.btn:hover{transform:translateY(-1px);box-shadow:var(--sh-2);filter:brightness(1.06)}.chip{box-shadow:var(--sh-0);transition:border-color .15s,background .15s,transform .15s,box-shadow .15s}.chip:hover{transform:translateY(-1px);box-shadow:var(--sh-1);border-color:var(--orange);background:color-mix(in srgb,var(--orange) 8%,var(--surface))}.f{border-radius:12px;border-left:3px solid var(--cyan)}.tw{border:1px solid var(--line);border-radius:12px;box-shadow:var(--sh-0)}.tw table{border:0}table{border-collapse:separate;border-spacing:0}th,td{border:0;border-bottom:1px solid var(--line)}tr:last-child td{border-bottom:0}th{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);background:var(--field)}tbody tr:hover td{background:color-mix(in srgb,var(--cyan) 7%,transparent)}tr.me td{background:var(--gold-fill)}.trow input,.trow select,.tgrid>div>select{border-radius:10px;transition:border-color .15s,box-shadow .15s}.trow select{background-color:color-mix(in srgb,var(--navy) 5%,var(--field))}.trow input:focus,.trow select:focus,.tgrid>div>select:focus{outline:0;border-color:var(--cyan);box-shadow:var(--ring)}.tgrid label{color:var(--ink)}a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--cyan);outline-offset:2px}footer{padding-block:20px}footer.mf{margin-top:24px;padding:0;border-top:0;background:var(--hero);color:#DCE5F5;font-size:13px;position:relative}footer.mf::before{content:"";display:block;height:4px;background:linear-gradient(90deg,#FF7A00,#FFA43D 55%,#FF7A00)}.mf-w{max-width:1100px;margin:0 auto;padding:36px max(16px,env(safe-area-inset-left,0px)) calc(24px + env(safe-area-inset-bottom,0px))}.mf-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:28px 24px}.mf-h{display:block;margin:0 0 12px;padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,.18);font:600 14px var(--display);letter-spacing:.06em;text-transform:uppercase;color:#FFB066}.mf-col ul{list-style:none;margin:0;padding:0}.mf-col li{margin:0}.mf-col a{display:inline-block;padding:4px 0;color:#DCE5F5;text-decoration:none}.mf-h a{padding:0;color:inherit}.mf-col a:hover,.mf-legal a:hover{color:#FFB066;text-decoration:underline}.mf a:focus-visible{outline:2px solid #FFB066;outline-offset:2px;border-radius:2px}.mf-legal{margin-top:28px;padding-top:18px;border-top:1px solid rgba(255,255,255,.18);color:#A9BADB;max-width:80ch}.mf-legal a{color:#DCE5F5}@media(max-width:980px){.mf-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(max-width:600px){.mf-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.mf-col a{padding:7px 0}}@media print{footer.mf{background:none;color:inherit}footer.mf::before,.mf-grid{display:none}.mf-legal{border:0;color:inherit}}@media(prefers-reduced-motion:reduce){.btn,.chip{transition:none;transform:none!important}}@media print{header{background:none;box-shadow:none}header::before,header::after,.ans::before,h1::after,h2::before{display:none}header .w>a.brand{box-shadow:none;padding:0}body{background-image:none}.card,.ans,.tw{box-shadow:none}.ans{padding-left:18px}}.totop{position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:60;min-height:44px;padding:0 18px;border:0;border-radius:999px;background:linear-gradient(135deg,#FFA43D,#FF7A00 52%,#E85F00);color:#0A2347;font:700 14px system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;box-shadow:0 2px 4px rgba(4,35,80,.2),0 14px 30px -8px rgba(4,35,80,.45);cursor:pointer;opacity:0;transform:translateY(12px);pointer-events:none;transition:opacity .2s,transform .2s,bottom .2s}.totop.on{opacity:1;transform:none;pointer-events:auto}.totop:hover{filter:brightness(1.06)}.totop:focus-visible{outline:2px solid #fff;outline-offset:2px;box-shadow:0 0 0 4px #0062DE}@media(prefers-reduced-motion:reduce){.totop{transition:none}}@media print{.totop{display:none}}.vstat{padding:12px 16px;border-left:4px solid var(--muted,#6b7a90)}.vstat.v-verified{border-left-color:#1f9d57}.vstat.v-reference{border-left-color:#2a7fd4}.vstat.v-indicative{border-left-color:#c98a10}</style><style id="em-ux1">.ns-f:has(>.mseg){grid-column:1/-1}main.w{max-width:1080px}.ns-card .mseg{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 4px}.ns-card .mseg button{flex:1 1 150px;font:600 14px var(--body);color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px;min-height:46px;cursor:pointer;text-align:center;transition:background .15s,border-color .15s}.ns-card .mseg button:hover{border-color:var(--orange);background:var(--field)}.ns-card .mseg button[aria-checked="true"]{background:var(--navy);color:var(--on-navy);border-color:var(--navy);box-shadow:inset 0 -3px 0 var(--orange)}.ns-card .mseg button:focus-visible,.ns-try .try-tabs button:focus-visible{outline:2px solid var(--cyan);outline-offset:2px}.ns-card .ns-try:not([role]){margin:14px 0 0;padding-top:12px;border-top:1px solid var(--line)}.ns-try .try-h{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;margin-bottom:6px}.ns-try .try-h .ns-l{margin:0}.ns-try .try-tabs{display:flex;flex-wrap:wrap;gap:6px}.ns-try .try-tabs button{font:600 12px var(--body);color:var(--muted);background:transparent;border:0;border-bottom:2px solid transparent;padding:6px 8px;cursor:pointer}.ns-try .try-tabs button[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--orange)}.ns-try .chipb[hidden]{display:none}@media(max-width:700px){.ns-card .mseg button{flex:1 1 calc(50% - 8px)}}</style></head><body><header><div class="w"><a class="brand" href="../../"><img src="../../logo.png" alt="Elecmetric" width="160" height="40"></a><nav><a href="../">All engineering calculators</a><a href="../../pages/index.html">Conversions</a><a href="../../index.html#verification">How it is verified</a></nav></div></header><main class="w"><nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="../../">Home</a></li><li><a href="../../categories/mathematics/">Mathematics</a></li><li><a href="../../categories/mathematics/#calculus">Calculus</a></li><li><span aria-current="page">Decay Constant Calculator: Half-Life, Mean Lifetime and Decay Constant</span></li></ol></nav><h1>Decay Constant Calculator: Half-Life, Mean Lifetime and Decay Constant</h1><p class="lede">Enter a half-life, a decay constant or a mean lifetime, and the calculator gives the other two, in the time unit you choose, with the working written out in your own numbers and a check that puts the results back together. Calculate. Convert. Understand.</p><nav class="jump" aria-label="On this page"><a class="chip" href="#examples">Worked examples</a><a class="chip" href="#formulas">The formulas</a><a class="chip" href="#meaning">What the three numbers mean</a><a class="chip" href="#rules">Rules and limits</a><a class="chip" href="#faq">FAQ</a><a class="chip" href="#related">Related</a></nav><div id="dc"><nav class="fmodes" aria-label="Half-Life Calculator modes"><span class="ns-l">Half-Life Calculator</span><a class="chip" href="../half-life-calculator/">Mode 01 · Half-Life Calculator</a><a class="chip on" href="../decay-constant-calculator/" aria-current="page">Mode 02 · Decay Constant Converter</a><a class="chip" href="../decay-percentage-calculator/">Mode 03 · Decay Percentage Calculator</a><a class="chip" href="../decay-table-calculator/">Mode 04 · Decay Table & Graph</a><a class="chip" href="../engineering-exponential-decay-calculator/">Mode 05 · Engineering Exponential Decay</a></nav><section class="card ns-card" aria-label="Decay constant and mean lifetime converter"><div class="ns-grid dc3"><div class="ns-f"><label id="dc-lT" for="dc-T" class="ns-l">Half-life T½ (years)</label><input id="dc-T" class="ns-in" type="text" inputmode="decimal" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" aria-describedby="dc-err" value="10" placeholder="10"></div><div class="ns-f"><label id="dc-llambda" for="dc-lambda" class="ns-l">Decay constant λ (per year)</label><input id="dc-lambda" class="ns-in" type="text" inputmode="decimal" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" aria-describedby="dc-err" value="" placeholder="0.0693147"></div><div class="ns-f"><label id="dc-ltau" for="dc-tau" class="ns-l">Mean lifetime τ (years)</label><input id="dc-tau" class="ns-in" type="text" inputmode="decimal" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" aria-describedby="dc-err" value="" placeholder="14.427"></div></div><p class="note ns-msg" id="dc-err" role="status"></p><div class="ns-grid dc4"><div class="ns-f"><label for="dc-known" class="ns-l">Start from</label><select id="dc-known" class="ns-sel"><option value="auto" selected>Automatic (type one value)</option><option value="T">Half-life (T½)</option><option value="lambda">Decay constant (λ)</option><option value="tau">Mean lifetime (τ)</option></select></div><div class="ns-f"><label for="dc-tu" class="ns-l">Time unit (for T½, λ and τ)</label><select id="dc-tu" class="ns-sel"><option value="ns">nanoseconds</option><option value="us">microseconds</option><option value="ms">milliseconds</option><option value="s">seconds</option><option value="min">minutes</option><option value="h">hours</option><option value="d">days</option><option value="wk">weeks</option><option value="yr" selected>years</option><option value="kyr">thousand years</option><option value="Myr">million years</option><option value="Gyr">billion years</option></select></div><div class="ns-f"><label for="dc-ou" class="ns-l">Also show in</label><select id="dc-ou" class="ns-sel"><option value="same" selected>Same unit as above</option><option value="ns">nanoseconds</option><option value="us">microseconds</option><option value="ms">milliseconds</option><option value="s">seconds</option><option value="min">minutes</option><option value="h">hours</option><option value="d">days</option><option value="wk">weeks</option><option value="yr" selected>years</option><option value="kyr">thousand years</option><option value="Myr">million years</option><option value="Gyr">billion years</option></select></div><div class="ns-f"><label for="dc-sig" class="ns-l">Show results to</label><select id="dc-sig" class="ns-sel"><option value="4">4 significant figures</option><option value="6" selected>6 significant figures</option><option value="8">8 significant figures</option><option value="10">10 significant figures</option><option value="12">12 significant figures</option><option value="full">Full precision</option></select></div></div><div class="ns-act"><button type="button" class="btn2" data-act="clear">Clear numbers</button><button type="button" class="btn2" data-act="reset">Reset</button><button type="button" class="btn2" data-act="save">Save to history</button></div><div id="dc-out" aria-live="polite"></div><div class="ns-try"><span class="ns-l">Try</span> <button type="button" class="chipb" data-ex="{&quot;known&quot;:&quot;auto&quot;,&quot;T&quot;:&quot;10&quot;,&quot;lambda&quot;:&quot;&quot;,&quot;tau&quot;:&quot;&quot;,&quot;tu&quot;:&quot;yr&quot;,&quot;ou&quot;:&quot;same&quot;,&quot;sig&quot;:&quot;6&quot;}">10-year half-life</button><button type="button" class="chipb" data-ex="{&quot;known&quot;:&quot;auto&quot;,&quot;T&quot;:&quot;5730&quot;,&quot;lambda&quot;:&quot;&quot;,&quot;tau&quot;:&quot;&quot;,&quot;tu&quot;:&quot;yr&quot;,&quot;ou&quot;:&quot;same&quot;,&quot;sig&quot;:&quot;6&quot;}">Carbon-14, 5,730 yr</button><button type="button" class="chipb" data-ex="{&quot;known&quot;:&quot;auto&quot;,&quot;T&quot;:&quot;&quot;,&quot;lambda&quot;:&quot;0.0693147&quot;,&quot;tau&quot;:&quot;&quot;,&quot;tu&quot;:&quot;yr&quot;,&quot;ou&quot;:&quot;same&quot;,&quot;sig&quot;:&quot;6&quot;}">Half-life from λ = 0.0693147</button><button type="button" class="chipb" data-ex="{&quot;known&quot;:&quot;auto&quot;,&quot;T&quot;:&quot;&quot;,&quot;lambda&quot;:&quot;&quot;,&quot;tau&quot;:&quot;14.427&quot;,&quot;tu&quot;:&quot;yr&quot;,&quot;ou&quot;:&quot;same&quot;,&quot;sig&quot;:&quot;6&quot;}">Half-life from τ = 14.427 yr</button><button type="button" class="chipb" data-ex="{&quot;known&quot;:&quot;auto&quot;,&quot;T&quot;:&quot;6&quot;,&quot;lambda&quot;:&quot;&quot;,&quot;tau&quot;:&quot;&quot;,&quot;tu&quot;:&quot;h&quot;,&quot;ou&quot;:&quot;s&quot;,&quot;sig&quot;:&quot;6&quot;}">6 h half-life in seconds</button><button type="button" class="chipb" data-ex="{&quot;known&quot;:&quot;auto&quot;,&quot;T&quot;:&quot;&quot;,&quot;lambda&quot;:&quot;0.001&quot;,&quot;tau&quot;:&quot;&quot;,&quot;tu&quot;:&quot;s&quot;,&quot;ou&quot;:&quot;same&quot;,&quot;sig&quot;:&quot;6&quot;}">λ = 0.001 per second</button><button type="button" class="chipb" data-ex="{&quot;known&quot;:&quot;auto&quot;,&quot;T&quot;:&quot;10&quot;,&quot;lambda&quot;:&quot;0.06931471805599453&quot;,&quot;tau&quot;:&quot;14.426950408889635&quot;,&quot;tu&quot;:&quot;yr&quot;,&quot;ou&quot;:&quot;same&quot;,&quot;sig&quot;:&quot;6&quot;}">Three values that agree</button><button type="button" class="chipb" data-ex="{&quot;known&quot;:&quot;auto&quot;,&quot;T&quot;:&quot;10&quot;,&quot;lambda&quot;:&quot;0.07&quot;,&quot;tau&quot;:&quot;&quot;,&quot;tu&quot;:&quot;yr&quot;,&quot;ou&quot;:&quot;same&quot;,&quot;sig&quot;:&quot;6&quot;}">Values that disagree</button></div><div id="dc-dl" class="ns-act" hidden><span class="ns-l dc-dll">Copy and save</span><button type="button" class="btn2" data-act="copyall">Copy with working</button><button type="button" class="btn2" data-dl="txt">TXT</button><button type="button" class="btn2" data-dl="csv">CSV</button><button type="button" class="btn2" data-dl="json">JSON</button><button type="button" class="btn2" data-act="print">Print</button></div><p class="sr-only" id="dc-note" role="status" aria-live="polite"></p><noscript><p class="note">The calculator needs JavaScript. Nothing is sent anywhere.</p></noscript></section><section class="card"><h2>Working</h2><div id="dc-steps"></div></section><section class="card"><h2>History</h2><ul class="dc-hist" id="dc-hist"></ul><button type="button" class="btn2" id="dc-hclear" data-act="hclear" hidden>Clear history</button><p class="note">Kept only in this browser. Up to 10 calculations.</p></section></div><section id="examples"><h2>Worked examples</h2><div class="tw" tabindex="0" role="region" aria-label="Scrollable table: Case, Given, Result"><table><thead><tr><th>Case</th><th>Given</th><th>Result</th></tr></thead><tbody><tr><td>10-year half-life</td><td>T½ = 10 yr</td><td>λ = 0.0693147 per yr, τ = 14.427 yr</td></tr><tr><td>5,730-year half-life (the brief’s example)</td><td>T½ = 5,730 yr</td><td>λ = 0.000120968 per yr, τ = 8,266.64 yr</td></tr><tr><td>Half-life from a decay constant</td><td>λ = 0.0693147 per yr</td><td>T½ = 10 yr, τ = 14.427 yr</td></tr><tr><td>Half-life from a mean lifetime</td><td>τ = 14.427 yr</td><td>T½ = 10 yr, λ = 0.0693145 per yr</td></tr><tr><td>Change of time unit</td><td>T½ = 6 h</td><td>λ = 0.115525 per h = 3.20901 × 10⁻⁵ per s; τ = 31,162.2 s</td></tr><tr><td>Short-lived process</td><td>λ = 0.001 per s</td><td>T½ = 693.147 s, τ = 1,000 s</td></tr><tr><td>A value given in days</td><td>T½ = 8.02 d</td><td>λ = 0.0864273 per d, τ = 11.5704 d</td></tr></tbody></table></div><p class="note">Results calculated by this page’s engine and checked against independent high-precision arithmetic (Python decimal, 60 digits).</p></section><section id="formulas"><h2>The formulas</h2><p>One decay law, Nₜ = N₀ × 2^(−t / T½) = N₀ × e^(−λt), written three ways:</p><div class="tw" tabindex="0" role="region" aria-label="Scrollable table: To find, Formula, Valid when"><table><thead><tr><th>To find</th><th>Formula</th><th>Valid when</th></tr></thead><tbody><tr><td>Decay constant from half-life</td><td>λ = ln 2 / T½</td><td>T½ &gt; 0</td></tr><tr><td>Half-life from decay constant</td><td>T½ = ln 2 / λ</td><td>λ &gt; 0</td></tr><tr><td>Mean lifetime from decay constant</td><td>τ = 1 / λ</td><td>λ &gt; 0</td></tr><tr><td>Decay constant from mean lifetime</td><td>λ = 1 / τ</td><td>τ &gt; 0</td></tr><tr><td>Mean lifetime from half-life</td><td>τ = T½ / ln 2 = T½ × 1.442695…</td><td>T½ &gt; 0</td></tr><tr><td>Half-life from mean lifetime</td><td>T½ = τ × ln 2 = τ × 0.693147…</td><td>τ &gt; 0</td></tr></tbody></table></div><p class="note">Each conversion is a single multiplication or division, so the result is exact to double precision. The mean lifetime is taken from T½ / ln 2 directly, not by inverting a rounded decay constant.</p></section><section id="meaning"><h2>What the three numbers mean</h2><div class="tw" tabindex="0" role="region" aria-label="Scrollable table: Quantity, Meaning, Used for"><table><thead><tr><th>Quantity</th><th>Meaning</th><th>Used for</th></tr></thead><tbody><tr><td>Half-life T½</td><td>Time for half of the quantity to decay</td><td>Reading a decay curve, comparing processes, quoting a nuclide</td></tr><tr><td>Decay constant λ</td><td>Fraction of the remaining quantity that decays per unit time (continuous form)</td><td>Writing Nₜ = N₀ e^(−λt), rate equations, activity A = λN</td></tr><tr><td>Mean lifetime τ</td><td>Average life of one nucleus or particle; time to fall to 1/e</td><td>Time constants, lifetimes of excited states, the electrical analogy (RC, L/R)</td></tr></tbody></table></div><p>Setting Nₜ = N₀ / 2 in Nₜ = N₀ e^(−λt) gives e^(−λT½) = 1/2, so T½ = ln 2 / λ. The mean lifetime is the average of t over the decaying nuclei, τ = ∫ t λ e^(−λt) dt = 1 / λ. Hence τ = T½ / ln 2.</p></section><section id="ladder"><h2>How much is left after a mean lifetime</h2><p>After one mean lifetime the quantity has fallen to 1/e, not to one half, because τ is longer than T½:</p><div class="tw" tabindex="0" role="region" aria-label="Scrollable table: Mean lifetimes, Half-lives, Remaining"><table><thead><tr><th>Mean lifetimes</th><th>Half-lives</th><th>Remaining</th></tr></thead><tbody><tr><td>0</td><td class="n">0</td><td class="n">100%</td></tr><tr><td>1</td><td class="n">1.4427</td><td class="n">36.7879%</td></tr><tr><td>2</td><td class="n">2.88539</td><td class="n">13.5335%</td></tr><tr><td>3</td><td class="n">4.32809</td><td class="n">4.97871%</td></tr><tr><td>4</td><td class="n">5.77078</td><td class="n">1.83156%</td></tr><tr><td>5</td><td class="n">7.21348</td><td class="n">0.673795%</td></tr></tbody></table></div></section><section id="rules"><h2>Rules and limits</h2><ul><li>The half-life, decay constant and mean lifetime must each be greater than zero.</li><li>All three share one time unit; the decay constant is per that unit. “Also show in” changes the unit of all three together.</li><li>If you type more than one value, the half-life is used first, then the decay constant; the others are compared with it and a note is shown when they do not agree to one part in a billion.</li><li>Results are double-precision. A result that would be too large to represent is refused with a note to change the time unit, and one below about 2.2 × 10⁻³⁰⁸ is shown with a note that it carries fewer digits.</li><li>Mathematical decay only: not a radiation-safety, dosimetry or exposure assessment.</li></ul></section><section id="faq"><h2>Questions</h2><h3>What is the relationship between half-life and decay constant?</h3><p>λ = ln 2 / T½. For a 10-year half-life λ = 0.0693147 per year. A longer half-life means a smaller decay constant, and the two are always inversely proportional.</p><h3>What is the mean lifetime, and why is it longer than the half-life?</h3><p>The half-life is the time for half to decay. The mean lifetime τ = 1 / λ is the average time a single nucleus survives, and also the time for the quantity to fall to 1/e = 36.7879%. It is always longer than the half-life, by the factor 1 / ln 2 = 1.4427. For a 10-year half-life τ = 14.427 years. <strong class="sub">Why is the mean lifetime longer than the half-life?</strong> Half of the nuclei are gone after one half-life, but the ones that last longest last much longer, and they raise the average. The decay law is skewed: many short lives and a few very long ones.</p><h3>Which should I use, the half-life or the decay constant?</h3><p>Quote the half-life when you want a feel for the time scale, and use the decay constant in formulas written with e^(−λt) or in rate equations. The calculator gives all three, so you can move between them.</p><h3>What do I enter if I know two of the three?</h3><p>One is enough. If you type more than one, the calculator uses the half-life first, then the decay constant, and tells you if the others do not agree with it. Choose “Start from” to use a particular one and ignore the rest.</p><h3>Why does the calculator say my values do not agree?</h3><p>Because they differ by more than one part in a billion. A decay constant of 0.0693147 and a half-life of 10 years differ in the seventh digit (ln 2 / 10 = 0.06931471806), so a rounded value is reported, not hidden. The half-life you typed is the one used.</p><h3>What unit is the decay constant in, and how do I change the time unit?</h3><p>Per unit of time, in the unit you choose: per second, per year and so on. If T½ is in years, λ is per year. The time unit applies to all three values together, so they cannot be mixed by mistake. Years are Julian years of 365.25 days. <strong class="sub">How do I change the time unit?</strong> Use “Also show in”. Half-life and mean lifetime are multiplied by the ratio of the units and the decay constant is divided by it. For example 6 hours is 21,600 seconds and λ = 3.20901 × 10⁻⁵ per second.</p><h3>Can I use this for RC and RL circuits?</h3><p>The mathematics is the same: the time constant RC or L/R plays the part of the mean lifetime, and the half-value time is RC ln 2 or (L/R) ln 2. Enter the time constant as the mean lifetime to get the half-value time and the decay rate. The physical processes are different, and the <a href="../rc-rl-transient/">RC and RL Transient</a> calculator keeps them labelled.</p><h3>Does the uncertainty of a measured half-life carry through?</h3><p>No. The calculator treats every number as exact. Convert the two ends of a measured range to see the spread.</p><h3>Is this a radiation safety or dose calculator?</h3><p>No. It converts three descriptions of the same exponential law. It does not give a dose, an exposure or a safety assessment.</p><h3>Is anything sent to a server?</h3><p>No. The calculation runs in your browser, and the history list is stored only in your browser.</p></section><section id="related"><h2>Related Calculators and Tools</h2><p><a class="chip" href="../half-life-calculator/">Half-Life Calculator (Mode 01)</a><a class="chip" href="../rc-time-constant/">RC Time Constant</a><a class="chip" href="../rc-rl-transient/">RC and RL Transient</a><a class="chip" href="../../converters/capacitor-discharge-formulas.html">Capacitor discharge formulas</a><a class="chip" href="../logarithm/">Logarithm</a><a class="chip" href="../powers-roots/">Powers and Roots</a><a class="chip" href="../scientific-calculator/">Scientific Calculator</a><a class="chip" href="../engineering-mathematics/">Engineering Mathematics</a><a class="chip" href="../../converters/index.html">Conversion Centre</a></p></section></main><section class="w fb" aria-labelledby="fb-h"><h2 id="fb-h">Tell us how to improve this page</h2><textarea id="fb-t" rows="4" maxlength="1500" placeholder="Your message ..." aria-label="Tell us how to improve this page"></textarea><p><button type="button" class="btn" id="fb-b">Email your suggestion</button> <button type="button" class="btn" id="sh-b">Share this page</button> <span class="note" id="fb-n">This opens your email app. Nothing is sent until you press send.</span></p></section><script>(function(){var b=document.getElementById("fb-b");if(!b)return;b.onclick=function(){var t=document.getElementById("fb-t").value.trim(),n=document.getElementById("fb-n");if(!t){n.textContent="Please write a message first.";return}location.assign("mailto:"+"elecmetrics@gmail.com"+"?subject="+encodeURIComponent("Elecmetric feedback: "+document.title)+"&body="+encodeURIComponent(t+"\n\nPage: "+location.href))}})();</script><script>(function(){var s=document.getElementById("sh-b");if(!s)return;s.onclick=function(){var u=location.href,t=document.title,n=document.getElementById("fb-n");if(navigator.share){navigator.share({title:t,url:u}).catch(function(){});return}if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(u).then(function(){n.textContent="Link copied."},function(){n.textContent="Copy this address: "+u})}else{n.textContent="Copy this address: "+u}}})();</script><footer class="mf"><div class="mf-w"><div class="mf-grid" role="navigation" aria-label="Site map"><div class="mf-col"><p class="mf-h"><a href="../../calculators/">Calculators</a></p><ul><li><a href="../../calculators/electrical-fundamentals/">Electrical Fundamentals</a></li><li><a href="../../calculators/power-and-energy/">Power and Energy</a></li><li><a href="../../calculators/cable-engineering/">Cable Engineering</a></li><li><a href="../../calculators/motor-engineering/">Motor Engineering</a></li><li><a href="../../calculators/transformer-engineering/">Transformer Engineering</a></li><li><a href="../../calculators/electrical-protection/">Electrical Protection</a></li><li><a href="../../calculators/power-systems/">Power Systems</a></li><li><a href="../../calculators/earthing-and-grounding/">Earthing and Grounding</a></li><li><a href="../../calculators/renewable-energy/">Renewable Energy</a></li><li><a href="../../calculators/airport-agl-engineering/">Airport and AGL Engineering</a></li><li><a href="../../calculators/electronics-and-instrumentation/">Electronics and Instrumentation</a></li><li><a href="../../calculators/lighting-and-facilities/">Lighting and Facilities</a></li><li><a href="../../calculators/engineering-mathematics/">Engineering Mathematics</a></li></ul></div><div class="mf-col"><p class="mf-h"><a href="../../calculators/">Popular calculators</a></p><ul><li><a href="../../calculators/cable-size/">Cable Size</a></li><li><a href="../../calculators/voltage-drop/">Voltage Drop</a></li><li><a href="../../calculators/breaker-size/">Breaker Size</a></li><li><a href="../../calculators/motor-current/">Motor Current</a></li><li><a href="../../calculators/transformer-sizing/">Transformer Sizing</a></li><li><a href="../../calculators/earth-resistance/">Earth Resistance</a></li><li><a href="../../calculators/pf-correction-kvar/">Power Factor Correction</a></li><li><a href="../../calculators/generator-sizing/">Generator Sizing</a></li><li><a href="../../calculators/battery-bank-sizing/">Battery Bank Sizing</a></li><li><a href="../../calculators/pv-energy/">Solar PV Energy</a></li></ul></div><div class="mf-col"><p class="mf-h"><a href="../../converters/index.html">Conversions</a></p><ul><li><a href="../../pages/index.html">Electrical conversions</a></li><li><a href="../../pages/kw-to-amps.html">kW to Amps</a></li><li><a href="../../pages/amps-to-kw.html">Amps to kW</a></li><li><a href="../../pages/kva-to-kw.html">kVA to kW</a></li><li><a href="../../pages/watts-to-amps.html">Watts to Amps</a></li><li><a href="../../converters/length-converter.html">Length</a></li><li><a href="../../converters/power-converter.html">Power</a></li><li><a href="../../converters/energy-converter.html">Energy</a></li><li><a href="../../converters/temperature-converter.html">Temperature</a></li><li><a href="../../pages/wire-gauge.html">AWG to mm²</a></li></ul></div><div class="mf-col"><p class="mf-h"><a href="../../converters/index.html">Formulas</a></p><ul><li><a href="../../converters/ohms-law-formulas.html">Ohm’s Law formulas</a></li><li><a href="../../converters/kirchhoffs-laws.html">Kirchhoff’s laws</a></li><li><a href="../../converters/cable-sizing-formulas.html">Cable sizing formulas</a></li><li><a href="../../converters/circuit-breaker-formulas.html">Circuit breaker formulas</a></li><li><a href="../../converters/ac-circuit-formulas.html">AC circuit formulas</a></li><li><a href="../../converters/battery-formulas.html">Battery formulas</a></li></ul></div><div class="mf-col"><p class="mf-h">Elecmetric</p><ul><li><a href="../../calculators/basic-calculator/">Basic Calculator</a></li><li><a href="../../calculators/scientific-calculator/">Scientific Calculator</a></li><li><a href="../../index.html#verification">How it is verified</a></li><li><a href="../../privacy.html">Privacy</a></li><li><a href="../../terms.html">Terms</a></li><li><a href="../../technical-library/">Technical Library</a></li><li><a href="mailto:elecmetrics@gmail.com">Contact us</a></li></ul></div></div><div class="mf-legal">Results are computed by the same tested engine as the calculators in Elecmetric and are for estimating. Check design values against the standard and the equipment data you work to. Elecmetric results are not a substitute for a design review by a competent engineer.<br>Developed by Elecmetric. No independent technical review of the calculators has been carried out. Results are for estimating.<br>&copy; 2026 Elecmetric &middot; <a href="../../privacy.html">Privacy</a> &middot; <a href="../../terms.html">Terms</a></div></div><script>(function(){if(location.protocol!=="file:")return;document.addEventListener("click",function(e){if(e.defaultPrevented||e.button||e.metaKey||e.ctrlKey||e.shiftKey)return;var a=e.target.closest&&e.target.closest("a[href]");if(!a||a.target)return;var m=/^([^?#]*)(.*)$/.exec(a.getAttribute("href"));if(!m[1]||/^[a-z][a-z0-9+.-]*:/i.test(m[1])||!/[/]$/.test(m[1]))return;e.preventDefault();location.href=m[1]+"index.html"+m[2]})})();</script><button type="button" class="totop" id="totop" aria-label="Back to top" tabindex="-1">↑ Top</button><script>(function(){var b=document.getElementById("totop");if(!b)return;var t=0;function u(){t=0;var on=(window.pageYOffset||document.documentElement.scrollTop)>400,bar=document.getElementById("bar"),h=bar&&bar.offsetHeight?bar.offsetHeight:0;b.classList.toggle("on",on);b.tabIndex=on?0:-1;b.style.bottom=h?"calc("+(h+16)+"px + env(safe-area-inset-bottom,0px))":"";}function q(){if(!t)t=requestAnimationFrame(u)}window.addEventListener("scroll",q,{passive:true});window.addEventListener("resize",q);b.addEventListener("click",function(){var r=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;window.scrollTo({top:0,behavior:r?"auto":"smooth"})});u()})();</script></footer><script>/* Elecmetric Half-Life Calculator, Mode 01: four-variable solver. Engine: one file, no dependencies, no DOM.
+   Required by tests/halflife_test.js and inlined into calculators/half-life-calculator/index.html by tools/halflife_page.js.
+
+   Governing law (one model for the standard calculator, CEO decision 1):   Nt = N0 x 2^(-t / T) = N0 x exp(-lambda t),   lambda = ln 2 / T,   tau = T / ln 2.
+   Any three of N0 (initial quantity), Nt (remaining quantity), t (elapsed time) and T (half-life) give the fourth. Time uses ONE unit for t and T, so the
+   consistency of time units is structural (CEO decision 4). The quantity unit is a label only; nothing is converted.
+
+   Numerical policy:
+   - powers of two use Math.pow(2, x) and logarithms use Math.log2, so the textbook cases are exact (100 g after three half-lives is exactly 12.5 g, not
+     12.500000000000004);
+   - elapsed time and half-life are found from log2(N0 / Nt), computed with log1p when N0 and Nt are close and as a difference of logs when the plain ratio
+     would overflow or underflow, so a ratio such as 1e300 / 1e-300 neither overflows nor loses precision;
+   - the number of half-lives n is taken from the quantities when t or T is the unknown (n = ln(N0/Nt) / ln 2), so it is exact for the numbers the user typed;
+   - when Nt is an input it is reported exactly as typed (never recomputed), and the decayed fraction is (N0 - Nt) / N0, which keeps full precision near Nt = N0;
+   - when Nt is the unknown the decayed fraction is -expm1(-ln2 n), which keeps full precision for a small amount of decay;
+   - a result below the smallest double (2^-1074) underflows to exactly 0 and is reported as an underflow warning, never as an exact zero.
+   Errors are returned, never thrown, with the field that caused them.
+
+   SCOPE: mathematical decay only. This is not a radiation-safety, dosimetry or exposure assessment (CEO decision 8). */
+(function (root) {
+  'use strict';
+  var LN2 = Math.LN2, YEAR_S = 365.25 * 86400;
+
+  /* time units: seconds per unit is kept for the "equivalent time" display only; the calculation never converts */
+  var TIME_UNITS = [
+    ['ns', 'ns', 'nanoseconds', 1e-9, 'ns'], ['us', '\u00b5s', 'microseconds', 1e-6, '\u00b5s'], ['ms', 'ms', 'milliseconds', 1e-3, 'ms'], ['s', 's', 'seconds', 1, 's'],
+    ['min', 'min', 'minutes', 60, 'min'], ['h', 'h', 'hours', 3600, 'h'], ['d', 'days', 'days', 86400, 'day'], ['wk', 'weeks', 'weeks', 604800, 'week'],
+    ['yr', 'years', 'years', YEAR_S, 'year'], ['kyr', 'thousand years', 'thousand years', 1e3 * YEAR_S, 'thousand years'], ['Myr', 'million years', 'million years', 1e6 * YEAR_S, 'million years'], ['Gyr', 'billion years', 'billion years', 1e9 * YEAR_S, 'billion years']
+  ];
+  var TARGETS = [['auto', 'Automatic (leave one empty)'], ['Nt', 'Remaining quantity (Nt)'], ['N0', 'Initial quantity (N0)'], ['t', 'Elapsed time (t)'], ['T', 'Half-life (T\u00bd)']];
+  var FIELDS = ['N0', 'Nt', 't', 'T'], NAMES = { N0: 'Initial quantity', Nt: 'Remaining quantity', t: 'Elapsed time', T: 'Half-life' }, FIELD_LABEL = { N0: 'Initial quantity N\u2080', Nt: 'Remaining quantity N\u209c', t: 'Elapsed time t', T: 'Half-life T\u00bd' };
+  function unitDef(u) { for (var i = 0; i < TIME_UNITS.length; i++) if (TIME_UNITS[i][0] === u) return TIME_UNITS[i]; return null; }
+  function isTimeUnit(u) { return !!unitDef(u); }
+  function timeLabel(u, v) { var d = unitDef(u); return d ? (v === 1 ? d[4] : d[1]) : String(u); }
+  function perUnit(u) { var d = unitDef(u); return d ? d[4] : String(u); }
+
+  /* ---------- numbers in and out ---------- */
+  /* Accepts 100, 5730, 11,460, 11 460, 1.5e-3, 2E9, .5, +3, a minus sign and a Unicode minus. Rejects words, Infinity and NaN. */
+  function parseNumber(s) {
+    var raw = String(s === undefined || s === null ? '' : s).trim();
+    if (raw === '') return { empty: true };
+    var t = raw.replace(/\u2212/g, '-').replace(/[\s_]/g, '');
+    if (/^[+-]?\d{1,3}(,\d{3})+(\.\d*)?([eE][+-]?\d+)?$/.test(t)) t = t.replace(/,/g, '');
+    if (!/^[+-]?(\d+\.?\d*|\.\d+)([eE][+-]?\d+)?$/.test(t)) return { error: '\u201c' + raw + '\u201d is not a number. Use digits such as 11460, 11,460 or 1.5e-3.' };
+    var v = Number(t);
+    if (!isFinite(v)) return { error: '\u201c' + raw + '\u201d is outside the range of a double-precision number.' };
+    return { value: v };
+  }
+  function group(intStr) { return intStr.replace(/\B(?=(\d{3})+(?!\d))/g, ','); }
+  /* sig: significant figures (default 6); 0 or 'full' = shortest exact representation */
+  function fmt(v, sig) {
+    if (v === Infinity) return '\u221e'; if (v === -Infinity) return '\u2212\u221e'; if (v !== v) return 'undefined';
+    if (v === 0) return '0';
+    var s = (sig === 0 || sig === 'full') ? null : (sig || 6), a = Math.abs(v), neg = v < 0 ? '\u2212' : '';
+    if (a < 1e-4 || a >= 1e12) {
+      var e = s === null ? a.toExponential() : a.toExponential(s - 1), m = e.split('e'), mant = m[0].indexOf('.') >= 0 ? m[0].replace(/0+$/, '').replace(/\.$/, '') : m[0], ex = parseInt(m[1], 10);
+      return neg + mant + ' \u00d7 10' + supDigits(ex);
+    }
+    var txt = s === null ? String(a) : String(Number(a.toPrecision(s)));
+    if (/e/i.test(txt)) { txt = a.toFixed(Math.max(0, Math.min(20, s === null ? 12 : s + 4))).replace(/0+$/, '').replace(/\.$/, ''); }
+    var p = txt.split('.');
+    return neg + group(p[0]) + (p[1] ? '.' + p[1] : '');
+  }
+  function supDigits(n) { var m = { '-': '\u207b', '0': '\u2070', '1': '\u00b9', '2': '\u00b2', '3': '\u00b3', '4': '\u2074', '5': '\u2075', '6': '\u2076', '7': '\u2077', '8': '\u2078', '9': '\u2079' }; return String(n).split('').map(function (c) { return m[c]; }).join(''); }
+  function pct(f, sig) { return fmt(f * 100, sig) + '%'; }
+
+  /* ---------- numerical core (mirrors the supplied exponentialDecay.ts; powers of two and log2 instead of exp and ln so exact cases stay exact) ---------- */
+  function pow2neg(n) { return n >= 1075 ? 0 : Math.pow(2, -n); }
+  /* log2(a / b) for finite a, b > 0 */
+  function log2Ratio(a, b) {
+    var rel = (a - b) / b;
+    if (Math.abs(rel) < 1e-3) return Math.log1p(rel) / LN2;
+    var r = a / b;
+    if (isFinite(r) && r > 1e-290 && r < 1e290) return Math.log2(r);
+    return Math.log2(a) - Math.log2(b);
+  }
+  function lnRatio(a, b) { return log2Ratio(a, b) * LN2; }
+  function remainingQuantity(N0, T, t) { return N0 * pow2neg(t / T); }
+  function initialQuantity(Nt, T, t) { var n = t / T; return n >= 1024 ? Infinity : Nt * Math.pow(2, n); }
+  function elapsedTime(N0, Nt, T) { return Nt >= N0 ? 0 : log2Ratio(N0, Nt) * T; }
+  function halfLife(N0, Nt, t) { return Nt >= N0 ? (t === 0 ? NaN : Infinity) : t / log2Ratio(N0, Nt); }
+
+  /* ---------- validation ---------- */
+  function need(v, key, kind) {
+    var name = NAMES[key];
+    if (v === undefined) return { field: key, error: name + ' is required.' };
+    if (kind === 'pos' && !(v > 0)) return { field: key, error: name + ' must be greater than zero.' };
+    if (kind === 'nonneg' && v < 0) return { field: key, error: name + ' cannot be negative.' };
+    return null;
+  }
+  function checkRemaining(Nt, N0) {
+    if (Nt === undefined) return { field: 'Nt', error: 'Remaining quantity is required.' };
+    if (Nt < 0) return { field: 'Nt', error: 'Remaining quantity cannot be negative.' };
+    if (Nt === 0) return { field: 'Nt', error: 'A remaining quantity of exactly zero is reached only at infinite time, so no finite elapsed time or half-life exists. Enter a small positive amount instead.' };
+    if (Nt > N0) return { field: 'Nt', error: 'Remaining quantity cannot exceed the initial quantity in ordinary decay.' };
+    return null;
+  }
+
+  /* ---------- the solver ---------- */
+  /* vals: numbers for N0, Nt, t, T (undefined for the unknown). Returns { ok, sol, warnings } or { ok:false, error, field }. */
+  function solve(target, vals) {
+    var N0 = vals.N0, Nt = vals.Nt, t = vals.t, T = vals.T, e = null, warnings = [], n;
+    if (target === 'Nt') e = need(N0, 'N0', 'pos') || need(T, 'T', 'pos') || need(t, 't', 'nonneg');
+    else if (target === 'N0') e = need(Nt, 'Nt', 'pos') || need(T, 'T', 'pos') || need(t, 't', 'nonneg');
+    else if (target === 't') e = need(N0, 'N0', 'pos') || need(T, 'T', 'pos') || checkRemaining(Nt, N0 === undefined ? 0 : N0);
+    else if (target === 'T') e = need(N0, 'N0', 'pos') || need(t, 't', 'pos') || checkRemaining(Nt, N0 === undefined ? 0 : N0);
+    else return { ok: false, error: 'Unknown calculation target.' };
+    if (e) return { ok: false, error: e.error, field: e.field };
+
+    if (target === 'Nt') { n = t / T; Nt = remainingQuantity(N0, T, t); }
+    else if (target === 'N0') {
+      n = t / T; N0 = initialQuantity(Nt, T, t);
+      if (!isFinite(N0)) warnings.push({ code: 'OVERFLOW', message: 'The initial quantity is too large to represent as a double-precision number for this many half-lives.' });
+    } else if (target === 't') { t = elapsedTime(N0, Nt, T); n = Nt >= N0 ? 0 : log2Ratio(N0, Nt); }
+    else {
+      if (Nt === N0) { T = Infinity; n = 0; warnings.push({ code: 'NO_DECAY_OBSERVED', message: 'The remaining quantity equals the initial quantity over a non-zero time, so no decay was observed and the half-life is not finite.' }); }
+      else { T = halfLife(N0, Nt, t); n = log2Ratio(N0, Nt); }
+    }
+
+    /* fractions: when Nt is the unknown they come from n; when Nt was typed they come from the typed numbers, which keeps full precision near Nt = N0 */
+    var remFromN = pow2neg(n), decFromN = n < 0.5 ? -Math.expm1(-LN2 * n) : 1 - remFromN, remFrac, decFrac;
+    if (target === 'Nt' || !isFinite(N0) || !isFinite(Nt / N0) || Nt / N0 === 0) { remFrac = remFromN; decFrac = decFromN; }
+    else { remFrac = Nt / N0; decFrac = (N0 - Nt) / N0; }
+    var decQty = isFinite(N0) ? (target === 'Nt' ? N0 * decFrac : N0 - Nt) : Infinity, under = remFrac === 0;
+    if (target === 'Nt' && Nt === 0) warnings.push({ code: 'UNDERFLOW_TO_ZERO', message: 'The remaining quantity is smaller than the smallest number a double can hold (about 5 \u00d7 10\u207b\u00b3\u00b2\u2074), so it shows as 0. It is not exactly zero.' });
+    else if (under) warnings.push({ code: 'UNDERFLOW_TO_ZERO', message: 'The remaining fraction is smaller than the smallest number a double can hold (about 5 \u00d7 10\u207b\u00b3\u00b2\u2074), so its percentage shows as 0%. It is not exactly zero.' });
+    var lambda = T === Infinity ? 0 : LN2 / T, tau = T === Infinity ? Infinity : T / LN2;
+    var sol = { N0: N0, Nt: Nt, t: t, T: T, n: n, remFrac: remFrac, decFrac: decFrac, decQty: decQty, lambda: lambda, tau: tau, target: target, underflow: under };
+    /* independent check: put the four values back through the model by a different route (exp, not 2^x) */
+    if (isFinite(N0) && isFinite(T) && T > 0 && n < 700 && Nt > 1e-300) {
+      var back = N0 * Math.exp(-LN2 * (t / T)), d = Math.abs(back - Nt) / Math.max(Math.abs(Nt), 1e-300);
+      sol.check = { value: back, relDiff: d, ok: d <= 1e-9 };
+    }
+    return { ok: true, sol: sol, warnings: warnings };
+  }
+
+  /* ---------- the written working (plain Unicode text; no external renderer is needed) ---------- */
+  function working(sol, u, qu, sig) {
+    var Q = qu ? '\u00a0' + qu : '', F = function (v) { return fmt(v, sig); }, FT = function (v) { return fmt(v, sig) + '\u00a0' + timeLabel(u, v); }, steps = [];
+    steps.push({ title: 'The decay law', text: 'N\u209c = N\u2080 \u00d7 2^(\u2212t / T\u00bd) = N\u2080 \u00d7 e^(\u2212\u03bbt)\nwhere \u03bb = ln 2 / T\u00bd and \u03c4 = 1 / \u03bb = T\u00bd / ln 2' });
+    if (sol.target === 'Nt') steps.push({ title: 'Remaining quantity', text: 'N\u209c = N\u2080 \u00d7 2^(\u2212t / T\u00bd)\n   = ' + F(sol.N0) + Q + ' \u00d7 2^(\u2212' + FT(sol.t) + ' / ' + FT(sol.T) + ')\n   = ' + F(sol.N0) + Q + ' \u00d7 2^(\u2212' + F(sol.n) + ')\n   = ' + F(sol.Nt) + Q });
+    else if (sol.target === 'N0') steps.push({ title: 'Initial quantity', text: 'N\u2080 = N\u209c \u00d7 2^(t / T\u00bd)\n   = ' + F(sol.Nt) + Q + ' \u00d7 2^(' + FT(sol.t) + ' / ' + FT(sol.T) + ')\n   = ' + F(sol.Nt) + Q + ' \u00d7 2^' + F(sol.n) + '\n   = ' + F(sol.N0) + Q });
+    else if (sol.target === 't') steps.push({ title: 'Elapsed time', text: 't = T\u00bd \u00d7 ln(N\u2080 / N\u209c) / ln 2\n  = ' + FT(sol.T) + ' \u00d7 ln(' + F(sol.N0) + ' / ' + F(sol.Nt) + ') / ln 2\n  = ' + FT(sol.T) + ' \u00d7 ' + F(sol.n) + '\n  = ' + FT(sol.t) });
+    else if (sol.T === Infinity) steps.push({ title: 'Half-life', text: 'N\u209c equals N\u2080, so ln(N\u2080 / N\u209c) = 0 and T\u00bd = t \u00d7 ln 2 / 0 is not finite.\nNo decay was observed in ' + FT(sol.t) + '.' });
+    else steps.push({ title: 'Half-life', text: 'T\u00bd = t \u00d7 ln 2 / ln(N\u2080 / N\u209c)\n   = ' + FT(sol.t) + ' \u00d7 ln 2 / ln(' + F(sol.N0) + ' / ' + F(sol.Nt) + ')\n   = ' + FT(sol.t) + ' / ' + F(sol.n) + '\n   = ' + FT(sol.T) });
+    steps.push({ title: 'Half-lives elapsed', text: 'n = t / T\u00bd = ' + F(sol.n) + (sol.n === Math.round(sol.n) && sol.n > 0 && sol.n <= 64 ? '   (the quantity has been halved ' + F(sol.n) + (sol.n === 1 ? ' time)' : ' times)') : '') });
+    steps.push({ title: 'Percentages', text: 'Remaining = N\u209c / N\u2080 \u00d7 100 = ' + (sol.remFrac === 0 ? '\u2248 0% (below the smallest double)' : pct(sol.remFrac, sig)) + '\nDecayed   = 100% \u2212 remaining = ' + pct(sol.decFrac, sig) + (isFinite(sol.decQty) ? '\nDecayed quantity = N\u2080 \u2212 N\u209c = ' + F(sol.decQty) + Q : '') });
+    steps.push({ title: 'Decay constant and mean lifetime', text: sol.T === Infinity ? '\u03bb = 0 and \u03c4 is not finite (no decay observed).' : '\u03bb = ln 2 / T\u00bd = 0.693147 / ' + FT(sol.T) + ' = ' + F(sol.lambda) + ' per ' + perUnit(u) + '\n\u03c4 = 1 / \u03bb = T\u00bd / ln 2 = ' + FT(sol.tau) });
+    if (sol.check) steps.push({ title: 'Check', text: 'Putting the four values back into N\u2080 \u00d7 2^(\u2212t / T\u00bd) gives ' + F(sol.check.value) + Q + '; ' + (sol.check.ok ? 'it agrees with N\u209c (relative difference ' + (sol.check.relDiff === 0 ? '0' : sol.check.relDiff.toExponential(1)) + ').' : 'it differs from N\u209c by a relative ' + sol.check.relDiff.toExponential(2) + '. Report this.') });
+    return steps;
+  }
+
+  /* ---------- the public run() used by the page and the tests ---------- */
+  /* input: { target:'auto'|'Nt'|'N0'|'t'|'T', N0, Nt, t, T (strings or numbers), timeUnit, quantityUnit, sig } */
+  function run(input) {
+    input = input || {};
+    var u = input.timeUnit === undefined || input.timeUnit === '' ? 'yr' : input.timeUnit, qu = String(input.quantityUnit || '').trim().slice(0, 16), sig = input.sig === undefined ? 6 : input.sig;
+    if (!isTimeUnit(u)) return { ok: false, error: 'Unknown time unit \u201c' + u + '\u201d.' };
+    var vals = {}, blanks = [], i, p, target = input.target || 'auto';
+    if (target !== 'auto' && FIELDS.indexOf(target) < 0) return { ok: false, error: 'Unknown calculation target.' };
+    for (i = 0; i < FIELDS.length; i++) {
+      if (FIELDS[i] === target) continue; /* the field being solved is ignored, whatever it holds */
+      p = parseNumber(input[FIELDS[i]]);
+      if (p.error) return { ok: false, error: NAMES[FIELDS[i]] + ': ' + p.error, field: FIELDS[i] };
+      if (p.empty) blanks.push(FIELDS[i]); else vals[FIELDS[i]] = p.value;
+    }
+    if (target === 'auto') {
+      if (blanks.length === FIELDS.length) return { ok: false, empty: true, error: '' };
+      if (blanks.length === 0) return { ok: false, error: 'All four fields are filled in. Clear the one you want to find, or choose it in \u201cFind\u201d.', field: 'T' };
+      if (blanks.length > 1) return { ok: false, error: 'Enter any three values and leave the fourth empty (still empty: ' + blanks.map(function (b) { return NAMES[b]; }).join(', ') + ').', field: blanks[0], partial: true };
+      target = blanks[0];
+    } else if (blanks.length === FIELDS.length - 1) {
+      return { ok: false, empty: true, error: '' };
+    }
+    var s = solve(target, vals);
+    if (!s.ok) return { ok: false, error: s.error, field: s.field };
+    var sol = s.sol;
+    return { ok: true, sol: sol, target: target, timeUnit: u, quantityUnit: qu, sig: sig, warnings: s.warnings, steps: working(sol, u, qu, sig), equivalents: equivalents(sol, u) };
+  }
+  /* t and T in seconds and Julian years, for orientation only */
+  function equivalents(sol, u) {
+    var d = unitDef(u), s = d[3], out = [];
+    [['Elapsed time', sol.t], ['Half-life', sol.T]].forEach(function (r) { if (isFinite(r[1])) out.push({ label: r[0], seconds: r[1] * s, years: r[1] * s / YEAR_S }); });
+    return out;
+  }
+
+  /* ---------- exports ---------- */
+  function rows(r) {
+    var s = r.sol, Q = r.quantityUnit, F = function (v) { return fmt(v, r.sig); }, P = function (f) { return f === 0 ? '\u2248 0%' : pct(f, r.sig); }, tl = function (v) { return timeLabel(r.timeUnit, v); }, per = 'per ' + perUnit(r.timeUnit);
+    return [
+      ['Initial quantity N0', F(s.N0), Q, s.N0], ['Remaining quantity Nt', F(s.Nt), Q, s.Nt], ['Decayed quantity', F(s.decQty), Q, s.decQty],
+      ['Remaining percentage', P(s.remFrac), '', s.remFrac * 100], ['Decayed percentage', pct(s.decFrac, r.sig), '', s.decFrac * 100],
+      ['Elapsed time t', F(s.t), tl(s.t), s.t], ['Half-life T1/2', F(s.T), tl(s.T), s.T], ['Half-lives elapsed n', F(s.n), '', s.n],
+      ['Decay constant lambda', F(s.lambda), per, s.lambda], ['Mean lifetime tau', F(s.tau), tl(s.tau), s.tau]
+    ];
+  }
+  function exportTxt(r) {
+    var o = ['Elecmetric Half-Life Calculator, Mode 01 (solved for ' + { Nt: 'remaining quantity', N0: 'initial quantity', t: 'elapsed time', T: 'half-life' }[r.target] + ')', ''];
+    rows(r).forEach(function (x) { o.push(x[0] + ': ' + x[1] + (x[2] ? ' ' + x[2] : '')); });
+    o.push('');
+    r.steps.forEach(function (s) { o.push(s.title.toUpperCase()); o.push(s.text); o.push(''); });
+    r.warnings.forEach(function (w) { o.push('Note: ' + w.message); });
+    o.push('Mathematical decay only. Not a radiation-safety, dosimetry or exposure assessment.');
+    return o.join('\n');
+  }
+  function csvq(v) { v = String(v); return /[",\n]/.test(v) ? '"' + v.replace(/"/g, '""') + '"' : v; }
+  /* CSV carries full-precision numbers (no grouping, no rounding) so it can be read by a spreadsheet; an infinite value is written as the word infinity */
+  function exportCsv(r) { return ['Quantity,Value,Unit'].concat(rows(r).map(function (x) { return [x[0], x[3] === Infinity ? 'infinity' : String(x[3]), x[2]].map(csvq).join(','); })).join('\r\n') + '\r\n'; }
+  function exportJson(r) {
+    var s = r.sol, inf = function (v) { return v === Infinity ? 'infinity' : v; };
+    return JSON.stringify({ tool: 'Elecmetric Half-Life Calculator, Mode 01', solvedFor: r.target, timeUnit: r.timeUnit, quantityUnit: r.quantityUnit, initialQuantity: inf(s.N0), remainingQuantity: s.Nt, decayedQuantity: inf(s.decQty), remainingPercentage: s.remFrac * 100, decayedPercentage: s.decFrac * 100, elapsedTime: s.t, halfLife: inf(s.T), halfLivesElapsed: s.n, decayConstant: s.lambda, meanLifetime: inf(s.tau), warnings: r.warnings.map(function (w) { return w.code; }) }, null, 2);
+  }
+
+  var api = { LN2: LN2, TIME_UNITS: TIME_UNITS, TARGETS: TARGETS, FIELDS: FIELDS, isTimeUnit: isTimeUnit, timeLabel: timeLabel, parseNumber: parseNumber, fmt: fmt, lnRatio: lnRatio, remainingQuantity: remainingQuantity, initialQuantity: initialQuantity, elapsedTime: elapsedTime, halfLife: halfLife, solve: solve, run: run, exportTxt: exportTxt, exportCsv: exportCsv, exportJson: exportJson };
+  if (typeof module !== 'undefined' && module.exports) module.exports = api; else root.HalfLife = api;
+})(typeof window !== 'undefined' ? window : this);
+
+/* Elecmetric Half-Life Calculator, Mode 02: decay constant and mean lifetime converter. Engine: one file, no DOM.
+   Required by tests/halflife_const_test.js and inlined (after tools/halflife_engine.js) into calculators/decay-constant-calculator/index.html by tools/halflife_const_page.js.
+
+   The three numbers that describe one exponential decay are tied together by
+       lambda = ln 2 / T          (decay constant, per unit time)
+       tau    = 1 / lambda = T / ln 2   (mean lifetime)
+       T      = tau x ln 2 = ln 2 / lambda   (half-life)
+   Any one of them gives the other two. T and tau share ONE time unit and lambda is per that unit, so the consistency of units is structural (CEO decision 4).
+   An optional "convert to" unit rescales all three together (T and tau multiply by the ratio of the units, lambda divides by it).
+
+   Numerical policy: every value is one division or one multiplication from the value the user typed, so the result is correct to double precision; tau is taken
+   from T / ln 2 and lambda from ln 2 / T directly (not by chaining 1 / lambda), so no result carries two roundings. A result that would overflow, or that is
+   smaller than the smallest normal double (2.2250738585072014e-308), is refused or flagged, never shown as a silent wrong number.
+   Errors are returned, never thrown, with the field that caused them. SCOPE: mathematical decay only (CEO decision 8). */
+(function (root) {
+  'use strict';
+  var H = (typeof module !== 'undefined' && module.exports) ? require('./halflife_engine.js') : root.HalfLife;
+  var LN2 = Math.LN2, MIN_NORMAL = 2.2250738585072014e-308;
+  var FIELDS = ['T', 'lambda', 'tau'];
+  var NAMES = { T: 'Half-life', lambda: 'Decay constant', tau: 'Mean lifetime' };
+  var SYMS = { T: 'T\u00bd', lambda: '\u03bb', tau: '\u03c4' };
+  var KNOWN = [['auto', 'Automatic (type one value)'], ['T', 'Half-life (T\u00bd)'], ['lambda', 'Decay constant (\u03bb)'], ['tau', 'Mean lifetime (\u03c4)']];
+  var fmt = H.fmt, timeLabel = H.timeLabel;
+  function unitDef(u) { for (var i = 0; i < H.TIME_UNITS.length; i++) if (H.TIME_UNITS[i][0] === u) return H.TIME_UNITS[i]; return null; }
+  function perUnit(u) { var d = unitDef(u); return d ? d[4] : String(u); }
+  function isClose(a, b, tol) { if (a === b) return true; if (!isFinite(a) || !isFinite(b)) return false; return Math.abs(a - b) / Math.max(Math.abs(a), Math.abs(b)) <= tol; }
+
+  /* ---------- the six conversions ---------- */
+  function decayConstantFromHalfLife(T) { return LN2 / T; }
+  function halfLifeFromDecayConstant(l) { return LN2 / l; }
+  function meanLifetimeFromDecayConstant(l) { return 1 / l; }
+  function decayConstantFromMeanLifetime(tau) { return 1 / tau; }
+  function meanLifetimeFromHalfLife(T) { return T / LN2; }
+  function halfLifeFromMeanLifetime(tau) { return tau * LN2; }
+
+  /* all three from one known value; returns { T, lambda, tau } */
+  function from(src, v) {
+    if (src === 'T') return { T: v, lambda: decayConstantFromHalfLife(v), tau: meanLifetimeFromHalfLife(v) };
+    if (src === 'lambda') return { T: halfLifeFromDecayConstant(v), lambda: v, tau: meanLifetimeFromDecayConstant(v) };
+    return { T: halfLifeFromMeanLifetime(v), lambda: decayConstantFromMeanLifetime(v), tau: v };
+  }
+
+  /* what the decay does over one unit of time, from the half-life (n = 1 / T half-lives per unit) */
+  function perUnitFractions(T) {
+    var n = 1 / T, rem = n >= 1075 ? 0 : Math.pow(2, -n), dec = n < 0.5 ? -Math.expm1(-LN2 * n) : 1 - rem;
+    return { remaining: rem, decayed: dec };
+  }
+  /* fraction left after k mean lifetimes: e^(-k) */
+  function afterMeanLifetimes(k) { return Math.exp(-k); }
+
+  /* ---------- the public run() used by the page and the tests ---------- */
+  /* input: { known:'auto'|'T'|'lambda'|'tau', T, lambda, tau (strings or numbers), timeUnit, outUnit ('same' or a unit), sig } */
+  function run(input) {
+    input = input || {};
+    var u = input.timeUnit === undefined || input.timeUnit === '' ? 'yr' : input.timeUnit, sig = input.sig === undefined ? 6 : input.sig;
+    if (!H.isTimeUnit(u)) return { ok: false, error: 'Unknown time unit \u201c' + u + '\u201d.' };
+    var outU = input.outUnit === undefined || input.outUnit === '' || input.outUnit === 'same' ? u : input.outUnit;
+    if (!H.isTimeUnit(outU)) return { ok: false, error: 'Unknown time unit \u201c' + outU + '\u201d.' };
+    var known = input.known || 'auto', vals = {}, filled = [], i, p, f;
+    if (known !== 'auto' && FIELDS.indexOf(known) < 0) return { ok: false, error: 'Unknown starting value.' };
+    for (i = 0; i < FIELDS.length; i++) {
+      f = FIELDS[i];
+      if (known !== 'auto' && f !== known) continue; /* the fields being found are ignored, whatever they hold */
+      p = H.parseNumber(input[f]);
+      if (p.error) return { ok: false, error: NAMES[f] + ': ' + p.error, field: f };
+      if (!p.empty) { vals[f] = p.value; filled.push(f); }
+    }
+    var src;
+    if (known === 'auto') {
+      if (filled.length === 0) return { ok: false, error: '', empty: true };
+      src = filled[0]; /* priority: half-life, decay constant, mean lifetime */
+    } else {
+      if (filled.length === 0) return { ok: false, error: '', empty: true };
+      src = known;
+    }
+    /* validation of every value that is used or compared */
+    for (i = 0; i < filled.length; i++) {
+      f = filled[i];
+      if (!(vals[f] > 0)) return { ok: false, error: NAMES[f] + ' must be greater than zero.', field: f };
+    }
+    var sol = from(src, vals[src]), warnings = [];
+    for (i = 0; i < FIELDS.length; i++) {
+      f = FIELDS[i];
+      if (!isFinite(sol[f]) || sol[f] <= 0) return { ok: false, error: 'The ' + NAMES[f].toLowerCase() + ' that follows from this ' + NAMES[src].toLowerCase() + ' is outside the range of a double-precision number. Use a different time unit.', field: src };
+      if (sol[f] < MIN_NORMAL && sol[f] !== vals[f]) warnings.push({ code: 'SUBNORMAL', message: 'The ' + NAMES[f].toLowerCase() + ' is smaller than the smallest normal double-precision number (about 2.2 \u00d7 10\u207b\u00b3\u2070\u2078), so it carries fewer significant digits. Use a different time unit.' });
+    }
+    /* values typed alongside the one that is used must agree with it */
+    if (known === 'auto') {
+      filled.forEach(function (g) {
+        if (g !== src && !isClose(sol[g], vals[g], 1e-9)) warnings.push({ code: 'INCONSISTENT_INPUTS', message: 'The ' + NAMES[g].toLowerCase() + ' you typed (' + fmt(vals[g], 10) + ') does not agree with the ' + NAMES[src].toLowerCase() + ' (it should be ' + fmt(sol[g], 10) + '); the ' + NAMES[src].toLowerCase() + ' was used.' });
+      });
+    }
+    /* optional conversion of all three to another time unit */
+    var conv = null;
+    if (outU !== u) {
+      var k = unitDef(u)[3] / unitDef(outU)[3];
+      conv = { unit: outU, T: sol.T * k, lambda: sol.lambda / k, tau: sol.tau * k, factor: k };
+      for (i = 0; i < FIELDS.length; i++) {
+        f = FIELDS[i];
+        if (!isFinite(conv[f]) || !(conv[f] > 0)) return { ok: false, error: 'The ' + NAMES[f].toLowerCase() + ' in ' + timeLabel(outU) + ' is outside the range of a double-precision number. Choose a closer time unit.', field: src };
+        if (conv[f] < MIN_NORMAL) warnings.push({ code: 'SUBNORMAL', message: 'The ' + NAMES[f].toLowerCase() + ' in ' + timeLabel(outU) + ' is below the smallest normal double-precision number, so it carries fewer significant digits.' });
+      }
+    }
+    var out = { ok: true, sol: sol, source: src, known: known, timeUnit: u, outUnit: outU, conv: conv, sig: sig, warnings: warnings, perUnit: perUnitFractions(sol.T), equivalents: equivalents(sol, u) };
+    /* independent check: lambda x tau = 1 and lambda x T = ln 2, by a different route from the conversions above */
+    var c1 = Math.abs(sol.lambda * sol.tau - 1), c2 = Math.abs(sol.lambda * sol.T - LN2) / LN2;
+    out.check = { lt: sol.lambda * sol.tau, lT: sol.lambda * sol.T, err: Math.max(c1, c2), ok: Math.max(c1, c2) <= 1e-12 };
+    out.steps = working(out);
+    return out;
+  }
+  /* T, tau and lambda in seconds and Julian years, for orientation only */
+  function equivalents(sol, u) {
+    var s = unitDef(u)[3], YEAR_S = 365.25 * 86400, o = [];
+    [['Half-life', sol.T], ['Mean lifetime', sol.tau]].forEach(function (r) { var sec = r[1] * s; if (isFinite(sec) && sec > 0) o.push({ label: r[0], seconds: sec, years: sec / YEAR_S }); });
+    var ls = sol.lambda / s; if (isFinite(ls) && ls > 0) o.push({ label: 'Decay constant', perSecond: ls });
+    return o;
+  }
+
+  /* ---------- the written working (plain Unicode text) ---------- */
+  function working(r) {
+    var s = r.sol, u = r.timeUnit, sig = r.sig, F = function (v) { return fmt(v, sig); }, FT = function (v) { return fmt(v, sig) + '\u00a0' + timeLabel(u, v); }, per = perUnit(u), steps = [];
+    steps.push({ title: 'The relationships', text: '\u03bb = ln 2 / T\u00bd\n\u03c4 = 1 / \u03bb = T\u00bd / ln 2\nT\u00bd = \u03c4 \u00d7 ln 2 = ln 2 / \u03bb\nwhere ln 2 = 0.693147\u2026' });
+    if (r.source === 'T') steps.push({ title: 'From the half-life', text: '\u03bb = ln 2 / T\u00bd = 0.693147 / ' + FT(s.T) + ' = ' + F(s.lambda) + ' per ' + per + '\n\u03c4 = T\u00bd / ln 2 = ' + FT(s.T) + ' / 0.693147 = ' + FT(s.tau) });
+    else if (r.source === 'lambda') steps.push({ title: 'From the decay constant', text: 'T\u00bd = ln 2 / \u03bb = 0.693147 / ' + F(s.lambda) + ' per ' + per + ' = ' + FT(s.T) + '\n\u03c4 = 1 / \u03bb = 1 / ' + F(s.lambda) + ' per ' + per + ' = ' + FT(s.tau) });
+    else steps.push({ title: 'From the mean lifetime', text: '\u03bb = 1 / \u03c4 = 1 / ' + FT(s.tau) + ' = ' + F(s.lambda) + ' per ' + per + '\nT\u00bd = \u03c4 \u00d7 ln 2 = ' + FT(s.tau) + ' \u00d7 0.693147 = ' + FT(s.T) });
+    steps.push({ title: 'What the three numbers mean', text: 'After one half-life (' + FT(s.T) + ') 50% of the quantity is left.\nAfter one mean lifetime (' + FT(s.tau) + ') 1/e = ' + fmt(afterMeanLifetimes(1) * 100, sig) + '% is left.\nThe mean lifetime is ' + fmt(1 / LN2, sig) + ' half-lives long (\u03c4 / T\u00bd = 1 / ln 2).\nIn one ' + per + ' the quantity falls to ' + fmt(r.perUnit.remaining * 100, sig) + '% (' + fmt(r.perUnit.decayed * 100, sig) + '% decays).' });
+    if (r.conv) steps.push({ title: 'Converted to ' + unitDef(r.conv.unit)[2], text: '1 ' + perUnit(u) + ' = ' + F(r.conv.factor) + ' ' + timeLabel(r.conv.unit, r.conv.factor) + '\nT\u00bd = ' + F(r.conv.T) + '\u00a0' + timeLabel(r.conv.unit, r.conv.T) + '\n\u03c4 = ' + F(r.conv.tau) + '\u00a0' + timeLabel(r.conv.unit, r.conv.tau) + '\n\u03bb = ' + F(r.conv.lambda) + ' per ' + perUnit(r.conv.unit) });
+    steps.push({ title: 'Check', text: '\u03bb \u00d7 \u03c4 = ' + fmt(r.check.lt, 12) + ' (should be 1) and \u03bb \u00d7 T\u00bd = ' + fmt(r.check.lT, 12) + ' (should be ln 2 = 0.693147); ' + (r.check.ok ? 'they agree to better than 1 part in 10\u00b9\u00b2.' : 'they differ by a relative ' + r.check.err.toExponential(2) + '. Report this.') });
+    return steps;
+  }
+
+  /* ---------- exports ---------- */
+  function rows(r) {
+    var s = r.sol, F = function (v) { return fmt(v, r.sig); }, tl = function (v) { return timeLabel(r.timeUnit, v); }, per = 'per ' + perUnit(r.timeUnit);
+    var o = [['Half-life T1/2', F(s.T), tl(s.T), s.T], ['Decay constant lambda', F(s.lambda), per, s.lambda], ['Mean lifetime tau', F(s.tau), tl(s.tau), s.tau]];
+    if (r.conv) { var c = r.conv, tc = function (v) { return timeLabel(c.unit, v); }; o.push(['Half-life T1/2 (converted)', F(c.T), tc(c.T), c.T], ['Decay constant lambda (converted)', F(c.lambda), 'per ' + perUnit(c.unit), c.lambda], ['Mean lifetime tau (converted)', F(c.tau), tc(c.tau), c.tau]); }
+    return o;
+  }
+  function exportTxt(r) {
+    var o = ['Elecmetric Half-Life Calculator, Mode 02 (decay constant and mean lifetime, from the ' + NAMES[r.source].toLowerCase() + ')', ''];
+    rows(r).forEach(function (x) { o.push(x[0] + ': ' + x[1] + (x[2] ? ' ' + x[2] : '')); });
+    o.push('');
+    r.steps.forEach(function (s) { o.push(s.title.toUpperCase()); o.push(s.text); o.push(''); });
+    r.warnings.forEach(function (w) { o.push('Note: ' + w.message); });
+    o.push('Mathematical decay only. Not a radiation-safety, dosimetry or exposure assessment.');
+    return o.join('\n');
+  }
+  function csvq(v) { v = String(v); return /[",\n]/.test(v) ? '"' + v.replace(/"/g, '""') + '"' : v; }
+  function exportCsv(r) { return ['Quantity,Value,Unit'].concat(rows(r).map(function (x) { return [x[0], String(x[3]), x[2]].map(csvq).join(','); })).join('\r\n') + '\r\n'; }
+  function exportJson(r) {
+    var s = r.sol, j = { tool: 'Elecmetric Half-Life Calculator, Mode 02', startedFrom: r.source, timeUnit: r.timeUnit, halfLife: s.T, decayConstant: s.lambda, meanLifetime: s.tau, warnings: r.warnings.map(function (w) { return w.code; }) };
+    if (r.conv) j.converted = { timeUnit: r.conv.unit, halfLife: r.conv.T, decayConstant: r.conv.lambda, meanLifetime: r.conv.tau };
+    return JSON.stringify(j, null, 2);
+  }
+
+  var api = { LN2: LN2, FIELDS: FIELDS, NAMES: NAMES, SYMS: SYMS, KNOWN: KNOWN, decayConstantFromHalfLife: decayConstantFromHalfLife, halfLifeFromDecayConstant: halfLifeFromDecayConstant, meanLifetimeFromDecayConstant: meanLifetimeFromDecayConstant, decayConstantFromMeanLifetime: decayConstantFromMeanLifetime, meanLifetimeFromHalfLife: meanLifetimeFromHalfLife, halfLifeFromMeanLifetime: halfLifeFromMeanLifetime, from: from, perUnitFractions: perUnitFractions, afterMeanLifetimes: afterMeanLifetimes, run: run, exportTxt: exportTxt, exportCsv: exportCsv, exportJson: exportJson };
+  if (typeof module !== 'undefined' && module.exports) module.exports = api; else root.HalfLifeConst = api;
+})(typeof window !== 'undefined' ? window : this);
+
+/* Elecmetric Half-Life Calculator, Mode 02: page script. Inlined by tools/halflife_const_page.js after the engines (HalfLife, HalfLifeConst). */
+(function () {
+  var $ = function (id) { return document.getElementById(id); }, HL = HalfLife, DC = HalfLifeConst, F = DC.FIELDS;
+  var known = $('dc-known'), tu = $('dc-tu'), ou = $('dc-ou'), sigS = $('dc-sig'), err = $('dc-err'), out = $('dc-out'), stp = $('dc-steps');
+  var inp = {}; F.forEach(function (f) { inp[f] = $('dc-' + f); });
+  var DEF = { known: 'auto', T: '10', lambda: '', tau: '', tu: 'yr', ou: 'same', sig: '6' }, HKEY = 'em-halflife-const-history', hist = [], last = null, filled = null;
+  var NAME = { T: 'Half-life T\u00bd', lambda: 'Decay constant \u03bb', tau: 'Mean lifetime \u03c4' };
+  function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
+  function say(t) { $('dc-note').textContent = t; }
+  function copy(t) { var d = function () { say('Copied ' + t); }; if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(t).then(d, d); else { var a = document.createElement('textarea'); a.value = t; document.body.appendChild(a); a.select(); try { document.execCommand('copy'); } catch (e) {} document.body.removeChild(a); d(); } }
+  function copyBtn(t, label) { return '<button type="button" class="btn2" data-copy="' + esc(t) + '" aria-label="Copy ' + esc(label) + '">Copy</button>'; }
+  function sigVal() { return sigS.value === 'full' ? 'full' : Number(sigS.value); }
+  function state() { return { known: known.value, T: inp.T.value, lambda: inp.lambda.value, tau: inp.tau.value, tu: tu.value, ou: ou.value, sig: sigS.value }; }
+  function setState(d) {
+    known.value = d.known || 'auto'; tu.value = d.tu || 'yr'; ou.value = d.ou || 'same'; sigS.value = d.sig || '6';
+    F.forEach(function (f) { inp[f].value = d[f] === undefined ? '' : d[f]; }); lock(); render();
+  }
+  /* the two fields being found are read-only while a starting value is chosen; the labels carry the units */
+  function lock() {
+    F.forEach(function (f) {
+      var solved = known.value !== 'auto' && known.value !== f; inp[f].readOnly = solved; inp[f].classList.toggle('solved', solved);
+      if (!solved && filled && filled.indexOf(f) >= 0) { inp[f].value = ''; }
+    });
+    if (known.value === 'auto') filled = null;
+    var u = HL.timeLabel(tu.value);
+    $('dc-lT').textContent = 'Half-life T\u00bd (' + u + ')'; $('dc-ltau').textContent = 'Mean lifetime \u03c4 (' + u + ')'; $('dc-llambda').textContent = 'Decay constant \u03bb (per ' + HL.timeLabel(tu.value, 1) + ')';
+  }
+  function longUnit(u) { for (var i = 0; i < HL.TIME_UNITS.length; i++) if (HL.TIME_UNITS[i][0] === u) return HL.TIME_UNITS[i][2]; return u; }
+  function mark(field) { F.forEach(function (f) { var bad = f === field; inp[f].classList.toggle('bad', bad); inp[f].setAttribute('aria-invalid', String(bad)); }); }
+  function clearPlaceholders() { F.forEach(function (f) { inp[f].placeholder = ''; }); }
+  function render() {
+    lock(); clearPlaceholders();
+    var r = DC.run({ known: known.value, T: inp.T.value, lambda: inp.lambda.value, tau: inp.tau.value, timeUnit: tu.value, outUnit: ou.value, sig: sigVal() });
+    last = null; $('dc-dl').hidden = true;
+    if (!r.ok) {
+      err.textContent = r.empty ? '' : r.error; err.classList.toggle('hint', !!r.empty); mark(r.empty ? null : r.field);
+      out.innerHTML = ''; stp.innerHTML = '<p class="note">Enter a half-life, a decay constant or a mean lifetime to see the working.</p>'; return;
+    }
+    err.textContent = ''; err.classList.remove('hint'); mark(null);
+    var s = r.sol, sg = sigVal(), f = function (v) { return HL.fmt(v, sg); };
+    if (known.value !== 'auto') { filled = F.filter(function (x) { return x !== r.source; }); filled.forEach(function (x) { inp[x].value = String(s[x]); }); }
+    else { filled = null; F.forEach(function (x) { if (inp[x].value.trim() === '') inp[x].placeholder = '= ' + f(s[x]); }); }
+    var per = HL.timeLabel(r.timeUnit, 1), big = '<div class="res"><p class="sub">Starting from the ' + esc(DC.NAMES[r.source].toLowerCase()) + '</p>' +
+      F.map(function (x) { var v = f(s[x]), unit = x === 'lambda' ? 'per ' + per : HL.timeLabel(r.timeUnit, s[x]); return '<div class="big' + (x === r.source ? ' src' : '') + '"><span class="sym">' + esc(DC.SYMS[x]) + ' =</span> ' + esc(v + '\u00a0' + unit) + copyBtn(v, DC.NAMES[x].toLowerCase()) + '</div>'; }).join('') + '</div>';
+    var c = r.conv, head = '<tr><th scope="col">Quantity</th><th scope="col">Value</th><th scope="col">Unit</th>' + (c ? '<th scope="col">In ' + esc(longUnit(c.unit)) + '</th><th scope="col">Unit</th>' : '') + '</tr>';
+    var body = F.map(function (x) {
+      var unit = x === 'lambda' ? 'per ' + per : HL.timeLabel(r.timeUnit, s[x]), cu = c ? (x === 'lambda' ? 'per ' + HL.timeLabel(c.unit, 1) : HL.timeLabel(c.unit, c[x])) : '';
+      return '<tr' + (x === r.source ? ' class="cu"' : '') + '><th scope="row">' + esc(NAME[x]) + '</th><td class="r">' + esc(f(s[x])) + '</td><td>' + esc(unit) + '</td>' + (c ? '<td class="r">' + esc(f(c[x])) + '</td><td>' + esc(cu) + '</td>' : '') + '</tr>';
+    }).join('');
+    var tbl = '<div class="tw" tabindex="0" role="region" aria-label="Scrollable table: decay constant results"><table class="ns-t"><thead>' + head + '</thead><tbody>' + body + '</tbody></table></div>';
+    var meaning = '<p class="ns-facts"><span>After one half-life <b>50%</b> is left</span><span>After one mean lifetime <b>' + esc(f(DC.afterMeanLifetimes(1) * 100) + '%') + '</b> (1/e) is left</span><span>In one ' + esc(per) + ' <b>' + esc(f(r.perUnit.remaining * 100) + '%') + '</b> is left, <b>' + esc(f(r.perUnit.decayed * 100) + '%') + '</b> decays</span><span>\u03c4 / T\u00bd = <b>' + esc(f(1 / DC.LN2)) + '</b></span></p>';
+    var eqv = r.equivalents.length ? '<p class="ns-facts">' + r.equivalents.map(function (q) { return q.perSecond !== undefined ? '<span>' + esc(q.label) + ' <b>' + esc(f(q.perSecond) + ' per s') + '</b></span>' : '<span>' + esc(q.label) + ' <b>' + esc(f(q.seconds) + ' s') + '</b>' + (r.timeUnit === 'yr' ? '' : ' = <b>' + esc(f(q.years) + ' Julian years') + '</b>') + '</span>'; }).join('') + '</p>' : '';
+    var warn = r.warnings.map(function (w) { return '<p class="note warn">' + esc(w.message) + '</p>'; }).join('');
+    out.innerHTML = big + tbl + meaning + eqv + warn;
+    stp.innerHTML = r.steps.map(function (x) { return '<h3>' + esc(x.title) + '</h3><pre class="al" tabindex="0">' + esc(x.text) + '</pre>'; }).join('');
+    last = { r: r, text: line(r) }; $('dc-dl').hidden = false;
+  }
+  function line(r) {
+    var s = r.sol, f = function (v) { return HL.fmt(v, sigVal()); }, u = function (v) { return '\u00a0' + HL.timeLabel(r.timeUnit, v); };
+    return 'T\u00bd = ' + f(s.T) + u(s.T) + ', \u03bb = ' + f(s.lambda) + ' per\u00a0' + HL.timeLabel(r.timeUnit, 1) + ', \u03c4 = ' + f(s.tau) + u(s.tau);
+  }
+  function download(name, mime, text) { var a = document.createElement('a'), u = URL.createObjectURL(new Blob([text], { type: mime })); a.href = u; a.download = name; document.body.appendChild(a); a.click(); document.body.removeChild(a); setTimeout(function () { URL.revokeObjectURL(u); }, 500); say('Downloaded ' + name); }
+  function loadHist() { try { var x = JSON.parse(localStorage.getItem(HKEY) || '[]'); hist = Array.isArray(x) ? x.filter(function (h) { return h && typeof h.text === 'string' && h.s && typeof h.s === 'object'; }).slice(0, 10) : []; } catch (e) { hist = []; } }
+  function saveHist() { try { localStorage.setItem(HKEY, JSON.stringify(hist.slice(0, 10))); } catch (e) {} }
+  function drawHist() {
+    $('dc-hist').innerHTML = hist.length ? hist.map(function (h, k) { return '<li><button type="button" class="chipb" data-h="' + k + '" aria-label="Use again: ' + esc(h.text) + '">' + esc(h.text) + '</button></li>'; }).join('') : '<li class="note">No saved calculations yet. Press Enter or Save to history.</li>';
+    $('dc-hclear').hidden = !hist.length;
+  }
+  function keep() {
+    if (!last) return; var t = last.text; hist = hist.filter(function (h) { return h.text !== t; });
+    var st = state(); st.known = last.r.source; F.forEach(function (x) { if (x !== last.r.source) st[x] = ''; });
+    hist.unshift({ text: t, s: st }); hist = hist.slice(0, 10); saveHist(); drawHist(); say('Saved to history');
+  }
+  $('dc').addEventListener('click', function (e) {
+    var b = e.target.closest('button'); if (!b) return;
+    if (b.dataset.copy) { copy(b.dataset.copy); return; }
+    if (b.dataset.ex) { setState(JSON.parse(b.dataset.ex)); return; }
+    if (b.dataset.h !== undefined) { var h = hist[Number(b.dataset.h)]; if (h) setState(h.s); return; }
+    if (b.dataset.act === 'reset') { filled = null; setState(DEF); return; }
+    if (b.dataset.act === 'save') { keep(); return; }
+    if (b.dataset.act === 'clear') { F.forEach(function (f) { inp[f].value = ''; }); filled = null; render(); inp.T.focus(); return; }
+    if (b.dataset.act === 'hclear') { hist = []; saveHist(); drawHist(); return; }
+    if (b.dataset.act === 'print') { window.print(); return; }
+    if (b.dataset.act === 'copyall' && last) { copy(DC.exportTxt(last.r)); return; }
+    if (b.dataset.dl && last) { var n = 'decay-constant'; if (b.dataset.dl === 'txt') download(n + '.txt', 'text/plain', DC.exportTxt(last.r)); if (b.dataset.dl === 'csv') download(n + '.csv', 'text/csv', DC.exportCsv(last.r)); if (b.dataset.dl === 'json') download(n + '.json', 'application/json', DC.exportJson(last.r)); }
+  });
+  F.forEach(function (f) { inp[f].addEventListener('input', render); inp[f].addEventListener('keydown', function (e) { if (e.key === 'Enter') { e.preventDefault(); keep(); } }); });
+  known.addEventListener('change', function () { if (known.value !== 'auto') { filled = null; } else { F.forEach(function (f) { if (inp[f].readOnly) inp[f].value = ''; }); } render(); });
+  [tu, ou, sigS].forEach(function (el) { el.addEventListener('change', render); el.addEventListener('input', render); });
+  loadHist(); drawHist(); setState(DEF);
+})();
+</script><script>try{if("serviceWorker"in navigator&&/^https?:/.test(location.protocol))navigator.serviceWorker.register("../../sw.js")}catch(e){}</script></body></html>

@@ -1,11 +1,12 @@
 {
-  "_readme": "Shown in page footers and on privacy and terms pages. operator_name / operator_location: the person or company that operates the site (shown in footer, terms and privacy notice; fill in before launch). calculation_author is the authorship label. Individual professional approval must be entered in tools/review_records.json only after a named qualified person has actually reviewed the calculator. tools/team_review_approval.json is an internal record only and is not shown on public pages. contact_email is where page feedback is sent.",
+  "_readme": "Shown in page footers and on privacy and terms pages. operator_name / operator_location: who operates the site and where, as shown publicly (footer, terms, privacy notice). They are currently the project name and 'Not publicly disclosed': no personal name or location is published. public_disclosure_approved must be true for the deploy guard to pass: it records that the owner has approved EXACTLY what this file and the generated legal pages show about the operator, author and jurisdiction. Change those values only with that decision, and set legal details (a company name, a registered location) only to what is true. calculation_author is the authorship label on calculator pages. Individual professional approval must be entered in tools/review_records.json only after a named qualified person has actually reviewed the calculator. tools/team_review_approval.json is an internal record, holds no personal name and is not shown on public pages. contact_email is where page feedback is sent.",
   "credit": "Developed by Elecmetric",
   "contact_email": "elecmetrics@gmail.com",
   "governing_law": "India",
-  "legal_updated": "2026-11-12",
-  "calculation_author": "Rahul Sharma (author)",
-  "operator_name": "Rahul Sharma",
-  "operator_location": "India",
-  "courts_city": "Delhi, India"
+  "legal_updated": "2026-11-22",
+  "calculation_author": "Elecmetric project (author)",
+  "operator_name": "Elecmetric",
+  "operator_location": "Not publicly disclosed",
+  "courts_city": "Delhi, India",
+  "public_disclosure_approved": true
 }

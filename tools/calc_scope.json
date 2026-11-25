@@ -81,6 +81,389 @@
         "Earth-fault loop impedance and disconnection time at that length."
       ]
     },
+    "vfd-speed": {
+      "checked": [
+        "Synchronous speed, shaft speed and frequency from the pole count and the rated slip speed, held constant.",
+        "The V/f voltage up to the base frequency and the flux level above it.",
+        "Torque and power from the rated torque below the base frequency and the rated power above it."
+      ],
+      "notChecked": [
+        "The real slip at your load, which changes the speed a little; use a tachometer or the drive feedback where the speed must be exact.",
+        "Low-frequency voltage boost, motor cooling at low speed, the drive current limit, the pull-out torque and the maximum mechanical speed of the motor.",
+        "The motor and drive data sheet limits, and the standards for converter-fed motors."
+      ]
+    },
+    "laplace-transform": {
+      "checked": [
+        "The one-sided Laplace transform of ten standard functions (step, ramp, tⁿ, e^(−at), t e^(−at), tⁿ e^(−at), sin ωt, cos ωt, e^(−at) sin ωt, e^(−at) cos ωt) multiplied by an amplitude K, with an optional time delay, evaluated at a point s = σ + jΩ with σ above the abscissa of convergence: real and imaginary parts, magnitude and phase.",
+        "The initial value f(0+), the final value where it exists (step and decaying forms), the time function at a chosen time, and the abscissa of convergence.",
+        "The table result against a Simpson integration of f(t)e^(−st) over a window set by the decay rate."
+      ],
+      "notChecked": [
+        "Sums or products of different forms, transforms of derivatives, integrals or convolutions, and the inverse transform of a general ratio of polynomials; partial-fraction work is not done here.",
+        "Use as a frequency response: F(s) is read at one point with σ above the abscissa of convergence, not along the imaginary axis.",
+        "A point very close to the abscissa of convergence, where the transform is large and the numerical check converges slowly."
+      ]
+    },
+    "first-order-ode": {
+      "checked": [
+        "The closed-form solution of a dy/dt + b y = g(t) with constant a and b above zero and y(0) given, for a step, a ramp or a sine forcing: the forced and transient parts, y and dy/dt at a chosen time, the time constant a / b, the final value of a step, the steady-state amplitude and phase lag of a sine, and the time for the transient to settle into a chosen band.",
+        "The closed form against a classical fourth-order Runge-Kutta integration with 4000 steps from 0 to the chosen time."
+      ],
+      "notChecked": [
+        "Sums of forcings, switched or piecewise forcing, a variable coefficient, a negative b (growth) and any nonlinear or higher-order equation; a circuit with two storage elements needs the second-order tools.",
+        "Units: the solver works in one consistent set and does not convert them. Component values and the circuit equation that gives a and b are the user's responsibility.",
+        "Stiff or very long numerical runs; the Runge-Kutta line is a cross-check on the closed form, not a general ODE integrator."
+      ]
+    },
+    "derivative-integral": {
+      "checked": [
+        "The value, first derivative and second derivative of a cubic, sine, exponential or power function at a point, and its definite integral and mean value between two limits, from the closed-form derivative and antiderivative.",
+        "The integral against Simpson's rule with 200 strips, and whether the function changes sign over the interval, which makes the integral a signed area."
+      ],
+      "notChecked": [
+        "Sums, products or compositions of different functions, and any function not of the four forms offered; there is no symbolic expression input.",
+        "Integrals of the square of a function (RMS values), improper integrals, and functions with a singularity inside the interval.",
+        "Power functions at or below zero, where a non-integer exponent is not real."
+      ]
+    },
+    "tou-demand-bill": {
+      "checked": [
+        "The energy charge of the peak, shoulder and off-peak periods (kWh x rate for each), the billed demand as the larger of the recorded demand and the minimum percent of the contract demand, and the demand charge on it.",
+        "The subtotal with the fixed charge, duty and tax each as a percent of that subtotal, other charges, the total bill, the average cost per kWh, the peak share of energy and the load factor on the recorded demand.",
+        "Rejection of negative energy, rates and demand and of a minimum percent above 100; warnings for a recorded demand below the minimum billed demand or above the contract demand, a load factor above 100 percent and a peak or shoulder rate below the off-peak rate."
+      ],
+      "notChecked": [
+        "Any real tariff: the example rates are illustrative and the rates, contract demand, minimum percent and billing rules are yours to enter from the tariff order.",
+        "How the utility measures demand (kW or kVA, averaging interval, ratchets over several months), excess-demand penalties, power factor penalties and rebates, minimum charges, seasonal and slab rates, subsidies and arrears.",
+        "Which hours count as peak, shoulder and off-peak, and the energy split between them, which come from your meter or tariff order."
+      ]
+    },
+    "load-energy-cost": {
+      "checked": [
+        "Real power of the load from voltage, running current and power factor (single-phase V x I x pf, balanced three-phase line-to-line sqrt3 x V x I x pf or line-to-neutral 3 x V x I x pf, DC V x I), multiplied by the number of identical loads and the average load share of the current.",
+        "The apparent power, the energy per day, month and year on the hours and days entered, and the cost per hour, day, month and year at one flat tariff.",
+        "Rejection of a non-positive voltage or current, hours above 24 a day and a fractional number of loads; a warning for a power factor below 0.7, for a part-load share of the current and for a part-year of days."
+      ],
+      "notChecked": [
+        "That the load is balanced, sinusoidal and steady, or that the power factor entered holds at the current entered; a part-loaded motor has a lower power factor than at full load.",
+        "Demand, fixed, duty, tax and time-of-use charges, and a slab tariff; use Electricity Bill from Meter Readings for those.",
+        "The voltage, current, power factor, hours and days, which are your measurements or estimates and decide the result; connected load, rated input power, average power and maximum demand are not interchangeable."
+      ]
+    },
+    "replacement-savings": {
+      "checked": [
+        "The energy of the existing and the new load (number of units x power of one unit x share of rating x hours per day x days), per month, and the saving in kWh, in money and in percent.",
+        "The yearly energy and cost saving on the days per year entered, the investment, the simple payback in months and years, and the undiscounted net saving over the life entered.",
+        "Rejection of hours above 24 a day and of a fractional number of units; warnings when the new unit saves nothing, when payback exceeds the life and when the hours differ between the two units."
+      ],
+      "notChecked": [
+        "That the new equipment gives the same light, flow, cooling or other useful output as the existing one; only electrical energy is compared.",
+        "Tariff rise, discounting, maintenance, lamp or equipment life differences, residual value, financing, demand charges and the effect on cooling load; use the Energy Savings Estimator for discounting and several measures together.",
+        "The powers, hours and shares of rating, which are your measurements or estimates and decide the result."
+      ]
+    },
+    "electricity-bill-meter": {
+      "checked": [
+        "Units from the previous and current readings and the meter multiplier; telescopic billing (each block at its own rate) and non-telescopic billing (one rate on all units, from the slab the total falls in, limits inclusive) over four slabs.",
+        "The fixed charge on the sanctioned load, a fixed monthly charge, a per-unit surcharge, electricity duty and tax as percentages of the same subtotal, other charges, the total bill and the average cost per kWh.",
+        "Rejection of a current reading below the previous one, of slab limits out of order and of negative rates; a warning for equal readings and for non-telescopic billing near slab limits."
+      ],
+      "notChecked": [
+        "The tariff values themselves (slabs, rates, charges, duty and tax), which come from your tariff order and change by utility, category and year; none is embedded.",
+        "Demand charges on recorded maximum demand, minimum charges, power factor penalties or incentives, time-of-day rates, subsidies, rebates, arrears and late-payment surcharges.",
+        "Slab limits that differ per month, per day or by load, meter rollover, and estimated or average readings."
+      ]
+    },
+    "electricity-cost-planner": {
+      "checked": [
+        "The monthly energy of up to twelve appliance rows (number of units x power of one unit x share of rating drawn x hours per day x days), computed by the Multiple Appliance Electricity Cost calculator, and the largest user.",
+        "The slab bill for those units (telescopic or non-telescopic energy charge, fixed monthly charge, duty and tax as percentages of energy and fixed charge, other charges) computed by the Electricity Bill from Meter Readings calculator, and the average cost per kWh.",
+        "The bill again after one chosen row is replaced (the energy saved by the Equipment Replacement Energy Savings calculator), the bill saving as the difference of the two bills, the simple payback and the net saving over the life; rejection of slab limits out of order, of a replaced row with no power, of hours above 24 a day, of a negative power and of a fractional number of units."
+      ],
+      "notChecked": [
+        "The appliance powers, hours and shares of rating, the slab limits, rates and charges, the cost of the new equipment and the service it gives; these are your data and decide the result.",
+        "Sanctioned-load or demand charges, per-unit surcharges, time-of-use rates, subsidies, rebates, minimum charges, power factor penalties and arrears; the planner prices one flat set of slabs. A printed bill is usually higher than the list because the meter also records appliances that are not listed.",
+        "Seasonal or monthly patterns (use Multiple Appliance Electricity Cost for the yearly energy), tariff change over the life, discounting, maintenance and a replacement that gives a different cooling, light or output."
+      ]
+    },
+    "multi-appliance-cost": {
+      "checked": [
+        "The energy of each appliance row (number of units x power of one unit x share of rating drawn x hours per day), the total per day, the monthly energy for the days entered and the yearly energy for 365 days.",
+        "The cost of each row and of the total at one flat tariff per kWh, each row's share of the total energy, the largest user (the first row on a tie), the connected load of the listed units and the average power over the day.",
+        "Rejection of a row with no power in every row, of hours above 24 a day, of a negative power and of a fractional number of units; a warning for a row entered at full rating for 24 hours."
+      ],
+      "notChecked": [
+        "The powers, hours and shares of rating themselves, which are your measurements or estimates and decide the result; a cycling load such as a refrigerator or an air conditioner needs a measured average power.",
+        "Slab or telescopic tariffs, fixed and demand charges, time-of-use rates, power factor penalties, electricity duty and tax; the result is the energy cost at one rate, not a bill. Use Electricity Bill from Tariff Slabs for a bill.",
+        "Seasonal or weekday patterns, standby power of appliances that are switched off but plugged in, and the difference between the real power and the apparent power of a load."
+      ]
+    },
+    "energy-audit": {
+      "checked": [
+        "The annual energy of each load group (number of units x rated input power x average load factor x operating hours), the surveyed total, and the unaccounted energy and its share of the metered energy.",
+        "The cost of the metered, surveyed and unaccounted energy at one flat tariff, the largest user and its share, and the plain change from a baseline year's metered energy.",
+        "Whether the surveyed energy is more than the meter recorded, and whether the unaccounted share is above the 10% screening limit."
+      ],
+      "notChecked": [
+        "The load factors and operating hours themselves, which are your measurements or estimates and decide the result.",
+        "Which part of the unaccounted energy is distribution loss, which is unsurveyed load and which is survey error; the balance cannot separate them.",
+        "Demand charges, time-of-use tariffs, power factor penalties, and any normalisation of the baseline for production, weather or occupancy.",
+        "Savings measures and their payback; use the LED retrofit and other estimators for those."
+      ]
+    },
+    "alternator-emf": {
+      "checked": [
+        "The frequency from the poles and the speed, the slot angle, the chording angle, the pitch, distribution and winding factors, and the EMF E = 4.44 Kp Kd f Φ T per phase and between lines for a star or a delta winding.",
+        "The no-load EMF, load angle and regulation from the terminal voltage, current, power factor (lagging or leading), armature resistance and synchronous reactance, by the synchronous impedance method."
+      ],
+      "notChecked": [
+        "The flux per pole, turns, slot layout, Ra and Xs themselves: they decide the result and come from your design or from the open- and short-circuit tests.",
+        "Fractional-slot windings, harmonics, skew, saturation and salient-pole (two-reaction) effects; the synchronous impedance method is pessimistic for a saturated machine.",
+        "Test methods and tolerances in IEC 60034-4 and the grid-code requirements for voltage and frequency, which are not applied here."
+      ]
+    },
+    "pwm-inverter": {
+      "checked": [
+        "The frequency modulation ratio mf = fc / f1 and the linear range of the modulation index (1 for a sinusoidal reference, 2 / √3 for third-harmonic injection or space-vector PWM).",
+        "The fundamental output voltage (peak, RMS, line to line and at the end of the linear range) of a half bridge, a single-phase full bridge with bipolar or unipolar switching and a three-phase bridge.",
+        "The carrier harmonics at mf, mf ± 2, 2mf ± 1, 2mf ± 3, 3mf and 3mf ± 2 as a percentage of the fundamental for a sinusoidal reference, with the cancellations of unipolar switching and of the three-phase line voltage, and the current, power and harmonic current of a series R-L load."
+      ],
+      "notChecked": [
+        "The DC bus, the carrier and output frequencies and the load values themselves: they decide the result and come from your design.",
+        "Dead time, switch voltage drop and switching loss, DC bus ripple, and the overmodulation range above the linear limit; the harmonic groups above 3mf and the sub-harmonics of a fractional mf.",
+        "The carrier harmonics of third-harmonic injection and space-vector PWM (only the fundamental is given for those), a measured waveform, and harmonic emission limits such as IEC 61000-3-2 and IEEE 519, which are not applied here."
+      ]
+    },
+    "second-order-response": {
+      "checked": [
+        "The damping ratio and natural frequency from the three ways of giving them (ζ and ωn, percent overshoot and peak time, or the coefficients of b0 / (s² + a1 s + a0)), and the poles and damped frequency.",
+        "The percent overshoot, peak time, 10% to 90% rise time and the 2% and 5% settling times, found from the exact step response, and the final and peak values, for underdamped, critically damped and overdamped systems."
+      ],
+      "notChecked": [
+        "The system itself: that a real loop or circuit is well described by a second-order model with no zeros and no delay. A zero in the numerator, higher-order poles, time delay and saturation change the response and are not included.",
+        "An undamped system (ζ = 0, never settles) and an unstable one (negative damping); use the Routh-Hurwitz test for stability first.",
+        "Gain and phase margins and the frequency response; this is a time-domain calculator only."
+      ]
+    },
+    "synchronous-motor": {
+      "checked": [
+        "The phasor operating point of a three-phase cylindrical-rotor synchronous motor from the input power, terminal voltage, power factor (leading or lagging), Ra and Xs: the synchronous speed, the line current, the apparent and reactive power, the back EMF, the load angle, the armature copper loss, the developed power and torque.",
+        "The pull-out (maximum developed) power and its angle at the excitation found at the operating point, and the ratio of it to the present developed power."
+      ],
+      "notChecked": [
+        "A salient-pole machine: the reluctance torque and the direct- and quadrature-axis reactances are not modelled, so the pull-out angle and power differ.",
+        "Saturation of the synchronous reactance, the field current needed for the back EMF (open-circuit characteristic), and the field excitation power.",
+        "Core, friction and windage losses (the output is the developed power, not the shaft power), starting, the damper winding, pull-in and the effect of a supply voltage or frequency change."
+      ]
+    },
+    "dc-dc-converter": {
+      "checked": [
+        "Buck, boost and inverting buck-boost in continuous conduction against an independent averaged-circuit model and waveform integrals: duty cycle with switch resistance, diode drop and inductor resistance, inductor ripple, peak, RMS and average currents, critical inductance, output capacitance for a ripple target, output ripple with ESR, switch and diode currents, the three conduction losses, input current and efficiency.",
+        "The refusal of an output the topology cannot reach (a buck above the input, a boost below it), of losses too high to reach the output, and of an inductor that lets the current reach zero."
+      ],
+      "notChecked": [
+        "Discontinuous conduction, a synchronous rectifier and dead time, and isolated converters (flyback, forward).",
+        "Switching loss (overlap, gate charge, diode recovery), core loss, capacitor loss, the control loop, input filter and transient response; the efficiency is conduction loss only.",
+        "Component ratings and selection (inductor saturation, capacitor ripple current and life, MOSFET and diode voltage margin and temperature)."
+      ]
+    },
+    "motor-efficiency-loss": {
+      "checked": [
+        "The two-part loss model (fixed loss plus a loss that rises with the square of the load, summing to Pr (1/eta_r - 1) at full load): efficiency, input, loss and its two parts at a chosen load, the efficiency at 100, 75, 50 and 25% load, the load and value of peak efficiency, against independent vectors (peak found by numerical root-finding on d(eta)/dx, load from input power found by bisection, load from slip in exact fractions).",
+        "The annual energy, the cost of the losses and the saving from a replacement motor held at the same shaft load, and the refusal of a full-load efficiency of 100% or more, a no-load input at or above the full-load loss, an input power at or below the fixed loss or needing more than 150% load, and speeds at or above synchronous.",
+        "The light-load warning below 40% load, the overload warning above 100% and the warning when a replacement is not more efficient."
+      ],
+      "notChecked": [
+        "Efficiency by a test method (direct input-output, or loss segregation to IEC 60034-2-1 or IEEE 112): the fixed share and rated efficiency are the user's data and the stray load loss is not separated.",
+        "Motors on a variable-speed drive, unbalanced or off-rated voltage, and the effect of temperature on winding loss.",
+        "The accuracy of the slip method in the field (it depends on voltage and temperature) and the price and payback of a replacement motor."
+      ]
+    },
+    "magnetic-flux-density": {
+      "checked": [
+        "B = flux / area, B = mu0 mur H, H = N I / l for a solenoid and H = I / 2 pi r for a straight conductor, with the flux through an area, the gauss value, the energy per unit volume and the magnetic pressure, against independent vectors (the straight-conductor field from numerical Biot-Savart integration along an infinite wire, mu0 from the CODATA value).",
+        "The refusal of a permeability, flux, area, turns, current, length or distance of 0 or below, and the saturation warning when a medium with mur above 1 is taken above 1.6 T."
+      ],
+      "notChecked": [
+        "The B-H curve of a real core: saturation, hysteresis and remanence. A constant mur is used.",
+        "Short coils, the ends of a solenoid, loops and short wires, where the long-coil and long-wire relations do not hold.",
+        "Eddy currents, frequency effects and the field inside a conductor."
+      ]
+    },
+    "rc-rl-transient": {
+      "checked": [
+        "The time constant (RC or L/R), the exponential charge, discharge, rise and decay of the capacitor voltage or inductor current at a chosen time, and the share of the change completed, against independent vectors integrated from the circuit differential equations with fourth-order Runge-Kutta (the time constant read from the initial slope).",
+        "The resistor current (RC) or inductor voltage (RL) at that time, the stored energy, the corner frequency, and the times for the half-point, the 10 to 90% rise or fall, 99% and a chosen percentage, the last four found by bisection on the integrated trajectory.",
+        "The refusal of a resistance, capacitance, inductance of 0 or below, a negative time, and a chosen level of 0% or less or 100% or more, and the warning when the chosen time is beyond five time constants."
+      ],
+      "notChecked": [
+        "Winding resistance, leakage, ESR, source impedance, saturation of the inductor and the switching behaviour of the contact or transistor: all loss is assumed to be in the single resistor R.",
+        "An inductor opened with no current path (the voltage is then set by arcing or a snubber, not by R); only a decay through R is modelled.",
+        "Circuits with more than one capacitor or inductor, and a source that is not constant. Use the RLC or second-order calculators or a circuit simulator."
+      ]
+    },
+    "load-factor": {
+      "checked": [
+        "Maximum demand (connected load times demand factor, or a measured value), average demand from energy and hours, load factor, demand factor, the peak-above-average gap, the energy at the maximum demand and the unused share, against independent vectors built from metered demand profiles (energy by summing intervals, maximum as the largest interval).",
+        "The diversity factor from the sum of the feeders' own maxima over the maximum of their summed profile, including the guide's worked example (350 kW, 233.3 kW average, load factor 0.6667, diversity 1.2).",
+        "The refusal of an average demand above the maximum demand (load factor above 1), and the warnings for a low or very flat load factor, a diversity factor below 1, a sum of maxima above the connected load and a maximum demand above the connected load."
+      ],
+      "notChecked": [
+        "That the energy and the maximum demand come from the same period and point of supply, and the demand interval of the utility (15 or 30 minutes) behind the maximum demand.",
+        "Demand factors from a code or utility table: the demand factor is user data and no table value is applied.",
+        "Tariff effects such as demand charges, ratchets and power-factor penalties, and the cost of a low load factor.",
+        "Load shape, coincidence between feeders and the load duration curve: only the three summary figures (energy, maximum and sum of maxima) are used."
+      ]
+    },
+    "adc-sampling": {
+      "checked": [
+        "The step size FSR / 2^N, the number of levels, the ideal count for an input voltage (unipolar and bipolar ranges), the maximum quantisation error and the ideal full-scale SNR, against independent vectors written from the transition levels of the converter and the signal and noise powers.",
+        "The effective number of bits from a SINAD, the counts, percentage of range, resolution in bits and units per count for a sensor span inside the input range, and the largest gain that keeps the span in range, including the 3.3 V and 4 to 20 mA worked examples of the ADC guide.",
+        "The Nyquist frequency, oversampling ratio, the extra resolution from oversampling, and the alias frequency of a tone above half the sampling rate found by folding it about fs / 2.",
+        "The refusal of a fractional bit count, a sensor span that is not inside the input range or has its high value at or below its low value, and a SINAD of 1.76 dB or less."
+      ],
+      "notChecked": [
+        "Offset, gain, integral and differential non-linearity, missing codes, reference and input-buffer errors, and the sampling-switch and aperture effects of a real converter; only the SINAD you enter brings noise and distortion in, as the ENOB.",
+        "The behaviour of the anti-alias filter (its order, corner and the attenuation it gives at the alias), and of sigma-delta, pipelined or successive-approximation architectures: the converter is taken as an ideal quantiser.",
+        "The oversampling gain assumes white, quantisation-limited noise and is not valid when converter noise, jitter or the reference dominates; noise shaping is not modelled.",
+        "Sample-and-hold settling, multiplexer sharing of the sampling rate between channels, clock jitter and the data sheet test conditions behind the SINAD entered."
+      ]
+    },
+    "switching-loss-comparison": {
+      "checked": [
+        "Conduction loss I squared Rds D, overlap switching loss half V I (tr + tf) fsw and gate drive loss Qg Vgs fsw for two or three devices against independent vectors, including the total, the loss inside the device, the switching and gate share and the best device.",
+        "The frequency where conduction loss equals switching plus gate loss for each device, and the break-even frequency where two devices have equal total loss, found from the line P = Pc + k fsw and checked by solving the equal-loss condition numerically.",
+        "The refusal of a zero or negative voltage, current, frequency, gate voltage, on-resistance, edge time or gate charge, a duty cycle outside 0 to 1, a partly filled optional device and edge times that do not fit in the on or off time."
+      ],
+      "notChecked": [
+        "Output capacitance (Coss) loss, diode reverse recovery, ringing, the Miller plateau and the dependence of the real transition time on the gate resistor, load current and bus voltage; the switching loss is the overlap estimate only.",
+        "Temperature, gate voltage and current dependence of Rds(on), gate charge and edge times, and the data sheet test conditions behind the numbers entered.",
+        "IGBTs and other devices with a saturation voltage and tail current (the model is resistive conduction, so an IGBT against a MOSFET comparison is outside it).",
+        "Device ratings and selection (voltage and current margin, avalanche, safe operating area), thermal design from the loss to a junction temperature, and a hard-switched against soft-switched stage."
+      ]
+    },
+    "controlled-rectifier": {
+      "checked": [
+        "Six ideal thyristor circuits against independent waveform integrals: average and RMS output, the load current, real, apparent and fundamental reactive power, power factor, displacement factor, supply current RMS and fundamental, total distortion, and the average current and peak reverse voltage of a thyristor.",
+        "Overlap angle, the voltage it costs and the extinction angle in inverter operation for the single-phase bridge, the 3-pulse circuit and the three-phase bridge with source inductance, checked against a numerical integration of the commutation.",
+        "The refusal of cases with no load current (output not above the counter-EMF) and of source inductance too large for the commutation to finish."
+      ],
+      "notChecked": [
+        "Discontinuous conduction: the R-L-E circuits assume enough load inductance to keep the current steady and unbroken, and the calculator does not check it; the current ripple, the inductance needed and a load of low inductance are outside it.",
+        "Source inductance in the resistive and half-controlled circuits, unbalanced or distorted supplies, a freewheeling diode on the fully controlled circuits, and the effect of overlap on the supply current waveform (the distortion and reactive power use the instant-commutation current).",
+        "Thyristor ratings and selection beyond the average current and peak reverse voltage (RMS and surge current, di/dt, dv/dt, turn-off time, snubbers and gate drive), harmonic limits and the transformer needed for the 3-pulse circuit's DC component."
+      ]
+    },
+    "two-wattmeter": {
+      "checked": [
+        "A balanced three-wire three-phase load from two signed wattmeter readings: total real power W1 + W2, reactive power sqrt 3 (W1 - W2), apparent power, power angle, power factor, the smaller to larger reading ratio and the line current at a given line voltage.",
+        "The reverse direction: the larger and smaller readings expected from a total power, a power factor and a lagging or leading load, including the zero reading at power factor 0.5 and the negative reading below it."
+      ],
+      "notChecked": [
+        "Unbalanced loads (the total power holds but the reactive power, angle and power factor from the readings do not), four-wire loads and neutral current, which need three wattmeters, and unbalanced or distorted supply voltage.",
+        "Wattmeter and instrument transformer errors and ratios, harmonics, and which meter reads the larger value for a given phase sequence and choice of lines (the calculator gives the larger and smaller reading only).",
+        "The sign of the reactive power is taken from the load type selected, because the two readings alone do not show whether the load is lagging or leading."
+      ]
+    },
+    "transformer-inrush": {
+      "checked": [
+        "Rated current of a three-phase winding from kVA and line voltage, the peak inrush as the user's multiple of it, the rated peak (rated current times the square root of 2) and the inrush as a multiple of the rated peak.",
+        "An exponential decay of the peak from one time constant: the peak left after a chosen time and the time to fall to the rated peak, and the ratio of an instantaneous setting to the peak inrush and to rated current."
+      ],
+      "notChecked": [
+        "The inrush multiple and the time constant themselves: they are the user's figures (manufacturer data or a recording) and are not looked up or predicted from the core, the residual flux or the switching angle.",
+        "The real decay shape (inrush decays more slowly than one exponential), the harmonic content and second-harmonic restraint, the RMS value seen by a relay, sympathetic inrush from other transformers, the supply impedance, voltage dip and the switching device.",
+        "The 6 to 12 range for the multiple is a common practice guide for distribution transformers, not a clause of a standard; the relay or fuse manufacturer's inrush withstand data and IEC 60076 are not applied."
+      ]
+    },
+    "transformer-parallel": {
+      "checked": [
+        "Two three-phase transformers on one busbar: the kVA, kW, kvar and percentage loading each carries for a given total load and lagging power factor, using each unit's percentage impedance on its own rating and its X/R ratio, with the simple rating over impedance share shown for comparison.",
+        "The circulating current from a no-load voltage ratio difference and from a phase displacement (clock number) difference, its size as a percentage of each rating, and the largest total load before the first unit reaches 100%, with the unit that limits it."
+      ],
+      "notChecked": [
+        "Polarity and phase sequence of the connections, groups that can be paralleled only by reconnecting phases outside the transformer, three or more units, and the cable or busbar impedance between each unit and the common busbar.",
+        "The magnetising branch, the voltage drop under load fed back into the shares, tap changer ranges and the effect of changing taps under load, the short-circuit rating of the busbar and the protection settings.",
+        "The 0.5% ratio difference, 10% impedance difference and 3 to 1 rating ratio checks are common practice guidelines, not clauses of a standard; the limits a utility or manufacturer sets, and the tolerances of IEC 60076-1, are not applied."
+      ]
+    },
+    "lighting-uniformity": {
+      "checked": [
+        "The average, minimum and maximum of up to 12 illuminance readings, the uniformity Uo = Emin / Eavg, the ratio U1 = Emin / Emax, Emax / Eavg, the population standard deviation and the coefficient of variation.",
+        "A comparison of the average and of Uo with the required values the user enters, and the lux the lowest point would need for the required Uo."
+      ],
+      "notChecked": [
+        "The required average illuminance and uniformity themselves: they are the user's figures and are not looked up from any lighting standard, task or area class.",
+        "Whether the number and position of the points follow the measurement or calculation grid a standard prescribes, and whether the points represent equal areas (the mean is not area-weighted).",
+        "Other uniformity definitions (for example a ratio to the maximum only, or a gradient between neighbouring points), glare, colour rendering and the maintenance factor of the installation."
+      ]
+    },
+    "fourier-series": {
+      "checked": [
+        "The Fourier coefficients of six ideal periodic waveforms (square, triangle, sawtooth, half-wave rectified sine, full-wave rectified sine and a rectangular pulse train with a chosen duty cycle): the DC value, the RMS and AC RMS values, the cosine and sine coefficients and amplitude of any chosen harmonic, and the fundamental.",
+        "The total harmonic distortion from the exact RMS, the share of the AC power in the first N harmonics, and the partial sum of N harmonics at a chosen time against the exact waveform."
+      ],
+      "notChecked": [
+        "Any waveform that is not one of the six: a measured waveform, a waveform with rise time, droop, noise or a different time origin, or a sum of several waveforms.",
+        "The Gibbs overshoot is only warned about, not corrected; a window or a different summation is not applied.",
+        "The effect of the harmonics on a real circuit (harmonic currents in cables, transformers or capacitors, or resonance); the calculator gives the spectrum only."
+      ]
+    },
+    "boolean-logic": {
+      "checked": [
+        "A complete truth table of 2, 3 or 4 inputs, from a standard gate (AND, OR, NAND, NOR, XOR, XNOR, majority) or from a truth-table number: the output at a chosen row, the minterms and maxterms, and the truth-table number of the function and of its complement.",
+        "The prime implicants, the essential prime implicants, and the minimal sum-of-products and product-of-sums forms (fewest terms, then fewest literals) with their term and literal counts; constant functions and inputs the function does not depend on are flagged, and a tie between equal-cost forms is flagged."
+      ],
+      "notChecked": [
+        "Don't-care rows: every row is defined, so a simpler form that a real design with unused input combinations would allow is not found.",
+        "Anything beyond two-level AND-OR or OR-AND form: multi-level or shared-gate minimisation, gate fan-in limits, NAND-only or NOR-only mapping, and the gate count of a real circuit.",
+        "Timing: gate delay, static and dynamic hazards (glitches), and sequential logic (latches, flip-flops and state machines)."
+      ]
+    },
+    "ladder-logic-simulator": {
+      "checked": [
+        "One scan of a standard start/stop motor-control rung: START in parallel with the holding contact, in series with the normally closed STOP and the overload contact, driving the contactor; the state of the contactor, including STOP and the overload winning over START and the seal-in breaking.",
+        "One TON (on-delay) or TOF (off-delay) timer enabled by the contactor: the accumulated time, the done bit, the time left, the percent complete and the number of scans in the preset."
+      ],
+      "notChecked": [
+        "Any program beyond this one rung pair: other rungs, rung order effects, counters, one-shot and retentive timers, and other instructions.",
+        "The PLC time base and scan jitter: the timer is continuous, and contact bounce, input filter times and output update delay are not modelled.",
+        "The wiring of the real STOP and overload contacts (the logic assumes normally closed contacts) and the safety function: a stop that must be safe is a hardwired or safety-rated circuit, not a PLC rung."
+      ]
+    },
+    "routh-hurwitz": {
+      "checked": [
+        "The Routh array of a polynomial of degree 2 to 6 with real coefficients, the number of roots in the right half plane (sign changes in the first column), on the imaginary axis and in the left half plane, and the stable, marginally stable or unstable verdict.",
+        "The special cases: a zero row (auxiliary polynomial and its derivative) and a zero in the first column (the polynomial is multiplied by s + a, which adds a left-half-plane root and changes no count). The array is built in exact arithmetic, so a zero is a true zero."
+      ],
+      "notChecked": [
+        "The characteristic equation itself: it is not formed from a block diagram or a transfer function here, and a wrong equation gives a wrong verdict.",
+        "A second all-zero row (repeated roots on the imaginary axis), which is flagged and not counted, and polynomials above degree 6 or with complex coefficients.",
+        "The range of a gain K for stability, the root values, gain and phase margins and the transient response; the criterion counts unstable roots only."
+      ]
+    },
+    "sensor-range-converter": {
+      "checked": [
+        "The straight-line scaling between the range low and range high values and the chosen signal band (4-20 mA, 0-20 mA, 0-10 V, 1-5 V, 0-5 V or 2-10 V), in both directions.",
+        "Whether the value or signal lies outside the sensor range, and whether a 4-20 mA current is in the NAMUR NE43 fault band."
+      ],
+      "notChecked": [
+        "Non-linear transmitters (square-root flow, logarithmic or characterised outputs) and any sensor, transmitter or loop-resistor error.",
+        "The over-range and fault behaviour of your transmitter, which is set in its configuration and data sheet."
+      ]
+    },
+    "earthing-conductor-size": {
+      "checked": [
+        "Minimum conductor area S = I√t / k with the built-in adiabatic k values, the mechanical minimum size and the standard-size step.",
+        "The phase-conductor table rule as a comparison."
+      ],
+      "notChecked": [
+        "The k values, temperatures, mechanical minimums and table rule against the current edition of the standard.",
+        "The real disconnection time at the earth fault current: take it from the protective-device curve.",
+        "Earth-fault loop impedance, corrosion, joints and heating of a buried conductor."
+      ]
+    },
     "cable-sc-withstand": {
       "checked": [
         "Minimum conductor area S = I√t / k with the built-in adiabatic k values."
@@ -235,6 +618,409 @@
       ],
       "notChecked": [
         "Motor starting, transient voltage and frequency dip, harmonics and altitude or temperature derating."
+      ]
+    },
+    "hybrid-system-sizing": {
+      "checked": [
+        "The daily energy split into the generator share, the daytime share drawn from the array and the night share passing through the battery, with one average inverter efficiency and one battery round-trip efficiency.",
+        "The array rating from the daily DC energy, the sun hours and the performance ratio, in whole modules, with the extra array energy needed to refill the autonomy reserve in the chosen number of days.",
+        "The battery usable, nominal and Ah capacity for the night or the days of autonomy (the larger), the discharge rate at the peak load against the battery limit, the inverter and generator ratings from the peak load and margin, and the generator running hours and fuel per day."
+      ],
+      "notChecked": [
+        "Hourly dispatch or a yearly simulation: the calculator works on one typical day and has no load profile, seasonal irradiance, shading or battery state-of-charge model.",
+        "Battery cycle life, temperature and ageing derating, the charge controller and DC bus voltage and current, cable and protection sizing, and the generator charging the battery.",
+        "Motor starting and surge power, power factor and reactive loads, grid-code limits and export limits; the data sheets and the code are the user's data."
+      ]
+    },
+    "bess-energy-power": {
+      "checked": [
+        "The energy delivered from the AC power and the duration, the DC energy drawn from the battery and the grid energy to recharge, with the round-trip efficiency split equally between charge and discharge (one-way efficiency = √ηrt), and the energy lost per cycle.",
+        "The nameplate energy that still holds the duration at the end-of-life capacity and the usable depth of discharge, the usable energy when new, and the nameplate energy to rated power ratio in hours.",
+        "The discharge and charge C-rates against the battery limit, the grid power to recharge in the time given, the converter kVA from the power factor, the yearly energy delivered and lost at the cycles per day, and the years to the cycle life."
+      ],
+      "notChecked": [
+        "Temperature, the change of efficiency with power and state of charge, degradation year by year, stand-by and auxiliary losses as a separate item, and the converter and transformer losses beyond the single round-trip figure.",
+        "Ramp rate, frequency response or other grid services, the dispatch against a price or load profile, revenue, cost and the grid-code or interconnection limits.",
+        "Battery chemistry limits, cell balancing, thermal runaway protection, fire and safety standards, cable and protection sizing; the data sheet, the warranty and the project study are the user's data."
+      ]
+    },
+    "solar-inverter-sizing": {
+      "checked": [
+        "The array rating from modules, string length and number of strings, the DC to AC ratio, the inverter rating for a target ratio and the largest array for the inverter at that ratio.",
+        "The string open-circuit voltage at the lowest cell temperature against the inverter maximum DC voltage (with the most modules allowed), the hot and cold maximum-power voltage against the MPPT window, and the short-circuit current on the busiest MPPT input against the inverter limit.",
+        "The AC output at an assumed peak array output and efficiency, the inverter loading, the share clipped at that instant and the array output at which the inverter reaches its rating; ratios below 1 and above 1.5 are flagged as common practice guidelines."
+      ],
+      "notChecked": [
+        "Yearly clipping loss or energy yield: the calculator works at one assumed peak instant and has no irradiance profile, tilt, shading or soiling model.",
+        "The short-circuit current uplift for high irradiance or reflection, string fuse and DC cable sizing, DC isolation and protection, and the code or inverter data sheet margin on Voc; the data sheet limits and the code are the user's data.",
+        "Inverter derating with temperature or altitude, the maximum current per MPPT input at the maximum power point, unequal strings or mixed orientations on one input, grid-code limits and export limits."
+      ]
+    },
+    "ev-energy-consumption": {
+      "checked": [
+        "The rolling resistance, air drag and grade forces at a constant speed (Crr m g cos θ, ½ ρ Cd A v², m g sin θ with θ = atan(grade / 100)), the total force and the power at the wheels.",
+        "The battery power from the drivetrain efficiency when driving and from the regeneration efficiency when the wheel power is negative, plus a constant auxiliary load, and the energy per km at the battery and from the grid (the charging efficiency) in Wh/km, kWh/100 km, km/kWh and miles/kWh.",
+        "The trip time and energy for a distance, and the yearly energy and running cost from the distance per year and the price per kWh."
+      ],
+      "notChecked": [
+        "Acceleration, braking and stop-and-go driving, speed changes, drive cycles such as WLTP or the EPA cycles, wind, and a rolling coefficient that changes with speed, tyre pressure or temperature.",
+        "Efficiency maps of the motor and inverter, battery and cabin heating or cooling as a function of temperature, battery state of charge and ageing, and the charger efficiency at different powers.",
+        "Range, battery capacity and charging time, tariffs with time-of-use rates or demand charges, and the test-cycle label figure of the vehicle; the vehicle data sheet and a logged drive are the user's data."
+      ]
+    },
+    "equipment-loss": {
+      "checked": [
+        "The transformer iron loss and its copper loss at the stated loading (Pfe + x² Pcu), its efficiency at that loading, and its yearly energy loss from the energised hours and the hours at that loading.",
+        "The motor full-load loss from the full-load efficiency, its split into a fixed part (the stated share) and a part that rises with the square of the load, the loss and efficiency at the stated load, and the yearly energy loss from the running hours.",
+        "The cable I²R loss for three or two conductors, its share of the power the cable carries, and its yearly energy loss from the carrying hours; the total loss in kW and kWh, each item's share, the fixed share and the cost at the tariff."
+      ],
+      "notChecked": [
+        "A varying load profile: each item has one average loading for its hours, and copper and cable losses use the root-mean-square value only if the user enters it. No load duration curve, no seasonal change and no losses at start-up.",
+        "Harmonic, stray, eddy and temperature effects on the losses, the reference temperature of the data-sheet losses, the efficiency of the motor at other voltages, switchgear, busbar, capacitor and other equipment losses, and the interaction between the three items (the loads are entered independently).",
+        "That the data-sheet losses, efficiency, fixed-loss share, resistance, hours and tariff are right for the equipment; they are the user's data. No Ecodesign, IEC 60076, IEC 60034 or IEC 60287 limit or class is checked."
+      ]
+    },
+    "calibration-error": {
+      "checked": [
+        "Each test point's as-found and as-left error from the applied value (a percentage of span of the stated range) and the reading, in the range unit and as a percentage of span, and whether it is outside the stated tolerance (an error equal to the tolerance passes).",
+        "The largest as-found and as-left error and the as-found point it falls on, and the count of points outside tolerance before and after adjustment.",
+        "The zero and span error of the as-found points from a least-squares straight line, the error that would be left after a zero and span adjustment, and the test uncertainty ratio of the tolerance to the reference accuracy."
+      ],
+      "notChecked": [
+        "A tolerance stated as a percentage of reading or a combined reading-and-span specification: the check is made on a percentage of span only. Separate upward and downward runs, so hysteresis and repeatability are not separated, and no temperature, mounting-position or static-pressure effect.",
+        "The uncertainty of the calibration itself: the reference accuracy is used only for the ratio and is not subtracted from the errors or used as a guard band. The traceability of the reference, its own calibration status and the stability of the environment are not checked, and no measurement uncertainty budget is made.",
+        "That the tolerance, the number of points and the acceptance rule suit the instrument and your procedure. The 4 to 1 ratio is a common practice guideline, not a requirement of the method; your quality system or the manufacturer's data sheet sets the real criteria."
+      ]
+    },
+    "bode-plot": {
+      "checked": [
+        "The magnitude (dB) and phase (degrees) at a chosen frequency of a transfer function made of a gain, up to two integrators, up to two zeros, up to three real poles (corner frequencies in rad/s) and an ideal dead time, with the straight-line magnitude, its slope and the difference from the exact value.",
+        "The first gain crossover (0 dB) and phase crossover (-180 degrees) found by a scan from 1e-6 to 1e6 rad/s, the phase margin and gain margin, and a warning when either margin is negative or small, or when there is no gain crossover."
+      ],
+      "notChecked": [
+        "Complex pole or zero pairs (resonances), right-half-plane zeros or poles, transfer functions entered as polynomials, and the Nyquist criterion for an unstable open loop.",
+        "Crossovers after the first, the closed-loop response, bandwidth, peaking, sampling delay and the effect of model error: the margins are those of the model entered.",
+        "Hand-drawn plot accuracy beyond the straight-line approximation shown, and any reading of corner frequencies in Hz (they must be entered in rad/s)."
+      ]
+    },
+    "ev-range": {
+      "checked": [
+        "Pack voltage, capacity and nominal energy from the cells in series and parallel and the cell voltage and capacity, the available energy after a state-of-health and a temperature factor you enter, and the usable energy between a starting charge and a reserve.",
+        "Range in km and miles from the usable energy and a consumption in Wh/km that includes the auxiliary load spread over the average speed, the range from 100% to 0%, the range of a new pack with no auxiliary load and the share lost, distance per 1% of charge, driving time, average battery power and discharge rate.",
+        "The charge a trip of a given distance needs, the charge on arrival and the distance margin, with a warning when the trip arrives below the reserve, and warnings for a cell voltage outside 2 to 4 V, a pack outside 100 to 1,000 V, a state of health below 70%, a temperature factor outside 70 to 100%, a consumption outside 100 to 400 Wh/km and a discharge rate above 1 C."
+      ],
+      "notChecked": [
+        "The cell voltage curve, internal resistance, the change of capacity with discharge rate, and the energy actually delivered between two charge levels: energy is the nominal voltage times the capacity.",
+        "Any hidden buffer or charge limit the battery management system applies, battery temperature during the trip, preconditioning, regeneration, grade, wind and the speed profile beyond the single consumption figure you enter.",
+        "A label range (WLTP, EPA or other test cycle), the effect of fast charging on the next trip and the ageing of the pack over time: state of health and the temperature factor are your own figures and are not looked up."
+      ]
+    },
+    "protection-coordination-check": {
+      "checked": [
+        "The pick-up window of an overcurrent relay: the lowest setting that stays stable on the maximum load (load margin times the load current divided by the reset ratio) and the highest setting that still meets a sensitivity factor on the smallest fault (smallest fault divided by the factor), the load stability margin and the sensitivity factor of the pick-up entered, with a warning when no setting satisfies both.",
+        "An optional instantaneous (high-set) element: its stability factor against the largest through fault, compared with the factor the user requires, and how far the smallest fault is above its setting.",
+        "Time grading of the downstream and upstream relays on the IEC 60255-151 standard, very, extremely and long-time inverse curves with their nominal constants, at the largest through fault and at the smallest fault, the margin at each against the grading margin the user wants, and a count of the checks made and failed."
+      ],
+      "notChecked": [
+        "The choice of load margin, reset ratio, sensitivity factor, instantaneous factor and grading margin: all are the user's design inputs and no utility rule or standard value is applied or looked up.",
+        "The whole fault range: grading is checked at two currents only and the instantaneous element is checked for stability and reach, not graded in time; a real study draws every relay pair on a time-current chart with the breaker time, CT errors and any infeed.",
+        "CT saturation, DC offset and decrement, earth-fault, directional, differential and thermal elements, cable and transformer withstand limits, and the relay maker's own curve and reset characteristics: the curve is the nominal IEC form."
+      ]
+    },
+    "signage-load": {
+      "checked": [
+        "The lamp load of up to four groups of airfield guidance signs (number of signs times lamp power), the load each group puts on its isolating transformers (lamp load divided by one transformer efficiency), the load of all the signs, and each group's lamp load as a share of its isolating transformer rating with the group that is most heavily loaded.",
+        "The series cable loss from the circuit current, the cable resistance per kilometre and the loop length, any other load on the same circuit, the total circuit load and the CCR output voltage (total load divided by circuit current).",
+        "A design load with a spare capacity the user chooses (sign load only), the smallest standard CCR size (1, 2, 4, 7.5, 10, 15, 20, 25 or 30 kW) that holds it at the user's maximum loading, how loaded that CCR is now and at the design load, the room left and how many more signs of the average size fit, with warnings for an overloaded transformer and for a load above 30 kW."
+      ],
+      "notChecked": [
+        "Which sign type, size, class or message is used, how many modules or lamps a sign has, the lamp load at each brightness step and the heater or sign-face lighting: every lamp load, transformer rating and efficiency is the user's figure and none is looked up, and the lamp load must be at the circuit current entered.",
+        "The thermal rating and open-circuit behaviour of the isolating transformers, the effect of a failed lamp or an open secondary on the series circuit, the efficiency change with load, the power factor and harmonics of the CCR, and the CCR output curves: the transformer check compares the lamp load with the rating only.",
+        "The siting, spacing and layout of the signs and of the circuit, the choice of circuit for each sign, cable size, insulation level and voltage drop in a particular cable, and any requirement of ICAO Annex 14, FAA AC 150/5345-44 or AC 150/5345-10: no standard is applied, and the CCR sizes shown are the list the calculator uses and must be confirmed against the current edition and the manufacturer range."
+      ]
+    },
+    "contact-resistance": {
+      "checked": [
+        "True contact area from the contact force and the hardness of the softer member (A = F / H), the radius of each of n equal contact spots, and the Holm constriction resistance (rho1 + rho2) / (4 n a) for clean metal.",
+        "A surface film as a resistance per unit area in series over the whole contact area, the total contact resistance, and the radius of the single clean spot that would give the same resistance.",
+        "From a measured millivolt drop and test current, the resistance, the power lost, and the same single-spot radius.",
+        "The temperature of the hottest spot from the Kohlrausch relation with the Lorenz number 2.45e-8 V2/K2, the contact voltage and current at which the spot reaches a softening and a melting temperature you enter, with warnings when the contact voltage reaches either, and a comparison with a resistance limit you enter."
+      ],
+      "notChecked": [
+        "The pattern of real contact spots (their number, spacing, interaction and cluster effect), which are assumed equal and far apart so the figure is a lower bound for clean metal; surface roughness, waviness, plating thickness and layered contacts.",
+        "Elastic contact, creep, stress relaxation, fretting, wear and the change of force with time and temperature, and the change of resistivity and hardness with temperature and cold work.",
+        "The heating and temperature rise of the whole joint, connector or busbar, thermal runaway, AC effects such as skin and proximity effect, and any acceptance limit or test method from a standard: the limit is the figure you enter."
+      ]
+    },
+    "wavelength": {
+      "checked": [
+        "Wavelength from frequency, or frequency from wavelength, for a plane wave in a lossless medium given by its relative permittivity and permeability (speed c divided by the square root of their product) or by a velocity factor, with the exact speed of light 299 792 458 m/s.",
+        "Speed of the wave, velocity factor, refractive index, free-space wavelength, period, wave number, half-wave and quarter-wave lengths, and the wave impedance of the medium from its permittivity and permeability.",
+        "A physical length expressed in wavelengths and in degrees, with a warning when it is longer than a tenth of a wavelength, and warnings for a refractive index above 10 and a frequency above 300 GHz."
+      ],
+      "notChecked": [
+        "Loss, conductivity, dispersion and the change of permittivity or permeability with frequency and temperature: the values entered are used as constants.",
+        "The characteristic impedance of a cable or line, reflections, standing waves, skin depth, and the wavelength in a waveguide or a conductor.",
+        "End effect and shortening of a real antenna element, the effect of nearby objects, the dielectric loading of a printed trace beyond the effective permittivity you enter, and the exact refractive index of air."
+      ]
+    },
+    "pid-tuning": {
+      "checked": [
+        "Controller gain, integral time and derivative time for a P, PI or PID controller from a first-order-plus-dead-time process (gain K, time constant, dead time) by the Ziegler-Nichols reaction-curve rules, the Cohen-Coon rules or Lambda (IMC) tuning for a closed-loop time constant you choose.",
+        "The same settings from an ultimate gain and ultimate period by the Ziegler-Nichols or Tyreus-Luyben rules, the parallel-form gains Ki = Kc / Ti and Kd = Kc x Td, the proportional band, and the ratio of dead time to time constant.",
+        "That a lambda shorter than the dead time, or a dead-time ratio outside about 0.1 to 1 for the reaction-curve and Cohen-Coon rules, is flagged, and that a P controller is rejected for the two methods that have no proportional-only form."
+      ],
+      "notChecked": [
+        "The fit of the first-order-plus-dead-time model to the real process, the step-test or relay-test procedure itself, and the sampling, filtering and noise of the measurement: the model values you enter are used as exact.",
+        "Closed-loop stability, overshoot, settling time and robustness (gain and phase margins) of the result: the settings are starting values from empirical rules, not a simulated or proven design.",
+        "Interacting or series PID forms, derivative filtering, set-point weighting, output limits, anti-windup, integrating or unstable processes, and cascade, feed-forward or dead-time-compensator (Smith predictor) schemes."
+      ]
+    },
+    "scr-triggering": {
+      "checked": [
+        "The gate current to drive (a margin times IGT), the largest series gate resistor that delivers it from a given source, the gate and resistor power, and the average gate power for a pulse of given width and period, against the PGM and PG(AV) ratings you enter.",
+        "For a resistor-triggered half-wave AC circuit: the peak supply, the voltage at which the gate fires, the firing and conduction angles (0 to 90° firing only), the average and RMS voltage of a resistive load, and the largest gate resistance that still fires."
+      ],
+      "notChecked": [
+        "Peak gate current (IGM), latching and holding current of the load, dv/dt, di/dt, gate-cathode reverse voltage and the spread of VGT and IGT with temperature: the data-sheet values you enter are used as constants.",
+        "Phase-shift RC triggering, firing beyond 90°, inductive or back-EMF loads, full-wave circuits, triggering with a UJT, DIAC or opto-coupler, and the on-state drop of the SCR.",
+        "That the data-sheet figures are the right ones for the device and the lowest operating temperature."
+      ]
+    },
+    "reliability-indices": {
+      "checked": [
+        "SAIFI, SAIDI, CAIDI, ASAI and ASUI from up to five interruption events (customers interrupted and duration each), the customers served and the reporting period, using the customer-weighted definitions.",
+        "Customer interruptions, customer-minutes lost, the energy not supplied (and per customer) from one average load per interrupted customer, and the largest single event's share of SAIDI.",
+        "That no event interrupts more customers than are served or lasts longer than the period, that customers interrupted have a duration, that the customer-time lost does not exceed what all customers could lose, and a warning for any event under 5 minutes and for SAIFI or SAIDI above a target you enter."
+      ],
+      "notChecked": [
+        "IEEE Std 1366 or any regulator's rules: momentary interruptions (under 5 minutes) and major event days are not excluded, MAIFI and the load-based indices (ASIFI, ASIDI) are not calculated, and no regulatory target or incentive scheme is applied.",
+        "The customer counts and durations: they are your records. Partial restoration in stages, planned versus unplanned outages and the cause of each outage are not separated, and the average load for the energy not supplied is one constant figure.",
+        "Any prediction of future reliability: no failure rates, network model or restoration times are modelled; the indices describe the events entered."
+      ]
+    },
+    "electric-field": {
+      "checked": [
+        "The electric field at a point in a plane from one, two or three point charges in a uniform medium of relative permittivity εr: the distance and field strength from each charge, the net field as x and y components, its magnitude and its direction, from Coulomb's law with the contributions added as vectors.",
+        "The force on a test charge (q0 E) and its direction, reversed for a negative test charge, and a flag where the fields cancel."
+      ],
+      "notChecked": [
+        "Conductors, dielectric interfaces, induced charge, moving charges, and the field of a line, sheet or volume of charge; only point charges are modelled.",
+        "Breakdown, corona, insulation or creepage limits: no field strength is compared with the strength of air or any insulation.",
+        "Field in three dimensions: the charges and the field point are taken to lie in one plane."
+      ]
+    },
+    "electric-potential": {
+      "checked": [
+        "The distance from each of one to three point charges to the field point, each charge's potential kq/r, and their signed sum, in a uniform medium of the stated relative permittivity with zero potential at infinity.",
+        "The work to bring a test charge from infinity to the field point (q0 times the potential) and the electrostatic energy of the group of charges (each pair counted once).",
+        "That the field point is not on a charge, that two charges are not at the same position, and a warning when the potentials cancel (zero potential is not zero field)."
+      ],
+      "notChecked": [
+        "The electric field (its size or direction), the force on a charge, or any equipotential line or map: only the potential at one point is found.",
+        "Conductors, grounded surfaces, dielectric interfaces or induced charge, a medium that changes with position, moving charges or time-varying fields, and charge distributions other than point charges (lines, surfaces or volumes).",
+        "The self-energy of the charges, the three-dimensional case (the points are in one plane), and whether the medium and the point-charge model suit the real arrangement."
+      ]
+    },
+    "thermal-rise": {
+      "checked": [
+        "The exposed area of a free-standing or wall-mounted rectangular enclosure (or an area you enter), the thermal conductance to the outside air with a typical or entered overall heat transfer coefficient, and the steady-state internal air temperature rise and temperature for the heat dissipated.",
+        "The heat the enclosure can lose with the internal air at the stated limit, the excess to be removed, and the ventilation airflow that removes it with outside air entering at the ambient and leaving at the limit.",
+        "With a thermal mass, the time constant, the temperature after a stated time and the time to reach the limit, from one lumped mass."
+      ],
+      "notChecked": [
+        "The temperature-rise verification method of a switchgear and controlgear assembly standard (IEC 61439-1, IEC TR 60890): no area factors for installation type, no vertical temperature distribution, no partitions, ventilation openings or enclosures side by side.",
+        "Heat from the sun or nearby equipment, a changing ambient, hot spots next to heat sources, the heat capacity of the air inside, the heat actually dissipated by the equipment (taken as entered), and the pressure drop, filter state or fan curve of a real ventilation system.",
+        "That the enclosure coefficient suits the real surface and installation; the figures for the listed materials are typical values, so use the enclosure maker's data when you have it."
+      ]
+    },
+    "energy-savings": {
+      "checked": [
+        "The yearly energy saved by replacing motors with higher-efficiency ones at the same shaft output, by replacing fittings with lower-power ones (with an optional cut in burning hours from controls), and by a stated reduction in distribution losses, and their total and the share of the covered equipment's energy that is saved.",
+        "The cost saved in the first year (energy at the tariff plus a flat maintenance saving), the investment, the simple payback, the present value of the savings over the life with a rising tariff and a discount rate (savings at year end, investment at the start), the net present value, the savings to investment ratio and the carbon dioxide avoided at a stated emission factor.",
+        "That the new motors are more efficient and the distribution losses after are lower than before, and warnings when the payback is longer than the life or the net present value is negative."
+      ],
+      "notChecked": [
+        "Demand or capacity charges, power factor penalties, taxes, residual value, financing, cost inflation, or replacement cost during the life; and the savings are the same in every year, with no ageing or change of use.",
+        "A variable-speed drive or any change of motor load or hours, motor efficiency classes, the loss power of the distribution measure itself (you supply it), the effect of lighting changes on air conditioning, or a change in light output.",
+        "The measured baseline: the hours, loads and efficiencies are as entered, and the result is only as good as they are; the emission factor is an average, not a marginal figure."
+      ]
+    },
+    "point-by-point-lighting": {
+      "checked": [
+        "The horizontal illuminance at each point of a grid over the area served by a rectangular array of identical luminaires (up to 10 by 10), as the sum over the luminaires of the maintenance factor times I0 cos^m(g) cos(g) / d^2, and the illuminance at a point the user names.",
+        "The average, minimum and maximum of the grid points, the uniformity Uo = Emin / Eavg, the ratio U1 = Emin / Emax, the position of the darkest point, the luminous flux the intensity pattern implies, the share of it that lands on the area, and the half-intensity angle.",
+        "A comparison of the average and of Uo with the values the user requires, the lux the darkest point would need, and a warning when there are fewer calculation points than luminaires along a side."
+      ],
+      "notChecked": [
+        "Light reflected from walls, floor and ceiling (only direct light is counted), obstructions, tilted or aimed luminaires, luminaires that differ from one another, and any real candela table: the intensity is the fitted pattern I0 cos^m(g), the same in every plane round the vertical.",
+        "The required average illuminance and uniformity themselves, and whether the calculation grid, the task area and the area edge follow a standard or specification: they are the user's figures and choices, and no lighting standard is applied.",
+        "Glare, colour rendering, flicker, the size of the luminaire (each is treated as a point source), the maintenance factor of the installation (it is the user's figure), and any road, sports or floodlighting layout rules."
+      ]
+    },
+    "agl-photometry-data": {
+      "checked": [
+        "The conversion of lux readings at a stated distance to candela with I = E x d^2, and the average, lowest and highest of up to 12 readings, the first lowest and first highest point, Imin / Iavg, Imax / Iavg, the standard deviation (divisor n) and the coefficient of variation.",
+        "The number of points below the lowest allowed point (the user's share of the average), whether the average meets the user's required average and by how much it falls short, and the average with the user's measuring uncertainty taken off.",
+        "The average as a percentage of the average of a new light, and whether it meets the user's in-service limit."
+      ],
+      "notChecked": [
+        "Where the measuring points are, how many there are, the grid or isocandela pattern, the size of the main beam, the setting of the light and the aiming of the photometer: the points and their pattern come from the user's method, and no solid-angle weighting is applied, so the average is a plain mean of the readings entered.",
+        "The required average, the lowest allowed point, the average of a new light and the in-service limit: they are the user's figures, are not looked up, and no ICAO, FAA or other photometric requirement is applied. The photometric requirements for the light type, and their current edition, must be checked in the source.",
+        "Colour, the inverse-square conversion's own conditions (a distance of at least five times the largest size of the light and a photometer facing the light squarely are not checked), photometer calibration, stray light, supply current and lamp condition during the test, and any full measurement uncertainty budget: the uncertainty is one worst-case percentage taken off the average."
+      ]
+    },
+    "semiconductor-loss": {
+      "checked": [
+        "The conduction loss of one MOSFET, IGBT or diode at a steady on-state current and duty cycle (a fixed offset voltage times the current times the duty, plus the on-resistance times the squared current times the duty), with the on-resistance raised from its 25 degree value by a linear temperature coefficient at the junction temperature that results.",
+        "The switching energy per cycle either from the linear overlap of the rise and fall times (half the voltage times the current times each time) or by scaling the data-sheet turn-on and turn-off energies in proportion to the voltage and the current from the test point, the output capacitance energy (half Coss times the voltage squared), the reverse recovery energy (Qrr times the voltage) and the gate drive loss (Qg times the gate voltage times the frequency), each as a loss at the switching frequency.",
+        "The loss inside the device, the total with the gate drive, the steady junction temperature from a single junction-to-ambient thermal resistance (solved with the on-resistance at that temperature), the margin to the maximum junction temperature, the highest loss the junction allows at the ambient temperature and the highest switching frequency that stays within the limit; a warning when the junction is over its limit, when no frequency can meet it, when the edges overlap the on or off interval and when the energies are scaled above their test point, and a rejection for thermal runaway or a limit not above the ambient temperature."
+      ],
+      "notChecked": [
+        "Device data: no on-resistance, offset voltage, switching energy, gate charge, Coss, Qrr or thermal resistance is embedded, and their change with gate voltage, current, voltage and temperature (other than the linear on-resistance coefficient) is not modelled; the figures must be taken from the data sheet at the junction temperature expected.",
+        "Ringing, the Miller plateau and the IGBT turn-off tail (unless the data-sheet energies are used), dead-time and third-quadrant conduction, soft or zero-voltage switching, parallel devices and the sharing of current between them, and a current that is not flat while on (its RMS value must be entered).",
+        "Transient, pulsed or short-circuit thermal behaviour (the thermal path is one steady resistance with no heat capacity), heating by neighbouring parts, the sink and the rest of the converter's losses, and any derating or safe-operating-area rule of a device maker or standard."
+      ]
+    },
+    "power-supply-ripple": {
+      "checked": [
+        "The peak voltage on the filter capacitor of a half-wave, centre-tap full-wave or bridge rectifier (secondary RMS voltage times the square root of two, less one or two diode drops), the ripple frequency (mains for half-wave, twice mains for full-wave), the peak-to-peak ripple for a constant DC load current (I / (fr C)), the lowest and the average voltage, the RMS ripple of the sawtooth (ripple / 2√3) and the ripple factor.",
+        "The capacitor that holds a peak-to-peak ripple target at the load current, and, for an optional linear regulator, the headroom of the lowest input over output plus dropout and the RMS ripple left at the output from a constant ripple rejection in decibels.",
+        "A warning when the ripple is above 20% of the peak (the constant-current formula is then only a rough estimate), when the lowest voltage falls short of the regulator's output plus dropout, and a rejection when the capacitor is so small that the ripple would equal the peak voltage."
+      ],
+      "notChecked": [
+        "Transformer and diode series resistance, the conduction angle and the peak charging current, the mains tolerance and the capacitor tolerance and ageing: the voltage, drop and capacitance entered are used as given, and the whole ripple period is taken as the discharge time, which is slightly pessimistic.",
+        "The ripple current rating and ESR of the capacitor, the diode surge current at switch-on, the transformer regulation and heating, and the regulator's rejection changing with frequency, input voltage or load: dropout and rejection are the user's data-sheet figures.",
+        "A resistive or switching load (the calculator assumes a constant DC current), an LC or π filter, a capacitor-input filter with a bleeder, and any switching or three-phase rectifier."
+      ]
+    },
+    "three-phase-network": {
+      "checked": [
+        "A balanced three-phase supply (line-to-line voltage entered, phase order a-b-c, phase a as the angle reference) feeding a load of three independent impedances, each a resistance and a reactance, connected in star with the neutral wire, in star with no neutral wire, or in delta, with an optional equal impedance in each line and an optional neutral-wire impedance (0 for a solid neutral).",
+        "An exact steady-state phasor solution: the line currents with their angles, the neutral current, the shift of the load star point (the neutral-point voltage of a star load), the delta branch currents and voltages, the voltage and current in each load impedance, the line voltages at the load, the real, reactive and apparent power of the load and of the supply, the loss in the line and neutral wires (with a power-balance check), the supply and load power factor, the current unbalance, the negative-sequence share of the current and the voltage unbalance and drop at the load.",
+        "Warnings when the star point of a three-wire star moves more than 10% of the phase voltage, when the neutral current is larger than the largest line current, when the current unbalance is above 10%, when the line voltage unbalance at the load is above 2%, when the average line voltage at the load is more than 5% below the supply or more than 2% above it, and a rejection of a zero impedance, of a delta whose impedances add to zero, and of a phase that resonates with the line impedance."
+      ],
+      "notChecked": [
+        "The supply impedance, an unbalanced or distorted supply voltage, a different impedance in each line, mutual coupling between the lines, a delta supply with a grounded corner and the earth return of a fault: the source is a perfect balanced set and the network is the single load and line impedance entered.",
+        "Harmonics and non-linear loads (the neutral current of triplen harmonics is not modelled), the change of a real load with voltage (motors and constant-power loads are not constant impedances), and the frequency dependence of the impedances: every impedance is taken as the constant resistance and reactance entered at one frequency.",
+        "Equipment ratings, the cable size and its temperature, the protective device, the standards limits on neutral size, voltage drop and voltage unbalance, and a fault or a switching condition: the 10%, 2% and 5% warning levels are common screening values, not limits of any one standard, and the result is not a network study."
+      ]
+    },
+    "resistivity-conductance": {
+      "checked": [
+        "The resistance of a uniform conductor from its resistivity, length and cross-section (R = ρ L / A), the same relation solved for the resistivity of a sample from a measured resistance, for the length that gives a target resistance and for the cross-section that gives a target resistance, with the section entered as an area or as the diameter of a round solid conductor (A = π d² / 4).",
+        "The conductance (1 / R), the resistivity at the conductor temperature and at 20 degrees (ρT = ρ20 (1 + α (T − 20)), with a linear coefficient from the six presets or the custom value entered), the resistivity in ohm metres and ohm square millimetres per metre, the conductivity in MS/m, the conductivity as a percentage of annealed copper (100% IACS is 1 / 1.7241e-8 ohm metres), the resistance per kilometre, and the resistance of the same conductor at 20 degrees.",
+        "For a measured resistivity, a comparison with the six preset materials at 20 degrees (within 5% of one, or the nearest and its difference), and a warning when the result is below silver, above the metals and alloys listed, when the temperature is more than 100 degrees from 20, or when a custom coefficient of 0 is used away from 20 degrees."
+      ],
+      "notChecked": [
+        "Skin and proximity effect, stranding, compaction and the lay of the wires, joint, lug and contact resistance, and the resistance of a cable from a data sheet: this is the DC resistance of a solid uniform conductor, so a stranded cable has a little more resistance than the figure given, and an AC cable at power frequency or higher more again.",
+        "Material data: the six presets are textbook values at 20 degrees (copper is the IACS figure, aluminium a commercial grade), and real conductors vary with purity, temper, alloy and drawing; the linear temperature coefficient is a fit near room temperature, not a physical law, and no alloy-specific or low-temperature behaviour is modelled.",
+        "Whether the resistance was measured with a method that excludes lead and contact resistance (a four-wire measurement), the accuracy of the measured length, section and resistance, and the heating of the sample by the measuring current: a resistivity found from a measurement carries all of those errors."
+      ]
+    },
+    "coupled-inductance": {
+      "checked": [
+        "Two linear, magnetically coupled coils with constant inductances at one frequency and current level. The self-inductances are entered or found from the turns on one closed core of constant relative permeability (L = N² / ℜ, ℜ = lc / (μ₀ μr Ac), μ₀ = 4π × 10⁻⁷ H/m), and the coupling is given as a coefficient k, as a mutual inductance M, or from a series-aiding and a series-opposing measurement (M = (La − Lo) / 4).",
+        "The mutual inductance and coupling coefficient (M = k √(L1 L2), k ≤ 1), the inductance of the pair in series aiding and opposing and in parallel aiding and opposing (with the 0 / 0 limit for k = 1 and L1 = L2), the leakage inductance seen with the other coil shorted, L (1 − k²), the T-equivalent arms L1 − M and L2 − M, the flux linkages, the stored energy ½ L1 i1² + ½ L2 i2² + M i1 i2, the reactances at the frequency entered and the voltages induced for a given rate of change of coil 1 current.",
+        "Rejections of a mutual inductance (entered, or implied by the series readings) larger than √(L1 L2), of a series-opposing reading larger than the series-aiding reading and of a coupling coefficient outside 0 to 1; warnings when the two series readings do not average to L1 + L2 (more than 5% apart) and, with turns on a core, when the core flux density is above 1.6 T."
+      ],
+      "notChecked": [
+        "Winding resistance, turn-to-turn and inter-winding capacitance, self-resonance, skin and proximity effect and core loss: the coils are ideal inductances and the results are not valid near or above the self-resonant frequency of a real coil.",
+        "The prediction of k or M from the geometry of air-core coils (coil spacing, diameters, alignment), the Nagaoka correction for a finite solenoid, an air gap, a core of several limbs and the saturation curve of the iron: with turns on a core the coupling is the k you enter, and a constant relative permeability is assumed.",
+        "Non-linear or frequency-dependent inductance, the sign of M for a particular winding direction and dot marking (M is taken as a positive size, and aiding and opposing are named for the connections), and the measurement uncertainty of an LCR meter: a result found from the series readings carries the errors of those readings."
+      ]
+    },
+    "motor-selection-load": {
+      "checked": [
+        "A three-phase cage induction motor on a balanced sinusoidal supply driving one machine at constant speed through a drive of constant efficiency: the power at the load shaft, the speed ratio and efficiency of the drive, a design margin, a derating factor, the rated speed, locked-rotor, average accelerating and breakdown torque ratios, the terminal voltage at start and while running, the breakaway and average accelerating load torque, the peak running load, the required torque margin, the two inertias, and the supply voltage, efficiency and power factor at the operating load.",
+        "The power the motor must deliver Pl / ηt, the design power with the margin, the nameplate rating needed after the derating factor, the smallest rating at or above it in the IEC 60072 preferred list (0.18 kW to 1,000 kW), the loading against the rating and against the derated output, the spare power, and the next smaller size with its loading for comparison.",
+        "The load torque at the load shaft and at the motor shaft, the rated torque of the chosen size, the starting torque kLR Tn (Vs / V)² against the breakaway torque of the load, the breakdown torque kbd Tn (Vr / V)² against the peak running torque, the total inertia at the motor shaft, the average accelerating torque and the time to full speed Jt ω / Tacc, and the input power, line current and reactive power at the operating load from the efficiency and power factor entered.",
+        "Warnings for a starting torque that does not exceed, or is less than the margin required over, the breakaway torque; a breakdown torque that does not exceed, or is less than the margin over, the peak running torque; no accelerating torque; an acceleration time above about 10 s; a loading of the derated output below 40%; a start voltage below 80%; and a need above the largest listed rating. Rejections of a need above 1,000 kW and of ranges outside the shared limits (a derating factor from 0.3 to 1, a drive efficiency above 0 and up to 100%, a start or running voltage above 0 and up to 120%, a peak load of 1 to 5 times normal)."
+      ],
+      "notChecked": [
+        "Any rule of a standard or a motor maker for selecting a motor: no sizing rule, service factor practice, duty-type (S1 to S10) derating or efficiency class of IEC 60034-1, IEC 60034-30-1 or NEMA MG 1 is applied; the margin, derating factor and torque margin are the user's figures and the size list is the preferred output series, not a catalogue.",
+        "The enclosure, insulation class, temperature rise, ambient and altitude derating (the derating factor is entered), cooling, protection, starter, drive and cable that follow from the choice, motors on a variable-frequency drive, synchronous, single-phase and wound-rotor motors, and duty with frequent starts, braking or reversing (no thermal check of the starts per hour or of the locked-rotor withstand time).",
+        "The full torque-speed and load-torque curves: the acceleration time uses one constant average torque for the motor and one for the load, the torque is taken as proportional to the voltage squared, the efficiency and power factor are the user's figures at the loading and are not changed with the size, and the rated speed and the torque ratios are taken as the same for the size chosen and its neighbours."
+      ]
+    },
+    "motor-nameplate": {
+      "checked": [
+        "A three-phase induction motor on a balanced sinusoidal supply, with the nameplate figures taken at rated output, rated voltage and rated frequency: output P, line voltage V, frequency f, poles, rated speed N, rated current In, power factor cos φ, efficiency η, service factor SF, the locked-rotor current ratio ILR / In and the winding connection.",
+        "The synchronous speed 120 f / p, the slip (Ns − N) / Ns, the slip speed and the rotor frequency s f, the rated torque P / ω, the input power P / η and the losses, the apparent and reactive power √3 V In and √3 V In sin φ, the winding voltage and current for a star or a delta winding, the locked-rotor current klr In and the continuous output SF P with its torque at the rated speed.",
+        "A consistency check of the plate: the current P / (√3 V η cos φ) against the plate current and the efficiency that the plate current implies, flagged when they differ by more than 5%.",
+        "Supply checks against the plate: the supply voltage and frequency deviation, the volts-per-hertz ratio against rated, the synchronous speed at the supply frequency, the current for the rated output at the supply voltage (In V / Vs, constant output) and a loading estimate from a measured current Im / In. Warnings for a rated slip outside 0.5% to 8%, a supply voltage more than 10% from rated, a supply frequency more than 5% from rated, volts per hertz above 110%, a measured current above In SF and a measured current below 50% of In (the load share is then overstated).",
+        "Rejections of an odd or out-of-range pole count and of a rated speed at or above the synchronous speed, and the shared range checks (positive output, voltage, frequency, current and speed, a power factor above 0 and up to 1, an efficiency above 0 and up to 100%, a service factor from 1 to 1.5)."
+      ],
+      "notChecked": [
+        "The insulation class, temperature rise, ambient and altitude derating, enclosure and IP rating, duty type, efficiency class and the other items printed on a plate that are set by IEC 60034 or NEMA MG 1: no standard table or clause is applied, and the locked-rotor ratio is entered, not decoded from a code letter or a kVA per horsepower table.",
+        "Single-phase, synchronous, DC and wound-rotor motors, a motor on a variable-frequency drive (use the VFD speed calculator), and a dual-voltage or dual-speed plate with more than one rating: enter one rating at a time.",
+        "The efficiency, power factor and temperature rise at the service-factor output and at part load, the effect of voltage or frequency variation on torque, slip and efficiency beyond the constant-output current estimate, voltage and current unbalance, harmonics, and the starting duty, the motor protection settings and the cable sizing that follow from the plate."
+      ]
+    },
+    "protective-device-selection": {
+      "checked": [
+        "A single circuit with one protective device: the kind of device (miniature, moulded-case or air circuit-breaker, or gG fuse link), the design current Ib, the cable current-carrying capacity Iz, the conventional operating factor k2 of the device, the prospective fault current Isc, the rated breaking capacity of the device to be used, the smallest fault current at the far end, the highest instantaneous trip setting as a multiple of the rating, the let-through energy I²t, the conductor area S and the adiabatic constant k.",
+        "The two-part overload condition In ≥ Ib and In ≤ Iz with k2 In ≤ 1.45 Iz (so In ≤ min(Iz, 1.45 Iz / k2)): the smallest standard rating at or above Ib from a common catalogue list for the kind of device (miniature 6 to 125 A, moulded-case 16 to 1,600 A, air circuit-breaker 630 to 6,300 A, gG fuse 2 to 1,250 A), the largest rating the cable allows, the loading Ib / In, the conventional operating current k2 In and its ratio to Iz, and whether any rating fits.",
+        "The smallest standard breaking capacity at or above Isc (3 to 150 kA list) and the ratio of the rated capacity of the device to Isc; the smallest end-of-circuit fault against the highest instantaneous trip m In (not made for a fuse); the cable withstand k² S² against the let-through I²t; and the number of checks not met.",
+        "Warnings for no standard rating between the load and the cable limit, a breaking capacity below the fault current, a fault current above 150 kA, a smallest fault below the highest trip setting, a let-through above the cable withstand, and a smallest fault larger than the prospective fault. Rejections of a design current above the largest rating in the list for the kind of device and of ranges outside the shared limits (a factor k2 of 1 to 3, positive currents)."
+      ],
+      "notChecked": [
+        "Any rule of an installation code or product standard beyond the textbook two-part condition: the 1.45 and k2 figures, the rating lists, the breaking capacity steps, the instantaneous trip bands and the adiabatic constant are conventions or the user's data-sheet figures and are not drawn from a licensed edition of IEC 60364-4-43, IEC 60898-1, IEC 60947-2 or IEC 60269.",
+        "Discrimination (selectivity) and back-up protection between devices in series, the voltage and pole rating, ambient temperature derating of the device, motor starting and transformer inrush, earth-fault loop impedance and the disconnection time on a time-current curve, arc-flash energy, and the energy let-through curve itself (the I²t is entered, not looked up).",
+        "Circuits with several devices, adjustable thermal and long-time settings, electronic trip units and short-time delay, direct current, and fuse time-current curves: the check is one rating and one set of fault figures."
+      ]
+    },
+    "measurement-uncertainty": {
+      "checked": [
+        "One measurement with a result that is a single reading or the mean of n readings: the measured value x, the sample standard deviation s of the readings and their number n (the Type A source, uA = s / √n with n − 1 degrees of freedom), up to four other sources each given as a standard uncertainty, a rectangular, triangular or U-shaped limit, an expanded uncertainty at k = 2 or a resolution step, and a sensitivity coefficient for each.",
+        "Each source converted to a standard uncertainty by its divisor (1, √3, √6, √2, 2 or 2√3), weighted by |c|, and combined as a root sum of squares into the combined standard uncertainty; the share of each source in the variance and the largest contributor.",
+        "The effective degrees of freedom by the Welch–Satterthwaite formula with the Type B sources taken as infinite, truncated to a whole number (one million or more taken as infinite); the coverage factor k = 2, k = 3 or a Student t factor for 95% or 99%; the expanded uncertainty U = k uc, the interval x ± U, U as a percentage of the reading and the test uncertainty ratio T / U.",
+        "Warnings for one source supplying 80% or more of the variance, a standard deviation from fewer than 3 readings, k = 2 or 3 with fewer than 30 effective degrees of freedom, a test uncertainty ratio below 4 and an expanded uncertainty above the tolerance. Rejections of a fractional number of readings, a standard deviation with fewer than 2 readings, a budget with no source, and a negative source value."
+      ],
+      "notChecked": [
+        "Any clause of JCGM 100 (the GUM), JCGM 101, ISO/IEC 17025 or a laboratory accreditation rule: the method is the textbook root-sum-square budget on the figures the user enters, and no licensed text was reviewed.",
+        "Correlation between sources, a measurand that is a non-linear function of several inputs (the sensitivity coefficients are entered, not derived), Type B sources with a finite degrees of freedom, distributions other than the six listed, and the Monte Carlo method.",
+        "Correction of known systematic errors (the value x is taken as already corrected), the choice of the sources and the size of the figures you enter, traceability of the reference, a guard band or decision rule for a pass or fail against the tolerance, and the reporting rules of a calibration certificate."
+      ]
+    },
+    "ev-charger-load": {
+      "checked": [
+        "The group arithmetic on the figures the user enters: for each of two charger groups the connected load number × rated power / efficiency, the chargers in use as the share in use rounded up to a whole charger, and the demand in use × rated power × average power share / efficiency; the group and total connected load, the charger demand and the diversity factor (demand over connected load).",
+        "Power factor handled as P and Q for the chargers and for the building load (Q = P tan(arccos pf)): site kW, kvar, kVA, power factor and current (S / (√3 V) three-phase, S / V single-phase) at the peak, and the same with the spare-capacity percentage as the design demand and design current.",
+        "The next standard transformer at or above the design demand from the common size list (25 to 3,150 kVA) and the peak loading of it.",
+        "An optional supply limit in kVA: room under it at the peak and at the design demand, the charger kW the limit leaves after the building load (the root of √((P + Pb)² + (P tan φ + Qb)²) = limit), and the share of its rating each charger gets if every charger is used at once at full rating.",
+        "Warnings for a peak or design demand above the supply limit, every charger at once above what the limit leaves, the building load alone reaching the limit, a share in use below 40%, a charger power factor below 0.9, a large single-phase current, and a design demand above the largest standard transformer. Rejections of no charger in either group, a fractional number of chargers, a zero rating for a group with chargers, and values outside the shared ranges."
+      ],
+      "notChecked": [
+        "Any clause of IEC 60364-7-722, IEC 61851-1, IEC 61439-7, NEC Article 625 or a local rule on EV supply demand, diversity or load management: the share in use, the average power and the efficiency are the user's judgement and no code demand or diversity table is applied. No licensed clause text was reviewed.",
+        "A utility connection rule, a maximum-demand tariff, a charge-session or arrival model, a load profile over the day, time-of-use control or an energy cost: demand is taken at one busiest moment and the building maximum demand is added in full.",
+        "Load-management or smart-charging controller design, the per-vehicle taper, vehicles that take less than their share, vehicle-to-grid export, harmonics, phase unbalance, inrush, voltage drop and cable or protection sizing for each charger."
+      ]
+    },
+    "railway-backup-load": {
+      "checked": [
+        "The battery arithmetic on the figures the user enters: for up to four load groups the average load Σ connected power × share drawn, the design load with the growth margin, the power from the battery after the efficiency, the bus current (power ÷ bus voltage), the ampere-hours taken over the backup time and the energy in kWh, and the current with every group at full power.",
+        "The nameplate capacity: ampere-hours taken divided by the usable fraction (depth of discharge × end-of-life capacity × low-temperature factor), the same in kWh, the first size at or above it in the list 50 to 2,000 Ah, and the full-power battery current as a multiple of that size (C).",
+        "The charger current to recharge in a set time: ampere-hours taken ÷ (recharge time × charge efficiency) plus the load current at the bus, and its power at the bus voltage; and, for an installed capacity, the runtime installed Ah × usable fraction ÷ average current and its margin over the backup time.",
+        "Warnings for an installed battery that is short of the backup time, a capacity above the largest listed size, a full-power discharge above 0.5 C, a depth of discharge above 80%, a backup time below 1 hour and a converter efficiency below 80%. Rejections of no load group with a power and a share above 0, and values outside the shared ranges."
+      ],
+      "notChecked": [
+        "Any clause of EN 50129, EN 50155, EN 50122, EN 50160, IEC 60896, IEC 62485-2 or a national railway signalling or telecom power rule: the backup time, the loads and the three capacity allowances are the user's inputs, and no licensed clause text was reviewed. The calculator does not decide which loads are safety-related or what autonomy a railway operator requires.",
+        "A load profile over the outage, the short peaks of point machines, lamp proving, level-crossing barriers and other motors, the voltage falling towards the end of discharge and the end-of-discharge voltage the loads accept, Peukert or discharge-rate correction, battery chemistry, ageing curves, temperature over the year and cell balancing.",
+        "The charger float voltage, charge profile and current limit, the rectifier or UPS design, battery string and cable sizing, protection, ventilation of the battery room, and the cost, weight or space of the battery."
+      ]
+    },
+    "pv-performance-ratio": {
+      "checked": [
+        "The IEC 61724-1 energy ratio on the figures the user enters: the final yield Yf = E / P0 from the AC energy at the meter and the nameplate DC power, the reference yield Yr = H / 1 kW/m² from the plane-of-array irradiation, PR = Yf / Yr, the ideal energy P0 × H and the energy lost against it, and the daily final yield.",
+        "A temperature-corrected PR, PR / (1 + γ (Tm − 25)), from one average module temperature and a linear power coefficient.",
+        "A seven-step loss waterfall applied one step after another to the energy left by the step before (degradation (1 − d)^years, module temperature, soiling, DC wiring and mismatch, availability and curtailment, other losses, inverter efficiency): the kWh lost at each step, the expected energy, the expected PR (and the PR when new), the gap between the expected and the metered energy in kWh and per cent, and a check against a target PR giving the energy at the target, the shortfall and the margin in points.",
+        "Warnings for a PR above 100% or above 95%, below 60%, irradiation above 10 kWh/m² per day, a period under 7 days, a corrected PR above 100%, a module colder than 25 °C, a measured energy more than 5% below or 3% above the waterfall, and a PR below the target. Rejections of a positive temperature coefficient, and zero or negative energy, array power, irradiation or days (shared range checks)."
+      ],
+      "notChecked": [
+        "Any clause of IEC 61724-1, IEC 61724-2 or IEC 62446-3, or a contract acceptance protocol: the PR is the plain energy ratio on the entered figures, and no licensed text was reviewed. The monitoring class, sensor calibration and uncertainty, data filtering, measurement interval and test period are not checked.",
+        "The interval-by-interval temperature-weighted correction of IEC 61724-1 (one average module temperature is used), the temperature of the cell as distinct from the module back, and any irradiance-dependent efficiency.",
+        "Inverter clipping, trackers, bifacial gain, snow, grid availability data, sensor drift, a soiling model and first-year light-induced degradation as a separate step: every loss, the inverter efficiency and the annual degradation are the user's figures, and the order of the waterfall affects the kWh given to each step."
       ]
     }
   }
