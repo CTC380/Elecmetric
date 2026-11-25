@@ -495,7 +495,8 @@ total += n8; console.log('8. landing pages:', n8 + '/' + n8, 'checked');
   C(/Tabulated ampacities are not built in/.test(cpg['cable-derating']) && /not complete regional table lookups/.test(cpg['cable-derating']), 'cable-derating page says tables are not built in and regional lookups are not implemented');
   C(/not a cable rating/.test(cpg['cable-size']) && /short-circuit withstand/.test(cpg['cable-size']), 'cable-size page says it is voltage drop only and points to ampacity and short-circuit checks');
   /* links */
-  const hrefs = (h) => [...noFoot(h).matchAll(/href="([^"]+)"/g)].map((m) => m[1]); const bad = [];
+  /* Only anchors navigate. Canonical, icon and other link-element hrefs are metadata/resources, not calculator-page routes. */
+  const hrefs = (h) => [...noFoot(h).matchAll(/<a\b[^>]*\bhref="([^"]+)"/gi)].map((m) => m[1]); const bad = [];
   Object.keys(cpg).forEach((s) => hrefs(cpg[s]).forEach((u) => {
     if (s === 'index') { if (/^[a-z0-9-]+\/(index\.html)?$/.test(u)) { if (!cpg[u.split('/')[0]]) bad.push(s + ' -> ' + u); } else if (!['../pages/index.html', '../converters/index.html', '../technical-library/', '../', '../index.html', '../index.html#verification', '../privacy.html', '../terms.html', '../icon.svg', '../apple-touch-icon.png', '../manifest.webmanifest'].includes(u)) bad.push(s + ' -> ' + u); return; }
     if (/^\.\.\/[a-z0-9-]+\/(index\.html)?$/.test(u)) { if (!(cpg[u.split('/')[1]] || require('../tools/future_hubs.js').HUBS.some((h) => h.slug === u.split('/')[1])) || u === '../index.html' && false) bad.push(s + ' -> ' + u); }

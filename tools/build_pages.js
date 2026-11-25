@@ -1008,7 +1008,12 @@ function withRelated(slug, h) {
 function standalonePage(slug, src) {
   const file = src || path.join(__dirname, '..', 'calculators', slug, 'index.html');
   let h = updateTagManagerFaq(placeGtmAfterCsp(withRelated(slug, fs.readFileSync(file, 'utf8'))));
-  if (!BASE) return h.replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/g, '');
+  if (!BASE) return h
+    .replace(/<link rel="canonical" href="[^"]*">/gi, '')
+    .replace(/<meta property="og:url" content="[^"]*">/gi, '')
+    .replace(/<meta property="og:image[^"]*" content="[^"]*">/gi, '')
+    .replace(/<meta name="twitter:image" content="[^"]*">/gi, '')
+    .replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/g, '');
   const url = calcUrl(slug), unesc = (s) => s.replace(/<[^>]+>/g, '').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&#0?39;/g, "'").replace(/&amp;/g, '&');
   const title = unesc((h.match(/<h1[^>]*>([\s\S]*?)<\/h1>/) || [, slug])[1]).trim(), desc = unesc((h.match(/<meta name="description" content="([^"]*)">/) || [, ''])[1]);
   const fs0 = h.indexOf('<section id="faq">'), faqHtmlSrc = fs0 >= 0 ? h.slice(fs0, h.indexOf('</section>', fs0)) : '';
