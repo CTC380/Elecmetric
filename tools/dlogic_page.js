@@ -38,7 +38,7 @@ const tool =
   '<div id="dl-out" aria-live="polite"></div>' +
   '<div id="dl-dl" class="ns-act" hidden><span class="ns-l ba-dll">Download</span><button type="button" class="btn2" data-dl="txt">TXT</button><button type="button" class="btn2" data-dl="csv">CSV</button><button type="button" class="btn2" data-dl="json">JSON</button></div>' +
   '<p class="sr-only" id="dl-note" role="status" aria-live="polite"></p>' +
-  '<noscript><p class="note">The calculator needs JavaScript. Nothing is sent anywhere.</p></noscript></section>' +
+  '<noscript><p class="note">The calculator needs JavaScript. This tool does not submit calculator inputs to Elecmetric.</p></noscript></section>' +
   '<section class="card"><h2>Working</h2><div id="dl-steps"></div></section>' +
   '<section class="card"><h2>History</h2><ul class="ba-hist" id="dl-hist"></ul><button type="button" class="btn2" id="dl-hclear" data-act="hclear" hidden>Clear history</button><p class="note">Kept only in this browser. Up to 10 items.</p></section></div>';
 const tbl = (head, rows) => '<div class="tw" tabindex="0" role="region" aria-label="Scrollable table: ' + head.join(', ') + '"><table><thead><tr>' + head.map((h) => '<th>' + esc(h) + '</th>').join('') + '</tr></thead><tbody>' + rows.map((r) => '<tr>' + r.map((c) => '<td class="n">' + esc(c) + '</td>').join('') + '</tr>').join('') + '</tbody></table></div>';

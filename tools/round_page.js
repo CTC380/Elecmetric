@@ -21,7 +21,7 @@ const tool = '<div id="ns">' + rm('decimal') + '<section class="card ns-card"><p
   '<div class="ns-f" style="margin-top:6px"><label class="chk"><input type="checkbox" id="ns-zeros" checked> Keep trailing zeros (15.50, not 15.5)</label><label class="chk"><input type="checkbox" id="ns-group"> Thousands separators in the result</label></div>' +
   '<p class="note" style="margin:4px 0 0">Decimal places run from \u22121000 to 1000. A negative number rounds to tens (\u22121), hundreds (\u22122) or thousands (\u22123). Up to ' + R.MAX_DIGITS + ' digits; scientific notation such as 1.5e3 and thousands commas as in 1,499 are accepted.</p>' +
   '<p class="note ns-msg" id="ns-err" role="status"></p><div class="ns-act"><button type="button" class="btn2" data-act="reset">Reset</button><button type="button" class="btn2" data-act="clearall">Clear all</button></div>' +
-  '<div class="ns-try"><span class="ns-l">Try</span> ' + chips + '</div><div id="ns-out" aria-live="polite"></div><p class="sr-only" id="ns-note" role="status" aria-live="polite"></p><noscript><p class="note">This tool needs JavaScript. Nothing is sent anywhere.</p></noscript></section>' +
+  '<div class="ns-try"><span class="ns-l">Try</span> ' + chips + '</div><div id="ns-out" aria-live="polite"></div><p class="sr-only" id="ns-note" role="status" aria-live="polite"></p><noscript><p class="note">This tool needs JavaScript. This tool does not submit calculator inputs to Elecmetric.</p></noscript></section>' +
   '<section class="card"><h2>Working</h2><div id="ns-steps"></div></section><section class="card"><h2>Checks</h2><div id="ns-verify"></div></section><section class="card"><h2>History</h2><div id="ns-hist"></div></section></div>';
 
 const w = S('15.496', '2');

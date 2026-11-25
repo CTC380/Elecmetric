@@ -37,7 +37,7 @@ function build(h) {
     '<p class="sr-only" id="bc-note" role="status" aria-live="polite"></p>' +
     '<div class="bc-try"><span class="bc-l">Try</span> ' + chips + '</div>' +
     '<div class="pad bc-pad" role="group" aria-label="Calculator keys">' + keys + '</div>' +
-    '<noscript><p class="note">The calculator needs JavaScript. Nothing is sent anywhere: every calculation runs in your browser.</p></noscript>' +
+    '<noscript><p class="note">The calculator needs JavaScript. This tool does not submit calculator inputs to Elecmetric; calculations run in your browser.</p></noscript>' +
     '</section>' +
     '<section class="card" aria-label="History"><h2>History</h2><p class="note" id="bc-hist-none">Results you confirm with = appear here. Select one to use its expression again. History stays in this page and is not stored.</p><ol class="bc-hist" id="bc-hist"></ol><button type="button" class="btn2" data-act="histclear" id="bc-hist-clear" hidden>Clear history</button></section></div>';
 

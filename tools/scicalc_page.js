@@ -86,7 +86,7 @@ function build(h) {
     '<div class="sc-try"><span class="sc-l">Try</span> <span data-std>' + stdChips + '</span><span data-eng hidden>' + engChips + '</span></div>' +
     '<div class="pads"><div class="pad f5" role="group" aria-label="Function keys">' + fnKeys + '</div><div class="pad d4" role="group" aria-label="Number keys">' + numKeys + '</div></div>' +
     '<div class="pad e8" role="group" aria-label="Engineering keys" data-eng hidden>' + engKeys + '</div>' +
-    '<noscript><p class="note">The calculator needs JavaScript. Nothing is sent anywhere: every calculation runs in your browser.</p></noscript>' +
+    '<noscript><p class="note">The calculator needs JavaScript. This tool does not submit calculator inputs to Elecmetric; calculations run in your browser.</p></noscript>' +
     '</section>' +
     '<section class="card" id="sc-cx" aria-label="Complex result" hidden><h2>Complex result</h2>' +
     '<p class="note" id="sc-cx-hint">Enter a complex value such as 10+j15 or 230\u222030 to see its real and imaginary parts, magnitude, phase angle and phasor diagram.</p>' +

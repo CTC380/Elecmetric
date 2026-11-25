@@ -1,6 +1,6 @@
 /* FAQ review v1.99.101, open items "links inside FAQ answers" and "answers under 15 words / boilerplate answers".
    1. Short "What does this calculator assume?" answers get one added sentence (tools/faq_answers_plans.js); the original text is kept.
-   2. Short "Is anything sent to a server?" answers get a sentence based on the page's own Content-Security-Policy (connect-src 'self').
+   2. Short "Is anything sent to a server?" answers distinguish local calculations from data handled by Google Tag Manager tags.
    3. "How accurate are the results?" answers get a link to "How it is verified" on the home page.
    4. Calculator and tool names in any FAQ answer are linked to the same page's Related links (first mention only, max 3 per answer).
    Safe to run twice: a text change runs only if the original answer is still there, links are added only to answers that have none.
@@ -45,7 +45,7 @@ walk(root, []).forEach((file) => {
     if (qt === 'What does this calculator assume?' && words(a) < 15 && plans.assume[slug] && !check) {
       na = a + ' ' + plans.assume[slug]; st.text++;
     } else if (qt === 'What does this calculator assume?' && words(a) < 15 && plans.assume[slug]) st.text++;
-    if (qt === 'Is anything sent to a server?' && words(a) < 15 && /connect-src 'self'/.test(h) && !/security policy/.test(a)) {
+    if (qt === 'Is anything sent to a server?' && words(a) < 15 && /GTM-KSBHF53Z/.test(h) && !/Google Tag Manager/.test(a)) {
       na = a + ' ' + plans.server; st.server++;
     }
     if (qt === 'How accurate are the results?' && !/<a /.test(na)) {

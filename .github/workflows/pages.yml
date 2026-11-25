@@ -73,6 +73,7 @@ jobs:
           node tests/percent_eng_test.js
           node tests/percent_price_test.js
           node tests/percent_report_test.js
+          node tests/pe_eng_test.js
           node tests/matrix_test.js
           node tests/quad_test.js
           node tests/quad_disc_test.js

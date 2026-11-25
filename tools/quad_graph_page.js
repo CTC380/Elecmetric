@@ -26,7 +26,7 @@ const tool = '<div id="pg"><section class="card ns-card">' +
   '<p class="note" id="pg-view"></p><p class="gread" id="pg-read" aria-live="polite"></p>' +
   '<div class="xval"><label for="pg-x" class="ns-l">Value at x</label><input id="pg-x" class="ns-in" type="text" inputmode="text" autocomplete="off" spellcheck="false" placeholder="e.g. 1/2" aria-describedby="pg-xo"><p id="pg-xo" class="xo" aria-live="polite"></p></div>' +
   '<div id="pg-out" aria-live="polite"></div><div id="pg-val"></div>' +
-  '<div class="ns-act"><button type="button" class="btn2" data-act="reset">Reset</button></div><p class="sr-only" id="pg-note" role="status" aria-live="polite"></p><noscript><p class="note">This tool needs JavaScript. Nothing is sent anywhere.</p></noscript></section>' +
+  '<div class="ns-act"><button type="button" class="btn2" data-act="reset">Reset</button></div><p class="sr-only" id="pg-note" role="status" aria-live="polite"></p><noscript><p class="note">This tool needs JavaScript. This tool does not submit calculator inputs to Elecmetric.</p></noscript></section>' +
   '<section class="card"><h2>Working</h2><div id="pg-steps"></div></section><section class="card"><h2>Checks</h2><div id="pg-verify"></div></section></div>';
 
 const g0 = Gr(...EX[0]), g1 = Gr(...EX[1]);

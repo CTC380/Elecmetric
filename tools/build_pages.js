@@ -232,18 +232,43 @@ function inputRows(def, raw, hide) {
 
 /* Social preview image: needs an absolute address, so it is added with the canonical at deploy time only. */
 const socialImg = () => BASE ? '<meta property="og:image" content="' + BASE + '/og-image.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Elecmetric: electrical engineering calculators with formulas and working shown"><meta name="twitter:image" content="' + BASE + '/og-image.png">' : '';
-/* Content-Security-Policy as a meta tag (GitHub Pages cannot send headers). Nothing may leave the origin: no remote scripts, styles, fonts, images or requests. Inline script and style stay allowed because every page carries its own. */
-const CSP_META = "<meta http-equiv=\"Content-Security-Policy\" content=\"default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'\">";
+/* Content-Security-Policy for GitHub Pages. The only remote script is the approved GTM loader; GTM/Analytics request endpoints are narrowly allowlisted. */
+const CSP_META = "<meta http-equiv=\"Content-Security-Policy\" content=\"default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://www.google-analytics.com https://www.googletagmanager.com; font-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://analytics.google.com; object-src 'none'; base-uri 'self'; form-action 'none'\">";
+const GTM_HEAD = '<script async src=\"https://www.googletagmanager.com/gtm.js?id=GTM-KSBHF53Z\"></script><script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag(\'js\', new Date());\n</script>';
+function placeGtmAfterCsp(html) {
+  const loader = '<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-KSBHF53Z"></script>';
+  let at;
+  while ((at = html.indexOf(loader)) >= 0) {
+    const inlineStart = html.indexOf('<script>', at + loader.length);
+    if (inlineStart < 0) break;
+    const inlineEnd = html.indexOf('</script>', inlineStart);
+    if (inlineEnd < 0) break;
+    html = html.slice(0, at) + html.slice(inlineEnd + '</script>'.length);
+  }
+  const csp = /<meta http-equiv="Content-Security-Policy"[^>]*>/i.exec(html);
+  if (csp) return html.slice(0, csp.index + csp[0].length) + GTM_HEAD + html.slice(csp.index + csp[0].length);
+  return html.replace(/<head[^>]*>/i, (head) => head + GTM_HEAD);
+}
+
 const TOOL_UX = require('./tool_ux.js');
+function updateTagManagerFaq(html) {
+  return html.replace(/(<h3[^>]*>Is anything sent to a server\?<\/h3>\s*<p>)([\s\S]*?)(<\/p>)/gi, (all, open, answer, close) => {
+    if (/Google Tag Manager/i.test(answer)) return all;
+    let local = answer.replace(/^\s*No\.\s*/i, '').replace(/The page[’']s security policy also blocks it from sending data to other sites, so nothing you enter leaves your device\.?/gi, '').trim();
+    if (!local || /^Everything runs in your browser\.?$/i.test(local) || /^The calculation(?: and the [^.]+)? runs in your browser\.?$/i.test(local)) local = 'The calculator runs in your browser.';
+    return open + local + ' This page also loads Google Tag Manager; data collected by tags depends on its configuration.' + close;
+  });
+}
 function page(slug, h1, desc, body, extraHead, tail, o) {
   o = o || {};
   const url = o.url !== undefined ? o.url : (BASE ? BASE + '/pages/' + slug + '.html' : ''), up = o.prefix !== undefined ? o.prefix : '../';
   const title = o.title || (h1 + ' | Elecmetric');
-  return '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">'+ CSP_META +
+  const rendered = '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">'+ CSP_META + GTM_HEAD +
     '<title>' + esc(title) + '</title><meta name="description" content="' + esc(desc) + '">' + (url ? '<link rel="canonical" href="' + url + '">' : '') +
     '<meta property="og:title" content="' + esc(title) + '"><meta property="og:description" content="' + esc(desc) + '"><meta property="og:type" content="website"><meta property="og:site_name" content="Elecmetric">' + (url ? '<meta property="og:url" content="' + url + '">' + socialImg() : '') +
     '<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="' + esc(title) + '"><meta name="twitter:description" content="' + esc(desc) + '">' +
     '<meta name="theme-color" content="#043B79"><link rel="icon" href="' + up + 'icon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="' + up + 'apple-touch-icon.png"><link rel="manifest" href="' + up + 'manifest.webmanifest">' + (extraHead || '') + '<style>' + CSS + TOOL_UX.CSS + '</style></head><body>' + body + (tail || '') + '<script>try{if("serviceWorker"in navigator&&/^https?:/.test(location.protocol))navigator.serviceWorker.register("' + up + 'sw.js")}catch(e){}</script></body></html>';
+  return updateTagManagerFaq(rendered);
 }
 const CSS = '.fb textarea{width:100%;font:15px/1.5 var(--body);padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--field);color:var(--ink);resize:vertical}.fb textarea:focus{outline:2px solid var(--gold);outline-offset:1px}:root{--bg:#F1F6FC;--surface:#fff;--ink:#0A2347;--muted:#4B5F86;--line:#D3DFEF;--navy:#043B79;--on-navy:#FFFFFF;--gold:#B34A00;--gold-fill:#FFEFDC;--field:#F4F8FE;--err:#B3261E;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;--display:"Arial Narrow","Roboto Condensed",system-ui,sans-serif;--body:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--navy-2:#0A5BBB;--cyan:#0062DE;--num:#043B79;--orange:#FF7A00;--gold-grad:linear-gradient(135deg,#FFA43D 0%,#FF7A00 52%,#E85F00 100%);--hero:radial-gradient(1000px 360px at 90% -35%,rgba(0,98,222,.55),transparent 62%),radial-gradient(640px 240px at 0% 110%,rgba(255,122,0,.20),transparent 60%),linear-gradient(135deg,#032A58,#043B79 58%,#0A55A8);--r:14px;--sh-0:0 1px 2px rgba(4,35,80,.06);--sh-1:0 1px 2px rgba(4,35,80,.05),0 6px 18px rgba(4,35,80,.07);--sh-2:0 2px 4px rgba(4,35,80,.05),0 22px 44px -14px rgba(4,35,80,.24);--ring:0 0 0 3px rgba(0,98,222,.26);color-scheme:light dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}' +
   '@media(prefers-color-scheme:dark){:root{--bg:#04122B;--surface:#0A2046;--ink:#EAF2FF;--muted:#A0B5DA;--line:#183868;--navy:#031B3F;--on-navy:#EAF2FF;--gold:#FF9A3D;--gold-fill:#3D2410;--field:#071B3C;--err:#FF8A80;--navy-2:#0B4A98;--cyan:#4DA3FF;--orange:#FF8A1F;--num:#FFB066;--sh-0:0 1px 2px rgba(0,0,0,.4);--sh-1:0 1px 2px rgba(0,0,0,.35),0 8px 22px rgba(0,0,0,.35);--sh-2:0 2px 4px rgba(0,0,0,.4),0 24px 48px -14px rgba(0,0,0,.7);--ring:0 0 0 3px rgba(77,163,255,.34)}}' +
@@ -467,7 +492,8 @@ function indexHtml() {
   if (!CATDATA_RE.test(out)) throw new Error('index.html is missing the <!--catdata:start--><!--catdata:end--> markers');
   out = out.replace(CATDATA_RE, () => '<!--catdata:start--><script>window.LL_CATS=' + JSON.stringify(catData()) + ';</script><!--catdata:end-->');
   if (!VDATA_RE.test(out)) throw new Error('index.html is missing the <!--vdata:start--><!--vdata:end--> markers');
-  return out.replace(VDATA_RE, () => '<!--vdata:start--><script>window.LL_VERIF=' + JSON.stringify(verifData()) + ';</script><!--vdata:end-->');
+  out = out.replace(VDATA_RE, () => '<!--vdata:start--><script>window.LL_VERIF=' + JSON.stringify(verifData()) + ';</script><!--vdata:end-->');
+  return placeGtmAfterCsp(out);
 }
 /* Per-calculator verification facts for the app: independent vector counts come from tests/reference_vectors.json,
    reviews only from tools/review_records.json (empty until a review has really been done). */
@@ -981,7 +1007,7 @@ function withRelated(slug, h) {
 }
 function standalonePage(slug, src) {
   const file = src || path.join(__dirname, '..', 'calculators', slug, 'index.html');
-  let h = withRelated(slug, fs.readFileSync(file, 'utf8'));
+  let h = updateTagManagerFaq(placeGtmAfterCsp(withRelated(slug, fs.readFileSync(file, 'utf8'))));
   if (!BASE) return h.replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/g, '');
   const url = calcUrl(slug), unesc = (s) => s.replace(/<[^>]+>/g, '').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&#0?39;/g, "'").replace(/&amp;/g, '&');
   const title = unesc((h.match(/<h1[^>]*>([\s\S]*?)<\/h1>/) || [, slug])[1]).trim(), desc = unesc((h.match(/<meta name="description" content="([^"]*)">/) || [, ''])[1]);
@@ -991,6 +1017,7 @@ function standalonePage(slug, src) {
   const bc = { '@type': 'BreadcrumbList', itemListElement: crumbs.map(([name, item], i) => ({ '@type': 'ListItem', position: i + 1, name, item })) };
   const ld = ldScript({ '@context': 'https://schema.org', '@graph': [bc, APP_LD(title, url, desc)].concat(faq.length ? [FAQ_LD(faq)] : []) });
   h = h.replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/, '');
+  h = h.replace(/<link rel="canonical" href="[^"]*">/gi, '');
   h = h.replace(/(<meta name="description" content="[^"]*">)/, '$1<link rel="canonical" href="' + url + '">');
   h = h.replace(/(<meta property="og:site_name" content="Elecmetric">)/, '$1<meta property="og:url" content="' + url + '">' + socialImg());
   return h.replace('</head>', ld + '</head>');
@@ -1229,7 +1256,7 @@ function buildCalcPages() {
   Object.assign(TARGET, { 'percentage-error': 'percent-error-calculator', 'fraction-calculator': 'fraction-arithmetic', 'binary-logic-calculator': 'binary-arithmetic-calculator' });
   Object.keys(TARGET).forEach((id) => {
     const to = calcUrl(TARGET[id]), rel = '../' + TARGET[id] + '/', nm = (CALC_DATA.find((c) => c.slug === TARGET[id]) || {}).name || RETIRED_NAMES[TARGET[id]] || TARGET[id];
-    redirects[id] = '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>' + esc(nm) + ' moved | Elecmetric</title><meta name="robots" content="noindex"><meta name="description" content="This calculator has moved to ' + esc(rel) + '."><link rel="canonical" href="' + (BASE ? to : rel) + '"><meta http-equiv="refresh" content="0; url=' + rel + '" data-redirect="' + TARGET[id] + '"></head><body><p>This calculator has moved: <a href="' + rel + '">' + esc(nm) + ' Calculator</a>.</p></body></html>\n';
+    redirects[id] = '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">' + CSP_META + GTM_HEAD + '<title>' + esc(nm) + ' moved | Elecmetric</title><meta name="robots" content="noindex"><meta name="description" content="This calculator has moved to ' + esc(rel) + '."><link rel="canonical" href="' + (BASE ? to : rel) + '"><meta http-equiv="refresh" content="0; url=' + rel + '" data-redirect="' + TARGET[id] + '"></head><body><p>This calculator has moved: <a href="' + rel + '">' + esc(nm) + ' Calculator</a>.</p></body></html>\n';
   });
   return { pages, meta, redirects, forms, faqs, groups, cats: catMeta, sci: { slug: sci.slug, name: sci.name, title: sci.title, desc: sci.desc }, basic: { slug: basic.slug, name: basic.name, title: basic.title, desc: basic.desc, defaultText: basic.defaultText } };
 }
@@ -1374,7 +1401,7 @@ function build(opts) {
   return { pages, meta, GROUPS, root, forms, faqs, calc, conv, lib, future, cats, legal: legalPages() };
 }
 
-/* Privacy notice and terms of use, written to match what the app really does (no analytics, no accounts, nothing sent to a server).
+/* Privacy notice and terms of use, written to distinguish local calculator processing from the third-party tags controlled by Google Tag Manager.
    Draft text for a lawyer to review. Contact and dates come from tools/site_info.json. */
 function legalPages() {
   const L = SITE_INFO, mail = L.contact_email ? '<a href="mailto:' + esc(L.contact_email) + '">' + esc(L.contact_email) + '</a>' : '', law = esc(L.governing_law || 'India'), courts = esc(L.courts_city || 'Delhi, India'), upd = esc(L.legal_updated || '');
@@ -1382,14 +1409,15 @@ function legalPages() {
   const contact = mail ? '<h2>Contact</h2>' + opLine + '<p>Questions, error reports and requests: ' + mail + '.</p>' : '';
   const shell = (slug, h1, desc, inner) => page(slug, h1, desc, '<header><div class="w"><a class="brand" href="./"><img src="logo.png" alt="Elecmetric" width="160" height="40"></a><nav><a href="./">Calculators</a><a href="pages/index.html">Conversions</a></nav></div></header><main class="w"><h1>' + esc(h1) + '</h1><p class="note">Last updated ' + upd + '</p>' + inner + '</main>' + FOOT(''), '', '', { url: BASE ? BASE + '/' + slug + '.html' : '', prefix: '' });
   const privacy = '' +
-    '<p class="lede">Elecmetric runs in your browser. It has no accounts and does not send what you type to any server.</p>' +
-    '<h2>What stays on your device</h2><p>The values you enter and the results are processed in your browser and are not sent anywhere. Most calculators do not keep them. The percentage, percent error, tolerance, fraction, half-life and decay, binary, hex, number-system and similar calculators keep a short history of your recent calculations (the numbers you entered, the settings and the results) in your browser storage so you can use them again; each of those calculators has a Clear history button, and the history never leaves your device. Elecmetric also saves the following in your browser storage so they are there next time: your settings (theme, number grouping, simple or engineering mode), your favourites and your recently used calculators, and the details you type into the calculation sheet form: project, sheet or reference, prepared by, checked by and revision. Those sheet details can include people\'s names, so do not enter them on a shared or public computer. They are used only to fill the next sheet and never leave your device. If you load standards tables into the Cable Selection Check, the table text you load (including the name you give as the person who entered it) is also kept in your browser storage and never leaves your device. It also keeps a cache of its own files so it can work offline. You can clear all of this in your browser settings (clear site data for this website).</p>' +
-    '<h2>What we do not use</h2><p>No analytics, advertising or tracking cookies, no user accounts, and no fonts or scripts loaded from other companies\' servers.</p>' +
+    '<p class="lede">Elecmetric has no accounts. Its calculator engine runs in your browser, while Google Tag Manager loads site tags; tag behaviour depends on the configuration of that container.</p>' +
+    '<h2>What stays on your device</h2><p>The Elecmetric calculator engine processes the values you enter and the results in your browser; the calculator engine itself does not send them to a server. Most calculators do not keep them. The percentage, percent error, tolerance, fraction, half-life and decay, binary, hex, number-system and similar calculators keep a short history of your recent calculations (the numbers you entered, the settings and the results) in your browser storage so you can use them again; each of those calculators has a Clear history button, and the history is kept in your browser storage. Elecmetric also saves the following in your browser storage so they are there next time: your settings (theme, number grouping, simple or engineering mode), your favourites and your recently used calculators, and the details you type into the calculation sheet form: project, sheet or reference, prepared by, checked by and revision. Those sheet details can include people\'s names, so do not enter them on a shared or public computer. They are used by the calculator to fill the next sheet and are stored in your browser. If you load standards tables into the Cable Selection Check, the table text you load (including the name you give as the person who entered it) is also kept in your browser storage. It also keeps a cache of its own files so it can work offline. You can clear all of this in your browser settings (clear site data for this website).</p>' +
+    '<h2>Google Tag Manager and third-party tags</h2><p>Elecmetric loads Google Tag Manager from Google using container ID GTM-KSBHF53Z. The container can load tags configured in the Google Tag Manager account. Which tags run, what information they collect, which third parties receive it, and whether cookies are set depend on that account-side configuration. The active tag configuration and its consent settings are not stored in this repository and were not verified as part of this release. Before enabling analytics, advertising or other measurement tags, review the live container and update this notice to identify each provider, purpose, data collected, retention period and available choices. Loading the Tag Manager script itself sends a browser request to Google. See <a href="https://policies.google.com/privacy">Google\'s Privacy Policy</a>.</p>' +
+    '<p>The calculator engine performs calculations in your browser. That does not prevent third-party tags in the Tag Manager container from collecting information available on a page, depending on how those tags are configured. There are no Elecmetric user accounts.</p>' +
     '<h2>Hosting</h2><p>The site files are delivered by a hosting provider (for example GitHub Pages). Like any web host, it may log technical data such as your IP address and browser type under its own privacy policy. Elecmetric does not receive or use those logs. The host is a United States company, so those logs may be processed outside India.</p>' +
-    '<h2>Shared links</h2><p>A shared calculator link carries its input values in the part of the web address after the # sign. Your browser does not send that part to the web server, so the values stay between you and the people you give the link to. Anyone who opens the link sees those values, and they can show up in your browser history, chat apps and emails where you paste the link. Do not put confidential project data into links you share.</p>' +
-    '<h2>Feedback and contact</h2><p>The "Tell us how to improve this page" box has no server behind it. When you press Email your suggestion, your own email app opens with your message and the page address already filled in, and nothing is sent until you press send in that app. If you email us, we use your message and email address only to reply and to fix errors, on the basis that you contacted us. We keep correspondence for up to 12 months after it is resolved, unless the law requires longer, and you can ask us to delete it sooner. Elecmetric is aimed at a general audience and does not knowingly collect personal data other than what you choose to email.</p>' +
-    '<h2>Your rights</h2><p>Because nothing you enter is sent to us, we hold no profile about you. For the emails we hold, you can ask us to access, correct or delete them using the contact address below, and we will reply within 30 days. Under the Digital Personal Data Protection Act, 2023 of India you may also ask for a response to a grievance, and you may complain to the Data Protection Board of India once it is operating. Visitors outside India may have additional rights under their local law, for example the GDPR in the European Economic Area and the UK.</p>' +
-    '<h2>Changes</h2><p>If Elecmetric later adds accounts, saved projects or analytics, this notice will be updated before that starts and will explain what is collected, why, and how to withdraw consent.</p>' + contact +
+    '<h2>Shared links</h2><p>A shared calculator link carries its input values in the part of the web address after the # sign. Browsers do not send that fragment to the web server, but scripts running on the page can read it. Whether configured third-party tags access or transmit those values depends on the Google Tag Manager configuration described above. Anyone who opens the link sees those values, and they can show up in your browser history, chat apps and emails where you paste the link. Do not put confidential project data into links you share.</p>' +
+    '<h2>Feedback and contact</h2><p>The "Tell us how to improve this page" box has no server behind it. When you press Email your suggestion, your own email app opens with your message and the page address already filled in, and nothing is sent until you press send in that app. If you email us, we use your message and email address only to reply and to fix errors, on the basis that you contacted us. We keep correspondence for up to 12 months after it is resolved, unless the law requires longer, and you can ask us to delete it sooner. Elecmetric does not knowingly collect personal data directly through the calculator engine. Third-party tags loaded through Google Tag Manager may process other information as described above.</p>' +
+    '<h2>Your rights</h2><p>The calculator engine does not send the values you enter to Elecmetric. Third-party tags may separately process page or event data depending on their configuration; consult the relevant providers for rights relating to that data. For emails we hold, you can ask us to access, correct or delete them using the contact address below, and we will reply within 30 days. Under the Digital Personal Data Protection Act, 2023 of India you may also ask for a response to a grievance, and you may complain to the Data Protection Board of India once it is operating. Visitors outside India may have additional rights under their local law, for example the GDPR in the European Economic Area and the UK.</p>' +
+    '<h2>Changes</h2><p>Changes to the Google Tag Manager container or to other third-party tags may change what information is collected. This notice should be reviewed whenever those tags or their consent settings change, and updated to explain what is collected, why, and how to make choices about it.</p>' + contact +
     '<p class="note">This notice is governed by the laws of ' + law + '.</p>';
   const terms = '' +
     '<p class="lede">Elecmetric is a set of electrical calculators for estimating. These terms apply when you use the site. If you do not accept them, do not use the results.</p>' +
@@ -1405,7 +1433,7 @@ function legalPages() {
     '<h2>10. General</h2><p>If any part of these terms is held unenforceable, the rest stays in force. These terms are the whole agreement between you and Elecmetric about the use of the site.</p>' +
     '<h2>11. Governing law and courts</h2><p>These terms are governed by the laws of ' + law + '. The courts at ' + courts + ' have exclusive jurisdiction over disputes about the site, subject to any mandatory consumer rights you have under the law of the place where you live.</p>' + contact;
   return {
-    'privacy.html': shell('privacy', 'Privacy notice', 'How Elecmetric handles data: calculations run in your browser, with no accounts, analytics or tracking.', privacy),
+    'privacy.html': shell('privacy', 'Privacy notice', 'How Elecmetric handles data: calculations run in your browser and Google Tag Manager loads site tags.', privacy),
     'terms.html': shell('terms', 'Terms of use', 'Terms of use for Elecmetric electrical calculators: estimating tool, no warranty, limits of liability.', terms)
   };
 }

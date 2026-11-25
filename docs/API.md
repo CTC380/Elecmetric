@@ -1,4 +1,4 @@
-# Elecmetric JavaScript API (v1.99.90)
+# Elecmetric JavaScript API (v1.99.110)
 
 Elecmetric is a client-side engine: `engine.js` has no dependencies and no DOM. It runs in a browser or in Node 18+. **There is no hosted REST API yet**; see "Hosted API" below.
 
@@ -28,7 +28,7 @@ Success:
   "ok": true,
   "id": "three-phase-current",
   "calculatorVersion": "1.0.0",
-  "engine": "1.99.90",
+  "engine": "1.99.110",
   "outputs": {
     "I": {
       "label": "Full-load current",

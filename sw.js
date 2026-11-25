@@ -1,5 +1,5 @@
 /* Elecmetric service worker: offline app shell. Bump CACHE_VERSION with engine.js VERSION (tests/run_tests.js checks they match). */
-const CACHE_VERSION = '1.99.90';
+const CACHE_VERSION = '1.99.110';
 const CACHE = 'elecmetric-' + CACHE_VERSION;
 /* Converters (about 290 pages) are not pre-cached: the fetch handler below keeps each one after it is first visited. The hub is cached up front. */
 const SHELL = [

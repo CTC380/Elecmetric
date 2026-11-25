@@ -41,9 +41,12 @@ K(/if \(ready\) window\.Elecmetric = E;/.test(idx), 'window.Elecmetric must be t
   const H = sb2.window.LL_HOME;
   K(H && H.version === E.VERSION && H.calcs.length === E.CALCS.length, 'home-data.js version or length differs from the engine: run node tools/build_pages.js');
   K(H && H.calcs.every((r, i) => r[0] === E.CALCS[i].id && r[1] === E.CALCS[i].title && r[2] === E.CALCS[i].division), 'home-data.js ids, titles or divisions differ from the engine');
-  const pop = /\['three-phase-current', 'voltage-drop'[^\]]*\]/.exec(idx);
-  const ids = pop ? [...pop[0].matchAll(/'([^']+)'/g)].map((m) => m[1]) : [];
-  K(ids.length === 12 && ids.every((id) => { const r = H.calcs.filter((x) => x[0] === id)[0]; return r && r[3]; }), 'every popular calculator needs a purpose line in home-data.js');
+  const pop = /var pop = \[([\s\S]*?)\]\.map\(function \(x\) \{ var c = E\.BY_ID\[x\[0\]\];/.exec(idx);
+  const ids = pop ? [...pop[1].matchAll(/\['([^']+)'\s*,\s*'[^']+'\]/g)].map((m) => m[1]) : [];
+  K(ids.length === 6 && ids.every((id) => { const r = H.calcs.find((x) => x[0] === id); return r && r[3] && E.BY_ID[id] && E.BY_ID[id].purpose; }), 'the six engine-powered popular cards must have purpose lines in home-data.js and the engine');
+  const staticPop = /\.join\(''\) \+ \[([\s\S]*?)\]\.map\(function \(x\) \{ return '<a href=\"' \+ x\[0\]/.exec(idx);
+  const staticPurposes = staticPop ? [...staticPop[1].matchAll(/\['[^']+',\s*'[^']+',\s*'[^']+',\s*'([^']+)'\]/g)].map((m) => m[1]) : [];
+  K(staticPurposes.length === 6 && staticPurposes.every((p) => p.trim()), 'the six standalone popular cards include their own purpose descriptions');
   K(fs.statSync(path.join(root, 'home-data.js')).size < 40000, 'home-data.js should stay small (under 40 KB)');
 }
 { const swSrc = fs.readFileSync(path.join(root, 'sw.js'), 'utf8'), wf = fs.readFileSync(path.join(root, '.github', 'workflows', 'pages.yml'), 'utf8'), dep = fs.readFileSync(path.join(root, 'DEPLOY.md'), 'utf8');

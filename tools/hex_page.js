@@ -34,7 +34,7 @@ const tool =
   '<div id="hx-out" aria-live="polite"></div>' +
   '<div id="hx-dl" class="ns-act" hidden><span class="ns-l hx-dll">Copy and download</span><button type="button" class="btn2" data-act="copyall">Copy all values</button><button type="button" class="btn2" data-dl="txt">TXT</button><button type="button" class="btn2" data-dl="csv">CSV</button><button type="button" class="btn2" data-dl="json">JSON</button></div>' +
   '<p class="sr-only" id="hx-note" role="status" aria-live="polite"></p>' +
-  '<noscript><p class="note">The calculator needs JavaScript. Nothing is sent anywhere.</p></noscript></section>' +
+  '<noscript><p class="note">The calculator needs JavaScript. This tool does not submit calculator inputs to Elecmetric.</p></noscript></section>' +
   '<section class="card"><h2>Working</h2><div id="hx-steps"></div></section>' +
   '<section class="card"><h2>History</h2><ul class="hx-hist" id="hx-hist"></ul><button type="button" class="btn2" id="hx-hclear" data-act="hclear" hidden>Clear history</button><p class="note">Kept only in this browser. Up to 10 calculations.</p></section></div>';
 const tbl = (head, rows) => '<div class="tw" tabindex="0" role="region" aria-label="Scrollable table: ' + head.join(', ') + '"><table><thead><tr>' + head.map((h) => '<th>' + esc(h) + '</th>').join('') + '</tr></thead><tbody>' + rows.map((r) => '<tr>' + r.map((c) => '<td class="n">' + esc(c) + '</td>').join('') + '</tr>').join('') + '</tbody></table></div>';

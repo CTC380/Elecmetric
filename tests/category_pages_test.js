@@ -61,12 +61,14 @@ L1.forEach((c) => {
   const noindex = /<meta name="robots" content="noindex,follow">/.test(h);
   ok(noindex === (mine.length < CAT.MIN_LIVE), s + ': noindex exactly when fewer than ' + CAT.MIN_LIVE + ' live tools (' + mine.length + ')');
   ok(noindex === !cats.meta.find((m) => m.slug === s).indexable, s + ': metadata agrees with the page robots tag');
-  ok(!/<script[^>]+src=/.test(h) && !/(href|src)="http:\/\//.test(h), s + ': no remote script and no plain http link');
+  const remoteScripts = [...h.matchAll(/<script[^>]+src="(https?:\/\/[^"]+)"/gi)].map((m) => m[1]);
+  ok(remoteScripts.length === 1 && remoteScripts[0] === 'https://www.googletagmanager.com/gtm.js?id=GTM-KSBHF53Z' && !/(href|src)="http:\/\//.test(h), s + ': only the approved Google Tag Manager script and no plain http link');
   ok(read('categories/' + s + '/index.html') === h, s + ': the committed page equals generator output');
 });
 ok(new Set(titles).size === 20 && new Set(descs).size === 20, 'category titles and descriptions are unique');
 ok(read('categories/index.html') === plain.cats.pages.index && L1.every((c) => plain.cats.pages.index.indexOf('href="' + c.slug + '/"') > 0), 'the index lists all 20 and the committed page equals generator output');
-ok(cats.meta.filter((m) => m.indexable).map((m) => m.slug).sort().join() === ['automotive-transportation', 'energy-environment', 'engineering-technology', 'mathematics', 'statistics-data-analysis', 'unit-conversion-measurement'].join(), 'the six categories with at least 3 live tools are the indexable ones');
+const expectedIndexable = L1.filter((c) => ARCH.tools.filter((t) => t.l1 === c.id).length >= CAT.MIN_LIVE).map((c) => c.slug).sort();
+ok(cats.meta.filter((m) => m.indexable).map((m) => m.slug).sort().join() === expectedIndexable.join(), 'categories with at least ' + CAT.MIN_LIVE + ' live tools are exactly the indexable ones');
 
 /* 3. breadcrumbs on every tool page */
 const fileOf = (u) => u.endsWith('/') ? u.slice(1) + 'index.html' : u.slice(1);
