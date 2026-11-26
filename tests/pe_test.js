@@ -52,7 +52,7 @@ for (let i = 0; i < 600; i++) {
 const f = path.join(root, 'calculators/percent-error-calculator/index.html'), h = fs.readFileSync(f, 'utf8');
 for (const id of ['ns', 'ns-x', 'ns-y', 'ns-u', 'ns-pl', 'ns-err', 'ns-out', 'ns-steps', 'ns-hist', 'ns-note', 'ns-q', 'rp-card']) eq((h.match(new RegExp('id="' + id + '"', 'g')) || []).length, 1, 'one #' + id);
 for (const src of ['percent_engine.js', 'percent_error_engine.js', 'pe_engine.js', 'pe_client.js']) eq(h.indexOf(fs.readFileSync(path.join(root, 'tools', src), 'utf8')) >= 0, true, src + ' is inlined unchanged');
-eq(/<(script|link|img)[^>]+(src|href)="https?:/.test(h.replace(/<a [^>]*>/g, '')), false, 'no remote resource'); eq(/<h1>Percent Error Calculator<\/h1>/.test(h), true, 'h1'); eq(/bcd-converter|BCD/.test(h), false, 'no leftover BCD page text');
+eq(/<(script|link|img)[^>]+(src|href)="https?:/.test(require('./approved_remote.js').stripApproved(h).replace(/<a [^>]*>/g, '')), false, 'no remote resource'); eq(/<h1>Percent Error Calculator<\/h1>/.test(h), true, 'h1'); eq(/bcd-converter|BCD/.test(h), false, 'no leftover BCD page text');
 eq(/<title>Percent Error Calculator \|/.test(h), true, 'title'); eq(/Mode 01 \u00b7 Absolute Percent Error/.test(h) && /aria-current="page"/.test(h), true, 'mode strip marks Mode 01');
 const hrefs = [...h.matchAll(/class="chip[^"]*" href="\.\.\/([^/"]+)\//g)].map((m) => m[1]); for (const d of hrefs) eq(fs.existsSync(path.join(root, 'calculators', d, 'index.html')), true, 'linked page exists: ' + d);
 console.log(n + ' checks, ' + fail + ' failed'); process.exit(fail ? 1 : 0);

@@ -71,6 +71,19 @@
   "frequency-grouped-data-calculator": "EM-00317",
   "number-sequence-pattern-finder": "EM-00318",
   "rmc-calculator": "EM-00319",
-  "standard-deviation-calculator": "EM-00320"
+  "standard-deviation-calculator": "EM-00320",
+  "amortization-calculator": "EM-00321",
+  "bmr-calculator": "EM-00322",
+  "calorie-calculator": "EM-00323",
+  "floating-rate-simulator": "EM-00324",
+  "home-loan-affordability-calculator": "EM-00325",
+  "home-loan-amortization-calculator": "EM-00326",
+  "home-loan-balance-transfer-calculator": "EM-00327",
+  "home-loan-emi-calculator": "EM-00328",
+  "home-loan-prepayment-calculator": "EM-00329",
+  "home-purchase-cost-calculator": "EM-00330",
+  "tdee-calculator": "EM-00331",
+  "under-construction-pre-emi-calculator": "EM-00332",
+  "weight-loss-gain-calculator": "EM-00333"
  }
 }

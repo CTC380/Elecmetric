@@ -10,95 +10,32 @@ on:
 permissions:
   contents: read
 
+# A newer push cancels an older run that is still building; a deploy that has started is never cancelled.
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
 jobs:
+  # Deploy gate: only what can break the live site. Runs in parallel with "full-tests".
   build:
-    name: Test and build site
+    name: Gate, build and audit site
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     env:
       BASE_URL: ${{ vars.BASE_URL || 'https://elecmetric.com' }}
     steps:
       - name: Check out repository
         uses: actions/checkout@v6
         with:
-          fetch-depth: 0
+          fetch-depth: 0   # add_lastmod.js needs full Git history
 
       - name: Set up Node.js
         uses: actions/setup-node@v7
         with:
           node-version: 22
 
-      - name: Run calculator and route tests
-        run: |
-          node tests/run_tests.js
-          node tests/router_test.js
-          node tests/check_site_test.js
-          node tests/master_architecture_test.js
-          node tests/category_pages_test.js
-          node tests/halflife_test.js
-          node tests/halflife_const_test.js
-          node tests/halflife_percent_test.js
-          node tests/halflife_table_test.js
-          node tests/halflife_eng_test.js
-          node tests/halflife_isotopes_test.js
-          node tests/exponent_test.js
-          node tests/exponent_frac_test.js
-          node tests/exponent_solver_test.js
-          node tests/exponent_laws_test.js
-          node tests/exponent_eng_test.js
-          node tests/binarith_test.js
-          node tests/numconv_test.js
-          node tests/bitops_test.js
-          node tests/signbin_test.js
-          node tests/dlogic_test.js
-          node tests/hex_test.js
-          node tests/binlogic_test.js
-          node tests/codes_test.js
-          node tests/chars_test.js
-          node tests/rng_test.js
-          node tests/fraction_test.js
-          node tests/fraction_simplify_test.js
-          node tests/fraction_convert_test.js
-          node tests/fraction_mixed_test.js
-          node tests/fraction_adv_test.js
-          node tests/fraction_inch_test.js
-          node tests/fraction_report_test.js
-          node tests/percent_basic_test.js
-          node tests/percent_change_test.js
-          node tests/percent_diff_test.js
-          node tests/percent_error_test.js
-          node tests/pe_test.js
-          node tests/pe_signed_test.js
-          node tests/pe_tol_test.js
-          node tests/pe_batch_test.js
-          node tests/percent_eng_test.js
-          node tests/percent_price_test.js
-          node tests/percent_report_test.js
-          node tests/pe_eng_test.js
-          node tests/matrix_test.js
-          node tests/quad_test.js
-          node tests/quad_disc_test.js
-          node tests/quad_graph_test.js
-          node tests/quad_exact_test.js
-          node tests/quad_eng_test.js
-          node tests/log_test.js
-          node tests/ratio_test.js
-          node tests/proportion_test.js
-          node tests/round_test.js
-          node tests/factor_test.js
-          node tests/equiv_test.js
-          node tests/gcf_test.js
-          node tests/gcf_prime_test.js
-          node tests/bignum_test.js
-          node tests/sqrt_test.js
-          node tests/cbrt_test.js
-          node tests/nthroot_test.js
-          node tests/antilog_test.js
-          node tests/log_solver_test.js
-          node tests/log_rules_test.js
-          node tests/lcm_test.js
-          node tests/site_pages_test.js
-          node tests/internal_link_graph_test.js
-          node tests/home_perf_search_test.js
+      - name: Deploy-critical tests (core engine, routing, site structure, links)
+        run: node tests/ci_suite.js gate
 
       - name: Build production pages and run deployment guard
         run: |
@@ -119,6 +56,24 @@ jobs:
         with:
           path: _site
 
+  # Full suite: complete run_tests.js (page generation re-checks), committed-page drift and every per-calculator vector suite. Runs in parallel with the gate on every push and pull request.
+  # They do NOT hold up deployment. To make them block it, add "full-tests" to the deploy job's needs.
+  full-tests:
+    name: Full test suite (non-blocking for deploy)
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: 22
+
+      - name: Run the full suite in parallel
+        run: node tests/ci_suite.js full
+
   deploy:
     name: Publish GitHub Pages
     if: github.event_name != 'pull_request'
@@ -130,7 +85,7 @@ jobs:
       id-token: write
     concurrency:
       group: github-pages
-      cancel-in-progress: true
+      cancel-in-progress: false
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}

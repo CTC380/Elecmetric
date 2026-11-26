@@ -107,7 +107,7 @@ ok(/t = i \u00d7 1/.test(tm.steps[1].text) && /n = t \/ T\u00bd/.test(tm.steps[1
 const base = path.join(__dirname, '..', 'calculators'), page = path.join(base, 'decay-table-calculator', 'index.html');
 if (fs.existsSync(page)) {
   const html = fs.readFileSync(page, 'utf8');
-  eq((html.match(/<h1[ >]/g) || []).length, 1, 'page has one h1'); ok(!/<script[^>]+src=\"https?:/i.test(html), 'no external scripts'); ok(!/<link[^>]+href=\"https?:/i.test(html), 'no external stylesheets or fonts');
+  eq((html.match(/<h1[ >]/g) || []).length, 1, 'page has one h1'); ok(!/<script[^>]+src=\"https?:/i.test(require('./approved_remote.js').stripApproved(html)), 'no external scripts'); ok(!/<link[^>]+href=\"https?:/i.test(html), 'no external stylesheets or fonts');
   ok(html.indexOf('Elecmetric Half-Life Calculator, Mode 04') > 0 && html.indexOf('HalfLifeTable') > 0 && html.indexOf('Elecmetric Half-Life Calculator, Mode 01') > 0, 'both engines are inlined');
   ['T', 'hu', 'N0', 'qu', 'basis', 'step', 'rows', 'tbu', 'TB', 'uB', 'TC', 'uC', 'sig', 'log', 'probe', 'graph', 'rd', 'out', 'steps', 'hist', 'err'].forEach((k) => ok(new RegExp('id=\"dt-' + k + '\"').test(html), 'element dt-' + k));
   ok(/radiation-safety|radiation safety/i.test(html), 'scope statement present'); ok(/<title>[^<]*Decay Table and Graph/.test(html), 'title');

@@ -117,7 +117,7 @@ const page = path.join(__dirname, '..', 'calculators', 'half-life-calculator', '
 if (fs.existsSync(page)) {
   const html = fs.readFileSync(page, 'utf8');
   eq((html.match(/<h1[ >]/g) || []).length, 1, 'page has one h1');
-  ok(!/<script[^>]+src="https?:/i.test(html), 'no external scripts');
+  ok(!/<script[^>]+src="https?:/i.test(require('./approved_remote.js').stripApproved(html)), 'no external scripts');
   ok(!/<link[^>]+href="https?:/i.test(html), 'no external stylesheets or fonts');
   ok(html.indexOf('Elecmetric Half-Life Calculator, Mode 01') > 0 && html.indexOf('HalfLife') > 0, 'engine is inlined');
   ok(/id="hl-N0"/.test(html) && /id="hl-Nt"/.test(html) && /id="hl-t"/.test(html) && /id="hl-T"/.test(html), 'four input fields');

@@ -66,6 +66,6 @@ if (fs.existsSync(hp)) {
   ok(txt.indexOf('115792089237316195423570985008687907853269984665640564039457584007913129639936') >= 0 && txt.indexOf('18446744073709551616') >= 0 && txt.indexOf('18446744073709552000') >= 0, 'page shows 2^256, the exact 2^64 and its floating-point form');
   ok(txt.indexOf('14 remainder 2') >= 0 && /MOD and negative numbers/.test(txt) && /Limits and how results are checked/.test(txt), 'division, MOD and limits sections');
   ok(/window\.BIGN|root\.BIGN/.test(html) && /elecmetric\.bignum\.history/.test(html), 'engine and client are inlined');
-  ok(!/https?:\/\/(?!elecmetric\.com|www\.w3\.org|schema\.org)/.test(txt.replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/, '')), 'no outside hosts in the page');
+  ok(!/https?:\/\/(?!elecmetric\.com|www\.w3\.org|schema\.org)/.test(require('./approved_remote.js').stripApproved(txt).replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/, '')), 'no outside hosts in the page');
 }
 console.log('big number engine and page: ' + n + ' checks'); if (fail) { console.log(fail + ' FAILED'); process.exit(1); }

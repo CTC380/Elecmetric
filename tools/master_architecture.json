@@ -850,13 +850,20 @@
    "slug": "finance-money",
    "name": "Finance & Money",
    "target": 250,
-   "existing": 0,
+   "existing": 9,
    "level2": [
     {
      "id": "A03.01",
      "name": "Loan and EMI Calculators",
-     "existing": 0,
-     "topics": []
+     "existing": 9,
+     "topics": [
+      {
+       "id": "A03.01.01",
+       "name": "Everyday Numeric Tools",
+       "legacySubcategory": "C24-S07",
+       "existing": 9
+      }
+     ]
     },
     {
      "id": "A03.02",
@@ -1393,7 +1400,7 @@
    "slug": "health-fitness",
    "name": "Health & Fitness",
    "target": 100,
-   "existing": 2,
+   "existing": 6,
    "level2": [
     {
      "id": "A11.01",
@@ -1411,8 +1418,15 @@
     {
      "id": "A11.02",
      "name": "Nutrition",
-     "existing": 0,
-     "topics": []
+     "existing": 4,
+     "topics": [
+      {
+       "id": "A11.02.01",
+       "name": "Everyday Numeric Tools",
+       "legacySubcategory": "C24-S07",
+       "existing": 4
+      }
+     ]
     },
     {
      "id": "A11.03",
@@ -6582,6 +6596,201 @@
    "l3": "A09.06.01",
    "l3Name": "Statistics & Regression",
    "toolType": "Solver",
+   "legacyCategory": "C24"
+  },
+  {
+   "toolId": "EM-00321",
+   "id": "amortization-calculator",
+   "name": "Loan Amortization Calculator",
+   "url": "/calculators/amortization-calculator/",
+   "source": "standalone",
+   "l1": "A03",
+   "l1Name": "Finance & Money",
+   "l2": "A03.01",
+   "l2Name": "Loan and EMI Calculators",
+   "l3": "A03.01.01",
+   "l3Name": "Everyday Numeric Tools",
+   "toolType": "Estimator",
+   "legacyCategory": "C24"
+  },
+  {
+   "toolId": "EM-00322",
+   "id": "bmr-calculator",
+   "name": "BMR Calculator",
+   "url": "/calculators/bmr-calculator/",
+   "source": "standalone",
+   "l1": "A11",
+   "l1Name": "Health & Fitness",
+   "l2": "A11.02",
+   "l2Name": "Nutrition",
+   "l3": "A11.02.01",
+   "l3Name": "Everyday Numeric Tools",
+   "toolType": "Calculator",
+   "legacyCategory": "C24"
+  },
+  {
+   "toolId": "EM-00323",
+   "id": "calorie-calculator",
+   "name": "Calorie Calculator",
+   "url": "/calculators/calorie-calculator/",
+   "source": "standalone",
+   "l1": "A11",
+   "l1Name": "Health & Fitness",
+   "l2": "A11.02",
+   "l2Name": "Nutrition",
+   "l3": "A11.02.01",
+   "l3Name": "Everyday Numeric Tools",
+   "toolType": "Calculator",
+   "legacyCategory": "C24"
+  },
+  {
+   "toolId": "EM-00324",
+   "id": "floating-rate-simulator",
+   "name": "Floating Interest Rate Simulator",
+   "url": "/calculators/floating-rate-simulator/",
+   "source": "standalone",
+   "l1": "A03",
+   "l1Name": "Finance & Money",
+   "l2": "A03.01",
+   "l2Name": "Loan and EMI Calculators",
+   "l3": "A03.01.01",
+   "l3Name": "Everyday Numeric Tools",
+   "toolType": "Simulator",
+   "legacyCategory": "C24"
+  },
+  {
+   "toolId": "EM-00325",
+   "id": "home-loan-affordability-calculator",
+   "name": "Home Loan Affordability Calculator",
+   "url": "/calculators/home-loan-affordability-calculator/",
+   "source": "standalone",
+   "l1": "A03",
+   "l1Name": "Finance & Money",
+   "l2": "A03.01",
+   "l2Name": "Loan and EMI Calculators",
+   "l3": "A03.01.01",
+   "l3Name": "Everyday Numeric Tools",
+   "toolType": "Estimator",
+   "legacyCategory": "C24"
+  },
+  {
+   "toolId": "EM-00326",
+   "id": "home-loan-amortization-calculator",
+   "name": "Home Loan Amortisation Calculator",
+   "url": "/calculators/home-loan-amortization-calculator/",
+   "source": "standalone",
+   "l1": "A03",
+   "l1Name": "Finance & Money",
+   "l2": "A03.01",
+   "l2Name": "Loan and EMI Calculators",
+   "l3": "A03.01.01",
+   "l3Name": "Everyday Numeric Tools",
+   "toolType": "Estimator",
+   "legacyCategory": "C24"
+  },
+  {
+   "toolId": "EM-00327",
+   "id": "home-loan-balance-transfer-calculator",
+   "name": "Home Loan Balance Transfer Calculator",
+   "url": "/calculators/home-loan-balance-transfer-calculator/",
+   "source": "standalone",
+   "l1": "A03",
+   "l1Name": "Finance & Money",
+   "l2": "A03.01",
+   "l2Name": "Loan and EMI Calculators",
+   "l3": "A03.01.01",
+   "l3Name": "Everyday Numeric Tools",
+   "toolType": "Estimator",
+   "legacyCategory": "C24"
+  },
+  {
+   "toolId": "EM-00328",
+   "id": "home-loan-emi-calculator",
+   "name": "Home Loan EMI Calculator",
+   "url": "/calculators/home-loan-emi-calculator/",
+   "source": "standalone",
+   "l1": "A03",
+   "l1Name": "Finance & Money",
+   "l2": "A03.01",
+   "l2Name": "Loan and EMI Calculators",
+   "l3": "A03.01.01",
+   "l3Name": "Everyday Numeric Tools",
+   "toolType": "Estimator",
+   "legacyCategory": "C24"
+  },
+  {
+   "toolId": "EM-00329",
+   "id": "home-loan-prepayment-calculator",
+   "name": "Home Loan Prepayment Optimizer",
+   "url": "/calculators/home-loan-prepayment-calculator/",
+   "source": "standalone",
+   "l1": "A03",
+   "l1Name": "Finance & Money",
+   "l2": "A03.01",
+   "l2Name": "Loan and EMI Calculators",
+   "l3": "A03.01.01",
+   "l3Name": "Everyday Numeric Tools",
+   "toolType": "Estimator",
+   "legacyCategory": "C24"
+  },
+  {
+   "toolId": "EM-00330",
+   "id": "home-purchase-cost-calculator",
+   "name": "Home Purchase Cost Calculator",
+   "url": "/calculators/home-purchase-cost-calculator/",
+   "source": "standalone",
+   "l1": "A03",
+   "l1Name": "Finance & Money",
+   "l2": "A03.01",
+   "l2Name": "Loan and EMI Calculators",
+   "l3": "A03.01.01",
+   "l3Name": "Everyday Numeric Tools",
+   "toolType": "Estimator",
+   "legacyCategory": "C24"
+  },
+  {
+   "toolId": "EM-00331",
+   "id": "tdee-calculator",
+   "name": "TDEE Calculator",
+   "url": "/calculators/tdee-calculator/",
+   "source": "standalone",
+   "l1": "A11",
+   "l1Name": "Health & Fitness",
+   "l2": "A11.02",
+   "l2Name": "Nutrition",
+   "l3": "A11.02.01",
+   "l3Name": "Everyday Numeric Tools",
+   "toolType": "Calculator",
+   "legacyCategory": "C24"
+  },
+  {
+   "toolId": "EM-00332",
+   "id": "under-construction-pre-emi-calculator",
+   "name": "Under-Construction Home Loan & Pre-EMI Calculator",
+   "url": "/calculators/under-construction-pre-emi-calculator/",
+   "source": "standalone",
+   "l1": "A03",
+   "l1Name": "Finance & Money",
+   "l2": "A03.01",
+   "l2Name": "Loan and EMI Calculators",
+   "l3": "A03.01.01",
+   "l3Name": "Everyday Numeric Tools",
+   "toolType": "Estimator",
+   "legacyCategory": "C24"
+  },
+  {
+   "toolId": "EM-00333",
+   "id": "weight-loss-gain-calculator",
+   "name": "Weight Loss & Weight Gain Calculator",
+   "url": "/calculators/weight-loss-gain-calculator/",
+   "source": "standalone",
+   "l1": "A11",
+   "l1Name": "Health & Fitness",
+   "l2": "A11.02",
+   "l2Name": "Nutrition",
+   "l3": "A11.02.01",
+   "l3Name": "Everyday Numeric Tools",
+   "toolType": "Calculator",
    "legacyCategory": "C24"
   }
  ]

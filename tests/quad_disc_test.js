@@ -72,5 +72,5 @@ eq(G('c', '0', '1', '').ok, false, 'range needs A for C'); eq(G('c', '', '1', ''
 // the built page
 const html = fs.readFileSync(path.join(__dirname, '..', 'calculators', 'discriminant-calculator', 'index.html'), 'utf8');
 ok(/<title>[^<]*Discriminant[^<]*<\/title>/.test(html), 'page title'); ok(html.indexOf('id="dq"') > 0, 'page has the tool'); ok(/Mode 02/.test(html) && /quadratic-solver\//.test(html), 'mode strip links Mode 01');
-ok(!/<script[^>]+src=/.test(html), 'no external scripts');
+ok(!/<script[^>]+src=/.test(require('./approved_remote.js').stripApproved(html)), 'no external scripts');
 console.log(n + ' checks, ' + fail + ' failures'); process.exit(fail ? 1 : 0);

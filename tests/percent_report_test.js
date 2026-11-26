@@ -19,7 +19,7 @@ for (const d of PAGES) {
   eq(/<main[\s\S]*<!--rp:start-->[\s\S]*<!--rp:end-->[\s\S]*<\/main>/.test(h), true, 'card is inside main ' + t);
   const m = /<script id="rp-js">([\s\S]*?)<\/script>/.exec(h); eq(!!m && m[1] === src.replace(/<\/script/gi, '<\\/script'), true, 'inlined script equals tools/percent_report.js ' + t);
   eq(/id="ns-out"/.test(h) && /id="ns-steps"/.test(h) && /id="ns-x"/.test(h) && /id="ns-y"/.test(h), true, 'page has the output and working containers the report reads ' + t);
-  eq(/<(script|link|img)[^>]+(src|href)="https?:/.test(h.replace(/<a [^>]*>/g, '')), false, 'no remote resource ' + t);
+  eq(/<(script|link|img)[^>]+(src|href)="https?:/.test(require('./approved_remote.js').stripApproved(h).replace(/<a [^>]*>/g, '')), false, 'no remote resource ' + t);
   const tmp = path.join(require('os').tmpdir(), 'rp_' + d + '.html'); fs.writeFileSync(tmp, h); require('../tools/percent_report_install.js')(tmp); eq(fs.readFileSync(tmp, 'utf8'), h, 'installer is idempotent ' + t); fs.unlinkSync(tmp);
 }
 console.log(n + ' checks, ' + fail + ' failed'); process.exit(fail ? 1 : 0);

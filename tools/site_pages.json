@@ -2453,6 +2453,404 @@
         "calculators/ratio-calculator/"
       ],
       "inboundFrom": []
+    },
+    {
+      "id": "bmr-calculator",
+      "name": "BMR Calculator",
+      "url": "/calculators/bmr-calculator/",
+      "pageType": "standalone-calculator",
+      "primaryCategory": "engineering-mathematics",
+      "secondaryCategories": [],
+      "category": "C24",
+      "subcategory": "C24-S07",
+      "toolType": "TT1",
+      "task": "Calculate",
+      "keywords": [
+        "bmr calculator",
+        "bmr"
+      ],
+      "homepageFeatured": false,
+      "includeInAllTools": true,
+      "priority": "normal",
+      "related": [
+        "calculators/bmi-calculator/",
+        "calculators/tdee-calculator/",
+        "calculators/calorie-calculator/",
+        "calculators/weight-loss-gain-calculator/",
+        "calculators/bmi-indian-regional-calculator/",
+        "calculators/percentage-calculator/",
+        "calculators/ratio-calculator/",
+        "calculators/basic-calculator/"
+      ],
+      "inboundFrom": []
+    },
+    {
+      "id": "tdee-calculator",
+      "name": "TDEE Calculator",
+      "url": "/calculators/tdee-calculator/",
+      "pageType": "standalone-calculator",
+      "primaryCategory": "engineering-mathematics",
+      "secondaryCategories": [],
+      "category": "C24",
+      "subcategory": "C24-S07",
+      "toolType": "TT1",
+      "task": "Calculate",
+      "keywords": [
+        "tdee calculator",
+        "tdee"
+      ],
+      "homepageFeatured": false,
+      "includeInAllTools": true,
+      "priority": "normal",
+      "related": [
+        "calculators/bmi-calculator/",
+        "calculators/bmr-calculator/",
+        "calculators/calorie-calculator/",
+        "calculators/weight-loss-gain-calculator/",
+        "calculators/bmi-indian-regional-calculator/",
+        "calculators/percentage-calculator/",
+        "calculators/ratio-calculator/",
+        "calculators/basic-calculator/"
+      ],
+      "inboundFrom": []
+    },
+    {
+      "id": "calorie-calculator",
+      "name": "Calorie Calculator",
+      "url": "/calculators/calorie-calculator/",
+      "pageType": "standalone-calculator",
+      "primaryCategory": "engineering-mathematics",
+      "secondaryCategories": [],
+      "category": "C24",
+      "subcategory": "C24-S07",
+      "toolType": "TT1",
+      "task": "Calculate",
+      "keywords": [
+        "calorie calculator",
+        "calorie"
+      ],
+      "homepageFeatured": false,
+      "includeInAllTools": true,
+      "priority": "normal",
+      "related": [
+        "calculators/bmi-calculator/",
+        "calculators/bmr-calculator/",
+        "calculators/tdee-calculator/",
+        "calculators/weight-loss-gain-calculator/",
+        "calculators/bmi-indian-regional-calculator/",
+        "calculators/percentage-calculator/",
+        "calculators/ratio-calculator/",
+        "calculators/basic-calculator/"
+      ],
+      "inboundFrom": []
+    },
+    {
+      "id": "weight-loss-gain-calculator",
+      "name": "Weight Loss & Weight Gain Calculator",
+      "url": "/calculators/weight-loss-gain-calculator/",
+      "pageType": "standalone-calculator",
+      "primaryCategory": "engineering-mathematics",
+      "secondaryCategories": [],
+      "category": "C24",
+      "subcategory": "C24-S07",
+      "toolType": "TT1",
+      "task": "Calculate",
+      "keywords": [
+        "weight loss & weight gain calculator",
+        "weight loss & weight gain"
+      ],
+      "homepageFeatured": false,
+      "includeInAllTools": true,
+      "priority": "normal",
+      "related": [
+        "calculators/bmi-calculator/",
+        "calculators/bmr-calculator/",
+        "calculators/tdee-calculator/",
+        "calculators/calorie-calculator/",
+        "calculators/bmi-indian-regional-calculator/",
+        "calculators/percentage-calculator/",
+        "calculators/ratio-calculator/",
+        "calculators/basic-calculator/"
+      ],
+      "inboundFrom": []
+    },
+    {
+      "id": "amortization-calculator",
+      "name": "Loan Amortization Calculator",
+      "url": "/calculators/amortization-calculator/",
+      "pageType": "standalone-calculator",
+      "primaryCategory": "engineering-mathematics",
+      "secondaryCategories": [],
+      "category": "C24",
+      "subcategory": "C24-S07",
+      "toolType": "TT6",
+      "task": "Calculate",
+      "keywords": [
+        "loan amortization calculator",
+        "loan amortization"
+      ],
+      "homepageFeatured": false,
+      "includeInAllTools": true,
+      "priority": "normal",
+      "related": [
+        "calculators/percentage-calculator/",
+        "calculators/percentage-increase-decrease-calculator/",
+        "calculators/led-retrofit-payback/",
+        "calculators/home-loan-amortization-calculator/",
+        "calculators/home-loan-emi-calculator/",
+        "calculators/home-loan-prepayment-calculator/",
+        "calculators/home-purchase-cost-calculator/",
+        "calculators/home-loan-affordability-calculator/"
+      ],
+      "inboundFrom": []
+    },
+    {
+      "id": "floating-rate-simulator",
+      "name": "Floating Interest Rate Simulator",
+      "url": "/calculators/floating-rate-simulator/",
+      "pageType": "standalone-calculator",
+      "primaryCategory": "engineering-mathematics",
+      "secondaryCategories": [],
+      "category": "C24",
+      "subcategory": "C24-S07",
+      "toolType": "TT4",
+      "task": "Simulate",
+      "keywords": [
+        "floating interest rate simulator",
+        "floating interest rate simulator"
+      ],
+      "homepageFeatured": false,
+      "includeInAllTools": true,
+      "priority": "normal",
+      "related": [
+        "calculators/home-loan-emi-calculator/",
+        "calculators/home-purchase-cost-calculator/",
+        "calculators/home-loan-amortization-calculator/",
+        "calculators/home-loan-prepayment-calculator/",
+        "calculators/under-construction-pre-emi-calculator/",
+        "calculators/home-loan-balance-transfer-calculator/",
+        "calculators/home-loan-affordability-calculator/",
+        "calculators/percentage-calculator/",
+        "calculators/percentage-increase-decrease-calculator/"
+      ],
+      "inboundFrom": []
+    },
+    {
+      "id": "home-loan-affordability-calculator",
+      "name": "Home Loan Affordability Calculator",
+      "url": "/calculators/home-loan-affordability-calculator/",
+      "pageType": "standalone-calculator",
+      "primaryCategory": "engineering-mathematics",
+      "secondaryCategories": [],
+      "category": "C24",
+      "subcategory": "C24-S07",
+      "toolType": "TT6",
+      "task": "Calculate",
+      "keywords": [
+        "home loan affordability calculator",
+        "home loan affordability"
+      ],
+      "homepageFeatured": false,
+      "includeInAllTools": true,
+      "priority": "normal",
+      "related": [
+        "calculators/home-loan-emi-calculator/",
+        "calculators/home-purchase-cost-calculator/",
+        "calculators/home-loan-amortization-calculator/",
+        "calculators/home-loan-prepayment-calculator/",
+        "calculators/floating-rate-simulator/",
+        "calculators/under-construction-pre-emi-calculator/",
+        "calculators/home-loan-balance-transfer-calculator/",
+        "calculators/percentage-calculator/",
+        "calculators/percentage-increase-decrease-calculator/"
+      ],
+      "inboundFrom": []
+    },
+    {
+      "id": "home-loan-amortization-calculator",
+      "name": "Home Loan Amortisation Calculator",
+      "url": "/calculators/home-loan-amortization-calculator/",
+      "pageType": "standalone-calculator",
+      "primaryCategory": "engineering-mathematics",
+      "secondaryCategories": [],
+      "category": "C24",
+      "subcategory": "C24-S07",
+      "toolType": "TT6",
+      "task": "Calculate",
+      "keywords": [
+        "home loan amortisation calculator",
+        "home loan amortisation"
+      ],
+      "homepageFeatured": false,
+      "includeInAllTools": true,
+      "priority": "normal",
+      "related": [
+        "calculators/home-loan-emi-calculator/",
+        "calculators/home-purchase-cost-calculator/",
+        "calculators/home-loan-prepayment-calculator/",
+        "calculators/floating-rate-simulator/",
+        "calculators/under-construction-pre-emi-calculator/",
+        "calculators/home-loan-balance-transfer-calculator/",
+        "calculators/home-loan-affordability-calculator/",
+        "calculators/percentage-calculator/",
+        "calculators/amortization-calculator/"
+      ],
+      "inboundFrom": []
+    },
+    {
+      "id": "home-loan-balance-transfer-calculator",
+      "name": "Home Loan Balance Transfer Calculator",
+      "url": "/calculators/home-loan-balance-transfer-calculator/",
+      "pageType": "standalone-calculator",
+      "primaryCategory": "engineering-mathematics",
+      "secondaryCategories": [],
+      "category": "C24",
+      "subcategory": "C24-S07",
+      "toolType": "TT6",
+      "task": "Calculate",
+      "keywords": [
+        "home loan balance transfer calculator",
+        "home loan balance transfer"
+      ],
+      "homepageFeatured": false,
+      "includeInAllTools": true,
+      "priority": "normal",
+      "related": [
+        "calculators/home-loan-emi-calculator/",
+        "calculators/home-purchase-cost-calculator/",
+        "calculators/home-loan-amortization-calculator/",
+        "calculators/home-loan-prepayment-calculator/",
+        "calculators/floating-rate-simulator/",
+        "calculators/under-construction-pre-emi-calculator/",
+        "calculators/home-loan-affordability-calculator/",
+        "calculators/percentage-calculator/",
+        "calculators/percentage-increase-decrease-calculator/"
+      ],
+      "inboundFrom": []
+    },
+    {
+      "id": "home-loan-emi-calculator",
+      "name": "Home Loan EMI Calculator",
+      "url": "/calculators/home-loan-emi-calculator/",
+      "pageType": "standalone-calculator",
+      "primaryCategory": "engineering-mathematics",
+      "secondaryCategories": [],
+      "category": "C24",
+      "subcategory": "C24-S07",
+      "toolType": "TT6",
+      "task": "Calculate",
+      "keywords": [
+        "home loan emi calculator",
+        "home loan emi"
+      ],
+      "homepageFeatured": false,
+      "includeInAllTools": true,
+      "priority": "normal",
+      "related": [
+        "calculators/home-purchase-cost-calculator/",
+        "calculators/home-loan-amortization-calculator/",
+        "calculators/home-loan-prepayment-calculator/",
+        "calculators/floating-rate-simulator/",
+        "calculators/under-construction-pre-emi-calculator/",
+        "calculators/home-loan-balance-transfer-calculator/",
+        "calculators/home-loan-affordability-calculator/",
+        "calculators/percentage-calculator/",
+        "calculators/amortization-calculator/"
+      ],
+      "inboundFrom": []
+    },
+    {
+      "id": "home-loan-prepayment-calculator",
+      "name": "Home Loan Prepayment Optimizer",
+      "url": "/calculators/home-loan-prepayment-calculator/",
+      "pageType": "standalone-calculator",
+      "primaryCategory": "engineering-mathematics",
+      "secondaryCategories": [],
+      "category": "C24",
+      "subcategory": "C24-S07",
+      "toolType": "TT6",
+      "task": "Calculate",
+      "keywords": [
+        "home loan prepayment optimizer",
+        "home loan prepayment optimizer"
+      ],
+      "homepageFeatured": false,
+      "includeInAllTools": true,
+      "priority": "normal",
+      "related": [
+        "calculators/home-loan-emi-calculator/",
+        "calculators/home-purchase-cost-calculator/",
+        "calculators/home-loan-amortization-calculator/",
+        "calculators/floating-rate-simulator/",
+        "calculators/under-construction-pre-emi-calculator/",
+        "calculators/home-loan-balance-transfer-calculator/",
+        "calculators/home-loan-affordability-calculator/",
+        "calculators/percentage-calculator/",
+        "calculators/amortization-calculator/"
+      ],
+      "inboundFrom": []
+    },
+    {
+      "id": "home-purchase-cost-calculator",
+      "name": "Home Purchase Cost Calculator",
+      "url": "/calculators/home-purchase-cost-calculator/",
+      "pageType": "standalone-calculator",
+      "primaryCategory": "engineering-mathematics",
+      "secondaryCategories": [],
+      "category": "C24",
+      "subcategory": "C24-S07",
+      "toolType": "TT6",
+      "task": "Calculate",
+      "keywords": [
+        "home purchase cost calculator",
+        "home purchase cost"
+      ],
+      "homepageFeatured": false,
+      "includeInAllTools": true,
+      "priority": "normal",
+      "related": [
+        "calculators/home-loan-emi-calculator/",
+        "calculators/home-loan-amortization-calculator/",
+        "calculators/home-loan-prepayment-calculator/",
+        "calculators/floating-rate-simulator/",
+        "calculators/under-construction-pre-emi-calculator/",
+        "calculators/home-loan-balance-transfer-calculator/",
+        "calculators/home-loan-affordability-calculator/",
+        "calculators/percentage-calculator/",
+        "calculators/percentage-increase-decrease-calculator/"
+      ],
+      "inboundFrom": []
+    },
+    {
+      "id": "under-construction-pre-emi-calculator",
+      "name": "Under-Construction Home Loan & Pre-EMI Calculator",
+      "url": "/calculators/under-construction-pre-emi-calculator/",
+      "pageType": "standalone-calculator",
+      "primaryCategory": "engineering-mathematics",
+      "secondaryCategories": [],
+      "category": "C24",
+      "subcategory": "C24-S07",
+      "toolType": "TT6",
+      "task": "Calculate",
+      "keywords": [
+        "under-construction home loan & pre-emi calculator",
+        "under-construction home loan & pre-emi"
+      ],
+      "homepageFeatured": false,
+      "includeInAllTools": true,
+      "priority": "normal",
+      "related": [
+        "calculators/home-loan-emi-calculator/",
+        "calculators/home-purchase-cost-calculator/",
+        "calculators/home-loan-amortization-calculator/",
+        "calculators/home-loan-prepayment-calculator/",
+        "calculators/floating-rate-simulator/",
+        "calculators/home-loan-balance-transfer-calculator/",
+        "calculators/home-loan-affordability-calculator/",
+        "calculators/percentage-calculator/",
+        "calculators/percentage-increase-decrease-calculator/"
+      ],
+      "inboundFrom": []
     }
   ]
 }

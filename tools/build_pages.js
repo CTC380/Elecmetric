@@ -245,6 +245,8 @@ function placeGtmAfterCsp(html) {
     if (inlineEnd < 0) break;
     html = html.slice(0, at) + html.slice(inlineEnd + '</script>'.length);
   }
+  /* One policy for every page: a standalone page's own CSP meta is replaced by CSP_META, so older wildcard policies cannot survive a build. */
+  { let seen = false; html = html.replace(/<meta http-equiv="Content-Security-Policy"[^>]*>/gi, () => { if (seen) return ''; seen = true; return CSP_META; }); }
   const csp = /<meta http-equiv="Content-Security-Policy"[^>]*>/i.exec(html);
   if (csp) return html.slice(0, csp.index + csp[0].length) + GTM_HEAD + html.slice(csp.index + csp[0].length);
   return html.replace(/<head[^>]*>/i, (head) => head + GTM_HEAD);

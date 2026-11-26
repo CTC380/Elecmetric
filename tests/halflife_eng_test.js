@@ -105,7 +105,7 @@ ok(/Time to the target/.test(b.steps.map((s) => s.title).join()), 'time working'
 const base = path.join(__dirname, '..', 'calculators'), page = path.join(base, 'engineering-exponential-decay-calculator', 'index.html');
 if (fs.existsSync(page)) {
   const html = fs.readFileSync(page, 'utf8');
-  eq((html.match(/<h1[ >]/g) || []).length, 1, 'page has one h1'); ok(!/<script[^>]+src="https?:/i.test(html), 'no external scripts'); ok(!/<link[^>]+href="https?:/i.test(html), 'no external stylesheets or fonts');
+  eq((html.match(/<h1[ >]/g) || []).length, 1, 'page has one h1'); ok(!/<script[^>]+src="https?:/i.test(require('./approved_remote.js').stripApproved(html)), 'no external scripts'); ok(!/<link[^>]+href="https?:/i.test(html), 'no external stylesheets or fonts');
   ok(html.indexOf('Elecmetric Half-Life Calculator, Mode 05') > 0 && html.indexOf('HalfLifeEng') > 0 && html.indexOf('Elecmetric Half-Life Calculator, Mode 01') > 0, 'both engines are inlined');
   ['circ', 'find', 'X0', 'x0u', 'ql', 'R', 'ru', 'Z', 'zu', 'tau', 'tauu', 'kind', 't', 'tun', 'tg', 'tgm', 'sig', 'probe', 'graph', 'rd', 'out', 'steps', 'hist', 'err', 'dl', 'gwrap'].forEach((k) => ok(new RegExp('id="ed-' + k + '"').test(html), 'element ed-' + k));
   ok(/safety assessment/.test(html) && /radiation-safety/.test(html), 'scope statements'); ok(/<title>[^<]*RC and RL Decay/.test(html), 'title'); ok(/different (physics|process)|not the same process/i.test(html), 'physical distinction stated');

@@ -113,7 +113,7 @@ const base = path.join(__dirname, '..', 'calculators'), page = path.join(base, '
 if (fs.existsSync(page)) {
   const html = fs.readFileSync(page, 'utf8');
   eq((html.match(/<h1[ >]/g) || []).length, 1, 'page has one h1');
-  ok(!/<script[^>]+src=\"https?:/i.test(html), 'no external scripts'); ok(!/<link[^>]+href=\"https?:/i.test(html), 'no external stylesheets or fonts');
+  ok(!/<script[^>]+src=\"https?:/i.test(require('./approved_remote.js').stripApproved(html)), 'no external scripts'); ok(!/<link[^>]+href=\"https?:/i.test(html), 'no external stylesheets or fonts');
   ok(html.indexOf('Elecmetric Half-Life Calculator, Mode 03') > 0 && html.indexOf('HalfLifePercent') > 0 && html.indexOf('Elecmetric Half-Life Calculator, Mode 01') > 0, 'both engines are inlined');
   ok(/id=\"dp-N0\"/.test(html) && /id=\"dp-t\"/.test(html) && /id=\"dp-T\"/.test(html) && /id=\"dp-tu\"/.test(html) && /id=\"dp-hu\"/.test(html), 'input fields and unit selectors');
   ok(/radiation-safety|radiation safety/i.test(html), 'scope statement present'); ok(/<title>[^<]*Decay Percentage/.test(html), 'title');

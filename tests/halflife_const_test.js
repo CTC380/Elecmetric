@@ -108,7 +108,7 @@ const page = path.join(__dirname, '..', 'calculators', 'decay-constant-calculato
 if (fs.existsSync(page)) {
   const html = fs.readFileSync(page, 'utf8');
   eq((html.match(/<h1[ >]/g) || []).length, 1, 'page has one h1');
-  ok(!/<script[^>]+src=\"https?:/i.test(html), 'no external scripts'); ok(!/<link[^>]+href=\"https?:/i.test(html), 'no external stylesheets or fonts');
+  ok(!/<script[^>]+src=\"https?:/i.test(require('./approved_remote.js').stripApproved(html)), 'no external scripts'); ok(!/<link[^>]+href=\"https?:/i.test(html), 'no external stylesheets or fonts');
   ok(html.indexOf('Elecmetric Half-Life Calculator, Mode 02') > 0 && html.indexOf('HalfLifeConst') > 0 && html.indexOf('Elecmetric Half-Life Calculator, Mode 01') > 0, 'both engines are inlined');
   ok(/id=\"dc-T\"/.test(html) && /id=\"dc-lambda\"/.test(html) && /id=\"dc-tau\"/.test(html), 'three input fields');
   ok(/radiation-safety|radiation safety/i.test(html), 'scope statement present'); ok(/<title>[^<]*Decay Constant/.test(html), 'title');

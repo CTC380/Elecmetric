@@ -48,12 +48,12 @@ const C = {
   },
   'finance-money': {
     scope: 'Loans, interest, savings, investment growth and everyday money arithmetic, shown with the formula and the working so a figure can be checked.',
-    best: [],
+    best: ['home-loan-emi-calculator', 'amortization-calculator', 'home-loan-prepayment-calculator', 'home-loan-affordability-calculator', 'home-purchase-cost-calculator', 'home-loan-balance-transfer-calculator', 'floating-rate-simulator', 'under-construction-pre-emi-calculator'],
     also: [['calculators/finance-calculators/', 'Finance Calculators (coming soon)'], ['calculators/percentage-calculator/', 'Percentage Calculator']],
     limits: 'Rates, fees and tax percentages differ by country, lender and date, so they are always inputs you supply. These calculators will show arithmetic, not financial, tax or legal advice, and will not predict market returns.',
     related: ['business-economics', 'everyday-life-home', 'mathematics', 'education-exams'],
     planned: [
-      ['Loan EMI Calculator', 'Monthly instalment, total interest and total repayment of a loan.', 'EMI = P × r × (1 + r)ⁿ / ((1 + r)ⁿ − 1)', 'Calculator'],
+      ['Simple Interest Calculator', 'Interest, total amount and the rate or time that gives a target interest.', 'I = P × r × t', 'Calculator'],
       ['Compound Interest and Fixed Deposit Calculator', 'Maturity value for any compounding frequency.', 'A = P × (1 + r / m)^(m × t)', 'Calculator'],
       ['SIP and Recurring Investment Calculator', 'Future value of a fixed monthly investment at an assumed return.', 'FV = P × [((1 + i)ⁿ − 1) / i] × (1 + i)', 'Calculator'],
       ['CAGR Calculator', 'Compound annual growth rate between a start and an end value.', 'CAGR = (End / Start)^(1 / years) − 1', 'Calculator'],
@@ -184,7 +184,7 @@ const C = {
   },
   'health-fitness': {
     scope: 'Body measurements, energy needs and training zones for general information.',
-    best: [],
+    best: ['bmi-calculator', 'bmi-indian-regional-calculator', 'bmr-calculator', 'tdee-calculator', 'calorie-calculator', 'weight-loss-gain-calculator'],
     also: [],
     limits: 'Health calculators give general estimates from population formulas. They are not medical advice and cannot diagnose, treat or screen for any condition. They will be published only after review by a qualified subject specialist, and each page will say so.',
     related: ['sports-recreation', 'food-agriculture', 'everyday-life-home', 'biology-life-sciences'],

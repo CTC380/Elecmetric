@@ -68,7 +68,7 @@ for (const [a, e] of [['2', '0.5'], ['27', '2/3'], ['-8', '1/3'], ['10', '-3'], 
 const base = path.join(__dirname, '..', 'calculators'), page = path.join(base, 'negative-fractional-exponents-calculator', 'index.html');
 if (fs.existsSync(page)) {
   const html = fs.readFileSync(page, 'utf8');
-  eq((html.match(/<h1[ >]/g) || []).length, 1, 'page has one h1'); ok(!/<script[^>]+src="https?:/i.test(html), 'no external scripts'); ok(!/<link[^>]+href="https?:/i.test(html), 'no external stylesheets or fonts');
+  eq((html.match(/<h1[ >]/g) || []).length, 1, 'page has one h1'); ok(!/<script[^>]+src="https?:/i.test(require('./approved_remote.js').stripApproved(html)), 'no external scripts'); ok(!/<link[^>]+href="https?:/i.test(html), 'no external stylesheets or fonts');
   ok(html.indexOf('Elecmetric Exponent Calculator, Mode 02') > 0 && html.indexOf('ExponentFrac') > 0 && html.indexOf('ExponentCalc') > 0, 'both engines and the script are inlined');
   ['a', 'n', 'sig', 'err', 'out', 'steps', 'hist', 'hclear', 'dl', 'note'].forEach((k) => ok(new RegExp('id="ex-' + k + '"').test(html), 'element ex-' + k));
   ok(/<title>Negative and Fractional Exponents Calculator/.test(html), 'title'); ok(/aria-current="page"[^>]*>Mode 02/.test(html), 'mode strip marks Mode 02 current'); ok(/href="\.\.\/exponent-calculator\/"[^>]*>Mode 01/.test(html), 'Mode 01 is linked'); ok(/href="\.\.\/exponent-solver\/"[^>]*>Mode 03/.test(html) && /href="\.\.\/exponent-laws-calculator\/"[^>]*>Mode 04/.test(html) && /href="\.\.\/engineering-powers-scientific-notation\/"[^>]*>Mode 05/.test(html), 'Modes 03 to 05 are linked; no mode is shown as coming');
