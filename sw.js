@@ -1,5 +1,5 @@
 /* Elecmetric service worker: offline app shell. Bump CACHE_VERSION with engine.js VERSION (tests/run_tests.js checks they match). */
-const CACHE_VERSION = '1.99.110';
+const CACHE_VERSION = '1.99.114';
 const CACHE = 'elecmetric-' + CACHE_VERSION;
 /* Converters (about 290 pages) are not pre-cached: the fetch handler below keeps each one after it is first visited. The hub is cached up front. */
 const SHELL = [
@@ -437,6 +437,32 @@ const SHELL = [
   './calculators/bmi-calculator/index.html',
   './calculators/bmi-indian-regional-calculator/',
   './calculators/bmi-indian-regional-calculator/index.html',
+  './calculators/amortization-calculator/',
+  './calculators/amortization-calculator/index.html',
+  './calculators/bmr-calculator/',
+  './calculators/bmr-calculator/index.html',
+  './calculators/tdee-calculator/',
+  './calculators/tdee-calculator/index.html',
+  './calculators/calorie-calculator/',
+  './calculators/calorie-calculator/index.html',
+  './calculators/weight-loss-gain-calculator/',
+  './calculators/weight-loss-gain-calculator/index.html',
+  './calculators/home-loan-emi-calculator/',
+  './calculators/home-loan-emi-calculator/index.html',
+  './calculators/home-purchase-cost-calculator/',
+  './calculators/home-purchase-cost-calculator/index.html',
+  './calculators/home-loan-amortization-calculator/',
+  './calculators/home-loan-amortization-calculator/index.html',
+  './calculators/home-loan-prepayment-calculator/',
+  './calculators/home-loan-prepayment-calculator/index.html',
+  './calculators/floating-rate-simulator/',
+  './calculators/floating-rate-simulator/index.html',
+  './calculators/under-construction-pre-emi-calculator/',
+  './calculators/under-construction-pre-emi-calculator/index.html',
+  './calculators/home-loan-balance-transfer-calculator/',
+  './calculators/home-loan-balance-transfer-calculator/index.html',
+  './calculators/home-loan-affordability-calculator/',
+  './calculators/home-loan-affordability-calculator/index.html',
   './calculators/date-calculator/',
   './calculators/date-calculator/index.html',
   './calculators/add-subtract-date-calculator/',

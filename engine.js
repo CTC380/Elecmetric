@@ -2,7 +2,7 @@
 (function (root) {
 'use strict';
 const SQ3 = Math.sqrt(3);
-const VERSION = '1.99.110';
+const VERSION = '1.99.114';
 /* Exact definitions (v1.8.2). Earlier versions rounded these: HP by 5.6e-10, BTU by 2.5e-9 and CFM by 1.4e-8, relative.
    Mechanical horsepower = 550 ft·lbf/s; International Table BTU = 1055.05585262 J; CFM = 0.3048³ / 60 m³/s. */
 const HP_W = 550 * 0.3048 * 0.45359237 * 9.80665, BTU_J = 1055.05585262, CFM_M3S = 0.3048 * 0.3048 * 0.3048 / 60;
