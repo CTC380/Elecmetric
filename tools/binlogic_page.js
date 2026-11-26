@@ -29,7 +29,7 @@ const tool =
   '<div class="ns-f"><label for="bl-sg" class="ns-l">Interpret as</label><select id="bl-sg" class="ns-sel"><option value="u" selected>Unsigned</option><option value="s">Signed (two\u2019s complement)</option></select></div></div>' +
   '<p class="note ns-msg" id="bl-err" role="status"></p><div class="ns-act"><button type="button" class="btn2" data-act="swap">Swap A and B</button><button type="button" class="btn2" data-act="reset">Reset</button></div>' +
   '<div class="ns-try"><span class="ns-l">Try</span> ' + chips + '</div><div id="bl-out" aria-live="polite"></div><p class="sr-only" id="bl-note" role="status" aria-live="polite"></p>' +
-  '<noscript><p class="note">The calculator needs JavaScript. Nothing is sent anywhere.</p></noscript></section>' +
+  '<noscript><p class="note">The calculator needs JavaScript. This tool does not submit calculator inputs to Elecmetric.</p></noscript></section>' +
   '<section class="card"><h2>Working</h2><div id="bl-steps"></div></section></div>';
 const tbl = (head, rows) => '<div class="tw" tabindex="0" role="region" aria-label="Scrollable table: ' + head.join(', ') + '"><table><thead><tr>' + head.map((h) => '<th>' + esc(h) + '</th>').join('') + '</tr></thead><tbody>' + rows.map((r) => '<tr>' + r.map((c) => '<td class="n">' + esc(c) + '</td>').join('') + '</tr>').join('') + '</tbody></table></div>';
 const gate = (f) => [0, 0, 1, 1].map((_, i) => [Math.floor(i / 2), i % 2]).map(([x, y]) => [x, y].concat(f(x, y)));

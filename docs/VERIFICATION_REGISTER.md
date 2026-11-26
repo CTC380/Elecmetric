@@ -1,8 +1,8 @@
-# Verification register (v1.99.90)
+# Verification register (v1.99.110)
 
 Automated tests, a public standards-scope screen and independent engineering approval are different activities. The register records these states separately for every calculator.
 
-## Current position (v1.99.90)
+## Current position (v1.99.110)
 
 | Measure | Count |
 |---|---:|

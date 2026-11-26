@@ -1,7 +1,7 @@
 /* Adds the calculation report card (card, CSS, script) to a built Percentage Calculator page (Modes 01 to 05). Idempotent: run by every percentage page builder as its last step.
    Usage: require('./percent_report_install.js')(pathToIndexHtml) */
 const fs = require('fs'), path = require('path');
-const CARD = '<section class="card" id="rp-card" aria-labelledby="rp-h"><h2 id="rp-h">Calculation report</h2><p class="note">Turn the current result into a printable sheet with the input, the result, the formula, the working, the reference quantity and a report number. Fill in the details you want on it, then print or save it as a PDF, copy it as text or save a text file. Nothing is sent anywhere.</p>' +
+const CARD = '<section class="card" id="rp-card" aria-labelledby="rp-h"><h2 id="rp-h">Calculation report</h2><p class="note">Turn the current result into a printable sheet with the input, the result, the formula, the working, the reference quantity and a report number. Fill in the details you want on it, then print or save it as a PDF, copy it as text or save a text file. This tool does not submit calculator inputs to Elecmetric.</p>' +
   '<div class="rp-form"><div><label class="ns-l" for="rp-proj">Project</label><input id="rp-proj" class="ns-in" type="text" maxlength="120" autocomplete="off"></div><div><label class="ns-l" for="rp-ref">Document reference</label><input id="rp-ref" class="ns-in" type="text" maxlength="120" autocomplete="off"></div><div><label class="ns-l" for="rp-by">Prepared by</label><input id="rp-by" class="ns-in" type="text" maxlength="120" autocomplete="off"></div><div><label class="ns-l" for="rp-chk">Checked by</label><input id="rp-chk" class="ns-in" type="text" maxlength="120" autocomplete="off"></div></div>' +
   '<div><label class="ns-l" for="rp-note">Notes</label><textarea id="rp-note" class="ns-in" rows="2" maxlength="1000"></textarea></div>' +
   '<div class="ns-act"><button type="button" class="btn2" data-rp="print">Print or save as PDF</button><button type="button" class="btn2" data-rp="copy">Copy as text</button><button type="button" class="btn2" data-rp="save">Save as .txt</button></div><p class="note ns-msg" id="rp-msg" role="status" aria-live="polite"></p><div id="rp-prev" class="rp-sheet rp-prev" hidden></div></section>';
@@ -12,9 +12,30 @@ const CSS = '#rp-card .rp-form{display:grid;grid-template-columns:repeat(auto-fi
   '#rp-sheet{display:none}@media print{body.rp-printing>*:not(#rp-sheet){display:none!important}body.rp-printing #rp-sheet{display:block!important;padding:0;margin:0}.rp-sheet th{-webkit-print-color-adjust:exact;print-color-adjust:exact}.rp-h{-webkit-print-color-adjust:exact;print-color-adjust:exact}}';
 module.exports = function (file) {
   let h = fs.readFileSync(file, 'utf8');
-  h = h.replace(/<!--rp:start-->[\s\S]*?<!--rp:end-->/g, '').replace(/<style id="rp-css">[\s\S]*?<\/style>/g, '').replace(/<script id="rp-js">[\s\S]*?<\/script>/g, '');
   const js = fs.readFileSync(path.join(__dirname, 'percent_report.js'), 'utf8').replace(/<\/script/gi, '<\\/script');
   if (h.indexOf('</main>') < 0 || h.indexOf('</head>') < 0 || h.indexOf('</body>') < 0) throw new Error('page shell not found in ' + file);
-  h = h.replace('</head>', () => '<style id="rp-css">' + CSS + '</style></head>').replace('</main>', () => '<!--rp:start-->' + CARD + '<!--rp:end--></main>').replace('</body>', () => '<script id="rp-js">' + js + '</script></body>');
-  fs.writeFileSync(file, h); console.log('report installed in ' + path.relative(path.join(__dirname, '..'), file));
+
+  const card = '<!--rp:start-->' + CARD + '<!--rp:end-->';
+  const style = '<style id="rp-css">' + CSS + '</style>';
+  const script = '<script id="rp-js">' + js + '</script>';
+  const replaceOnceOrAppend = (html, re, value, closeTag) => {
+    let seen = false;
+    html = html.replace(re, () => {
+      if (seen) return '';
+      seen = true;
+      return value;
+    });
+    if (!seen) html = html.replace(closeTag, value + closeTag);
+    return html;
+  };
+
+  // Replace in place, rather than deleting and appending to the end of <head>.
+  // A later page builder may add styles after this block; moving it changes the
+  // cascade even when the report CSS itself is unchanged.
+  h = replaceOnceOrAppend(h, /<!--rp:start-->[\s\S]*?<!--rp:end-->/g, card, '</main>');
+  h = replaceOnceOrAppend(h, /<style id="rp-css">[\s\S]*?<\/style>/g, style, '</head>');
+  h = replaceOnceOrAppend(h, /<script id="rp-js">[\s\S]*?<\/script>/g, script, '</body>');
+
+  fs.writeFileSync(file, h);
+  console.log('report installed in ' + path.relative(path.join(__dirname, '..'), file));
 };

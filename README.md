@@ -21,7 +21,7 @@ Website: [https://elecmetric.com](https://elecmetric.com)
 | `tests/` | Built-in, reference-vector, property, and route tests |
 | `.github/workflows/pages.yml` | GitHub Actions test, build, and deployment workflow |
 
-The production build generates 676 sitemap URLs: the home page, 79 pages in `pages/`, 292 in `calculators/`, 295 in `converters/`, 2 in `technical-library/` and 7 in `categories/` (the library root and the Technical Articles branch).
+The production build generates 691 sitemap URLs: the home page, 79 pages in `pages/`, 306 in `calculators/`, 295 in `converters/`, 2 in `technical-library/` and 8 in `categories/` (the index and seven live category pages).
 
 The Technical Library landing page (`technical-library/index.html`) is generated from `tools/library_catalogue.json` (the 200-article master catalogue). Articles are written by hand, one file each, in `technical-library/technical-articles/` (no further sub-folders), named `<slug>.html` as listed in `tools/library_tracker.csv`. Start each one from `tools/library_article_template.html`. After adding a file, run `node tools/build_pages.js`: its card on the landing page changes from "Coming soon" to "Published" and links to it. Hand-written article pages are not added to the sitemap automatically.
 

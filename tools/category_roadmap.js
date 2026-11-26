@@ -133,7 +133,7 @@ const C = {
   },
   'construction-architecture': {
     scope: 'Material quantities and simple building geometry for concrete, masonry, flooring, roofing and paint.',
-    best: [],
+    best: ['concrete-volume-calculator', 'cement-sand-aggregate-calculator', 'concrete-bag-calculator', 'rmc-calculator', 'concrete-cost-estimator'],
     also: [['calculators/area-calculator/', 'Area Calculator'], ['calculators/volume-surface-area/', 'Volume and Surface Area Calculator']],
     limits: 'Quantity calculators give the amount from the dimensions you enter. Add waste and overage as your supplier or specification advises, and do not use them for structural design.',
     related: ['engineering-technology', 'mathematics', 'unit-conversion-measurement', 'everyday-life-home'],
@@ -189,7 +189,7 @@ const C = {
     limits: 'Health calculators give general estimates from population formulas. They are not medical advice and cannot diagnose, treat or screen for any condition. They will be published only after review by a qualified subject specialist, and each page will say so.',
     related: ['sports-recreation', 'food-agriculture', 'everyday-life-home', 'biology-life-sciences'],
     planned: [
-      ['BMI Calculator', 'Body mass index and its standard category.', 'BMI = mass (kg) / height (m)²', 'Calculator'],
+      ['Waist-to-Height Ratio Calculator', 'Waist circumference relative to height, using the same units for both measurements.', 'WHtR = waist circumference / height', 'Calculator'],
       ['BMR Calculator (Mifflin-St Jeor)', 'Resting energy use.', 'BMR = 10w + 6.25h − 5a + 5 (men); − 161 (women), w kg, h cm, a years', 'Estimator'],
       ['Daily Calorie Needs (TDEE) Calculator', 'Energy use including activity.', 'TDEE = BMR × activity factor', 'Estimator'],
       ['Heart Rate Zones Calculator (Karvonen)', 'Training zones from resting and maximum heart rate.', 'Target = (HRmax − HRrest) × intensity + HRrest', 'Calculator'],

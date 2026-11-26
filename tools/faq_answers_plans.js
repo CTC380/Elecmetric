@@ -55,5 +55,5 @@ module.exports = {
     'generator-fuel': 'Fuel use per kWh rises at light load, so the specific fuel consumption must match the load you actually run.',
     'op-amp-gain': 'A real op-amp has finite gain, bandwidth and output limits, and the formula stops describing the circuit when the output reaches the supply rails.'
   },
-  server: 'The page\u2019s security policy also blocks it from sending data to other sites, so nothing you enter leaves your device.'
+  server: 'The calculations run in your browser. This page also loads Google Tag Manager; data collected by tags depends on its configuration.'
 };
